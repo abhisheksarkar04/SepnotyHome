@@ -256,7 +256,7 @@ related information for your article or would want to speak with one of our prof
   display:flex;
   flex-direction:column;
   gap : 30px;
-  
+  margin-bottom:60px;
 
   `
   const WebsiteContainer = Styled.div`
@@ -283,8 +283,8 @@ related information for your article or would want to speak with one of our prof
  display:flex;
   flex-direction:column;
   gap : 10px;
-  margin-left:80px;
-  margin-top:-20px;
+  margin-left:60px;
+  margin-top:-30px;
  
  `;
 //  const Z =  Styled.div`
@@ -297,14 +297,15 @@ related information for your article or would want to speak with one of our prof
  const Image = Styled.img`
  margin-top:10px;
  margin-left:-110%;
-height:50px;
+height:70px;
  `
  const Para1 = Styled.p`
  margin-top:-50px;
- 
+ color:white;
  
 `
 const Para2 = Styled.p`
 margin-top:10px;
+color:white;
 
 `

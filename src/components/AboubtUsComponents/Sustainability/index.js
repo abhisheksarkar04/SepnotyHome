@@ -110,8 +110,10 @@ Economic Prosperity
   export default Sustainability;
 
   const Para = styled.p`
+  font-size:20px;
   font-weight:500;
   width:1100px;
+  color:white;
   `
   const Main = styled.div`
   display:flex;
@@ -128,12 +130,15 @@ Economic Prosperity
   flex-direction:column;
   `
   const Image = styled.img`
-  height:200px;
+  height:260px;
   margin-right:10px;
+  margin-left:-130px;
+  margin-top:100px;
   `
   const Para1 = styled.p`
-  font-size:20px;
+  font-size:24px;
   margin-bottom:10px;
+  color:white
   `
   const Spam = styled.span`
   margin-left:50px;

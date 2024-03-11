@@ -24,6 +24,7 @@ const Butto1 = Styled.p`
 background: transparent;
 border: 0px;
 font-size:25px;
+color:white;
 
 &:hover {
     color: #254989;
@@ -37,6 +38,7 @@ const Button = Styled.p`
 background: transparent;
 border: 0px;
 font-size:25px;
+color:white;
 
 &:hover {
     color: #254989;

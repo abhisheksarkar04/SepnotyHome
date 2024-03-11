@@ -21,8 +21,6 @@ export const Heading = Styled.h1`
 color: #2B459B;
 font-size: 40px;
 margin-bottom: 0px;
-font-family: Lexend;
-
   @media screen and (max-width:555px){
     font-size: 20px;
     font-family: "roboto";
@@ -66,7 +64,6 @@ export const Desc = Styled.p`
   font-size: 20px;
   margin-top:50px
   font-weight: 500;
-  font-family: Lexend;
   margin-top:100px;
   @media screen and (max-width:555px){
     font-size: 15px;
