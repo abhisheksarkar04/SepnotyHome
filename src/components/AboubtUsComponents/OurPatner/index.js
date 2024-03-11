@@ -155,6 +155,8 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-top:120px;
   font-size:24px;
   margin-bottom:-49px;
+  color:white;
+
   `
   
   const Main = Styled.div`
@@ -190,6 +192,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-top:2px;
   font-size:16px;
   width:330px;
+  color:white;
   `
   const Img = Styled.img`
   width:350px;
@@ -200,4 +203,5 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-top:100px;
   margin-bottom:-109px;
   font-size:20px;
+  color:white;
   `

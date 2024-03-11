@@ -29,7 +29,6 @@ export const Service = styled.h1`
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
-  height:100px;
 `;
 
 export const ConRecHead = styled.h1`
