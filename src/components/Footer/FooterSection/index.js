@@ -6,7 +6,7 @@ import behance from "../Images/behance.svg";
 import facebook from "../Images/facebook.svg";
 import figma from "../Images/figma.svg";
 import instagram from "../Images/instagram.svg";
-import twitter from "../Images/twitter.svg";
+import twitter from "../Images/TwitterX.svg";
 import copyright from "../Images/copyright.svg";
 import sepnotyLogo from "../Images/sepnoty-logo.svg";
 
@@ -148,9 +148,7 @@ class FooterSection extends Component {
               <Sections>Contact Us</Sections>
             </SectionContainer>
           </BottomContainer>
-          
         </Container>
-        
       </ThemeProvider>
     );
   }
