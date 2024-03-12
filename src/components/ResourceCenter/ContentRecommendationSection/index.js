@@ -30,6 +30,7 @@ import {
   Small1,
   Span,
 } from "./styled";
+import { HeadingCon } from "../VideoTutorails/styled";
 
 const cardList = [
   {
@@ -62,7 +63,7 @@ const ContentRecommendation = () => {
     <>
       <Container>
         <Header>
-          Blog &gt; <Span>Content Recommendation</Span>
+        Resource center &gt; <Span>Content Recommendation</Span>
         </Header>
         <Resource>Resources</Resource>
         <ContentRecomContainer>
@@ -78,8 +79,10 @@ const ContentRecommendation = () => {
         </ContentRecomContainer>
         <ContentContainer>
           <FirstSection>
+            <HeadingCon>
             <Small src={small} alt="not-found" />
             <ListHeading>Your Daily Contents</ListHeading>
+            </HeadingCon>
             <SearchSuggestionContainer>
               <SearchHeading>
                 Search here What you are looking for
@@ -96,8 +99,10 @@ const ContentRecommendation = () => {
             </ListItems>
           </FirstSection>
           <div>
+            <HeadingCon>
             <Small1 src={small} alt="not-found" />
             <ListHeading>Because you Searched for UI/UX Design</ListHeading>
+            </HeadingCon>
             <ListItems>
               {cardList.map((item) => (
                 <ContentCard key={item.id} cardDetails={item} />

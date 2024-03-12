@@ -7,8 +7,6 @@ justify-content:center;
 margin-top:100px;
 margin-bottom:100px;
 justify-content:center;
-
-
 `;
 
 export const DeepLearnFrame = styled.div`
@@ -30,31 +28,21 @@ border-radius: 8px;
 export const DeepLearnImage = styled.img`
   height: 45vh;
   
-
-
 `;
 export const DeepHeading = styled.h2`
   font-height:20px;
   text-align:center;
   padding:20px;
-
+  color: #fff;
 `;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const RedText = styled.p`
+  color: #D01E1E;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: px;
+  margin-top: 8px;
+`;
 
 
 export const Container = styled.div`
@@ -117,10 +105,10 @@ export const Button = styled.button`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 20px;
+  font-size: 23px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2.2em;
+  margin-left: 3%;
 `;
 
 export const SearchHeading = styled.p`
@@ -208,10 +196,8 @@ export const Rectangle3 = styled.img`
 
 export const Small = styled.img`
   position: absolute;
-  left: 5.5%;
   height: 10%;
   width: 5%;
-  top: 74%;
   z-index: 0;
 `;
 
@@ -221,9 +207,7 @@ export const ContentContainer = styled.div`
 
 export const Small1 = styled.img`
   position: absolute;
-  left: 5.5%;
   height: 10%;
   width: 5%;
-  top: 183%;
-  bottom: 20%;
+ 
 `;
