@@ -32,6 +32,8 @@ import SEO from "../Images/seo.svg";
 import SMM from "../Images/smm.svg";
 import CM from "../Images/ContentMarketing.svg";
 import ContactForm from "../../ContactUs/ContactForm";
+import Meeting from "../../ContactUs/Meeting";
+
 import FooterSection from "../../Footer/FooterSection";
 
 const DigitalMarketing = () => {
@@ -40,11 +42,11 @@ const DigitalMarketing = () => {
     <>
       <DigitalContainer>
         <Header>
-          Services &gt; <Span>DigitalMarketing</Span>
+          Services &gt; <Span>Digital Marketing</Span>
         </Header>
         <Service>Services</Service>
         <ContentRecomContainer>
-          <ConRecHead>DigitalMarketing</ConRecHead>
+          <ConRecHead>Digital Marketing</ConRecHead>
           <ConRecDesc>
             "The aim of marketing is to know and understand the customer so well
             the services or products fit them and sell itself."
@@ -137,6 +139,7 @@ const DigitalMarketing = () => {
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />

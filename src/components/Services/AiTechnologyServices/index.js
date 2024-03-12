@@ -31,6 +31,7 @@ import framework from "../Images/framework.svg";
 import monitoring from "../Images/monitoring.svg";
 import usecases from "../Images/usecases.svg";
 import ContactForm from "../../ContactUs/ContactForm";
+import Meeting from "../../ContactUs/Meeting";
 import FooterSection from "../../Footer/FooterSection";
 
 const AiTechnologyServices = () => {
@@ -142,6 +143,7 @@ const AiTechnologyServices = () => {
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
+      <Meeting/>
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />
