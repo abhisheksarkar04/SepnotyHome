@@ -36,7 +36,7 @@ const contactListItem = [
   {
     id: 1,
     contactIcon: call,
-    contactType: "Call Us",
+    contactType: "Call us",
   },
   {
     id: 2,
@@ -46,12 +46,12 @@ const contactListItem = [
   {
     id: 3,
     contactIcon: whatsapp,
-    contactType: "Whats app",
+    contactType: "WhatsApp",
   },
   {
     id: 4,
     contactIcon: email,
-    contactType: "email",
+    contactType: "Email us",
   },
 ];
 
@@ -66,6 +66,7 @@ const ContactForm = (props) => {
     contact: false,
     requestInfo: false,
   });
+
   const { heading } = props;
   // const [sepnotyContactChecked, setSepnotyContactChecked] = useState(false); // not used after intergration
   // const [requestSepnotyChecked, setRequestSepnotyChecked] = useState(false);
@@ -125,7 +126,7 @@ const ContactForm = (props) => {
     data.set("files", upload);
 
     const response = await fetch(
-      'http://localhost:8800/api/contact/contactus',
+      "http://localhost:8800/api/contact/contactus",
       {
         method: "POST",
         body: data,
@@ -167,7 +168,7 @@ const ContactForm = (props) => {
           <div>
             <ContactHeading>{heading}</ContactHeading>
             <ContactDescription>
-              our team is ready to provide client references, estimate your
+              Our team is ready to provide client references, estimate your
               project, or answer any other question related to your IT
               intiative.
             </ContactDescription>

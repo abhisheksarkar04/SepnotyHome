@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+  }
+`;
+
 export const BottomCon = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,18 +63,6 @@ export const Image = styled.img`
   @media screen and (max-width: 555px) {
     height: 200px;
     width: 60%;
-  }
-`;
-
-export const QueryContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 40px;
-  margin: 0px;
-  padding: 50px 0px;
-  background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
-    flex-direction: column;
   }
 `;
 
