@@ -46,26 +46,30 @@ export const ConRecDesc = styled.p`
 
 export const Button = styled.button`
   background-image: linear-gradient(#ffffff, #fff741);
-  padding: 5px 25px 5px 25px;
+  padding: 5px 2px 5px 2px;
   border-radius: 20px;
+  font-weight: 550;
   color: #234581;
   border: 0px;
+  width: 120px;
+  height: 30px;
   outline: none;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 20px;
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 18px;
+  font-size: 22px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2.7em;
+  margin-left:  3%;
 `;
 
 export const SearchHeading = styled.p`
   font-size: 16px;
   color: #ffffff;
   text-align: center;
+  margin-bottom: 10px;
 `;
 export const SearchHolder = styled.div`
   dispaly: flex;
@@ -79,7 +83,7 @@ export const Input = styled.input`
   background-color: transparent;
   outline: none;
   border: 0px;
-  width: 410px;
+  width: 320px;
   color: #263238;
 
   &::placeholder {
@@ -145,10 +149,9 @@ export const Rectangle3 = styled.img`
 
 export const Small = styled.img`
   position: absolute;
-  left: 5.5%;
+
   height: 10%;
   width: 5%;
-  top: 78%;
   z-index: 0;
 `;
 
@@ -158,9 +161,7 @@ export const ContentContainer = styled.div`
 
 export const Small1 = styled.img`
   position: absolute;
-  left: 5.5%;
   height: 10%;
   width: 5%;
-  top: 150%;
   z-index: 0;
 `;
