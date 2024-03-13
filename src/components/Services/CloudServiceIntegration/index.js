@@ -27,6 +27,7 @@ import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
 import security from "../Images/endpoint.svg";
 import ContactForm from "../../ContactUs/ContactForm";
+import Meeting from "../../ContactUs/Meeting";
 import FooterSection from "../../Footer/FooterSection";
 import communication from "../Images/communication.svg";
 import integration from "../Images/integration.svg";
@@ -187,6 +188,7 @@ const CloudService = () => {
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />

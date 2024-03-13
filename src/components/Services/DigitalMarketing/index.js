@@ -59,7 +59,7 @@ const DigitalMarketing = () => {
           <div>
             <PatternCon>
               <SmallPattern></SmallPattern>
-              <ListHeading>Services of DigitalMarketing</ListHeading>
+              <ListHeading>Services of Digital Marketing</ListHeading>
             </PatternCon>
 
             <ServiceItemDetails>

@@ -177,6 +177,7 @@ const AppIntegration = () => {
         </CorporateItems>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />

@@ -30,6 +30,7 @@ import rectangle3 from "../Images/Rectangle3.svg";
 import SEO from "../Images/seo.svg";
 import ContactForm from "../../ContactUs/ContactForm";
 import FooterSection from "../../Footer/FooterSection";
+import Meeting from "../../ContactUs/Meeting";
 
 const SEOPage = () => {
   const heading = "Have a question to our team or need help with your project?";
@@ -175,6 +176,7 @@ const SEOPage = () => {
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />

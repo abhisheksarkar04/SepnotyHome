@@ -13,7 +13,7 @@ export const CardContainer = styled.div`
   height: 350px;
   width: 270px;
   color: #b7b6bd;
-
+  transition: background-color 0.8s ease;
   &:hover {
     background-color: #c7cee8;
   }
@@ -47,7 +47,6 @@ export const CardNumber = styled.h1`
   font-size: 20px;
   color: #33499e;
   @media screen and (max-width: 555px) {
-
     font-size: 18px;
     margin-top: -18px;
     align-self: flex-start;
@@ -60,7 +59,6 @@ export const CardTitle = styled.h1`
   color: #2b459b;
   padding-top: 3px;
   @media screen and (max-width: 555px) {
-
     font-size: 18px;
     margin-top: -20px;
     align-self: flex-end;
@@ -70,7 +68,7 @@ export const CardTitle = styled.h1`
 export const CardParagraph = styled.p`
   margin: 50px 0 50px 0;
   font-size: 14px;
-  color: #B7B6BD;
+  color: #b7b6bd;
   line-height: 1.5em;
 
   @media screen and (max-width: 555px) {
@@ -121,7 +119,6 @@ export const PopupContent = styled.div`
   margin-bottom: 10px;
   @media screen and (max-width: 555px) {
     flex-direction: column;
-
   }
 `;
 
@@ -142,7 +139,6 @@ export const PopupTitle = styled.h1`
     font-size: 100%;
   }
 `;
-
 
 export const PopupImage = styled.img`
   height: 120px;
@@ -188,6 +184,5 @@ export const PopupDesc = styled.p`
   @media screen and (max-width: 555px) {
     font-size: 70%;
     width: ;
-
   }
 `;

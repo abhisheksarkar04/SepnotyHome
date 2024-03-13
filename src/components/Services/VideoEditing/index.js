@@ -59,6 +59,7 @@ import resolve from "../Images/resolve.svg";
 import rush from "../Images/rush.svg";
 import premier from "../Images/premier.svg";
 import crop from "../Images/crop.svg";
+import Meeting from "../../ContactUs/Meeting";
 
 const VideoEditing = () => {
   const heading = "Have a question to our team or need help with your project?";
@@ -298,6 +299,7 @@ const VideoEditing = () => {
         </ToolsCon>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />
