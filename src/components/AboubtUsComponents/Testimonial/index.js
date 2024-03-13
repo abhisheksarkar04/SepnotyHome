@@ -67,103 +67,113 @@ import {
             <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
                 <Main2>
                    
                         <Image1 src={Image} alt="not-found"/>
-                        <p><Spam></Spam>Stinger Technologies, 
+                        <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                     
                     <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
                 </Main2>
                 <Main2>
                    
                         <Image1 src={Image} alt="not-found"/>
-                        <p><Spam></Spam>Stinger Technologies, 
+                        <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                     
                     <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
                 </Main2>
                 <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <p><Spam></Spam>Stinger Technologies, 
+                   <P><Spam></Spam>Stinger Technologies, 
 a global provider of Business Processes
-outsourcing services</p>
+outsourcing services</P>
+               
+               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+           </Main2>
+           <Main2>
+                   
+                   <Image1 src={Image} alt="not-found"/>
+                   <P><Spam></Spam>Stinger Technologies, 
+a global provider of Business Processes
+outsourcing services</P>
                
                <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
            </Main2>
             </Main1>
+            
         </DigitalContainer>
         
         <FooterSection />
@@ -183,22 +193,27 @@ outsourcing services</p>
   flex-wrap : wrap;
   gap:140px;
   margin-left:100px;
-  margin-bottom:100px;
+  margin-bottom:170px;
   `
   const Main2 = Styled.div`
   border: 0.99px solid #FFFFFF;
   background: #D9D9D917;
   border-radius:7px;
-  padding:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
   height:300px;
-  width:300px;
-  gap:30px;
-  padding:20px;
+  width:330px;
   margin-bottom:-120px;
   `
   const Image1 = Styled.img`
   margin-bottom:10px;
+  height:80px;
+  margin-top:10px;
   `
   const P = Styled.p`
-  margin-top:20px;
+  margin-top:10px;
+  color:white;
+  text-align:center;
   `

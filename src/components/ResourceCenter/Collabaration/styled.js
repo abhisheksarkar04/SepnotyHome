@@ -6,6 +6,7 @@ export const Container = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+  width: 100%;
 `;
 
 export const Header = styled.h1`
@@ -84,36 +85,33 @@ export const Rectangle3 = styled.img`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 18px;
+  font-size: 22px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 7em;
-  margin-top: 1em;
+  margin-left: 10%;
 `;
 
 export const Small = styled.img`
   position: absolute;
-  left: 7.5%;
   height: 10%;
   width: 5%;
-  top: 75%;
   z-index: 0;
+  margin-left: 7%;
 `;
 
 export const Small1 = styled.img`
   position: absolute;
-  left: 5.5%;
   height: 10%;
   width: 5%;
-  bottom: -36%;
+  
+  margin-left: 7%;
   z-index: 0;
 `;
 export const Small2 = styled.img`
   position: absolute;
-  left: 5.5%;
   height: 10%;
+  margin-left: 7%;
   width: 5%;
-  bottom: -133%;
   z-index: 0;
 `;
 export const LabelCont = styled.div`

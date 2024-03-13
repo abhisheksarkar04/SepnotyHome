@@ -210,10 +210,11 @@ on various technical aspects of a business, project, or initiative.
  `
  const Para1 = Styled.p`
  font-size:20px;
+ color:white;
 `
 const Para2 = Styled.p`
 
-
+color:white;
 `
 const Image1 = Styled.img`
 height:20px;

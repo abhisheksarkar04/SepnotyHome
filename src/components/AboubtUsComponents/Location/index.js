@@ -64,11 +64,11 @@ const Location= () => {
             <Main>
               <PP>Contact Us:</PP>
               <Img src={GroupImg}/>
-              <p>Sepnoty<br/>
+              <P>Sepnoty<br/>
                 WX7M+8CG, Udayagiri Rd,<br/> 
                 Vaddi Palem, Janathapet,<br/>
                 Kavali, Andhra Pradesh 524201
-              </p>
+              </P>
               </Main>
           </ServiceItemCon>
       </DigitalContainer>
@@ -79,6 +79,10 @@ const Location= () => {
 };
 
 export default Location;
+
+const P = styled.p`
+color:white;
+`
 const Main = styled.div`
 display:flex;
 flex-direction:column;
@@ -86,11 +90,12 @@ padding:20px;
 
 
 
-
+gap:10px;
 
 `
 const PP = styled.p`
 font-size:25px;
+color:white;
 `
 const Img = styled.img`
 height:24px;

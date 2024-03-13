@@ -83,6 +83,7 @@ import {
   Small1,
   Small2,
 } from "./styled";
+import { HeadingCon } from "../VideoTutorails/styled";
 
 const topicList = [
   {
@@ -128,8 +129,10 @@ const Collaboration = () => {
           {/* <Button>Get Content</Button> */}
         </ContentRecomContainer>
         <DailyContents>
+          <HeadingCon>
           <Small src={small} alt="not-found" />
           <ListHeading>Discussion Forums</ListHeading>
+          </HeadingCon>
           <ViewsContainer>
             <LabelCont>
               <Topics>Topics</Topics>
@@ -150,8 +153,10 @@ const Collaboration = () => {
           </ViewsContainer>
         </DailyContents>
         <div>
+          <HeadingCon>
           <Small1 src={small} alt="not-found" />
           <ListHeading>Messaging and Chat</ListHeading>
+          </HeadingCon>
           <MessageContainer>
             <ChatHistory>
               <IconList>
@@ -272,8 +277,10 @@ const Collaboration = () => {
           </MessageContainer>
         </div>
         <div>
+          <HeadingCon>
           <Small2 src={small} alt="not-found" />
-          <ListHeading>Messaging and Chat</ListHeading>
+          <ListHeading>Groups and Communities</ListHeading>
+          </HeadingCon>
           <CommunityCon>
             <CommunityHeading>
               Community of Website Development
