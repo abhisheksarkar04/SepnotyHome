@@ -51,6 +51,9 @@ export const SectionItem = styled.p`
   font-size: 12px;
   color: #263238;
   margin-bottom: 20px;
+  &:hover {
+    color: #2b459b;
+  }
 `;
 
 export const Item = styled.p`
@@ -59,6 +62,9 @@ export const Item = styled.p`
   color: #263238;
   width: 170px;
   margin-bottom: 20px;
+  &:hover {
+    color: #2b459b;
+  }
 `;
 
 export const CompanyContainer = styled.div`

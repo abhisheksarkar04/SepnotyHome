@@ -32,6 +32,7 @@ import protection from "../Images/protection.svg";
 import MSS from "../Images/MSS.svg";
 import network from "../Images/network.svg";
 import ContactForm from "../../ContactUs/ContactForm";
+import Meeting from "../../ContactUs/Meeting";
 import FooterSection from "../../Footer/FooterSection";
 
 const CyberSecurity = () => {
@@ -163,6 +164,7 @@ const CyberSecurity = () => {
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />

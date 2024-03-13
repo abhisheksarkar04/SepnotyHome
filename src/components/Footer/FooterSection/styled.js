@@ -5,7 +5,7 @@ import layout from "../Images/layout.svg";
 export const GlobalStyle = createGlobalStyle` 
  *{ box-sizing: border-box;
   margin: 0px;
-  font-family: "roboto";
+  font-family: "Inter";
  }
 `;
 
@@ -68,7 +68,6 @@ export const SepnotyDescription1 = styled.p`
 
 export const ServiceContainer = styled.div`
   @media screen and (max-width: 555px) {
-    
   }
 `;
 
@@ -101,7 +100,7 @@ export const ContactHeading = styled.h1`
   font-size: 17px;
   color: #cac7ee;
   margin-bottom: 16px;
-  
+
   @media screen and (max-width: 555px) {
     margin-bottom: 6px;
     margin-top: 10px;
@@ -190,7 +189,6 @@ export const CopywriteContainer = styled.div`
     margin-left: -20px;
     justify-content: none;
     align-items: flex-start;
-
   }
 `;
 
@@ -201,16 +199,14 @@ export const Copyright = styled.img`
   @media screen and (max-width: 555px) {
     height: 22px;
     width: 22px;
-    
   }
 `;
 
 export const CopywriteContent = styled.p`
   font-size: 10px;
-  color: #D9D9D9;
+  color: #d9d9d9;
   @media screen and (max-width: 555px) {
     font-size: 18px;
-
   }
 `;
 
@@ -221,9 +217,9 @@ export const BottomContainer = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
   @media screen and (max-width: 555px) {
-     flex-direction: column;
-     margin-top: 20px;
-     justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: flex-start;
   }
 `;
 
@@ -241,7 +237,7 @@ export const SectionContainer = styled.div`
 export const Sections = styled.p`
   font-size: 10px;
   position: relative;
-  color: #D9D9D9;
+  color: #d9d9d9;
   border-right: 1px solid #ffffff;
   margin-right: 10px;
   padding-right: 10px;
@@ -285,7 +281,6 @@ export const FollowUsSection = styled.ul`
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
-  
 
   @media screen and (max-width: 555px) {
     flex-direction: row;

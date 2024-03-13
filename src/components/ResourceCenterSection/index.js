@@ -88,6 +88,12 @@ const ResourceCenterSection = (props) => {
                 Feedback and Improvement Mechanisms
               </ResourceItem>
             </Link>
+            <Link to="/resource-center/admin-login">
+              <ResourceItem onClick={handleLinkClick}>
+                Admin Login
+              </ResourceItem>
+            </Link>
+            
           </ResourcesContainer>
         </Items>
       </ResourceItemsContainer>

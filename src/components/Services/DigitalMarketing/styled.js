@@ -19,7 +19,7 @@ export const Span = styled.span`
 `;
 
 export const Service = styled.h1`
-  font-size: 32px;
+  font-size: 30 px;
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 6%;
@@ -31,7 +31,7 @@ export const ContentRecomContainer = styled.div`
 `;
 
 export const ConRecHead = styled.h1`
-  font-size: 32px;
+  font-size: 30px;
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
@@ -39,7 +39,7 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 22px;
+  font-size: 25px;
   color: #ffffff;
   width: 50%;
   padding: 0px 30px 30px 0px;
@@ -74,7 +74,7 @@ export const Rectangle3 = styled.img`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
   margin-left: -23px;
@@ -85,9 +85,9 @@ export const ServiceItemCon = styled.div`
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 30px;
-  font-size: 19px;
+  font-size: 23px;
   color: #ffffff;
-  width: 60%;
+  width: 90%;
   line-height: 1.5;
 `;
 
