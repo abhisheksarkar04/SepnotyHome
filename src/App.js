@@ -62,6 +62,10 @@ import SubSection from "./components/AboubtUsComponents/AboutPortfolioSub";
 import PortfolioHome from "./components/MyPortfolio/PortfolioHome";
 import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 
+import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
+import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
+import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
+
 
 
 
@@ -285,7 +289,22 @@ const AppRoutes = () => {
         path="/resource-center/case-studies-and-success-stories"
         component={CaseStudiesandSuccessStories}
       />
-
+      <Route 
+          exact
+          path="/resource-center/admin-login"
+          component={UserInput}
+      />
+       <Route 
+          exact
+          path="/resource-center/admin-login/dash-board"
+          component={DashBoard}
+      />
+       <Route 
+          exact
+          path="/resource-center/admin-login/dash-board/create-post"
+          component={CreatePost}
+      />
+     
       <Route
         exact
         path="/services/digital-marketing"
