@@ -1,6 +1,6 @@
 import behance from "../assets/behance.svg";
 import insta from "../assets/instagram.svg";
-import twitter from "../assets/twitter.svg";
+import twitter from "../assets/TwitterX.svg";
 import facebook from "../assets/facebook.svg";
 import fig from "../assets/figma.svg";
 import search from "../assets/search.svg";
@@ -32,7 +32,7 @@ import {
 
 const followUsList = [
   { id: 1, image: facebook, name: "Facebook" },
-  { id: 2, image: twitter, name: "Twitter" },
+  { id: 2, image: twitter, name: "X" },
   { id: 3, image: insta, name: "Instagram" },
   { id: 4, image: behance, name: "Behance" },
   { id: 5, image: fig, name: "Figma" },
@@ -102,8 +102,12 @@ const AboutUsSection = (props) => {
         <CompanyContainer>
           <Section>Recognition</Section>
           <Border />
-          <Link to="/AboutUsComponents/Testiomial"><SectionItem onClick={handleLinkClick}>Testimonials</SectionItem></Link>
-          <Link to="/AboutUsComponents/Awards"><SectionItem onClick={handleLinkClick}>Awards</SectionItem></Link>
+          <Link to="/AboutUsComponents/Testiomial">
+            <SectionItem onClick={handleLinkClick}>Testimonials</SectionItem>
+          </Link>
+          <Link to="/AboutUsComponents/Awards">
+            <SectionItem onClick={handleLinkClick}>Awards</SectionItem>
+          </Link>
         </CompanyContainer>
         <div>
           <Section>Join us</Section>
