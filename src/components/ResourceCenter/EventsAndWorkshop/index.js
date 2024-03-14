@@ -89,12 +89,14 @@ const EventsAndWorkshop = () => {
                         <ServiceItemDesc>
                         An event is a planned or spontaneous occurrence that typically involves a gathering of people or activities centered around a specific purpose, theme, or objective. Events can range from small, informal gatherings to large-scale conferences, festivals, or ceremonies. They can be organized for various reasons, including entertainment,celebration, education, networking, marketing, fundraising, or awareness-raising.
                         </ServiceItemDesc>
-                </ServiceItemDetails>
-                <ListItemSection>
-                    <PatternCon>
+                        <PatternCon>
                           <SmallPattern></SmallPattern>
                           <ListHeading>Key characteristics of workshops include:</ListHeading>
                     </PatternCon>
+                </ServiceItemDetails>
+               
+                <ListItemSection>
+                 
                            {data.map((item, index) => (
                               <li key={index}>
                                   <ListHead>{item.heading}</ListHead>
