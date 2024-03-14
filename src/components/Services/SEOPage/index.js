@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   PatternCon,
   SmallPattern,
   SeoItemsCon,
@@ -28,9 +27,8 @@ import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
 import SEO from "../Images/seo.svg";
-import ContactForm from "../../ContactUs/ContactForm";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
-import Meeting from "../../ContactUs/Meeting";
 
 const SEOPage = () => {
   const heading = "Have a question to our team or need help with your project?";
@@ -175,10 +173,9 @@ const SEOPage = () => {
           </SeoItemsCon>
         </ServiceItemCon>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );
