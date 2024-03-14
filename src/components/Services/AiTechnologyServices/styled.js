@@ -51,7 +51,7 @@ export const Rectangle1 = styled.img`
   right: 0;
   height: 70%;
   width: 37%;
-  top: 15%;
+  top: 15vh;
   z-index: 0;
 `;
 
@@ -60,7 +60,7 @@ export const Rectangle2 = styled.img`
   right: 17.5%;
   height: 80%;
   width: 60%;
-  top: -1%;
+  top: -1vh;
   z-index: 0;
 `;
 
@@ -69,7 +69,7 @@ export const Rectangle3 = styled.img`
   left: 0%;
   height: 62%;
   width: 18.7%;
-  top: 32%;
+  top: 32vh;
   z-index: 0;
 `;
 export const ListHeading = styled.h1`
