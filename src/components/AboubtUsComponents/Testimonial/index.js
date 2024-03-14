@@ -195,3 +195,6 @@ import {
   text-align:center;
   width:100%;
   `
+
+
+  

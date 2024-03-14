@@ -199,6 +199,9 @@ outsourcing services</P>
   flex-direction:column;
   border: 0.99px solid #FFFFFF;
   background: #2f333f;
+
+
+  
   gap:20px;
   border-radius:7px;
   padding: 20px;
