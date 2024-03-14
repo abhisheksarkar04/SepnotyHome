@@ -180,8 +180,9 @@ including websites, apps, social media, video, podcasts, & more, across various 
   align-item:center;
   justify-content:center;
   height:250px;
-  border-radius:20px;
+  border-radius:8px;
   margin-bottom:-120px;
+  padding:10px;
   `
   const Heading = Styled.h1`
   text-align:center;
@@ -194,7 +195,7 @@ including websites, apps, social media, video, podcasts, & more, across various 
   height:90px;
   align-item:center;
   justify-content:start;
-  margin-left:100px;
+  margin-left:90px;
   margin-top:10px;
   `
   const Para1 = Styled.p`
