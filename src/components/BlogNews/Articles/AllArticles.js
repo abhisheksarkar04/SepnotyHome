@@ -18,7 +18,7 @@ import {
 const articlesList = [
   {
     id: 1,
-    title:'IOT',
+    title:'iOT',
     name: 'AZURE-The Future IOT Security',
     imgUrl:article1,
     description:"Internet of Things (IoT) has emerged as a game-changer, it has transformed industries, improved efficiency, and changed the way.",
@@ -38,7 +38,7 @@ const articlesList = [
     name: 'The Importance of UI/UX for your Online Business',
     imgUrl:article3,
     description:"Imagine sitting down to watch a highly anticipated action movie, only to find that it lacks excitement, meaningful plot twists.",
-    time:"NOV 08 2024",
+    time:"Nov 08 2024",
   },
   {
     id: 4,
@@ -94,7 +94,7 @@ const articlesList = [
     name: 'The Importance of UI/UX for your Online Business',
     imgUrl:article3,
     description:"Imagine sitting down to watch a highly anticipated action movie, only to find that it lacks excitement, meaningful plot twists.",
-    time:"NOV 08 2024",
+    time:"Nov 08 2024",
   },
   {
     id: 11,
@@ -134,7 +134,7 @@ const articlesList = [
     name: 'The Importance of UI/UX for your Online Business',
     imgUrl:article3,
     description:"Imagine sitting down to watch a highly anticipated action movie, only to find that it lacks excitement, meaningful plot twists.",
-    time:"NOV 08 2024",
+    time:"Nov 08 2024",
   },
   
 ];

@@ -24,17 +24,17 @@ height:auto;
 
 export const ArticleTitle=styled.h3`
 color:rgba(234, 50, 50, 1);
-font-size:12px;
+font-size:14px;
 margin-bottom:10px;
 `;
 export const ArticleName=styled.h2`
 color:rgba(43, 69, 155, 1);
-font-size:15px;
+font-size:18px;
 margin-bottom:10px;
 `;
 export const ArticleDescription=styled.p`
 color:black;
-font-size:12px;
+font-size:13px;
 line-height:15px;
 margin-bottom:10px;
 `;
@@ -42,7 +42,8 @@ export const ArticleTime=styled.h3`
 color:rgba(43, 69, 155, 1);
 margin-left:73%;
 font-size:12px;
-margin-bottom:10px;
+margin-bottom:5px;
+margin-top:10px;
 `;
 
 export const Arrow =styled.h2`

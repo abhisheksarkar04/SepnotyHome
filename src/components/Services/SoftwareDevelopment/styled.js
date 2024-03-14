@@ -5,28 +5,28 @@ export const SoftDevSection = styled.div`
  display:flex;
  flex-direction:column;
  color:white;
- width:100vw;
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
-font-size:20px;
+font-size:24px;
 `;
 export const PageTitle=styled.h2`
 color:white;
-font-size:20px;
+font-size:24px;
 padding:100px 0px 20px 40px;
 `;
 
 export const SectionThreeHeading=styled.h2`
-font-size:42px;
+font-size:44px;
 text-align:center;
 `;
 export const SpanThree=styled.span`
 color:rgba(43, 69, 155, 1);
 `;
 export const SectionThreeDescription=styled.p`
-font-size:20px;
-line-height:30px;
+font-size:22px;
+line-height:34px;
 width:55%;
 margin:40px;
 word-spacing: 5px;
@@ -48,19 +48,19 @@ padding:40px;
 export const SectionFourHeading=styled.h2`
 color:white;
 text-align: center
+font-size:28px;
 `;
 export const SectionFourDescription=styled.p`
 color: #fff;
 padding: 30px 30px 40px 0px;
 margin-left: 15%;
 line-height:22px;
-font-size:18px;
+font-size:22px;
 width:70%;
 
 `;
 export const ChooseSection=styled.div`
 display:flex;
-
 flex-direction:row;
 flex-wrap:wrap;
 justify-content:center;

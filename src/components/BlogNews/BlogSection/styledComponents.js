@@ -7,8 +7,9 @@ background-color:rgba(12, 17, 31, 1);
 padding-top:60px;
 `;
 export const BlogTitle=styled.h2`
-font-size:25px;
+font-size:30px;
 color:white;
+margin-top:10px;
 `;
 export const BlogName=styled.h1`
 color:white;
@@ -27,7 +28,7 @@ width:auto;
 height:auto;
 margin:5px;
 border-radius:7px;
-font-size:10px;
+font-size:12px;
 &:hover{
     background-color:rgba(43, 69, 155, 1);
     color:white;

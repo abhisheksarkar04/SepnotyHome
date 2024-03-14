@@ -20,6 +20,7 @@ export const SeeMoreButton = styled.button`
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
+  color:white;
 `;
 
 export const HrLine=styled.hr`
