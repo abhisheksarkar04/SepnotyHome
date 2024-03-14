@@ -44,7 +44,7 @@ const Designersforhire = () => {
     { value: 'option2', label: 'UI/UX Desiginer' },
     { value: 'option3', label: 'Digital Marketing' },
     { value: 'option4', label: 'Graphic Designer' },
-    { value: 'option5', label: 'Video Edting' },
+    { value: 'option5', label: 'video edting' },
 
 
   ];
@@ -70,22 +70,26 @@ const Designersforhire = () => {
 
   return (
     <>
-    
       <DigitalContainer>
         <Header>
           Career Oppurunities &gt; <Span>Desiginer for hire</Span>
         </Header>
         <Service>Career Oppurunities</Service>
         <BlueContainer>
+
           <LeftTextContainer>
             <LeftHeading>
               Career Oppurunities
             </LeftHeading><br></br>
             <LeftTitle>"Your big opportunity may be right where you are now." </LeftTitle>
+
           </LeftTextContainer>
+          {/* <RightImg src={ImageRight} alt="not found"></RightImg> */}
         </BlueContainer>
+
         <ServiceItemCon>
           <div>
+
             <ListHeading>Career Opportunities</ListHeading><br></br>
             <ServiceItemDetails>
               <ServiceItemDesc>
@@ -102,7 +106,11 @@ const Designersforhire = () => {
                     ))}
                   </select>
                 </div>
-              </DropDown>
+              </DropDown> 
+
+
+
+
               <div style={{ display: 'flex', width: '100%' }}>
                 {[{ image: img1, name: 'UI Designer', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
                 (<ListInnerContainer>

@@ -41,7 +41,7 @@ const CareerOppurtunities = (props) => {
           <CareerImg src={job} alt="job" />
         </Career>
         <SectionContainer>
-          <Link to="/CareerOppurtunities/Designersforhire">
+          <Link to="/CareerOppurtunities/DevelopersforHire">
             <Developer onClick={handleLinkClick}>Developers for Hire</Developer>
           </Link>
           <Border />
@@ -60,7 +60,7 @@ const CareerOppurtunities = (props) => {
           </DeveloperItems>
         </SectionContainer>
         <div>
-          <Link to="/CareerOppurtunities/DevelopersforHire">
+          <Link to="/CareerOppurtunities/Designersforhire">
             <Developer onClick={handleLinkClick}>Designers for hire</Developer>
           </Link>
           <Border />

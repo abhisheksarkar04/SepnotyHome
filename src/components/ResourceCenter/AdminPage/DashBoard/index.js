@@ -99,7 +99,10 @@ const DashBoard=()=>{
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={blogicon} alt="icon"/>
+                        <Link to="/ResourceCenter/Myblog">
                         <IconName>My Blogs</IconName>
+                        </Link>
+                        
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={careericon} alt="icon"/>

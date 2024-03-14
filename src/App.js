@@ -65,8 +65,7 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
-
-
+import Myblog from './components/ResourceCenter/Myblog';
 
 
 
@@ -209,6 +208,11 @@ const AppRoutes = () => {
         exact
         path="/CareerOppurtunities/Designersforhire"
         component={Designerforhire}
+      />
+      <Route
+      exact
+      path="/ResourceCenter/Myblog"
+      component={Myblog}
       />
       <Route
         exact

@@ -203,10 +203,13 @@ export const ServiceItemCon = styled.div`
   margin:10px;
 `;
 export const ServiceItemDesc = styled.p`
-  margin-bottom: 20px;
-  font-size: 23px;
-  color: #ffffff;
-  width:90%;
+margin-bottom: 20px;
+font-size: 23px;
+color: #ffffff;
+magin:0px;
+width:80%;
+text-align: justify;
+padding -left:6%;
 `;
 export const Careop = styled.p`
   padding-inline :50px
