@@ -17,7 +17,6 @@ import {
   ServiceItemDetails,
   ServiceItemCon,
   ConatctCon,
-  ItemCon,
   SmallPattern,
   PatternCon,
 } from "./styled";
@@ -56,7 +55,7 @@ const AiTechnologyServices = () => {
           <Rectangle1 src={rectangle1} alt="not-found" />
         </ContentRecomContainer>
         <ServiceItemCon>
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -74,9 +73,9 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
 
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -98,9 +97,9 @@ const AiTechnologyServices = () => {
                 </Link>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
 
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -119,8 +118,8 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
-          <ItemCon>
+          </div>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -139,11 +138,11 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
         </ServiceItemCon>
       </DigitalContainer>
       <ConatctCon>
-      <Meeting/>
+        <Meeting />
         <ContactForm heading={heading} />
       </ConatctCon>
       <FooterSection />
