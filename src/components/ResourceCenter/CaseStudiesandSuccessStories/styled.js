@@ -13,6 +13,7 @@ padding:105px 0px 10px 30px;
 `;
 export const WebSpan=styled.span`
 color: #fff;
+font-weight: 400;
 `;
 export const WebHeading=styled.h1`
 font-size:28px;

@@ -1,5 +1,5 @@
 // import React, { PureComponent } from 'react';
-import styled from "styled-components";
+// import styled from "styled-components";
 // import { BarChart, Bar  } from 'recharts';
 import MobSectionOne from './MobSectionOne/MobSectionOne';
 import FooterSection from "../../Footer/FooterSection";
@@ -26,15 +26,15 @@ import {
     // Header,
     // MobSection,
     // Span,
-    CirclesContainer,
-    CircleOne,
-    CircleTwo,
-    CircleThree,
-    // CardSection,
-    // GraphsContainer,
-    PercentageContainer,
+    // CirclesContainer,
+    // CircleOne,
+    // CircleTwo,
+    // CircleThree,
+    // // CardSection,
+    // // GraphsContainer,
+    // PercentageContainer,
     MobSection1,
-    
+    AnalyticsSection,
     AnalyticsPage,
     GdPageTitle,
     ServiceSpan,
@@ -71,125 +71,6 @@ const AnalyticsAndReporting = () => {
     const [date, setDate]=useState();
     console.log("Date", date);
 
-    const ActivityData = [
-        {
-          name: 'Page A',
-          uv: 2000,
-     
-        },
-        {
-          name: 'Page B',
-          uv: 1800,
-       
-        },
-        {
-          name: 'Page C',
-          uv: 2000,
-       
-        },
-        {
-          name: 'Page D',
-          uv: 1680,
-         
-        },
-        {
-          name: 'Page E',
-          uv: 1890,
-         
-        },
-        {
-          name: 'Page F',
-          uv: 2390,
-     
-        },
-        {
-          name: 'Page G',
-          uv: 3490,
-
-        },
-      ];
-
-
-      const projectsData = [
-        {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
-        },
-        {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
-        },
-        {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
-        },
-        {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
-        },
-        {
-          name: 'Page E',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
-        },
-        {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
-        },
-        {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        },
-      ];
-
-
-      // const textColor = "#ffffff";
-    
-      const CustomBarShape = ({ x, y, width, height }) => (
-        <>
-        <rect x={x} y={y} fill={"url(#grad)"} width={width} height={height} rx={5} ry={5} />
-
-        {/* {ActivityData.map((entry, index) => (
-                // <Text
-                //   key={`label-${index}`}
-                //   // x={(index + 0.5) * 250 / ActivityData.length} // Position text in the middle of each bar
-                //   y={220} // Adjust the y-coordinate as needed
-                //   textAnchor="middle"
-                //   fill="black"
-                // >
-                //   {entry.name}
-                // </Text>
-          ))} */}
-       
-        </>
-      );
-      
-      const CustomBarShape2 = ({ x, y, width, height }) => (
-        <rect x={x} y={y} fill={"url(#grad2)"} width={width} height={height} rx={5} ry={5} />
-      );
-     const progress = "50";
-     const CustomResponsiveContainer = styled.div`
-        background-color: #C1CAE7;
-        padding: 100px 10px 0px 30px;
-        margin: 0px 30px 10px 0px; /* Adjust the margin for spacing and align to the right */
-        color: black;
-        width: auto;
-        height:auto;
-        border-radius: 10px; 
-    `;
     return(
         <AnalyticsPage>
             
@@ -254,36 +135,36 @@ const AnalyticsAndReporting = () => {
                  
               </SearchSection>
         </HeadingSection>
-              <ProMainDiv>
-                  
-                 <ProTop>
-                
-                      <ProBtn> <VectorImg src={Vector} alt="Vector"/> 15 Days</ProBtn>
-                      <IoClose 
-                   style={{
-                    color: 'white', // Change outline color to white
-                    fontSize: '2.2em', // Increase size (adjust as needed)
-                    fontWeight: 'none',
-                    margin: '0px 0px 0px 440px'
-                  }}
-                 />
-                      <ProTopHead>
-                        Pro Version
-                      </ProTopHead>
-                      
-                      <ProTopImg src={DaimondImg} alt=" Pro version Get" /> 
-                 </ProTop>
-                 <ProBottom>
-                    <GraphImg src={GraphPro} alt="Graph set"/>
-                    <BtnLearn type="button">Learn More</BtnLearn>
-                 </ProBottom>
-             </ProMainDiv>
-             <MobSection1>
-                    <GraphImageItem src={grp3} alt="graph reports"  />  
-                    <GraphImageItem src={grp1} alt="graph reports"  />
-                    <GraphImageItem src={grp4} alt="graph reports"  />
-                    <GraphImageItem src={grp2} alt="graph reports"  />
-            </MobSection1>    
+         <AnalyticsSection>
+                <ProMainDiv>     
+                  <ProTop>
+                        <ProBtn> <VectorImg src={Vector} alt="Vector"/> 15 Days</ProBtn>
+                        <IoClose 
+                    style={{
+                      color: 'white', // Change outline color to white
+                      fontSize: '2.2em', // Increase size (adjust as needed)
+                      fontWeight: 'none',
+                      margin: '0px 0px 0px 90%'
+                    }}
+                  />
+                        <ProTopHead>
+                          Pro Version
+                        </ProTopHead>
+                        
+                        <ProTopImg src={DaimondImg} alt=" Pro version Get" /> 
+                  </ProTop>
+                  <ProBottom>
+                      <GraphImg src={GraphPro} alt="Graph set"/>
+                      <BtnLearn type="button">Learn More</BtnLearn>
+                  </ProBottom>
+              </ProMainDiv>
+              <MobSection1>
+                      <GraphImageItem src={grp3} alt="graph reports"  />  
+                      <GraphImageItem src={grp1} alt="graph reports"  />
+                      <GraphImageItem src={grp4} alt="graph reports"  />
+                      <GraphImageItem src={grp2} alt="graph reports"  />
+              </MobSection1>  
+            </AnalyticsSection>  
             <FooterSection />
         </AnalyticsPage>
     )

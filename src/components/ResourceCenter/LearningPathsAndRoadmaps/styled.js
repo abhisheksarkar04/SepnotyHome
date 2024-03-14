@@ -5,18 +5,20 @@ background-color:rgba(12, 17, 31, 1);
 width:100%;
 `;
 export const WebPageTitle=styled.h2`
-font-size:16px;
+font-size:18px;
 font-weight:600;
 color:white;
-padding: 80px 0px 20px 30px;
+padding: 100px 0px 20px 6%;
 `;
 export const WebSpan=styled.span`
 color: #fff;
+font-weight: 400;
 `;
 export const WebHeading=styled.h1`
-font-size:28px;
+font-size: 30px;
 font-weight:700;
-margin:10px 0px 15px 30px;
+padding-left: 6%;
+margin:10px 0px 15px 0;
 color:white;
 `;
 export const CapabilityHeading=styled.h2`
@@ -29,7 +31,7 @@ text-align:center;
 export const AppDetailsContainer=styled.div`
 display:flex;
 flex-direction:column;
-padding:10px 0px 30px 30px;
+padding:10px 0px 30px 6%;
 `;
 
 export const MainHeading = styled.h2`
@@ -40,8 +42,8 @@ font-weight: bold;
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 70px;
-  width: 80px;
+  height: 55px;
+  width: 60px;
   border-radius: 3px;
 `;
 
