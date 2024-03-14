@@ -1,6 +1,6 @@
 // import searchIcon from "../images/search.svg";
 // import DeepLearnCards from "./DeepLearnCards";
-import DeepLearnStructure from "./images/Rectangle 6283.svg";
+import DeepLearnStructure from "./images/Rectangle 6283.png";
 import FooterSection from "../../Footer/FooterSection";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
@@ -18,9 +18,10 @@ import image6 from "./images/Rectangle 6275.png"
 
 import {
   CardContainer,
+  CardContainer1,
   Image,
   Title,
-
+  Image33,
   ButtonCon,
   DetailsCon,
   ImageA,
@@ -55,6 +56,7 @@ import {
   ImageContainer,
   DeepLearnImage,
   DeepHeading,
+  DeepLearnImage2,
   Span,
   RedText,
 } from "./TechnicalStyled";
@@ -144,7 +146,7 @@ const TechnicalArticals = () => {
                       </CardContainer>
                     </li>
                     <li>
-                      <Image src={image3} />
+                      <Image33 src={image3} />
                       <CardContainer>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
@@ -174,13 +176,13 @@ const TechnicalArticals = () => {
                     </li>
                     <li>
                       <ImageB src={image6} />
-                      <CardContainer>
+                      <CardContainer1>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
-                      </CardContainer>
+                      </CardContainer1>
                     </li>
                 </ListItems>
             </TechnicalArticalsMain>
@@ -219,7 +221,7 @@ const TechnicalArticals = () => {
                       </CardContainer>
                     </li>
                     <li>
-                      <Image src={image3} />
+                      <Image33 src={image3} />
                       <CardContainer>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
@@ -249,13 +251,13 @@ const TechnicalArticals = () => {
                     </li>
                     <li>
                       <ImageB src={image6} />
-                      <CardContainer>
+                      <CardContainer1>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
-                      </CardContainer>
+                      </CardContainer1>
                     </li>
                 </ListItems>
             </TechnicalArticalsMain>

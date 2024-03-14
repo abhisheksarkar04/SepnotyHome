@@ -13,7 +13,7 @@ color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size:25px;
+font-size:22px;
 margin-top:60px;
 width: 65%;
 color: #fff;

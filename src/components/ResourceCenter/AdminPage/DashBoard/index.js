@@ -95,7 +95,7 @@ const DashBoard=()=>{
                     <ColumnDiv>
                     <ArticalCon>
                         <Icons src={vector} alt="icon"/>
-                        <IconName>My Articles</IconName>
+                        <IconName>Articles</IconName>
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={blogicon} alt="icon"/>
@@ -115,7 +115,7 @@ const DashBoard=()=>{
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={eventicon} alt="icon"/>
-                        <IconName>Events and Worshops</IconName>
+                        <IconName>Events and Workshops</IconName>
                     </ArticalCon>
                     
                     </ColumnDiv>

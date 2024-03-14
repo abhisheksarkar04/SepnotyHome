@@ -66,15 +66,17 @@ export const ListHeading = styled.h1`
 
 export const ListItemSection = styled.ol`
  
- font-size: 20px; 
+ font-size: 17px; 
  font-weight: 900;
   margin-right: 20%;
-  margin-left: 10%;
+  margin-left: 7%;
+  margin-bottom: 60px;
   color: #89A4FF;
   & > li {
     color: #89A4FF;
     display: list-item;
     line-height: 1.5;
+
    
   }
    
@@ -83,7 +85,17 @@ export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 10;
    font-size:18px;
-   margin-top: 0px;
+   margin-top: 20px;
+   margin-left: -2%;
+   
+`;
+export const LearnPara3 = styled.p`
+   color:#fff;
+   font-weight: 10;
+   font-size:18px;
+   margin-left: 6%;
+   margin-top: 20px;
+   
 `;
 export const ListHead = styled.h2`
    color: #89A4FF;
@@ -100,7 +112,7 @@ export const LearnPara = styled.p`
   width:62%;
   word-spacing: 2px;
   text-align:left;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-bottom: 40px;
 
 `;
@@ -108,31 +120,29 @@ export const LearnPara = styled.p`
 export const OrderListSection = styled.ol`
   color:#fff;
   list-style-type: decimal;
- 
-  margin-right: 22%;
+ margin-left: 7%;
   & > li {
     color:#fff;
     display: list-item;
-    line-height: 1.5;
-    font-size: 18px;
-    font-weight: 500;
+    line-height: 1.9;
+    font-size: 16px;
+    font-weight: 400;
    
   }
  
 `;
 
 
-export const LearningListSection = styled.h2`
+export const LearningListSection = styled.div`
     display: flex;
     flex-direction: column;
   justify-content: center;
-  margin-left: 10%;
 
 `;
 
 export const LearningPathImg1 = styled.img`
 height:240px;
 width: 400px;
-margin-top: 20px;
+margin: 20px 0 60px 6%;
 
 `;

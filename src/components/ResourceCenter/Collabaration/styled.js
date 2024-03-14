@@ -40,7 +40,7 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 25px;
+  font-size: 23px;
   color: #ffffff;
   width: 50%;
   padding: 20px 30px 30px 0px;
@@ -88,10 +88,11 @@ export const HeadingCon = styled.div`
   
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 22px;
   color: #2b459b;
   font-weight: bold;
   padding-left: 9%;
+  letter-spacing: 0.5px;
 
 `;
 

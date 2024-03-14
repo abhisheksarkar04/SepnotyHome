@@ -13,6 +13,7 @@ export const DeepLearnFrame = styled.div`
 display: flex;
 flex-direction: column;
 margin-left:0%;
+width: 40%;
 
 `;
 
@@ -26,7 +27,11 @@ border-radius: 8px;
 
 `;
 export const DeepLearnImage = styled.img`
-  height: 45vh;
+  height: 48vh;
+  
+`;
+export const DeepLearnImage2 = styled.img`
+  height: 52vh;
   
 `;
 export const DeepHeading = styled.h2`
@@ -158,8 +163,8 @@ export const FirstSection = styled.div`
 
 export const ListItems = styled.ul`
   list-style-type: none;
-  padding: 0px;
-  width:50%;
+  padding: 0px 0 0 25px;
+  width:60%;
   margin: 0px;
   display: flex;
   flex-direction: row;

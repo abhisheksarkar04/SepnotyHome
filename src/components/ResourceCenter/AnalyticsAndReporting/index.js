@@ -57,6 +57,7 @@ import {
     ElementsSection,
     SearchSectionBtn,
     GraphImageItem,
+    DateInput,
 
 } from "./styled"
 
@@ -111,7 +112,7 @@ const AnalyticsAndReporting = () => {
 
                        />
 
-                  <input type="date" onChange={e=>setDate(e.target.value)}  
+                  {/* <input type="date" onChange={e=>setDate(e.target.value)}  
                        style={{
                         backgroundColor: 'transparent',
                         color: '#fff', // Change outline color to white
@@ -125,10 +126,11 @@ const AnalyticsAndReporting = () => {
                         fill: '#fff',
                         cursor: 'pointer',
                       }}
-                   />
+                   /> */}
+
+                    <DateInput type="date" id="monthInput" name="monthInput" />
 
                   <SearchSectionBtn>Download Report</SearchSectionBtn>
-                  
                    
 
                   </ElementsSection>
@@ -144,7 +146,8 @@ const AnalyticsAndReporting = () => {
                       color: 'white', // Change outline color to white
                       fontSize: '2.2em', // Increase size (adjust as needed)
                       fontWeight: 'none',
-                      margin: '0px 0px 0px 90%'
+                      margin: '10px 0px 0px 90%',
+                      cursor: "pointer",
                     }}
                   />
                         <ProTopHead>
