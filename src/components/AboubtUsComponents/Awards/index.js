@@ -196,6 +196,8 @@ including websites, apps, social media, video, podcasts, & more, across various 
   align-item:center;
   justify-content:start;
   margin-left:90px;
+
+  
   margin-top:10px;
   `
   const Para1 = Styled.p`

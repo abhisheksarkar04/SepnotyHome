@@ -102,6 +102,9 @@ export const ServiceItemDesc = styled.p`
   color: #ffffff;
   width:1200px;
   margin-left:-30px;
+
+
+  
 `;
 
 export const ImageCon = styled.div`

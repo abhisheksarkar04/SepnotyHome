@@ -103,6 +103,10 @@ export const ServiceItemDesc = styled.p`
 margin-left:-30px;
 `;
 
+
+
+
+
 export const ImageCon = styled.div`
   width: 16%;
   margin: 0px;
