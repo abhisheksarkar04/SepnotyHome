@@ -7,12 +7,14 @@ export const DigitalContainer = styled.div`
   padding-top: 70px;
   padding-bottom: 20px;
 `;
+
 export const Header = styled.h1`
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
 `;
+
 export const Span = styled.span`
   font-weight: 300;
   color: #ffffff;
@@ -50,7 +52,7 @@ export const Rectangle1 = styled.img`
   right: 0;
   height: 65%;
   width: 37%;
-  top: 12%;
+  top: 15%;
   z-index: 0;
 `;
 
@@ -59,7 +61,7 @@ export const Rectangle2 = styled.img`
   right: 16%;
   height: 78%;
   width: 60%;
-  top: -5%;
+  top: -1%;
   z-index: 0;
 `;
 
@@ -70,7 +72,6 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
-  margun-bottom: 20px;
 `;
 
 export const ListHeading = styled.h1`
@@ -275,9 +276,10 @@ export const GradingBg = styled.div`
   margin-right: 10px;
   border-radius: 3px;
 `;
+
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
 `;
 

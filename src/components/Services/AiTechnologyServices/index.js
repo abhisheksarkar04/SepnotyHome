@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   SmallPattern,
   PatternCon,
 } from "./styled";
@@ -29,8 +28,7 @@ import data from "../Images/data.svg";
 import framework from "../Images/framework.svg";
 import monitoring from "../Images/monitoring.svg";
 import usecases from "../Images/usecases.svg";
-import ContactForm from "../../ContactUs/ContactForm";
-import Meeting from "../../ContactUs/Meeting";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const AiTechnologyServices = () => {
@@ -141,10 +139,9 @@ const AiTechnologyServices = () => {
           </div>
         </ServiceItemCon>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

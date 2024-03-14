@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   SmallPattern,
   PatternCon,
   CorporateItems,
@@ -26,8 +25,7 @@ import app from "../Images/app.svg";
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
-import Meeting from "../../ContactUs/Meeting";
-import ContactForm from "../../ContactUs/ContactForm";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const AppIntegration = () => {
@@ -176,10 +174,9 @@ const AppIntegration = () => {
           </ServiceItemDesc>
         </CorporateItems>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

@@ -89,7 +89,7 @@ export const ServiceItemDesc = styled.p`
   margin-bottom: 30px;
   font-size: 23px;
   color: #ffffff;
-  width: 60%;
+  width: 80%;
   text-align: justify;
   padding-left: 2.5%;
   line-height: 1.5;

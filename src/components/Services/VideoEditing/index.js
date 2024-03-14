@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   ItemCon,
   CardContainer,
   Logo,
@@ -48,7 +47,7 @@ import trim from "../Images/trim.svg";
 import CV from "../Images/CorporateVideo.svg";
 import SM from "../Images/socialmedia.svg";
 import outsource from "../Images/outsource.svg";
-import ContactForm from "../../ContactUs/ContactForm";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 import editer from "../Images/editer.svg";
 import clipping from "../Images/videoclipping.svg";
@@ -59,7 +58,6 @@ import resolve from "../Images/resolve.svg";
 import rush from "../Images/rush.svg";
 import premier from "../Images/premier.svg";
 import crop from "../Images/crop.svg";
-import Meeting from "../../ContactUs/Meeting";
 
 const VideoEditing = () => {
   const heading = "Have a question to our team or need help with your project?";
@@ -298,10 +296,7 @@ const VideoEditing = () => {
           </ToolsCardCon>
         </ToolsCon>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+      <Contact heading={heading} />
       <FooterSection />
     </>
   );
