@@ -168,7 +168,6 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-bottom:210px;
   `
   const Main1 = Styled.div`
- 
   width:300px;
   align-item:center;
   justify-content:center;

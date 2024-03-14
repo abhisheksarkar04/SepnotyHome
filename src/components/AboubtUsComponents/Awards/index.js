@@ -169,9 +169,9 @@ including websites, apps, social media, video, podcasts, & more, across various 
   const Main = Styled.div`
   display:flex;
   flex-wrap : wrap;
-  margin-left:100px;
-  gap:180px;
-  margin-bottom:120px;
+  margin-left:110px;
+  gap:140px;
+  margin-bottom:190px;
   `
   const Main1 = Styled.div`
   border: 1px solid #FFFFFF;
@@ -200,4 +200,5 @@ including websites, apps, social media, video, podcasts, & more, across various 
   const Para1 = Styled.p`
   margin-top:10px;
   text-align:center;
+  color:white;
   `

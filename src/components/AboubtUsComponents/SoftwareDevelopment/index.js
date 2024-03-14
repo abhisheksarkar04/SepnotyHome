@@ -114,7 +114,7 @@ const Software= () => {
 export default Software;
 
 const OrderContainer = styled.ol`
-margin-left:60px;
+margin-left:85px;
 gap:13px;
 margin-bottom:80px;
 `

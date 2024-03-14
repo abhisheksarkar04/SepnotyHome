@@ -169,7 +169,8 @@ on various technical aspects of a business, project, or initiative.
   display:flex;
   flex-direction:column;
   gap : 30px;
-  margin-left:50%;
+  margin-left:48%;
+  margin-bottom:60px;
   `
   const WebsiteContainer = Styled.div`
   display:flex;
