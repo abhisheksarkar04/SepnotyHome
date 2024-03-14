@@ -126,7 +126,7 @@ export const ProMainDiv = styled.div`
       width: 35%;
       position: absolute;
       height: 107%;
-      padding: 70px 0px 20px 50px;
+      padding: 70px 0px 20px 40px;
       margin 0px 0px 10px 0px;
 
 `;
@@ -287,7 +287,7 @@ export const SearchSectionBtn = styled.button`
 export const MobSection1=styled.div`
 background-color:rgba(12, 17, 31, 1);
 width: 55%;
-margin-left:40%;
+margin-left:30%;
 margin-bottom: 40px;
 margin-top: 30px;
 display: flex;
