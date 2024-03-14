@@ -136,14 +136,14 @@ For teams that want to collaborate and build for themselves and their customers.
   margin-top:100px;
   display:flex;
   flex-direction:row;
-  margin-left:100px;
+  margin-left:130px;
   gap:80px;
   margin-bottom:12%;
   `
   const Main1 = Styled.div`
   background:#D9D9D9;
   border-radius:10px;
-  width:380px;
+  width:350px;
   height:300px;
 padding:13px;
   `
