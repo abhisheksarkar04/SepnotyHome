@@ -26,16 +26,13 @@ import { Link } from "react-router-dom";
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
-
 import DM from "../Images/Digitalmarketing.svg";
 import SEO from "../Images/seo.svg";
 import SMM from "../Images/smm.svg";
 import CM from "../Images/ContentMarketing.svg";
 import ContactForm from "../../ContactUs/ContactForm";
 import Meeting from "../../ContactUs/Meeting";
-
 import FooterSection from "../../Footer/FooterSection";
-
 const DigitalMarketing = () => {
   const heading = "Have a question to our team or need help with your project?";
   return (

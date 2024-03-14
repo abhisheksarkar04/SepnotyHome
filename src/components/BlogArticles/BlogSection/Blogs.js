@@ -5,7 +5,7 @@ import { BlogPage,
          BlogTitle,
          BlogName,
          FiltersContainer,
-         
+         MainSpan,
 } from "./styledComponents";
 const FilterNamesList=[
     {
@@ -67,7 +67,7 @@ const FilterNamesList=[
 const BlogArticles = () => {
   return (
     <BlogPage>
-    <BlogTitle>Blog &gt;Articles</BlogTitle>
+    <BlogTitle>Blog &gt; <MainSpan>Articles</MainSpan></BlogTitle>
     
     <BlogName>Blog</BlogName>
     <br />

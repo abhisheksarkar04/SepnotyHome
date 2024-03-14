@@ -5,7 +5,6 @@ flex-wrap:wrap;
 padding:20px;
 margin-bottom:40px;
 `;
-
 export const SeeMoreCon=styled.div`
 display:flex;
 flex-direction:row;
@@ -18,7 +17,7 @@ export const SeeMoreButton = styled.button`
   justify-content: center;
   background-color: transparent;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   cursor: pointer;
   position: relative;
   color:white;

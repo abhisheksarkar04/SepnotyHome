@@ -7,11 +7,11 @@ export const ExpertCardContainer=styled.div`
  margin-bottom:20px;
 `;
 export const ExpertImg=styled.img`
-width:35px;
-height:35px;
+width:40px;
+height:40px;
 `;
 export const ExpertAbout=styled.p`
-font-size:14px;
+font-size:17px;
 color:white;
 margin-left:10px;
 line-height:20px;

@@ -9,7 +9,7 @@ margin-bottom:30px;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:26px;
-margin:0px 0px 20px 30px;
+margin:0px 0px 20px 47px;
 `;
 export const HeadingSpan=styled.span`
 width:65px;
@@ -21,11 +21,11 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 `;
 export const AppAbout=styled.p`
-font-size:19px;
+font-size:20px;
 line-height:25px;
 width:65%;
 color:white;
-margin-left:40px;
+margin-left:45px;
 margin-top:18px;
 margin-bottom:18px;
 `;
@@ -35,7 +35,7 @@ export const ImgCon = styled.div`
   width: 30%;
   position: relative; /* Add this line */
   justify-content: flex-end; /* Add this line */
-  margin-left:40px;
+  margin-left:45px;
 `;
 export const InsertImg=styled.img`
 
@@ -51,5 +51,6 @@ export const WebTechButton = styled.button`
   color: rgba(43, 69, 155, 1);
   margin-top: -20px; 
   height:6vh;
-   
+   font-size:18px;
+   font-weight:500;
 `;

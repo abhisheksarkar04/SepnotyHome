@@ -25,6 +25,7 @@ import tech9 from './images/tech9.png';
 import FooterSection from '../../Footer/FooterSection';
 import ContactForm from '../../ContactUs/ContactForm';
 import SubCard from './SubCard/SubCard';
+import Meeting from '../../ContactUs/Meeting';
 
 const techDetails=[
    {
@@ -230,6 +231,7 @@ const SubPageList = [
     },
 ];
 const WebDevPage = () => {
+  const heading='Have a question to our team or need help with your project?';
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
 
@@ -261,9 +263,10 @@ const WebDevPage = () => {
     </>
   )  : (
   <>
+  <div>
     <HeadingSpan />
     <WebSectionTwoHeading>Technologies that we majorly use for</WebSectionTwoHeading>
-
+  </div>
     <WebSectionTwo>
     
     <WebSectionTwoCardsCon>
@@ -280,7 +283,8 @@ const WebDevPage = () => {
     )}
        
     <ContactCon>
-    <ContactForm />
+    <Meeting />
+    <ContactForm heading={heading}/>
     </ContactCon>
     <FooterSection />
     </WebDevelopmentPage>

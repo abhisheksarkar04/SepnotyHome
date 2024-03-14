@@ -7,7 +7,7 @@ width:100%;
 min-height: 40vh;
 `;
 export const WebSectionOneHeading=styled.h2`
-font-size:26px;
+font-size:28px;
 color:white;
 width:30%;
 `;
@@ -17,6 +17,7 @@ margin-top:20px;
 width:70%;
 color:white;
 text-align:justify;
+margin-left:20px;
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

@@ -36,6 +36,7 @@ import {
 import FooterSection from '../../Footer/FooterSection';
 import ContactForm from '../../ContactUs/ContactForm';
 import SubCard from './UiSubPage/SubCard/SubCard';
+import Meeting from '../../ContactUs/Meeting';
 const DesignDetails=[
     {
         id:1,
@@ -138,6 +139,7 @@ const SubPageList = [
     },
 ];
 const UiUxDesPage = () => {
+  const heading='Have a question to our Expertise?';
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
 
@@ -171,9 +173,11 @@ const UiUxDesPage = () => {
         </>
       )  : (
       <>
+      <div>
       <HeadingSpan />
       <WebSectionTwoHeading>How it all works?</WebSectionTwoHeading>
-    <WorksImg src={worksimg}></WorksImg>
+      </div>
+      <WorksImg src={worksimg}></WorksImg>
     <DesProcessHeading>Our UI/UX design process</DesProcessHeading>
 
         <DesignDetailsContainer>
@@ -225,7 +229,8 @@ const UiUxDesPage = () => {
     )}
           
     <ContactCon>
-    <ContactForm />
+    <Meeting />
+    <ContactForm heading={heading}/>
     </ContactCon>
     <FooterSection />
     

@@ -17,6 +17,7 @@ import {
     ServiceSpan,
 } from './styled';
 import SubCard from './SubCard/SubCard';
+import Meeting from '../../ContactUs/Meeting';
 const AppDetails=[
     {
         id:1,
@@ -26,7 +27,7 @@ const AppDetails=[
     },
     {
         id:2,
-        title:'IOS App Development',
+        title:'iOS App Development',
         about:'iOS app development refers to the process of creating applications specifically for Apples iOS platform, which runs on devices such as the iPhone, iPad, and iPod Touch. Here are the key aspects and steps involved in iOS app development',
         img:appimg2,
     },
@@ -65,7 +66,7 @@ const SubPageList = [
     },
     {
       id: 2,
-      title:'IOS App Development',
+      title:'iOS App Development',
       about: 'iOS app development refers to the process of creating applications specifically for Apples iOS platform, which runs on devices such as the iPhone, iPad, and iPod Touch. Here are the key aspects and steps involved in iOS app development',
       pic:appimg2,
       headingOne:'Conceptualization and Planning',
@@ -120,6 +121,8 @@ const SubPageList = [
         },
   ];
 const MobDevPage = () => {
+  const heading='Have a question to our team or need help with your project?'
+
     const [selectedDetail, setSelectedDetail] = useState(null);
     const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
   
@@ -164,7 +167,8 @@ const MobDevPage = () => {
     </>
     )}
     <ContactCon>
-    <ContactForm />
+    <Meeting />
+    <ContactForm heading={heading}/>
     </ContactCon>
     <FooterSection />
     </MobSection>

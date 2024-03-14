@@ -9,7 +9,7 @@ margin-bottom:30px;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:24px;
-margin:0px 0px 20px 30px;
+margin:0px 0px 20px 47px;
 `;
 export const HeadingSpan=styled.span`
 width:65px;
@@ -24,7 +24,7 @@ export const AppAbout=styled.p`
 font-size:20px;
 width:65%;
 color:white;
-margin-left:40px;
+margin-left:47px;
 margin-top:15px;
 margin-bottom:15px;
 `;

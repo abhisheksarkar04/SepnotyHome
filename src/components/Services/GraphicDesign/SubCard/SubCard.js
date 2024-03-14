@@ -29,42 +29,50 @@ const { details, onBackClick } = props;
   return (
     <SubCardSection>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{title}</SubHead>
+    <SubHead>{title}</SubHead></div>
     <SubPara>{about}</SubPara></div>
     <SubPageImg src={pic} />
     <div>
-    <SubHeadSpan />
-    <SubHead>{headingOne}</SubHead>
-    <SubPara>{aboutOne}</SubPara></div>
     <div>
     <SubHeadSpan />
-    <SubHead>{headingTwo}</SubHead>
+    <SubHead>{headingOne}</SubHead></div>
+    <SubPara>{aboutOne}</SubPara></div>
+    <div>
+    <div>
+    <SubHeadSpan />
+    <SubHead>{headingTwo}</SubHead></div>
     <SubPara>{aboutTwo}</SubPara>
     </div>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{headingThree}</SubHead>
+    <SubHead>{headingThree}</SubHead></div>
     <SubPara>{aboutThree}</SubPara>
     </div>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{headingFour}</SubHead>
+    <SubHead>{headingFour}</SubHead></div>
     <SubPara>{aboutFour}</SubPara>
     </div>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{headingFive}</SubHead>
+    <SubHead>{headingFive}</SubHead></div>
     <SubPara>{aboutFive}</SubPara>
     </div>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{headingSix}</SubHead>
+    <SubHead>{headingSix}</SubHead></div>
     <SubPara>{aboutSix}</SubPara>
     </div>
     <div>
+    <div>
     <SubHeadSpan />
-    <SubHead>{headingSeven}</SubHead>
+    <SubHead>{headingSeven}</SubHead></div>
     <SubPara>{aboutSeven}</SubPara>
     </div>
     <BackButton onClick={handleBackClick}>Back</BackButton>

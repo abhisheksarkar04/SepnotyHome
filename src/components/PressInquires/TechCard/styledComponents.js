@@ -18,18 +18,19 @@ export const TechCardContainer = styled.div`
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
   }
 `;
 
 export const TechImg = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 `;
 
 export const TechAbout = styled.p`
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 18px;
+  align-self:center;
 `;

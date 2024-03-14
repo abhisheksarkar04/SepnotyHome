@@ -10,7 +10,7 @@ padding-top:70px 0px 60px 30px;
 export const SubHead=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:24px;
-margin:60px 0px 20px 30px;
+margin:60px 0px 20px 45px;
 z-index:1;
 `;
 export const SubHeadSpan = styled.span`
@@ -29,8 +29,8 @@ margin-bottom:10px;
 margin-left:30px;
 `;
 export const SubPara=styled.p`
-font-size:18px;
-margin:0px 0px 20px 30px;
+font-size:20px;
+margin:0px 0px 20px 45px;
 color:white;
 width:70%;
 `;

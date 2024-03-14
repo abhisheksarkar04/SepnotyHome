@@ -9,14 +9,15 @@ padding-top:70px 0px 60px 30px;
 
 export const SubHead=styled.h2`
 color:rgba(43, 69, 155, 1);
-font-size:24px;
-margin:60px 0px 20px 30px;
+font-size:28px;
+margin:60px 0px 20px 47px;
 z-index:1;
+padding-top:10px;
 `;
 export const SubHeadSpan = styled.span`
   width: 65px;
   height: 8%;
-  margin-top: 48px;
+  margin-top:0px;
   margin-left: 15px;
   position: absolute;
   background-color: rgba(129, 150, 219, 0.3); /* Adjust the alpha value as needed */
@@ -29,8 +30,8 @@ margin-bottom:10px;
 margin-left:30px;
 `;
 export const SubPara=styled.p`
-font-size:18px;
-margin:0px 0px 20px 30px;
+font-size:20px;
+margin:0px 0px 20px 47px;
 color:white;
 width:70%;
 `;
@@ -41,7 +42,7 @@ width:70px;
 height:50px;
 border-radius:5px;
 cursor:pointer;
-margin-left:30px;
+margin-left:47px;
 `;
 export const SubPageCardCon=styled.div`
 display:flex;
@@ -56,7 +57,7 @@ margin-left:30px;
 padding:25px;
 `;
 export const SubCardText=styled.p`
-font-size:18px;
+font-size:20px;
 color:black;
 text-align:justify;
 `;

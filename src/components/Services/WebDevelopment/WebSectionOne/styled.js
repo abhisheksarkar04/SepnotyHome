@@ -17,6 +17,7 @@ margin-top:20px;
 width:70%;
 color:white;
 text-align:justify;
+margin-left:20px;
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;
