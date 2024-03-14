@@ -183,6 +183,11 @@ import {
   width:330px;
   padding:11px;
   margin-bottom:-120px;
+
+
+
+
+  
   `
   const Image1 = Styled.img`
   margin-bottom:10px;
