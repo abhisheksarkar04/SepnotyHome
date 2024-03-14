@@ -179,10 +179,15 @@ import {
   flex-direction:column;
   align-items:center;
   gap:14px;
-  height:300px;
+  height:320px;
   width:330px;
-  padding:10px;
+  padding:11px;
   margin-bottom:-120px;
+
+
+
+
+  
   `
   const Image1 = Styled.img`
   margin-bottom:10px;
@@ -197,4 +202,3 @@ import {
   `
 
 
-  
