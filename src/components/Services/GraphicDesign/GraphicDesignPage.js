@@ -23,6 +23,7 @@ import {
   ContactCon,
   ServiceSpan,
 } from './styled';
+import Meeting from '../../ContactUs/Meeting';
 const SwDesignTools=[
 {
   id:1,
@@ -137,6 +138,7 @@ const SubPageList = [
 ];
 
 const GraphicDesignPage = () => {
+  const heading='Have a question about our services?'
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
 
@@ -168,8 +170,10 @@ const GraphicDesignPage = () => {
     </>
   )  : (
   <>
+  <div>
     <TransparentSpan />
     <GdSectionTwoHeading>Design Process</GdSectionTwoHeading>
+    </div>
     <GdImg src={Gdimg}/>
     <CapabilityHeading>Our expertise in software design tools</CapabilityHeading>
     <GdDetailsContainer>
@@ -189,7 +193,8 @@ const GraphicDesignPage = () => {
     </>
     )}
     <ContactCon>
-    <ContactForm />
+    <Meeting />
+    <ContactForm heading={heading}/>
     </ContactCon>
     <FooterSection />
     </GraphicDesign>

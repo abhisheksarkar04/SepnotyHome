@@ -62,7 +62,7 @@ export const ListHeading = styled.h1`
   font-size: 22px;
   color: #2b459b;
   font-weight: bold;
-  margin-left:  3%;
+  margin-left:  2.3%;
 `;
 
 export const SearchHeading = styled.p`
@@ -102,6 +102,7 @@ export const SearchSuggestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin-right: 40px;
   align-items: center;
   align-self: flex-end;
 `;
@@ -160,7 +161,7 @@ export const ContentContainer = styled.div`
 
 export const Small1 = styled.img`
   position: absolute;
-  height: 10%;
-  width: 5%;
+  height: 55px;
+  width: 60px;
   z-index: 0;
 `;

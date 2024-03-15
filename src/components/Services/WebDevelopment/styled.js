@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const WebDevelopmentPage=styled.div`
 background-color:rgba(12, 17, 31, 1);
-width:100vw;
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
-font-size:20px;
+font-size:17px;
 `;
 export const WebPageTitle=styled.h2`
-font-size:22px;
+font-size:17px;
 color:white;
-padding:65px 0px 10px 30px;
+padding:70px 0px 10px 30px;
 `;
 
 export const WebHeading=styled.h1`
@@ -30,13 +30,12 @@ justify-content: center;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:24px;
-margin:60px 0px 20px 30px;
+margin:60px 0px 20px 50px;
 `;
 export const HeadingSpan=styled.span`
 width:65px;
-
 height:8%;
-margin-top: 48px;
+margin-top: -10px;
 align-self: flex-start;
 margin-left: 15px;
 position:absolute;
@@ -52,7 +51,7 @@ justify-content: center;
 margin: 40px 0 40px 0;
 `;
 export const ContactCon = styled.div`
-  background-color: #d4daf0;
+background-color: rgba(0, 0, 0, 0.25);
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;

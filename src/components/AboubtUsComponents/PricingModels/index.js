@@ -74,7 +74,7 @@ import {
                 <Main4>
                 <Main3>
                     <Rupee>₹0</Rupee>
-                    <Rupee>Free forever</Rupee>
+                    <p>Free forever</p>
                 </Main3>
                 <Botton>
                     Get Started
@@ -94,7 +94,7 @@ For individuals and teams who need more control over moving and managing their d
                 <Main2>
                 <Main3>
                     <Rupee>₹1,676</Rupee>
-                    <Rupee>Per month</Rupee>
+                    <p>Per month</p>
                 </Main3>
                 <Botton>
                     Contact
@@ -114,7 +114,7 @@ For teams that want to collaborate and build for themselves and their customers.
                 <Main5>
                 <Main3>
                     <Rupee>₹8,940</Rupee>
-                    <Rupee>Free forever</Rupee>
+                    <p>Free forever</p>
                 </Main3>
                 <Botton>
                     Contact
@@ -145,19 +145,19 @@ For teams that want to collaborate and build for themselves and their customers.
   border-radius:10px;
   width:350px;
   height:300px;
-padding:13px;
+  padding:13px;
   `
   const Main2 = Styled.div`
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  margin-top:70px;
+  margin-top:90px;
   `
   const Main3 = Styled.div`
-  margin-top: -20px;
+  
   `
   const Heading1 = Styled.h1`
-  color: #000000;
+  color: #3d3d3d;
   font-size:32px;
   font-weight:700;
   margin-bottom:20px;
@@ -169,7 +169,7 @@ padding:13px;
   `
   const Rupee = Styled.p`
   color: #000000;
-  font-size:24px;
+  font-size:20px;
   margin-top: 10px;
   font-weight: 500;
   `
@@ -188,7 +188,7 @@ color: #000000;
   const Main4 = Styled.div`
   display:flex;
   flex-direction:row;
-  margin-top:110px;
+  margin-top:130px;
   justify-content:space-between;
   `
   const Main5 = Styled.div`

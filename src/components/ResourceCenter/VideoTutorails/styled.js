@@ -14,7 +14,7 @@ justify-content:center;
 export const DeepLearnFrame = styled.div`
 display: flex;
 flex-direction: column;
-margin-left:0%;
+width: 42%;
 
 `;
 
@@ -24,7 +24,6 @@ flex-direction: column;
 background-color: #645E5E;
 background-size: cover;
 border-radius: 8px;
-
 
 `;
 export const DeepLearnImage = styled.img`
@@ -103,7 +102,7 @@ export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2.5%;
+  margin-left: 2%;
   align-self: center;
 `;
 
@@ -159,14 +158,14 @@ export const FirstSection = styled.div`
 `;
 
 export const ListItems = styled.ul`
-  list-style-type: none;
-  padding: 0px;
-  width:50%;
-  margin: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content: space-evenly;
+list-style-type: none;
+padding: 0px 0 0 0px;
+width:60%;
+margin: 0px;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: space-evenly;
 `;
 
 export const Rectangle1 = styled.img`
@@ -214,6 +213,11 @@ export const Small1 = styled.img`
   height: 55px;
   width: 60px;
 `;
+export const Image = styled.img`
+
+`;
+
+
 
 
 export const RedText = styled.p`

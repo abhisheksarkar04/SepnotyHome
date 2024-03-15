@@ -67,9 +67,18 @@ import techimg9 from '../assets/techimg9.svg';
 import techimg10 from '../assets/techimg10.svg';
 import TechCard from '../TechCard/TechCard';
 import ExpImg from '../assets/ExpImg.png';
+import node from '../assets/Node.js_logo_2015 3.png';
+import Python from '../assets/Python-Logo 3.png';
+import django from '../assets/image 20.png';
+import netimg from '../assets/download 5.png';
+import laravel from '../assets/download (2) 3.png';
+import php from '../assets/PhP.png';
+import sys from '../assets/Symfony2 3.png';
 import ExpertCardDetail from '../ExpertDetailCard/ExpertDetailCard';
 import FooterSection from '../../Footer/FooterSection';
 import ContactForm from '../../ContactUs/ContactForm';
+import { MainSpan } from '../../BlogThought/BlogSection/styledComponents';
+import Meeting from '../../ContactUs/Meeting';
 const OurExpertsDetails=[
   {
     id:1,
@@ -220,20 +229,22 @@ const TechDetails=[
   },
 ];
 const Inquiry = () => {
+  const heading="Have a question to our expertise?"
   const [visibleSet, setVisibleSet] = useState(0);
-
-  const handleRightArrowClick = () => {
+    const handleRightArrowClick = () => {
     setVisibleSet((prevSet) => (prevSet + 1) % Math.ceil(mediaData.length / 5));
   };
 
 
   return (
     <InquirySection>
-    <InqueryTitle>Blog &gt; Press Inquires</InqueryTitle>
+    <InqueryTitle>Blog &gt; <MainSpan>Press Inquires</MainSpan></InqueryTitle>
     <InqueryName>Blog</InqueryName>
     <InTouch />
-    <HelpJournalTitle><TransparentBg />How We Can Help Journalists
-    </HelpJournalTitle>
+    <div>
+    <TransparentBg />
+    <HelpJournalTitle>How We Can Help Journalists
+    </HelpJournalTitle></div>
     <HelpJournalDescription>
     Our team of IT specialists guarantees to furnish you with current, dependable information 
     backed by our expertise. Rest assured, we'll deliver precise and comprehensive details
@@ -248,11 +259,13 @@ const Inquiry = () => {
     <RequestRight>
     <CalenderImg src={image5} alt="not found"></CalenderImg>
     <br />
-    <CallButton>Get In Touch</CallButton>
+    <CallButton>Schedule a Call</CallButton>
     </RequestRight>
     </RequestCall>
-
-    <ExpertTitle><TransparentBg />Our Experts In The Media</ExpertTitle>
+    <div>
+    <TransparentBg />
+    <HelpJournalTitle>Our Experts In The Media</HelpJournalTitle>
+    </div>
     <ExpertText>Our professionals frequently contribute articles to our blog as well as prominent IT platforms 
     like CIO.com, InformationWeek.com, Medgadget.com, Arpost.com, and others.
     </ExpertText>
@@ -275,8 +288,10 @@ const Inquiry = () => {
     ))}
     </ExpertsInfo>
     <SeeMoreButton>Sell All Experts</SeeMoreButton>
-
-    <TrustWorthy><TransparentBg />What Makes us Trustworthy</TrustWorthy>
+    <div>
+    <TransparentBg />
+    <HelpJournalTitle>What Makes us Trustworthy</HelpJournalTitle>
+    </div>
     <TrustTitle>Sepnoty a renowned authority in the field of IT, offering consulting and software development services across industries. Our proficiency is underscored by:</TrustTitle>
     <TrustDescription>
     <TrustDescriptionItems>Over2000 success stories spanning diverse domains including data analytics, big data, IoT, information security, and mobile and web development.
@@ -293,37 +308,46 @@ const Inquiry = () => {
     </TrustDescriptionItems>
     </TrustDescription>
     <ImgContainer>
-        <Image src="./images/Node.js_logo_20.svg" alt="Node.js" />
-        <Image src="./images/Python-Logo 2.svg" alt="Python" />
-        <Image src="./images/django-logo.svg" alt="django" />
-        <Image src="./images/net-logo.svg" alt=".net" />
-        <Image src="./images/laravel-logo.svg" alt="laravel" />
-        <Image src="./images/PhP.svg" alt="Php" />
-        <Img src="./images/Symfony-logo.svg" alt="Symfony" />
+        <Image src={node} alt="Node.js" />
+        <Image src={Python} alt="Python" />
+        <Image src={django} alt="django" />
+        <Image src={netimg} alt=".net" />
+        <Image src={laravel} alt="laravel" />
+        <Image src={php} alt="Php" />
+        <Img src={sys} alt="Symfony" />
       </ImgContainer>
-      <TechTopicsTitle><TransparentBg />Our Tech Topics</TechTopicsTitle>
+      <div>
+      <TransparentBg />
+      <HelpJournalTitle>Our Tech Topics</HelpJournalTitle>
+      </div>
       <TechTopics>TechTopics</TechTopics>
       <TechTopicsCon>
       {TechDetails.map((eachItem) => (
         <TechCard key={eachItem.uniqueNo} details={eachItem} />
       ))}
       </TechTopicsCon>
-      <TrustWorthy><TransparentBg />What Makes us Trustworthy</TrustWorthy>
+      <div>
+      <TransparentBg />
+      <HelpJournalTitle>What Makes us Trustworthy</HelpJournalTitle>
+      </div>
       <TrustWorthyText>
       Sepnoty is a global IT consulting and software development company with experience in multiple industries, including healthcare, retail, manufacturing, banking, and telecoms. Key domains of our expertise are AI, big data, IoT, information security, mobile and web development, blockchain, collaboration and knowledge management, and more.
       <br /><br />
 Our experts are always open to sharing their knowledge with reporters, bloggers, influencers, speakers, and everyone else interested in creating expert IT content.
       </TrustWorthyText>
       <ImgContainer>
-        <Image src="./images/Node.js_logo_20.svg" alt="Node.js" />
-        <Image src="./images/Python-Logo 2.svg" alt="Python" />
-        <Image src="./images/django-logo.svg" alt="django" />
-        <Image src="./images/net-logo.svg" alt=".net" />
-        <Image src="./images/laravel-logo.svg" alt="laravel" />
-        <Image src="./images/PhP.svg" alt="Php" />
-        <Img src="./images/Symfony-logo.svg" alt="Symfony" />
+      <Image src={node} alt="Node.js" />
+      <Image src={Python} alt="Python" />
+      <Image src={django} alt="django" />
+      <Image src={netimg} alt=".net" />
+      <Image src={laravel} alt="laravel" />
+      <Image src={php} alt="Php" />
+      <Img src={sys} alt="Symfony" />
       </ImgContainer>
-      <TrustWorthy><TransparentBg />Our Experts in Media</TrustWorthy>
+      <div>
+      <TransparentBg />
+      <HelpJournalTitle>Our Experts in Media</HelpJournalTitle>
+      </div>
       <TrustWorthyText>If you require technical or industry-specific information for your article or wish to interview one of our experts, we invite you to peruse 
       the list of our consultants below and reach out to a suitable individual. Alternatively, you can contact our team directly, and they will 
       assist you in connecting with the most relevant expert.
@@ -334,8 +358,9 @@ Our experts are always open to sharing their knowledge with reporters, bloggers,
       ))}
       </ExpContainer>
       <ContactCon>
-    <ContactForm />
-    </ContactCon>
+      <Meeting />
+      <ContactForm heading={heading}/>
+      </ContactCon>
       <FooterSection />
     </InquirySection>
   )

@@ -41,8 +41,9 @@ export const ConRecHead = styled.h1`
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width: 1300px;
+  width:80%;
   padding: 20px 30px 30px 0px;
+  margin-left:0px;
 `;
 
 export const Button = styled.button`
@@ -99,7 +100,7 @@ export const ServiceItemDesc = styled.p`
   margin-bottom: 23px;
   font-size: 20px;
   color: #ffffff;
-  margin-left:-32px;
+  margin-left:-30px;
 `;
 
 export const ImageCon = styled.div`
@@ -136,6 +137,8 @@ export const ConatctCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:-20px;
+  margin-top:-10px;
 `;
 
 export const SmallPattern = styled.div`

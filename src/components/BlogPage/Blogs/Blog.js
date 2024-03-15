@@ -41,7 +41,7 @@ const FilterNamesList=[
         name:'IT Service Management',
     },
     {
-        name:'IOT',
+        name:'iOT',
     },
     {
         name:'Information Security',

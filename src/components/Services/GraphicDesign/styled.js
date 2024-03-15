@@ -2,34 +2,34 @@ import styled from "styled-components";
 
 export const GraphicDesign=styled.div`
 background-color:rgba(12, 17, 31, 1);
-width:100vw;
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
-font-size:20px;
+font-size:17px;
 `;
 export const GdPageTitle=styled.h2`
-font-size:26px;
+font-size:17px;
 color:white;
-padding:65px 0px 10px 40px;
+padding:70px 0px 10px 40px;
 `;
 
 export const GdHeading=styled.h1`
-font-size:28px;
+font-size:30px;
 font-weight:700;
-margin:10px 0px 15px 30px;
+margin:10px 0px 15px 40px;
 color:white;
 `;
 export const GdSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:26px;
-margin:60px 0px 20px 30px;
+margin:60px 0px 20px 47px;
+padding:10px;
 `;
 export const TransparentSpan=styled.span`
 width:65px;
 height:8%;
-margin-top: 45px;
-margin-left:15px;
+margin-left:24px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
@@ -41,7 +41,7 @@ margin-top:30px;
 margin-bottom:20px;
 `;
 export const CapabilityHeading=styled.h2`
-font-size:26px;
+font-size:28px;
 color:rgba(43, 69, 155, 1);
 margin-top:50px;
 margin-bottom:30px;
@@ -58,7 +58,7 @@ flex-direction:column;
 padding:10px 0px 30px 30px;
 `;
 export const ContactCon = styled.div`
-  background-color: #d4daf0;
+background-color: rgba(0, 0, 0, 0.25);
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;

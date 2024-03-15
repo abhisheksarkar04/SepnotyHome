@@ -13,13 +13,14 @@ padding: 100px 0px 10px 6%;
 `;
 export const WebSpan=styled.span`
 color: #fff;
+font-size: 16px;
 font-weight: 400;
 `;
 export const WebHeading=styled.h1`
 font-size: 30px;
 font-weight:700;
 padding-left: 6%;
-margin:10px 0px 20px 0;
+margin:20px 0px 40px 0;
 color:white;
 `;
 
@@ -40,17 +41,17 @@ export const PatternCon = styled.div`
   margin-bottom: 20px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 22px;
   color: #89A4FF;
   font-weight: bold;
-  margin-left: -24px;
+  margin-left: -28px;
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 22px;
   color: #ffffff;
   width: 80%;
-  margin-left:80px;
+  margin-left: 2%;
   line-height: 1.5;
   text-align: justify;
 `;
@@ -64,7 +65,8 @@ export const ListItemSection = styled.ul`
  font-size: 20px; 
  font-weight: 900;
   margin-right: 10%;
-  margin-left: 9%;
+  margin-left: 5%;
+  margin: 40px 10% 0 5%;
   list-style-type: none;
   & > li {
     color: #89A4FF;
@@ -79,7 +81,8 @@ export const ListItemSection = styled.ul`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 1;
-   font-size:18px;
+   width: 80%;
+   font-size: 22px;
    margin-top:-10px;
    margin-bottom: 30px;
 `;
@@ -93,13 +96,12 @@ export const ListHead = styled.h2`
 export const OrderListSection = styled.ul`
   color:#fff;
   list-style-type: disc;
- margin-left: 10%;
-  margin-right: 0%;
+  margin: 0px 0 0 6%;
   & > li {
     color:#fff;
     display: list-item;
     line-height: 1.8;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
    
   }
@@ -110,8 +112,8 @@ export const LearnPara11 = styled.h2`
    margin-top:30px;
    color:#fff;
    margin-bottom: 100px;
-   margin-left: 11%;
-   font-size:20px;
+   margin-left: 8%;
+   font-size:22px;
    width: 70%;
    font-weight: 10;
    

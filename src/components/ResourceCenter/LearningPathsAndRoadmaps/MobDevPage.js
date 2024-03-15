@@ -92,7 +92,7 @@ const LearningRoadsMaps = () => {
         para: 'Engage with communities, forums, or groups related to your chosen field. Collaboration and discussions with others can deepen your understanding and offer new perspectives.            '
     },
     {
-        heading:  ' Reflect and Adjust:            ',
+        heading:  ' Reflect and Adjust:   ',
         para: 'Regularly reflect on your progress. Identify areas where you feel strong and those needing improvement. Adjust your learning path accordingly.            '
     }
 ]
@@ -132,6 +132,7 @@ const LearningRoadsMaps = () => {
                               <LearnPara1>{item.para}</LearnPara1>
                           </li>
                        ))}
+            <LearnPara1>Remember, the key isn’t to memorize but to understand and apply the concepts in real-world scenarios. By consistently practicing and building projects, you’ll solidify your knowledge and skills in the IT sector.</LearnPara1>
           </ListItemSection>
           </div>
             

@@ -2,7 +2,7 @@ import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
 import small from "../images/Rectanglesmall.svg";
-import TopicSection from "../TopicsSection";
+import TopicSection from "./TopicsSection";
 import profile from "../images/profile.svg";
 import queryIcon from "../images/queryIcon.svg";
 import WhatsappIcon from "../images/whatsappIcon.svg";

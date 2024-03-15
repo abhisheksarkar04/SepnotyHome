@@ -1,3 +1,4 @@
+import { SpanHead } from "../DashBoard/styledComponents";
 import sepnoty from "../Images/sepnoty.png";
 import signup from "../Images/Signup.png";
 import { Container,Title,InputContainer ,SepnotyCont,SepnotyImg,Welcome,Para,
@@ -7,7 +8,7 @@ import { Link } from 'react-router-dom';
 const UserInput=()=>{
     return (
         <Container>
-            <Title>Resources  &gt;  Admin login</Title>
+            <Title>Resources  &gt; <SpanHead>Admin login</SpanHead> </Title>
             <InputContainer>
                 <SepnotyCont>
                     <SepnotyImg src={sepnoty} alt='sepnoty'/>
@@ -16,9 +17,8 @@ const UserInput=()=>{
                     <Image src={signup} alt="not found"/>
                 </SepnotyCont>
                 <SignUpCont>
-                    <Head>Sign Up</Head>
+                    <Head>Sign In</Head>
                     <Form >
-                        <Input type='text' placeholder="User name"/>
                         <Input type='mail' placeholder="Email Address / Mobile Number"/>
                         <Input type='password' placeholder="Password"/>
                         <CheckBox>
