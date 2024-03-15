@@ -13,7 +13,6 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
   ItemCon,
@@ -31,7 +30,7 @@ import FooterSection from "../../Footer/FooterSection";
 import data from "../Images/data.svg";
 
 const DataPreparation = () => {
-  const heading = "Have a question to our Expertise?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>
@@ -67,7 +66,6 @@ const DataPreparation = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={data} alt="data" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </ItemCon>

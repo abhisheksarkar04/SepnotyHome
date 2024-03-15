@@ -205,11 +205,23 @@ export const ContactUsInput = styled.input`
   border-radius: 15px;
   width: 248px;
   margin-right: 20px;
-  margin-bottom: 20px;
+
   background-color: rgba(217, 217, 217, 1);
   color: black;
   &::placeholder {
     color: #8c8c8c;
     font-size: 13px;
   }
+`;
+
+export const InputCon = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+`;
+
+export const ErrorMsg = styled.p`
+  font-size: 12px;
+  color: red;
+  padding-left: 10px;+++
 `;

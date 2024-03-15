@@ -13,7 +13,6 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
   SmallPattern,
@@ -62,7 +61,6 @@ const AppIntegration = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={app} alt="app" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </div>

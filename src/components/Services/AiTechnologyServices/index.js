@@ -32,7 +32,7 @@ import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const AiTechnologyServices = () => {
-  const heading = "Have a question to our Expertise?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>
