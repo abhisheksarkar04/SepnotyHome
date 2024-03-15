@@ -231,7 +231,7 @@ const SubPageList = [
     },
 ];
 const WebDevPage = () => {
-  const heading='Have a question to our team or need help with your project?';
+  const heading='Have a question about our services?';
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
 

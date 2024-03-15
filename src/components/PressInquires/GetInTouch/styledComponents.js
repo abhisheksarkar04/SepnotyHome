@@ -4,7 +4,7 @@ export const BlueContainer=styled.div`
  display:flex;
  background-color:rgba(43, 69, 155, 1);
  flex-direction:row;
- padding:20px 40px 20px 40px;
+ padding:40px 40px 40px 40px;
  justify-content:space-between;
  color:white;
 `;
@@ -18,16 +18,16 @@ width:60%;
 export const LeftHeading=styled.h2`
 color:white;
 font-weight:700;
-font-size:26px;
+font-size:28px;
 margin-bottom:20px;
 `;
 export const LeftTitle=styled.p`
-font-size:22px;
+font-size:24px;
 color:white;
 margin-bottom:40px;
 `;
 export const LeftDescription=styled.p`
-font-size:18px;
+font-size:20px;
 color:white;
 line-height:22px;
 margin-bottom:20px;

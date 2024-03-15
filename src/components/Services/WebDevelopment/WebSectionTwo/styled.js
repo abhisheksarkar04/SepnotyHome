@@ -11,7 +11,7 @@ margin-top:25px;
 margin-right:35px;
 `;
 export const WebTechImg=styled.img`
-width: 60px;
+width: 50px;
 height: 70px;
 align-self:center;
 padding-top:20px;

@@ -51,7 +51,7 @@ align-self:center;
 font-size:28px;
 `;
 export const SectionFourDescription=styled.p`
-font-size:20px;
+font-size:24px;
 line-height:34px;
 width:80%;
 margin:40px;

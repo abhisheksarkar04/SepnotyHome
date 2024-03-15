@@ -9,11 +9,14 @@ import article8 from '../assets/article8.svg';
 import article9 from '../assets/article9.svg';
 import article1 from '../assets/article1.png';
 import { useState } from "react";
+import downarrow from '../assets/Vector.png';
 import {
     ArticlesContainer,
     SeeMoreButton,
     SeeMoreCon,
     HrLine,
+    DownArrow,
+    Click,
 } from './styledComponents';
 const articlesList = [
   {
@@ -152,7 +155,13 @@ const AllArticles = () => {
       ))}
       <SeeMoreCon>
     <HrLine />
-    <SeeMoreButton onClick={loadMore}>See More Articles</SeeMoreButton>
+    <Click>
+    <div>
+    <SeeMoreButton onClick={loadMore}>See More Articles</SeeMoreButton></div>
+    <div>
+    <DownArrow><img src={downarrow} alt="arrow icon not found"/></DownArrow>
+    </div>
+    </Click>
     <HrLine />
     </SeeMoreCon>
     </ArticlesContainer>

@@ -13,9 +13,9 @@ width:30%;
 
 `;
 export const WebSectionDescription=styled.p`
-font-size:20px;
+font-size:24px;
 margin-top:24px;
-width:65%;
+width:80%;
 color:white;
 text-align:justify;
 line-height:25px;

@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const SectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:30px 50px 30px 40px;
+padding:60px 50px 60px 40px;
 color:white;
+
 `;
 export const SectionOneHeading=styled.h1`
-width:25%;
+width:30%;
 font-size:28px;
 margin-bottom:30px;
 
@@ -15,13 +16,13 @@ export const SectionOneTitle=styled.p`
 background-color:rgba(0, 32, 135, 1);
 display: inline;
 padding:1px 2px 1px 2px;
-font-size:20px;
+font-size:24px;
 margin-bottom:10px;
 margin-left:20px;
 `;
 export const SectionOneDescription=styled.p`
-width:65%;
-font-size:20px;
+width:80%;
+font-size:24px;
 line-height:25px;
 margin-top:30px;
 margin-left:20px;

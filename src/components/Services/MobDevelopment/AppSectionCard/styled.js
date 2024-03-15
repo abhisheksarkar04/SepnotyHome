@@ -2,8 +2,8 @@ import styled from "styled-components";
 export const AppCardCon=styled.div`
 display:flex;
 flex-direction:column;
-padding:10px;
-width:75%;
+padding:0px;
+width:80%;
 margin-bottom:30px;
 `;
 export const WebSectionTwoHeading=styled.h2`
@@ -21,9 +21,9 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 `;
 export const AppAbout=styled.p`
-font-size:20px;
-line-height:25px;
-width:65%;
+font-size:24px;
+line-height:26px;
+
 color:white;
 margin-left:45px;
 margin-top:18px;

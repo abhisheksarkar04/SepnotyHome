@@ -27,11 +27,11 @@ padding:left;
 `;
 export const HelpJournalDescription=styled.p`
 color:white;
-font-size:18px;
+font-size:20px;
 line-height:25px;
-margin:20px 30px 20px 30px;
-width:75%;
-margin-left:30px;
+margin:20px 0px 20px 57px;
+width:80%;
+
 `;
 export const RequestCall=styled.div`
 display:flex;
@@ -79,13 +79,13 @@ font-size:18px;
 margin:0px 30px 20px 30px;
 `;
 export const ExpertText=styled.p`
-font-size:18px;
+font-size:20px;
 color:rgba(255, 255, 255, 1);
-margin:0px 30px 20px 30px;
-width:70%;
+margin:0px 30px 20px 65px;
+width:80%;
 `;
 export const InquiryMedia=styled.div`
-margin:10px 50px 20px 30px;
+margin:10px 50px 20px 65px;
 border-radius:10px;
 background-color:rgba(193, 202, 231, 1);
 position: relative;
@@ -133,15 +133,15 @@ export const MarqueeContent = styled.div`
 `;
 export const ExpertResearch=styled.p`
  color:rgba(255, 255, 255, 1);
- margin-left:30px;
- font-size:17px;
+ margin-left:65px;
+ font-size:20px;
 `;
 export const ExpertsInfo=styled.div`
 display:flex;
 flex-direction:row;
 justify-content:space-between;
 flex-wrap:wrap;
-padding:30px 150px 20px 30px;
+padding:30px 120px 20px 30px;
 `;
 export const SeeMoreButton=styled.button`
 background-color:white;
@@ -160,15 +160,15 @@ margin:30px 40px 20px 40px;
 color:rgba(43, 69, 155, 1);
 `;
 export const TrustTitle=styled.p`
-font-size:17px;
+font-size:20px;
 color:white;
-width:70%;
-margin:30px 40px 30px 40px;
+width:80%;
+margin:30px 0px 30px 67px;
 `;
 export const TrustDescription = styled.ul`
-  font-size: 17px;
+  font-size: 20px;
   color: white;
-  margin: 0px 40px 30px 0px;
+  margin: 0px 40px 30px 30px;
   display: flex;
   flex-direction: column;
   list-style-type: disc; 
@@ -178,7 +178,7 @@ export const TrustDescriptionItems = styled.li`
   list-style-type: none;
   color: white;
   margin-bottom: 7px;
-  width:75%;
+  width:80%;
   &:before {
     content: '•'; /* Unicode character for a bullet point */
     color: white;
@@ -193,8 +193,8 @@ export const ImgContainer = styled.div`
   justify-content:flex-start;
   align-self:left;
   border-radius:10px;
-  margin-left:3%;
-  width: 90%;
+  margin-left:5%;
+  width: 80%;
   margin-bottom: 30px;
   padding:5px;
 `;
@@ -224,21 +224,22 @@ margin:30px 40px 15px 40px;
 export const TechTopicsCon=styled.div`
 display:flex;
 flex-wrap:wrap;
-margin:10px 30px 40px 40px;
-width:55%;
+margin:10px 30px 40px 67px;
+width:57%;
 
 `;
 export const TrustWorthyText=styled.p`
-font-size:17px;
+font-size:20px;
 color:white;
-margin:10px 30px 20px 40px;
+margin:10px 30px 20px 65px;
 line-height:20px;
+width:80%;
 `;
 
 export const ExpContainer=styled.div`
 display:flex;
 flex-direction:column;
-width:60%;
+width:80%;
 `;
 export const TransparentBg=styled.span`
 width:65px;
@@ -251,7 +252,7 @@ z-index:0;
 border-radius:1px;
 `;
 export const ContactCon = styled.div`
-  background-color: #d4daf0;
+  background-color:rgba(12, 17, 31, 1);
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;

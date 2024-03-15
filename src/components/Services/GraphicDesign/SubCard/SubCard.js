@@ -75,7 +75,7 @@ const { details, onBackClick } = props;
     <SubHead>{headingSeven}</SubHead></div>
     <SubPara>{aboutSeven}</SubPara>
     </div>
-    <BackButton onClick={handleBackClick}>Back</BackButton>
+    <BackButton onClick={handleBackClick}>&larr;</BackButton>
     </SubCardSection>
   );
 };

@@ -78,6 +78,7 @@ import ExpertCardDetail from '../ExpertDetailCard/ExpertDetailCard';
 import FooterSection from '../../Footer/FooterSection';
 import ContactForm from '../../ContactUs/ContactForm';
 import { MainSpan } from '../../BlogThought/BlogSection/styledComponents';
+import Meeting from '../../ContactUs/Meeting';
 const OurExpertsDetails=[
   {
     id:1,
@@ -228,9 +229,9 @@ const TechDetails=[
   },
 ];
 const Inquiry = () => {
+  const heading="Have a question to our expertise?"
   const [visibleSet, setVisibleSet] = useState(0);
-  const heading = "Have a question to our team or need help with your project?";
-  const handleRightArrowClick = () => {
+    const handleRightArrowClick = () => {
     setVisibleSet((prevSet) => (prevSet + 1) % Math.ceil(mediaData.length / 5));
   };
 
@@ -356,8 +357,9 @@ Our experts are always open to sharing their knowledge with reporters, bloggers,
         <ExpertCardDetail key={eachItem.uniqueNo} details={eachItem} />
       ))}
       </ExpContainer>
-    <ContactCon>
-        <ContactForm  heading={heading} />
+      <ContactCon>
+      <Meeting />
+      <ContactForm heading={heading}/>
       </ContactCon>
       <FooterSection />
     </InquirySection>

@@ -30,3 +30,16 @@ width:43%;
 margin-right:10px;
 margin-top:20px;
 `;
+export const DownArrow=styled.button`
+color:white;
+font-size:40px;
+align-self:center;
+cursor:pointer;
+margin-left:50px;
+`;
+export const Click=styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-self:center;
+`;

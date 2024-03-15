@@ -138,7 +138,7 @@ const SubPageList = [
 ];
 
 const GraphicDesignPage = () => {
-  const heading='Have a question to our Expertise?'
+  const heading='Have a question about our services?'
   const [selectedDetail, setSelectedDetail] = useState(null);
   const [selectedSubPageDetail, setSelectedSubPageDetail] = useState(null);
 

@@ -3,7 +3,7 @@ export const AppCardCon=styled.div`
 display:flex;
 flex-direction:column;
 padding:10px;
-width:75%;
+width:80%;
 margin-bottom:30px;
 `;
 export const WebSectionTwoHeading=styled.h2`
@@ -21,8 +21,8 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 `;
 export const AppAbout=styled.p`
-font-size:20px;
-width:75%;
+font-size:24px;
+
 color:white;
 margin-left:47px;
 margin-top:15px;

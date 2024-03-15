@@ -31,14 +31,13 @@ export const SubPara=styled.p`
 font-size:20px;
 margin:0px 0px 20px 47px;
 color:white;
-width:70%;
+width:80%;
 `;
 export const BackButton=styled.button`
-background-color:rgba(43, 69, 155, 1);
-color:white;
-width:70px;
-height:50px;
-border-radius:5px;
-cursor:pointer;
+
+color:rgba(129, 150, 219, 0.3);
+border-:none;
+font-size:40px;
+margin-right:95%;
 margin-left:30px;
 `;
