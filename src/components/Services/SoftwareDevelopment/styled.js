@@ -5,7 +5,7 @@ export const SoftDevSection = styled.div`
  display:flex;
  flex-direction:column;
  color:white;
- width:100vw;
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
@@ -18,7 +18,7 @@ padding:100px 0px 20px 40px;
 `;
 
 export const SectionThreeHeading=styled.h2`
-font-size:42px;
+font-size:25px;
 text-align:center;
 `;
 export const SpanThree=styled.span`
@@ -26,11 +26,11 @@ color:rgba(43, 69, 155, 1);
 `;
 export const SectionThreeDescription=styled.p`
 font-size:20px;
-line-height:30px;
-width:55%;
+line-height:34px;
+width:60%;
 margin:40px;
-word-spacing: 5px;
-margin-left: 120px;
+word-spacing: 3px;
+margin-left: 140px;
 `;
 export const SectionThree=styled.div`
 display:flex;
@@ -47,35 +47,35 @@ padding:40px;
 `;
 export const SectionFourHeading=styled.h2`
 color:white;
-text-align: center
+align-self:center;
+font-size:28px;
 `;
 export const SectionFourDescription=styled.p`
-color: #fff;
-padding: 30px 30px 40px 0px;
-margin-left: 15%;
-line-height:22px;
-font-size:18px;
-width:70%;
-
+font-size:24px;
+line-height:34px;
+width:80%;
+margin:40px;
+word-spacing: 3px;
+margin-left: 100px;
 `;
 export const ChooseSection=styled.div`
 display:flex;
-
 flex-direction:row;
 flex-wrap:wrap;
 justify-content:center;
-width: 70%;
-margin: auto;
+width: 80%;
+align-items:center;
+margin:auto;
 `;
 
 export const SectionFiveHeading=styled.h2`
 color:white;
 font-size:28px;
 text-align:center;
-margin-top:15px;
+margin-top:25px;
 `;
 export const SectionFiveTitle=styled.h3`
-font-size:36px;
+font-size:30px;
 text-align:center;
 margin-top: 20px;
 margin-bottom: 0px;
@@ -95,7 +95,7 @@ export const SectionSix=styled.div`
  padding:30px;
 `;
 export const ContactCon = styled.div`
-  background-color: #d4daf0;
+background-color: rgba(0, 0, 0, 0.25);
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;

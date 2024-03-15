@@ -21,8 +21,10 @@ const GdSectionCard = (props) => {
     };
   return (
     <AppCardCon>
+    <div>
     <HeadingSpan />
     <WebSectionTwoHeading>{name}</WebSectionTwoHeading>
+    </div>
     <AppAbout>{text}</AppAbout>
     <ImgCon>
     <InsertImg src={img}></InsertImg>

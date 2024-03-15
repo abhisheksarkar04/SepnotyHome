@@ -3,13 +3,13 @@ export const AppCardCon=styled.div`
 display:flex;
 flex-direction:column;
 padding:10px;
-width:75%;
+width:80%;
 margin-bottom:30px;
 `;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:24px;
-margin:0px 0px 20px 30px;
+margin:0px 0px 20px 47px;
 `;
 export const HeadingSpan=styled.span`
 width:65px;
@@ -21,10 +21,10 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 `;
 export const AppAbout=styled.p`
-font-size:20px;
-width:65%;
+font-size:24px;
+
 color:white;
-margin-left:40px;
+margin-left:47px;
 margin-top:15px;
 margin-bottom:15px;
 `;

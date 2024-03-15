@@ -13,7 +13,10 @@ const ExpertCardDetail = (props) => {
 
   return (
    <Expert>
-   <ExpHeading><TransparentBg />{heading}</ExpHeading>
+   <div>
+   <TransparentBg />
+   <ExpHeading>{heading}</ExpHeading>
+   </div>
    <ExpText>{topicText}</ExpText>
    <ExpImgRole>
    <ExpImg src={ImgUrl}></ExpImg>
