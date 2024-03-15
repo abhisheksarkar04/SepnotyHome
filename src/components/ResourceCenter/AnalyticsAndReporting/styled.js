@@ -228,6 +228,7 @@ export const BtnLearn = styled.button`
   height: 35px;
   width: 120px;
   color: #fff;
+  cursor: pointer;
 
 `;
 
@@ -340,4 +341,122 @@ color: white;
     margin-left: 0px;
     cursor: pointer;
 }
+`;
+
+
+
+export const ProExtendMain = styled.div`
+    margin: 0px 0px 0px 80px;
+   width: 72%;
+   display: flex;
+   flex-direction: column;
+
+
+`;
+export const ProExtendTop = styled.div`
+    margin: 30px 0px 0px 0;
+   width: 75%;
+   background-color: #7F8588;
+   padding: 20px;
+   border-radius: 5px;
+
+
+`;
+export const ProExtendBottom = styled.div`
+    margin: 30px 0px 0px 13%; 
+   width: 40%;
+   background-color: #263238;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+
+
+
+  
+
+
+`;
+export const TopHead = styled.h3`
+    margin: 0px 20px 20px 0px;
+   color: #2B459B;
+    font-size: 20px;
+
+`;
+export const TopPara = styled.p`
+    margin: 30px 20px 20px 0px;
+    color: #263238;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 18px;
+
+`;
+
+
+
+export const PurChaseImg = styled.img`
+   color: #2B459B;
+   width: 50px;
+   height: 50px
+
+`;
+export const PurChaseHead = styled.h1`
+    margin: 20px 0px 20px 0px;
+   color: #fff;
+    font-size: 23px;
+
+`;
+export const PurChasePara = styled.p`
+   color: #fff;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 0px 0 25px 20px; 
+
+`;
+export const PurChaseItems = styled.div`
+    display: flex;
+   align-self: flex-start;
+   
+   margin-left: 22px;
+
+`;
+export const PurchaseTickImg = styled.img`
+    margin: 0px 20px 20px 0px;
+    height: 18px;
+
+`;
+
+export const PurChaseItemsPara = styled.p`
+   color: #fff;
+    font-size: 17px;
+
+    font-weight: 600;
+`;
+export const PurChaseButton = styled.button`
+border-radius: 30px;
+background: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(252, 252, 252, 0) 0%,
+  rgba(252, 252, 252, 1) 0%,
+  rgba(246, 251, 34, 1) 100%
+);
+height: 40px;
+width: 140px;
+cursor: pointer;
+margin: 20px 0 20px 0;
+font-weight: 600;
+
+`;
+export const RemoveBtn = styled.button`
+    margin: 0px 0px 0px 0px;
+   color: #fff;
+   cursor: pointer;
+    font-size:12px;
+    text-align:center;
+    align-self: center;
+
 `;

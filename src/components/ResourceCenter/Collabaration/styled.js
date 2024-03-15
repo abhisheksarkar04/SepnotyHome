@@ -454,7 +454,7 @@ export const ProfileList = styled.ul`
 export const CommunityCon = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 7%;
+  margin-left: 9%;
   margin-bottom: 40px;
   margin-top: 40px;
 `;

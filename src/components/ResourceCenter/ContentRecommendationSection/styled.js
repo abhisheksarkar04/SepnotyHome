@@ -102,6 +102,7 @@ export const SearchSuggestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin-right: 40px;
   align-items: center;
   align-self: flex-end;
 `;

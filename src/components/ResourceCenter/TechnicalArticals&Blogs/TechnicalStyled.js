@@ -113,7 +113,7 @@ export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2%;
+  margin-left: 2.6%;
 `;
 
 export const SearchHeading = styled.p`
