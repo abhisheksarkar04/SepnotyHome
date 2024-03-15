@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   ItemCon,
   SmallPattern,
   PatternCon,
@@ -27,8 +26,7 @@ import protection from "../Images/protection.svg";
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
-import ContactForm from "../../ContactUs/ContactForm";
-import Meeting from "../../ContactUs/Meeting";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const DataProtection = () => {
@@ -103,10 +101,9 @@ const DataProtection = () => {
           </ServiceItemDesc>
         </CorporateItems>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

@@ -121,6 +121,9 @@ margin-bottom:80px;
 const List = styled.li`
 margin-top:10px;
 width:1340px;
+
+
+
 font-size:20px;
 color:white;
 `

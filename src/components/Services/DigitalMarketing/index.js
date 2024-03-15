@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   PatternCon,
   SmallPattern,
 } from "./styled";
@@ -30,8 +29,9 @@ import DM from "../Images/Digitalmarketing.svg";
 import SEO from "../Images/seo.svg";
 import SMM from "../Images/smm.svg";
 import CM from "../Images/ContentMarketing.svg";
-import ContactForm from "../../ContactUs/ContactForm";
-import Meeting from "../../ContactUs/Meeting";
+
+import Contact from "../../ContactUs/SepnotyQuerySection";
+
 import FooterSection from "../../Footer/FooterSection";
 const DigitalMarketing = () => {
   const heading = "Have a question to our team or need help with your project?";
@@ -135,10 +135,7 @@ const DigitalMarketing = () => {
           </div>
         </ServiceItemCon>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+      <Contact heading={heading} />
       <FooterSection />
     </>
   );

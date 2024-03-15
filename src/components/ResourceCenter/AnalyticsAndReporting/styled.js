@@ -96,7 +96,7 @@ height: 130%;
 margin-top: -30px;
 margin-left: -10px;
 margin-right: 0px;
-padding: 0 0px 0 20px;
+padding: 0 0px 0 0;
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
@@ -106,30 +106,55 @@ export const GdPageTitle=styled.h2`
 font-size:20px;
 color:white;
 font-weight: 600;
-padding: 125px 0px 10px 80px;
+padding: 125px 0px 10px 6%;
 `;
 export const GdHeading=styled.h1`
 font-size: 30px;
 font-weight:700;
 margin: 0px 0px 15px 0px;
 color:white;
-padding: 20px 0px 10px 80px;
+padding: 20px 0px 10px 6%;
 `;
 
+export const AnalyticsSection = styled.div`
+      width: 100%;
+      height: 107%;
+      padding: 70px 0px 0px 6%;
+      margin 0px 0px 10px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-
-
-
+`;
 
 
 export const ProMainDiv = styled.div`
       width: 35%;
-      position: absolute;
       height: 107%;
-      padding: 70px 0px 20px 50px;
+      padding: 70px 0px 0px 40px;
       margin 0px 0px 10px 0px;
 
 `;
+
+
+
+export const MobSection1=styled.div`
+    background-color:rgba(12, 17, 31, 1);
+    width: 59%;
+    margin-left:0;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+`;
+
+
+
+
+
+
+
 export const ProTop = styled.div`
     background-color: #263238;
     background-size: cover;
@@ -152,9 +177,9 @@ export const ProTopHead = styled.h1`
 `;
 export const ProTopImg = styled.img`
     background-color: #263238;
-    height: 300px;
-    margin: -2px -30px 0px 90px;
-    width: 290px;
+    height: 60%;
+    margin: 0px -30px -4px 90px;
+    width: 60%;
 
 
 `;
@@ -178,14 +203,16 @@ background: linear-gradient(
   rgba(246, 251, 34, 1) 100%
 );
 position: absolute;
-color: ;
 height: 35px;
-width: 140px;
-margin: 50px 0px 0px 320px;
+font-size: 12px;
+font-weight: 550;
+width: 9%;
+margin: 50px 0px 0px 280px;
 padding-left: 0px;
 padding-right: 20px;
 border: none;
 cursor: pointer;
+font-
 @media screen and (max-width: 455px) {
   height: 30px;
   align-self:center;
@@ -207,10 +234,10 @@ export const BtnLearn = styled.button`
 
 
 export const VectorImg = styled.img`
-    height: 18px;
+    height: ;
    
     margin: 3px 3px -3px 10px;
-    width: 18px;
+    width: 17%;
 
 
 `;
@@ -219,7 +246,7 @@ export const VectorImg = styled.img`
 
 
 export const HeadingSection = styled.div`
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 6%;
     display: flex;
 
 `;
@@ -229,8 +256,8 @@ export const HeadingSection = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 60px;
-  width: 70px;
+  height: 55px;
+  width: 60px;
   border-radius: 3px;
   margin-left: 20px;
 `;
@@ -242,7 +269,7 @@ export const PatternCon = styled.div`
   margin-bottom: 20px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 25px;
   color: #2B459B;
   font-weight: bold;
   margin-left: -18px;
@@ -283,17 +310,6 @@ export const SearchSectionBtn = styled.button`
 `;
 
 
-
-export const MobSection1=styled.div`
-background-color:rgba(12, 17, 31, 1);
-width: 55%;
-margin-left:40%;
-margin-bottom: 40px;
-margin-top: 30px;
-display: flex;
-flex-wrap: wrap;
-flex-direction:row;
-`;
 
 
 

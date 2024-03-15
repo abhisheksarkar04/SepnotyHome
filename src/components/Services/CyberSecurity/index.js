@@ -16,7 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   ItemCon,
   SmallPattern,
   PatternCon,
@@ -31,8 +30,7 @@ import endpoint from "../Images/endpoint.svg";
 import protection from "../Images/protection.svg";
 import MSS from "../Images/MSS.svg";
 import network from "../Images/network.svg";
-import ContactForm from "../../ContactUs/ContactForm";
-import Meeting from "../../ContactUs/Meeting";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const CyberSecurity = () => {
@@ -163,10 +161,9 @@ const CyberSecurity = () => {
           </ItemCon>
         </ServiceItemCon>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

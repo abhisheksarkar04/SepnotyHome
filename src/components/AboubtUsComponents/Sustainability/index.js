@@ -134,7 +134,10 @@ Economic Prosperity
   height:260px;
   margin-right:10px;
   margin-left:-130px;
-  margin-top:100px;
+  margin-top:120px;
+
+
+  
   `
   const Para1 = styled.p`
   font-size:24px;

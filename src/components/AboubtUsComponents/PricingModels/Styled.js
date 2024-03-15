@@ -43,7 +43,7 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width: 1300px;
   padding: 20px 30px 30px 0px;
-  margin-left:60px;
+  margin-left:0px;
   margin-bottom:40px;
 `;
 
