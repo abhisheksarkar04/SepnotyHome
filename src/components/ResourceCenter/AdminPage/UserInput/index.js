@@ -17,9 +17,8 @@ const UserInput=()=>{
                     <Image src={signup} alt="not found"/>
                 </SepnotyCont>
                 <SignUpCont>
-                    <Head>Sign Up</Head>
+                    <Head>Sign In</Head>
                     <Form >
-                        <Input type='text' placeholder="User name"/>
                         <Input type='mail' placeholder="Email Address / Mobile Number"/>
                         <Input type='password' placeholder="Password"/>
                         <CheckBox>

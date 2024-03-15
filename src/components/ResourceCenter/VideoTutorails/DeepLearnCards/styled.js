@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 200px;
+  width: 180px;
   height: 18vh;
   margin: 0px 30px 50px 0px;
   background-color: #d9d9d9;
@@ -22,6 +22,19 @@ export const CardContainer1 = styled.div`
   border-radius: 7px;
   z-index: 0;
 `;
+
+export const CardContainer2 = styled.div`
+  width: 200px;
+  height: 14vh;
+  margin: 0px 60px 50px 0px;
+  background-color: #d9d9d9;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  z-index: 0;
+`;
+
 
 export const Image = styled.img`
   width: 200px;
@@ -66,10 +79,10 @@ export const ButtonCon = styled.button`
 
 
 export const ImageA = styled.img`
-  width: 200px;
+  width: 180px;
   vertical-align: middle;
   text-align: center;
-  height: 210px;
+  height: 230px;
   z-index: 1;
   margin-bottom: -10px;
 `;

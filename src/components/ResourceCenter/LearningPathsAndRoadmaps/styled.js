@@ -66,7 +66,7 @@ export const ListHeading = styled.h1`
 
 export const ListItemSection = styled.ol`
  
- font-size: 17px; 
+ font-size: 22px; 
  font-weight: 900;
   margin-right: 20%;
   margin-left: 7%;
@@ -84,7 +84,7 @@ export const ListItemSection = styled.ol`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 10;
-   font-size:18px;
+   font-size: 20px;
    margin-top: 20px;
    margin-left: -2%;
    
@@ -99,7 +99,7 @@ export const LearnPara3 = styled.p`
 `;
 export const ListHead = styled.h2`
    color: #89A4FF;
-   font-size:18px;
+   font-size: 22px;
    font-weight: 100;
    margin-top: 20px;
 `;

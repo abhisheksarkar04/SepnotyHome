@@ -50,7 +50,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemDesc = styled.p`
   margin-bottom: 100px;
   margin-top: 50px;
-  font-size: 18px;
+  font-size: 22px;
   color: #ffffff;
   width: 60%;
   margin-left: 8%;
@@ -82,7 +82,7 @@ export const ListItemSection = styled.ul`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 1;
-   font-size:16px;
+   font-size: 22px;
    width: 80%;
    margin-left: -4%;
    margin-top: -10px;
@@ -91,14 +91,14 @@ export const LearnPara1 = styled.p`
 export const LearnPara2 = styled.p`
    color:#fff;
    font-weight: 1;
-   font-size:16px;
-   width: 60%;
+   font-size: 22px;
+   width: 70%;
    margin-left: 8.3%;
    margin-top: 20px;
    margin-bottom: 60px;
 `;
 export const ListHead = styled.h2`
-   font-size:18px;
+   font-size: 22px;
    color: #89A4FF;
    margin-left: -4%;
    margin-top: 40px;

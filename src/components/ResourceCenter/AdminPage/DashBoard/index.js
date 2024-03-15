@@ -99,11 +99,11 @@ const DashBoard=()=>{
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={blogicon} alt="icon"/>
-                        <IconName>My Blogs</IconName>
+                        <IconName>Blogs</IconName>
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={careericon} alt="icon"/>
-                        <IconName>My Career Opportunities</IconName>
+                        <IconName>Career Opportunities</IconName>
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={repots} alt="icon"/>

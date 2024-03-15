@@ -162,6 +162,7 @@ export const ViewButton = styled.button`
   outline: none;
   padding: 10px 40px 10px 40px;
   border-radius: 20px;
+  margin-bottom: 60px;
   align-self: center;
 `;
 

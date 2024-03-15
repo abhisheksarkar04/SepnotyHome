@@ -48,7 +48,7 @@ export const ListHeading = styled.h1`
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 22px;
   color: #ffffff;
   width: 80%;
   margin-left: 2%;
@@ -81,7 +81,8 @@ export const ListItemSection = styled.ul`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 1;
-   font-size:18px;
+   width: 80%;
+   font-size: 22px;
    margin-top:-10px;
    margin-bottom: 30px;
 `;
@@ -100,7 +101,7 @@ export const OrderListSection = styled.ul`
     color:#fff;
     display: list-item;
     line-height: 1.8;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
    
   }
@@ -112,8 +113,8 @@ export const LearnPara11 = styled.h2`
    color:#fff;
    margin-bottom: 100px;
    margin-left: 8%;
-   font-size:20px;
-   width: 80%;
+   font-size:22px;
+   width: 70%;
    font-weight: 10;
    
 `;

@@ -24,6 +24,7 @@ import {
   Image,
   Title,
   Image33,
+  CardContainer2,
   // Heading,
   // Description,
   // Arrow,
@@ -138,31 +139,31 @@ const VideoTutorials = () => {
               <ListItems>
                     <li>
                       <Image src={image1} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image src={image2} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Network security</Title>
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image33 src={image3} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <ImageA src={image4} />
@@ -213,31 +214,31 @@ const VideoTutorials = () => {
               <ListItems>
                     <li>
                       <Image src={image1} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image src={image2} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Network security</Title>
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image33 src={image3} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <ImageA src={image4} />
