@@ -191,7 +191,7 @@ font-size:10px;
 margin-bottom:5px;
 `
 const Para1 = Styled.p`
-color:${(props) => (props.active ? '#B7B6BD' : '#343D48')};
+color:${(props) => (props.active ? '#2B459B' : '#343D48')};
 font-size: 18px;
 font-weight: 700;
 line-height: 33px;
@@ -203,7 +203,7 @@ margin-top:10px;
   }
 `
 const Para2 = Styled.p`
-color:${(props) => (props.active ? 'blue' : 'white')};
+color:${(props) => (props.active ? '#2B459B' : 'white')};
 font-size: 18px;
 font-weight: 400;
 line-height: 38px;
