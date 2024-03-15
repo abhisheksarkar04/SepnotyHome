@@ -14,7 +14,7 @@ color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size: 25px;
+font-size: 22px;
 margin-top: 20px;
 width: 70%;
 color:white;
@@ -54,5 +54,4 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
-  margin-left: 50px;
 `;

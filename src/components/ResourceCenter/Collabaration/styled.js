@@ -40,7 +40,7 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 25px;
+  font-size: 23px;
   color: #ffffff;
   width: 50%;
   padding: 20px 30px 30px 0px;
@@ -88,10 +88,11 @@ export const HeadingCon = styled.div`
   
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 22px;
   color: #2b459b;
   font-weight: bold;
   padding-left: 9%;
+  letter-spacing: 0.5px;
 
 `;
 
@@ -161,6 +162,7 @@ export const ViewButton = styled.button`
   outline: none;
   padding: 10px 40px 10px 40px;
   border-radius: 20px;
+  margin-bottom: 60px;
   align-self: center;
 `;
 
@@ -453,7 +455,7 @@ export const ProfileList = styled.ul`
 export const CommunityCon = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 7%;
+  margin-left: 9%;
   margin-bottom: 40px;
   margin-top: 40px;
 `;

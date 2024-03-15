@@ -25,7 +25,7 @@ export const Topic = styled.h1`
 export const Name = styled.p`
   font-size: 12px;
   color: #ffffff;
-  margin: 0px;
+  margin: 10px 0 0 0;
 `;
 
 export const Data = styled.h1`

@@ -46,11 +46,11 @@ export const ListHeading = styled.h1`
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
-  font-size: 23px;
+  font-size: 22px;
   color: #ffffff;
-  width: 80%;
-  margin-left:80px;
-  line-height: 1.5;
+  width: 90%;
+  margin-left: 4%;
+  line-height: 1.3;
   text-align: justify;
 `;
 
