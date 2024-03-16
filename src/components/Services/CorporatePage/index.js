@@ -13,7 +13,6 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
   ItemCon,
@@ -30,7 +29,7 @@ import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const CorporatePage = () => {
-  const heading = "Have a question to our team or need help with your project?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>
@@ -65,7 +64,6 @@ const CorporatePage = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={CV} alt="cv" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </ItemCon>

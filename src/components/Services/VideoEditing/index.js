@@ -60,7 +60,7 @@ import premier from "../Images/premier.svg";
 import crop from "../Images/crop.svg";
 
 const VideoEditing = () => {
-  const heading = "Have a question to our team or need help with your project?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>

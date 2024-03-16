@@ -13,7 +13,6 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
   ItemCon,
@@ -30,7 +29,7 @@ import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const DataProtection = () => {
-  const heading = "Have a question to our Expertise?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>
@@ -67,7 +66,6 @@ const DataProtection = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={protection} alt="cv" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </ItemCon>

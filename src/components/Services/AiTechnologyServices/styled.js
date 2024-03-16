@@ -57,7 +57,7 @@ export const Rectangle1 = styled.img`
 
 export const Rectangle2 = styled.img`
   position: absolute;
-  right: 17.5%;
+  right: 17.5vw;
   height: 80%;
   width: 60%;
   top: -1vh;
