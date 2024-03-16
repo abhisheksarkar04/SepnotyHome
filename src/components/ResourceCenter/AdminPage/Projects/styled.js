@@ -1,14 +1,20 @@
 import styled from "styled-components";
 export const Image = styled.img`
-  height: 55vh;
-  margin-top: 60px;
-  width: 100vw;
+  height: 30vh;
+  width: 100%;
+  padding: 10px;
 `;
 export const Container = styled.div`
+  margin-top: 10px;
   background-color: #0c111f;
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+  width: 80%;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-left: 30px;
+  padding: 3px;
 `;
 export const PortfolioHeading = styled.h1`
   color: #ffffff;
@@ -20,7 +26,7 @@ export const Desc = styled.p`
   color: #ffffff;
   font-size: 15px;
   line-height: 1.5;
-  width: 70%;
+  width: 90%;
 `;
 
 export const SmallPattern = styled.div`
@@ -46,7 +52,7 @@ export const ContentDesc = styled.p`
   color: #ffffff;
   font-size: 15px;
   margin-left: 55px;
-  width: 60%;
+  width: 90%;
   margin-bottom: 15px;
   line-height: 1.5;
 `;
@@ -129,11 +135,23 @@ export const List = styled.ul`
 `;
 
 export const ContentContainer = styled.div`
-  margin-left: 7%;
   margin-top: 10px;
 `;
 
 export const Contents = styled.div`
   padding-left: 1%;
   margin-bottom: 30px;
+`;
+
+export const EditTool = styled.img`
+  height: 26px;
+  width: 22px;
+  margin-left: 20px;
+`;
+
+export const EditCon = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
 `;

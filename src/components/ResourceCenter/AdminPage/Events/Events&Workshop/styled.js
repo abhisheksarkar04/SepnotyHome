@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const MainConatiner = styled.div``;
+export const MainConatiner = styled.div`
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 80%;
+  margin-left: 30px;
+`;
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
@@ -14,8 +20,8 @@ export const PatternCon = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  margin-top: 90px;
-  margin-left: 8%;
+  margin-top: 30px;
+  margin-left: 20px;
 `;
 export const ListHeading = styled.h1`
   font-size: 25px;
@@ -50,6 +56,14 @@ export const ApplyButton = styled.button`
   border-radius: 58px;
   margin-left: 5%;
   cursor: pointer;
+`;
+
+export const EventCon = styled.div`
+  margin-bottom: 10%;
+`;
+
+export const WorkshopCon = styled.div`
+  margin-bottom: 30%;
 `;
 //   export const Container = styled.h1`
 

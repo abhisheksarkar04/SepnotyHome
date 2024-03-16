@@ -19,6 +19,7 @@ import EventsAndWorkshop from "../Events/Events&Workshop";
 import { Link } from "react-router-dom";
 
 import ArticlesFolder from "../DashBoard/ArticleFolder";
+import Project from "../Projects";
 
 import {
   Container,
@@ -40,6 +41,8 @@ import {
   DateInput,
   SpanHead,
 } from "./styledComponents";
+
+import FooterSection from "../../../Footer/FooterSection";
 
 const Lists = [
   {
@@ -79,75 +82,90 @@ const Lists = [
 const DashBoard = () => {
   const [showArticles, setShowArticles] = useState(true);
   const [showEvents, setShowEvents] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
+ 
 
   const toggleArticles = () => {
     setShowArticles(true);
     setShowEvents(false);
+    setShowProjects(false);
   };
 
   const toggleEvents = () => {
     setShowEvents(true);
     setShowArticles(false);
+    setShowProjects(false);
   };
+
+  const toggleProjects = () => {
+    setShowProjects(true);
+    setShowArticles(false);
+    setShowEvents(false);
+  };
+
   return (
-    <Container>
-      <Resources>
-        Resources &gt; Admin login &gt; <SpanHead>Dashboard Page</SpanHead>
-      </Resources>
-      <ContainerOne>
-        <Containertwo>
-          <ImagesCont>
-            <Image src={sepnoty} alt="sepnoty" />
-            <Link to="/resource-center/admin-login/dash-board/create-post">
-              <AddImg src={add} alt="addButton" />
-            </Link>
-          </ImagesCont>
-          <Contactimgcon>
-            <Name>Manikumar Pokala</Name>
-            <Profile src={profile} alt="profile" />
-          </Contactimgcon>
-        </Containertwo>
+    <>
+      <Container>
+        <Resources>
+          Resources &gt; Admin login &gt; <SpanHead>Dashboard Page</SpanHead>
+        </Resources>
+        <ContainerOne>
+          <Containertwo>
+            <ImagesCont>
+              <Image src={sepnoty} alt="sepnoty" />
+              <Link to="/resource-center/admin-login/dash-board/create-post">
+                <AddImg src={add} alt="addButton" />
+              </Link>
+            </ImagesCont>
+            <Contactimgcon>
+              <Name>Manikumar Pokala</Name>
+              <Profile src={profile} alt="profile" />
+            </Contactimgcon>
+          </Containertwo>
 
-        <Containerthree>
-          <ColumnDiv>
-            <ArticalCon onClick={toggleArticles}>
-              <Icons src={vector} alt="icon" />
-              <IconName>Articles</IconName>
-            </ArticalCon>
-            <ArticalCon>
-              <Icons src={blogicon} alt="icon" />
-              <IconName>Blogs</IconName>
-            </ArticalCon>
-            <ArticalCon>
-              <Icons src={careericon} alt="icon" />
-              <IconName>Career Opportunities</IconName>
-            </ArticalCon>
-            <ArticalCon>
-              <Icons src={repots} alt="icon" />
-              <IconName>Reports</IconName>
-            </ArticalCon>
-            <ArticalCon>
-              <Icons src={Projects} alt="icon" />
-              <IconName>Projects</IconName>
-            </ArticalCon>
-            <ArticalCon onClick={toggleEvents}>
-              <Icons src={eventicon} alt="icon" />
-              <IconName>Events and Workshops</IconName>
-            </ArticalCon>
-          </ColumnDiv>
+          <Containerthree>
+            <ColumnDiv>
+              <ArticalCon onClick={toggleArticles}>
+                <Icons src={vector} alt="icon" />
+                <IconName>Articles</IconName>
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={blogicon} alt="icon" />
+                <IconName>Blogs</IconName>
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={careericon} alt="icon" />
+                <IconName>Career Opportunities</IconName>
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={repots} alt="icon" />
+                <IconName>Reports</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleProjects}>
+                <Icons src={Projects} alt="icon" />
+                <IconName>Projects</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleEvents}>
+                <Icons src={eventicon} alt="icon" />
+                <IconName>Events and Workshops</IconName>
+              </ArticalCon>
+            </ColumnDiv>
 
-          {showArticles && (
-            <Containerfour>
-              <DateInput type="month" id="monthInput" name="monthInput" />
-              {Lists.map((each) => (
-                <ArticlesFolder key={each.id} details={each} />
-              ))}
-            </Containerfour>
-          )}
-          {showEvents && <EventsAndWorkshop />}
-        </Containerthree>
-      </ContainerOne>
-    </Container>
+            {showArticles && (
+              <Containerfour>
+                <DateInput type="month" id="monthInput" name="monthInput" />
+                {Lists.map((each) => (
+                  <ArticlesFolder key={each.id} details={each} />
+                ))}
+              </Containerfour>
+            )}
+            {showProjects && <Project />}
+            {showEvents && <EventsAndWorkshop />}
+          </Containerthree>
+        </ContainerOne>
+      </Container>
+      <FooterSection />
+    </>
   );
 };
 

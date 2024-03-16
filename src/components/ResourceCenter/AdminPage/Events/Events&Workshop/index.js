@@ -5,17 +5,16 @@ import {
   SmallPattern,
   PatternCon,
   ListHeading,
-  Container,
-  Img,
-  Details,
-  Name,
-  TextDts,
-  ApplyButton,
+  EventCon,
+  WorkshopCon,
 } from "./styled";
+
+import Event from "../EventItem";
 
 const EventsAndWorkshop = () => {
   const eventsList = [
     {
+      id: 1,
       ImgOf: img1,
       name: "Graphic Designer  event",
       place: "Banglore",
@@ -23,6 +22,7 @@ const EventsAndWorkshop = () => {
       fee: "Rs.500",
     },
     {
+      id: 2,
       ImgOf: img2,
       name: "Digital Marketing event",
       place: "Banglore",
@@ -50,41 +50,26 @@ const EventsAndWorkshop = () => {
   return (
     <>
       <MainConatiner>
-        <PatternCon>
-          <SmallPattern></SmallPattern>
-          <ListHeading>Events</ListHeading>
-        </PatternCon>
+        <EventCon>
+          <PatternCon>
+            <SmallPattern></SmallPattern>
+            <ListHeading>Events</ListHeading>
+          </PatternCon>
 
-        {eventsList.map((items) => (
-          <Container>
-            <Img src={items.ImgOf} />
-            <Details>
-              <Name>{items.name}</Name>
-              <TextDts>Place : {items.place}</TextDts>
-              <TextDts>Time : {items.time}</TextDts>
-              <TextDts>Registration fee -{items.fee}</TextDts>
-            </Details>
-            <ApplyButton>Apply</ApplyButton>
-          </Container>
-        ))}
+          {eventsList.map((items) => (
+            <Event key={items.id} eventDetails={items} />
+          ))}
+        </EventCon>
+        <WorkshopCon>
+          <PatternCon>
+            <SmallPattern></SmallPattern>
+            <ListHeading>Workshops</ListHeading>
+          </PatternCon>
 
-        <PatternCon>
-          <SmallPattern></SmallPattern>
-          <ListHeading>Workshops</ListHeading>
-        </PatternCon>
-
-        {workshopList.map((items) => (
-          <Container>
-            <Img src={items.ImgOf} />
-            <Details>
-              <Name>{items.name}</Name>
-              <TextDts>Place : {items.place}</TextDts>
-              <TextDts>Time : {items.time}</TextDts>
-              <TextDts>Registration fee -{items.fee}</TextDts>
-            </Details>
-            <ApplyButton>Apply</ApplyButton>
-          </Container>
-        ))}
+          {workshopList.map((items) => (
+            <Event key={items.id} eventDetails={items} />
+          ))}
+        </WorkshopCon>
       </MainConatiner>
     </>
   );

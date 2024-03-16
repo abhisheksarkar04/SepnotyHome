@@ -1,12 +1,13 @@
 import React from "react";
-import portfolio from "../images/portfolio.png";
-import design from "../images/design.png";
-import bg from "../images/bg.png";
-import usd from "../images/interface.png";
+import portfolio from "./images/portfolio.png";
+import design from "./images/design.png";
+import bg from "./images/bg.png";
+import deleteIcon from "./images/Vector (2).png";
+import editIcon from "./images/Group.png";
+/* import usd from "../images/interface.png";
 import wearable from "../images/wearable.png";
-import CaseStudy from "../CaseStudies";
+import CaseStudy from "../CaseStudies"; */
 /* import ContactForm from "../../ContactUs/ContactForm"; */
-import FooterSection from "../../Footer/FooterSection";
 import {
   Container,
   Desc,
@@ -20,35 +21,24 @@ import {
   ImageContainer,
   DesignImage,
   Bgimage,
-  Button,
   TechCon,
   Techtitle,
   SubCon,
-  MoreCaseStudies,
-  List,
   ContentContainer,
   Contents,
+  EditTool,
+  EditCon,
 } from "./styled";
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "Design for Wearable Devices",
-    desc: "Designing user interfaces for wearable technology, such as smartwatches, fitness trackers, or augmented reality glasses.",
-    image: wearable,
-  },
-  {
-    id: 2,
-    title: "The Impact of Color Psychology in User Interface Design",
-    desc: "Investigate how different colors influence user behavior, emotions, and perceptions in UI design.",
-    image: usd,
-  },
-];
 // import main from "../../assets/images/Capture.PNG"
-const Projects = () => {
+const Project = () => {
   return (
     <>
       <Container>
+        <EditCon>
+          <EditTool src={editIcon} alt="edit" />
+          <EditTool src={deleteIcon} alt="delete" />
+        </EditCon>
         <Image src={portfolio} />
         <ContentContainer>
           <div>
@@ -147,29 +137,18 @@ const Projects = () => {
               </PatternCon>
 
               <ContentDesc>
-                Android: Android SDK, Android Studio, Eclipse, ADT Plugin, JAR
-                Signer, SQLite, Volley, Gradle, logcat, UiAutomator Windows
-                Phone 7: Windows Phone Toolkit, NLog Desktop: C++, Python
-                ,WebRTC, Visual Studio
+                Android: Android SDK, Android Studio, Eclipse, ADT Plugin, JAR
+                Signer, SQLite, Volley, Gradle, logcat, UiAutomator <br />
+                Windows Phone 7: Windows Phone Toolkit, NLog
+                <br />
+                Desktop: C++, Python ,WebRTC, Visual Studio
               </ContentDesc>
-            </div>
-            <div>
-              <Button>Android App Case studies</Button>
-              <Button>Mobile App Case studies</Button>
             </div>
           </Contents>
         </ContentContainer>
-        <List>
-          {caseStudies.map((each) => (
-            <CaseStudy key={each.id} details={each} />
-          ))}
-        </List>
-
-        <MoreCaseStudies>See More Case Studies</MoreCaseStudies>
       </Container>
-      <FooterSection />
     </>
   );
 };
 
-export default Projects;
+export default Project;

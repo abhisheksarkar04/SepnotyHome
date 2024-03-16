@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #00001a;
-  width: 101.2%;
-  height: 100%;
-  margin: -10px 90px -10px -10px;
-  padding: 80px 30px 20px 30px;
+  width: 100%;
+  padding: 80px 30px 5% 30px;
   display: flex;
   flex-direction: column;
 `;
@@ -85,8 +83,8 @@ export const Profile = styled.img`
 export const Containerthree = styled.div`
   display: flex;
   flex-direction: row;
-
-  padding-left: 30px;
+  padding-left: 0px;
+  width: 100%;
 `;
 
 export const ColumnDiv = styled.div`
@@ -95,22 +93,21 @@ export const ColumnDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color: ;
-  margin-top: 0px;
+  margin-top: 10px;
+  width: 15%;
+  margin-right: 30px;
 `;
 export const ArticalCon = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
-  height: 35px;
-  width: 140px;
-  height: 40px;
-
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 25px;
   padding: 4px;
 `;
 export const Icons = styled.img`
   height: 37px;
   width: 30px;
-  padding-top: 13px;
 `;
 
 export const IconName = styled.p`
@@ -129,9 +126,9 @@ export const IconName = styled.p`
 
 export const Containerfour = styled.div`
   display: flex;
-  width: 75%;
+  width: 80%;
   margin-left: 30px;
-  height: 60vh;
+
   border: 1px solid #d9d9d9;
   flex-direction: column;
   justify-content: space-evenly;
