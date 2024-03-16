@@ -108,61 +108,19 @@ const DashBoard = () => {
           </Contactimgcon>
         </Containertwo>
 
-                <Containerthree>
-                    <ColumnDiv>
-                    <ArticalCon>
-                        <Icons src={vector} alt="icon"/>
-                        <IconName>Articles</IconName>
-                    </ArticalCon>
-                    <ArticalCon>
-                        <Icons src={blogicon} alt="icon"/>
-                        <IconName>Blogs</IconName>
-                    </ArticalCon>
-                    <ArticalCon>
-                        <Icons src={careericon} alt="icon"/>
-                        <IconName>Career Opportunities</IconName>
-                    </ArticalCon>
-                    <ArticalCon>
-                        <Icons src={repots} alt="icon"/>
-                        <IconName>Reports</IconName>
-                    </ArticalCon>
-                    <ArticalCon>
-                        <Icons src={Projects} alt="icon"/>
-                        <IconName>Projects</IconName>
-                    </ArticalCon>
-                    <ArticalCon>
-                        <Icons src={eventicon} alt="icon"/>
-                        <IconName>Events and Workshops</IconName>
-                    </ArticalCon>
-                    
-                    </ColumnDiv>
-
-                    <Containerfour>
-                        <DateInput type="month" id="monthInput" name="monthInput" />
-                        {Lists.map((each)=>(
-                            <ArticlesFolder key={each.id} details={each}/>
-                            ))}
-                    </Containerfour>
-
-                  </Containerthree>
-
-            </ContainerOne>
-        </Container>
-    )
-}
         <Containerthree>
           <ColumnDiv>
             <ArticalCon onClick={toggleArticles}>
               <Icons src={vector} alt="icon" />
-              <IconName>My Articles</IconName>
+              <IconName>Articles</IconName>
             </ArticalCon>
             <ArticalCon>
               <Icons src={blogicon} alt="icon" />
-              <IconName>My Blogs</IconName>
+              <IconName>Blogs</IconName>
             </ArticalCon>
             <ArticalCon>
               <Icons src={careericon} alt="icon" />
-              <IconName>My Career Opportunities</IconName>
+              <IconName>Career Opportunities</IconName>
             </ArticalCon>
             <ArticalCon>
               <Icons src={repots} alt="icon" />
@@ -174,9 +132,10 @@ const DashBoard = () => {
             </ArticalCon>
             <ArticalCon onClick={toggleEvents}>
               <Icons src={eventicon} alt="icon" />
-              <IconName>Events and Worshops</IconName>
+              <IconName>Events and Workshops</IconName>
             </ArticalCon>
           </ColumnDiv>
+
           {showArticles && (
             <Containerfour>
               <DateInput type="month" id="monthInput" name="monthInput" />

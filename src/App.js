@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-
-import { BrowserRouter as Router, Route, Switch  ,useHistory} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import AboutUs from "./components/AboutUsSection/AboutUs/index";
@@ -65,9 +69,7 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
-
-
-
+import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -84,14 +86,11 @@ function ScrollToTopOnPageChange() {
   return null;
 }
 
-
-
-
 const App = () => {
   return (
     <>
       <Router>
-      <ScrollToTopOnPageChange />
+        <ScrollToTopOnPageChange />
         <Navbar />
         <AppRoutes />
       </Router>
@@ -289,22 +288,18 @@ const AppRoutes = () => {
         path="/resource-center/case-studies-and-success-stories"
         component={CaseStudiesandSuccessStories}
       />
-      <Route 
-          exact
-          path="/resource-center/admin-login"
-          component={UserInput}
+      <Route exact path="/resource-center/admin-login" component={UserInput} />
+      <Route
+        exact
+        path="/resource-center/admin-login/dash-board"
+        component={DashBoard}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board"
-          component={DashBoard}
+      <Route
+        exact
+        path="/resource-center/admin-login/dash-board/create-post"
+        component={CreatePost}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board/create-post"
-          component={CreatePost}
-      />
-     
+
       <Route
         exact
         path="/services/digital-marketing"
@@ -352,6 +347,11 @@ const AppRoutes = () => {
         exact
         path="/ProjectPortfolio/change-by-design"
         component={ChangeByDesign}
+      />
+      <Route
+        exact
+        path="services/web-development/subcard"
+        component={SubCard}
       />
     </Switch>
   );
