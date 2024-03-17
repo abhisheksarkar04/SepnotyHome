@@ -19,6 +19,7 @@ import {
   SmallPattern,
   PatternCon,
   CorporateItems,
+  BackButton,
 } from "./styled";
 
 import rectangle1 from "../Images/Rectangle 1.svg";
@@ -27,9 +28,16 @@ import rectangle3 from "../Images/Rectangle3.svg";
 import CV from "../Images/CorporateVideo.svg";
 import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
+import { useHistory } from "react-router-dom";
 
 const CorporatePage = () => {
   const heading = "Have a question About our Services ?";
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <DigitalContainer>
@@ -127,6 +135,7 @@ const CorporatePage = () => {
             with stakeholders who were unable to attend in person.
           </ServiceItemDesc>
         </CorporateItems>
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
       <Contact heading={heading} />
       <FooterSection />

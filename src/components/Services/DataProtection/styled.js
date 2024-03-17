@@ -147,3 +147,11 @@ export const CorporateItems = styled.div`
   flex-direction: column;
   padding-left: 6%;
 `;
+
+export const BackButton = styled.button`
+  color: rgba(43, 69, 155, 1);
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 95%;
+`;

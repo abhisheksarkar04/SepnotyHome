@@ -18,6 +18,7 @@ import {
   SmallPattern,
   PatternCon,
   CorporateItems,
+  BackButton,
 } from "./styled";
 
 import app from "../Images/app.svg";
@@ -26,9 +27,16 @@ import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
 import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
+import { useHistory } from "react-router-dom";
 
 const AppIntegration = () => {
   const heading = "Have a question about our Service?";
+
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <DigitalContainer>
@@ -171,6 +179,7 @@ const AppIntegration = () => {
             scenarios based on specific requirements and constraints.
           </ServiceItemDesc>
         </CorporateItems>
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
 
       <Contact heading={heading} />

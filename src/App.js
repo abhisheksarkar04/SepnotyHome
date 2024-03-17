@@ -134,16 +134,7 @@ const AppRoutes = () => {
         path="/services/software-development"
         component={SoftDevPage}
       />
-      <Route
-        exact
-        path="/services/digital-marketing"
-        component={DigitalMarketing}
-      />
-      <Route
-        exact
-        path="/services/software-development"
-        component={SoftDevPage}
-      />
+
       <Route exact path="/services/web-development" component={WebDevPage} />
       <Route
         exact

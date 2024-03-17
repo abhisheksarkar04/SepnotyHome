@@ -33,8 +33,10 @@ import CM from "../Images/ContentMarketing.svg";
 import Contact from "../../ContactUs/SepnotyQuerySection";
 
 import FooterSection from "../../Footer/FooterSection";
+
 const DigitalMarketing = () => {
   const heading = "Have a question About our Services ?";
+
   return (
     <>
       <DigitalContainer>

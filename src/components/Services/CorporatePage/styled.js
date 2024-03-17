@@ -150,3 +150,11 @@ export const CorporateItems = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const BackButton = styled.button`
+  color: rgba(43, 69, 155, 1);
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 95%;
+`;
