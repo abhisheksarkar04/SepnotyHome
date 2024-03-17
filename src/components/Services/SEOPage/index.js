@@ -20,6 +20,7 @@ import {
   SeoItemsCon,
   SeoItemsList,
   SeolistItem,
+  BackButton,
 } from "./styled";
 
 import rectangle1 from "../Images/Rectangle 1.svg";
@@ -28,9 +29,16 @@ import rectangle3 from "../Images/Rectangle3.svg";
 import SEO from "../Images/seo.svg";
 import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
+import { useHistory } from "react-router-dom";
 
-const SEOPage = () => {
+const SEOPage = (props) => {
   const heading = "Have a question About our Services ?";
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <DigitalContainer>
@@ -170,6 +178,7 @@ const SEOPage = () => {
             </SeoItemsList>
           </SeoItemsCon>
         </ServiceItemCon>
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
 
       <Contact heading={heading} />

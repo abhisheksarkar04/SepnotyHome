@@ -19,6 +19,7 @@ import {
   SmallPattern,
   PatternCon,
   CorporateItems,
+  BackButton,
 } from "./styled";
 
 import protection from "../Images/protection.svg";
@@ -27,9 +28,15 @@ import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
 import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
+import { useHistory } from "react-router-dom";
 
 const DataProtection = () => {
   const heading = "Have a question About our Services ?";
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <DigitalContainer>
@@ -98,6 +105,7 @@ const DataProtection = () => {
             interception, even if the underlying system is compromised.
           </ServiceItemDesc>
         </CorporateItems>
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
 
       <Contact heading={heading} />
