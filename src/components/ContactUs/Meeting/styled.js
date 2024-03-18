@@ -36,7 +36,7 @@ export const BottomDesc = styled.p`
 
 export const Button = styled.button`
   background-color: #254989;
-  color: 2b459b;
+  color: #ffffff;
   padding: 10px 20px 10px 20px;
   border-radius: 15px;
   border-width: 0px;

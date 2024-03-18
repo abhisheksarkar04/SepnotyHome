@@ -1,5 +1,6 @@
 import SubCard from "../SubCard/SubCard";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   WebTechCardCon,
   WebTechImg,
@@ -21,7 +22,9 @@ const WebTechCard = (props) => {
     <WebTechCardCon>
       <WebTechImg src={img} />
       <WebTechAbout>{techAbout}</WebTechAbout>
+
       <WebTechButton onClick={handleLearnMoreClick}>Learn More</WebTechButton>
+
       {matchingDetail && (
         <SubCard key={matchingDetail.id} details={matchingDetail} />
       )}

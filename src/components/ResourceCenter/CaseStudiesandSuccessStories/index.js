@@ -24,7 +24,10 @@ import {
     ImgCon,
     InsertImg,
     WebTechButton,
+    WebTechButton1,
     InsertImg1,
+    LearnPara2,
+    LearnPara11,
 } from "./styled"
 
 const CaseStudiesandSuccessStories = () => {
@@ -99,19 +102,22 @@ const successList = [
               Case studies are detailed examinations of a specific subject, situation, or problem within a real-world context. In the context of video tutorials, case studies are often used as an instructional tool to illustrate concepts, theories, or best practices in practice. 
               </ServiceItemDesc>
       </ServiceItemDetails>
-      <ListItemSection>
-          <PatternCon>
+      <PatternCon>
                 <SmallPattern></SmallPattern>
                 <ListHeading>Here's how case studies are utilized in video tutorials: </ListHeading>
           </PatternCon>
+      <ListItemSection>
+          
                  {caseStudiesList.map((item, index) => (
                     <li key={index}>
                         <ListHead>{item.heading}</ListHead>
                         <LearnPara1>{item.para}</LearnPara1>
                     </li>
                  ))}
-                 
-            </ListItemSection>
+              
+        </ListItemSection>
+        <LearnPara2>Overall, case studies in video tutorials serve as powerful educational tools that contextualize learning, promote critical thinking, and facilitate the application of knowledge and skills in real-world settings.
+</LearnPara2>
         <ImgCon>
             <InsertImg src={img}></InsertImg>
              <Link to="/ProjectPortfolio">
@@ -127,7 +133,7 @@ const successList = [
         <ImgCon>
             <InsertImg1 src={successImg}></InsertImg1>
             <Link to="/ProjectPortfolio">
-                <WebTechButton>Learn More</WebTechButton>
+                <WebTechButton1>Learn More</WebTechButton1>
             </Link>
         </ImgCon>
         <Spacing></Spacing>

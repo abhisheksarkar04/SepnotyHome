@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 
-import { BrowserRouter as Router, Route, Switch  ,useHistory} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import AboutUs from "./components/AboutUsSection/AboutUs/index";
@@ -66,7 +71,10 @@ import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
 
+import Myblog from './components/ResourceCenter/Myblog';
+import AdminCareerOppurtunities from './components/ResourceCenter/AdminCareerOppurtunities';
 
+import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
 
 
 function ScrollToTopOnPageChange() {
@@ -84,14 +92,11 @@ function ScrollToTopOnPageChange() {
   return null;
 }
 
-
-
-
 const App = () => {
   return (
     <>
       <Router>
-      <ScrollToTopOnPageChange />
+        <ScrollToTopOnPageChange />
         <Navbar />
         <AppRoutes />
       </Router>
@@ -135,16 +140,7 @@ const AppRoutes = () => {
         path="/services/software-development"
         component={SoftDevPage}
       />
-      <Route
-        exact
-        path="/services/digital-marketing"
-        component={DigitalMarketing}
-      />
-      <Route
-        exact
-        path="/services/software-development"
-        component={SoftDevPage}
-      />
+
       <Route exact path="/services/web-development" component={WebDevPage} />
       <Route
         exact
@@ -208,6 +204,16 @@ const AppRoutes = () => {
         exact
         path="/CareerOppurtunities/Designersforhire"
         component={Designerforhire}
+      />
+      <Route
+        exact
+        path="/ResourceCenter/Myblog"
+        component={Myblog}
+      />
+      <Route
+        exact
+        path="/ResourceCenter/AdminCareerOppurtunities"
+        component={AdminCareerOppurtunities}
       />
       <Route
         exact
@@ -289,21 +295,20 @@ const AppRoutes = () => {
         path="/resource-center/case-studies-and-success-stories"
         component={CaseStudiesandSuccessStories}
       />
-      <Route 
-          exact
-          path="/resource-center/admin-login"
-          component={UserInput}
+
+      <Route exact path="/resource-center/admin-login" component={UserInput} />
+
+      <Route
+        exact
+        path="/resource-center/admin-login/dash-board"
+        component={DashBoard}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board"
-          component={DashBoard}
+      <Route
+        exact
+        path="/resource-center/admin-login/dash-board/create-post"
+        component={CreatePost}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board/create-post"
-          component={CreatePost}
-      />
+
       <Route
         exact
         path="/services/digital-marketing"
@@ -351,6 +356,11 @@ const AppRoutes = () => {
         exact
         path="/ProjectPortfolio/change-by-design"
         component={ChangeByDesign}
+      />
+      <Route
+        exact
+        path="services/web-development/subcard"
+        component={SubCard}
       />
     </Switch>
   );

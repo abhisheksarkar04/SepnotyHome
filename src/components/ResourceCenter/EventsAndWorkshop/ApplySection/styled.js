@@ -6,8 +6,8 @@ export const MainConatiner = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 70px;
-  width: 80px;
+  height: 55px;
+  width: 60px;
   border-radius: 3px;
 `;
 
@@ -23,7 +23,7 @@ export const ListHeading = styled.h1`
   font-size: 25px;
   color: #89A4FF;
   font-weight: bold;
-  margin-left: -28px;
+  margin-left: -32px;
 `;
 
 
@@ -31,8 +31,11 @@ export const ListHeading = styled.h1`
 export const Container = styled.div`
   display:flex;
   padding:20px;
-  justify-content: center;
+  width: 40%;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 14%;
+
 
    
   `;
@@ -57,10 +60,13 @@ export const TextDts = styled.p`
 export const ApplyButton = styled.button`
     background-color: #435AA7;
     height: 40px;
-    width: 80px;
+    width: 100px;
+    color: #fff;
+    font-weight: 600;
     border-radius: 58px;
     margin-left: 5%;
     cursor: pointer;
+
    
   `;
 //   export const Container = styled.h1`

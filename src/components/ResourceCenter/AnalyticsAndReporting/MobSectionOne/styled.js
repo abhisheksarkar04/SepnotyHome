@@ -2,24 +2,21 @@ import styled from 'styled-components';
 
 export const SectionOneCon=styled.div`
 background-color: #2B459B;
-padding:30px 50px 30px 120px;
+padding:30px 50px 30px 6%;
 color:white;
 margin-bottom:40px;
-z-index: -4;
- margin-left: -50px;
 `;
 export const SectionOneHeading=styled.h1`
 width:40%;
-font-size:28px;
+font-size: 30px;
 margin-bottom:30px;
 `;
 
 export const SectionOneDescription=styled.p`
 width:60%;
-font-size:20px;
-line-height:25px;
+font-size:25px;
 margin-top:30px;
-padding-top: 30px;
+padding-top: 10px;
 padding-bottom: 20px;
 `;
 export const IntroProposalText = styled.button`

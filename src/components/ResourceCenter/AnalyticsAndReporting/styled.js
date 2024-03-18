@@ -96,72 +96,97 @@ height: 130%;
 margin-top: -30px;
 margin-left: -10px;
 margin-right: 0px;
-padding: 0 0px 0 20px;
+padding: 0 0px 0 0;
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
-font-size:20px;
 `;
 export const GdPageTitle=styled.h2`
-font-size:20px;
+font-size: 18px;
 color:white;
 font-weight: 600;
-padding: 125px 0px 10px 80px;
+padding: 125px 0px 10px 6%;
 `;
 export const GdHeading=styled.h1`
 font-size: 30px;
 font-weight:700;
 margin: 0px 0px 15px 0px;
 color:white;
-padding: 20px 0px 10px 80px;
+padding: 20px 0px 10px 6%;
 `;
 
+export const AnalyticsSection = styled.div`
+      width: 100%;
+      height: 107%;
+      padding: 20px 0px 0px 6%;
+      margin 0px 0px 10px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-
-
-
+`;
 
 
 export const ProMainDiv = styled.div`
-      width: 35%;
-      position: absolute;
-      height: 107%;
-      padding: 70px 0px 20px 50px;
-      margin 0px 0px 10px 0px;
+      width: 50%;
+      padding: 30px 0px 0px 40px;
+      margin 0px 50px 10px 0px;
+      height: 50%;
 
 `;
+
+
+
+export const MobSection1=styled.div`
+    background-color:rgba(12, 17, 31, 1);
+    width: 80%;
+    padding: 0 0 0 30px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+`;
+
+
+
+
+
+
+
 export const ProTop = styled.div`
     background-color: #263238;
     background-size: cover;
-    height: 55%;
+    height: 50%;
 
 `;
 export const ProBottom = styled.div`
     background-color: #D9D9D980;
-    height: 40%;
+    height: 35%;
+    padding: 0 0 30px 0;
 
 
 `;
         
 export const ProTopHead = styled.h1`
     color: #fff;
-    font-size: 20px;
+    font-size: 100%;
     margin: 0px 0px 0px 20px;
-    padding: 16px 0 0 10px;
+    padding: 5px 0 0 10px;
 
 `;
 export const ProTopImg = styled.img`
     background-color: #263238;
-    height: 300px;
-    margin: -2px -30px 0px 90px;
-    width: 290px;
+    height: 81%;
+    margin: 0px -30px -4px 90px;
+    width: 60%;
 
 
 `;
 
 export const GraphImg = styled.img`
     height: 150px;
-   
     margin: 50px 0px 0px 0px;
     width: 100%;
 
@@ -178,10 +203,11 @@ background: linear-gradient(
   rgba(246, 251, 34, 1) 100%
 );
 position: absolute;
-color: ;
 height: 35px;
-width: 140px;
-margin: 50px 0px 0px 320px;
+font-size: 12px;
+font-weight: 550;
+width: 9%;
+margin: 50px 0px 0px 20%;
 padding-left: 0px;
 padding-right: 20px;
 border: none;
@@ -201,16 +227,17 @@ export const BtnLearn = styled.button`
   height: 35px;
   width: 120px;
   color: #fff;
+  cursor: pointer;
 
 `;
 
 
 
 export const VectorImg = styled.img`
-    height: 18px;
+    height: ;
    
     margin: 3px 3px -3px 10px;
-    width: 18px;
+    width: 17%;
 
 
 `;
@@ -219,7 +246,7 @@ export const VectorImg = styled.img`
 
 
 export const HeadingSection = styled.div`
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 6%;
     display: flex;
 
 `;
@@ -229,8 +256,9 @@ export const HeadingSection = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 60px;
-  width: 70px;
+  height: 55px;
+  width: 60px;
+  position: absolute;
   border-radius: 3px;
   margin-left: 20px;
 `;
@@ -240,12 +268,13 @@ export const PatternCon = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+  width: 202px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 25px;
   color: #2B459B;
   font-weight: bold;
-  margin-left: -18px;
+  margin-left: auto;
 `;
 
 export const HeadingSearch = styled.h1`
@@ -284,23 +313,149 @@ export const SearchSectionBtn = styled.button`
 
 
 
-export const MobSection1=styled.div`
-background-color:rgba(12, 17, 31, 1);
-width: 55%;
-margin-left:40%;
-margin-bottom: 40px;
-margin-top: 30px;
-display: flex;
-flex-wrap: wrap;
-flex-direction:row;
-`;
-
 
 
 export const GraphImageItem = styled.img`
     margin: 0px 20px 20px 0px;
-   width: 360px;
-   height: 400px;
+   width: 350px;
+   height: 380px;
 
+
+`;
+
+export const DateInput=styled.input`
+height: 37px;
+align-self: flex-end;
+margin-right: 10px;
+margin-left: 10px;
+width: 130px;
+border: 1px solid;
+text-align: center;
+border-radius: 3px;
+background-color: transparent; /* Set background color to transparent */
+color: white;
+&::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 20px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+`;
+
+
+
+export const ProExtendMain = styled.div`
+    margin: 0px 0px 0px 80px;
+   width: 72%;
+   display: flex;
+   flex-direction: column;
+
+
+`;
+export const ProExtendTop = styled.div`
+    margin: 30px 0px 0px 0;
+   width: 75%;
+   background-color: #7F8588;
+   padding: 20px;
+   border-radius: 5px;
+
+
+`;
+export const ProExtendBottom = styled.div`
+    margin: 30px 0px 0px 13%; 
+   width: 40%;
+   background-color: #263238;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+
+
+
+  
+
+
+`;
+export const TopHead = styled.h3`
+    margin: 0px 20px 20px 0px;
+   color: #2B459B;
+    font-size: 20px;
+
+`;
+export const TopPara = styled.p`
+    margin: 30px 20px 20px 0px;
+    color: #263238;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 18px;
+
+`;
+
+
+
+export const PurChaseImg = styled.img`
+   color: #2B459B;
+   width: 50px;
+   height: 50px
+
+`;
+export const PurChaseHead = styled.h1`
+    margin: 20px 0px 20px 0px;
+   color: #fff;
+    font-size: 23px;
+
+`;
+export const PurChasePara = styled.p`
+   color: #fff;
+    font-size: 12px;
+    width: 100%;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 0px 0 25px 20px; 
+
+`;
+export const PurChaseItems = styled.div`
+    display: flex;
+   align-self: flex-start;
+   
+   margin-left: 22px;
+
+`;
+export const PurchaseTickImg = styled.img`
+    margin: 0px 20px 20px 0px;
+    height: 18px;
+
+`;
+
+export const PurChaseItemsPara = styled.p`
+   color: #fff;
+    font-size: 17px;
+
+    font-weight: 600;
+`;
+export const PurChaseButton = styled.button`
+border-radius: 30px;
+background: linear-gradient(
+  90deg,
+  rgba(2, 0, 36, 1) 0%,
+  rgba(252, 252, 252, 0) 0%,
+  rgba(252, 252, 252, 1) 0%,
+  rgba(246, 251, 34, 1) 100%
+);
+height: 40px;
+width: 140px;
+cursor: pointer;
+margin: 20px 0 20px 0;
+font-weight: 600;
+
+`;
+export const RemoveBtn = styled.button`
+    margin: 0px 0px 0px 0px;
+   color: #fff;
+   cursor: pointer;
+    font-size:12px;
+    text-align:center;
+    align-self: center;
 
 `;

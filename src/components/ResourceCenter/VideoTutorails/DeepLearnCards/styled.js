@@ -1,9 +1,20 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 150px;
-  height: 16vh;
-  margin: 0px 30px 20px 0px;
+  width: 180px;
+  height: 18vh;
+  margin: 0px 30px 50px 0px;
+  background-color: #d9d9d9;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  z-index: 0;
+`;
+export const CardContainer1 = styled.div`
+  width: 160px;
+  height: 12vh;
+  margin: 0px 90px 50px 0px;
   background-color: #d9d9d9;
   padding: 0 0 0 10px;
   display: flex;
@@ -12,11 +23,30 @@ export const CardContainer = styled.div`
   z-index: 0;
 `;
 
+export const CardContainer2 = styled.div`
+  width: 200px;
+  height: 14vh;
+  margin: 0px 60px 50px 0px;
+  background-color: #d9d9d9;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  z-index: 0;
+`;
+
+
 export const Image = styled.img`
-  width: 150px;
-  vertical-align: middle;
+  width: 200px;
   text-align: center;
-  height: 250px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: -10px;
+`;
+export const Image33 = styled.img`
+  width: 200px;
+  text-align: center;
+  height: 340px;
   z-index: 1;
   margin-bottom: -10px;
 `;
@@ -49,18 +79,18 @@ export const ButtonCon = styled.button`
 
 
 export const ImageA = styled.img`
-  width: 150px;
+  width: 180px;
   vertical-align: middle;
   text-align: center;
-  height: 190px;
+  height: 230px;
   z-index: 1;
   margin-bottom: -10px;
 `;
 export const ImageB = styled.img`
-  width: 150px;
-  vertical-align: middle;
+  width: 160px;
   text-align: center;
-  height: 150px;
+  height: 160px;
   z-index: 1;
+  margin-top: 40px;
   margin-bottom: -10px;
 `;

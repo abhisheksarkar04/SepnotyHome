@@ -8,6 +8,8 @@ import rectangle3 from "../images/Rectangle3.svg";
 import small from "../images/Rectanglesmall.svg";
 import ReactPlayer from "react-player"
 // import DeepLearningImg from "./images/Rectangle 6268.png"
+import styled from 'styled-components';
+
 
 import image1 from "./images/Rectangle 6270.png"
 import image2 from "./images/Rectangle 6271.png"
@@ -18,8 +20,11 @@ import image6 from "./images/Rectangle 6275.png"
 
 import {
   CardContainer,
+  CardContainer1,
   Image,
   Title,
+  Image33,
+  CardContainer2,
   // Heading,
   // Description,
   // Arrow,
@@ -60,6 +65,11 @@ import {
   Span,
   HeadingCon,
 } from "./styled";
+
+
+const StyledPlayer = styled(ReactPlayer)`
+    padding-right: 8%;
+`;
 
 const cardList = [
   {
@@ -119,7 +129,9 @@ const VideoTutorials = () => {
             <TechnicalArticalsMain>
               <DeepLearnFrame>
                  <ImageContainer>
-                 <ReactPlayer controls={true} url="https://youtu.be/6ryPbOfz03U?si=kh21q0Ku9lFzarSQ" />
+                 <StyledPlayer 
+                 style={{ width: '300px' }}
+                 controls={true} url="https://youtu.be/6ryPbOfz03U?si=kh21q0Ku9lFzarSQ" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
                  </ImageContainer>
                  <Button>Watch More</Button>
@@ -127,31 +139,31 @@ const VideoTutorials = () => {
               <ListItems>
                     <li>
                       <Image src={image1} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image src={image2} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Network security</Title>
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
-                      <Image src={image3} />
-                      <CardContainer>
+                      <Image33 src={image3} />
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <ImageA src={image4} />
@@ -175,13 +187,13 @@ const VideoTutorials = () => {
                     </li>
                     <li>
                       <ImageB src={image6} />
-                      <CardContainer>
+                      <CardContainer1>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
-                      </CardContainer>
+                      </CardContainer1>
                     </li>
                 </ListItems>
             </TechnicalArticalsMain>
@@ -194,7 +206,7 @@ const VideoTutorials = () => {
             <TechnicalArticalsMain>
               <DeepLearnFrame>
                  <ImageContainer>
-                 <ReactPlayer controls={true} url="https://youtu.be/6M5VXKLf4D4?si=Tx6ZZxa8IrRtOTxW" />
+                 <StyledPlayer controls={true} url="https://youtu.be/6M5VXKLf4D4?si=Tx6ZZxa8IrRtOTxW" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
                  </ImageContainer>
                  <Button>Watch More</Button>
@@ -202,31 +214,31 @@ const VideoTutorials = () => {
               <ListItems>
                     <li>
                       <Image src={image1} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <Image src={image2} />
-                      <CardContainer>
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Network security</Title>
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
-                      <Image src={image3} />
-                      <CardContainer>
+                      <Image33 src={image3} />
+                      <CardContainer2>
                         <DetailsCon>
                           <Title>Data visualization tools and techniques</Title>
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
-                      </CardContainer>
+                      </CardContainer2>
                     </li>
                     <li>
                       <ImageA src={image4} />
@@ -250,13 +262,13 @@ const VideoTutorials = () => {
                     </li>
                     <li>
                       <ImageB src={image6} />
-                      <CardContainer>
+                      <CardContainer1>
                         <DetailsCon>
                           <Title>Security best practices and compliance standards</Title>
                         </DetailsCon>
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
-                      </CardContainer>
+                      </CardContainer1>
                     </li>
                 </ListItems>
             </TechnicalArticalsMain>

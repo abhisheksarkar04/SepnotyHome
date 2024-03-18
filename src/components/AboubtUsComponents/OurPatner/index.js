@@ -1,4 +1,5 @@
 import Styled from "styled-components"
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import {
     Header,
     Service,
@@ -42,6 +43,7 @@ import {
   import FooterSection from "../../Footer/FooterSection";
   
   const OurPatner= () => {
+    const heading = "Have a question to our Partners?"
     return (
       <>
         <DigitalContainer>
@@ -59,7 +61,7 @@ import {
             <Rectangle1 src={rectangle1} alt="not-found" />
           </ContentRecomContainer>
           <He>
-            About OurPatner
+          Our Patner
           </He>
           <Par>      Our fruitful partnership with the suppliers regarding IT Products and Services creates new avenues for expansion and offers our 
 clients access to the latest technological advancements. We can confidently rely on the caliber of tech goods we recommend because 
@@ -139,9 +141,8 @@ we have collaborations with industry leaders in cloud technologies, data managem
                 </Main1>
             </Main>
         </DigitalContainer>
-        <ConatctCon>
-          <ContactForm />
-        </ConatctCon>
+
+          <Contact heading={heading}/>
         <FooterSection />
       </>
     );
@@ -165,7 +166,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-left:100px;
   gap:180px;
   margin-top:190px;
-  margin-bottom:210px;
+  margin-bottom:190px;
   `
   const Main1 = Styled.div`
   width:300px;
@@ -198,7 +199,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   `
   const Par = Styled.p`
   margin-left:100px;
-  width:1200px;
+  width:55%;
   margin-top:100px;
   margin-bottom:-109px;
   font-size:20px;

@@ -4,6 +4,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   margin: 20px 40px 30px 0px;
 
   padding: 30px 10px 30px 10px;
@@ -11,7 +12,7 @@ export const CardContainer = styled.div`
   border-radius: 8px;
   border: 1px solid #cecece;
   height: 350px;
-  width: 270px;
+  width: 280px;
   color: #b7b6bd;
   transition: background-color 0.8s ease;
   &:hover {
@@ -35,9 +36,9 @@ export const CardContainer = styled.div`
 export const CardHeader = styled.div`
   display: flex;
 
-  justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-left: 10px;
+
   @media screen and (max-width: 555px) {
     padding: 0px;
   }
@@ -70,7 +71,7 @@ export const CardParagraph = styled.p`
   font-size: 14px;
   color: #b7b6bd;
   line-height: 1.5em;
-
+  padding-left: 10px;
   @media screen and (max-width: 555px) {
     font-size: 90%;
     line-height: 1.5em;

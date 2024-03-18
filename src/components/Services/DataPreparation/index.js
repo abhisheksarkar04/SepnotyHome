@@ -13,26 +13,31 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   ItemCon,
   SmallPattern,
   PatternCon,
   CorporateItems,
+  BackButton,
 } from "./styled";
 
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
-import ContactForm from "../../ContactUs/ContactForm";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
-import Meeting from "../../ContactUs/Meeting";
+import { useHistory } from "react-router-dom";
 import data from "../Images/data.svg";
 
 const DataPreparation = () => {
-  const heading = "Have a question to our Expertise?";
+  const heading = "Have a question About our Services ?";
+
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <DigitalContainer>
@@ -68,7 +73,6 @@ const DataPreparation = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={data} alt="data" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </ItemCon>
@@ -118,12 +122,12 @@ const DataPreparation = () => {
             periods. Inconsistencies in data formats, units of measurement, or
             naming conventions can lead to errors in analysis.
           </ServiceItemDesc>
-        </CorporateItems>
+        </CorporateItems>{" "}
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );
