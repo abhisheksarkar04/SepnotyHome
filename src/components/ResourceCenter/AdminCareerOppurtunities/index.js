@@ -68,8 +68,9 @@ const AdminCareerOppurtunities = () => {
                             </ArticalCon>
                             <ArticalCon>
                                 <Icons src={careericon} alt="icon" />
-                                <Link to="/ResourceCenter/AdminCareerOppurtunities"></Link>
+                                <Link to="/ResourceCenter/AdminCareerOppurtunities">
                                 <IconName>Career Opportunities</IconName>
+                                </Link>
                             </ArticalCon>
                             <ArticalCon>
                                 <Icons src={repots} alt="icon" />
@@ -116,7 +117,7 @@ const AdminCareerOppurtunities = () => {
                                     </IconViews>
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
-                            </div>
+                            </div>  
                         </Containerfour>
                     </Containerthree>
                 </ContainerOne>
