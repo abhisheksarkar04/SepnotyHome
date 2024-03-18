@@ -4,12 +4,16 @@ import {
     SectionOneHeading,
     SectionOneTitle,
     SectionOneDescription,
+    BackgroundShapeOne,
+    BackgroundShapeTwo,
 } from './styled';
 
 
 const SectionOne = () => {
   return (
     <SectionOneCon>
+    <BackgroundShapeOne />
+    <BackgroundShapeTwo />
     <SectionOneHeading>Software Development Services</SectionOneHeading>
     <SectionOneTitle>Our Passion is to Deliver Software that Helps You Succeed</SectionOneTitle>
     <SectionOneDescription>Sepnoty offers secure, high-performing, and user-friendly solutions delivered on time and under budget with a skilled project management technique and a desire for innovation.</SectionOneDescription>

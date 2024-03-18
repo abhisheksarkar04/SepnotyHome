@@ -2,24 +2,24 @@ import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 0px 60px;
+padding:40px 0px 0px 6%;
 width:100%;
 min-height: 40vh;
+
 margin-bottom: 30px;
 `;
 export const WebSectionOneHeading=styled.h2`
-font-size:25px;
+font-size: 30px;
 color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size: 21px;
+font-size: 22px;
 margin-top: 20px;
-width:60%;
+width: 70%;
 color:white;
 line-height: 1.3;
 text-align:;
-margin-left: 50px;
 `;
 export const BackgroundShapeOne=styled.span`
 position: absolute;
@@ -54,5 +54,4 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
-  margin-left: 50px;
 `;

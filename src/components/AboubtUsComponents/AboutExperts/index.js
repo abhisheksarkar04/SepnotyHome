@@ -257,6 +257,7 @@ related information for your article or would want to speak with one of our prof
   flex-direction:column;
   gap : 30px;
   margin-bottom:60px;
+  margin-left:17px;
 
   `
   const WebsiteContainer = Styled.div`

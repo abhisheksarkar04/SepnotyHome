@@ -16,8 +16,6 @@ import {
   ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
-  ItemCon,
   SmallPattern,
   PatternCon,
 } from "./styled";
@@ -30,12 +28,11 @@ import data from "../Images/data.svg";
 import framework from "../Images/framework.svg";
 import monitoring from "../Images/monitoring.svg";
 import usecases from "../Images/usecases.svg";
-import ContactForm from "../../ContactUs/ContactForm";
-import Meeting from "../../ContactUs/Meeting";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
 
 const AiTechnologyServices = () => {
-  const heading = "Have a question to our Expertise?";
+  const heading = "Have a question About our Services ?";
   return (
     <>
       <DigitalContainer>
@@ -56,7 +53,7 @@ const AiTechnologyServices = () => {
           <Rectangle1 src={rectangle1} alt="not-found" />
         </ContentRecomContainer>
         <ServiceItemCon>
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -74,9 +71,9 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
 
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -98,9 +95,9 @@ const AiTechnologyServices = () => {
                 </Link>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
 
-          <ItemCon>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -119,8 +116,8 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
-          <ItemCon>
+          </div>
+          <div>
             <ServiceItemDetails>
               <PatternCon>
                 <SmallPattern></SmallPattern>
@@ -139,13 +136,12 @@ const AiTechnologyServices = () => {
                 <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
-          </ItemCon>
+          </div>
         </ServiceItemCon>
       </DigitalContainer>
-      <ConatctCon>
-      <Meeting/>
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

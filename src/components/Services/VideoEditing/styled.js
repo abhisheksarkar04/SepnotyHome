@@ -7,12 +7,14 @@ export const DigitalContainer = styled.div`
   padding-top: 70px;
   padding-bottom: 20px;
 `;
+
 export const Header = styled.h1`
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
+  padding: 30px 20px 30px 6%;
 `;
+
 export const Span = styled.span`
   font-weight: 300;
   color: #ffffff;
@@ -22,12 +24,12 @@ export const Service = styled.h1`
   font-size: 30px;
   color: #ffffff;
   font-weight: 600;
-  padding: 10px 30px 20px 5%;
+  padding: 10px 30px 20px 6%;
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 10px 0px 4% 5%;
+  padding: 10px 0px 4% 6%;
 `;
 
 export const ConRecHead = styled.h1`
@@ -35,25 +37,14 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
-  padding-top: 20px;
+  padding: 30px 0px 20px 0px;
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
-  width: 50%;
-  padding: 20px 30px 30px 0px;
-`;
-
-export const Button = styled.button`
-  background-image: linear-gradient(to right, #ffffff, #fff741);
-  padding: 5px 25px 5px 25px;
-  border-radius: 20px;
-  color: #234581;
-  border: 0px;
-  outline: none;
-  font-size: 13px;
-  margin-top: 20px;
+  width: 70%;
+  padding: 0px 30px 30px 0px;
 `;
 
 export const Rectangle1 = styled.img`
@@ -61,7 +52,7 @@ export const Rectangle1 = styled.img`
   right: 0;
   height: 65%;
   width: 37%;
-  top: 12%;
+  top: 15%;
   z-index: 0;
 `;
 
@@ -70,7 +61,7 @@ export const Rectangle2 = styled.img`
   right: 16%;
   height: 78%;
   width: 60%;
-  top: -5%;
+  top: -1%;
   z-index: 0;
 `;
 
@@ -81,25 +72,24 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
-  margun-bottom: 20px;
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 20px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -25px;
+  margin-left: -29px;
 `;
 
 export const ServiceItemCon = styled.div`
-  margin-top: 10%;
+  margin-top: 5%;
 `;
 
 export const ItemCon = styled.div``;
 
 export const ServiceItemDesc = styled.p`
   margin-bottom: 30px;
-  font-size: 17px;
+  font-size: 23px;
   color: #ffffff;
   width: 80%;
   text-align: justify;
@@ -108,14 +98,13 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   padding-left: 2.5%;
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
-
   margin: 0px;
 `;
 
@@ -124,7 +113,7 @@ export const ServiceItemButton = styled.button`
   background-color: #a4a4a4;
   margin-top: -10px;
   color: #2b459b;
-  font-size: 15px;
+  font-size: 17px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 10px 0 10px 0;
@@ -133,7 +122,7 @@ export const ServiceItemButton = styled.button`
 export const ServiceItemDetails = styled.div`
   margin-top: 20px;
   margin-right: 5%;
-  margin: 20px 5% 4% 5%;
+  margin: 20px 5% 4% 6%;
 `;
 
 export const ConatctCon = styled.div`
@@ -287,9 +276,10 @@ export const GradingBg = styled.div`
   margin-right: 10px;
   border-radius: 3px;
 `;
+
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
 `;
 

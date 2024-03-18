@@ -190,7 +190,7 @@ outsourcing services</P>
   margin-top:20px;
   width: 85%;
   height: 100vh;
-  margin-left: 8%;
+  margin-left: 6.5%;
   margin-bottom: 32%;
 
   `
@@ -199,6 +199,9 @@ outsourcing services</P>
   flex-direction:column;
   border: 0.99px solid #FFFFFF;
   background: #2f333f;
+
+
+  
   gap:20px;
   border-radius:7px;
   padding: 20px;

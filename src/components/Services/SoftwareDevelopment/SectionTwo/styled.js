@@ -12,21 +12,26 @@ align-items:center;
 padding:10px;
 border:1px solid rgba(255, 255, 255, 1);
 border-radius:10px;
-width:20%;
+width:23%;
 padding-bottom: 40px;
 
 `;
-export const ComponentHeading=styled.h1`
-color: #FE8122;
-font-size: 70px;
-line-height: 87px;
-letter-height: 80px;
-font-weight: 1200;
--webkit-text-stroke-width: 0.00000001px;
--webkit-text-stroke-color: white;
+export const ComponentHeading = styled.h1`
+  color: #ff9f00; /* Bright orange color */
+  font-size: 55px;
+  line-height: 87px;
+  letter-height: 80px;
+  font-weight: 1000; /* Increased font weight */
+  text-shadow: 
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff; /* White shadow to simulate stroke */
 `;
+
+
 export const ComponentTitle=styled.p`
 color: #BEBEBE;
-font-size:20px;
+font-size:22px;
  margin-top: 0px;
 `;

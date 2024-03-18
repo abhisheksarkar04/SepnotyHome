@@ -30,6 +30,8 @@ import {
   ContactUsInput,
   ContactButtonCon,
   DragHead,
+  InputCon,
+  ErrorMsg,
 } from "./styled";
 
 const contactListItem = [
@@ -66,6 +68,10 @@ const ContactForm = (props) => {
     contact: false,
     requestInfo: false,
   });
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [companyError, setCompanyError] = useState("");
 
   const { heading } = props;
   // const [sepnotyContactChecked, setSepnotyContactChecked] = useState(false); // not used after intergration
@@ -98,15 +104,36 @@ const ContactForm = (props) => {
           break;
         case "email":
           setEmail(e.target.value);
+          if (!e.target.value.trim()) {
+            setEmailError("*Please enter your email");
+          } else {
+            setEmailError("");
+          }
           break;
         case "username":
           setUsername(e.target.value);
+
+          if (!e.target.value.trim()) {
+            setNameError("*Please enter your full name");
+          } else {
+            setNameError("");
+          }
           break;
         case "companyName":
           setCompanyName(e.target.value);
+          if (!e.target.value.trim()) {
+            setCompanyError("*Please enter your company name");
+          } else {
+            setCompanyError("");
+          }
           break;
         case "phoneNumber":
           setPhoneNumber(e.target.value);
+          if (!e.target.value.trim()) {
+            setPhoneError("*Please enter your phone number");
+          } else {
+            setPhoneError("");
+          }
           break;
         default:
           console.log("Invalid change Handler");
@@ -116,6 +143,34 @@ const ContactForm = (props) => {
 
   const formHandler = async (e) => {
     e.preventDefault();
+
+    let errors = {};
+
+    if (!username.trim()) {
+      errors.username = "*Please enter your full name";
+    }
+    if (!email.trim()) {
+      errors.email = "*Please enter your email";
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+      errors.email = "*Please enter a valid email address";
+    }
+    if (!companyName.trim()) {
+      errors.companyName = "*Please enter your company name";
+    }
+    if (!phoneNumber.trim()) {
+      errors.phoneNumber = "*Please enter your phone number";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      // Display all error messages
+      setNameError(errors.username || "");
+      setEmailError(errors.email || "");
+      setCompanyError(errors.companyName || "");
+      setPhoneError(errors.phoneNumber || "");
+
+      return;
+    }
+
     const data = new FormData();
     data.set("message", message);
     data.set("username", username);
@@ -199,42 +254,46 @@ const ContactForm = (props) => {
           </ContactDragAndDrop>
           <ContactInputContainer>
             <ContactInputList id="userForm">
-              <div>
+              <InputCon>
                 <ContactUsInput
-                  placeholder="Full Name"
+                  placeholder="Full Name*"
                   type="text"
                   id="username"
                   value={username}
                   onChange={(e) => changeHandler("username", e)}
                 />
-              </div>
-              <div>
+                {nameError && <ErrorMsg>{nameError}</ErrorMsg>}
+              </InputCon>
+              <InputCon>
                 <ContactUsInput
-                  placeholder="Work email"
+                  placeholder="Work email* "
                   type="email"
                   id="email"
                   value={email}
                   onChange={(e) => changeHandler("email", e)}
                 />
-              </div>
-              <div>
+                {emailError && <ErrorMsg>{emailError}</ErrorMsg>}
+              </InputCon>
+              <InputCon>
                 <ContactUsInput
-                  placeholder="Company"
+                  placeholder="Company*"
                   type="text"
                   id="companyName"
                   value={companyName}
                   onChange={(e) => changeHandler("companyName", e)}
                 />
-              </div>
-              <div>
+                {companyError && <ErrorMsg>{companyError}</ErrorMsg>}
+              </InputCon>
+              <InputCon>
                 <ContactUsInput
-                  placeholder="Phone"
+                  placeholder="Phone*                      "
                   id="phone"
                   value={phoneNumber}
                   onChange={(e) => changeHandler("phoneNumber", e)}
                 />
-              </div>
-              <div className="contact-checked">
+                {phoneError && <ErrorMsg>{phoneError}</ErrorMsg>}
+              </InputCon>
+              <div>
                 <SepnotyContact
                   type="checkbox"
                   id="contact"
@@ -265,7 +324,7 @@ const ContactForm = (props) => {
                 type="submit"
                 className={
                   !Object.values(agreement).every((elem) => elem === true)
-                    ? "disale"
+                    ? "disable"
                     : null
                 }
                 disabled={

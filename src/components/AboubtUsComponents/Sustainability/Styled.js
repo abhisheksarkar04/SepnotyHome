@@ -8,7 +8,7 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 `;
 export const Header = styled.h1`
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 5%;
@@ -39,10 +39,9 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
-  width: 1300px;
-  margin-left:30px;
+  width:80%;
   padding: 20px 30px 30px 0px;
 
 `;
@@ -88,10 +87,10 @@ export const Rectangle3 = styled.img`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 20px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -20px;
+  margin-left: -30px;
   margin-top:50px;
 `;
 
@@ -103,6 +102,10 @@ export const ServiceItemDesc = styled.p`
   font-size: 20px;
   color: #ffffff;
   margin-top:50px;
+
+
+
+  
 `;
 
 export const ImageCon = styled.div`
@@ -153,6 +156,6 @@ export const PatternCon = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   margin-left: 5em;
 `;

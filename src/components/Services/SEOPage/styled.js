@@ -11,7 +11,7 @@ export const Header = styled.h1`
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
+  padding: 30px 20px 30px 6%;
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -22,12 +22,12 @@ export const Service = styled.h1`
   font-size: 30px;
   color: #ffffff;
   font-weight: 600;
-  padding: 10px 30px 20px 5%;
+  padding: 10px 30px 20px 6%;
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 10px 0px 4% 5%;
+  padding: 10px 0px 4% 6%;
 `;
 
 export const ConRecHead = styled.h1`
@@ -35,31 +35,31 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
-  padding-top: 20px;
+  padding: 30px 0px 20px 0px;
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
-  width: 50%;
-  padding: 20px 30px 30px 0px;
+  width: 70%;
+  padding: 0px 30px 30px 0px;
 `;
 
 export const Rectangle1 = styled.img`
   position: absolute;
   right: 0;
-  height: 63%;
+  height: 65%;
   width: 37%;
-  top: 12%;
+  top: 15%;
   z-index: 0;
 `;
 
 export const Rectangle2 = styled.img`
   position: absolute;
-  right: 16.1%;
-  height: 80%;
+  right: 16%;
+  height: 78%;
   width: 60%;
-  top: -11%;
+  top: -1%;
   z-index: 0;
 `;
 
@@ -70,29 +70,28 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
-  margun-bottom: 20px;
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 20px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -20px;
+  margin-left: -29px;
 `;
 
 export const ServiceItemCon = styled.div`
   margin-top: 6.8%;
 `;
 export const ServiceItemDesc = styled.p`
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 23px;
+  font-size: 23px;
   color: #ffffff;
-  width: 70%;
+  width: 80%;
   line-height: 1.5;
 `;
 
 export const ImageCon = styled.div`
-  width: 20%;
+  width: 25%;
   margin: 0px;
   display: flex;
   flex-direction: column;
@@ -107,7 +106,7 @@ export const ServiceItemButton = styled.button`
   background-color: #d9d9d9;
   margin-top: -13px;
   color: #2b459b;
-  font-size: 15px;
+  font-size: 17px;
   border-radius: 7px;
   padding: 7px 0 7px 0;
 `;
@@ -152,9 +151,16 @@ export const SeoItemsList = styled.ul`
 `;
 
 export const SeolistItem = styled.li`
-  font-size: 17px;
+  font-size: 23px;
   color: #ffffff;
   margin-left: 9.5%;
   padding-right: 7%;
-  width: 60%;
+  width: 80%;
+`;
+export const BackButton=styled.button`
+color:rgba(43, 69, 155, 1);
+border:none;
+cursor:pointer;
+font-size:30px;
+margin-right:95%;
 `;

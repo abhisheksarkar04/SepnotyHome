@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TechCardContainer = styled.div`
-  margin-right: 30px;
+  margin-right: 25px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -12,24 +12,26 @@ export const TechCardContainer = styled.div`
   border-radius: 10px;
   margin-bottom: 20px;
   position: relative;
+  
 
   &::before {
     content: '\u2192'; /* Unicode for right arrow */
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
   }
 `;
 
 export const TechImg = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 `;
 
 export const TechAbout = styled.p`
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 18px;
+  align-self:center;
 `;
