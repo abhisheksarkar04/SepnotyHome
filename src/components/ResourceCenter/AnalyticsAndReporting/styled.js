@@ -187,7 +187,6 @@ export const ProTopImg = styled.img`
 
 export const GraphImg = styled.img`
     height: 150px;
-   
     margin: 50px 0px 0px 0px;
     width: 100%;
 
