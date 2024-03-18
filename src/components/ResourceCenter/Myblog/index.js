@@ -68,7 +68,7 @@ const Myblog = () => {
                                 <Icons src={careericon} alt="icon" />
                                 <Link to="/ResourceCenter/AdminCareerOppurtunities">
                                 <IconName>Career Opportunities</IconName>
-                                </Link>
+                                </Link> 
                             </ArticalCon>
                             <ArticalCon>
                                 <Icons src={repots} alt="icon" />

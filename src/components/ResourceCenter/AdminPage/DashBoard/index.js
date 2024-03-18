@@ -118,7 +118,7 @@ const DashBoard=()=>{
                         <Icons src={Projects} alt="icon"/>
                         <IconName>Projects</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon> 
                         <Icons src={eventicon} alt="icon"/>
                         <IconName>Events and Worshops</IconName>
                     </ArticalCon>
