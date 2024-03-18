@@ -9,7 +9,6 @@ import {
     ImageCon,
     ServiceItemDetails,
     ServiceItemCon,
-
     Careop,
     Iph,
     DropDown,
@@ -88,7 +87,6 @@ const Developerforhire = () => {
                 </Header>
                 <Service>Career Oppurunities</Service>
                 <BlueContainer>
-
                     <LeftTextContainer>
                         <LeftHeading>
                             Career Oppurunities

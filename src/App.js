@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+
 import {
   BrowserRouter as Router,
   Route,
@@ -69,7 +70,12 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
+
+import Myblog from './components/ResourceCenter/Myblog';
+import AdminCareerOppurtunities from './components/ResourceCenter/AdminCareerOppurtunities';
+
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
+
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -201,6 +207,16 @@ const AppRoutes = () => {
       />
       <Route
         exact
+        path="/ResourceCenter/Myblog"
+        component={Myblog}
+      />
+      <Route
+        exact
+        path="/ResourceCenter/AdminCareerOppurtunities"
+        component={AdminCareerOppurtunities}
+      />
+      <Route
+        exact
         path="/CareerOppurtunities/DevelopersforHire"
         component={Developerforhire}
       />
@@ -279,7 +295,9 @@ const AppRoutes = () => {
         path="/resource-center/case-studies-and-success-stories"
         component={CaseStudiesandSuccessStories}
       />
+
       <Route exact path="/resource-center/admin-login" component={UserInput} />
+
       <Route
         exact
         path="/resource-center/admin-login/dash-board"

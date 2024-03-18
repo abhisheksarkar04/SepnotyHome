@@ -40,6 +40,7 @@ flex-direction:column;
 text-align:left;
 line-height:20px;
 width:60%;
+
 `;
 export const LeftHeading = styled.h2`
 color:white;
@@ -48,10 +49,11 @@ font-size:30px;
 margin-bottom:20px;
 margin-left:5%;
 `;
+
 export const LeftTitle = styled.p`
-font-size:20px;
+font-size:25px;
 color:white;
-margin-bottom:40px;
+margin-top:20px;
 margin-left:5%;
 `;
 export const LeftDescription = styled.p`
@@ -142,7 +144,7 @@ export const Dropdownbtn = styled.button`
  
 `;
 export const DropDown = styled.div`
-margin-left:70%;
+margin-left:65%;
   position:absolute;
  
 `;
@@ -198,11 +200,16 @@ export const Small = styled.img`
 `;
 export const ServiceItemCon = styled.div`
   margin-top: 5.5%;
+  margin:10px;
 `;
 export const ServiceItemDesc = styled.p`
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #ffffff;
+margin-bottom: 20px;
+font-size: 23px;
+color: #ffffff;
+magin:0px;
+width:80%;
+text-align: justify;
+padding -left:6%;
 `;
 export const Careop = styled.p`
   padding-inline :50px
@@ -250,7 +257,6 @@ justify-content:space-between;
 flex-wrap:wrap;
 padding:30px 150px 20px 30px;
 `;
-
 export const Dropdown = styled.button`
 margin-left: 80%;
   border-radius: 20px;
