@@ -100,13 +100,15 @@ const DashBoard=()=>{
                     <ArticalCon>
                         <Icons src={blogicon} alt="icon"/>
                         <Link to="/ResourceCenter/Myblog">
-                        <IconName>My Blogs</IconName>
+                        <IconName>Blogs</IconName>
                         </Link>
                         
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={careericon} alt="icon"/>
-                        <IconName>My Career Opportunities</IconName>
+                        <Link to="/ResourceCenter/AdminCareerOppurtunities">
+                        <IconName>Career Opportunities</IconName>
+                        </Link>
                     </ArticalCon>
                     <ArticalCon>
                         <Icons src={repots} alt="icon"/>

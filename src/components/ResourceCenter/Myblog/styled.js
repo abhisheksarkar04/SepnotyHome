@@ -27,7 +27,7 @@ padding:20px;
 
 export const ContainerOne=styled.div` 
 width: 80%;
-height: 600px;
+height: 1000px;
 padding: 20px;
 background-color:#00s001a;
 border:1px solid white;
@@ -93,7 +93,7 @@ export const Containerthree=styled.div`
 display:flex;
 flex-direction:row;
 
-height:70%;
+height:30%;
 padding-left:30px;
 
 
@@ -110,13 +110,20 @@ margin-top: 0px;
 `
 export const ArticalCon=styled.div`
 display:flex;
-flex-direction:row;
+
 margin-left:20px;
 height:35px;
 width:140px;
 height:40px;
-
 padding:4px;
+
+`
+
+export const Div=styled.div`
+display:flex;
+flex-direction:row;
+padding:5px;
+display: ruby
 
 `
 export const Icons=styled.img`
@@ -128,6 +135,7 @@ padding-top:13px;
 export const IconName=styled.p`
 font-family:Sans-serif;
 font-size:15px;
+margin-top:15px;
 color:white;
 font-weight: 500;
 text-align: left;
@@ -146,14 +154,15 @@ text-align:center;
 `;
 
 export const Containerfour=styled.div`
-display:flex;
 width: 75%;
-margin-left: 30px;
-height: 60vh;
+margin-left: 20px;
+height: 800px;
 border:1px solid #D9D9D9;
 flex-direction:column;
 justify-content: space-evenly;
 border-radius:18px;
+margin-bottom: 50px;
+display: ruby;
 `;
 
 export const DateInput=styled.input`
@@ -169,4 +178,55 @@ color: white;
     margin-left: -18px;
     cursor: pointer;
 }
+`;
+export const ArticleConatiner=styled.div`
+display:flex;
+flex-direction:column;
+background-color:rgba(217, 217, 217, 1);
+border-radius:7px;
+width:40%;
+height:auto;
+margin:20px;
+
+margin-left:40px;
+margin-bottom:20px;
+
+`;
+export const ArticleImg=styled.img`
+ 
+`;
+export const ArticleTextConatiner=styled.div`
+display:flex;
+flex-direction:column;
+padding:7px;
+background-color:rgba(217, 217, 217, 1);
+border-radius:7px;
+`;
+export const ArticleDescription=styled.p`
+color:black;
+font-size:12px;
+line-height:15px;
+margin-bottom:10px;
+`;
+export const ArticleTime=styled.h3`
+color:rgba(43, 69, 155, 1);
+margin-left:73%;
+font-size:12px;
+margin-bottom:10px;
+`;
+
+export const Arrow =styled.h2`
+color:rgba(43, 69, 155, 1);
+margin-left:93%;
+font-weight:900;
+`;
+export const ArticleTitle=styled.h3`
+color:rgba(234, 50, 50, 1);
+font-size:12px;
+margin-bottom:10px;
+`;
+export const ArticleName=styled.h2`
+color:rgba(43, 69, 155, 1);
+font-size:15px;
+margin-bottom:10px;
 `;
