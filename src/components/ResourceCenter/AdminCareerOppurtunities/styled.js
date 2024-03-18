@@ -125,7 +125,7 @@ height: 37px;
 width: 30px;
 padding-top:13px;
 `
-
+ 
 export const IconName = styled.p`
 font-family:Sans-serif;
 margin-top:15px;

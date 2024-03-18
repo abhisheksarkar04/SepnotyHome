@@ -266,11 +266,11 @@ margin-left: 80%;
   color:white;
 `;
 export const DropdownContent = styled.button`
-// display: block;
-position: absolute;
-// background-color: #f9f9f9;
+display: block;
+margin-top: 10px;
 min-width: 160px;
 color:white;
+
 `;
 export const ApplyButton = styled.button`
   

@@ -42,18 +42,18 @@ import { useState } from "react";
 
 const Developerforhire = () => {
     const options = [
-        { value: 'option1', label: 'Table of content' },
-        { value: 'option2', label: 'Java ' },
-        { value: 'option3', label: '.Net' },
-        { value: 'option4', label: 'Python' },
-        { value: 'option5', label: 'PHP' },
-        { value: 'option6', label: 'C++' },
-        { value: 'option7', label: 'Node.js' },
-        { value: 'option8', label: 'Java script' },
-        { value: 'option9', label: 'React Native' },
-        { value: 'option10', label: 'Cloud' },
-        { value: 'option11', label: 'Artificial intelligence' },
-        { value: 'option12', label: 'Machine learning' },
+        { value: 'option1', label: 'Table of content' },<br></br>,
+        { value: 'option2', label: 'Java ' },<br></br>,
+        { value: 'option3', label: '.Net' },<br></br>,
+        { value: 'option4', label: 'Python' },<br></br>,
+        { value: 'option5', label: 'PHP' },<br></br>,
+        { value: 'option6', label: 'C++' },<br></br>,
+        { value: 'option7', label: 'Node.js' },<br></br>,
+        { value: 'option8', label: 'Java script' },<br></br>,
+        { value: 'option9', label: 'React Native' },<br></br>,
+        { value: 'option10', label: 'Cloud' },<br></br>,
+        { value: 'option11', label: 'Artificial intelligence' },<br></br>,
+        { value: 'option12', label: 'Machine learning' },<br></br>,
 
 
 
@@ -69,15 +69,17 @@ const Developerforhire = () => {
         color: 'white',
         padding: '10px',
         borderRadius: '10px',
-        width: '200px',
         
 
+
     };
-    const optionStyle ={
-        backgroundColor:'rgba(129, 150, 219, 1)',
-        color:'black',
+    const optionStyle = {
+        backgroundColor: 'rgba(129, 150, 219, 1)',
+        color: 'black',
         borderRadius: '30px',
-      };
+        height:'100px',
+        width:'10px'
+    };
 
     return (
         <>
@@ -115,9 +117,17 @@ const Developerforhire = () => {
                                     </select>
                                 </Dropdowncontent>
                             </DropDown>
+                            <div >
+                                {[{ image: img1, name: 'Software Tester ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img2, name: 'Software Developer', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga3, name: 'Cloud Engineer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga4, name: 'Digital Marketing Specialist ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga5, name: 'SEO(Search Engine Optimizer)', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga6, name: 'Video Editor', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga7, name: 'UI/UX Designer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: imga8, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
 
-                            <div style={{ display: 'flex', width: '100%', }}>
-                                {[{ image: img1, name: 'Java Script', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
+                                ].map(listing =>
                                 (<ListInnerContainer>
                                     <ImageCon src={listing.image} alt="dm" />
                                     <ListDataContainer>
@@ -126,110 +136,14 @@ const Developerforhire = () => {
                                             CTC : {listing.CTC}<br></br>
                                             Onsite</Iph>
                                     </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
 
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: img2, name: 'Node.Js', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
+                                    <ApplyButton>Apply</ApplyButton><br></br>
+                                    <br></br>
+
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
                             </div>
 
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga3, name: 'PHP', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga4, name: 'C++', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga5, name: 'React Native', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga6, name: 'Python', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga7, name: '.Net', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
-                            <div style={{ display: 'flex', width: '100%' }}>
-                                {[{ image: imga8, name: 'Java', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                    <ApplyButton>Apply</ApplyButton>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
                         </ServiceItemDetails>
                     </div>
                 </ServiceItemCon>

@@ -70,7 +70,7 @@ const Myblog = () => {
                                 <IconName>Career Opportunities</IconName>
                                 </Link> 
                             </ArticalCon>
-                            <ArticalCon>
+                            <ArticalCon> 
                                 <Icons src={repots} alt="icon" />
                                 <IconName>Reports</IconName>
                             </ArticalCon>

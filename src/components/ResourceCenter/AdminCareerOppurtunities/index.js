@@ -117,7 +117,7 @@ const AdminCareerOppurtunities = () => {
                                     </IconViews>
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
-                            </div>
+                            </div>  
                         </Containerfour>
                     </Containerthree>
                 </ContainerOne>
