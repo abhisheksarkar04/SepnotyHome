@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 20px 40px;
+padding:40px 0px 20px 0px;
+padding-left:6%;
 width:100%;
 min-height: 40vh;
 `;
@@ -19,7 +20,7 @@ width:80%;
 color:white;
 text-align:justify;
 line-height:25px;
-margin-left:20px;
+
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

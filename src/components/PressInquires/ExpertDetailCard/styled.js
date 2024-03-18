@@ -16,10 +16,10 @@ margin-top:10px;
 export const ExpText=styled.p`
 color:white;
 font-size:20px;
-line-height:20px;
+line-height:1.5;
 margin-bottom:15px;
 margin-left:37px;
-
+padding-top:5px;
 `;
 export const ExpImgRole=styled.div`
 display:flex;
@@ -49,8 +49,8 @@ font-size:17px;
 color:white;
 `;
 export const TransparentBg=styled.span`
-width:4%;
-height:7%;
+width:65px;
+height:8%;
 margin-left:0px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);

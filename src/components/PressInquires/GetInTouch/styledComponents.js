@@ -4,7 +4,8 @@ export const BlueContainer=styled.div`
  display:flex;
  background-color:rgba(43, 69, 155, 1);
  flex-direction:row;
- padding:40px 40px 40px 40px;
+ padding:40px 40px 40px 0px;
+ padding-left:6%;
  justify-content:space-between;
  color:white;
 `;
@@ -22,14 +23,14 @@ font-size:28px;
 margin-bottom:20px;
 `;
 export const LeftTitle=styled.p`
-font-size:24px;
+font-size:25px;
 color:white;
 margin-bottom:40px;
 `;
 export const LeftDescription=styled.p`
-font-size:20px;
+font-size:25px;
 color:white;
-line-height:22px;
+line-height:25px;
 margin-bottom:20px;
 `;
 export const LeftButton=styled.button`
