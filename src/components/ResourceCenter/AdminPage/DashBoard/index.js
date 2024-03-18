@@ -19,6 +19,7 @@ import EventsAndWorkshop from "../Events/Events&Workshop";
 import { Link } from "react-router-dom";
 
 import ArticlesFolder from "../DashBoard/ArticleFolder";
+
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
 import CreateReport from  "../NewReport/index"
@@ -138,33 +139,39 @@ const DashBoard = () => {
             </Contactimgcon>
           </Containertwo>
 
-          <Containerthree>
-            <ColumnDiv>
-              <ArticalCon onClick={toggleArticles}>
-                <Icons src={vector} alt="icon" />
-                <IconName>Articles</IconName>
-              </ArticalCon>
-              <ArticalCon>
-                <Icons src={blogicon} alt="icon" />
-                <IconName>Blogs</IconName>
-              </ArticalCon>
-              <ArticalCon>
-                <Icons src={careericon} alt="icon" />
-                <IconName>Career Opportunities</IconName>
-              </ArticalCon>
-              <ArticalCon onClick={toggleReports}>
-                <Icons src={repots} alt="icon" />
-                <IconName>Reports</IconName>
-              </ArticalCon>
-              <ArticalCon onClick={toggleProjects}>
-                <Icons src={Projects} alt="icon" />
-                <IconName>Projects</IconName>
-              </ArticalCon>
-              <ArticalCon onClick={toggleEvents}>
-                <Icons src={eventicon} alt="icon" />
-                <IconName>Events and Workshops</IconName>
-              </ArticalCon>
-            </ColumnDiv>
+                <Containerthree>
+                    <ColumnDiv>
+                    <ArticalCon>
+                        <Icons src={vector} alt="icon"/>
+                        <IconName>My Articles</IconName>
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={blogicon} alt="icon"/>
+                        <Link to="/ResourceCenter/Myblog">
+                        <IconName>Blogs</IconName>
+                        </Link>
+                        
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={careericon} alt="icon"/>
+                        <Link to="/ResourceCenter/AdminCareerOppurtunities">
+                        <IconName>Career Opportunities</IconName>
+                        </Link>
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={repots} alt="icon"/>
+                        <IconName>Reports</IconName>
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={Projects} alt="icon"/>
+                        <IconName>Projects</IconName>
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={eventicon} alt="icon"/>
+                        <IconName>Events and Worshops</IconName>
+                    </ArticalCon>
+                    
+                    </ColumnDiv>
 
             {showArticles && (
               <Containerfour>
@@ -185,4 +192,6 @@ const DashBoard = () => {
   );
 };
 
+
 export default DashBoard;
+

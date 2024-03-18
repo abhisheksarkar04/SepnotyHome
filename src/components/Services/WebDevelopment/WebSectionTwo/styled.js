@@ -8,7 +8,7 @@ border-radius:10px;
 width:30%;
 justify-content: center;
 margin-top:25px;
-margin-right:35px;
+margin-right:10px;
 `;
 export const WebTechImg=styled.img`
 width: 50px;

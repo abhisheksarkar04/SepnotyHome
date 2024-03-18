@@ -9,24 +9,25 @@ export const Container = styled.div`
   margin-left: 50px;
 `;
 export const Img = styled.img`
-  height: 100px;
-  margin-right: 10%;
+  height: 150px;
+  margin-right: 15%;
 `;
 export const Details = styled.div`
   display: flex;
-  margin-right: 10%;
+  flex-direction: column;
 `;
 export const Name = styled.h1`
   color: #2b459b;
-  font-size: 18px;
+  font-size: 23px;
 `;
 export const TextDts = styled.p`
   color: #fff;
   margin-top: 5px;
+  font-size: 20px;
 `;
 export const ApplyButton = styled.button`
   background-color: #435aa7;
-  font-sixe: 16px;
+  font-size: 17px;
   padding: 5px 20px 5px 20px;
   border-radius: 10px;
   margin-left: 5%;
@@ -50,8 +51,5 @@ export const ButtonCon = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const Data = styled.div`
-  margin-right: 50px;
+  justify-content: center;
 `;

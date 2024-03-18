@@ -7,7 +7,6 @@ import {
   ApplyButton,
   EditTool,
   ButtonCon,
-  Data,
 } from "./styled";
 import deleteIcon from "./images/Vector (2).png";
 import editIcon from "./images/Group.png";
@@ -20,21 +19,18 @@ const Event = (props) => {
     <Container>
       <Img src={ImgOf} />
       <Details>
-        <Data>
-          <Name>{name}</Name>
-          <TextDts>Place : {place}</TextDts>
-          <TextDts>Time : {time}</TextDts>
-          <TextDts>Registration fee -{fee}</TextDts>
-        </Data>
-
-        <ButtonCon>
-          <ApplyButton>Apply</ApplyButton>
-          <EditCon>
-            <EditTool src={editIcon} alt="edit" />
-            <EditTool src={deleteIcon} alt="delete" />
-          </EditCon>
-        </ButtonCon>
+        <Name>{name}</Name>
+        <TextDts>Place : {place}</TextDts>
+        <TextDts>Time : {time}</TextDts>
+        <TextDts>Registration fee -{fee}</TextDts>
       </Details>
+      <ButtonCon>
+        <ApplyButton>Apply</ApplyButton>
+        <EditCon>
+          <EditTool src={editIcon} alt="edit" />
+          <EditTool src={deleteIcon} alt="delete" />
+        </EditCon>
+      </ButtonCon>
     </Container>
   );
 };
