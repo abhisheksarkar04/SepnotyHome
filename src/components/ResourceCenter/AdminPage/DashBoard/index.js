@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 
 import ArticlesFolder from "../DashBoard/ArticleFolder";
 import Project from "../Projects";
+import Report from"../ReportFolder/index"
 
 import {
   Container,
@@ -83,6 +84,7 @@ const DashBoard = () => {
   const [showArticles, setShowArticles] = useState(true);
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
+  const [showReports,setShowReports] = useState(false);
  
 
   const toggleArticles = () => {
@@ -102,6 +104,13 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowEvents(false);
   };
+
+  const toggleReports=()=>{
+    setShowArticles(false);
+    setShowEvents(false);
+    setShowProjects(false);
+    setShowReports(true);
+  }
 
   return (
     <>
@@ -133,12 +142,12 @@ const DashBoard = () => {
                 <Icons src={blogicon} alt="icon" />
                 <IconName>Blogs</IconName>
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon >
                 <Icons src={careericon} alt="icon" />
                 <IconName>Career Opportunities</IconName>
               </ArticalCon>
-              <ArticalCon>
-                <Icons src={repots} alt="icon" />
+              <ArticalCon onClick={toggleReports}>
+                <Icons src={repots} alt="icon"/>
                 <IconName>Reports</IconName>
               </ArticalCon>
               <ArticalCon onClick={toggleProjects}>
@@ -161,6 +170,7 @@ const DashBoard = () => {
             )}
             {showProjects && <Project />}
             {showEvents && <EventsAndWorkshop />}
+            {showReports && <Report/>}
           </Containerthree>
         </ContainerOne>
       </Container>
