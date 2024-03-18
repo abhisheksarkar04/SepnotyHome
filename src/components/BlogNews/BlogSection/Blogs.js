@@ -1,3 +1,4 @@
+import { MainSpan } from "../../BlogThought/BlogSection/styledComponents";
 import FooterSection from "../../Footer/FooterSection";
 import AllArticles from "../Articles/AllArticles";
 import FilterBox from "./FilterBox";
@@ -42,7 +43,7 @@ const FilterNamesList=[
         name:'IT Service Management',
     },
     {
-        name:'IOT',
+        name:'iOT',
     },
     {
         name:'Information Security',
@@ -67,7 +68,7 @@ const FilterNamesList=[
 const BlogNews = () => {
   return (
     <BlogPage>
-    <BlogTitle>Blog &gt; News</BlogTitle>
+    <BlogTitle>Blog &gt; <MainSpan>News</MainSpan></BlogTitle>
     <br />
     <BlogName>Blog</BlogName>
     <br />

@@ -7,7 +7,7 @@ padding:25px;
 color:black;
 border-radius:7px;
 background-color:white;
-width:25%;
+width:27%;
 margin-right:23px;
 margin-bottom:23px;
 position: relative;
@@ -31,11 +31,12 @@ width:95%;
 text-align:justify;
 margin-top: 30px;
 margin-bottom:20px;
+font-size:17px;
 `;
-export const Forward=styled.div`
-position: absolute;
+export const Forward = styled.div`
+  position: absolute;
   bottom: 10px; 
   right: 10px; 
-  font-size: 20px;
-  color:black;
+  font-size: 30px; /* Increased font size for larger arrow */
+  color: black;
 `;

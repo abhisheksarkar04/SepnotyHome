@@ -11,8 +11,10 @@ const GdTechCard = (props) => {
     const {title,aboutOne,aboutTwo,aboutThree,aboutFour}=details;
   return (
     <AppCardCon>
+    <div>
     <HeadingSpan />
     <WebSectionTwoHeading>{title}</WebSectionTwoHeading>
+    </div>
     <AppAbout>{aboutOne}</AppAbout>
     <AppAbout>{aboutTwo}</AppAbout>
     <AppAbout>{aboutThree}</AppAbout>

@@ -5,18 +5,20 @@ background-color:rgba(12, 17, 31, 1);
 width:100%;
 `;
 export const WebPageTitle=styled.h2`
-font-size:16px;
+font-size:18px;
 font-weight:600;
 color:white;
-padding: 80px 0px 20px 30px;
+padding: 100px 0px 20px 6%;
 `;
 export const WebSpan=styled.span`
 color: #fff;
+font-weight: 400;
 `;
 export const WebHeading=styled.h1`
-font-size:28px;
+font-size: 30px;
 font-weight:700;
-margin:10px 0px 15px 30px;
+padding-left: 6%;
+margin:10px 0px 15px 0;
 color:white;
 `;
 export const CapabilityHeading=styled.h2`
@@ -29,7 +31,7 @@ text-align:center;
 export const AppDetailsContainer=styled.div`
 display:flex;
 flex-direction:column;
-padding:10px 0px 30px 30px;
+padding:10px 0px 30px 6%;
 `;
 
 export const MainHeading = styled.h2`
@@ -40,8 +42,8 @@ font-weight: bold;
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 70px;
-  width: 80px;
+  height: 55px;
+  width: 60px;
   border-radius: 3px;
 `;
 
@@ -64,15 +66,17 @@ export const ListHeading = styled.h1`
 
 export const ListItemSection = styled.ol`
  
- font-size: 20px; 
+ font-size: 22px; 
  font-weight: 900;
   margin-right: 20%;
-  margin-left: 10%;
+  margin-left: 7%;
+  margin-bottom: 60px;
   color: #89A4FF;
   & > li {
     color: #89A4FF;
     display: list-item;
     line-height: 1.5;
+
    
   }
    
@@ -80,12 +84,22 @@ export const ListItemSection = styled.ol`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 10;
+   font-size: 20px;
+   margin-top: 20px;
+   margin-left: -2%;
+   
+`;
+export const LearnPara3 = styled.p`
+   color:#fff;
+   font-weight: 10;
    font-size:18px;
-   margin-top: 0px;
+   margin-left: 6%;
+   margin-top: 20px;
+   
 `;
 export const ListHead = styled.h2`
    color: #89A4FF;
-   font-size:18px;
+   font-size: 22px;
    font-weight: 100;
    margin-top: 20px;
 `;
@@ -98,7 +112,7 @@ export const LearnPara = styled.p`
   width:62%;
   word-spacing: 2px;
   text-align:left;
-  margin-left: 10%;
+  margin-left: 8%;
   margin-bottom: 40px;
 
 `;
@@ -106,31 +120,29 @@ export const LearnPara = styled.p`
 export const OrderListSection = styled.ol`
   color:#fff;
   list-style-type: decimal;
- 
-  margin-right: 22%;
+ margin-left: 7%;
   & > li {
     color:#fff;
     display: list-item;
-    line-height: 1.5;
-    font-size: 18px;
-    font-weight: 500;
+    line-height: 1.9;
+    font-size: 16px;
+    font-weight: 400;
    
   }
  
 `;
 
 
-export const LearningListSection = styled.h2`
+export const LearningListSection = styled.div`
     display: flex;
     flex-direction: column;
   justify-content: center;
-  margin-left: 10%;
 
 `;
 
 export const LearningPathImg1 = styled.img`
 height:240px;
 width: 400px;
-margin-top: 20px;
+margin: 20px 0 60px 6%;
 
 `;

@@ -5,7 +5,7 @@ import { BlogPage,
          BlogTitle,
          BlogName,
          FiltersContainer,
-         
+         MainSpan,
 } from "./styledComponents";
 const FilterNamesList=[
     {
@@ -42,7 +42,7 @@ const FilterNamesList=[
         name:'IT Service Management',
     },
     {
-        name:'IOT',
+        name:'iOT',
     },
     {
         name:'Information Security',
@@ -68,7 +68,7 @@ const BlogTought = () => {
   return (
     <BlogPage>
     
-    <BlogTitle>Blog &gt; Thought Leadership</BlogTitle>
+    <BlogTitle>Blog &gt; <MainSpan>Thought Leadership</MainSpan></BlogTitle>
 
     <BlogName>Blog</BlogName>
     <br />

@@ -7,16 +7,17 @@ width:100%;
 min-height: 40vh;
 `;
 export const WebSectionOneHeading=styled.h2`
-font-size:26px;
+font-size:28px;
 color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size:20px;
+font-size:24px;
 margin-top:20px;
-width:70%;
+width:80%;
 color:white;
 text-align:justify;
+margin-left:20px;
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 0px 60px;
+padding:40px 0px 0px 6%;
 width: 100%;
 min-height: 40vh;
 margin-bottom: 30px;
@@ -13,11 +13,10 @@ color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size:20px;
+font-size:22px;
 margin-top:60px;
-width: 60%;
-color:white;
-line-height: 1.3;
+width: 65%;
+color: #fff;
 text-align:justify;
 `;
 export const BackgroundShapeOne=styled.span`

@@ -14,7 +14,7 @@ justify-content:center;
 export const DeepLearnFrame = styled.div`
 display: flex;
 flex-direction: column;
-margin-left:0%;
+width: 42%;
 
 `;
 
@@ -24,7 +24,6 @@ flex-direction: column;
 background-color: #645E5E;
 background-size: cover;
 border-radius: 8px;
-
 
 `;
 export const DeepLearnImage = styled.img`
@@ -48,10 +47,10 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.h1`
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
+  padding: 30px 20px 30px 6%;
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -62,12 +61,12 @@ export const Resource = styled.h1`
   font-size: 30px;
   color: #ffffff;
   font-weight: 600;
-  padding: 0px 30px 20px 5%;
+  padding: 0px 30px 20px 6%;
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 3% 0px 3% 5%;
+  padding: 3% 0px 3% 6%;
 `;
 
 export const ConRecHead = styled.h1`
@@ -78,9 +77,9 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
-  width: 50%;
+  width: 60%;
   padding: 20px 30px 30px 0px;
 `;
 
@@ -100,10 +99,10 @@ export const Button = styled.button`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 24px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2.5%;
+  margin-left: 2%;
   align-self: center;
 `;
 
@@ -159,14 +158,14 @@ export const FirstSection = styled.div`
 `;
 
 export const ListItems = styled.ul`
-  list-style-type: none;
-  padding: 0px;
-  width:50%;
-  margin: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content: space-evenly;
+list-style-type: none;
+padding: 0px 0 0 0px;
+width:60%;
+margin: 0px;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: space-evenly;
 `;
 
 export const Rectangle1 = styled.img`
@@ -199,8 +198,8 @@ export const Rectangle3 = styled.img`
 export const Small = styled.img`
   position: absolute;
 
-  height: 10%;
-  width: 5%;
+  height: 55px;
+  width: 60px;
 
   z-index: 0;
 `;
@@ -211,10 +210,14 @@ export const ContentContainer = styled.div`
 
 export const Small1 = styled.img`
   position: absolute;
-  height: 10%;
-  z-index: 0;
-  width: 5%;
+  height: 55px;
+  width: 60px;
 `;
+export const Image = styled.img`
+
+`;
+
+
 
 
 export const RedText = styled.p`

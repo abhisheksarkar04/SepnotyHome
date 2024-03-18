@@ -27,7 +27,7 @@ export const Service = styled.h1`
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 10px 0px 4% 5%;
+  padding: 10px 0px 4% 6%;
 `;
 
 export const ConRecHead = styled.h1`
@@ -35,68 +35,67 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
-  padding-top: 20px;
+  padding: 30px 0px 20px 0px;
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
-  width: 50%;
-  padding: 20px 30px 30px 0px;
+  width: 70%;
+  padding: 0px 30px 30px 0px;
 `;
 
 export const Rectangle1 = styled.img`
   position: absolute;
   right: 0;
-  height: 63%;
+  height: 70%;
   width: 37%;
-  top: 14%;
+  top: 15%;
   z-index: 0;
 `;
 
 export const Rectangle2 = styled.img`
   position: absolute;
-  right: 16%;
+  right: 17.5%;
   height: 80%;
   width: 60%;
-  top: -6%;
+  top: -1%;
   z-index: 0;
 `;
 
 export const Rectangle3 = styled.img`
   position: absolute;
   left: 0%;
-  height: 40%;
-  width: 17%;
-  top: 38%;
+  height: 62%;
+  width: 18.7%;
+  top: 31%;
   z-index: 0;
 `;
-
 export const ListHeading = styled.h1`
-  font-size: 20px;
+  font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -25px;
+  margin-left: -29px;
 `;
 
 export const ServiceItemCon = styled.div`
-  margin-top: 1.4%;
+  margin-top: 2.1%;
 `;
 
 export const ItemCon = styled.div``;
 
 export const ServiceItemDesc = styled.p`
   margin-bottom: 30px;
-  font-size: 17px;
+  font-size: 23px;
   color: #ffffff;
-  width: 60%;
+  width: 80%;
   text-align: justify;
   padding-left: 2.5%;
   line-height: 1.5;
 `;
 
 export const ImageCon = styled.div`
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   padding-left: 2.5%;
@@ -111,7 +110,7 @@ export const ServiceItemButton = styled.button`
   background-color: #a4a4a4;
   margin-top: -13px;
   color: #2b459b;
-  font-size: 15px;
+  font-size: 17px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 10px 0 10px 0;
@@ -131,7 +130,7 @@ export const ConatctCon = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
   border-radius: 3px;
 `;
@@ -146,5 +145,13 @@ export const PatternCon = styled.div`
 export const CorporateItems = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
+  padding-left: 6%;
+`;
+
+export const BackButton = styled.button`
+  color: rgba(43, 69, 155, 1);
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 95%;
 `;

@@ -32,16 +32,14 @@ export const SubPara=styled.p`
 font-size: 20px;
 margin: 30px 0px 20px 50px;
 color:white;
-width: 55%;
+width: 80%;
 `;
 export const BackButton=styled.button`
-background-color:rgba(43, 69, 155, 1);
-color:white;
-width:70px;
-height:50px;
-border-radius:5px;
+color:rgba(43, 69, 155, 1);
+border:none;
 cursor:pointer;
-margin-left:30px;
+font-size:30px;
+margin-right:95%;
 `;
 export const SubPageCardCon=styled.div`
 display:flex;

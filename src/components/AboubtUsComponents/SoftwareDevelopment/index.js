@@ -114,13 +114,13 @@ const Software= () => {
 export default Software;
 
 const OrderContainer = styled.ol`
-margin-left:60px;
-gap:13px;
+margin-left:85px;
+gap:16px;
 margin-bottom:80px;
 `
 const List = styled.li`
 margin-top:10px;
-width:1340px;
+width:80%;
 font-size:20px;
 color:white;
 `

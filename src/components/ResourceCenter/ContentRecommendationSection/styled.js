@@ -8,10 +8,10 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.h1`
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
+  padding: 30px 20px 30px 6%;
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -22,12 +22,12 @@ export const Resource = styled.h1`
   font-size: 30px;
   color: #ffffff;
   font-weight: 600;
-  padding: 0px 30px 20px 5%;
+  padding: 0px 30px 20px 6%;
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 3% 0px 3% 5%;
+  padding: 3% 0px 3% 6%;
 `;
 
 export const ConRecHead = styled.h1`
@@ -38,10 +38,10 @@ export const ConRecHead = styled.h1`
 `;
 
 export const ConRecDesc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   color: #ffffff;
   width: 50%;
-  padding: 20px 30px 30px 0px;
+  padding: 15px 30px 15px 0px;
 `;
 
 export const Button = styled.button`
@@ -62,7 +62,7 @@ export const ListHeading = styled.h1`
   font-size: 22px;
   color: #2b459b;
   font-weight: bold;
-  margin-left:  3%;
+  margin-left:  2.3%;
 `;
 
 export const SearchHeading = styled.p`
@@ -102,6 +102,7 @@ export const SearchSuggestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin-right: 40px;
   align-items: center;
   align-self: flex-end;
 `;
@@ -150,9 +151,8 @@ export const Rectangle3 = styled.img`
 export const Small = styled.img`
   position: absolute;
 
-  height: 10%;
-  width: 5%;
-  z-index: 0;
+  height: 55px;
+  width: 60px;
 `;
 
 export const ContentContainer = styled.div`
@@ -161,7 +161,7 @@ export const ContentContainer = styled.div`
 
 export const Small1 = styled.img`
   position: absolute;
-  height: 10%;
-  width: 5%;
+  height: 55px;
+  width: 60px;
   z-index: 0;
 `;
