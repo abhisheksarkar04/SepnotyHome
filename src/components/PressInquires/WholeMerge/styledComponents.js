@@ -22,14 +22,15 @@ margin-bottom:10px;
 export const HelpJournalTitle=styled.h2`
 font-size:25px;
 color:rgba(43, 69, 155, 1);
-margin:30px 0px 30px 0px;
+margin:45px 0px 30px 0px;
+margin-top:5%;
 padding-left:8%;
 `;
 export const HelpJournalDescription=styled.p`
 color:white;
-font-size:20px;
-line-height:25px;
-margin:20px 0px 20px 0px;
+font-size:23px;
+line-height:1.5;
+margin:25px 0px 20px 0px;
 width:80%;
 padding-left:8%;
 `;
@@ -82,17 +83,16 @@ export const ExpertText=styled.p`
 font-size:20px;
 color:rgba(255, 255, 255, 1);
 margin:0px 30px 20px 0px;
-margin-left:8%;
+margin-left:6%;
 width:80%;
 `;
 export const InquiryMedia=styled.div`
-margin:10px 50px 20px 0px;
+margin:40px 50px 20px 0px;
 margin-left:6%;
 border-radius:10px;
 background-color:rgba(193, 202, 231, 1);
 position: relative;
 width:60%;
-padding-top:5px;
 padding-bottom:5px;
 `;
 export const MediaImg=styled.img`
@@ -202,6 +202,7 @@ export const ImgContainer = styled.div`
   width: 80%;
   margin-bottom: 30px;
   padding:5px;
+  margin-top:5%;
 `;
 
 export const Image = styled.img`
@@ -240,7 +241,7 @@ font-size:20px;
 color:white;
 margin:10px 30px 20px 0px;
 margin-left:6%;
-line-height:20px;
+line-height:1.5;
 width:80%;
 `;
 
@@ -251,9 +252,9 @@ padding-left:3%;
 width:80%;
 `;
 export const TransparentBg=styled.span`
-width:65px;
-height:8%;
-margin-top: 20px;
+width:60px;
+height:55px;
+margin-top:65px;
 margin-left:30px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);

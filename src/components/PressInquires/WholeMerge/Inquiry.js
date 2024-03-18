@@ -21,7 +21,7 @@ import {
     ExpertResearch,
     ExpertsInfo,
     SeeMoreButton,
-
+    
     TrustWorthy,
     TrustTitle,
     TrustDescription,
@@ -318,7 +318,7 @@ const Inquiry = () => {
     </ImgContainer>
       <div>
       <TransparentBg />
-      <HelpJournalTitle>Our Tech Topics</HelpJournalTitle>
+      <HelpJournalTitle>Tech Topics</HelpJournalTitle>
       </div>
       <TechTopics>TechTopics</TechTopics>
       <TechTopicsCon>
