@@ -59,10 +59,11 @@ font-size:30px;
 margin-bottom:20px;
 margin-left:5%;
 `;
+
 export const LeftTitle = styled.p`
-font-size:20px;
+font-size:25px;
 color:white;
-margin-bottom:40px;
+margin-top:20px;
 margin-left:5%;
 `;
 export const LeftDescription = styled.p`
@@ -84,7 +85,7 @@ font-weight:600;
 margin-left:6%;
 `;
 export const DropDown = styled.div`
-margin-left:70%;
+margin-left:65%;
   position:absolute;
  
 `;
@@ -221,12 +222,16 @@ export const Small = styled.img`
 `;
 export const ServiceItemCon = styled.div`
   margin-top: 5.5%;
+  margin:10px;
 `;
 export const ServiceItemDesc = styled.p`
-  margin-bottom: 20px;
-  font-size: 22px;
-  color: #ffffff;
-  magin:0px;
+margin-bottom: 20px;
+font-size: 23px;
+color: #ffffff;
+magin:0px;
+width:80%;
+text-align: justify;
+padding -left:6%;
 `;
 
 export const ImageCon = styled.img`
@@ -259,9 +264,7 @@ export const ServiceItemImg = styled.img`
 
 
 export const ServiceItemDetails = styled.div`
-  
 margin-left: 117px;
- 
 `;
 
 

@@ -40,11 +40,11 @@ import { useState } from "react";
 
 const Designersforhire = () => {
   const options = [
-    { value: 'option1', label: 'Table of content' },
-    { value: 'option2', label: 'UI/UX Desiginer' },
-    { value: 'option3', label: 'Digital Marketing' },
-    { value: 'option4', label: 'Graphic Designer' },
-    { value: 'option5', label: 'video edting' },
+    { value: 'option1', label: 'Table of content' },<br></br>,
+    { value: 'option2', label: 'UI/UX Desiginer' },<br></br>,
+    { value: 'option3', label: 'Digital Marketing' },<br></br>,
+    { value: 'option4', label: 'Graphic Designer' },<br></br>,
+    { value: 'option5', label: 'video edting' },<br></br>,
 
 
   ];
@@ -65,6 +65,7 @@ const Designersforhire = () => {
   const optionStyle = {
     backgroundColor: 'rgba(129, 150, 219, 1)',
     color: 'black',
+  
   };
 
 
@@ -107,122 +108,37 @@ const Designersforhire = () => {
                   </select>
                 </div>
               </DropDown> 
+              <div >
+                                {[{ image: img1, name: 'Software Tester ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img2, name: 'Software Developer', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img3, name: 'Cloud Engineer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img4, name: 'Digital Marketing Specialist ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img5, name: 'SEO(Search Engine Optimizer)', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img6, name: 'Video Editor', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img7, name: 'UI/UX Designer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                                { image: img8, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+
+                                ].map(listing =>
+                                (<ListInnerContainer>
+                                    <ImageCon src={listing.image} alt="dm" />
+                                    <ListDataContainer>
+                                        <Careop>{listing.name}</Careop>
+                                        <Iph>Experience : {listing.experience}<br></br>
+                                            CTC : {listing.CTC}<br></br>
+                                            Onsite</Iph>
+                                    </ListDataContainer>
+                                   
+                                        <ApplyButton>Apply</ApplyButton><br></br>
+                                        <br></br>
+                                  
+                                </ListInnerContainer>))}
+                                {/* <p>button</p> */}
+                            </div>
 
 
 
 
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img1, name: 'UI Designer', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img2, name: 'UX Designer', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img3, name: 'Video Editing', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img4, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img5, name: 'Digital Marketing', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img6, name: 'Video Editor', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img7, name: 'UI/UX Designer', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
-              <div style={{ display: 'flex', width: '100%' }}>
-                {[{ image: img8, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' }].map(listing =>
-                (<ListInnerContainer>
-                  <ImageCon src={listing.image} alt="dm" />
-                  <ListDataContainer>
-                    <Careop>{listing.name}</Careop>
-                    <Iph>Experience : {listing.experience}<br></br>
-                      CTC : {listing.CTC}<br></br>
-                      Onsite</Iph>
-                  </ListDataContainer>
-                  <ApplyButton>Apply</ApplyButton>
-                </ListInnerContainer>))}
-                {/* <p>button</p> */}
-              </div>
+              
             </ServiceItemDetails>
           </div>
         </ServiceItemCon>

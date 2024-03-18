@@ -35,13 +35,20 @@ import {
   import rectangle1 from "../images/Rectangle 1.svg"
   import rectangle2 from "../images/Rectangle2.svg";
   import rectangle3 from "../images/Rectangle3.svg";
+  import Model from "../ContactPrice/index"
   
   // import GroupImg from "../images/Group.svg"
   
   // import ContactForm from "../../ContactUs/ContactForm";
   import FooterSection from "../../Footer/FooterSection";
+import { useState } from "react";
   
   const PriceModel= () => {
+    const [seeContact,setSeeContact] = useState(false);
+
+    const toggleContact = () => {
+      setSeeContact(true)
+    }
     return (
       <>
         <DigitalContainer>
@@ -76,7 +83,7 @@ import {
                     <Rupee>₹0</Rupee>
                     <p>Free forever</p>
                 </Main3>
-                <Botton>
+                <Botton >
                     Get Started
                 </Botton>
                 
@@ -96,7 +103,7 @@ For individuals and teams who need more control over moving and managing their d
                     <Rupee>₹1,676</Rupee>
                     <p>Per month</p>
                 </Main3>
-                <Botton>
+                <Botton onClick={toggleContact}>
                     Contact
                 </Botton>
                 
@@ -116,15 +123,18 @@ For teams that want to collaborate and build for themselves and their customers.
                     <Rupee>₹8,940</Rupee>
                     <p>Free forever</p>
                 </Main3>
-                <Botton>
+                <Botton onClick={toggleContact}>
                     Contact
                 </Botton>
                 
                 </Main5>
             </Main1>
+            
           </Main>
         </DigitalContainer>
+        {seeContact && <Model/>}
         <FooterSection />
+        
       </>
     );
   
