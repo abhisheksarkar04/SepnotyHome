@@ -49,8 +49,8 @@ font-size:17px;
 color:white;
 `;
 export const TransparentBg=styled.span`
-width:4%;
-height:7%;
+width:65px;
+height:8%;
 margin-left:0px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);

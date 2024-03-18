@@ -304,7 +304,6 @@ const AppRoutes = () => {
           path="/resource-center/admin-login/dash-board/create-post"
           component={CreatePost}
       />
-     
       <Route
         exact
         path="/services/digital-marketing"

@@ -4,7 +4,8 @@ export const BlueContainer=styled.div`
  display:flex;
  background-color:rgba(43, 69, 155, 1);
  flex-direction:row;
- padding:40px 40px 40px 40px;
+ padding:40px 40px 40px 0px;
+ padding-left:6%;
  justify-content:space-between;
  color:white;
 `;
