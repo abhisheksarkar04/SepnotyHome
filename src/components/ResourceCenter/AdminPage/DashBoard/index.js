@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import ArticlesFolder from "../DashBoard/ArticleFolder";
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
+import CreateReport from  "../NewReport/index"
 
 import {
   Container,
@@ -85,6 +86,7 @@ const DashBoard = () => {
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
+  const [currentLink,setCurrentLink] = useState("/resource-center/admin-login/dash-board/create-post");
 
   const toggleArticles = () => {
     setShowArticles(true);
@@ -112,7 +114,9 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
+    setCurrentLink("/DashBoard/Admin/NewReport")
   };
+  
 
   return (
     <>
@@ -124,8 +128,8 @@ const DashBoard = () => {
           <Containertwo>
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
-              <Link to="/resource-center/admin-login/dash-board/create-post">
-                <AddImg src={add} alt="addButton" />
+              <Link to={currentLink}>
+                <AddImg src={add} alt="addButton"/>
               </Link>
             </ImagesCont>
             <Contactimgcon>
