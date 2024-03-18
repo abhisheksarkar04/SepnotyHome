@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-
   background-color: #0c111f;
   display: flex;
   flex-direction: column;
@@ -46,6 +45,7 @@ export const Title = styled.input`
   padding-left: 30px;
   color: #263238;
   background-color: #d9d9d9;
+  outline: none;
 `;
 
 export const Summary = styled.input`
@@ -57,6 +57,7 @@ export const Summary = styled.input`
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
+  outline: none;
 `;
 
 export const ChooseFile = styled.div`
@@ -92,10 +93,13 @@ export const NoFile = styled.p`
 export const Container2 = styled.div`
   height: 250px;
   width: 90%;
-  border: 0px solid transparent;
+  border: 1px solid #2b459b; /* Border color */
   margin-top: 30px;
   border-radius: 3px;
   margin-left: 30px;
+  overflow: hidden; /* Ensures children don't exceed container */
+  background-color: transparent; /* Remove background color */
+  color: white;
 `;
 
 export const H1Cont = styled.div`
