@@ -1,5 +1,5 @@
 import Styled from "styled-components"
-
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import {
     Header,
     Service,
@@ -35,20 +35,14 @@ import {
   import rectangle1 from "../images/Rectangle 1.svg"
   import rectangle2 from "../images/Rectangle2.svg";
   import rectangle3 from "../images/Rectangle3.svg";
-  import Model from "../ContactPrice/index"
   
   // import GroupImg from "../images/Group.svg"
   
   // import ContactForm from "../../ContactUs/ContactForm";
   import FooterSection from "../../Footer/FooterSection";
-import { useState } from "react";
+  const heading = "Have a question About our Pricing Models?"
   
-  const PriceModel= () => {
-    const [seeContact,setSeeContact] = useState(false);
-
-    const toggleContact = () => {
-      setSeeContact(true)
-    }
+  const Model= () => {
     return (
       <>
         <DigitalContainer>
@@ -65,82 +59,15 @@ import { useState } from "react";
             <Rectangle2 src={rectangle2} alt="not-found" />
             <Rectangle1 src={rectangle1} alt="not-found" />
           </ContentRecomContainer>
-          <PatternCon>
-                <SmallPattern></SmallPattern>
-                <ListHeading>Pricing Models</ListHeading>
-              </PatternCon>
-          <Main>
-            <Main1>
-                <Heading1>
-                Basic
-                </Heading1>
-                <Para1>
-                Included free in all Sepnoty plans.
-                </Para1>
-                
-                <Main4>
-                <Main3>
-                    <Rupee>₹0</Rupee>
-                    <p>Free forever</p>
-                </Main3>
-                <Botton >
-                    Get Started
-                </Botton>
-                
-                </Main4>
-            </Main1>
-            <Main1>
-                <Heading1>
-                Premium
-                </Heading1>
-                <Para1>
-                
-For individuals and teams who need more control over moving and managing their data.
-                </Para1>
-                
-                <Main2>
-                <Main3>
-                    <Rupee>₹1,676</Rupee>
-                    <p>Per month</p>
-                </Main3>
-                <Botton onClick={toggleContact}>
-                    Contact
-                </Botton>
-                
-                </Main2>
-            </Main1>
-            <Main1>
-                <Heading1>
-                Advance
-                </Heading1>
-                <Para1>
-
-For teams that want to collaborate and build for themselves and their customers.
-                </Para1>
-                
-                <Main5>
-                <Main3>
-                    <Rupee>₹8,940</Rupee>
-                    <p>Free forever</p>
-                </Main3>
-                <Botton onClick={toggleContact}>
-                    Contact
-                </Botton>
-                
-                </Main5>
-            </Main1>
-            
-          </Main>
         </DigitalContainer>
-        {seeContact && <Model/>}
+        <Contact heading={heading}/>
         <FooterSection />
-        
       </>
     );
   
   };
   
-  export default PriceModel;
+  export default Model;
   
   const Main = Styled.div`
   margin-top:100px;
