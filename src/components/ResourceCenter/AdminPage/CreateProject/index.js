@@ -12,23 +12,28 @@ import {
   Content, */
   LastButton,
 } from "./styledComponents";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import styled from "styled-components";
 
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
-  
-  background-color: transpa
-  border: none; 
-  border-radius: 0; 
-  height: 100%; 
-  padding: 0; 
+
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 0;
+  height: 100%;
+  padding: 0;
   .ql-editor {
-    height: 100%; 
+    background-color: #0c111f;
+    height: 100%;
     padding: 10px;
     overflow-y: auto;
+  }
+
+  .ql-editor::before {
+    color: rgba(255, 255, 255, 0.5); /* 50% opacity white */
   }
 `;
 
@@ -48,8 +53,21 @@ const modules = {
   ],
 };
 
-const CreatePost = () => {
+const CreateProject = () => {
   const [value, setValue] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleFileSelect = () => {
+    fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
+  };
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    console.log("Selected file:", file);
+  };
+
   return (
     <Container>
       <CreatePostBtn>Create New Project</CreatePostBtn>
@@ -57,8 +75,14 @@ const CreatePost = () => {
         <Title type="text" placeholder="Title" />
         <Summary type="text" placeholder="Project Summary" />
         <ChooseFile>
-          <Button>Choose File</Button>
-          <NoFile>No file Chosen</NoFile>
+          <Button onClick={handleFileSelect}>Choose File</Button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={handleFileUpload}
+          />
+          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
         </ChooseFile>
         <Container2>
           <StyledQuill
@@ -74,4 +98,4 @@ const CreatePost = () => {
     </Container>
   );
 };
-export default CreatePost;
+export default CreateProject;

@@ -68,9 +68,11 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
-import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
+
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
-import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index"
+import NewReport from "./components/ResourceCenter/AdminPage/NewReport"
+import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
+import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -286,12 +288,8 @@ const AppRoutes = () => {
         path="/resource-center/admin-login/dash-board"
         component={DashBoard}
       />
-      <Route
-        exact
-        path="/resource-center/admin-login/dash-board/create-post"
-        component={CreatePost}
-      />
-      <Route exact path="/DashBoard/Admin/NewReport" component={NewReport}/>
+      
+      <Route exact path="/DashBoard/Admin/NewReport" component={NewReport} />
 
       <Route
         exact
@@ -345,6 +343,16 @@ const AppRoutes = () => {
         exact
         path="services/web-development/subcard"
         component={SubCard}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/craete-project"
+        component={CreateProject}
       />
     </Switch>
   );
