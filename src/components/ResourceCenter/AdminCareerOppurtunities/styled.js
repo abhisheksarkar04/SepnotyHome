@@ -156,9 +156,10 @@ height:1550px;
 margin-left: 30px;
 border:1px solid #D9D9D9;
 flex-direction:column;
-padding:10px;
+padding-left:5px;
 border-radius:18px;
 margin-bottom:10px;
+
 
 `;
 
@@ -233,7 +234,7 @@ flex-direction:column;
 
 line-height:20px;
 width:80%;
-padding-right:20px;
+padding-right:-5px;
 font-size: 18px;
 margin-left:65px;
 `;
@@ -252,7 +253,7 @@ export const Careop = styled.p`
   padding-bottom:5px;
   white-space: nowrap;
  
-  width:50%;
+  width:40%;
   
 
 `;

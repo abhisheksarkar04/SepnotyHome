@@ -23,6 +23,7 @@ import ArticlesFolder from "../DashBoard/ArticleFolder";
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
 
+
 import {
   Container,
   Resources,
@@ -45,6 +46,8 @@ import {
 } from "./styledComponents";
 
 import FooterSection from "../../../Footer/FooterSection";
+import AdminCareerOppurtunities from "../../AdminCareerOppurtunities";
+import Myblog from "../../Myblog";
 
 const Lists = [
   {
@@ -86,12 +89,17 @@ const DashBoard = () => {
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
+  const [showBlog, setShowBlog] = useState(false);
+  const [showCareerOpportunities, setShowCareerOpportunities] = useState(false);
+  const [currentLink,setCurrentLink] = useState("/resource-center/admin-login/dash-board/create-post");
 
   const toggleArticles = () => {
     setShowArticles(true);
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(false);
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
   };
 
   const toggleEvents = () => {
@@ -99,6 +107,9 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+    setCurrentLink("/resourse-center/admin-login/createevent")
   };
 
   const toggleProjects = () => {
@@ -106,6 +117,8 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowEvents(false);
     setShowReports(false);
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
   };
 
   const toggleReports = () => {
@@ -113,7 +126,31 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+    setCurrentLink("/DashBoard/Admin/NewReport")
   };
+
+  const toggleBlog = () => {
+    setShowEvents(false);
+    setShowArticles(false);
+    setShowProjects(false);
+    setShowReports(false);
+    setShowBlog(true);
+    setCurrentLink("/DashBoard/Admin/CreateBlog")
+  };
+
+  const toggleCareerOpportunities = () => {
+    setShowEvents(false);
+    setShowArticles(false);
+    setShowProjects(false);
+    setShowReports(false);
+    setShowCareerOpportunities(true);
+    setCurrentLink("/DashBoard/Admin/CreateJob")
+  };
+  
+
+  
 
   return (
     <>
@@ -125,8 +162,8 @@ const DashBoard = () => {
           <Containertwo>
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
-              <Link to="/resource-center/admin-login/dash-board/create-post">
-                <AddImg src={add} alt="addButton" />
+              <Link to={currentLink}>
+                <AddImg src={add} alt="addButton"/>
               </Link>
             </ImagesCont>
             <Contactimgcon>
@@ -137,32 +174,30 @@ const DashBoard = () => {
 
                 <Containerthree>
                     <ColumnDiv>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleArticles}>
                         <Icons src={vector} alt="icon"/>
                         <IconName>My Articles</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleBlog}>
                         <Icons src={blogicon} alt="icon"/>
-                        <Link to="/ResourceCenter/Myblog">
+                      
                         <IconName>Blogs</IconName>
-                        </Link>
-                        
+                  
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleCareerOpportunities}>
                         <Icons src={careericon} alt="icon"/>
-                        <Link to="/ResourceCenter/AdminCareerOppurtunities">
+              
                         <IconName>Career Opportunities</IconName>
-                        </Link>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleReports}>
                         <Icons src={repots} alt="icon"/>
                         <IconName>Reports</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleProjects}>
                         <Icons src={Projects} alt="icon"/>
                         <IconName>Projects</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleEvents}>
                         <Icons src={eventicon} alt="icon"/>
                         <IconName>Events and Worshops</IconName>
                     </ArticalCon>
@@ -180,6 +215,8 @@ const DashBoard = () => {
             {showProjects && <Project />}
             {showEvents && <EventsAndWorkshop />}
             {showReports && <Report />}
+            {showCareerOpportunities && <AdminCareerOppurtunities />}
+            {showBlog && <Myblog />}
           </Containerthree>
         </ContainerOne>
       </Container>
@@ -187,6 +224,7 @@ const DashBoard = () => {
     </>
   );
 };
+
 
 export default DashBoard;
 
