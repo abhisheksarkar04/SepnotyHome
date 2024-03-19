@@ -19,24 +19,29 @@ import styled from "styled-components";
 
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
-
   background-color: #d9d9d9;
-  border: none;
-  border-radius: 0;
-  height: 100%;
-  padding: 0;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  outline: none;
   .ql-editor {
+    font-size: 16px;
+    line-height: 1.5;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
     background-color: #0c111f;
-    height: 100%;
+    height: 200px; /* Adjust height as needed */
     padding: 10px;
     overflow-y: auto;
+    outline: none;
   }
-
   .ql-editor::before {
     color: rgba(255, 255, 255, 0.5); /* 50% opacity white */
   }
+  .ql-container {
+    border: 1px solid #2b459b;
+  }
 `;
-
 const modules = {
   toolbar: [
     [{ header: [1, 2, 3, 4, 5, 6, false] }],

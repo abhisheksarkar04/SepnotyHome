@@ -8,9 +8,6 @@ export const Container = styled.div`
   justify-content: center;
   padding: 80px 0 80px 0;
   align-items: center;
-  ::placeholder {
-    color: black;
-  }
 `;
 
 export const CreatePostBtn = styled.button`
@@ -34,13 +31,13 @@ export const Container1 = styled.div`
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  margin-left: 50px;
+
   padding: 30px;
 `;
 
 export const Title = styled.input`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 20px;
@@ -50,11 +47,15 @@ export const Title = styled.input`
   background-color: #d9d9d9;
   outline: none;
   font-size: 20px;
+  border: none;
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const Summary = styled.input`
   height: 65px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -63,11 +64,16 @@ export const Summary = styled.input`
   background-color: #d9d9d9;
   outline: none;
   font-size: 20px;
+  border: none;
+
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const ChooseFile = styled.div`
   height: 65px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -82,7 +88,7 @@ export const Button = styled.button`
   background-color: #435aa7;
   color: white;
   font-family: Sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   border: none;
   padding: 7px 15px 7px 15px;
   border-radius: 5px;
@@ -93,12 +99,13 @@ export const NoFile = styled.p`
   font-size: 13px;
   color: black;
   padding-left: 10px;
+  font-size: 20px;
 `;
 
 export const Container2 = styled.div`
   height: 250px;
-  width: 90%;
-  border: 1px solid #2b459b; /* Border color */
+  width: 95%;
+  border: none;
   margin-top: 30px;
   border-radius: 3px;
   margin-left: 30px;
@@ -118,14 +125,14 @@ export const H1Cont = styled.div`
 
 export const Content = styled.p`
   font-family: Sans-serif;
-  font-size: 10px;
+  font-size: 20px;
   color: #263238;
   font-weight: bold;
 `;
 
 export const LastButton = styled.button`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -133,4 +140,5 @@ export const LastButton = styled.button`
   font-weight: bold;
   padding-left: 30px;
   background-color: #d9d9d9;
+  font-size: 20px;
 `;
