@@ -72,6 +72,8 @@ import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
 import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
 import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
+import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
+import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -287,11 +289,7 @@ const AppRoutes = () => {
         path="/resource-center/admin-login/dash-board"
         component={DashBoard}
       />
-      <Route
-        exact
-        path="/resource-center/admin-login/dash-board/create-post"
-        component={CreatePost}
-      />
+
       <Route exact path="/DashBoard/Admin/NewReport" component={NewReport} />
       <Route
         exact
@@ -352,6 +350,7 @@ const AppRoutes = () => {
         path="services/web-development/subcard"
         component={SubCard}
       />
+
       <Route
         exact
         path="/DashBoard/Admin/CreateArticles"
@@ -359,8 +358,13 @@ const AppRoutes = () => {
       />
       <Route
         exact
-        path="/DashBoard/Admin/craete-project"
+        path="/DashBoard/Admin/create-project"
         component={CreateProject}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
       />
     </Switch>
   );

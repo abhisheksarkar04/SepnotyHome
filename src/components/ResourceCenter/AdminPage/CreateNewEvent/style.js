@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import BackImg from "./kkkk.svg"
-
 export const Container = styled.div`
   width: 100%;
 
@@ -11,6 +9,10 @@ export const Container = styled.div`
   justify-content: center;
   padding: 80px 0 80px 0;
   align-items: center;
+
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const CreatePostBtn = styled.button`
@@ -48,6 +50,11 @@ export const Title = styled.input`
   padding-left: 30px;
   color: #263238;
   background-color: #d9d9d9;
+  font-size: 20px;
+  outline: none;
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const Summary = styled.input`
@@ -59,6 +66,7 @@ export const Summary = styled.input`
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
+  outline: none;
 `;
 
 export const ChooseFile = styled.div`
@@ -86,7 +94,7 @@ export const Button = styled.button`
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   color: black;
   padding-left: 10px;
 `;
@@ -129,11 +137,11 @@ export const LastButton = styled.button`
 `;
 
 export const ChooseFil = styled.div`
- display:flex;
- flex-direction:row;
-`
+  display: flex;
+  flex-direction: row;
+`;
 export const Div1 = styled.div`
-height: 65px;
+  height: 65px;
   width: 43%;
   border-radius: 10px;
   margin-left: 35px;
@@ -143,7 +151,7 @@ height: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 export const DateInput = styled.input`
   height: 65px;
   width: 33%;
@@ -156,18 +164,11 @@ export const DateInput = styled.input`
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* Set background color to transparent */
-  appearance: none; /* Remove default styling */
-  background-image: url(${BackImg}); /* Set your custom image as the background */
-  background-size: 20px; /* Adjust the size of the custom image */
-  background-repeat: no-repeat; /* Ensure the custom image is not repeated */
-  background-position: calc(100% - 10px) center; /* Adjust the position of the custom image */
-  &::-webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  font-size: 20px;
+  padding-right: 10px;
 `;
 export const Dropdown = styled.input`
-height: 65px;
+  height: 65px;
   width: 30%;
   border-radius: 10px;
   margin-left: 35px;
@@ -177,9 +178,9 @@ height: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 export const Div2 = styled.div`
-height: 65px;
+  height: 65px;
   width: 43%;
   border-radius: 10px;
   margin-left: 35px;
@@ -189,47 +190,43 @@ height: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 
 export const Select = styled.select`
-height: 65px;
+  height: 65px;
   width: 90%;
   border-radius: 10px;
-margin-left: 35px;
-margin-top: 40px;
-background-color: #d9d9d9;
-color: #263238;
-padding-left: 30px;
-display: flex;
-flex-direction: row;
-align-items: center;
-&::-webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background-image:url(${BackImg});
-backgroud-size:90px;
-background-repeat:no-repeat;
-background-position:right 5px center;
-`
+  margin-left: 35px;
+  margin-top: 40px;
+  background-color: #d9d9d9;
+  color: #263238;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  outline: none;
+  background-size: 100px 100px; /* Adjust icon size */
+`;
 
-export const SElect = styled.select`
-height: 65px;
-width:330px;
-border-radius: 10px;
-margin-left: 35px;
-margin-top: 40px;
-background-color: #d9d9d9;
-color: #263238;
-padding-left: 30px;
-display: flex;
-flex-direction: row;
-align-items: center;
-&::-webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background-image:url(${BackImg});
-backgroud-size:20px;
-background-repeat:no-repeat;
-background-position:right 10px center;
- 
-`
+export const TimeInput = styled.input`
+  height: 65px;
+  width: 33%;
+  border-radius: 10px;
+  margin-left: 35px;
+  margin-top: 40px;
+  background-color: #d9d9d9;
+  color: #263238;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+  padding-right: 10px;
+`;
+
+export const LocationCon = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: #d9d9d9;
+`;

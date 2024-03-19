@@ -8,6 +8,9 @@ export const Container = styled.div`
   justify-content: center;
   padding: 80px 0 80px 0;
   align-items: center;
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const CreatePostBtn = styled.button`
@@ -25,7 +28,7 @@ export const CreatePostBtn = styled.button`
 `;
 
 export const Container1 = styled.div`
-  width: 70%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +49,7 @@ export const Title = styled.input`
   color: #263238;
   background-color: #d9d9d9;
   outline: none;
+  font-size: 20px;
 `;
 
 export const Summary = styled.input`
@@ -58,6 +62,7 @@ export const Summary = styled.input`
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
+  font-size: 20px;
 `;
 
 export const ChooseFile = styled.div`
@@ -74,13 +79,13 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 90px;
-  height: 30px;
   background-color: #435aa7;
   color: white;
   font-family: Sans-serif;
   font-size: 13px;
   border: none;
+  padding: 7px 15px 7px 15px;
+  border-radius: 5px;
 `;
 
 export const NoFile = styled.p`

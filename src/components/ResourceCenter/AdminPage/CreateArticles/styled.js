@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaLocationDot } from "react-icons/fa6";
 
 export const Container = styled.div`
   width: 100%;
@@ -25,19 +26,19 @@ export const CreatePostBtn = styled.button`
 `;
 
 export const Container1 = styled.div`
-  width: 70%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  margin-left: 50px;
+
   padding: 30px;
 `;
 
 export const Title = styled.input`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 20px;
@@ -46,6 +47,8 @@ export const Title = styled.input`
   color: #263238;
   background-color: #d9d9d9;
   outline: none;
+  border: none;
+  font-size: 20px;
 `;
 
 export const Summary = styled.input`
@@ -58,11 +61,12 @@ export const Summary = styled.input`
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
+  font-size: 20px;
 `;
 
 export const ChooseFile = styled.div`
   height: 65px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -71,16 +75,17 @@ export const ChooseFile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 20px;
 `;
 
 export const Button = styled.button`
-  width: 90px;
-  height: 30px;
   background-color: #435aa7;
   color: white;
   font-family: Sans-serif;
   font-size: 13px;
   border: none;
+  padding: 7px 15px 7px 15px;
+  border-radius: 5px;
 `;
 
 export const NoFile = styled.p`
@@ -92,7 +97,7 @@ export const NoFile = styled.p`
 
 export const Container2 = styled.div`
   height: 250px;
-  width: 90%;
+  width: 95%;
   border: 1px solid #2b459b; /* Border color */
   margin-top: 30px;
   border-radius: 3px;
@@ -120,7 +125,7 @@ export const Content = styled.p`
 
 export const LastButton = styled.button`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -128,4 +133,5 @@ export const LastButton = styled.button`
   font-weight: bold;
   padding-left: 30px;
   background-color: #d9d9d9;
+  font-size: 20px;
 `;
