@@ -39,53 +39,7 @@ import FooterSection from "../../Footer/FooterSection";
 const AdminCareerOppurtunities = () => {
     return (
         <>
-            <Container>
-                <Resources>Resources &gt; Admin login &gt; <SpanHead>Dashboard Page</SpanHead></Resources>
-                <ContainerOne>
-                    <Containertwo>
-                        <ImagesCont>
-                            <Image src={sepnoty} alt="sepnoty" />
-                            <Link to="/resource-center/admin-login/dash-board/create-post">
-                                <AddImg src={add} alt="addButton" />
-                            </Link>
-                        </ImagesCont>
-                        <Contactimgcon>
-                            <Name>Manikumar Pokala</Name>
-                            <Profile src={profile} alt="profile" />
-                        </Contactimgcon>
-                    </Containertwo>
-                    <Containerthree>
-                        <ColumnDiv>
-                            <ArticalCon>
-                                <Icons src={vector} alt="icon" />
-                                <IconName>Articles</IconName>
-                            </ArticalCon>
-                            <ArticalCon>
-                                <Icons src={blogicon} alt="icon" />
-                                <Link to="/ResourceCenter/Myblog">
-                                    <IconName>Blogs</IconName>
-                                </Link>
-                            </ArticalCon>
-                            <ArticalCon>
-                                <Icons src={careericon} alt="icon" />
-                                <Link to="/ResourceCenter/AdminCareerOppurtunities">
-                                <IconName>Career Opportunities</IconName>
-                                </Link>
-                            </ArticalCon>
-                            <ArticalCon>
-                                <Icons src={repots} alt="icon" />
-                                <IconName>Reports</IconName>
-                            </ArticalCon>
-                            <ArticalCon>
-                                <Icons src={Projects} alt="icon" />
-                                <IconName>Projects</IconName>
-                            </ArticalCon>
-                            <ArticalCon>
-                                <Icons src={eventicon} alt="icon" />
-                                <IconName>Events and Worshops</IconName>
-                            </ArticalCon>
-                        </ColumnDiv>
-                        <Containerfour>
+            <Containerfour>
                             <ListHeading>Career Opportunities</ListHeading>
                             <ServiceItemDesc>
                                 Career opportunities refer to the various avenues and prospects for professional advancement and development available to individuals within their chosen field or industry. These opportunities encompass job openings, promotions, skill development programs, networking events, educational pursuits, and other avenues for personal and professional growth.
@@ -119,10 +73,7 @@ const AdminCareerOppurtunities = () => {
                                 {/* <p>button</p> */}
                             </div>  
                         </Containerfour>
-                    </Containerthree>
-                </ContainerOne>
-            </Container>
-            <FooterSection />
+            
 
         </>
     );

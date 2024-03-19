@@ -69,6 +69,13 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 
+import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
+
+import Myblog from './components/ResourceCenter/Myblog';
+import AdminCareerOppurtunities from './components/ResourceCenter/AdminCareerOppurtunities';
+import CreateBlog from "./components/ResourceCenter/AdminPage/NewBlog";
+import CreateJob from "./components/ResourceCenter/AdminPage/NewJob";
+
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
 import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
 import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
@@ -153,6 +160,8 @@ const AppRoutes = () => {
         path="/services/Graphic-Designing"
         component={GraphicDesignPage}
       />
+      <Route exact path="/DashBoard/Admin/CreateBlog" component={CreateBlog}/>
+      <Route exact path="/DashBoard/Admin/CreateJob" component={CreateJob}/>
       <Route
         exact
         path="/AboutUsComponents/AboutCompany"

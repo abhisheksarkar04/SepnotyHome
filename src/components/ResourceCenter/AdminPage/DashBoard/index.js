@@ -24,6 +24,7 @@ import Project from "../Projects";
 import Report from "../ReportFolder/index";
 import CreateReport from "../NewReport/index";
 
+
 import {
   Container,
   Resources,
@@ -46,6 +47,8 @@ import {
 } from "./styledComponents";
 
 import FooterSection from "../../../Footer/FooterSection";
+import AdminCareerOppurtunities from "../../AdminCareerOppurtunities";
+import Myblog from "../../Myblog";
 
 const Lists = [
   {
@@ -87,16 +90,27 @@ const DashBoard = () => {
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
+
+  const [showBlog, setShowBlog] = useState(false);
+  const [showCareerOpportunities, setShowCareerOpportunities] = useState(false);
+  const [currentLink,setCurrentLink] = useState("/resource-center/admin-login/dash-board/create-post");
+
   const [currentLink, setCurrentLink] = useState(
     "/DashBoard/Admin/CreateArticles"
   );
+
 
   const toggleArticles = () => {
     setShowArticles(true);
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(false);
+
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+
     setCurrentLink("/DashBoard/Admin/CreateArticles");
+
   };
 
   const toggleEvents = () => {
@@ -104,7 +118,13 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+    setCurrentLink("/resourse-center/admin-login/createevent")
+
     setCurrentLink("/resourse-center/admin-login/createevent");
+
   };
 
   const toggleProjects = () => {
@@ -112,7 +132,12 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowEvents(false);
     setShowReports(false);
+
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+
     setCurrentLink("/DashBoard/Admin/create-project");
+
   };
 
   const toggleReports = () => {
@@ -120,8 +145,35 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
-    setCurrentLink("/DashBoard/Admin/NewReport");
+
+    setShowCareerOpportunities(false);
+    setShowBlog(false);
+    setCurrentLink("/DashBoard/Admin/NewReport")
   };
+
+  const toggleBlog = () => {
+    setShowEvents(false);
+    setShowArticles(false);
+    setShowProjects(false);
+    setShowReports(false);
+    setShowBlog(true);
+    setCurrentLink("/DashBoard/Admin/CreateBlog")
+
+    setCurrentLink("/DashBoard/Admin/NewReport");
+
+  };
+
+  const toggleCareerOpportunities = () => {
+    setShowEvents(false);
+    setShowArticles(false);
+    setShowProjects(false);
+    setShowReports(false);
+    setShowCareerOpportunities(true);
+    setCurrentLink("/DashBoard/Admin/CreateJob")
+  };
+  
+
+  
 
   return (
     <>
@@ -134,7 +186,9 @@ const DashBoard = () => {
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
               <Link to={currentLink}>
+
                 <AddImg src={add} alt="addButton" />
+
               </Link>
             </ImagesCont>
             <Contactimgcon>
@@ -143,37 +197,39 @@ const DashBoard = () => {
             </Contactimgcon>
           </Containertwo>
 
-          <Containerthree>
-            <ColumnDiv>
-              <ArticalCon onClick={toggleArticles}>
-                <Icons src={vector} alt="icon" />
-                <IconName>Articles</IconName>
-              </ArticalCon>
-              <ArticalCon>
-                <Icons src={blogicon} alt="icon" />
-                <Link to="/ResourceCenter/Myblog">
-                  <IconName>Blogs</IconName>
-                </Link>
-              </ArticalCon>
-              <ArticalCon>
-                <Icons src={careericon} alt="icon" />
-                <Link to="/ResourceCenter/AdminCareerOppurtunities">
-                  <IconName>Career Opportunities</IconName>
-                </Link>
-              </ArticalCon>
-              <ArticalCon onClick={toggleReports}>
-                <Icons src={repots} alt="icon" />
-                <IconName>Reports</IconName>
-              </ArticalCon>
-              <ArticalCon onClick={toggleProjects}>
-                <Icons src={Projects} alt="icon" />
-                <IconName>Projects</IconName>
-              </ArticalCon>
-              <ArticalCon onClick={toggleEvents}>
-                <Icons src={eventicon} alt="icon" />
-                <IconName>Events and Worshops</IconName>
-              </ArticalCon>
-            </ColumnDiv>
+
+                <Containerthree>
+                    <ColumnDiv>
+                    <ArticalCon onClick={toggleArticles}>
+                        <Icons src={vector} alt="icon"/>
+                        <IconName>My Articles</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleBlog}>
+                        <Icons src={blogicon} alt="icon"/>
+                      
+                        <IconName>Blogs</IconName>
+                  
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleCareerOpportunities}>
+                        <Icons src={careericon} alt="icon"/>
+              
+                        <IconName>Career Opportunities</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleReports}>
+                        <Icons src={repots} alt="icon"/>
+                        <IconName>Reports</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleProjects}>
+                        <Icons src={Projects} alt="icon"/>
+                        <IconName>Projects</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleEvents}>
+                        <Icons src={eventicon} alt="icon"/>
+                        <IconName>Events and Worshops</IconName>
+                    </ArticalCon>
+                    
+                    </ColumnDiv>
+
 
             {showArticles && (
               <Containerfour>
@@ -186,6 +242,8 @@ const DashBoard = () => {
             {showProjects && <Project />}
             {showEvents && <EventsAndWorkshop />}
             {showReports && <Report />}
+            {showCareerOpportunities && <AdminCareerOppurtunities />}
+            {showBlog && <Myblog />}
           </Containerthree>
         </ContainerOne>
       </Container>
@@ -193,5 +251,6 @@ const DashBoard = () => {
     </>
   );
 };
+
 
 export default DashBoard;

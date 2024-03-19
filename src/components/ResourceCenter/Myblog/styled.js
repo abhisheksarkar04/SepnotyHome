@@ -123,7 +123,8 @@ export const Div=styled.div`
 display:flex;
 flex-direction:row;
 padding:5px;
-display: ruby
+display: ruby;
+
 
 `
 export const Icons=styled.img`
@@ -156,7 +157,7 @@ text-align:center;
 export const Containerfour=styled.div`
 width: 75%;
 margin-left: 20px;
-height: 800px;
+height: 850px;
 border:1px solid #D9D9D9;
 flex-direction:column;
 justify-content: space-evenly;
@@ -185,7 +186,7 @@ flex-direction:column;
 background-color:rgba(217, 217, 217, 1);
 border-radius:7px;
 width:40%;
-height:auto;
+height:380px;
 margin:20px;
 
 margin-left:40px;
@@ -198,6 +199,7 @@ export const ArticleImg=styled.img`
 export const ArticleTextConatiner=styled.div`
 display:flex;
 flex-direction:column;
+height:200px;
 padding:7px;
 background-color:rgba(217, 217, 217, 1);
 border-radius:7px;
@@ -228,5 +230,6 @@ margin-bottom:10px;
 export const ArticleName=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:15px;
+margin-10px;
 margin-bottom:10px;
 `;
