@@ -29,25 +29,6 @@ import {
   LocationCon,
 } from "./style";
 
-const StyledQuill = styled(ReactQuill)`
-  /* Add your custom styles here */
-  background-color: #d9d9d9;
-  border-radius: 8px;
-  border: 0px solid transparent;
-  .ql-editor {
-    font-size: 16px;
-    line-height: 1.5;
-    border: 0px solid transparent;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    background-color: #d9d9d9;
-    height: 200px; /* Adjust height as needed */
-    padding: 10px;
-    overflow-y: auto;
-  }
-`;
-
 const selectStyle = {
   backgroundColor: "transparent",
   color: "black",
