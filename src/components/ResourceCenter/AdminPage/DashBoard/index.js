@@ -101,6 +101,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+    setCurrentLink("/resourse-center/admin-login/createevent")
   };
 
   const toggleProjects = () => {

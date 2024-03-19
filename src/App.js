@@ -70,7 +70,8 @@ import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
-import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index"
+import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
+import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -292,6 +293,7 @@ const AppRoutes = () => {
         component={CreatePost}
       />
       <Route exact path="/DashBoard/Admin/NewReport" component={NewReport}/>
+      <Route exact path="/resourse-center/admin-login/createevent" component={CreateEvent}/>
 
       <Route
         exact
