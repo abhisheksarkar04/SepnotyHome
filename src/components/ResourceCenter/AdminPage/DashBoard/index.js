@@ -101,6 +101,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+    setCurrentLink("/resourse-center/admin-login/createevent")
   };
 
   const toggleProjects = () => {
@@ -141,7 +142,7 @@ const DashBoard = () => {
 
                 <Containerthree>
                     <ColumnDiv>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleArticles}>
                         <Icons src={vector} alt="icon"/>
                         <IconName>My Articles</IconName>
                     </ArticalCon>
@@ -158,15 +159,15 @@ const DashBoard = () => {
                         <IconName>Career Opportunities</IconName>
                         </Link>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleReports}>
                         <Icons src={repots} alt="icon"/>
                         <IconName>Reports</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleProjects}>
                         <Icons src={Projects} alt="icon"/>
                         <IconName>Projects</IconName>
                     </ArticalCon>
-                    <ArticalCon>
+                    <ArticalCon onClick={toggleEvents}>
                         <Icons src={eventicon} alt="icon"/>
                         <IconName>Events and Worshops</IconName>
                     </ArticalCon>
