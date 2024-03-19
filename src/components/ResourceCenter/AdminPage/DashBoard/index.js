@@ -22,6 +22,7 @@ import ArticlesFolder from "../DashBoard/ArticleFolder";
 
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
+import CreateReport from "../NewReport/index";
 
 
 import {
@@ -89,17 +90,27 @@ const DashBoard = () => {
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
+
   const [showBlog, setShowBlog] = useState(false);
   const [showCareerOpportunities, setShowCareerOpportunities] = useState(false);
   const [currentLink,setCurrentLink] = useState("/resource-center/admin-login/dash-board/create-post");
+
+  const [currentLink, setCurrentLink] = useState(
+    "/DashBoard/Admin/CreateArticles"
+  );
+
 
   const toggleArticles = () => {
     setShowArticles(true);
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(false);
+
     setShowCareerOpportunities(false);
     setShowBlog(false);
+
+    setCurrentLink("/DashBoard/Admin/CreateArticles");
+
   };
 
   const toggleEvents = () => {
@@ -107,9 +118,13 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+
     setShowCareerOpportunities(false);
     setShowBlog(false);
     setCurrentLink("/resourse-center/admin-login/createevent")
+
+    setCurrentLink("/resourse-center/admin-login/createevent");
+
   };
 
   const toggleProjects = () => {
@@ -117,8 +132,12 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowEvents(false);
     setShowReports(false);
+
     setShowCareerOpportunities(false);
     setShowBlog(false);
+
+    setCurrentLink("/DashBoard/Admin/create-project");
+
   };
 
   const toggleReports = () => {
@@ -126,6 +145,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
+
     setShowCareerOpportunities(false);
     setShowBlog(false);
     setCurrentLink("/DashBoard/Admin/NewReport")
@@ -138,6 +158,9 @@ const DashBoard = () => {
     setShowReports(false);
     setShowBlog(true);
     setCurrentLink("/DashBoard/Admin/CreateBlog")
+
+    setCurrentLink("/DashBoard/Admin/NewReport");
+
   };
 
   const toggleCareerOpportunities = () => {
@@ -163,7 +186,9 @@ const DashBoard = () => {
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
               <Link to={currentLink}>
-                <AddImg src={add} alt="addButton"/>
+
+                <AddImg src={add} alt="addButton" />
+
               </Link>
             </ImagesCont>
             <Contactimgcon>
@@ -171,6 +196,7 @@ const DashBoard = () => {
               <Profile src={profile} alt="profile" />
             </Contactimgcon>
           </Containertwo>
+
 
                 <Containerthree>
                     <ColumnDiv>
@@ -204,6 +230,7 @@ const DashBoard = () => {
                     
                     </ColumnDiv>
 
+
             {showArticles && (
               <Containerfour>
                 <DateInput type="month" id="monthInput" name="monthInput" />
@@ -227,4 +254,3 @@ const DashBoard = () => {
 
 
 export default DashBoard;
-

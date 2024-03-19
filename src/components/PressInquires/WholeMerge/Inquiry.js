@@ -21,7 +21,7 @@ import {
     ExpertResearch,
     ExpertsInfo,
     SeeMoreButton,
-
+    
     TrustWorthy,
     TrustTitle,
     TrustDescription,
@@ -315,10 +315,10 @@ const Inquiry = () => {
         <Image src={laravel} alt="laravel" />
         <Image src={php} alt="Php" />
         <Img src={sys} alt="Symfony" />
-      </ImgContainer>
+    </ImgContainer>
       <div>
       <TransparentBg />
-      <HelpJournalTitle>Our Tech Topics</HelpJournalTitle>
+      <HelpJournalTitle>Tech Topics</HelpJournalTitle>
       </div>
       <TechTopics>TechTopics</TechTopics>
       <TechTopicsCon>

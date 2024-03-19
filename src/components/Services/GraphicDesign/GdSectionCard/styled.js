@@ -3,7 +3,7 @@ export const AppCardCon=styled.div`
 display:flex;
 flex-direction:column;
 padding:10px;
-width:80%;
+
 margin-bottom:30px;
 `;
 export const WebSectionTwoHeading=styled.h2`
