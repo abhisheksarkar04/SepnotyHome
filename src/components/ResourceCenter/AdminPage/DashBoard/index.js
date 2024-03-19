@@ -104,6 +104,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
+    setCurrentLink("/resourse-center/admin-login/createevent")
     setCurrentLink("/DashBoard/Admin/createpost");
   };
 
@@ -143,6 +144,39 @@ const DashBoard = () => {
             </Contactimgcon>
           </Containertwo>
 
+                <Containerthree>
+                    <ColumnDiv>
+                    <ArticalCon onClick={toggleArticles}>
+                        <Icons src={vector} alt="icon"/>
+                        <IconName>My Articles</IconName>
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={blogicon} alt="icon"/>
+                        <Link to="/ResourceCenter/Myblog">
+                        <IconName>Blogs</IconName>
+                        </Link>
+                        
+                    </ArticalCon>
+                    <ArticalCon>
+                        <Icons src={careericon} alt="icon"/>
+                        <Link to="/ResourceCenter/AdminCareerOppurtunities">
+                        <IconName>Career Opportunities</IconName>
+                        </Link>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleReports}>
+                        <Icons src={repots} alt="icon"/>
+                        <IconName>Reports</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleProjects}>
+                        <Icons src={Projects} alt="icon"/>
+                        <IconName>Projects</IconName>
+                    </ArticalCon>
+                    <ArticalCon onClick={toggleEvents}>
+                        <Icons src={eventicon} alt="icon"/>
+                        <IconName>Events and Worshops</IconName>
+                    </ArticalCon>
+                    
+                    </ColumnDiv>
           <Containerthree>
             <ColumnDiv>
               <ArticalCon onClick={toggleArticles}>
