@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import { FaLocationDot } from "react-icons/fa6";
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle` 
+ *{ box-sizing: border-box;
+  margin: 0px;
+  font-family: "Inter";
+ }
+`;
 
 export const Container = styled.div`
-  width: 100%;
-  background-color: #0c111f;
+  width: 75%;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
   align-items: center;
 `;
 
@@ -15,14 +22,13 @@ export const CreatePostBtn = styled.button`
   background-color: #435aa7;
   color: white;
   align-self: flex-end;
-  width: 160px;
-  height: 40px;
   font-size: 16px;
   margin-bottom: 20px;
   border: none;
-  margin: 0 140px 30px 0;
+  margin: 0 5% 30px 0;
   border-radius: 7px;
   text-align: center;
+  padding: 10px 20px;
 `;
 
 export const Container1 = styled.div`

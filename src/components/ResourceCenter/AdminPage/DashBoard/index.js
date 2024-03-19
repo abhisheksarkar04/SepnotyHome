@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import sepnoty from "./Images/sepnoty.png";
-import add from "./Images/add.png";
+import add from "./Images/add.svg";
 import profile from "./Images/profile.png";
 
 import vector from "./Images/Vector.png";
@@ -9,7 +9,6 @@ import Projects from "./Images/Rectangle 6960.png";
 import careericon from "./Images/careericon.png";
 import blogicon from "./Images/blogicon.png";
 import eventicon from "./Images/eventicon.png";
-
 import facebbok from "./Images/fbimg.png";
 import disney from "./Images/disneyimg.png";
 import airimg from "./Images/airimg.png";
@@ -23,7 +22,14 @@ import ArticlesFolder from "../DashBoard/ArticleFolder";
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
 import CreateReport from "../NewReport/index";
-
+import CreateBlog from "../NewBlog";
+import FooterSection from "../../../Footer/FooterSection";
+import AdminCareerOppurtunities from "../../AdminCareerOppurtunities";
+import Myblog from "../../Myblog";
+import CreateArticles from "../CreateArticles";
+import CreateJob from "../NewJob";
+import CreateProject from "../CreateProject";
+import CreateEvent from "../CreateNewEvent";
 
 import {
   Container,
@@ -44,11 +50,9 @@ import {
   Containerfour,
   DateInput,
   SpanHead,
+  CreateCon,
+  CreateTitle,
 } from "./styledComponents";
-
-import FooterSection from "../../../Footer/FooterSection";
-import AdminCareerOppurtunities from "../../AdminCareerOppurtunities";
-import Myblog from "../../Myblog";
 
 const Lists = [
   {
@@ -90,27 +94,29 @@ const DashBoard = () => {
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
-
   const [showBlog, setShowBlog] = useState(false);
   const [showCareerOpportunities, setShowCareerOpportunities] = useState(false);
-  const [currentLink,setCurrentLink] = useState("/resource-center/admin-login/dash-board/create-post");
-
-  const [currentLink, setCurrentLink] = useState(
-    "/DashBoard/Admin/CreateArticles"
-  );
-
+  const [showCreateArticle, setShowCreateArticle] = useState(false);
+  const [showCreateProject, setShowCreateProject] = useState(false);
+  const [showCreateReport, setShowCreateReport] = useState(false);
+  const [showCreateBlogs, setShowCreateBlogs] = useState(false);
+  const [showCreateEvent, setShowCreateEvent] = useState(false);
+  const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
+    useState(false);
 
   const toggleArticles = () => {
     setShowArticles(true);
-    setShowEvents(false);
+    setShowCreateArticle(false);
     setShowProjects(false);
+    setShowCreateProject(false);
     setShowReports(false);
-
-    setShowCareerOpportunities(false);
+    setShowCreateReport(false);
     setShowBlog(false);
-
-    setCurrentLink("/DashBoard/Admin/CreateArticles");
-
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
   };
 
   const toggleEvents = () => {
@@ -118,26 +124,30 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
-
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
     setShowCareerOpportunities(false);
     setShowBlog(false);
-    setCurrentLink("/resourse-center/admin-login/createevent")
-
-    setCurrentLink("/resourse-center/admin-login/createevent");
-
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateReport(false);
+    setShowCreateProject(false);
+    setShowCreateEvent(false);
   };
 
   const toggleProjects = () => {
-    setShowProjects(true);
     setShowArticles(false);
-    setShowEvents(false);
+    setShowCreateArticle(false);
+    setShowProjects(true);
+    setShowCreateProject(false);
     setShowReports(false);
-
-    setShowCareerOpportunities(false);
+    setShowCreateReport(false);
     setShowBlog(false);
-
-    setCurrentLink("/DashBoard/Admin/create-project");
-
+    setShowEvents(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateEvent(false);
   };
 
   const toggleReports = () => {
@@ -145,35 +155,134 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
-
+    setShowCreateArticle(false);
     setShowCareerOpportunities(false);
     setShowBlog(false);
-    setCurrentLink("/DashBoard/Admin/NewReport")
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateReport(false);
+    setShowCreateProject(false);
+    setShowCreateEvent(false);
   };
 
   const toggleBlog = () => {
-    setShowEvents(false);
     setShowArticles(false);
+    setShowCreateArticle(false);
     setShowProjects(false);
+    setShowCreateProject(false);
     setShowReports(false);
+    setShowCreateReport(false);
     setShowBlog(true);
-    setCurrentLink("/DashBoard/Admin/CreateBlog")
-
-    setCurrentLink("/DashBoard/Admin/NewReport");
-
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
   };
 
   const toggleCareerOpportunities = () => {
-    setShowEvents(false);
     setShowArticles(false);
+    setShowCreateArticle(false);
     setShowProjects(false);
+    setShowCreateProject(false);
     setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
     setShowCareerOpportunities(true);
-    setCurrentLink("/DashBoard/Admin/CreateJob")
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
   };
-  
 
-  
+  const toggleCreateArticle = () => {
+    setShowArticles(false);
+    setShowCreateArticle(true);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+  };
+  const toggleCreateProject = () => {
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(true);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+  };
+
+  const toggleCreateReport = () => {
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(true);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+  };
+
+  const toggleCreateBlogs = () => {
+    setShowCreateBlogs(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+  };
+
+  const toggleCreateCareer = () => {
+    setShowCreateCareerOpportunities(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+  };
+
+  const toggleCreateEvent = () => {
+    setShowCreateEvent(true);
+    setShowCreateCareerOpportunities(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+  };
 
   return (
     <>
@@ -185,11 +294,38 @@ const DashBoard = () => {
           <Containertwo>
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
-              <Link to={currentLink}>
 
-                <AddImg src={add} alt="addButton" />
-
-              </Link>
+              {showArticles || showCreateArticle ? (
+                <CreateCon onClick={toggleCreateArticle}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Articles</CreateTitle>
+                </CreateCon>
+              ) : showBlog || showCreateBlogs ? (
+                <CreateCon onClick={toggleCreateBlogs}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Blog</CreateTitle>
+                </CreateCon>
+              ) : showCareerOpportunities || showCreateCareerOpportunities ? (
+                <CreateCon onClick={toggleCreateCareer}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Career</CreateTitle>
+                </CreateCon>
+              ) : showProjects || showCreateProject ? (
+                <CreateCon onClick={toggleCreateProject}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Project</CreateTitle>
+                </CreateCon>
+              ) : showReports || showCreateReport ? (
+                <CreateCon onClick={toggleCreateReport}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Report</CreateTitle>
+                </CreateCon>
+              ) : showEvents || showCreateEvent ? (
+                <CreateCon onClick={toggleCreateEvent}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create Event</CreateTitle>
+                </CreateCon>
+              ) : null}
             </ImagesCont>
             <Contactimgcon>
               <Name>Manikumar Pokala</Name>
@@ -197,39 +333,35 @@ const DashBoard = () => {
             </Contactimgcon>
           </Containertwo>
 
+          <Containerthree>
+            <ColumnDiv>
+              <ArticalCon onClick={toggleArticles}>
+                <Icons src={vector} alt="icon" />
+                <IconName>My Articles</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleBlog}>
+                <Icons src={blogicon} alt="icon" />
 
-                <Containerthree>
-                    <ColumnDiv>
-                    <ArticalCon onClick={toggleArticles}>
-                        <Icons src={vector} alt="icon"/>
-                        <IconName>My Articles</IconName>
-                    </ArticalCon>
-                    <ArticalCon onClick={toggleBlog}>
-                        <Icons src={blogicon} alt="icon"/>
-                      
-                        <IconName>Blogs</IconName>
-                  
-                    </ArticalCon>
-                    <ArticalCon onClick={toggleCareerOpportunities}>
-                        <Icons src={careericon} alt="icon"/>
-              
-                        <IconName>Career Opportunities</IconName>
-                    </ArticalCon>
-                    <ArticalCon onClick={toggleReports}>
-                        <Icons src={repots} alt="icon"/>
-                        <IconName>Reports</IconName>
-                    </ArticalCon>
-                    <ArticalCon onClick={toggleProjects}>
-                        <Icons src={Projects} alt="icon"/>
-                        <IconName>Projects</IconName>
-                    </ArticalCon>
-                    <ArticalCon onClick={toggleEvents}>
-                        <Icons src={eventicon} alt="icon"/>
-                        <IconName>Events and Worshops</IconName>
-                    </ArticalCon>
-                    
-                    </ColumnDiv>
+                <IconName>Blogs</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleCareerOpportunities}>
+                <Icons src={careericon} alt="icon" />
 
+                <IconName>Career Opportunities</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleReports}>
+                <Icons src={repots} alt="icon" />
+                <IconName>Reports</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleProjects}>
+                <Icons src={Projects} alt="icon" />
+                <IconName>Projects</IconName>
+              </ArticalCon>
+              <ArticalCon onClick={toggleEvents}>
+                <Icons src={eventicon} alt="icon" />
+                <IconName>Events and Worshops</IconName>
+              </ArticalCon>
+            </ColumnDiv>
 
             {showArticles && (
               <Containerfour>
@@ -244,6 +376,12 @@ const DashBoard = () => {
             {showReports && <Report />}
             {showCareerOpportunities && <AdminCareerOppurtunities />}
             {showBlog && <Myblog />}
+            {showCreateArticle && <CreateArticles />}
+            {showCreateBlogs && <CreateBlog />}
+            {showCreateCareerOpportunities && <CreateJob />}
+            {showCreateReport && <CreateReport />}
+            {showCreateProject && <CreateProject />}
+            {showCreateEvent && <CreateEvent />}
           </Containerthree>
         </ContainerOne>
       </Container>
@@ -251,6 +389,5 @@ const DashBoard = () => {
     </>
   );
 };
-
 
 export default DashBoard;

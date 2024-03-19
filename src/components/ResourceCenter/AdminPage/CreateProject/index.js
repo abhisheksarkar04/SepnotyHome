@@ -1,3 +1,9 @@
+import { ThemeProvider } from "styled-components";
+import React, { useState, useRef } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import styled from "styled-components";
+
 import {
   Container,
   CreatePostBtn,
@@ -11,11 +17,8 @@ import {
   /* H1Cont,
   Content, */
   LastButton,
+  GlobalStyle,
 } from "./styledComponents";
-import React, { useState, useRef } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import styled from "styled-components";
 
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
@@ -42,6 +45,9 @@ const StyledQuill = styled(ReactQuill)`
     border: 1px solid #2b459b;
   }
 `;
+
+const theme = {};
+
 const modules = {
   toolbar: [
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -74,33 +80,39 @@ const CreateProject = () => {
   };
 
   return (
-    <Container>
-      <CreatePostBtn>Create New Project</CreatePostBtn>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <Summary type="text" placeholder="Project Summary" />
-        <ChooseFile>
-          <Button onClick={handleFileSelect}>Choose File</Button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
-        </ChooseFile>
-        <Container2>
-          <StyledQuill
-            theme="snow"
-            value={value}
-            onChange={setValue}
-            modules={modules}
-            placeholder="project Description"
-          />
-        </Container2>
-        <LastButton>Create Post</LastButton>
-      </Container1>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+
+      <Container>
+        <CreatePostBtn>Create New Project</CreatePostBtn>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <Summary type="text" placeholder="Project Summary" />
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+            <NoFile>
+              {selectedFile ? selectedFile.name : "No file chosen"}
+            </NoFile>
+          </ChooseFile>
+          <Container2>
+            <StyledQuill
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+              placeholder="project Description"
+            />
+          </Container2>
+          <LastButton>Create Post</LastButton>
+        </Container1>
+      </Container>
+    </ThemeProvider>
   );
 };
 export default CreateProject;
