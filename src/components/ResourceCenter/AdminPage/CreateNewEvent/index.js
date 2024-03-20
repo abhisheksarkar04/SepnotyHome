@@ -3,10 +3,7 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-
 import { ThemeProvider } from "styled-components";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 
 import {
   Container,
@@ -60,7 +57,7 @@ const StyledQuill = styled(ReactQuill)`
   font-size: 20px;
 
   .ql-editor {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     border: none;
     color: #fff;
@@ -76,7 +73,7 @@ const StyledQuill = styled(ReactQuill)`
   .ql-toolbar {
     border: 2px solid #000000;
     border-radius: 10px;
-    z-index: 1;
+
     /* Add border */
   }
   .ql-toolbar .ql-picker-label {
@@ -140,55 +137,21 @@ const CreateEvent = () => {
     setcurrent(event.target.value);
   };
 
-  const StyledQuill = styled(ReactQuill)`
-  /* Add your custom styles here */
-  background-color: #d9d9d9;
-  border-radius: 10px;
-  border: 0px solid transparent;
-  outline: none;
-  font-size: 20px;
-  .ql-editor {
-    font-size: 20px;
-    line-height: 1.5;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    height: 70px; /* Adjust height as needed */
-    padding: 10px;
-    overflow-y: auto;
-    outline: none;
-  }
-  .ql-container {
-    border: none;
-  }
-  .ql-toolbar {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    /* Add border */
-  }
-`;
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      [{ font: [] }],
 
-
-const modules = {
-  toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    [{ font: [] }],
-
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      ["link", "image", "video"],
     ],
-    ["link", "image", "video"],
-  ],
-};
-
-
-
-
-
+  };
 
   const filteredOptions = [
     "Location",
@@ -233,11 +196,7 @@ const modules = {
             />
           </ChooseFile>
           <Container2>
-
-
-
-          <StyledQuill
-
+            <StyledQuill
               theme="snow"
               value={value}
               onChange={setValue}

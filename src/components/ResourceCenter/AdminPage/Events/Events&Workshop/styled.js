@@ -24,7 +24,7 @@ export const PatternCon = styled.div`
   margin-left: 20px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 24px;
   color: #89a4ff;
   font-weight: bold;
   margin-left: -28px;

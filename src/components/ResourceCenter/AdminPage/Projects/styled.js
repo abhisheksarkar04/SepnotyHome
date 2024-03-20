@@ -1,8 +1,8 @@
 import styled from "styled-components";
 export const Image = styled.img`
-  height: 30vh;
+  height: 30%;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 `;
 export const Container = styled.div`
   margin-top: 10px;
@@ -13,17 +13,16 @@ export const Container = styled.div`
   width: 75%;
   border: 1px solid #ffffff;
   border-radius: 10px;
-  padding-left: 15px;
 `;
 export const PortfolioHeading = styled.h1`
   color: #ffffff;
-  font-size: 23px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
 `;
 
 export const Desc = styled.p`
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   width: 90%;
 `;
@@ -49,7 +48,7 @@ export const ListHeading = styled.h1`
 
 export const ContentDesc = styled.p`
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 55px;
   width: 90%;
   margin-bottom: 15px;
@@ -58,7 +57,7 @@ export const ContentDesc = styled.p`
 
 export const SolutionDesc = styled.p`
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
   height: 60px;
   padding-top: 20px;
   margin-bottom: 10px;
@@ -91,7 +90,7 @@ export const Button = styled.button`
   border: 1px solid #8196db;
   color: #ffffff;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 7px 5px;
   margin-right: 10px;
 `;
@@ -100,13 +99,13 @@ export const TechCon = styled.div`
   border-left: 1px solid #8196db;
   padding: 0px 0px;
   height: 70px;
-  padding: 5px;
-  margin: 20px 0 30px 0;
+  padding: 10px 20px;
+  margin: 0px;
 `;
 
 export const Techtitle = styled.p`
   color: rgba(217, 217, 217, 0.5);
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const SubCon = styled.div`
@@ -135,10 +134,10 @@ export const List = styled.ul`
 
 export const ContentContainer = styled.div`
   margin-top: 10px;
+  padding-left: 15px;
 `;
 
 export const Contents = styled.div`
-  padding-left: 1%;
   margin-bottom: 30px;
 `;
 
