@@ -9,12 +9,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-width: 75%;
-background-color: transparent;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+width: 100%;
+  background-color: #0c111f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0 80px 0;
+  align-items: center;
 `;
 
 export const CreatePostBtn = styled.button`
@@ -43,18 +44,21 @@ export const Container1 = styled.div`
 `;
 
 export const Title = styled.input`
-  height: 40px;
-  width: 95%;
-  border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 20px;
-  align-items: start;
-  padding-left: 30px;
-  color: #263238;
-  background-color: #d9d9d9;
-  outline: none;
-  border: none;
-  font-size: 20px;
+height: 40px;
+width: 95%;
+border-radius: 10px;
+margin-left: 35px;
+margin-top: 20px;
+align-items: start;
+padding-left: 30px;
+color: #263238;
+background-color: #d9d9d9;
+outline: none;
+font-size: 16px;
+border: none;
+::placeholder {
+  color: black;
+}
 `;
 export const Summary = styled.input`
   height: 65px;
@@ -68,27 +72,27 @@ export const Summary = styled.input`
 `;
 
 export const ChooseFile = styled.div`
-  height: 65px;
-  width: 95%;
-  border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
-  background-color: #d9d9d9;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 20px;
+height: 65px;
+width: 95%;
+border-radius: 10px;
+margin-left: 35px;
+margin-top: 40px;
+background-color: #d9d9d9;
+padding-left: 30px;
+display: flex;
+flex-direction: row;
+align-items: center;
 `;
 
 export const Button = styled.button`
-  background-color: #435aa7;
-  color: white;
-  font-family: Sans-serif;
-  font-size: 13px;
-  border: none;
-  padding: 7px 15px 7px 15px;
-  border-radius: 5px;
+background-color: #D9D9D9;
+color: #000000;
+font-family: Sans-serif;
+font-size: 16px;
+border: 1px solid #000000;
+padding: 7px 15px 7px 15px;
+border-radius: 2px;
+box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
 `;
 
 export const NoFile = styled.p`
@@ -117,10 +121,10 @@ export const H1Cont = styled.div`
 `;
 
 export const Content = styled.p`
-  font-family: Sans-serif;
-  font-size: 10px;
-  color: #263238;
-  font-weight: bold;
+font-family: Sans-serif;
+color: black;
+padding-left: 10px;
+font-size: 16px;
 `;
 
 export const LastButton = styled.button`
@@ -129,9 +133,9 @@ export const LastButton = styled.button`
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
-  color: #2b459b;
+  color: #ffffff;
   font-weight: bold;
   padding-left: 30px;
-  background-color: #d9d9d9;
+  background-color: #2B459B;
   font-size: 20px;
 `;
