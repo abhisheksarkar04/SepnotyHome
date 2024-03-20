@@ -10,21 +10,20 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
-  width: 80%;
+  width: 75%;
   border: 1px solid #ffffff;
   border-radius: 10px;
-  margin-left: 30px;
-  padding: 3px;
+  padding-left: 15px;
 `;
 export const PortfolioHeading = styled.h1`
   color: #ffffff;
-  font-size: 30px;
+  font-size: 23px;
   margin-bottom: 10px;
 `;
 
 export const Desc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.5;
   width: 90%;
 `;
@@ -42,7 +41,7 @@ export const PatternCon = styled.div`
   margin-bottom: 15px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 20px;
   color: #8196db;
   font-weight: bold;
   margin-left: -15px;
@@ -50,7 +49,7 @@ export const ListHeading = styled.h1`
 
 export const ContentDesc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 18px;
   margin-left: 55px;
   width: 90%;
   margin-bottom: 15px;
@@ -59,7 +58,7 @@ export const ContentDesc = styled.p`
 
 export const SolutionDesc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 18px;
   height: 60px;
   padding-top: 20px;
   margin-bottom: 10px;
@@ -100,14 +99,14 @@ export const Button = styled.button`
 export const TechCon = styled.div`
   border-left: 1px solid #8196db;
   padding: 0px 0px;
-  height: 60px;
+  height: 70px;
   padding: 5px;
   margin: 20px 0 30px 0;
 `;
 
 export const Techtitle = styled.p`
   color: rgba(217, 217, 217, 0.5);
-  font-size: 25px;
+  font-size: 18px;
 `;
 
 export const SubCon = styled.div`
