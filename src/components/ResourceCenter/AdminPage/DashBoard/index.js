@@ -341,7 +341,7 @@ const DashBoard = () => {
               ) : showEvents || showCreateEvent ? (
                 <CreateCon onClick={toggleCreateEvent}>
                   <AddImg src={add} alt="addButton" />
-                  <CreateTitle>Create Event</CreateTitle>
+                  <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
               ) : null}
             </ImagesCont>

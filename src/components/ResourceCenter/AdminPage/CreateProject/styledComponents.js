@@ -14,7 +14,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
+  padding: 10px 0 80px 0;
   align-items: center;
 `;
 
@@ -54,7 +54,7 @@ export const Title = styled.input`
   color: #263238;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   ::placeholder {
     color: black;
@@ -71,7 +71,7 @@ export const Summary = styled.input`
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
 
   ::placeholder {
@@ -93,21 +93,21 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #435aa7;
-  color: white;
+  background-color: #D9D9D9;
+  color: #000000;
   font-family: Sans-serif;
-  font-size: 20px;
-  border: none;
+  font-size: 16px;
+  border: 1px solid #000000;
   padding: 7px 15px 7px 15px;
-  border-radius: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
 `;
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 13px;
   color: black;
   padding-left: 10px;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Container2 = styled.div`
@@ -143,10 +143,10 @@ export const LastButton = styled.button`
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
-  color: #2b459b;
-  font-weight: bold;
+  margin-top: -90px;
+  color: #fff;
+  font-weight: 550;
   padding-left: 30px;
-  background-color: #d9d9d9;
+  background-color: #2B459B;
   font-size: 20px;
 `;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import FifthPage from './Website/FifthPage';
 
@@ -18,6 +19,11 @@ class SecondForm extends Component {
   continue = e => {
     e.preventDefault();
     const { selectedIndustries } = this.state;
+    const formData = {
+      field3: {selectedIndustries},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
@@ -71,38 +77,38 @@ class SecondForm extends Component {
                     *What Software features/capabilities do you need?
                     </Heading>
                     <CheckBoxCon>
-                        <input type="checkbox" id="1st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="1st">
+                        <input type="checkbox" id="Multi domain configuration" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Multi domain configuration">
                         Multi domain configuration
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="2st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="2st">
+                        <input type="checkbox" id="Basic features" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Basic features">
                         Basic features
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="3st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="3st">
+                        <input type="checkbox" id="Drag - and - drop Page editor" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Drag - and - drop Page editor">
                         Drag - and - drop Page editor
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="4st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="4st">
+                        <input type="checkbox" id="Templates" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Templates">
                         Templates
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="5st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="5st">
+                        <input type="checkbox" id="Core features" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Core features">
                         Core features
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="6st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="6st">
+                        <input type="checkbox" id="Customizable features" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Customizable features">
                         Customizable features
                         </Label>
                     </CheckBoxCon>
@@ -112,26 +118,26 @@ class SecondForm extends Component {
                 <Form1>
                     
                     <CheckBoxCon>
-                        <input type="checkbox" id="7st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="7st">
+                        <input type="checkbox" id="User generated content" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="User generated content">
                         User generated content
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="8st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="8st">
+                        <input type="checkbox" id="Mobile compatibility" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Mobile compatibility">
                         Mobile compatibility
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="9st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="9st">
+                        <input type="checkbox" id="Social media Sharing functionality" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Social media Sharing functionality">
                         Social media Sharing functionality
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="0st" onChange={this.handleCheckboxChange}/>
-                        <Label htmlfor="0st">
+                        <input type="checkbox" id="Web Analytics" onChange={this.handleCheckboxChange}/>
+                        <Label htmlfor="Web Analytics">
                         Web Analytics
                         </Label>
                     </CheckBoxCon>

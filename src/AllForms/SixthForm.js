@@ -12,112 +12,66 @@ import SixthPage from "./Website/SixthPage"
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class  FormNo5 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: "Yes"
-    };
-  }
+  state = {
+    current: 'Yes',
+    mediaContent: [],
+    paymentSupport: '',
+    monthlyVisitors: '',
+    errors: {}
+  };
 
   handleButtonClick = (page) => {
     this.setState({ current: page });
   };
 
-  shouldComponentUpdate(nextProps) {
-    if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  validateForm = () => {
+    const { mediaContent, paymentSupport, monthlyVisitors } = this.state;
+    const errors = {};
 
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
+    if (mediaContent.length === 0) {
+      errors.mediaContent = 'Please select at least one media content type.';
+    }
+
+    if (!paymentSupport) {
+      errors.paymentSupport = 'Please select whether the website or app should support payments.';
+    }
+
+    if (!monthlyVisitors) {
+      errors.monthlyVisitors = 'Please select the expected number of monthly visitors.';
+    }
+
+    return errors;
   };
 
-  back = e => {
-    e.preventDefault();
-    this.props.prevStep();
+  handleNext = () => {
+    const errors = this.validateForm();
+
+    if (Object.keys(errors).length === 0) {
+      // No validation errors, proceed to the next step
+      this.props.nextStep();
+    } else {
+      // Validation errors found, update state with errors
+      this.setState({ errors });
+    }
+  };
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    const { mediaContent } = this.state;
+
+    if (checked) {
+      this.setState({ mediaContent: [...mediaContent, value] });
+    } else {
+      this.setState({ mediaContent: mediaContent.filter((item) => item !== value) });
+    }
   };
 
   render() {
-    const {current} = this.state
-    // const { 
-    //   // // coursesOptions,
-    //   // levelOptions,
-    //   // // addCourse, 
-    //   // addLevel,
-    //   // level,
-    // } = this.props;
-
-    // const theme = createMuiTheme({
-    //   palette: {
-    //     primary: {
-    //       main: '#003487',
-    //     },
-    //     secondary: {
-    //       main: '#003487',
-    //     },
-    //   },
-    //   overrides: {
-    //     MuiPaper: {
-    //       elevation2: {
-    //         boxShadow: 'none',
-    //       },
-    //     },
-    //     MuiInput: {
-    //       underline: {
-    //         '&:before': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:after': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:hover': {
-    //           '&:not(.Mui-disabled)': {
-    //             '&:before' : {
-    //               borderBottom: 'none'
-    //             }
-    //           }
-    //         }
-    //       }
-    //     },
-    //     MuiTableRow: {
-    //       root: {
-    //         '&:nth-child(even)': {
-    //           backgroundColor: '#ebebeb'
-    //         }
-    //       }
-    //     },
-    //     MuiTypography: {
-    //       h6: {
-    //         fontSize: '1rem',
-    //         color: '#011b64'
-    //       }
-    //     },
-    //     MuiToolbar: {
-    //       root: {
-    //         borderBottom: '1px solid grey',
-    //         backgroundColor: '#fafafa'
-    //       },
-    //       gutters: {
-    //         paddingLeft: '3px'
-    //       }
-    //     }
-    //   },
-    // });
-
-    // const columns = [
-    //   {
-    //     title: 'course',
-    //     field: 'course',
-    //   },
-    //   {
-    //     title: 'category',
-    //     field: 'category'
-    //   }
-    // ];
+    const { current, mediaContent, paymentSupport, monthlyVisitors, errors } = this.state;
 
     return (
       <Main className='form'>
@@ -138,120 +92,129 @@ class  FormNo5 extends Component {
             className={'stepper'}
             stepClassName={'stepper__step'}
           />
-          return(
+       
         
         <Mai>
-                    <FormContainer>
-                        <Form>
-                            <Heading>
-                            *What type of media content does your Software have to support?
-                            </Heading>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="one"/>
-                                <Label htmlfor="one">
-                                Images
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="two"/>
-                                <Label htmlfor="two">
-                                Video
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="three"/>
-                                <Label htmlfor="three">
-                                Audio
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="four"/>
-                                <Label htmlfor="four">
-                                Interactive content
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="five"/>
-                                <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
-                                
-                                
-                            </CheckBoxCon>
-                            <Para1>
-                            Should your website or App support payments?
-                            </Para1>
-                            <Main5>
-                                <ActiveButton type="button" active={current === 'Yes'}  onClick={this.handleButtonClick('Yes')}>Yes</ActiveButton>
-                                <Buttonel type="button" active={current === 'No'}  onClick={this.handleButtonClick('No')}>No</Buttonel>
-                            </Main5>
-                            
-                        </Form>
-                    </FormContainer>
-                    <FormContainer>
-                        <Form>
-                        <Heading>
-                        *What is the expected number of monthly visitors?
-                            </Heading>
-                            
-                    <InputContainer>
+        <FormContainer>
+                <Form>
+                    <Heading>
+                    *What type of media content does your Software have to support?
+                    </Heading>
+                    <CheckBoxCon>
+                    <Label htmlfor="Images">
+                        <input type="checkbox" id="Images" value="Images" onClick={this.handleCheckboxChange}/>
+
+                        Images
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Video">
+                        <input type="checkbox" id="Video" value="Video" />
+                       
+                        Video
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Audio">
+                        <input type="checkbox" id="Audio" value="Audio" onClick={this.handleCheckboxChange}/>
+                        
+                        Audio
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Interactive content">
+                        <input type="checkbox" id="Interactive content" value="Interactive content" onClick={this.handleCheckboxChange}/>
+                        
+                        Interactive content
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="five" onClick={this.handleCheckboxChange}/>
+                        <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
+                        
+                        
+                    </CheckBoxCon>
+                    {errors.mediaContent && <Error>{errors.mediaContent}</Error>}
+                    <Para1>
+                    Should your website or App support payments?
+                    </Para1>
+                    <Main5>
+                        <ActiveButton type="button" active={current === 'Yes'}  onClick={() => this.handleButtonClick('Yes')}>Yes</ActiveButton>
+                        <Buttonel type="button" active={current === 'No'}  onClick={() => this.handleButtonClick('No')}>No</Buttonel>
+                    </Main5>
+                    {errors.paymentSupport && <Error>{errors.paymentSupport}</Error>}
+                </Form>
+            </FormContainer>
+            <FormContainer>
+                <Form>
+                <Heading>
+                *What is the expected number of monthly visitors?
+                    </Heading>
+                    
+            <InputContainer>
+            <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    I am not sure
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    up to 50
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    50-100
+                    </Label1>
+                </InputContainer>
+
+                <InputContainer>
                     <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            I am not sure
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            up to 50
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            50-100
-                            </Label1>
-                        </InputContainer>
-        
-                        <InputContainer>
-                            <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                            <Label1>
-                                100-500
-                            </Label1>
-                        </InputContainer>
-        
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            500-1,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            1,000-5,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            5,000-10,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            more than 10,000
-                            </Label1>
-                    </InputContainer>
-                        </Form>
-                    </FormContainer>
+
+                    <Label1>
+                        100-500
+                    </Label1>
+                </InputContainer>
+
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    500-1,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    1,000-5,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    5,000-10,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Input1 type='radio' name="industry" value="Healthcare"/>
+
+                <Label1>
+                    more than 10,000
+                    </Label1>
+            </InputContainer>
+                </Form>
+                
+          
+          {errors.monthlyVisitors && <Error>{errors.monthlyVisitors}</Error>}
+            </FormContainer>
+           
                 </Mai>
 
           {/* <div className='select'>
@@ -305,7 +268,8 @@ class  FormNo5 extends Component {
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
+            <button className='buttons__button buttons__button--next' onClick={this.handleNext}>Next</button>
+
           </Button>
       </Main>
     )
@@ -328,6 +292,11 @@ margin-top:10px;
 margin-left: 10px;
 
 `
+const Error = Styled.div`
+  color: red;
+  margin-top: 5px;
+`;
+
 const Label1 = Styled.label`
 font-size:14px;
 font-weight: 500;
