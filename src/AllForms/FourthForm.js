@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import FourthPage from './Website/FourthPage';
 
@@ -15,6 +16,11 @@ class Summary extends Component {
   continue = e => {
     e.preventDefault();
     const { hasMockups, chosenCMS } = this.state;
+    const formData = {
+      field3: {hasMockups,chosenCMS},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     if (!hasMockups || !chosenCMS) {
       this.setState({ error: 'Please answer all questions.' });
       return;
