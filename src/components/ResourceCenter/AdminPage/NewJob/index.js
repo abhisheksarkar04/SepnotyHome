@@ -125,7 +125,7 @@ const CreateBlog = () => {
                 </option>
               ))}
             </select>
-          </div>
+          </div> 
         </DropDown>
         <ChooseFile>
           <Button>Choose File</Button>

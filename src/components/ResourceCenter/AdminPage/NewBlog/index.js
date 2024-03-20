@@ -118,7 +118,7 @@ const CreateBlog = () => {
     color: 'black',
 
   };
-
+ 
 
   return (
     <ThemeProvider theme={theme}>

@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0px;
   font-family: "Inter";
  }
-`;
+`; 
 
 export const Container = styled.div`
   width: 75%;
