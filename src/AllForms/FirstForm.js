@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
+import handleFormValues from "./allFormValues";
+
 
 import FirstStep from "./Website/FirstPage"
 
@@ -24,6 +26,7 @@ class PersonalDetails extends Component {
 
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
+    // console.log(id);
     this.setState(prevState => ({
       softwareTypes: checked
         ? [...prevState.softwareTypes, id]
@@ -47,7 +50,14 @@ class PersonalDetails extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+
+
     const { softwareTypes, numberOfPages } = this.state;
+
+
+   
+  // Call the handleFormValues function from FormUtils.js
+  
     if (softwareTypes.length === 0) {
       this.setState({
         formErrors: {
@@ -66,6 +76,10 @@ class PersonalDetails extends Component {
       });
       return;
     }
+   
+    // if(softwareTypes.length === 0 && !numberOfPages){
+        
+    // }
     // Store the form data or proceed with further actions
     console.log("Form data:", this.state);
     // Proceed to the next step or page
@@ -79,8 +93,13 @@ class PersonalDetails extends Component {
     
     // Check for errors
     const { softwareTypes, numberOfPages } = this.state;
+    const formData = {
+      field1: {softwareTypes , numberOfPages},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     const formErrors = {};
-
+    // console.log(softwareTypes,numberOfPages);
     // Check software types
     if (softwareTypes.length === 0) {
         formErrors.softwareTypes = 'Please select at least one type of software.';
@@ -103,19 +122,6 @@ class PersonalDetails extends Component {
 
   render() {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
-    // const { 
-    //   firstname, 
-    //   lastname, 
-    //   email, 
-    //   phone, 
-    //   handleChange, 
-    //   validateFirstName,
-    //   validateLastName,
-    //   isErrorFirstName,
-    //   isErrorLastName,
-    //   errorMessageFirstName,
-    //   errorMessageLastName
-    // } = this.props;
 
     return (
       <Main className='form'>
@@ -137,50 +143,48 @@ class PersonalDetails extends Component {
             stepClassName={'stepper__step'}
           />
 
-<Main1>
+      <Main1>
             <FormContainer>
                 <Form>
                     <Heading>
-                    *Choose the type of Software you need:
+                         *Choose the type of  you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Label htmlfor="1st">
-                        <Input type="checkbox" id="1st" checked={softwareTypes.includes('1st')} onChange={this.handleCheckboxChange} />
-
+                    <Input type="checkbox" id="Corporate Website/App" checked={softwareTypes.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
+                    <Label htmlfor="Corporate Website/App">
                         Corporate Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        
-                        <Label htmlfor="2st">
-                        <Input type="checkbox" id="2st" checked={softwareTypes.includes('2st')} onChange={this.handleCheckboxChange} />
+                        <Label htmlfor="Portfolio Website/App">
+                        <Input type="checkbox" id="Portfolio Website/App" checked={softwareTypes.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
                          Portfolio Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="3st">
-                        <Input type="checkbox" id="3st" checked={softwareTypes.includes('3st')} onChange={this.handleCheckboxChange} />
+                        <Label htmlfor="Digital Media Website/App">
+                        <Input type="checkbox" id="Digital Media Website/App" checked={softwareTypes.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
                         Digital Media Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="4st">
-                        <Input type="checkbox" id="4st" checked={softwareTypes.includes('4st')} onChange={this.handleCheckboxChange} />
+                        <Label htmlfor="Educational Website/App">
+                        <Input type="checkbox" id="Educational Website/App" checked={softwareTypes.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
                         Educational Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="5st">
-                        <Input type="checkbox" id="5st" checked={softwareTypes.includes('5st')} onChange={this.handleCheckboxChange} />
+                        <Label htmlfor="Content aggregator">
+                        <Input type="checkbox" id="Content aggregator" checked={softwareTypes.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
                         Content aggregator(eg: Forum)
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Input type="checkbox" id="6st" checked={softwareTypes.includes('6st')} onChange={this.handleCheckboxChange} />
-                        <Input1 type="text" placeholder="others (please specify"/>
+                        <Input1 type="text" id="6st" placeholder="others (please specify"/>
                     </CheckBoxCon>
 
                 </Form>
@@ -190,67 +194,67 @@ class PersonalDetails extends Component {
                 <Form>
                     <Heading>
                     *How many pages will your website/App
- have?
+                      have?
                     </Heading>
                     <InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    I am not sure
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    up to 50
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    50-100
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    100-500
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    500-1,000
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    1,000-5,000
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    5,000-10,000
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
-    more than 10,000
-    </Label>
-</InputContainer>
-{formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
-                </Form>
-            </FormContainer>
-        </Main1>
-        </form>
-        <Button style={{textAlign: 'center'}}>
-            <button type='submit' className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
-      </Main>
-    )
-  }
+              <Label>
+                  <Input type='radio' name="industry" value="I am not sure" onChange={this.handleRadioChange}/>
+                  I am not sure
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  up to 50
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  50-100
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="100-500" onChange={this.handleRadioChange}/>
+                  100-500
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="500-1,000" onChange={this.handleRadioChange}/>
+                  500-1,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="  1,000-5,000" onChange={this.handleRadioChange}/>
+                  1,000-5,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="5,000-10,000" onChange={this.handleRadioChange}/>
+                  5,000-10,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+                  more than 10,000
+                  </Label>
+              </InputContainer>
+              {formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
+                              </Form>
+                          </FormContainer>
+                      </Main1>
+                      </form>
+                      <Button style={{textAlign: 'center'}}>
+                      <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
+                        </Button>
+          </Main>
+                  )
+                }
 }
 
 export default PersonalDetails;
@@ -261,7 +265,12 @@ justify-content:end;
 margin-top:90px;
 margin-left:-90px;
 `
-
+const Button1 = Styled.button`
+background-color:blue;
+height:40px;
+width:120px;
+color:white;
+`
 const Main = Styled.div`
 background-color:#0C111F;
 `

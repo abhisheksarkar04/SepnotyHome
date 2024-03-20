@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import ThirdPage from '../AllForms/Website/ThirdPage';
 
@@ -17,6 +18,11 @@ class YourIndustry extends Component {
   continue = e => {
     e.preventDefault();
     const { selectedService, websiteLink } = this.state;
+    const formData = {
+      field3: {selectedService,websiteLink},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     if (!selectedService) {
       this.setState({ error: 'Please select a service.' });
       return;
