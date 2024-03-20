@@ -128,7 +128,7 @@ export const H1Cont = styled.div`
   display: flex;
   flex-direction: row;
 `;
-  
+   
 export const Content = styled.p`
   font-family: Sans-serif;
   font-size: 10px;

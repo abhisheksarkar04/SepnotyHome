@@ -124,7 +124,7 @@ const CreateBlog = () => {
                   {option.label}
                 </option>
               ))}
-            </select>
+            </select> 
           </div> 
         </DropDown>
         <ChooseFile>

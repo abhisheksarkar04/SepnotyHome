@@ -126,7 +126,6 @@ const CreateBlog = () => {
       <Container>
         <Container1>
           <Title type="text" placeholder="Title" />
-
           <DropDown>
           <div>
             {/* <label htmlFor="dropdown">Select an option:</label> */}
