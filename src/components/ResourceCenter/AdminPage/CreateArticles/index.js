@@ -1,4 +1,5 @@
 import {
+  GlobalStyle,
   Container,
   CreatePostBtn,
   Container1,
@@ -8,10 +9,13 @@ import {
   Button,
   NoFile,
   Container2,
+
   /* H1Cont,
     Content, */
   LastButton,
 } from "./styled";
+
+import { ThemeProvider } from "styled-components";
 import React, { useState, useRef } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -40,6 +44,7 @@ const StyledQuill = styled(ReactQuill)`
   }
 `;
 
+const theme = {};
 const modules = {
   toolbar: [
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -72,32 +77,36 @@ const CreateArticles = () => {
   };
 
   return (
-    <Container>
-      <CreatePostBtn>Create New Articles</CreatePostBtn>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <ChooseFile>
-          <Button onClick={handleFileSelect}>Choose File</Button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
-        </ChooseFile>
-        <Container2>
-          <StyledQuill
-            theme="snow"
-            value={value}
-            onChange={setValue}
-            modules={modules}
-            placeholder="project Description"
-          />
-        </Container2>
-        <LastButton>Create Articles</LastButton>
-      </Container1>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Container>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+            <NoFile>
+              {selectedFile ? selectedFile.name : "No file chosen"}
+            </NoFile>
+          </ChooseFile>
+          <Container2>
+            <StyledQuill
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+              placeholder="project Description"
+            />
+          </Container2>
+          <LastButton>Create Articles</LastButton>
+        </Container1>
+      </Container>
+    </ThemeProvider>
   );
 };
 export default CreateArticles;

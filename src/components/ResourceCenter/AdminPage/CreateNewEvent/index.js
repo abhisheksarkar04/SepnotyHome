@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+
 import styled from "styled-components";
-import dropdown from "./kkkk.svg";
+
+import { ThemeProvider } from "styled-components";
 
 import {
   Container,
@@ -27,44 +27,10 @@ import {
   TimeInput,
   MapContainer,
   LocationCon,
+  GlobalStyle,
 } from "./style";
 
-const selectStyle = {
-  backgroundColor: "transparent",
-  color: "black",
-  padding: "8px",
-  borderRadius: "10px",
-  width: "200px",
-};
-const optionStyle = {
-  backgroundColor: "white",
-  color: "",
-};
-
-const modules = {
-  toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    [{ font: [] }],
-
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-  ],
-};
-
-const Locations = [
-  "Location",
-  "Hyderabad",
-  "Vizag",
-  "Banglore",
-  "Kolkata",
-  "Delhi",
-];
+const theme = {};
 
 const statesWithCities = [
   "Hyderabad",
@@ -117,42 +83,52 @@ const CreateEvent = () => {
       .sort((a, b) => a.localeCompare(b)),
   ];
   return (
-    <Container>
-      <CreatePostBtn>Create New Events and Workshops</CreatePostBtn>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <ChooseFil>
-          <DateInput type="date" value={current} onChange={handledatechange} />
-          <TimeInput type="time" value={time} />
-        </ChooseFil>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
 
-        <div>
-          <Select>
-            id="option-dropdown" value={selectedOption}
-            onChange={handleSelectOption}
-            {filteredOptions.map((option, index) => (
-              <Option key={index} value={option}>
-                {option}
-              </Option>
-            ))}
-          </Select>
-        </div>
+      <Container>
+        <CreatePostBtn>Create New Events and Workshops</CreatePostBtn>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <ChooseFil>
+            <DateInput
+              type="date"
+              value={current}
+              onChange={handledatechange}
+            />
+            <TimeInput type="time" value={time} onChange={handleChange} />
+          </ChooseFil>
 
-        <Title type="text" placeholder="Entry Fees" />
-        <ChooseFile>
-          <Button onClick={handleFileSelect}>Choose File</Button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
-        </ChooseFile>
+          <div>
+            <Select>
+              id="option-dropdown" value={selectedOption}
+              onChange={handleSelectOption}
+              {filteredOptions.map((option, index) => (
+                <Option key={index} value={option}>
+                  {option}
+                </Option>
+              ))}
+            </Select>
+          </div>
 
-        <LastButton>Create Events and Workshops</LastButton>
-      </Container1>
-    </Container>
+          <Title type="text" placeholder="Entry Fees" />
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+            <NoFile>
+              {selectedFile ? selectedFile.name : "No file chosen"}
+            </NoFile>
+          </ChooseFile>
+
+          <LastButton>Create Events and Workshops</LastButton>
+        </Container1>
+      </Container>
+    </ThemeProvider>
   );
 };
 

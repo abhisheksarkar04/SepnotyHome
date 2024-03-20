@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle` 
+ *{ box-sizing: border-box;
+  margin: 0px;
+  font-family: "Inter";
+ }
+`;
 
 export const Container = styled.div`
   width: 100%;
