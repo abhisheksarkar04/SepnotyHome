@@ -5,6 +5,8 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 import { ThemeProvider } from "styled-components";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 import {
   Container,
@@ -47,6 +49,66 @@ const statesWithCities = [
   "Jaipur",
 ];
 
+const StyledQuill = styled(ReactQuill)`
+  /* Add your custom styles here */
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  border-bottom: 1px solid #2b459b;
+  border-right: 1px solid #2b459b;
+  border-left: 1px solid #2b459b;
+  outline: none;
+  font-size: 20px;
+
+  .ql-editor {
+    font-size: 20px;
+    line-height: 1.5;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    height: 70px; /* Adjust height as needed */
+    padding: 10px;
+    overflow-y: auto;
+    outline: none;
+  }
+  .ql-container {
+    border: none;
+  }
+  .ql-toolbar {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    z-index: 1;
+    /* Add border */
+  }
+  .ql-toolbar .ql-picker-label {
+    font-size: 16px; /* Adjust font size for the toolbar buttons */
+    font-weight: 600;
+    color: #263238;
+  }
+`;
+
+const fonts = [
+  "Arial",
+  "Georgia",
+  "Verdana",
+  "Courier New",
+  // Add more font styles as needed
+];
+
+const modules = {
+  toolbar: [
+    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    [{ font: [] }],
+
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+  ],
+};
 const CreateEvent = () => {
   const [value, setValue] = useState("");
   const [current, setcurrent] = useState("");
@@ -150,17 +212,15 @@ const modules = {
             <TimeInput type="time" value={time} onChange={handleChange} />
           </ChooseFil>
 
-          <div>
-            <Select>
-              id="option-dropdown" value={selectedOption}
-              onChange={handleSelectOption}
-              {filteredOptions.map((option, index) => (
-                <Option key={index} value={option}>
-                  {option}
-                </Option>
-              ))}
-            </Select>
-          </div>
+          <Select>
+            id="option-dropdown" value={selectedOption}
+            onChange={handleSelectOption}
+            {filteredOptions.map((option, index) => (
+              <Option key={index} value={option}>
+                {option}
+              </Option>
+            ))}
+          </Select>
 
           <Title type="text" placeholder="Entry Fees" />
           <ChooseFile>
@@ -171,12 +231,13 @@ const modules = {
               style={{ display: "none" }}
               onChange={handleFileUpload}
             />
-            <NoFile>
-              {selectedFile ? selectedFile.name : "No file chosen"}
-            </NoFile>
           </ChooseFile>
           <Container2>
+
+
+
           <StyledQuill
+
               theme="snow"
               value={value}
               onChange={setValue}
