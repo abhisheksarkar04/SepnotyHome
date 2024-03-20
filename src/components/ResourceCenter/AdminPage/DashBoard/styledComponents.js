@@ -46,17 +46,34 @@ export const ImagesCont = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 43%;
+  width: 48%;
   height: 70%;
 `;
 
+export const CreateCon = styled.button`
+  display: flex;
+  flex-direction: row;
+  background-color: #2b459b;
+  align-items: center;
+  height: 50%;
+  width: 35%;
+  border-radius: 10px;
+  margin-left: 5%;
+  padding-left: 10px;
+`;
 export const AddImg = styled.img`
-  width: 200px;
-  height: 40px;
-  margin-top: 10px;
-  margin-left: 40px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 0px;
 `;
 
+export const CreateTitle = styled.p`
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+`;
 export const Contactimgcon = styled.div`
   display: flex;
   flex-direction: row;
@@ -94,8 +111,8 @@ export const ColumnDiv = styled.div`
   justify-content: space-between;
   background-color: ;
   margin-top: 10px;
-  width: 15%;
-  margin-right: 30px;
+  width: 25%;
+  margin-right: 10px;
 `;
 export const ArticalCon = styled.div`
   display: flex;
@@ -112,7 +129,7 @@ export const Icons = styled.img`
 
 export const IconName = styled.p`
   font-family: Sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   font-weight: 500;
   text-align: left;
@@ -126,8 +143,7 @@ export const IconName = styled.p`
 
 export const Containerfour = styled.div`
   display: flex;
-  width: 80%;
-  margin-left: 30px;
+  width: 75%;
 
   border: 1px solid #d9d9d9;
   flex-direction: column;

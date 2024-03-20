@@ -68,10 +68,17 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
-import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
+
+import Myblog from "./components/ResourceCenter/Myblog";
+import AdminCareerOppurtunities from "./components/ResourceCenter/AdminCareerOppurtunities";
+import CreateBlog from "./components/ResourceCenter/AdminPage/NewBlog";
+import CreateJob from "./components/ResourceCenter/AdminPage/NewJob";
+
 import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
 import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
 import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
+import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
+import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -151,6 +158,8 @@ const AppRoutes = () => {
         path="/services/Graphic-Designing"
         component={GraphicDesignPage}
       />
+      <Route exact path="/DashBoard/Admin/CreateBlog" component={CreateBlog} />
+      <Route exact path="/DashBoard/Admin/CreateJob" component={CreateJob} />
       <Route
         exact
         path="/AboutUsComponents/AboutCompany"
@@ -287,13 +296,13 @@ const AppRoutes = () => {
         path="/resource-center/admin-login/dash-board"
         component={DashBoard}
       />
+
+      <Route exact path="/DashBoard/Admin/NewReport" component={NewReport} />
       <Route
         exact
-        path="/resource-center/admin-login/dash-board/create-post"
-        component={CreatePost}
+        path="/resourse-center/admin-login/createevent"
+        component={CreateEvent}
       />
-      <Route exact path="/DashBoard/Admin/NewReport" component={NewReport}/>
-      <Route exact path="/resourse-center/admin-login/createevent" component={CreateEvent}/>
 
       <Route
         exact
@@ -347,6 +356,22 @@ const AppRoutes = () => {
         exact
         path="services/web-development/subcard"
         component={SubCard}
+      />
+
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/create-project"
+        component={CreateProject}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
       />
     </Switch>
   );
