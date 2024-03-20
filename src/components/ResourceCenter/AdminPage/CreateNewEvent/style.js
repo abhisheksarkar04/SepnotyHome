@@ -15,7 +15,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
+  padding: 10px 0 80px 0;
   align-items: center;
 
   ::placeholder {
@@ -49,16 +49,17 @@ export const Container1 = styled.div`
 `;
 
 export const Title = styled.input`
-  height: 47px;
+  height: 55px;
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 20px;
   align-items: start;
   padding-left: 30px;
-  color: #263238;
+  color: ;
+  color: #263238B2(25, 0, 0, 0.1);
   background-color: #d9d9d9;
-  font-size: 20px;
+  font-size: 16px;
   outline: none;
 `;
 
@@ -89,25 +90,26 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #435aa7;
-  color: white;
-  font-family: Sans-serif;
-  font-size: 13px;
-  border: none;
-  padding: 7px 15px 7px 15px;
-  border-radius: 5px;
+background-color: #D9D9D9;
+color: #000000;
+font-family: Sans-serif;
+font-size: 16px;
+border: 1px solid #000000;
+padding: 7px 15px 7px 15px;
+border-radius: 2px;
+box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
 `;
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: black;
   padding-left: 10px;
   font-size: 20px;
 `;
 
 export const Container2 = styled.div`
-  height: 250px;
+  height: 120px;
   width: 95%;
   margin-top: 30px;
   border-radius: 3px;
@@ -133,13 +135,13 @@ export const Content = styled.p`
 export const LastButton = styled.button`
   height: 40px;
   width: 95%;
-  border-radius: 10px;
+  border-radius: 18px;
   margin-left: 35px;
   margin-top: 40px;
-  color: #2b459b;
+  color: #fff;
   font-weight: bold;
   padding-left: 30px;
-  background-color: #d9d9d9;
+  background-color: #2B459B;
   font-size: 20px;
 `;
 
@@ -160,8 +162,8 @@ export const Div1 = styled.div`
   align-items: center;
 `;
 export const DateInput = styled.input`
-  height: 65px;
-  width: 33%;
+  height: 55px;
+  width: 35%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -200,7 +202,7 @@ export const Div2 = styled.div`
 `;
 
 export const Select = styled.select`
-  height: 65px;
+  height: 55px;
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
@@ -217,8 +219,8 @@ export const Select = styled.select`
 `;
 
 export const TimeInput = styled.input`
-  height: 65px;
-  width: 33%;
+height: 55px;
+width: 35%; 
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -233,7 +235,10 @@ export const TimeInput = styled.input`
 `;
 
 export const LocationCon = styled.div`
+
   display: flex;
   flex-direction: row;
   background-color: #d9d9d9;
 `;
+
+
