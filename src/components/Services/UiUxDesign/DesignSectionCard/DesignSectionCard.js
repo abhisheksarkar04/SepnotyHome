@@ -24,8 +24,10 @@ const DesignSectionCard = (props) => {
 
   return (
     <AppCardCon>
+    <div>
       <HeadingSpan />
       <WebSectionTwoHeading>{title}</WebSectionTwoHeading>
+      </div>
       <AppAbout>{about}</AppAbout>
       <ImgCon>
         <InsertImg src={img} />

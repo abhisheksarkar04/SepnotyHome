@@ -8,21 +8,40 @@ import ThirdPage from '../AllForms/Website/ThirdPage';
 
 
 class YourIndustry extends Component {
+ state = {
+      selectedService: '',
+      websiteLink: '',
+      error: ''
+    };
+
   continue = e => {
     e.preventDefault();
-    this.props.nextStep(); 
-    // const isFirstNameValid = this.props.validateFirstName();
-    // const isLastNameValid = this.props.validateLastName();
-    // if (isFirstNameValid && isLastNameValid) {
-    //   this.props.nextStep();
-    // }
-  }
+    const { selectedService, websiteLink } = this.state;
+    if (!selectedService) {
+      this.setState({ error: 'Please select a service.' });
+      return;
+    }
+    // Store the selected data in parent component or wherever required
+    // this.props.storeData(selectedService, websiteLink);
+    this.props.nextStep();
+  };
+
+  handleRadioChange = (e) => {
+    this.setState({ selectedService: e.target.value, error: '' });
+  };
+
+  handleWebsiteLinkChange = (e) => {
+    this.setState({ websiteLink: e.target.value });
+  };
+
   back = e => {
     e.preventDefault();
     this.props.prevStep();
   }
 
+
   render() {
+    const {error} = this.state
     // const { 
     //   firstname, 
     //   lastname, 
@@ -57,7 +76,91 @@ class YourIndustry extends Component {
             stepClassName={'stepper__step'}
           />
 
-          <ThirdPage />
+<Main1>
+            <Form1>
+                <Heading>
+                *What service(s) do you need?
+                </Heading>
+                <Form2>
+                <InputContainer>
+<Label>
+<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+Website development
+</Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    Technical Consulting
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    UX design / Redesign
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    UI design / Redesign
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Transportation & Logistics" onChange={this.handleRadioChange}/>
+    CMS development
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Telecommunications" onChange={this.handleRadioChange}/>
+    Technical SEO
+    </Label>
+</InputContainer>
+
+                </Form2>
+
+            </Form1>
+            <Form1>
+            <Form3>
+                <InputContainer>
+<Label>
+<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+Migration to a new CMS
+</Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    Delivery of new features
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    Troubleshooting
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    <Input1 type="text" placeholder="others (please specify)"/>
+    </Label>
+</InputContainer>
+<InputContainer>
+<P>
+Please provide a link to your existing website if you have one</P>
+<Input2 
+              type="text" 
+              placeholder="Please add here"
+              value={this.state.websiteLink}
+              onChange={this.handleWebsiteLinkChange}
+            /></InputContainer>
+ {error && <ErrorMessage>{error}</ErrorMessage>}
+                </Form3>
+            </Form1>
+        </Main1>
             
           <Button style={{textAlign: 'center'}}>
           <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
@@ -83,3 +186,73 @@ margin-left:-90px;
 const Main = Styled.div`
 background-color:#0C111F;
 `
+
+const P = Styled.p`
+color:#000000;
+font-size:15px;
+margin-bottom:10px;
+`
+
+const Main1 = Styled.div`
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-item:center;
+gap:20px;
+`
+const Form1 = Styled.div`
+display:flex;
+flex-direction:column;
+border: 1px solid #C1CAE7;
+background: #C1CAE7;
+gap:-20px;
+border-radius:10px;
+padding:20px;
+height:350px;
+width:700px;
+`
+const Heading = Styled.h1`
+color:#263238;
+font-size:18px;
+font-weight:700;
+margin-bottom:20px;
+font-family:Roboto;
+`
+const Form2 = Styled.form`
+
+`
+const Input = Styled.input`
+margin-right:10px;
+`
+const InputContainer=Styled.div`
+margin-top:20px;
+`
+const Label = Styled.label`
+font-size:16px;
+font-family:Roboto;
+font-weight: 500;
+color:#263238;
+letter-spacing: 0em;
+text-align: left;
+`
+const Input1 = Styled.input`
+background:transparent;
+border: 1px solid gray;
+font-size:15px;
+color: #263238;
+font-weight:500;
+margin-left:10px;
+`
+const Input2 = Styled.input`
+background: #C1CAE7;
+border: 1px solid #8C8C8C;
+width:250px;
+border-radius:4px;
+`
+const Form3 = Styled.div`
+margin-top:50px;
+`
+const ErrorMessage = Styled.div`
+  color: red;
+  margin-top: 10px;
+`;

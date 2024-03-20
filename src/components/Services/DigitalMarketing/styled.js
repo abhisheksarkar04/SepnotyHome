@@ -41,25 +41,25 @@ export const ConRecHead = styled.h1`
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width: 50%;
+  width: 70%;
   padding: 0px 30px 30px 0px;
 `;
 
 export const Rectangle1 = styled.img`
   position: absolute;
   right: 0;
-  height: 63%;
+  height: 65%;
   width: 37%;
-  top: 12%;
+  top: 15%;
   z-index: 0;
 `;
 
 export const Rectangle2 = styled.img`
   position: absolute;
-  right: 16.1%;
+  right: 16.5%;
   height: 80%;
   width: 60%;
-  top: -11%;
+  top: -1%;
   z-index: 0;
 `;
 
@@ -77,17 +77,17 @@ export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -23px;
+  margin-left: -29px;
 `;
 
 export const ServiceItemCon = styled.div`
-  margin-top: 4.7%;
+  margin-top: 3.5%;
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 30px;
   font-size: 23px;
   color: #ffffff;
-  width: 90%;
+  width: 80%;
   line-height: 1.5;
 `;
 
@@ -113,7 +113,7 @@ export const ServiceItemButton = styled.button`
 `;
 
 export const ServiceItemDetails = styled.div`
-  margin: 20px 5% 35px 8.6%;
+  margin: 20px 5% 35px 8.3%;
 `;
 
 export const ConatctCon = styled.div`
@@ -126,7 +126,7 @@ export const ConatctCon = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
   border-radius: 3px;
 `;

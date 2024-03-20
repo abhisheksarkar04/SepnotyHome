@@ -86,8 +86,8 @@ import styled from "styled-components";
 Sepnoty is committed to promoting sustainability in all aspects of our operations. We recognize that our activities have social, environmental, and economic impacts, and we are dedicated to minimizing our negative impacts while maximizing positive contributions to society and the planet.
 Sustainability Policy is classified into five divisions.
                 </Para>
-                <para>Environmental Stewardship
-</para>
+                <Para>Environmental Stewardship
+</Para>
 <Para>Social Responsibility
 </Para>
 <Para>
@@ -118,8 +118,9 @@ Economic Prosperity
   const Main = styled.div`
   display:flex;
   flex-direction:column;
-  margin-left:100px;
+  margin-left:120px;
   gap:10px;
+  margin-bottom:60px;
   `
   const Main1 = styled.div`
   display:flex;
@@ -133,7 +134,10 @@ Economic Prosperity
   height:260px;
   margin-right:10px;
   margin-left:-130px;
-  margin-top:100px;
+  margin-top:120px;
+
+
+  
   `
   const Para1 = styled.p`
   font-size:24px;

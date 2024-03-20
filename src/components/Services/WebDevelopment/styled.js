@@ -2,23 +2,25 @@ import styled from "styled-components";
 
 export const WebDevelopmentPage=styled.div`
 background-color:rgba(12, 17, 31, 1);
-width:100vw;
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
-font-size:20px;
+font-size:17px;
 `;
 export const WebPageTitle=styled.h2`
-font-size:22px;
+font-size:17px;
 color:white;
-padding:65px 0px 10px 30px;
+padding:70px 0px 10px 0px;
+padding-left:6%;
 `;
 
 export const WebHeading=styled.h1`
 font-size:28px;
 font-weight:700;
-margin:10px 0px 15px 30px;
+margin:10px 0px 15px 00px;
 color:white;
+padding-left:6%;
 `;
 export const WebSectionTwo=styled.div`
 display:flex;
@@ -30,15 +32,15 @@ justify-content: center;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:24px;
-margin:60px 0px 20px 30px;
+margin:60px 0px 20px 0px;
+padding-left:8%;
 `;
 export const HeadingSpan=styled.span`
 width:65px;
-
 height:8%;
-margin-top: 48px;
+margin-top: -10px;
 align-self: flex-start;
-margin-left: 15px;
+margin-left: 6%;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
@@ -47,12 +49,14 @@ export const WebSectionTwoCardsCon=styled.div`
 display:flex;
 flex-direction:row;
 flex-wrap:wrap;
-width: 80%;
-justify-content: center;
+
+justify-content:space-between;
 margin: 40px 0 40px 0;
+padding-left:6%;
+padding-right:6%;
 `;
 export const ContactCon = styled.div`
-  background-color: #d4daf0;
+background-color: rgba(0, 0, 0, 0.25);
   padding: 20px 0px 20px 0px;
   display: flex;
   justify-content: center;

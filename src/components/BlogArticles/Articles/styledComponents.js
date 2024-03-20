@@ -5,7 +5,6 @@ flex-wrap:wrap;
 padding:20px;
 margin-bottom:40px;
 `;
-
 export const SeeMoreCon=styled.div`
 display:flex;
 flex-direction:row;
@@ -18,15 +17,28 @@ export const SeeMoreButton = styled.button`
   justify-content: center;
   background-color: transparent;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   cursor: pointer;
   position: relative;
+  color:white;
 `;
-
+export const DownArrow=styled.button`
+color:white;
+font-size:40px;
+align-self:center;
+cursor:pointer;
+margin-left:50px;
+`;
 export const HrLine=styled.hr`
 height:1px;
 color:white;
 width:43%;
 margin-right:10px;
 margin-top:20px;
+`;
+export const Click=styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-self:center;
 `;

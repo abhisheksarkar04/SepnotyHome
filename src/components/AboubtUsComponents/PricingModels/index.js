@@ -35,13 +35,20 @@ import {
   import rectangle1 from "../images/Rectangle 1.svg"
   import rectangle2 from "../images/Rectangle2.svg";
   import rectangle3 from "../images/Rectangle3.svg";
+  import Model from "../ContactPrice/index"
   
   // import GroupImg from "../images/Group.svg"
   
   // import ContactForm from "../../ContactUs/ContactForm";
   import FooterSection from "../../Footer/FooterSection";
+import { useState } from "react";
   
   const PriceModel= () => {
+    const [seeContact,setSeeContact] = useState(false);
+
+    const toggleContact = () => {
+      setSeeContact(true)
+    }
     return (
       <>
         <DigitalContainer>
@@ -74,9 +81,9 @@ import {
                 <Main4>
                 <Main3>
                     <Rupee>₹0</Rupee>
-                    <Rupee>Free forever</Rupee>
+                    <p>Free forever</p>
                 </Main3>
-                <Botton>
+                <Botton >
                     Get Started
                 </Botton>
                 
@@ -94,9 +101,9 @@ For individuals and teams who need more control over moving and managing their d
                 <Main2>
                 <Main3>
                     <Rupee>₹1,676</Rupee>
-                    <Rupee>Per month</Rupee>
+                    <p>Per month</p>
                 </Main3>
-                <Botton>
+                <Botton onClick={toggleContact}>
                     Contact
                 </Botton>
                 
@@ -114,17 +121,20 @@ For teams that want to collaborate and build for themselves and their customers.
                 <Main5>
                 <Main3>
                     <Rupee>₹8,940</Rupee>
-                    <Rupee>Free forever</Rupee>
+                    <p>Free forever</p>
                 </Main3>
-                <Botton>
+                <Botton onClick={toggleContact}>
                     Contact
                 </Botton>
                 
                 </Main5>
             </Main1>
+            
           </Main>
         </DigitalContainer>
+        {seeContact && <Model/>}
         <FooterSection />
+        
       </>
     );
   
@@ -136,28 +146,28 @@ For teams that want to collaborate and build for themselves and their customers.
   margin-top:100px;
   display:flex;
   flex-direction:row;
-  margin-left:100px;
+  margin-left:130px;
   gap:80px;
   margin-bottom:12%;
   `
   const Main1 = Styled.div`
   background:#D9D9D9;
   border-radius:10px;
-  width:380px;
+  width:350px;
   height:300px;
-padding:13px;
+  padding:13px;
   `
   const Main2 = Styled.div`
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  margin-top:70px;
+  margin-top:90px;
   `
   const Main3 = Styled.div`
-  margin-top: -20px;
+  
   `
   const Heading1 = Styled.h1`
-  color: #000000;
+  color: #3d3d3d;
   font-size:32px;
   font-weight:700;
   margin-bottom:20px;
@@ -169,7 +179,7 @@ padding:13px;
   `
   const Rupee = Styled.p`
   color: #000000;
-  font-size:24px;
+  font-size:20px;
   margin-top: 10px;
   font-weight: 500;
   `
@@ -188,7 +198,7 @@ color: #000000;
   const Main4 = Styled.div`
   display:flex;
   flex-direction:row;
-  margin-top:110px;
+  margin-top:130px;
   justify-content:space-between;
   `
   const Main5 = Styled.div`

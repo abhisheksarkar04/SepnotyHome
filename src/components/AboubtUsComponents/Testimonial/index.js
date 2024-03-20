@@ -43,7 +43,7 @@ import {
       <>
         <DigitalContainer>
           <Header>
-          Resource centre &gt; <Span>Testimonials</Span>
+          Recognition &gt; <Span>Testimonials</Span>
           </Header>
           <Service>About Us</Service>
           <ContentRecomContainer>
@@ -67,110 +67,86 @@ import {
             <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
-           </Main2>
-                <Main2>
-                   
-                        <Image1 src={Image} alt="not-found"/>
-                        <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    
-                    <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
-                </Main2>
-                <Main2>
-                   
-                        <Image1 src={Image} alt="not-found"/>
-                        <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    
-                    <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
-                </Main2>
-                <Main2>
-                   
-                   <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-               
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
            <Main2>
                    
                    <Image1 src={Image} alt="not-found"/>
-                   <P><Spam></Spam>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
                
-               <P>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </P>
+               <P>John Smith,CMM Level 4 Company,California</P>
+           </Main2>
+           <Main2>
+                   
+                   <Image1 src={Image} alt="not-found"/>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
+               
+               <P>John Smith,CMM Level 4 Company,California</P>
+           </Main2>
+           <Main2>
+                   
+                   <Image1 src={Image} alt="not-found"/>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
+               
+               <P>John Smith,CMM Level 4 Company,California</P>
+           </Main2>
+           <Main2>
+                   
+                   <Image1 src={Image} alt="not-found"/>
+                   <P><Spam></Spam>"I've been a customer of Sepnoty for over two years now, and I have always have been impressed by their professionalism and quality of service. They go above and beyond to ensure customer satisfaction."</P>
+               
+               <P>John Smith,CMM Level 4 Company,California</P>
            </Main2>
             </Main1>
             
@@ -192,20 +168,26 @@ outsourcing services</P>
   flex-direction:row;
   flex-wrap : wrap;
   gap:140px;
-  margin-left:100px;
-  margin-bottom:170px;
+  margin-left:110px;
+  margin-bottom:190px;
   `
   const Main2 = Styled.div`
   border: 0.99px solid #FFFFFF;
-  background: #D9D9D917;
+  background: #2f333f;
   border-radius:7px;
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:20px;
-  height:300px;
+  gap:14px;
+  height:320px;
   width:330px;
+  padding:11px;
   margin-bottom:-120px;
+
+
+
+
+  
   `
   const Image1 = Styled.img`
   margin-bottom:10px;
@@ -216,4 +198,7 @@ outsourcing services</P>
   margin-top:10px;
   color:white;
   text-align:center;
+  width:100%;
   `
+
+

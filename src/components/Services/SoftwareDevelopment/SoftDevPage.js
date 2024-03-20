@@ -39,6 +39,8 @@ import WorkCard from "./SectionFive/WorkCard"
 // import FooterSection from "../../Footer/FooterSection"
 import Slider from "./SectionSix/Slider"
 import ContactForm from "../../ContactUs/ContactForm"
+import CommentsSection from "../../Testimonials/Slider"
+import Meeting from "../../ContactUs/Meeting"
 
 
 
@@ -137,6 +139,7 @@ imgUrl:workimg3,
 },
 ]
 const SoftDevPage = () => {
+  const heading='Have a question to our team or need help with your project?'
   return (
     <SoftDevSection>
     <PageTitle>Services &gt; <ServiceSpan>Software Development</ServiceSpan></PageTitle>
@@ -170,10 +173,11 @@ const SoftDevPage = () => {
     <SectionSix>
     <SectionFiveHeading>Testimonials</SectionFiveHeading>
     <SectionFiveTitle>We're Trusted by <SpanFive>Clients</SpanFive></SectionFiveTitle>
-    <Slider />
+    <CommentsSection />
     </SectionSix>
     <ContactCon>
-    <ContactForm />
+    <Meeting />
+    <ContactForm heading={heading}/>
     </ContactCon>
     <FooterSection />
     </SoftDevSection>

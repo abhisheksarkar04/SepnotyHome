@@ -4,7 +4,8 @@ export const BlueContainer=styled.div`
  display:flex;
  background-color:rgba(43, 69, 155, 1);
  flex-direction:row;
- padding:30px;
+ padding:40px 40px 40px 0px;
+ padding-left:6%;
  justify-content:space-between;
  color:white;
 `;
@@ -18,18 +19,18 @@ width:60%;
 export const LeftHeading=styled.h2`
 color:white;
 font-weight:700;
-font-size:24px;
+font-size:28px;
 margin-bottom:20px;
 `;
 export const LeftTitle=styled.p`
-font-size:16px;
+font-size:25px;
 color:white;
 margin-bottom:40px;
 `;
 export const LeftDescription=styled.p`
-font-size:14px;
+font-size:25px;
 color:white;
-line-height:20px;
+line-height:25px;
 margin-bottom:20px;
 `;
 export const LeftButton=styled.button`
@@ -40,7 +41,7 @@ color:rgba(35, 69, 129, 1);
 border-radius:20px;
 padding:10px 20px 10px 20px;
 width:150px;
-font-size:15px;
+font-size:17px;
 font-weight:600;
 `;
 export const RightImg=styled.img`

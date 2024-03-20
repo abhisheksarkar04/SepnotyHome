@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 20px 40px;
+padding:40px 0px 20px 0px;
+padding-left:6%;
 width:100%;
 min-height: 40vh;
 `;
 export const WebSectionOneHeading=styled.h2`
-font-size:26px;
+font-size:28px;
 color:white;
 width:30%;
 `;
 export const WebSectionDescription=styled.p`
-font-size:20px;
+font-size:24px;
 margin-top:20px;
-width:70%;
+width:80%;
 color:white;
 text-align:justify;
+
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

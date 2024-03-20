@@ -13,27 +13,32 @@ import {
   ServiceItemDesc,
   ImageCon,
   ServiceItemImg,
-  ServiceItemButton,
   ServiceItemDetails,
   ServiceItemCon,
-  ConatctCon,
   PatternCon,
   SmallPattern,
   SeoItemsCon,
   SeoItemsList,
   SeolistItem,
+  BackButton,
 } from "./styled";
 
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
 import SEO from "../Images/seo.svg";
-import ContactForm from "../../ContactUs/ContactForm";
+import Contact from "../../ContactUs/SepnotyQuerySection";
 import FooterSection from "../../Footer/FooterSection";
-import Meeting from "../../ContactUs/Meeting";
+import { useHistory } from "react-router-dom";
 
-const SEOPage = () => {
-  const heading = "Have a question to our team or need help with your project?";
+const SEOPage = (props) => {
+  const heading = "Have a question About our Services ?";
+  const history = useHistory();
+  const handleBackClick = () => {
+    history.goBack();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <DigitalContainer>
@@ -67,7 +72,6 @@ const SEOPage = () => {
               </ServiceItemDesc>
               <ImageCon>
                 <ServiceItemImg src={SEO} alt="seo" />
-                <ServiceItemButton>Learn More</ServiceItemButton>
               </ImageCon>
             </ServiceItemDetails>
           </div>
@@ -174,11 +178,11 @@ const SEOPage = () => {
             </SeoItemsList>
           </SeoItemsCon>
         </ServiceItemCon>
+        <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
-      <ConatctCon>
-        <Meeting />
-        <ContactForm heading={heading} />
-      </ConatctCon>
+
+      <Contact heading={heading} />
+
       <FooterSection />
     </>
   );

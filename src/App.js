@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-
-import { BrowserRouter as Router, Route, Switch  ,useHistory} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import AboutUs from "./components/AboutUsSection/AboutUs/index";
@@ -64,10 +68,17 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
-import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
 
+import Myblog from "./components/ResourceCenter/Myblog";
+import AdminCareerOppurtunities from "./components/ResourceCenter/AdminCareerOppurtunities";
+import CreateBlog from "./components/ResourceCenter/AdminPage/NewBlog";
+import CreateJob from "./components/ResourceCenter/AdminPage/NewJob";
 
-
+import SubCard from "./components/Services/WebDevelopment/SubCard/SubCard";
+import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
+import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
+import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
+import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -84,14 +95,11 @@ function ScrollToTopOnPageChange() {
   return null;
 }
 
-
-
-
 const App = () => {
   return (
     <>
       <Router>
-      <ScrollToTopOnPageChange />
+        <ScrollToTopOnPageChange />
         <Navbar />
         <AppRoutes />
       </Router>
@@ -135,16 +143,7 @@ const AppRoutes = () => {
         path="/services/software-development"
         component={SoftDevPage}
       />
-      <Route
-        exact
-        path="/services/digital-marketing"
-        component={DigitalMarketing}
-      />
-      <Route
-        exact
-        path="/services/software-development"
-        component={SoftDevPage}
-      />
+
       <Route exact path="/services/web-development" component={WebDevPage} />
       <Route
         exact
@@ -159,6 +158,8 @@ const AppRoutes = () => {
         path="/services/Graphic-Designing"
         component={GraphicDesignPage}
       />
+      <Route exact path="/DashBoard/Admin/CreateBlog" component={CreateBlog} />
+      <Route exact path="/DashBoard/Admin/CreateJob" component={CreateJob} />
       <Route
         exact
         path="/AboutUsComponents/AboutCompany"
@@ -289,22 +290,20 @@ const AppRoutes = () => {
         path="/resource-center/case-studies-and-success-stories"
         component={CaseStudiesandSuccessStories}
       />
-      <Route 
-          exact
-          path="/resource-center/admin-login"
-          component={UserInput}
+      <Route exact path="/resource-center/admin-login" component={UserInput} />
+      <Route
+        exact
+        path="/resource-center/admin-login/dash-board"
+        component={DashBoard}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board"
-          component={DashBoard}
+
+      <Route exact path="/DashBoard/Admin/NewReport" component={NewReport} />
+      <Route
+        exact
+        path="/resourse-center/admin-login/createevent"
+        component={CreateEvent}
       />
-       <Route 
-          exact
-          path="/resource-center/admin-login/dash-board/create-post"
-          component={CreatePost}
-      />
-     
+
       <Route
         exact
         path="/services/digital-marketing"
@@ -352,6 +351,27 @@ const AppRoutes = () => {
         exact
         path="/ProjectPortfolio/change-by-design"
         component={ChangeByDesign}
+      />
+      <Route
+        exact
+        path="services/web-development/subcard"
+        component={SubCard}
+      />
+
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/create-project"
+        component={CreateProject}
+      />
+      <Route
+        exact
+        path="/DashBoard/Admin/CreateArticles"
+        component={CreateArticles}
       />
     </Switch>
   );
