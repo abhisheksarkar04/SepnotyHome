@@ -9,32 +9,20 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  width: 75%;
 
-  background-color: #0c111f;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
+
+  padding: 10px 0 80px 0;
+
   align-items: center;
 
   ::placeholder {
     color: black;
   }
-`;
-
-export const CreatePostBtn = styled.button`
-  background-color: #435aa7;
-  color: white;
-  align-self: flex-end;
-  width: 300px;
-  height: 40px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: none;
-  margin: 0 140px 30px 0;
-  border-radius: 7px;
-  text-align: center;
 `;
 
 export const Container1 = styled.div`
@@ -44,30 +32,30 @@ export const Container1 = styled.div`
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  margin-left: 50px;
+
   padding: 30px;
 `;
 
 export const Title = styled.input`
-  height: 47px;
-  width: 95%;
+
+  height: 50px;
+
   border-radius: 10px;
-  margin-left: 35px;
   margin-top: 20px;
   align-items: start;
   padding-left: 30px;
-  color: #263238;
+  color: ;
+  color: #263238B2(25, 0, 0, 0.1);
   background-color: #d9d9d9;
-  font-size: 20px;
+  font-size: 16px;
   outline: none;
+  border: none;
 `;
 
 export const Summary = styled.input`
   height: 65px;
-  width: 95%;
   border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
+  margin-top: 30px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
@@ -77,41 +65,42 @@ export const Summary = styled.input`
 
 export const ChooseFile = styled.div`
   height: 65px;
-  width: 95%;
+
   border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
+
+  margin-top: 20px;
   background-color: #d9d9d9;
   padding-left: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 20px;
 `;
 
 export const Button = styled.button`
-  background-color: #435aa7;
-  color: white;
-  font-family: Sans-serif;
-  font-size: 13px;
+
+  background-color: transparent;
+  color: #263238;
+  font-size: 15px;
   border: none;
-  padding: 7px 15px 7px 15px;
-  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+
 `;
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: black;
   padding-left: 10px;
   font-size: 20px;
 `;
 
 export const Container2 = styled.div`
-  height: 250px;
-  width: 95%;
+
   margin-top: 30px;
   border-radius: 3px;
-  margin-left: 30px;
 `;
 
 export const H1Cont = styled.div`
@@ -131,15 +120,15 @@ export const Content = styled.p`
 `;
 
 export const LastButton = styled.button`
-  height: 40px;
-  width: 95%;
+
   border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
-  color: #2b459b;
+  margin-top: 20px;
+  color: #ffffff;
   font-weight: bold;
-  padding-left: 30px;
-  background-color: #d9d9d9;
+  padding: 10px 0px;
+  background-color: #2b459b;
+
+ 
   font-size: 20px;
 `;
 
@@ -151,7 +140,7 @@ export const Div1 = styled.div`
   height: 65px;
   width: 43%;
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 40px;
   background-color: #d9d9d9;
   padding-left: 30px;
@@ -160,11 +149,11 @@ export const Div1 = styled.div`
   align-items: center;
 `;
 export const DateInput = styled.input`
-  height: 65px;
-  width: 33%;
+  height: 55px;
+  width: 35%;
   border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
+
+  margin-top: 30px;
   background-color: #d9d9d9;
   color: #263238;
   padding-left: 30px;
@@ -178,7 +167,7 @@ export const Dropdown = styled.input`
   height: 65px;
   width: 30%;
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 40px;
   background-color: #d9d9d9;
   padding-left: 30px;
@@ -200,11 +189,13 @@ export const Div2 = styled.div`
 `;
 
 export const Select = styled.select`
+
   height: 65px;
-  width: 95%;
+
+
   border-radius: 10px;
-  margin-left: 35px;
-  margin-top: 40px;
+
+  margin-top: 30px;
   background-color: #d9d9d9;
   color: #263238;
   padding-left: 30px;
@@ -217,11 +208,11 @@ export const Select = styled.select`
 `;
 
 export const TimeInput = styled.input`
-  height: 65px;
-  width: 33%;
+height: 55px;
+width: 35%; 
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
+  margin-top: 30px;
   background-color: #d9d9d9;
   color: #263238;
   padding-left: 30px;
@@ -233,7 +224,10 @@ export const TimeInput = styled.input`
 `;
 
 export const LocationCon = styled.div`
+
   display: flex;
   flex-direction: row;
   background-color: #d9d9d9;
 `;
+
+

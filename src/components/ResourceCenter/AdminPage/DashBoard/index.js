@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import sepnoty from "./Images/sepnoty.png";
 import add from "./Images/add.svg";
 import profile from "./Images/profile.png";
@@ -18,7 +19,7 @@ import EventsAndWorkshop from "../Events/Events&Workshop";
 import { Link } from "react-router-dom";
 
 import ArticlesFolder from "../DashBoard/ArticleFolder";
-
+import logout from "./Images/logout.svg";
 import Project from "../Projects";
 import Report from "../ReportFolder/index";
 import CreateReport from "../NewReport/index";
@@ -52,6 +53,7 @@ import {
   SpanHead,
   CreateCon,
   CreateTitle,
+  ActiveTab,
 } from "./styledComponents";
 
 const Lists = [
@@ -103,7 +105,17 @@ const DashBoard = () => {
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
+  const [activeTab, setActiveTab] = useState("articles");
+  const history = useHistory();
 
+  const handleLogout = () => {
+    // Perform any necessary cleanup or logout logic
+    // Redirect the user to the login page
+    history.push("/resource-center/admin-login"); // Replace "/login" with the path to your login page
+  };
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
   const toggleArticles = () => {
     setShowArticles(true);
     setShowCreateArticle(false);
@@ -117,6 +129,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setActiveTab("articles");
   };
 
   const toggleEvents = () => {
@@ -133,6 +146,8 @@ const DashBoard = () => {
     setShowCreateReport(false);
     setShowCreateProject(false);
     setShowCreateEvent(false);
+    setShowCreateArticle(false);
+    setActiveTab("Events and Workshops");
   };
 
   const toggleProjects = () => {
@@ -148,6 +163,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowCreateCareerOpportunities(false);
     setShowCreateEvent(false);
+    setActiveTab("Projects");
   };
 
   const toggleReports = () => {
@@ -163,6 +179,7 @@ const DashBoard = () => {
     setShowCreateReport(false);
     setShowCreateProject(false);
     setShowCreateEvent(false);
+    setActiveTab("Reports");
   };
 
   const toggleBlog = () => {
@@ -178,6 +195,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setActiveTab("Blogs");
   };
 
   const toggleCareerOpportunities = () => {
@@ -193,6 +211,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setActiveTab("Career Opportunities");
   };
 
   const toggleCreateArticle = () => {
@@ -294,7 +313,6 @@ const DashBoard = () => {
           <Containertwo>
             <ImagesCont>
               <Image src={sepnoty} alt="sepnoty" />
-
               {showArticles || showCreateArticle ? (
                 <CreateCon onClick={toggleCreateArticle}>
                   <AddImg src={add} alt="addButton" />
@@ -323,13 +341,14 @@ const DashBoard = () => {
               ) : showEvents || showCreateEvent ? (
                 <CreateCon onClick={toggleCreateEvent}>
                   <AddImg src={add} alt="addButton" />
-                  <CreateTitle>Create Event</CreateTitle>
+                  <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
               ) : null}
             </ImagesCont>
             <Contactimgcon>
               <Name>Manikumar Pokala</Name>
               <Profile src={profile} alt="profile" />
+              <AddImg src={logout} alt="logout" onClick={handleLogout} />
             </Contactimgcon>
           </Containertwo>
 
@@ -337,29 +356,51 @@ const DashBoard = () => {
             <ColumnDiv>
               <ArticalCon onClick={toggleArticles}>
                 <Icons src={vector} alt="icon" />
-                <IconName>My Articles</IconName>
+                {activeTab === "articles" ? (
+                  <ActiveTab>Articles</ActiveTab>
+                ) : (
+                  <IconName>Articles</IconName>
+                )}
               </ArticalCon>
               <ArticalCon onClick={toggleBlog}>
                 <Icons src={blogicon} alt="icon" />
-
-                <IconName>Blogs</IconName>
+                {activeTab === "Blogs" ? (
+                  <ActiveTab>Blogs</ActiveTab>
+                ) : (
+                  <IconName>Blogs</IconName>
+                )}
               </ArticalCon>
               <ArticalCon onClick={toggleCareerOpportunities}>
                 <Icons src={careericon} alt="icon" />
-
-                <IconName>Career Opportunities</IconName>
+                {activeTab === "Career Opportunities" ? (
+                  <ActiveTab>Career Opportunities</ActiveTab>
+                ) : (
+                  <IconName>Career Opportunities</IconName>
+                )}
               </ArticalCon>
               <ArticalCon onClick={toggleReports}>
                 <Icons src={repots} alt="icon" />
-                <IconName>Reports</IconName>
+                {activeTab === "Reports" ? (
+                  <ActiveTab>Reports</ActiveTab>
+                ) : (
+                  <IconName>Reports</IconName>
+                )}
               </ArticalCon>
               <ArticalCon onClick={toggleProjects}>
                 <Icons src={Projects} alt="icon" />
-                <IconName>Projects</IconName>
+                {activeTab === "Projects" ? (
+                  <ActiveTab>Projects</ActiveTab>
+                ) : (
+                  <IconName>Projects</IconName>
+                )}
               </ArticalCon>
               <ArticalCon onClick={toggleEvents}>
                 <Icons src={eventicon} alt="icon" />
-                <IconName>Events and Worshops</IconName>
+                {activeTab === "Events and Workshops" ? (
+                  <ActiveTab>Events and Workshops</ActiveTab>
+                ) : (
+                  <IconName>Events and Workshops</IconName>
+                )}
               </ArticalCon>
             </ColumnDiv>
 
