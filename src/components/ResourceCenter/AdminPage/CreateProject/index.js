@@ -23,26 +23,28 @@ import {
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
   background-color: #d9d9d9;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0px solid transparent;
   outline: none;
+  font-size: 20px;
   .ql-editor {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     border: none;
     color: #fff;
-    border-radius: 2px;
-    background-color: #0c111f;
-    height: 200px; /* Adjust height as needed */
+    border-radius: 10px;
+    height: 70px; /* Adjust height as needed */
     padding: 10px;
     overflow-y: auto;
     outline: none;
   }
-  .ql-editor::before {
-    color: rgba(255, 255, 255, 0.5); /* 50% opacity white */
-  }
   .ql-container {
-    border: 1px solid #2b459b;
+    border: none;
+  }
+  .ql-toolbar {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    /* Add border */
   }
 `;
 
@@ -84,10 +86,9 @@ const CreateProject = () => {
       <GlobalStyle />
 
       <Container>
-        <CreatePostBtn>Create New Project</CreatePostBtn>
         <Container1>
           <Title type="text" placeholder="Title" />
-          <Summary type="text" placeholder="Project Summary" />
+          <Summary type="text" placeholder="Project Description" />
           <ChooseFile>
             <Button onClick={handleFileSelect}>Choose File</Button>
             <input
@@ -106,10 +107,9 @@ const CreateProject = () => {
               value={value}
               onChange={setValue}
               modules={modules}
-              placeholder="project Description"
             />
           </Container2>
-          <LastButton>Create Post</LastButton>
+          <LastButton>Create Project</LastButton>
         </Container1>
       </Container>
     </ThemeProvider>

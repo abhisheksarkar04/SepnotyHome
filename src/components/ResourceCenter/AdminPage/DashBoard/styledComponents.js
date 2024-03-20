@@ -56,7 +56,7 @@ export const CreateCon = styled.button`
   background-color: #2b459b;
   align-items: center;
   height: 50%;
-  width: 35%;
+  width: auto;
   border-radius: 10px;
   margin-left: 5%;
   padding-left: 10px;
@@ -70,9 +70,10 @@ export const AddImg = styled.img`
 
 export const CreateTitle = styled.p`
   color: #ffffff;
-  font-size: 20px;
+  font-size: 90%;
   margin: 0px;
   padding: 0px;
+  
 `;
 export const Contactimgcon = styled.div`
   display: flex;
@@ -156,11 +157,12 @@ export const DateInput = styled.input`
   align-self: flex-end;
   margin-right: 20px;
   border: none;
-  background-color: transparent; /* Set background color to transparent */
+  font-weight: 600;
+  background-color: #2B459B;
   color: white;
   &::-webkit-calendar-picker-indicator {
     filter: invert(1);
-    font-size: 20px;
+    font-size: 22px;
     margin-left: -18px;
     cursor: pointer;
   }
