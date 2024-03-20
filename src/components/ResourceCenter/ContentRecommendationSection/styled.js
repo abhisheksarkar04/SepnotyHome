@@ -28,6 +28,9 @@ export const Resource = styled.h1`
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 3% 0px 3% 6%;
+  @media screen and (max-width: 600px) {
+      background-color: ;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -35,6 +38,9 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
+  @media screen and (max-width: 600px) {
+    
+  }
 `;
 
 export const ConRecDesc = styled.p`
@@ -42,6 +48,10 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width: 50%;
   padding: 15px 30px 15px 0px;
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    font-size: 18px;
+  }
 `;
 
 export const Button = styled.button`
@@ -118,7 +128,11 @@ export const ListItems = styled.ul`
   margin: 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 600px) {
+    width: 0%;
+  }
 `;
 
 export const Rectangle1 = styled.img`

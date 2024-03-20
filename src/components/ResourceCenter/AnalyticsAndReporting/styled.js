@@ -97,6 +97,8 @@ margin-top: -30px;
 margin-left: -10px;
 margin-right: 0px;
 padding: 0 0px 0 0;
+
+
 `;
 export const ServiceSpan=styled.span`
 font-weight:normal;
@@ -123,6 +125,9 @@ export const AnalyticsSection = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
 
 `;
 
@@ -130,8 +135,12 @@ export const AnalyticsSection = styled.div`
 export const ProMainDiv = styled.div`
       width: 50%;
       padding: 30px 0px 0px 40px;
-      margin 0px 50px 10px 0px;
       height: 50%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        padding: 30px 30px 0px 40px;
+      }
+
 
 `;
 
@@ -213,7 +222,7 @@ padding-left: 0px;
 padding-right: 20px;
 border: none;
 cursor: pointer;
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 600px) {
   height: 30px;
   align-self:center;
 }
@@ -276,6 +285,9 @@ export const ListHeading = styled.h1`
   color: #2B459B;
   font-weight: bold;
   margin-left: auto;
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 export const HeadingSearch = styled.h1`
@@ -350,6 +362,10 @@ export const ProExtendMain = styled.div`
    width: 72%;
    display: flex;
    flex-direction: column;
+   @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
 
 
 `;
@@ -371,10 +387,10 @@ export const ProExtendBottom = styled.div`
    justify-content: center;
    align-items: center;
    padding: 20px;
-
-
-
-  
+   @media screen and (max-width: 600px) {
+    width: 80%;
+    margin: 30px 0px 0px 0; 
+  }
 
 
 `;
