@@ -144,7 +144,7 @@ export const Div1 = styled.div`
 `;
 export const DateInput = styled.input`
   height: 55px;
-  width: 35%;
+  width: 41%;
   border-radius: 10px;
 
   margin-top: 30px;
@@ -156,6 +156,8 @@ export const DateInput = styled.input`
   align-items: center;
   font-size: 16px;
   padding-right: 10px;
+  outline: none;
+  border: none;
 `;
 export const Dropdown = styled.input`
   height: 65px;
@@ -201,7 +203,7 @@ export const Select = styled.select`
 
 export const TimeInput = styled.input`
   height: 55px;
-  width: 35%;
+  width: 41%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 30px;
@@ -211,12 +213,28 @@ export const TimeInput = styled.input`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   padding-right: 10px;
+  outline: none;
+  border: none;
 `;
 
 export const LocationCon = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #d9d9d9;
+`;
+
+export const Event = styled.select`
+  height: 55px;
+  width: 35%;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-color: #d9d9d9;
+  color: #263238;
+  padding-left: 30px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding-right: 10px;
 `;

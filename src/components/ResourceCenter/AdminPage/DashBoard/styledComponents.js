@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 80px 30px 5% 30px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const Resources = styled.p`
@@ -76,7 +77,6 @@ export const CreateTitle = styled.p`
   font-size: 90%;
   margin: 0px;
   padding: 0px;
-  
 `;
 export const Contactimgcon = styled.div`
   display: flex;
@@ -165,7 +165,7 @@ export const DateInput = styled.input`
   margin-right: 20px;
   border: none;
   font-weight: 600;
-  background-color: #2B459B;
+  background-color: #2b459b;
   color: white;
   &::-webkit-calendar-picker-indicator {
     filter: invert(1);

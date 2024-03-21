@@ -18,6 +18,7 @@ export const PortfolioHeading = styled.h1`
   color: #ffffff;
   font-size: 25px;
   margin-bottom: 20px;
+  padding-left: 15px;
 `;
 
 export const Desc = styled.p`
@@ -25,6 +26,7 @@ export const Desc = styled.p`
   font-size: 16px;
   line-height: 1.5;
   width: 90%;
+  padding-left: 15px;
 `;
 
 export const SmallPattern = styled.div`
@@ -100,7 +102,7 @@ export const TechCon = styled.div`
   padding: 0px 0px;
   height: 70px;
   padding: 10px 20px;
-  margin: 0px;
+  margin: 20px 0px;
 `;
 
 export const Techtitle = styled.p`
@@ -134,11 +136,11 @@ export const List = styled.ul`
 
 export const ContentContainer = styled.div`
   margin-top: 10px;
-  padding-left: 15px;
 `;
 
 export const Contents = styled.div`
   margin-bottom: 30px;
+  padding-left: 15px;
 `;
 
 export const EditTool = styled.img`

@@ -113,9 +113,15 @@ const DashBoard = () => {
     // Redirect the user to the login page
     history.push("/resource-center/admin-login"); // Replace "/login" with the path to your login page
   };
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
+
+  const getCurrentMonth = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, "0");
+    return `${year}-${month}`;
   };
+  const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+
   const toggleArticles = () => {
     setShowArticles(true);
     setShowCreateArticle(false);
@@ -406,7 +412,13 @@ const DashBoard = () => {
 
             {showArticles && (
               <Containerfour>
-                <DateInput type="month" id="monthInput" name="monthInput" />
+                <DateInput
+                  type="month"
+                  id="monthInput"
+                  name="monthInput"
+                  value={currentMonth}
+                  onChange={(e) => setCurrentMonth(e.target.value)}
+                />
                 {Lists.map((each) => (
                   <ArticlesFolder key={each.id} details={each} />
                 ))}
