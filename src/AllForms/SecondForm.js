@@ -30,7 +30,7 @@ class CourseDetails extends Component {
     e.preventDefault();
     const { selectedIndustries } = this.state;
     const formData = {
-      field2: {selectedIndustries},
+      field2: {selectedIndustries}
       // Add more fields as needed
     };
     handleFormValues(formData);

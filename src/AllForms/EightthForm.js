@@ -8,37 +8,98 @@ import EightthPage from "./Website/EightthPage"
 
 class CourseDetails extends Component {
   state = {
-    current : "Any"
-  }
-
-  handleButtonClick = (page) => {
-    this.setState({ current: page });
+    fullName: '',
+    companyName: '',
+    workEmail: '',
+    phoneNumber: '',
+    current:"Any",
+    formErrors: {
+      fullName: '',
+      companyName: '',
+      workEmail: '',
+      phoneNumber: '',
+    },
   };
-  
-  shouldComponentUpdate(nextProps) {
-    if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
   back = e => {
     e.preventDefault();
     this.props.prevStep();
+  }
+  handleInputChange = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    }, () => {
+      this.validateField(name, value);
+    });
+  };
+  
+
+  // Validate individual form field
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let fullNameValid = this.state.fullNameValid;
+    let companyNameValid = this.state.companyNameValid;
+    let workEmailValid = this.state.workEmailValid;
+    let phoneNumberValid = this.state.phoneNumberValid;
+
+    switch(fieldName) {
+      case 'fullName':
+        fullNameValid = value.trim().length > 0;
+        fieldValidationErrors.fullName = fullNameValid ? '' : 'Full name is required';
+        break;
+      case 'companyName':
+        companyNameValid = value.trim().length > 0;
+        fieldValidationErrors.companyName = companyNameValid ? '' : 'Company name is required';
+        break;
+      case 'workEmail':
+        workEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        fieldValidationErrors.workEmail = workEmailValid ? '' : 'Valid work email is required';
+        break;
+      case 'phoneNumber':
+        phoneNumberValid = value.trim().length > 0;
+        fieldValidationErrors.phoneNumber = phoneNumberValid ? '' : 'Phone number is required';
+        break;
+      default:
+        break;
+    }
+
+    this.setState({
+      formErrors: fieldValidationErrors,
+    });
+  }
+
+  // Handle form submission
+  handleSubmit = e => {
+    e.preventDefault();
+
+    // Check if the form is valid
+    if (this.isFormValid()) {
+      // Proceed with form submission
+      const formData = {
+        fullName: this.state.fullName,
+        companyName: this.state.companyName,
+        workEmail: this.state.workEmail,
+        phoneNumber: this.state.phoneNumber,
+      };
+
+      // Store or submit formData as needed
+      console.log('Form Data:', formData);
+    } else {
+      // Form validation failed
+      console.log('Form Validation Failed');
+    }
+  };
+
+  // Check if the form is valid
+  isFormValid = () => {
+    return Object.values(this.state.formErrors).every(error => error === '');
   };
 
   render() {
-    const {current} = this.state
-
+    const { formErrors ,current } = this.state;
     return (
       <Main className='form'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
 
           <Stepper
             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
@@ -66,28 +127,48 @@ class CourseDetails extends Component {
         <P3>Your contact data</P3>
         <M2>
             <M3>
-                <P4>*Full name</P4>
-                <Input/>
+              <P4>*Full name</P4>
+              <Input
+                type="text"
+                name="fullName"
+                value={this.state.fullName}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.fullName && <Error>{formErrors.fullName}</Error>}
             </M3>
             <M3>
-                <P4>*Company name</P4>
-                <Input/>
+              <P4>*Company name</P4>
+              <Input
+                type="text"
+                name="companyName"
+                value={this.state.companyName}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.companyName && <Error>{formErrors.companyName}</Error>}
             </M3>
-
-        </M2>
-        <br/>
-        <br/>
-        <M2>
+          </M2>
+          <M2>
             <M3>
-                <P4>*Work email</P4>
-                <Input/>
+              <P4>*Work email</P4>
+              <Input
+                type="email"
+                name="workEmail"
+                value={this.state.workEmail}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.workEmail && <Error>{formErrors.workEmail}</Error>}
             </M3>
             <M3>
-                <P4>*Phone number</P4>
-                <Input/>
+              <P4>*Phone number</P4>
+              <Input
+                type="text"
+                name="phoneNumber"
+                value={this.state.phoneNumber}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.phoneNumber && <Error>{formErrors.phoneNumber}</Error>}
             </M3>
-
-        </M2><br/>
+          </M2><br/>
         <M33>
             <P4>Preferred way of communication:</P4>
             <Button1 type="button" active={current === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
@@ -118,7 +199,7 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Submit</button>
+            <button type="submit" className='buttons__button buttons__button--next' onClick={this.continue}>Submit</button>
           </Button>
       </Main>
     )
@@ -126,6 +207,10 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
 }
 
 export default CourseDetails;
+
+const Error = styled.p`
+color:red;
+`
 
 const Button = styled.div`
 display:flex;

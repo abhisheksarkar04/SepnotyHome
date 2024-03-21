@@ -5,7 +5,7 @@ import './App.css';
 // import SecondPage from "./Forms/SevenPage"
 
 import SevenPage from './Website/SevenPage';
-
+import handleFormValues from './allFormValues';
 
 
 
@@ -116,11 +116,16 @@ class SeventhForm extends Component {
 
   continue = e => {
     e.preventDefault();
+    const {compliance,integration,integrationDetails,additionalDetails} = this.state
     if (this.validateForm()) {
       // Store the selected compliance options in state or proceed further
-      console.log("Form data:", this.state);
      
-    }  
+    }
+      const formData = {
+        field7 : {compliance,integration,integrationDetails,additionalDetails}
+      }
+      handleFormValues(formData)
+      
   };
 
   render() {
