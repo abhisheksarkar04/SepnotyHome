@@ -15,37 +15,85 @@ import SevenPage from './Website/SevenPage';
 class SeventhForm extends Component {
   state = {
     compliance: [],
-    otherCompliance: '',
     integration: '',
     integrationDetails: '',
-    errors: {},
+    additionalDetails: '',
+    formErrors: {
+      compliance: '',
+      integration: '',
+      integrationDetails: '',
+      additionalDetails: ''
+    }
   };
 
   validateForm = () => {
-    const { compliance, integration } = this.state;
-    const errors = {};
+    const { compliance , integration, integrationDetails,additionalDetails} = this.state;
+    const formErrors = {};
 
     if (compliance.length === 0) {
-      errors.compliance = "Please select at least one compliance requirement";
+      formErrors.compliance = "Please select at least one compliance requirement";
     }
-
     if (!integration) {
-      errors.integration = "Please specify integration requirement";
+      formErrors.integration = "Please select whether you need integration or not";
+    } else if (integration === "Yes (Please Specify)" && !integrationDetails) {
+      formErrors.integrationDetails = "Please specify integration details";
+    }
+    if (!additionalDetails) {
+      formErrors.additionalDetails = "Please add additional details";
+    }
+    else{
+      this.props.nextStep();
     }
 
-    this.setState({ errors });
-    return Object.keys(errors).length === 0;
+    this.setState({ formErrors });
+    return Object.keys(formErrors).length === 0;
   };
 
-  continue = e => {
-    e.preventDefault();
-    const {compliance ,errors} = this.state
-    if (compliance.length === 0) {
-      this.setState({ errors: 'Please select at least one industry.' });
-      return;
+  handleIntegrationChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value,
+      formErrors: {
+        ...this.state.formErrors,
+        [name]: ''
+      }
+    });
+  };
+
+  handleCheckboxChange = event => {
+    const { id, checked } = event.target;
+    const { compliance } = this.state;
+
+    if (checked) {
+      this.setState(prevState => ({
+        compliance: [...prevState.compliance, id],
+        formErrors: {
+          ...prevState.formErrors,
+          compliance: ''
+        }
+      }));
+    } else {
+      this.setState(prevState => ({
+        compliance: prevState.compliance.filter(type => type !== id),
+        formErrors: {
+          ...prevState.formErrors,
+          compliance: ''
+        }
+      }));
     }
-    this.props.nextStep();
-    
+  };
+
+  handleIntegrationChange = event => {
+    const { name, value } = event.target;
+    this.setState(prevState => ({
+      [name]: value,
+      formErrors: {
+        ...prevState.formErrors,
+        integration: '',
+        integrationDetails: ''
+      }
+    }));
   };
 
   back = e => {
@@ -53,35 +101,30 @@ class SeventhForm extends Component {
     this.props.prevStep();
   };
 
-  handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
+  handleAdditionalDetailsChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value,
+      formErrors: {
+        ...this.state.formErrors,
+        [name]: ''
+      }
+    });
+  };
+  
+
+  continue = e => {
+    e.preventDefault();
+    if (this.validateForm()) {
+      // Store the selected compliance options in state or proceed further
+      console.log("Form data:", this.state);
+     
+    }  
   };
 
-  handleCheckboxChange = e => {
-    const { value, checked } = e.target;
-    let  compliance = [...this.state.compliance]
-
-    if (checked) {
-      compliance.push(value);
-    } else {
-      compliance = compliance.filter(item => item !== value);
-    }
-
-    this.setState({ compliance ,error: ''});
-  };
-  handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    let selectedIndustries = [...this.state.selectedIndustries];
-    if (checked) {
-      selectedIndustries.push(value);
-    } else {
-      selectedIndustries = selectedIndustries.filter(industry => industry !== value);
-    }
-    this.setState({ selectedIndustries, error: '' });
-  };
   render() {
-    const { compliance, otherCompliance, integration, integrationDetails, errors } = this.state;
+    const { compliance, formErrors ,integration, integrationDetails,additionalDetails} = this.state;
 
     return (
       <Main className='form'>
@@ -110,36 +153,40 @@ class SeventhForm extends Component {
                     *Are there any compliance requirements?
                     </Heading>
                     <CheckBoxCon>
-                    <Label htmlfor="one">
-                        <input type="checkbox" id="one" value="No" name='compliance'/>
-                        
-                        No
-                        </Label>
-                    </CheckBoxCon>
+            <Label htmlFor="No">
+              <input 
+                type="checkbox" 
+                id="No" 
+                checked={compliance.includes("No")} 
+                onChange={this.handleCheckboxChange} 
+              />
+              No
+            </Label>
+          </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="two">
-                        <input type="checkbox" id="two" name='compliance' value="HIPPA"/>
+                    <Label htmlfor="HIPPA">
+                        <input type="checkbox" id="HIPPA" checked={compliance.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
                         
                         HIPPA
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="three">
-                        <input type="checkbox" id="three" name='compliance' value="PCI DSS"/>
+                    <Label htmlfor="PCI DSS">
+                        <input type="checkbox" id="PCI DSS" name='compliance' checked={compliance.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
                         
                         PCI DSS
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="four">
-                        <input type="checkbox" id="four" name='compliance' vlaue="GDPR"/>
+                    <Label htmlfor="GDPR">
+                        <input type="checkbox" id="GDPR" name='compliance' checked={compliance.includes("GDPR")} onChange={this.handleCheckboxChange}/>
                         
                         GDPR
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="five">
-                        <input type="checkbox" id="five" name='compliance' value="I need your consultation on compliance"/>
+                    <Label htmlfor="I need your consultation on compliance">
+                        <input type="checkbox" id="I need your consultation on compliance" name='compliance' checked={compliance.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
                         
                         I need your consultation on compliance
                         </Label>
@@ -149,7 +196,7 @@ class SeventhForm extends Component {
                         <Input1 type="text" placeholder="Others (Please Specify)"/>
 
                     </CheckBoxCon>
-                    {errors.compliance && <Error>{errors.compliance}</Error>} 
+                    {formErrors.compliance && <Error>{formErrors.compliance}</Error>}
                 </Form>
             </FormContainer>
             <Form1>
@@ -157,82 +204,59 @@ class SeventhForm extends Component {
             *Do you need integration with any external or internal systems?
                     </Heading>
             <Form2>
-                <InputContainer>
-<Label>
-<Input type='radio' name="industry" value="No" />
-No
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio' name="industry" value="Finanacial"/>
-    <Input1 type="text" placeholder="Yes (Please Specify)"/>
-    </Label>
-</InputContainer>
+            <InputContainer>
+          <Label>
+            <input 
+              type='radio' 
+              name="integration" 
+              value="No" 
+              checked={integration === "No"} 
+              onChange={this.handleIntegrationChange} 
+            />
+            No
+          </Label>
+        </InputContainer>
+        <InputContainer>
+          <Label>
+            <input 
+              type='radio' 
+              name="integration" 
+              value="Yes (Please Specify)" 
+              checked={integration === "Yes (Please Specify)"} 
+              onChange={this.handleIntegrationChange} 
+            />
+            Yes (Please Specify)
+            {integration === "Yes (Please Specify)" && (
+              <Input1 
+                type="text" 
+                name="integrationDetails" 
+                value={integrationDetails} 
+                onChange={this.handleIntegrationChange}
+                placeholder="Please specify integration details"
+              />
+            )}
+          </Label>
+          {formErrors.integration && <Error>{formErrors.integration}</Error>}
+          {formErrors.integrationDetails && <Error>{formErrors.integrationDetails}</Error>}
+        </InputContainer>
 <Heading1>
             *Do you need integration with any external or internal systems?
                     </Heading1>
 
                 </Form2>
-                <Input3 type="text" placeholder="Please add here"/>
+                <Input3 
+          type="text" 
+          name="additionalDetails" 
+          value={additionalDetails} 
+          onChange={this.handleAdditionalDetailsChange}
+          placeholder="Please add here"
+        />
+        {formErrors.additionalDetails && <Error>{formErrors.additionalDetails}</Error>}
                 
-          {errors.integration && <Error>{errors.integration}</Error>}
+         
                 
             </Form1>
         </Mai>
-
- 
-
-
-
-          {/* <div className='select'>
-            <select
-              name='select'
-              onChange={addLevel}
-              className='select__item'
-              value={level}
-            >
-              <option value='null'>Choose course level</option>
-              {levelOptions}
-            </select>
-          </div> */}
-
-          {/* <div className='table'> */}
-
-
-{/* 
-            <MuiThemeProvider theme={theme}>
-              <MaterialTable
-                title='Choose courses'
-                columns={columns}
-                data={coursesOptions}
-                onSelectionChange={addCourse}
-                options={{
-                  search: true,
-                  selection: true,
-                  paging: false,
-                  toolbar: true,
-                  showTextRowsSelected: false,
-                  searchFieldStyle: {
-                    position: 'absolute',
-                    top: '-20px',
-                    right: '-7px',
-                    width: '200px',
-                    backgroundColor: '#fff',
-                    border: '1px solid grey',
-                    padding: '3px 5px',
-                    borderRadius: '3px',
-                  },
-                  headerStyle: {
-                    display: 'none',
-                  },
-                }}
-              />
-            </MuiThemeProvider> */}
-
-          {/* </div> */}
-
-
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
