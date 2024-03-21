@@ -3,7 +3,8 @@ import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 
-import SixthPage from "./Website/SixthPage"
+import SixthPage from "./Website/SixthPage";
+import handleFormValues from './allFormValues';
 
 
 
@@ -32,11 +33,7 @@ class  FormNo5 extends Component {
       errors.mediaContent = 'Please select at least one media content type.';
     }
 
-    if (!paymentSupport) {
-      errors.paymentSupport = 'Please select whether the website or app should support payments.';
-    }
-
-    if (!monthlyVisitors) {
+    if (!monthlyVisitors===0) {
       errors.monthlyVisitors = 'Please select the expected number of monthly visitors.';
     }
 
@@ -45,6 +42,12 @@ class  FormNo5 extends Component {
 
   handleNext = () => {
     const errors = this.validateForm();
+
+    const {  mediaContent, paymentSupport, monthlyVisitors } = this.state;
+    const formData = {
+      field2: { mediaContent, paymentSupport, monthlyVisitors},
+      // Add more fields as needed
+    };
 
     if (Object.keys(errors).length === 0) {
       // No validation errors, proceed to the next step
@@ -102,34 +105,34 @@ class  FormNo5 extends Component {
                     </Heading>
                     <CheckBoxCon>
                     <Label htmlfor="Images">
-                        <input type="checkbox" id="Images" value="Images" onClick={this.handleCheckboxChange}/>
+                        <input type="checkbox" name='mediatype' id="Images" value="Images" onClick={this.handleCheckboxChange}/>
 
                         Images
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Video">
-                        <input type="checkbox" id="Video" value="Video" />
+                        <input type="checkbox" name='mediatype' id="Video" value="Video" />
                        
                         Video
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Audio">
-                        <input type="checkbox" id="Audio" value="Audio" onClick={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="Audio" name='mediatype' value="Audio" onClick={this.handleCheckboxChange}/>
                         
                         Audio
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Interactive content">
-                        <input type="checkbox" id="Interactive content" value="Interactive content" onClick={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="Interactive content" name='mediatype' value="Interactive content" onClick={this.handleCheckboxChange}/>
                         
                         Interactive content
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="five" onClick={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="five" name='mediatype' onClick={this.handleCheckboxChange}/>
                         <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
                         
                         
@@ -142,7 +145,6 @@ class  FormNo5 extends Component {
                         <ActiveButton type="button" active={current === 'Yes'}  onClick={() => this.handleButtonClick('Yes')}>Yes</ActiveButton>
                         <Buttonel type="button" active={current === 'No'}  onClick={() => this.handleButtonClick('No')}>No</Buttonel>
                     </Main5>
-                    {errors.paymentSupport && <Error>{errors.paymentSupport}</Error>}
                 </Form>
             </FormContainer>
             <FormContainer>
@@ -152,60 +154,66 @@ class  FormNo5 extends Component {
                     </Heading>
                     
             <InputContainer>
-            <Input1 type='radio' name="industry" value="Healthcare"/>
+            <Label1>
+            <Input1 type='radio' name="industry" value="I am not sure" onClick={this.handleChange}/>
 
-                <Label1>
+                
                     I am not sure
                     </Label1>
                 </InputContainer>
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="Healthcare" onClick={this.handleChange}/>
+
+                
                     up to 50
                     </Label1>
                 </InputContainer>
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="50-100" onClick={this.handleChange}/>
+
+                
                     50-100
                     </Label1>
                 </InputContainer>
 
                 <InputContainer>
-                    <Input1 type='radio' name="industry" value="Healthcare"/>
+                <Label1>
+                    <Input1 type='radio' name="industry" value="100-500"  onClick={this.handleChange}/>
 
-                    <Label1>
+                    
                         100-500
                     </Label1>
                 </InputContainer>
 
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="500-1,000" onClick={this.handleChange}/>
                     500-1,000
                     </Label1>
                 </InputContainer>
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="1,000-5,000" onClick={this.handleChange}/>
+
+                
                     1,000-5,000
                     </Label1>
                 </InputContainer>
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="5,000-10,000" onClick={this.handleChange}/>
+
+                
                     5,000-10,000
                     </Label1>
                 </InputContainer>
                 <InputContainer>
-                <Input1 type='radio' name="industry" value="Healthcare"/>
-
                 <Label1>
+                <Input1 type='radio' name="industry" value="more than 10,000" onClick={this.handleChange}/>
+
+                
                     more than 10,000
                     </Label1>
             </InputContainer>
