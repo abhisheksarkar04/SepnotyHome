@@ -31,7 +31,7 @@ const StyledQuill = styled(ReactQuill)`
   font-size: 20px;
 
   .ql-editor {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     border: none;
     color: #fff;
@@ -47,7 +47,7 @@ const StyledQuill = styled(ReactQuill)`
   .ql-toolbar {
     border: 2px solid #000000;
     border-radius: 10px;
-    z-index: 1;
+
     /* Add border */
   }
   .ql-toolbar .ql-picker-label {

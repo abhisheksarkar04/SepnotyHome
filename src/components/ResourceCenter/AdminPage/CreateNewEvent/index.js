@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
 
 import styled from "styled-components";
-import "react-quill/dist/quill.snow.css";
-
-import { ThemeProvider } from "styled-components";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { ThemeProvider } from "styled-components";
 
 import {
   Container,
@@ -31,6 +29,7 @@ import {
   MapContainer,
   LocationCon,
   GlobalStyle,
+  Event,
 } from "./style";
 
 const theme = {};
@@ -59,7 +58,7 @@ const StyledQuill = styled(ReactQuill)`
   font-size: 20px;
 
   .ql-editor {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     border: none;
     color: #fff;
@@ -75,7 +74,7 @@ const StyledQuill = styled(ReactQuill)`
   .ql-toolbar {
     border: 2px solid #000000;
     border-radius: 10px;
-    z-index: 1;
+
     /* Add border */
   }
   .ql-toolbar .ql-picker-label {
@@ -117,6 +116,7 @@ const CreateEvent = () => {
   const [time, setTime] = useState("00:00"); // Initial time state
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
+  const [event, setEvent] = useState("Program");
 
   const handleFileSelect = () => {
     fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
@@ -132,63 +132,17 @@ const CreateEvent = () => {
     setSelectedOption(event.target.value);
   };
 
-  const handleChange = (newTime) => {
-    setTime(newTime);
-  };
   const handledatechange = (event) => {
     setcurrent(event.target.value);
   };
 
-  const StyledQuill = styled(ReactQuill)`
-  /* Add your custom styles here */
-  background-color: #d9d9d9;
-  border-radius: 10px;
-  border: 0px solid transparent;
-  outline: none;
-  font-size: 20px;
-  .ql-editor {
-    font-size: 20px;
-    line-height: 1.5;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    height: 70px; /* Adjust height as needed */
-    padding: 10px;
-    overflow-y: auto;
-    outline: none;
-  }
-  .ql-container {
-    border: none;
-  }
-  .ql-toolbar {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    /* Add border */
-  }
-`;
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
 
-
-const modules = {
-  toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    [{ font: [] }],
-
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-  ],
-};
-
-
-
-
-
-
+  const handleEventChange = (event) => {
+    setEvent(event.target.value);
+  };
   const filteredOptions = [
     "Location",
     ...statesWithCities
@@ -202,13 +156,25 @@ const modules = {
       <Container>
         <Container1>
           <Title type="text" placeholder="Title" />
+          <Event
+            id="event"
+            value={event}
+            onChange={handleEventChange}
+            placeholder="Program"
+          >
+            <option disabled hidden>
+              Program
+            </option>
+            <option>Events</option>
+            <option>Workshops</option>
+          </Event>
           <ChooseFil>
             <DateInput
               type="date"
               value={current}
               onChange={handledatechange}
             />
-            <TimeInput type="time" value={time} onChange={handleChange} />
+            <TimeInput type="time" value={time} onChange={handleTimeChange} />
           </ChooseFil>
 
           <Select>
@@ -232,11 +198,7 @@ const modules = {
             />
           </ChooseFile>
           <Container2>
-
-
-
-          <StyledQuill
-
+            <StyledQuill
               theme="snow"
               value={value}
               onChange={setValue}
@@ -254,7 +216,7 @@ export default CreateEvent;
 
 const Option = styled.option`
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const OptionDropdown = styled.div`

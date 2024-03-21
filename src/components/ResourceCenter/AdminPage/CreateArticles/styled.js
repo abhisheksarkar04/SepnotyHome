@@ -38,7 +38,7 @@ export const Title = styled.input`
   background-color: #d9d9d9;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Summary = styled.input`
@@ -49,7 +49,7 @@ export const Summary = styled.input`
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const ChooseFile = styled.div`
@@ -63,7 +63,7 @@ export const ChooseFile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Button = styled.button`
@@ -86,8 +86,6 @@ export const NoFile = styled.p`
 export const Container2 = styled.div`
   margin-top: 30px;
   border-radius: 10px;
-
-  color: white;
 `;
 
 export const H1Cont = styled.div`
@@ -112,5 +110,5 @@ export const LastButton = styled.button`
   font-weight: bold;
   padding: 10px 0px;
   background-color: #2b459b;
-  font-size: 20px;
+  font-size: 16px;
 `;

@@ -37,7 +37,6 @@ export const Container1 = styled.div`
 `;
 
 export const Title = styled.input`
-
   height: 50px;
 
   border-radius: 10px;
@@ -60,7 +59,7 @@ export const Summary = styled.input`
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const ChooseFile = styled.div`
@@ -74,19 +73,17 @@ export const ChooseFile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Button = styled.button`
-
   background-color: transparent;
   color: #263238;
-  font-size: 15px;
+  font-size: 16px;
   border: none;
   padding: 10px 20px 10px 20px;
   border-radius: 2px;
   border: 1px solid #000000;
-
 `;
 
 export const NoFile = styled.p`
@@ -98,7 +95,6 @@ export const NoFile = styled.p`
 `;
 
 export const Container2 = styled.div`
-
   margin-top: 30px;
   border-radius: 3px;
 `;
@@ -120,7 +116,6 @@ export const Content = styled.p`
 `;
 
 export const LastButton = styled.button`
-
   border-radius: 10px;
   margin-top: 20px;
   color: #ffffff;
@@ -128,8 +123,7 @@ export const LastButton = styled.button`
   padding: 10px 0px;
   background-color: #2b459b;
 
- 
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const ChooseFil = styled.div`
@@ -150,7 +144,7 @@ export const Div1 = styled.div`
 `;
 export const DateInput = styled.input`
   height: 55px;
-  width: 35%;
+  width: 41%;
   border-radius: 10px;
 
   margin-top: 30px;
@@ -160,8 +154,10 @@ export const DateInput = styled.input`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   padding-right: 10px;
+  outline: none;
+  border: none;
 `;
 export const Dropdown = styled.input`
   height: 65px;
@@ -189,9 +185,7 @@ export const Div2 = styled.div`
 `;
 
 export const Select = styled.select`
-
   height: 65px;
-
 
   border-radius: 10px;
 
@@ -202,14 +196,14 @@ export const Select = styled.select`
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   outline: none;
   background-size: 100px 100px; /* Adjust icon size */
 `;
 
 export const TimeInput = styled.input`
-height: 55px;
-width: 35%; 
+  height: 55px;
+  width: 41%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 30px;
@@ -219,15 +213,28 @@ width: 35%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   padding-right: 10px;
+  outline: none;
+  border: none;
 `;
 
 export const LocationCon = styled.div`
-
   display: flex;
   flex-direction: row;
   background-color: #d9d9d9;
 `;
 
-
+export const Event = styled.select`
+  height: 55px;
+  width: 35%;
+  border-radius: 10px;
+  margin-top: 30px;
+  background-color: #d9d9d9;
+  color: #263238;
+  padding-left: 30px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding-right: 10px;
+`;
