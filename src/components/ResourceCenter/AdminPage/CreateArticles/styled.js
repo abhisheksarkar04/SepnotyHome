@@ -86,8 +86,6 @@ export const NoFile = styled.p`
 export const Container2 = styled.div`
   margin-top: 30px;
   border-radius: 10px;
-
-  color: white;
 `;
 
 export const H1Cont = styled.div`

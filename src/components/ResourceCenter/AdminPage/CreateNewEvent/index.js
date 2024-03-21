@@ -29,6 +29,7 @@ import {
   MapContainer,
   LocationCon,
   GlobalStyle,
+  Event,
 } from "./style";
 
 const theme = {};
@@ -115,6 +116,7 @@ const CreateEvent = () => {
   const [time, setTime] = useState("00:00"); // Initial time state
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
+  const [event, setEvent] = useState("Program");
 
   const handleFileSelect = () => {
     fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
@@ -130,29 +132,17 @@ const CreateEvent = () => {
     setSelectedOption(event.target.value);
   };
 
-  const handleChange = (newTime) => {
-    setTime(newTime);
-  };
   const handledatechange = (event) => {
     setcurrent(event.target.value);
   };
 
-  const modules = {
-    toolbar: [
-      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-      [{ font: [] }],
-
-      ["bold", "italic", "underline", "strike", "blockquote"],
-      [
-        { list: "ordered" },
-        { list: "bullet" },
-        { indent: "-1" },
-        { indent: "+1" },
-      ],
-      ["link", "image", "video"],
-    ],
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
   };
 
+  const handleEventChange = (event) => {
+    setEvent(event.target.value);
+  };
   const filteredOptions = [
     "Location",
     ...statesWithCities
@@ -166,13 +156,25 @@ const CreateEvent = () => {
       <Container>
         <Container1>
           <Title type="text" placeholder="Title" />
+          <Event
+            id="event"
+            value={event}
+            onChange={handleEventChange}
+            placeholder="Program"
+          >
+            <option disabled hidden>
+              Program
+            </option>
+            <option>Events</option>
+            <option>Workshops</option>
+          </Event>
           <ChooseFil>
             <DateInput
               type="date"
               value={current}
               onChange={handledatechange}
             />
-            <TimeInput type="time" value={time} onChange={handleChange} />
+            <TimeInput type="time" value={time} onChange={handleTimeChange} />
           </ChooseFil>
 
           <Select>
@@ -214,7 +216,7 @@ export default CreateEvent;
 
 const Option = styled.option`
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const OptionDropdown = styled.div`
