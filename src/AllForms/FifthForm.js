@@ -20,7 +20,7 @@ class SecondForm extends Component {
     e.preventDefault();
     const { selectedIndustries } = this.state;
     const formData = {
-      field3: {selectedIndustries},
+      field5: {selectedIndustries},
       // Add more fields as needed
     };
     handleFormValues(formData);

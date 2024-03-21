@@ -97,6 +97,7 @@ class PersonalDetails extends Component {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
+    console.log(formData)
     handleFormValues(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
@@ -117,7 +118,7 @@ class PersonalDetails extends Component {
     }
     
     // If there are no errors, proceed to the next step
-    this.props.nextStep();
+    this.props.nextStep(formData);
 }
 
   render() {

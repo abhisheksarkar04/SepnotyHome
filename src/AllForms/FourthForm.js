@@ -17,7 +17,7 @@ class Summary extends Component {
     e.preventDefault();
     const { hasMockups, chosenCMS } = this.state;
     const formData = {
-      field3: {hasMockups,chosenCMS},
+      field4: {hasMockups,chosenCMS},
       // Add more fields as needed
     };
     handleFormValues(formData);

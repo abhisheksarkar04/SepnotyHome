@@ -45,9 +45,10 @@ class  FormNo5 extends Component {
 
     const {  mediaContent, paymentSupport, monthlyVisitors } = this.state;
     const formData = {
-      field2: { mediaContent, paymentSupport, monthlyVisitors},
+      field6: { mediaContent, paymentSupport, monthlyVisitors},
       // Add more fields as needed
     };
+    handleFormValues(formData);
 
     if (Object.keys(errors).length === 0) {
       // No validation errors, proceed to the next step
@@ -71,6 +72,10 @@ class  FormNo5 extends Component {
     } else {
       this.setState({ mediaContent: mediaContent.filter((item) => item !== value) });
     }
+  };
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
