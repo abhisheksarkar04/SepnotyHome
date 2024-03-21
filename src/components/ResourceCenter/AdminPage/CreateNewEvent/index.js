@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import styled from "styled-components";
+import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { ThemeProvider } from "styled-components";
 
