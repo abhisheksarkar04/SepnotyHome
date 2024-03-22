@@ -110,28 +110,28 @@ class  FormNo5 extends Component {
                     </Heading>
                     <CheckBoxCon>
                     <Label htmlfor="Images">
-                        <input type="checkbox" name='mediatype' id="Images" value="Images" onClick={this.handleCheckboxChange}/>
+                        <Input1 type="checkbox" name='mediatype' id="Images" value="Images" onClick={this.handleCheckboxChange}/>
 
                         Images
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Video">
-                        <input type="checkbox" name='mediatype' id="Video" value="Video" />
+                        <Input1 type="checkbox" name='mediatype' id="Video" value="Video" />
                        
                         Video
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Audio">
-                        <input type="checkbox" id="Audio" name='mediatype' value="Audio" onClick={this.handleCheckboxChange}/>
+                        <Input1 type="checkbox" id="Audio" name='mediatype' value="Audio" onClick={this.handleCheckboxChange}/>
                         
                         Audio
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="Interactive content">
-                        <input type="checkbox" id="Interactive content" name='mediatype' value="Interactive content" onClick={this.handleCheckboxChange}/>
+                        <Input1 type="checkbox" id="Interactive content" name='mediatype' value="Interactive content" onClick={this.handleCheckboxChange}/>
                         
                         Interactive content
                         </Label>
@@ -139,7 +139,6 @@ class  FormNo5 extends Component {
                     <CheckBoxCon>
                         <input type="checkbox" id="five" name='mediatype' onClick={this.handleCheckboxChange}/>
                         <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
-                        
                         
                     </CheckBoxCon>
                     {errors.mediaContent && <Error>{errors.mediaContent}</Error>}
@@ -301,23 +300,23 @@ const Main = Styled.div`
 background-color:#0C111F;
 `
 const Input1 = Styled.input`
+margin-right:10px;
 margin-top:10px;
-margin-left: 10px;
 
 `
 const Error = Styled.div`
   color: red;
   margin-top: 5px;
+  font-size:12px;
 `;
 
 const Label1 = Styled.label`
-font-size:14px;
+font-size:16px;
+font-family: Roboto;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
-margin-top:20px;
-margin-left: 10px;
 `
 
 const Main5 = Styled.div`
@@ -325,7 +324,7 @@ display:flex;
 flex-direction:row;
 `
 const ActiveButton = Styled.button`
-background-color: ${(props) => (props.active ? 'blue' : 'white')};
+background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
 color: ${(props) => (props.active ? 'white' : 'black')};
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -337,7 +336,7 @@ color: ${(props) => (props.active ? 'white' : 'black')};
 
 const Buttonel = Styled.button`
   font-size: 20px;
-  background-color: ${(props) => (props.active ? 'blue' : 'white')};
+  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
 color: ${(props) => (props.active ? 'white' : 'black')};
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -375,7 +374,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 `
 const CheckBoxCon = Styled.div`

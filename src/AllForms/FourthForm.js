@@ -131,6 +131,7 @@ export default Summary;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 
 const Button = Styled.div`
@@ -159,7 +160,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:400px;
 `
 const Heading = Styled.h1`
