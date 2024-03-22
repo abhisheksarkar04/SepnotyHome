@@ -310,6 +310,7 @@ export default CourseDetails;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 const Button = Styled.div`
 display:flex;
@@ -337,7 +338,7 @@ gap:-10px;
 border-radius:10px;
 padding:20px;
 width:700px;
-height:350px;
+height:380px;
 `
 const Form3 = Styled.div`
 margin-top:40px;
