@@ -17,20 +17,16 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import styled from "styled-components";
 
-const StyledQuill = styled(ReactQuill)`
+
+export const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
-  background-color: #d9d9d9;
-  border-radius: 8px;
-  border: 0px solid transparent;
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  border-radius: 0; /* No border-radius */
+  height: 100%; /* Fill the container's height */
+  padding: 0; /* No padding */
   .ql-editor {
-    font-size: 16px;
-    line-height: 1.5;
-    border: 0px solid transparent;
-    color: #333;
-    border: none;
-    border-radius: 8px;
-    background-color: #d9d9d9;
-    height: 200px; /* Adjust height as needed */
+    height: 100%; /* Fill the container's height */
     padding: 10px;
     overflow-y: auto;
   }

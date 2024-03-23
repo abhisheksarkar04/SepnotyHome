@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import "react-quill/dist/quill.snow.css";
+
 export const Container = styled.div`
   width: 100%;
 
@@ -88,15 +90,18 @@ export const NoFile = styled.p`
   color: black;
   padding-left: 10px;
 `;
-
 export const Container2 = styled.div`
   height: 250px;
   width: 90%;
-  border: 0px solid transparent;
+  border: none; /* Remove default border */
   margin-top: 30px;
   border-radius: 3px;
   margin-left: 30px;
+  overflow: hidden; /* Ensures children don't exceed container */
+  background-color: transparent; /* Remove background color */
+  color: white;
 `;
+
 
 export const H1Cont = styled.div`
   height: 35px;
