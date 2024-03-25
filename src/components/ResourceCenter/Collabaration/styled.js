@@ -14,6 +14,9 @@ export const Header = styled.h1`
   font-weight: 600;
   color: #fff;
   padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -37,6 +40,9 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
+  @media screen and (max-width: 576px) {
+    font-size: 26px;
+  }
 `;
 
 export const ConRecDesc = styled.p`
@@ -44,6 +50,10 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width: 50%;
   padding: 20px 30px 30px 0px;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -93,6 +103,10 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   padding-left: 9%;
   letter-spacing: 0.5px;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+
+  }
 
 `;
 
@@ -122,24 +136,41 @@ export const LabelCont = styled.div`
   display: flex;
   flex-direction: row;
   border: 1px solid #8196db;
-  padding: 5px 40px 5px 60px;
-
+  padding: 15px 40px 5px 60px;
+  height: 60px;
+  font-size: 10px;
   border-radius: 10px;
+  align-items: center
+  justify-content: center;
   box-shadow: 0px 1.3px 2px 0px #ffffff;
+  @media screen and (max-width: 576px) {
+    padding: 15px 40px 5px 50px;
+    margin-left: 10px;
+   
+
+  }
 `;
 
 export const Topics = styled.h1`
-  font-size: 14px;
   color: #ffffff;
   font-weight: 500;
   padding-left: 60px;
+  @media screen and (max-width: 576px) {
+    padding-left: 0px;
+   
+
+  }
 `;
 
 export const DataLabels = styled.h1`
-  font-size: 14px;
   color: #ffffff;
   font-weight: 500;
-  padding-left: 60px;
+  padding-left: 30px;
+  @media screen and (max-width: 576px) {
+    
+    padding-left: 60px;
+
+  }
 `;
 
 export const DataCon = styled.div`
@@ -152,6 +183,10 @@ export const ViewsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 50px 7% 10px 7%;
+  @media screen and (max-width: 576px) {
+    margin: 50px 10px 10px 0px;
+
+  }
 `;
 
 export const ViewButton = styled.button`

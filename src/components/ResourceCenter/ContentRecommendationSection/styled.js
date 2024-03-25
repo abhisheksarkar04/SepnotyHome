@@ -73,6 +73,9 @@ export const ListHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-left:  2.3%;
+  @media screen and (max-width: 576px) {
+    margin-left:  7.0%;
+  }
 `;
 
 export const SearchHeading = styled.p`
@@ -115,6 +118,9 @@ export const SearchSuggestionContainer = styled.div`
   margin-right: 40px;
   align-items: center;
   align-self: flex-end;
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+  }
 `;
 
 export const FirstSection = styled.div`
@@ -130,8 +136,12 @@ export const ListItems = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
-    width: 0%;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: ;
   }
 `;
 
@@ -171,6 +181,10 @@ export const Small = styled.img`
 
 export const ContentContainer = styled.div`
   margin: 5em 2em 3em 5em;
+  @media screen and (max-width: 576px) {
+    width: ;
+    margin: 50px 0 0 30px;
+  }
 `;
 
 export const Small1 = styled.img`
