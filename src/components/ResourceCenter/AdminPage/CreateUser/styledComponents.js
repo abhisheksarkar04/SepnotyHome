@@ -30,4 +30,7 @@ padding:1px;
 border-radius:20px;
 border:none;
 padding-left:20px;
+font-size:20px;
+font-weight:500;
+cursor:pointer;
 `;

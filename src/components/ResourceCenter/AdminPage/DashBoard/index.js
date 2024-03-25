@@ -377,7 +377,8 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
-    setActiveTab(false);
+    
+    setActiveTab("Create User");
   };
   return (
     <>
