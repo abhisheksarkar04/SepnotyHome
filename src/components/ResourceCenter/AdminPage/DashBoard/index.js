@@ -32,6 +32,7 @@ import CreateJob from "../NewJob";
 import CreateProject from "../CreateProject";
 import CreateEvent from "../CreateNewEvent";
 import ContactUsData from "../ContactUsData";
+import ApplicantsData from "../ApplicantsData";
 import response from "./Images/response.svg";
 import contactus from "./Images/contactus.svg";
 import createuser from "./Images/createuser.svg";
@@ -131,6 +132,7 @@ const DashBoard = () => {
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
+  const [showApplicants, setShowApplicants] = useState(false);
   const [showResponse,setShowResponse] = useState(false)
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
@@ -167,6 +169,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setShowResponse(false);
     setActiveTab("articles");
+    setShowApplicants(false);
   };
 
   const toggleEvents = () => {
@@ -188,6 +191,7 @@ const DashBoard = () => {
     setShowCreateArticle(false);
     setShowContactUs(false);
     setActiveTab("Events and Workshops");
+    setShowApplicants(false);
   };
 
   const toggleProjects = () => {
@@ -207,6 +211,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Projects");
+    setShowApplicants(false);
   };
 
   const toggleReports = () => {
@@ -226,6 +231,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Reports");
+    setShowApplicants(false);
   };
 
   const toggleBlog = () => {
@@ -245,6 +251,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Blogs");
+    setShowApplicants(false);
   };
 
   const toggleCareerOpportunities = () => {
@@ -264,6 +271,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Career Opportunities");
+    setShowApplicants(false);
   };
 
   const toggleCreateArticle = () => {
@@ -282,6 +290,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
   const toggleCreateProject = () => {
     setShowResponse(false);
@@ -299,6 +308,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateReport = () => {
@@ -317,6 +327,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateBlogs = () => {
@@ -335,6 +346,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateCareer = () => {
@@ -353,6 +365,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateEvent = () => {
@@ -372,6 +385,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleContactUs = () => {
@@ -392,7 +406,30 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setActiveTab("Contact Us");
+    setShowApplicants(false);
   };
+
+  const toggleApplicants = () => {
+    setShowApplicants(true);
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setActiveTab("Applicants");
+  };
+
 
   const toggleCreateUser = () => {
     setShowContactUs(false);
@@ -402,6 +439,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowCreateArticle(false);
     setActiveTab("Create User");
+    setShowApplicants(false);
   };
 
 
@@ -422,7 +460,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
 
-    
+    setShowApplicants(false);
 
     setActiveTab("Responses Received");
   }
@@ -475,7 +513,7 @@ const DashBoard = () => {
                 </CreateCon>
               )
 
-              ) : showContactUs? (
+               : showContactUs? (
                 <CreateCon >
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
@@ -599,7 +637,7 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon onClick={toggleApplicants}>
                 {activeTab === "Applicants" ? (
                   <>
                     <Icons src={activeApplicants} alt="icon" />
@@ -668,7 +706,7 @@ const DashBoard = () => {
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
-
+            {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
 
             {showResponse && <ResponseData/>}

@@ -157,7 +157,8 @@ export const Containerfour = styled.div`
 
   border: 1px solid #d9d9d9;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+ 
   border-radius: 18px;
 `;
 
@@ -166,7 +167,10 @@ export const DateInput = styled.input`
   align-self: flex-end;
   margin-right: 20px;
   border: none;
+  border-radius: 5px;
+  margin-top: 20px;
   font-weight: 600;
+  padding: 5px;
   background-color: #2b459b;
   color: white;
   &::-webkit-calendar-picker-indicator {
