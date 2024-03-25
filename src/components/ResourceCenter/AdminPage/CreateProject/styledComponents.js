@@ -62,11 +62,11 @@ export const Title = styled.input`
 `;
 
 export const Summary = styled.input`
-  height: 65px;
+  height: 60px;
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
@@ -143,7 +143,7 @@ export const LastButton = styled.button`
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: -90px;
+  margin-top: 30px;
   color: #fff;
   font-weight: 550;
   padding-left: 30px;
