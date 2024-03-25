@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import {
   Rows,
   Table,
@@ -16,7 +17,12 @@ import {
   RowPhone,
   RowMessage,
   TableContainer,
+  Button,
+  ButtonCon,
+  RowFileUpload
 } from "./styled";
+
+const itemsPerPage = 10;
 
 const data = [
   {
@@ -26,6 +32,7 @@ const data = [
     email: "Shalini11@gmail.com",
     phoneNumber: "9526810107",
     message: "",
+    file: ""
   },
   {
     sNo: "",
@@ -34,6 +41,7 @@ const data = [
     email: "",
     phoneNumber: "",
     message: "",
+    file: ""
   },
   {
     sNo: "",
@@ -42,11 +50,20 @@ const data = [
     email: "",
     phoneNumber: "",
     message: "",
+    file: ""
   },
 
   // Add more data rows as needed
 ];
 const ContactUsData = () => {
+  const [pageNumber, setPageNumber] = useState(1); // State for current page number
+
+  // Slice the data array to display items for the current page
+  const displayedData = data.slice(
+    (pageNumber - 1) * itemsPerPage,
+    pageNumber * itemsPerPage
+  );
+
   return (
     <Container>
       <TableContainer>
@@ -59,6 +76,7 @@ const ContactUsData = () => {
               <Email>E-Mail</Email>
               <Phone>Phone Number</Phone>
               <SNo>Message</SNo>
+              <Name> File </Name>
               {/* Add more column headers if needed */}
             </tr>
           </thead>
@@ -71,12 +89,29 @@ const ContactUsData = () => {
                 <RowEmail>{row.email}</RowEmail>
                 <RowPhone>{row.phoneNumber}</RowPhone>
                 <RowMessage>{row.message}</RowMessage>
-                {/* Add more columns if needed */}
+                <RowFileUpload>
+                  {row.file}
+                </RowFileUpload>
+               
               </tr>
             ))}
           </tbody>
         </Table>
       </TableContainer>
+      <ButtonCon>
+        <Button
+          onClick={() => setPageNumber(pageNumber - 1)}
+          disabled={pageNumber === 1}
+        >
+          &larr;
+        </Button>
+        <Button
+          onClick={() => setPageNumber(pageNumber + 1)}
+          disabled={pageNumber * itemsPerPage >= data.length}
+        >
+          &rarr;
+        </Button>
+      </ButtonCon>
     </Container>
   );
 };
