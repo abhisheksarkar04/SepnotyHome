@@ -377,7 +377,6 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
-    
     setActiveTab("Create User");
   };
   return (
@@ -420,7 +419,7 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
-              ) : showReports || showCreateUser ? (
+              ) : showCreateUser || showCreateUser ? (
                 <CreateCon onClick={toggleCreateUser}>
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
