@@ -37,6 +37,7 @@ import contactus from "./Images/contactus.svg";
 import createuser from "./Images/createuser.svg";
 import userAuthorization from "./Images/userauthorization.svg";
 import applicants from "./Images/applicants.svg";
+import ResponseData from "../ResponseRecived";
 
 import {
   Container,
@@ -112,8 +113,10 @@ const DashBoard = () => {
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
+  const [showResponse,setShowResponse] = useState(false)
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
+
 
   const handleLogout = () => {
     // Perform any necessary cleanup or logout logic
@@ -143,10 +146,12 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowResponse(false);
     setActiveTab("articles");
   };
 
   const toggleEvents = () => {
+    setShowResponse(false);
     setShowEvents(true);
     setShowArticles(false);
     setShowProjects(false);
@@ -166,6 +171,7 @@ const DashBoard = () => {
   };
 
   const toggleProjects = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
     setShowProjects(true);
@@ -183,6 +189,7 @@ const DashBoard = () => {
   };
 
   const toggleReports = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowEvents(false);
     setShowProjects(false);
@@ -200,6 +207,7 @@ const DashBoard = () => {
   };
 
   const toggleBlog = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
     setShowProjects(false);
@@ -217,6 +225,7 @@ const DashBoard = () => {
   };
 
   const toggleCareerOpportunities = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
     setShowProjects(false);
@@ -234,6 +243,7 @@ const DashBoard = () => {
   };
 
   const toggleCreateArticle = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(true);
     setShowProjects(false);
@@ -249,6 +259,7 @@ const DashBoard = () => {
     setShowContactUs(false);
   };
   const toggleCreateProject = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
     setShowProjects(false);
@@ -265,6 +276,7 @@ const DashBoard = () => {
   };
 
   const toggleCreateReport = () => {
+    setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
     setShowProjects(false);
@@ -281,6 +293,7 @@ const DashBoard = () => {
   };
 
   const toggleCreateBlogs = () => {
+    setShowResponse(false);
     setShowCreateBlogs(true);
     setShowArticles(false);
     setShowCreateArticle(false);
@@ -297,6 +310,7 @@ const DashBoard = () => {
   };
 
   const toggleCreateCareer = () => {
+    setShowResponse(false);
     setShowCreateCareerOpportunities(true);
     setShowArticles(false);
     setShowCreateArticle(false);
@@ -313,6 +327,7 @@ const DashBoard = () => {
   };
 
   const toggleCreateEvent = () => {
+    setShowResponse(false);
     setShowCreateEvent(true);
     setShowCreateCareerOpportunities(false);
     setShowArticles(false);
@@ -329,6 +344,7 @@ const DashBoard = () => {
   };
 
   const toggleContactUs = () => {
+    setShowResponse(false);
     setShowContactUs(true);
     setShowCreateEvent(false);
     setShowCreateCareerOpportunities(false);
@@ -344,6 +360,24 @@ const DashBoard = () => {
     setShowEvents(false);
     setActiveTab("Contact Us");
   };
+
+  const toggleResponse = () => {
+    setShowResponse(true);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setActiveTab("Responses Received");
+  }
   return (
     <>
       <Container>
@@ -443,7 +477,7 @@ const DashBoard = () => {
                   <IconName>Events and Workshops</IconName>
                 )}
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon onClick={toggleResponse}>
                 <Icons src={response} alt="icon" />
                 {activeTab === "Responses Received" ? (
                   <ActiveTab>Responses Received</ActiveTab>
@@ -512,6 +546,7 @@ const DashBoard = () => {
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
+            {showResponse && <ResponseData/>}
           </Containerthree>
         </ContainerOne>
       </Container>
