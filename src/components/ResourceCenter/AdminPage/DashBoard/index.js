@@ -368,7 +368,6 @@ const DashBoard = () => {
     setShowCreateUser(true);
     setShowArticles(false);
     setShowCreateArticle(false);
-    
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -379,6 +378,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setActiveTab("Create User");
   };
+
   return (
     <>
       <Container>
@@ -552,6 +552,7 @@ const DashBoard = () => {
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
             {showCreateUser && <CreateUser />}
+            
           </Containerthree>
         </ContainerOne>
       </Container>
