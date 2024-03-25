@@ -31,6 +31,12 @@ import CreateArticles from "../CreateArticles";
 import CreateJob from "../NewJob";
 import CreateProject from "../CreateProject";
 import CreateEvent from "../CreateNewEvent";
+import ContactUsData from "../ContactUsData";
+import response from "./Images/response.svg";
+import contactus from "./Images/contactus.svg";
+import createuser from "./Images/createuser.svg";
+import userAuthorization from "./Images/userauthorization.svg";
+import applicants from "./Images/applicants.svg";
 
 import {
   Container,
@@ -105,6 +111,7 @@ const DashBoard = () => {
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
+  const [showContactUs, setShowContactUs] = useState(false);
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
 
@@ -135,6 +142,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
     setActiveTab("articles");
   };
 
@@ -153,6 +161,7 @@ const DashBoard = () => {
     setShowCreateProject(false);
     setShowCreateEvent(false);
     setShowCreateArticle(false);
+    setShowContactUs(false);
     setActiveTab("Events and Workshops");
   };
 
@@ -169,6 +178,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowCreateCareerOpportunities(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
     setActiveTab("Projects");
   };
 
@@ -185,6 +195,7 @@ const DashBoard = () => {
     setShowCreateReport(false);
     setShowCreateProject(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
     setActiveTab("Reports");
   };
 
@@ -201,6 +212,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
     setActiveTab("Blogs");
   };
 
@@ -217,6 +229,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
     setActiveTab("Career Opportunities");
   };
 
@@ -233,6 +246,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
   };
   const toggleCreateProject = () => {
     setShowArticles(false);
@@ -247,6 +261,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
   };
 
   const toggleCreateReport = () => {
@@ -262,6 +277,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
   };
 
   const toggleCreateBlogs = () => {
@@ -277,6 +293,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
   };
 
   const toggleCreateCareer = () => {
@@ -292,6 +309,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowCreateEvent(false);
+    setShowContactUs(false);
   };
 
   const toggleCreateEvent = () => {
@@ -307,8 +325,25 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+    setShowContactUs(false);
   };
 
+  const toggleContactUs = () => {
+    setShowContactUs(true);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setActiveTab("Contact Us");
+  };
   return (
     <>
       <Container>
@@ -408,6 +443,47 @@ const DashBoard = () => {
                   <IconName>Events and Workshops</IconName>
                 )}
               </ArticalCon>
+              <ArticalCon>
+                <Icons src={response} alt="icon" />
+                {activeTab === "Responses Received" ? (
+                  <ActiveTab>Responses Received</ActiveTab>
+                ) : (
+                  <IconName>Responses Received</IconName>
+                )}
+              </ArticalCon>
+
+              <ArticalCon onClick={toggleContactUs}>
+                <Icons src={contactus} alt="icon" />
+                {activeTab === "Contact Us" ? (
+                  <ActiveTab>Contact us</ActiveTab>
+                ) : (
+                  <IconName>Contact us</IconName>
+                )}
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={applicants} alt="icon" />
+                {activeTab === "Applicants" ? (
+                  <ActiveTab>Applicants</ActiveTab>
+                ) : (
+                  <IconName>Applicants</IconName>
+                )}
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={createuser} alt="icon" />
+                {activeTab === "Create User" ? (
+                  <ActiveTab>Create User</ActiveTab>
+                ) : (
+                  <IconName>Create User</IconName>
+                )}
+              </ArticalCon>
+              <ArticalCon>
+                <Icons src={userAuthorization} alt="icon" />
+                {activeTab === "User Authorization" ? (
+                  <ActiveTab>User Authorization</ActiveTab>
+                ) : (
+                  <IconName>User Authorization</IconName>
+                )}
+              </ArticalCon>
             </ColumnDiv>
 
             {showArticles && (
@@ -435,6 +511,7 @@ const DashBoard = () => {
             {showCreateReport && <CreateReport />}
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
+            {showContactUs && <ContactUsData />}
           </Containerthree>
         </ContainerOne>
       </Container>

@@ -162,11 +162,11 @@ const CreateEvent = () => {
             onChange={handleEventChange}
             placeholder="Program"
           >
-            <option disabled hidden>
+            <Option disabled hidden>
               Program
-            </option>
-            <option>Events</option>
-            <option>Workshops</option>
+            </Option>
+            <Option>Events</Option>
+            <Option>Workshops</Option>
           </Event>
           <ChooseFil>
             <DateInput

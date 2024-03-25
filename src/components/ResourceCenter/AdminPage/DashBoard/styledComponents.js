@@ -127,6 +127,7 @@ export const ArticalCon = styled.div`
   margin-left: 10px;
   margin-bottom: 25px;
   padding: 4px;
+  color: 
 `;
 export const Icons = styled.img`
   height: 37px;
