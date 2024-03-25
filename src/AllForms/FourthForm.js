@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import FourthPage from './Website/FourthPage';
 
@@ -15,6 +16,11 @@ class Summary extends Component {
   continue = e => {
     e.preventDefault();
     const { hasMockups, chosenCMS } = this.state;
+    const formData = {
+      field4: {hasMockups,chosenCMS},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     if (!hasMockups || !chosenCMS) {
       this.setState({ error: 'Please answer all questions.' });
       return;
@@ -125,6 +131,7 @@ export default Summary;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 
 const Button = Styled.div`
@@ -153,7 +160,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:400px;
 `
 const Heading = Styled.h1`

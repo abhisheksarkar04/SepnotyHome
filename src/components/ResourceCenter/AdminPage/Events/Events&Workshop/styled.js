@@ -4,7 +4,7 @@ export const MainConatiner = styled.div`
   border: 1px solid #ffffff;
   border-radius: 10px;
   margin-top: 10px;
-  width: 80%;
+  width: 75%;
   margin-left: 30px;
 `;
 
@@ -24,7 +24,7 @@ export const PatternCon = styled.div`
   margin-left: 20px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 24px;
   color: #89a4ff;
   font-weight: bold;
   margin-left: -28px;
@@ -65,6 +65,7 @@ export const EventCon = styled.div`
 export const WorkshopCon = styled.div`
   margin-bottom: 30%;
 `;
+
 //   export const Container = styled.h1`
 
 //   `;

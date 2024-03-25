@@ -8,12 +8,15 @@ export const GlobalStyle = createGlobalStyle`
  }
 `;
 
+import "react-quill/dist/quill.snow.css";
+
 export const Container = styled.div`
   width: 75%;
-  background-color: transparent;
+  background-color: #0c111f;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  padding: 10px 0 80px 0;
   align-items: center;
 `;
 
@@ -44,9 +47,9 @@ export const Container1 = styled.div`
 
 export const Title = styled.input`
   height: 40px;
-
+  width: 95%;
   border-radius: 10px;
-
+  margin-left: 35px;
   margin-top: 20px;
   align-items: start;
   padding-left: 30px;
@@ -59,22 +62,30 @@ export const Title = styled.input`
     color: black;
   }
 `;
+
 export const Summary = styled.input`
   height: 65px;
-
+  width: 95%;
   border-radius: 10px;
-
+  margin-left: 35px;
   margin-top: 40px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
+  outline: none;
+  font-size: 16px;
+  border: none;
+
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const ChooseFile = styled.div`
   height: 65px;
-
+  width: 95%;
   border-radius: 10px;
-
+  margin-left: 35px;
   margin-top: 40px;
   background-color: #d9d9d9;
   padding-left: 30px;
@@ -96,17 +107,27 @@ export const Button = styled.button`
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 13px;
   color: black;
   padding-left: 10px;
+  font-size: 16px;
 `;
-
 export const Container2 = styled.div`
   height: 250px;
-
-  border: 0px solid transparent;
+<<<<<<< HEAD:src/components/ResourceCenter/AdminPage/NewPost/styledComponents.js
+  width: 90%;
+  border: none; /* Remove default border */
+=======
+  width: 95%;
+  border: none;
+>>>>>>> main:src/components/ResourceCenter/AdminPage/CreateProject/styledComponents.js
   margin-top: 30px;
+  border-radius: 3px;
+  margin-left: 30px;
+  overflow: hidden; /* Ensures children don't exceed container */
+  background-color: transparent; /* Remove background color */
+  color: white;
 `;
+
 
 export const H1Cont = styled.div`
   height: 35px;
@@ -119,18 +140,20 @@ export const H1Cont = styled.div`
 
 export const Content = styled.p`
   font-family: Sans-serif;
-  color: black;
-  padding-left: 10px;
-  font-size: 16px;
+  font-size: 20px;
+  color: #263238;
+  font-weight: bold;
 `;
 
 export const LastButton = styled.button`
+  height: 40px;
+  width: 95%;
   border-radius: 10px;
-
-  margin-top: 40px;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 10px 0px;
+  margin-left: 35px;
+  margin-top: -90px;
+  color: #fff;
+  font-weight: 550;
+  padding-left: 30px;
   background-color: #2b459b;
   font-size: 20px;
 `;

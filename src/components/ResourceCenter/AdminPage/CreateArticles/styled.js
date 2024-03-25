@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaLocationDot } from "react-icons/fa6";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle` 
@@ -13,61 +14,42 @@ export const Container = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   align-items: center;
 `;
 
-export const CreatePostBtn = styled.button`
-  background-color: #435aa7;
-  color: white;
-  align-self: flex-end;
-  width: 160px;
-  height: 40px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border: none;
-  margin: 0 140px 30px 0;
-  border-radius: 7px;
-  text-align: center;
-`;
-
 export const Container1 = styled.div`
-  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-
   padding: 30px;
+  width: 95%;
 `;
 
 export const Title = styled.input`
-  height: 40px;
-
+  height: 50px;
   border-radius: 10px;
-
   margin-top: 20px;
   align-items: start;
   padding-left: 30px;
   color: #263238;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 16px;
   border: none;
-  ::placeholder {
-    color: black;
-  }
+  font-size: 16px;
 `;
+
 export const Summary = styled.input`
   height: 65px;
-
   border-radius: 10px;
-
-  margin-top: 40px;
+  margin-top: 20px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
+  outline: none;
+  font-size: 16px;
 `;
 
 export const ChooseFile = styled.div`
@@ -75,23 +57,23 @@ export const ChooseFile = styled.div`
 
   border-radius: 10px;
 
-  margin-top: 40px;
+  margin-top: 30px;
   background-color: #d9d9d9;
   padding-left: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 16px;
 `;
 
 export const Button = styled.button`
-  background-color: #d9d9d9;
-  color: #000000;
-  font-family: Sans-serif;
-  font-size: 16px;
-  border: 1px solid #000000;
-  padding: 7px 15px 7px 15px;
+  background-color: transparent;
+  color: #263238;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px 10px 20px;
   border-radius: 2px;
-  box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
+  border: 1px solid #000000;
 `;
 
 export const NoFile = styled.p`
@@ -102,10 +84,8 @@ export const NoFile = styled.p`
 `;
 
 export const Container2 = styled.div`
-  height: 250px;
-
-  border: 0px solid transparent;
   margin-top: 30px;
+  border-radius: 10px;
 `;
 
 export const H1Cont = styled.div`
@@ -118,19 +98,17 @@ export const H1Cont = styled.div`
 `;
 
 export const Content = styled.p`
-  font-family: Sans-serif;
-  color: black;
-  padding-left: 10px;
-  font-size: 16px;
+  font-size: 10px;
+  color: #263238;
+  font-weight: bold;
 `;
 
 export const LastButton = styled.button`
   border-radius: 10px;
-
-  margin-top: 40px;
+  margin-top: 20px;
   color: #ffffff;
   font-weight: bold;
   padding: 10px 0px;
   background-color: #2b459b;
-  font-size: 20px;
+  font-size: 16px;
 `;
