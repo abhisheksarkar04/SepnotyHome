@@ -159,16 +159,19 @@ export const MobSection1=Styled.div`
 `;
 const GraphImageItem = Styled.img`
     margin: 0px 20px 20px 0px;
-   width: 350px;
+   width: 330px;
    height: 380px;
 `;
 
 const Para3 = Styled.p`
 font-size:19px;
+color:#263238;
 `
 const Para2 = Styled.p`
 color:#2B459B;
 font-size:20px;
+font-weight:500;
+margin-bottom:10px;
 `
 const Main = Styled.div`
 width:90%;
@@ -184,8 +187,8 @@ margin-left:50px;
 `
 const Para1 = Styled.p`
 margin-top:-20px;
-color:white;
-font-size:22px;
+color:#FFFFFF;
+font-size:20px;
 margin-left:20px;
 `
 const Container = Styled.div`
@@ -197,15 +200,16 @@ margin-top: 10px;
   width: 80%;
   border: 1px solid #ffffff;
   border-radius: 10px;
-  margin-left: 30px;
+  margin-left: 40px;
   padding: 3px;
 `
 const H = Styled.h1`
 color:#ffffff;
 font-size:24px;
 padding:30px;
-margin-right:75%;
+margin-right:73%;
 margin-top:-30px;
+margin-left:10px;
 `
 const EditTool = Styled.img`
   height: 26px;

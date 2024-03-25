@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-
 import { ThemeProvider } from "styled-components";
 
 import {
@@ -30,6 +29,7 @@ import {
   MapContainer,
   LocationCon,
   GlobalStyle,
+  Event,
 } from "./style";
 
 const theme = {};
@@ -47,46 +47,18 @@ const statesWithCities = [
   "Jaipur",
 ];
 
-const CreateEvent = () => {
-  const [value, setValue] = useState("");
-  const [current, setcurrent] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchInput, setSearchInput] = useState("");
-  const [selectedOption, setSelectedOption] = useState("Location");
-  const [time, setTime] = useState("00:00"); // Initial time state
-  const [selectedFile, setSelectedFile] = useState(null);
-  const fileInputRef = useRef(null);
-
-  const handleFileSelect = () => {
-    fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
-  };
-
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    setSelectedFile(file);
-    console.log("Selected file:", file);
-  };
-
-  const handleSelectOption = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
-  const handleChange = (newTime) => {
-    setTime(newTime);
-  };
-  const handledatechange = (event) => {
-    setcurrent(event.target.value);
-  };
-
-  const StyledQuill = styled(ReactQuill)`
+const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
   background-color: #d9d9d9;
   border-radius: 10px;
-  border: 0px solid transparent;
+  border-bottom: 1px solid #2b459b;
+  border-right: 1px solid #2b459b;
+  border-left: 1px solid #2b459b;
   outline: none;
   font-size: 20px;
+
   .ql-editor {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     border: none;
     color: #fff;
@@ -100,12 +72,25 @@ const CreateEvent = () => {
     border: none;
   }
   .ql-toolbar {
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     border-radius: 10px;
+
     /* Add border */
+  }
+  .ql-toolbar .ql-picker-label {
+    font-size: 16px; /* Adjust font size for the toolbar buttons */
+    font-weight: 600;
+    color: #263238;
   }
 `;
 
+const fonts = [
+  "Arial",
+  "Georgia",
+  "Verdana",
+  "Courier New",
+  // Add more font styles as needed
+];
 
 const modules = {
   toolbar: [
@@ -122,12 +107,42 @@ const modules = {
     ["link", "image", "video"],
   ],
 };
+const CreateEvent = () => {
+  const [value, setValue] = useState("");
+  const [current, setcurrent] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
+  const [selectedOption, setSelectedOption] = useState("Location");
+  const [time, setTime] = useState("00:00"); // Initial time state
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null);
+  const [event, setEvent] = useState("Program");
 
+  const handleFileSelect = () => {
+    fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
+  };
 
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    console.log("Selected file:", file);
+  };
 
+  const handleSelectOption = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
+  const handledatechange = (event) => {
+    setcurrent(event.target.value);
+  };
 
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
 
+  const handleEventChange = (event) => {
+    setEvent(event.target.value);
+  };
   const filteredOptions = [
     "Location",
     ...statesWithCities
@@ -141,26 +156,36 @@ const modules = {
       <Container>
         <Container1>
           <Title type="text" placeholder="Title" />
+          <Event
+            id="event"
+            value={event}
+            onChange={handleEventChange}
+            placeholder="Program"
+          >
+            <Option disabled hidden>
+              Program
+            </Option>
+            <Option>Events</Option>
+            <Option>Workshops</Option>
+          </Event>
           <ChooseFil>
             <DateInput
               type="date"
               value={current}
               onChange={handledatechange}
             />
-            <TimeInput type="time" value={time} onChange={handleChange} />
+            <TimeInput type="time" value={time} onChange={handleTimeChange} />
           </ChooseFil>
 
-          <div>
-            <Select>
-              id="option-dropdown" value={selectedOption}
-              onChange={handleSelectOption}
-              {filteredOptions.map((option, index) => (
-                <Option key={index} value={option}>
-                  {option}
-                </Option>
-              ))}
-            </Select>
-          </div>
+          <Select>
+            id="option-dropdown" value={selectedOption}
+            onChange={handleSelectOption}
+            {filteredOptions.map((option, index) => (
+              <Option key={index} value={option}>
+                {option}
+              </Option>
+            ))}
+          </Select>
 
           <Title type="text" placeholder="Entry Fees" />
           <ChooseFile>
@@ -171,12 +196,9 @@ const modules = {
               style={{ display: "none" }}
               onChange={handleFileUpload}
             />
-            <NoFile>
-              {selectedFile ? selectedFile.name : "No file chosen"}
-            </NoFile>
           </ChooseFile>
           <Container2>
-          <StyledQuill
+            <StyledQuill
               theme="snow"
               value={value}
               onChange={setValue}
@@ -194,7 +216,7 @@ export default CreateEvent;
 
 const Option = styled.option`
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const OptionDropdown = styled.div`

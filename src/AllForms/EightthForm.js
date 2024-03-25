@@ -1,113 +1,119 @@
 import React, { Component } from 'react';
-import Styled from "styled-components"
+import styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
 
 import EightthPage from "./Website/EightthPage"
 
 
-// import MaterialTable from 'material-table';
-// import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-
 class CourseDetails extends Component {
-  shouldComponentUpdate(nextProps) {
-    if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-      return true;
-    } else {
-      return false;
-    }
+  state = {
+    fullName: '',
+    companyName: '',
+    workEmail: '',
+    phoneNumber: '',
+    current: "Any",
+    agreeToContact: false,
+    agreeToProvideInfo: false,
+    formErrors: {
+      fullName: '',
+      companyName: '',
+      workEmail: '',
+      phoneNumber: '',
+    },
+  };
+  handleButtonClick = (page) => {
+    this.setState({ current: page });
   }
 
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
+  handleInputChange = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    }, () => {
+      this.validateField(name, value);
+    });
   };
 
-  back = e => {
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let fullNameValid = this.state.fullName;
+    let companyNameValid = this.state.companyName;
+    let workEmailValid = this.state.workEmail;
+    let phoneNumberValid = this.state.phoneNumber;
+
+    switch (fieldName) {
+      case 'fullName':
+        fullNameValid = value.trim().length > 0;
+        fieldValidationErrors.fullName = fullNameValid ? '' : 'Full name is required';
+        break;
+      case 'companyName':
+        companyNameValid = value.trim().length > 0;
+        fieldValidationErrors.companyName = companyNameValid ? '' : 'Company name is required';
+        break;
+      case 'workEmail':
+        workEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        fieldValidationErrors.workEmail = workEmailValid ? '' : 'Valid work email is required';
+        break;
+      case 'phoneNumber':
+        phoneNumberValid = value.trim().length > 0;
+        fieldValidationErrors.phoneNumber = phoneNumberValid ? '' : 'Phone number is required';
+        break;
+      default:
+        break;
+    }
+
+    this.setState({
+      formErrors: fieldValidationErrors,
+    });
+  }
+
+  handleSubmit = e => {
     e.preventDefault();
-    this.props.prevStep();
+
+    if (this.isFormValid()) {
+      const formData = {
+        fullName: this.state.fullName,
+        companyName: this.state.companyName,
+        workEmail: this.state.workEmail,
+        phoneNumber: this.state.phoneNumber,
+        preferredCommunication: this.state.current,
+        agreeToContact: this.state.agreeToContact,
+        agreeToProvideInfo: this.state.agreeToProvideInfo,
+      };
+
+      console.log('Form Data:', formData);
+
+      // Navigate to the next step
+      this.props.nextStep();
+    } else {
+      console.log('Form Validation Failed');
+    }
+  };
+
+  isFormValid = () => {
+    const { fullName, companyName, workEmail, phoneNumber, agreeToContact, agreeToProvideInfo } = this.state;
+    return fullName.trim() !== '' &&
+      companyName.trim() !== '' &&
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail) &&
+      phoneNumber.trim() !== '' &&
+      agreeToContact &&
+      agreeToProvideInfo;
+  };
+
+  handleAgreeToContactChange = e => {
+    this.setState({ agreeToContact: e.target.checked });
+  };
+
+  handleAgreeToProvideInfoChange = e => {
+    this.setState({ agreeToProvideInfo: e.target.checked });
   };
 
   render() {
-    // const { 
-    //   // // coursesOptions,
-    //   // levelOptions,
-    //   // // addCourse, 
-    //   // addLevel,
-    //   // level,
-    // } = this.props;
-
-    // const theme = createMuiTheme({
-    //   palette: {
-    //     primary: {
-    //       main: '#003487',
-    //     },
-    //     secondary: {
-    //       main: '#003487',
-    //     },
-    //   },
-    //   overrides: {
-    //     MuiPaper: {
-    //       elevation2: {
-    //         boxShadow: 'none',
-    //       },
-    //     },
-    //     MuiInput: {
-    //       underline: {
-    //         '&:before': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:after': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:hover': {
-    //           '&:not(.Mui-disabled)': {
-    //             '&:before' : {
-    //               borderBottom: 'none'
-    //             }
-    //           }
-    //         }
-    //       }
-    //     },
-    //     MuiTableRow: {
-    //       root: {
-    //         '&:nth-child(even)': {
-    //           backgroundColor: '#ebebeb'
-    //         }
-    //       }
-    //     },
-    //     MuiTypography: {
-    //       h6: {
-    //         fontSize: '1rem',
-    //         color: '#011b64'
-    //       }
-    //     },
-    //     MuiToolbar: {
-    //       root: {
-    //         borderBottom: '1px solid grey',
-    //         backgroundColor: '#fafafa'
-    //       },
-    //       gutters: {
-    //         paddingLeft: '3px'
-    //       }
-    //     }
-    //   },
-    // });
-
-    // const columns = [
-    //   {
-    //     title: 'course',
-    //     field: 'course',
-    //   },
-    //   {
-    //     title: 'category',
-    //     field: 'category'
-    //   }
-    // ];
-
+    const { formErrors, current } = this.state;
     return (
       <Main className='form'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
 
           <Stepper
             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
@@ -125,60 +131,99 @@ class CourseDetails extends Component {
             stepClassName={'stepper__step'}
           />
 
-          < EightthPage/>
-
-          {/* <div className='select'>
-            <select
-              name='select'
-              onChange={addLevel}
-              className='select__item'
-              value={level}
-            >
-              <option value='null'>Choose course level</option>
-              {levelOptions}
-            </select>
-          </div> */}
-
-          {/* <div className='table'> */}
-
-
-{/* 
-            <MuiThemeProvider theme={theme}>
-              <MaterialTable
-                title='Choose courses'
-                columns={columns}
-                data={coursesOptions}
-                onSelectionChange={addCourse}
-                options={{
-                  search: true,
-                  selection: true,
-                  paging: false,
-                  toolbar: true,
-                  showTextRowsSelected: false,
-                  searchFieldStyle: {
-                    position: 'absolute',
-                    top: '-20px',
-                    right: '-7px',
-                    width: '200px',
-                    backgroundColor: '#fff',
-                    border: '1px solid grey',
-                    padding: '3px 5px',
-                    borderRadius: '3px',
-                  },
-                  headerStyle: {
-                    display: 'none',
-                  },
-                }}
+<M> 
+        <Mai><P1>
+        Almost done!
+        </P1>
+        <P2>
+        Please let us know where we should send your estimate. Our experts may need to ask a few extra questions to calculate a precise quote for your case.
+        </P2>
+        <P3>Your contact data</P3>
+        <M2>
+            <M3>
+              <P4>*Full name</P4>
+              <Input
+                type="text"
+                name="fullName"
+                value={this.state.fullName}
+                onChange={this.handleInputChange}
               />
-            </MuiThemeProvider> */}
-
-          {/* </div> */}
-
-
+              {formErrors.fullName && <Error>{formErrors.fullName}</Error>}
+            </M3>
+            <M3>
+              <P4>*Company name</P4>
+              <Input
+                type="text"
+                name="companyName"
+                value={this.state.companyName}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.companyName && <Error>{formErrors.companyName}</Error>}
+            </M3>
+          </M2>
+          <M2>
+            <M3>
+              <P4>*Work email</P4>
+              <Input
+                type="email"
+                name="workEmail"
+                value={this.state.workEmail}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.workEmail && <Error>{formErrors.workEmail}</Error>}
+            </M3>
+            <M3>
+              <P4>*Phone number</P4>
+              <Input
+                type="text"
+                name="phoneNumber"
+                value={this.state.phoneNumber}
+                onChange={this.handleInputChange}
+              />
+              {formErrors.phoneNumber && <Error>{formErrors.phoneNumber}</Error>}
+            </M3>
+          </M2><br/>
+        <M33>
+            <P8>Preferred way of communication:</P8>
+            <Button1 type="button" active={current === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
+            <Button2 type="button" active={current === 'Email'}  onClick={() => this.handleButtonClick('Email')}>Email</Button2>
+            <Button3 type="button" active={current === 'Phone'}  onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
+        </M33>
+        <br/>
+        <M3>
+                <Input1 
+                  type="checkbox" 
+                  id="agreeToContact" 
+                  checked={this.state.agreeToContact} 
+                  onChange={this.handleAgreeToContactChange} 
+                />
+                <Label htmlFor="agreeToContact">
+                  I agree to have Sepnoty contact me Via email, Phone, Messenger.
+                </Label>
+              </M3>
+              <br/>
+              <M3>
+                <Input1 
+                  type="checkbox" 
+                  id="agreeToProvideInfo" 
+                  checked={this.state.agreeToProvideInfo} 
+                  onChange={this.handleAgreeToProvideInfoChange} 
+                />
+                <Label htmlFor="agreeToProvideInfo">
+                  I agree to have Sepnoty provide my request information to sepnoty affiliated development centres.
+                </Label>
+              </M3>
+        <br/>
+        <P5>Your personal data will be stored for ten years on US servers in accordance with GDPR, and erased thereafter. 
+We'll share it with our development centre to address your request, ensuring GDPR compliance at both locations. 
+Refer to our <Span>Privacy Policy</Span> for details.</P5>
+        </Mai>
+        
+        </M>
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Submit</button>
+            <button type="submit" className='buttons__button buttons__button--next' onClick={this.continue}>Submit</button>
           </Button>
       </Main>
     )
@@ -186,14 +231,173 @@ class CourseDetails extends Component {
 }
 
 export default CourseDetails;
+const P8 = styled.p`
+font-size: 15px;
+font-weight: 700;
+margin-right: 30px;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color:#263238;
+margin-left:30px;
+margin-bottom: 15px;
+width:80%;
 
-const Button = Styled.div`
+`
+const Error = styled.p`
+color:red;
+`
+
+const Button = styled.div`
 display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
 `
 
-const Main = Styled.div`
+const Main = styled.div`
 background-color:#0C111F;
+`
+const Input1 = styled.input`
+margin-left:-630px;
+color: #C1CAE7;
+cursor: pointer;
+
+`;
+const M = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius: 10px;
+width: 800px;
+margin-left: -80px;
+`;
+const Mai = styled.div`
+height:550px;
+width: 800px;
+padding: 30px 40px 10px 40px;
+background-color:#C1CAE7;
+display:flex;
+flex-direction:column;
+border-radius: 10px;
+border: 1px solid #C1CAE7;
+margin-left:0px;
+`
+const P1 = styled.p`
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color:#2B459B;
+margin-left:30px;
+`
+const P2 = styled.div`
+margin-left:30px;
+margin-top:-50px;
+margin-right:30px;
+color:#263238;
+font-weight: 500;
+margin-top:18px;
+width: 80%;
+`
+const P3 = styled.p`
+font-size: 16px;
+font-weight: 700;
+text-align: left;
+color:#263238;
+margin-left:30px;
+margin-top: 15px;
+margin-bottom: 0px;
+`
+const M2 = styled.div`
+display:flex;
+flex-direction:row;
+gap:40px;
+`
+const M3 = styled.div`
+display:flex;
+flex-direction:column;
+`;
+
+const M33 = styled.div`
+display:flex;
+flex-direction:row;
+`;
+
+
+const P4 = styled.p`
+font-size: 18px;
+font-size: 15px;
+font-weight: 700;
+margin-right: 30px;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color:#263238;
+margin-left:30px;
+margin-bottom: 15px;
+`
+const Input = styled.input`
+margin-left:30px;
+margin-top:-15px;
+background:transparent;
+border: 1px solid #8C8C8C;
+width:180px;
+height: 30px;
+margin-bottom: -90px
+border-radius: 3px;
+`
+const Button1 = styled.button`
+background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+color: ${(props) => (props.active ? 'white' : 'black')};
+width:60px;
+border-radius:5px;
+font-size:12px;
+height: 30px;
+
+
+`
+const Button2 = styled.button`
+margin-left:0px;
+margin-top: 0px;
+background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+color: ${(props) => (props.active ? 'white' : 'black')};
+border: 1px solid #8C8C8C;
+width:80px;
+height: 30px;
+`
+const Button3 = styled.button`
+background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+color: ${(props) => (props.active ? 'white' : 'black')};
+border: 1px solid #8C8C8C;
+width: 80px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+height: 30px;
+`;
+const Label = styled.label`
+color:#263238;
+font-weight: 500;
+font-size: 13px;
+margin-left:60px;
+margin-top:-15px;
+`
+const Span = styled.span`
+color:#BC2424;
+`
+const P5 = styled.p`
+
+font-size:12px;
+
+font-size:13px;
+line-height: 1.5;
+line-space: 20px;
+font-weight: 600;
+
+margin-left:40px;
+
+margin-left:20px;
+
+color:#263238;
 `

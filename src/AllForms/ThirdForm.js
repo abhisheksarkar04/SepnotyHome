@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import ThirdPage from '../AllForms/Website/ThirdPage';
 
@@ -17,6 +18,11 @@ class YourIndustry extends Component {
   continue = e => {
     e.preventDefault();
     const { selectedService, websiteLink } = this.state;
+    const formData = {
+      field3: {selectedService,websiteLink},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
     if (!selectedService) {
       this.setState({ error: 'Please select a service.' });
       return;
@@ -208,7 +214,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:700px;
 `
 const Heading = Styled.h1`
@@ -255,4 +261,5 @@ margin-top:50px;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;

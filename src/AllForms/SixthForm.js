@@ -3,7 +3,8 @@ import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 
-import SixthPage from "./Website/SixthPage"
+import SixthPage from "./Website/SixthPage";
+import handleFormValues from './allFormValues';
 
 
 
@@ -12,112 +13,73 @@ import SixthPage from "./Website/SixthPage"
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class  FormNo5 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: "Yes"
-    };
-  }
+  state = {
+    current: 'Yes',
+    mediaContent: [],
+    paymentSupport: '',
+    monthlyVisitors: '',
+    errors: {}
+  };
 
   handleButtonClick = (page) => {
     this.setState({ current: page });
   };
 
-  shouldComponentUpdate(nextProps) {
-    if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  validateForm = () => {
+    const { mediaContent, paymentSupport, monthlyVisitors } = this.state;
+    const errors = {};
 
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
+    if (mediaContent.length === 0) {
+      errors.mediaContent = 'Please select at least one media content type.';
+    }
+
+    if (!monthlyVisitors===0) {
+      errors.monthlyVisitors = 'Please select the expected number of monthly visitors.';
+    }
+
+    return errors;
   };
 
+  handleNext = () => {
+    const errors = this.validateForm();
+
+    const {  mediaContent, paymentSupport, monthlyVisitors } = this.state;
+    const formData = {
+      field6: { mediaContent, paymentSupport, monthlyVisitors},
+      // Add more fields as needed
+    };
+    handleFormValues(formData);
+
+    if (Object.keys(errors).length === 0) {
+      // No validation errors, proceed to the next step
+      this.props.nextStep();
+    } else {
+      // Validation errors found, update state with errors
+      this.setState({ errors });
+    }
+  };
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    const { mediaContent } = this.state;
+
+    if (checked) {
+      this.setState({ mediaContent: [...mediaContent, value] });
+    } else {
+      this.setState({ mediaContent: mediaContent.filter((item) => item !== value) });
+    }
+  };
   back = e => {
     e.preventDefault();
     this.props.prevStep();
   };
 
   render() {
-    const {current} = this.state
-    // const { 
-    //   // // coursesOptions,
-    //   // levelOptions,
-    //   // // addCourse, 
-    //   // addLevel,
-    //   // level,
-    // } = this.props;
-
-    // const theme = createMuiTheme({
-    //   palette: {
-    //     primary: {
-    //       main: '#003487',
-    //     },
-    //     secondary: {
-    //       main: '#003487',
-    //     },
-    //   },
-    //   overrides: {
-    //     MuiPaper: {
-    //       elevation2: {
-    //         boxShadow: 'none',
-    //       },
-    //     },
-    //     MuiInput: {
-    //       underline: {
-    //         '&:before': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:after': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:hover': {
-    //           '&:not(.Mui-disabled)': {
-    //             '&:before' : {
-    //               borderBottom: 'none'
-    //             }
-    //           }
-    //         }
-    //       }
-    //     },
-    //     MuiTableRow: {
-    //       root: {
-    //         '&:nth-child(even)': {
-    //           backgroundColor: '#ebebeb'
-    //         }
-    //       }
-    //     },
-    //     MuiTypography: {
-    //       h6: {
-    //         fontSize: '1rem',
-    //         color: '#011b64'
-    //       }
-    //     },
-    //     MuiToolbar: {
-    //       root: {
-    //         borderBottom: '1px solid grey',
-    //         backgroundColor: '#fafafa'
-    //       },
-    //       gutters: {
-    //         paddingLeft: '3px'
-    //       }
-    //     }
-    //   },
-    // });
-
-    // const columns = [
-    //   {
-    //     title: 'course',
-    //     field: 'course',
-    //   },
-    //   {
-    //     title: 'category',
-    //     field: 'category'
-    //   }
-    // ];
+    const { current, mediaContent, paymentSupport, monthlyVisitors, errors } = this.state;
 
     return (
       <Main className='form'>
@@ -138,120 +100,133 @@ class  FormNo5 extends Component {
             className={'stepper'}
             stepClassName={'stepper__step'}
           />
-          return(
+       
         
         <Mai>
-                    <FormContainer>
-                        <Form>
-                            <Heading>
-                            *What type of media content does your Software have to support?
-                            </Heading>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="one"/>
-                                <Label htmlfor="one">
-                                Images
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="two"/>
-                                <Label htmlfor="two">
-                                Video
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="three"/>
-                                <Label htmlfor="three">
-                                Audio
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="four"/>
-                                <Label htmlfor="four">
-                                Interactive content
-                                </Label>
-                            </CheckBoxCon>
-                            <CheckBoxCon>
-                                <input type="checkbox" id="five"/>
-                                <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
-                                
-                                
-                            </CheckBoxCon>
-                            <Para1>
-                            Should your website or App support payments?
-                            </Para1>
-                            <Main5>
-                                <ActiveButton type="button" active={current === 'Yes'}  onClick={this.handleButtonClick('Yes')}>Yes</ActiveButton>
-                                <Buttonel type="button" active={current === 'No'}  onClick={this.handleButtonClick('No')}>No</Buttonel>
-                            </Main5>
-                            
-                        </Form>
-                    </FormContainer>
-                    <FormContainer>
-                        <Form>
-                        <Heading>
-                        *What is the expected number of monthly visitors?
-                            </Heading>
-                            
-                    <InputContainer>
-                    <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            I am not sure
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            up to 50
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            50-100
-                            </Label1>
-                        </InputContainer>
-        
-                        <InputContainer>
-                            <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                            <Label1>
-                                100-500
-                            </Label1>
-                        </InputContainer>
-        
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            500-1,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            1,000-5,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            5,000-10,000
-                            </Label1>
-                        </InputContainer>
-                        <InputContainer>
-                        <Input1 type='radio' name="industry" value="Healthcare"/>
-        
-                        <Label1>
-                            more than 10,000
-                            </Label1>
-                    </InputContainer>
-                        </Form>
-                    </FormContainer>
+        <FormContainer>
+                <Form>
+                    <Heading>
+                    *What type of media content does your Software have to support?
+                    </Heading>
+                    <CheckBoxCon>
+                    <Label htmlfor="Images">
+                        <Input1 type="checkbox" name='mediatype' id="Images" value="Images" onClick={this.handleCheckboxChange}/>
+
+                        Images
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Video">
+                        <Input1 type="checkbox" name='mediatype' id="Video" value="Video" />
+                       
+                        Video
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Audio">
+                        <Input1 type="checkbox" id="Audio" name='mediatype' value="Audio" onClick={this.handleCheckboxChange}/>
+                        
+                        Audio
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                    <Label htmlfor="Interactive content">
+                        <Input1 type="checkbox" id="Interactive content" name='mediatype' value="Interactive content" onClick={this.handleCheckboxChange}/>
+                        
+                        Interactive content
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="five" name='mediatype' onClick={this.handleCheckboxChange}/>
+                        <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
+                        
+                    </CheckBoxCon>
+                    {errors.mediaContent && <Error>{errors.mediaContent}</Error>}
+                    <Para1>
+                    Should your website or App support payments?
+                    </Para1>
+                    <Main5>
+                        <ActiveButton type="button" active={current === 'Yes'}  onClick={() => this.handleButtonClick('Yes')}>Yes</ActiveButton>
+                        <Buttonel type="button" active={current === 'No'}  onClick={() => this.handleButtonClick('No')}>No</Buttonel>
+                    </Main5>
+                </Form>
+            </FormContainer>
+            <FormContainer>
+                <Form>
+                <Heading>
+                *What is the expected number of monthly visitors?
+                    </Heading>
+                    
+            <InputContainer>
+            <Label1>
+            <Input1 type='radio' name="industry" value="I am not sure" onClick={this.handleChange}/>
+
+                
+                    I am not sure
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="Healthcare" onClick={this.handleChange}/>
+
+                
+                    up to 50
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="50-100" onClick={this.handleChange}/>
+
+                
+                    50-100
+                    </Label1>
+                </InputContainer>
+
+                <InputContainer>
+                <Label1>
+                    <Input1 type='radio' name="industry" value="100-500"  onClick={this.handleChange}/>
+
+                    
+                        100-500
+                    </Label1>
+                </InputContainer>
+
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="500-1,000" onClick={this.handleChange}/>
+                    500-1,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="1,000-5,000" onClick={this.handleChange}/>
+
+                
+                    1,000-5,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="5,000-10,000" onClick={this.handleChange}/>
+
+                
+                    5,000-10,000
+                    </Label1>
+                </InputContainer>
+                <InputContainer>
+                <Label1>
+                <Input1 type='radio' name="industry" value="more than 10,000" onClick={this.handleChange}/>
+
+                
+                    more than 10,000
+                    </Label1>
+            </InputContainer>
+                </Form>
+                
+          
+          {errors.monthlyVisitors && <Error>{errors.monthlyVisitors}</Error>}
+            </FormContainer>
+           
                 </Mai>
 
           {/* <div className='select'>
@@ -305,7 +280,8 @@ class  FormNo5 extends Component {
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
+            <button className='buttons__button buttons__button--next' onClick={this.handleNext}>Next</button>
+
           </Button>
       </Main>
     )
@@ -324,18 +300,23 @@ const Main = Styled.div`
 background-color:#0C111F;
 `
 const Input1 = Styled.input`
+margin-right:10px;
 margin-top:10px;
-margin-left: 10px;
 
 `
+const Error = Styled.div`
+  color: red;
+  margin-top: 5px;
+  font-size:12px;
+`;
+
 const Label1 = Styled.label`
-font-size:14px;
+font-size:16px;
+font-family: Roboto;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
-margin-top:20px;
-margin-left: 10px;
 `
 
 const Main5 = Styled.div`
@@ -343,7 +324,7 @@ display:flex;
 flex-direction:row;
 `
 const ActiveButton = Styled.button`
-background-color: ${(props) => (props.active ? 'blue' : 'white')};
+background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
 color: ${(props) => (props.active ? 'white' : 'black')};
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -355,7 +336,7 @@ color: ${(props) => (props.active ? 'white' : 'black')};
 
 const Buttonel = Styled.button`
   font-size: 20px;
-  background-color: ${(props) => (props.active ? 'blue' : 'white')};
+  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
 color: ${(props) => (props.active ? 'white' : 'black')};
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -393,7 +374,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 `
 const CheckBoxCon = Styled.div`

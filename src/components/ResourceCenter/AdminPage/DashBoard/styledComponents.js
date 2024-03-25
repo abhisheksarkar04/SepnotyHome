@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 80px 30px 5% 30px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const Resources = styled.p`
@@ -36,6 +37,7 @@ export const Containertwo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const ImagesCont = styled.div`
@@ -60,6 +62,8 @@ export const CreateCon = styled.button`
   border-radius: 10px;
   margin-left: 5%;
   padding-left: 10px;
+  margin-top: 8px;
+  border: 0px;
 `;
 export const AddImg = styled.img`
   width: 20px;
@@ -73,13 +77,13 @@ export const CreateTitle = styled.p`
   font-size: 90%;
   margin: 0px;
   padding: 0px;
-  
 `;
 export const Contactimgcon = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-right: 10px;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 19px;
 `;
 
 export const Name = styled.p`
@@ -96,6 +100,7 @@ export const Profile = styled.img`
   height: 60px;
   width: 60px;
   margin-top: 0px;
+  margin-right: 15px;
 `;
 
 export const Containerthree = styled.div`
@@ -111,7 +116,7 @@ export const ColumnDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color: ;
-  margin-top: 10px;
+  margin-top: 40px;
   width: 25%;
   margin-right: 10px;
 `;
@@ -122,23 +127,27 @@ export const ArticalCon = styled.div`
   margin-left: 10px;
   margin-bottom: 25px;
   padding: 4px;
+  color: ;
 `;
 export const Icons = styled.img`
   height: 37px;
   width: 30px;
+  color: #407bff;
 `;
 
 export const IconName = styled.p`
   font-family: Sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   font-weight: 500;
   text-align: left;
   padding-left: 13px;
-  &:hover {
-    color: #407bff;
-    font-weight: 550;
-    cursor: pointer;
+
+  ${
+    "" /*  &:hover {  color: #407bff;
+
+cursor: pointer;
+  } */
   }
 `;
 
@@ -148,7 +157,7 @@ export const Containerfour = styled.div`
 
   border: 1px solid #d9d9d9;
   flex-direction: column;
-  justify-content: space-evenly;
+  height: 100%;
   border-radius: 18px;
 `;
 
@@ -158,7 +167,7 @@ export const DateInput = styled.input`
   margin-right: 20px;
   border: none;
   font-weight: 600;
-  background-color: #2B459B;
+  background-color: #2b459b;
   color: white;
   &::-webkit-calendar-picker-indicator {
     filter: invert(1);
@@ -169,5 +178,9 @@ export const DateInput = styled.input`
 `;
 
 export const ActiveTab = styled(IconName)`
-color:  color: #407bff;
+  color: #407bff;
+`;
+
+export const ActiveIcon = styled(Icons)`
+  color: #407bff;
 `;

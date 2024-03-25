@@ -32,7 +32,11 @@ import {
   DragHead,
   InputCon,
   ErrorMsg,
+  Popup,
+  PopupMessage,
+  CloseButton,
 } from "./styled";
+
 
 const contactListItem = [
   {
@@ -87,10 +91,15 @@ const ContactForm = (props) => {
     if (e.target.files[0]?.type.includes(allowedTypes)) {
       const selectedFile = e.target.files[0];
       setUpload(selectedFile);
+      alert("File uploaded successfully");
     } else {
-      alert("Enter only pdf file");
+      alert("Please upload only a PDF file.");
     }
   };
+
+  /*  const closeUploadSuccessPopup = () => {
+    setShowUploadSuccess(false);
+  }; */
 
   const changeHandler = (type, e) => {
     if (type === "agreement" && e.target.id === "contact") {
@@ -348,6 +357,12 @@ const ContactForm = (props) => {
           <ContactImage src={GIT} alt="contactUs" />
         </ContactImageContainer>
       </ContactContactssContainer>
+      {/* {showUploadSuccess && (
+        <Popup>
+          <CloseButton onClick={closeUploadSuccessPopup}>&#x2716;</CloseButton>
+          <PopupMessage>File uploaded successfully!</PopupMessage>
+        </Popup>
+      )} */}
     </ContactContainer>
   );
 };

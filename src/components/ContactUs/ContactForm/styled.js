@@ -67,6 +67,7 @@ export const ContactDragAndDrop = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 5px;
+  cursor: pointer;
 
   .icon {
     margin-right: 5px;
@@ -223,5 +224,39 @@ export const InputCon = styled.div`
 export const ErrorMsg = styled.p`
   font-size: 12px;
   color: red;
-  padding-left: 10px;+++
+  padding-left: 10px;
+`;
+
+export const Popup = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #8196db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items-center;
+  height: 15%;
+`;
+
+export const PopupMessage = styled.p`
+  font-size: 16px;
+  color: #333;
+  color: #ffffff;
+
+  margin-top:  20px;
+`;
+
+export const CloseButton = styled.button`
+  color: white;
+  border: none;
+  padding: 8px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  color: #ffffff;
 `;

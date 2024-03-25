@@ -1,17 +1,12 @@
 import {
   GlobalStyle,
   Container,
-  CreatePostBtn,
   Container1,
   Title,
   Summary,
   ChooseFile,
   Button,
-  NoFile,
   Container2,
-
-  /* H1Cont,
-    Content, */
   LastButton,
 } from "./styled";
 
@@ -24,17 +19,20 @@ import styled from "styled-components";
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
   background-color: #d9d9d9;
-  border-radius: 5px;
-  border: 0px solid transparent;
+  border-radius: 10px;
+  border-bottom: 1px solid #2b459b;
+  border-right: 1px solid #2b459b;
+  border-left: 1px solid #2b459b;
   outline: none;
+  font-size: 20px;
+
   .ql-editor {
     font-size: 16px;
     line-height: 1.5;
     border: none;
     color: #fff;
-    border-radius: 2px;
-    background-color: #0c111f;
-    height: 200px; /* Adjust height as needed */
+    border-radius: 10px;
+    height: 70px; /* Adjust height as needed */
     padding: 10px;
     overflow-y: auto;
     outline: none;
@@ -42,8 +40,26 @@ const StyledQuill = styled(ReactQuill)`
   .ql-container {
     border: none;
   }
+  .ql-toolbar {
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    /* Add border */
+  }
+  .ql-toolbar .ql-picker-label {
+    font-size: 16px; /* Adjust font size for the toolbar buttons */
+    font-weight: 600;
+    color: #263238;
+  }
 `;
 
+const fonts = [
+  "Arial",
+  "Georgia",
+  "Verdana",
+  "Courier New",
+  // Add more font styles as needed
+];
 const theme = {};
 const modules = {
   toolbar: [
@@ -82,6 +98,7 @@ const CreateArticles = () => {
       <Container>
         <Container1>
           <Title type="text" placeholder="Title" />
+          <Summary type="text" placeholder="Enter Description" />
           <ChooseFile>
             <Button onClick={handleFileSelect}>Choose File</Button>
             <input
@@ -90,9 +107,6 @@ const CreateArticles = () => {
               style={{ display: "none" }}
               onChange={handleFileUpload}
             />
-            <NoFile>
-              {selectedFile ? selectedFile.name : "No file chosen"}
-            </NoFile>
           </ChooseFile>
           <Container2>
             <StyledQuill
@@ -100,7 +114,6 @@ const CreateArticles = () => {
               value={value}
               onChange={setValue}
               modules={modules}
-              placeholder="project Description"
             />
           </Container2>
           <LastButton>Create Articles</LastButton>
