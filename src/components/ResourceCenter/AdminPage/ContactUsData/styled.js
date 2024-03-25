@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 1px solid #ffffff;
   border-radius: 18px;
-  width: 75%;
+  width: b 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,9 +92,9 @@ export const RowCompany = styled.td`
 export const RowEmail = styled.td`
   border: 1px solid #8196db;
   padding: 5px 0px 5px 0px;
-  /* Limit the maximum width */
-  width: 11%;
-  max-width: 130px;
+ 
+  width: 13%;
+  max-width: 145px;
   overflow-x: scroll;
 
   &::-webkit-scrollbar {
@@ -126,3 +126,32 @@ export const RowMessage = styled.td`
   padding: 5px 0px 5px 10px;
   width: 13%;
 `;
+
+export const Button = styled.button`
+  background-color: #ffffff;
+  color: #0C111F;
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  margin-right: 20px;
+  
+`;
+
+export const ButtonCon = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+justify-content: center;
+`;
+
+export const RowFileUpload=styled.td`
+border: 1px solid #8196db;
+  padding: 5px 0px 5px 30px;
+  width: 10%;
+`

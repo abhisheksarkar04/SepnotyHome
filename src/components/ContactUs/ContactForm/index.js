@@ -37,6 +37,7 @@ import {
   CloseButton,
 } from "./styled";
 
+
 const contactListItem = [
   {
     id: 1,
