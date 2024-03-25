@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  width: 75%;
   background-color: #0c111f;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #000000;
   font-family: Sans-serif;
   font-size: 16px;
@@ -147,6 +147,6 @@ export const LastButton = styled.button`
   color: #fff;
   font-weight: 550;
   padding-left: 30px;
-  background-color: #2B459B;
+  background-color: #2b459b;
   font-size: 20px;
 `;
