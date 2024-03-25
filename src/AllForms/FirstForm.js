@@ -97,6 +97,7 @@ class PersonalDetails extends Component {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
+    console.log(formData)
     handleFormValues(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
@@ -117,7 +118,7 @@ class PersonalDetails extends Component {
     }
     
     // If there are no errors, proceed to the next step
-    this.props.nextStep();
+    this.props.nextStep(formData);
 }
 
   render() {
@@ -188,7 +189,7 @@ class PersonalDetails extends Component {
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <span style={{ color: 'red' }}>{formErrors.softwareTypes}</span>}
+                {formErrors.softwareTypes && <Error style={{ color: 'red' }}>{formErrors.softwareTypes}</Error>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -244,7 +245,7 @@ class PersonalDetails extends Component {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
+              {formErrors.numberOfPages && <Error style={{ color: 'red' }}>{formErrors.numberOfPages}</Error>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -258,6 +259,9 @@ class PersonalDetails extends Component {
 }
 
 export default PersonalDetails;
+const Error = Styled.p`
+font-size:12px;
+`
 
 const Button = Styled.div`
 display:flex;
@@ -295,7 +299,7 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;

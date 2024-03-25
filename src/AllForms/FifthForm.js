@@ -20,7 +20,7 @@ class SecondForm extends Component {
     e.preventDefault();
     const { selectedIndustries } = this.state;
     const formData = {
-      field3: {selectedIndustries},
+      field5: {selectedIndustries},
       // Add more fields as needed
     };
     handleFormValues(formData);
@@ -173,6 +173,7 @@ margin-left:-90px;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 
 const Main = Styled.div`
@@ -204,7 +205,7 @@ background: #C1CAE7;
 gap:-20px;
 border-radius:10px;
 padding:20px;
-height:350px;
+height:380px;
 width:400px;
 `
 const In = Styled.input`
@@ -216,7 +217,7 @@ const CheckBoxCon = Styled.div`
 gap:30px;
 align-items:start;
 justify-content:space-between;
-margin-top:13px;
+margin-top:20px;
 `
 const Label = Styled.label`
 font-size:16px;
