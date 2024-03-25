@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import "react-quill/dist/quill.snow.css";
 
 export const GlobalStyle = createGlobalStyle` 
  *{ box-sizing: border-box;
@@ -8,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
  }
 `;
 
-import "react-quill/dist/quill.snow.css";
+
 
 export const Container = styled.div`
   width: 75%;
