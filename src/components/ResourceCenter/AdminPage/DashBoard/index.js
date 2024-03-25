@@ -78,6 +78,7 @@ import {
   ActiveTab,
   ActiveIcon,
 } from "./styledComponents";
+import CreateUser from "../CreateUser";
 
 const Lists = [
   {
@@ -116,6 +117,7 @@ const Lists = [
 
 const DashBoard = () => {
   const [showArticles, setShowArticles] = useState(true);
+  const [showCreateUser, setShowCreateUser] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
@@ -151,6 +153,7 @@ const DashBoard = () => {
   const toggleArticles = () => {
     setShowArticles(true);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -169,6 +172,7 @@ const DashBoard = () => {
   const toggleEvents = () => {
     setShowResponse(false);
     setShowEvents(true);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
@@ -189,6 +193,7 @@ const DashBoard = () => {
   const toggleProjects = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(true);
     setShowCreateProject(false);
@@ -207,6 +212,7 @@ const DashBoard = () => {
   const toggleReports = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
@@ -225,6 +231,7 @@ const DashBoard = () => {
   const toggleBlog = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(false);
     setShowCreateProject(false);
@@ -243,6 +250,7 @@ const DashBoard = () => {
   const toggleCareerOpportunities = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(false);
     setShowCreateProject(false);
@@ -262,6 +270,7 @@ const DashBoard = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(true);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -278,6 +287,7 @@ const DashBoard = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(true);
     setShowReports(false);
@@ -295,6 +305,7 @@ const DashBoard = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -313,6 +324,7 @@ const DashBoard = () => {
     setShowCreateBlogs(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -330,6 +342,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -346,8 +359,10 @@ const DashBoard = () => {
     setShowResponse(false);
     setShowCreateEvent(true);
     setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+   
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -364,8 +379,10 @@ const DashBoard = () => {
     setShowContactUs(true);
     setShowCreateEvent(false);
     setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -377,6 +394,17 @@ const DashBoard = () => {
     setActiveTab("Contact Us");
   };
 
+  const toggleCreateUser = () => {
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setActiveTab("Create User");
+  };
+
+
   const toggleResponse = () => {
     setShowResponse(true);
     setShowContactUs(false);
@@ -384,6 +412,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -392,8 +421,12 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+
+    
+
     setActiveTab("Responses Received");
   }
+
   return (
     <>
       <Container>
@@ -434,11 +467,20 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
+
+              ) : showCreateUser || showCreateUser ? (
+                <CreateCon onClick={toggleCreateUser}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create User</CreateTitle>
+                </CreateCon>
+              )
+
               ) : showContactUs? (
                 <CreateCon >
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
                 </CreateCon>): null}
+
             </ImagesCont>
             <Contactimgcon>
               <Name>Manikumar Pokala</Name>
@@ -544,7 +586,6 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-
               <ArticalCon onClick={toggleContactUs}>
                 {activeTab === "Contact Us" ? (
                   <>
@@ -571,7 +612,9 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-              <ArticalCon>
+
+              <ArticalCon onClick={toggleCreateUser}>
+                
                 {activeTab === "Create User" ? (
                   <>
                     <Icons src={activeCreateUser} alt="icon" />
@@ -625,7 +668,11 @@ const DashBoard = () => {
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
+
+            {showCreateUser && <CreateUser />}
+
             {showResponse && <ResponseData/>}
+
           </Containerthree>
         </ContainerOne>
       </Container>

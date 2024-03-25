@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import {
-  Rows,
+  
   Table,
   Container,
   SNo,
@@ -9,7 +9,7 @@ import {
   Company,
   Email,
   Phone,
-  Columns,
+  
   RowSno,
   RowName,
   RowCompany,
