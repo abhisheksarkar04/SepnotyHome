@@ -12,6 +12,11 @@ import menu from "../Navbar/assets/menu.svg";
 import downarrow from "../Navbar/assets/downarrow.svg";
 import down from "../Navbar/assets/down.svg";
 import up from "../Navbar/assets/up.svg";
+import behance from "./assets/behance.svg";
+import facebook from "../Navbar/assets/facebook.svg";
+import figma from "../Navbar/assets/figma.svg";
+import instagram from "../Navbar/assets/instagram.svg";
+import twitter from "../Navbar/assets/TwitterX.svg";
 
 import {
   LogoImg,
@@ -25,6 +30,11 @@ import {
   ContactCon,
   MenuItem,
   SubMenu,
+  FollowUsSection,
+  MobileAboutusList,
+  MobileServices,
+  OtherSectionItems,
+  MobileBlogs,
 } from "./styledComponents";
 import AboutUsSection from "../AboutUsSection/AboutUs";
 import ServiceSection from "../ServiceSection";
@@ -34,6 +44,35 @@ import ResourceCenterSection from "../ResourceCenterSection";
 import Contact from "../ContactUsSection";
 // import AboutUs from "../../pages/AboutUs";
 // import Services from "../../pages/Services";
+import FollowUsElements from "./FollowUsElements";
+
+const followUsElements = [
+  {
+    id: 1,
+    logoSrc: facebook,
+    logoName: "Facebook",
+  },
+  {
+    id: 2,
+    logoSrc: twitter,
+    logoName: "X",
+  },
+  {
+    id: 3,
+    logoSrc: instagram,
+    logoName: "Instagram",
+  },
+  {
+    id: 4,
+    logoSrc: behance,
+    logoName: "Behance",
+  },
+  {
+    id: 5,
+    logoSrc: figma,
+    logoName: "Figma",
+  },
+];
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false);
@@ -48,6 +87,10 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isMobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
+  const [isMobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [isOtherItemsOpen, setOtherItemsOpen] = useState(true);
+  const [isMobileBlogsOpen, setMobileBlogsOpen] = useState(false);
 
   // const history = useHistory();
 
@@ -119,6 +162,29 @@ const Navbar = () => {
 
   const toggleAbout = () => {
     setAboutUs(!aboutUs);
+  };
+
+  const toggleMobileAboutUs = () => {
+    setMobileAboutUsOpen(!isMobileAboutUsOpen);
+    setMobileServicesOpen(false);
+    setMobileBlogsOpen(false);
+    if (!isMobileAboutUsOpen) {
+      setOtherItemsOpen(false);
+    } else {
+      setOtherItemsOpen(true);
+    }
+  };
+
+  const toggleMobileServices = () => {
+    setMobileServicesOpen(!isMobileServicesOpen);
+    setMobileAboutUsOpen(false);
+    setMobileBlogsOpen(false);
+  };
+
+  const toggleMobileBlogs = () => {
+    setMobileBlogsOpen(!isMobileBlogsOpen);
+    setMobileServicesOpen(false);
+    setMobileAboutUsOpen(false);
   };
   const toggleAboutUs = (e) => {
     closeOtherSections();
@@ -289,154 +355,213 @@ const Navbar = () => {
         {isMenuOpen && (
           <div>
             <ul className="mobile-list">
-              <div className="item" onClick={() => toggleDropdown("aboutUs")}>
+              <div className="item">
                 <li className="submenu-item">About us</li>
                 <button className="downcon">
                   <img
-                    src={activeDropdown === "aboutUs" ? up : down}
+                    src={isMobileAboutUsOpen ? up : down}
                     alt="arrow"
+                    onClick={toggleMobileAboutUs}
                   />
                 </button>
               </div>
-              <div>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>About Company</li>
-                </Link>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>Leadership</li>
-                </Link>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>Experts</li>
-                </Link>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>Client Review</li>
-                </Link>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>Our Partners</li>
-                </Link>
-                <hr className="hrl" />
-                <Link to="/">
-                  <li>Location</li>
-                </Link>
-                <hr className="hrl" />
-                <div className="item">
+              {isMobileAboutUsOpen && (
+                <MobileAboutusList>
+                  <hr className="hrl" />
                   <Link to="/">
-                    <li>Approach</li>
+                    <li>About Company</li>
                   </Link>
-                  <button className="downcon">
-                    <img src={down} alt="down" />
-                  </button>
-                </div>
-                <hr className="hrl" />
-                <div className="item">
+                  <hr className="hrl" />
                   <Link to="/">
-                    <li>Recognition</li>
+                    <li>Leadership</li>
                   </Link>
-                  <button className="downcon">
-                    <img src={down} alt="down" />
-                  </button>
-                </div>
-                <hr className="hrl" />
-                <div className="item">
+                  <hr className="hrl" />
                   <Link to="/">
-                    <li>Join Us</li>
+                    <li>Experts</li>
                   </Link>
-                  <button className="downcon">
-                    <img src={down} alt="down" />
-                  </button>
-                </div>
-              </div>
+                  <hr className="hrl" />
+                  <Link to="/">
+                    <li>Client Review</li>
+                  </Link>
+                  <hr className="hrl" />
+                  <Link to="/">
+                    <li>Our Partners</li>
+                  </Link>
+                  <hr className="hrl" />
+                  <Link to="/">
+                    <li>Location</li>
+                  </Link>
+                  <hr className="hrl" />
+                  <div className="item">
+                    <Link to="/">
+                      <li>Approach</li>
+                    </Link>
+                    <button className="downcon">
+                      <img src={down} alt="down" />
+                    </button>
+                  </div>
+                  <div>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Pricing models at sepnoty</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Our Approach to Software Development</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li> Sustainability Policy</li>
+                    </Link>
+                  </div>
+                  <hr className="hrl" />
+                  <div className="item">
+                    <Link to="/">
+                      <li>Recognition</li>
+                    </Link>
+                    <button className="downcon">
+                      <img src={down} alt="down" />
+                    </button>
+                  </div>
+                  <div>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Testimonials</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li> Awards</li>
+                    </Link>
+                  </div>
+                  <hr className="hrl" />
+                  <div className="item">
+                    <Link to="/">
+                      <li>Join Us</li>
+                    </Link>
+                    <button className="downcon">
+                      <img src={down} alt="down" />
+                    </button>
+                  </div>
+                  <hr className="hrl" />
+                  <FollowUsSection>
+                    {followUsElements.map((eachLogo) => (
+                      <FollowUsElements key={eachLogo.id} logos={eachLogo} />
+                    ))}
+                  </FollowUsSection>
+                </MobileAboutusList>
+              )}
               <hr className="hrl" />
-              <MenuItem>
-                <div
-                  className="item"
-                  onClick={() => toggleDropdown("services")}
-                >
-                  <li>Services</li>
-                  <button className="downcon">
-                    <img
-                      src={activeDropdown === "services" ? up : down}
-                      alt="down"
-                    />
-                  </button>{" "}
-                </div>
-                <SubMenu expanded={activeDropdown === "services"}>
-                  <ul className="sub-menu" ref={serviceRef}>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Software Development</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Web Development</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Mobile App Development</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>UI/UX Design</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Digital Marketing</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Graphic Designing</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Video Editing</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Cloud Service Integration</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Cyber Security Provision</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>AI Technology Services Integration</li>
-                    </Link>
-                  </ul>
-                </SubMenu>
-              </MenuItem>
-              <hr className="hrl" />
-              <div className="item">
-                <Link to="/Blog">
-                  <li>Blog</li>
-                </Link>
-                <button className="downcon">
-                  <img src={down} alt="down" />
-                </button>
-              </div>
-              <hr className="hrl" />
-              <div className="item">
-                <Link to="/CareerOpportunities">
-                  <li>Career Opportunities</li>
-                </Link>
-                <button className="downcon">
-                  <img src={down} alt="down" />
-                </button>
-              </div>
-              <hr className="hrl" />
-              <div className="item">
-                <Link to="/ResourceCenter">
-                  <li>Resource Center</li>
-                </Link>{" "}
-                <button className="downcon">
-                  <img src={down} alt="down" />
-                </button>
-              </div>
+              {isOtherItemsOpen && (
+                <OtherSectionItems>
+                  <div className="item">
+                    <li>Services</li>
+                    <button className="downcon">
+                      <img
+                        src={isMobileServicesOpen ? up : down}
+                        alt="down"
+                        onClick={toggleMobileServices}
+                      />
+                    </button>{" "}
+                  </div>
+                  {isMobileServicesOpen && (
+                    <MobileServices>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Software Development</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Web Development</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Mobile App Development</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>UI/UX Design</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Digital Marketing</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Graphic Designing</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Video Editing</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Cloud Service Integration</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Cyber Security Provision</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>AI Technology Services Integration</li>
+                      </Link>
+                    </MobileServices>
+                  )}
+                  <hr className="hrl" />
+                  <div className="item">
+                    <li>Blog</li>
+
+                    <button className="downcon">
+                      <img
+                        src={isMobileBlogsOpen ? up : down}
+                        alt="down"
+                        onClick={toggleMobileBlogs}
+                      />
+                    </button>
+                  </div>
+                  {isMobileBlogsOpen && (
+                    <MobileBlogs>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Insight and News</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Thought Leadership</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>News</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Press Inquires</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/">
+                        <li>Articles`</li>
+                      </Link>
+                    </MobileBlogs>
+                  )}
+                  <hr className="hrl" />
+                  <div className="item">
+                    <li>Career Opportunities</li>
+
+                    <button className="downcon">
+                      <img src={down} alt="down" />
+                    </button>
+                  </div>
+                  <hr className="hrl" />
+                  <div className="item">
+                    <Link to="/ResourceCenter">
+                      <li>Resource Center</li>
+                    </Link>{" "}
+                    <button className="downcon">
+                      <img src={down} alt="down" />
+                    </button>
+                  </div>
+                </OtherSectionItems>
+              )}
               <hr className="hrl" />
               <Link to="/Blog">
                 <li>

@@ -120,3 +120,30 @@ export const SubMenu = styled.div`
   top: 100%;
   position: relative;
 `;
+
+export const FollowUsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;
+`;
+
+export const MobileAboutusList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileServices = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const OtherSectionItems = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileBlogs = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
