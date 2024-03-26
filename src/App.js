@@ -69,10 +69,8 @@ import ChangeByDesign from "./components/MyPortfolio/ChangeByDesign";
 import UserInput from "./components/ResourceCenter/AdminPage/UserInput/";
 import DashBoard from "./components/ResourceCenter/AdminPage/DashBoard/";
 
-import CreatePost from "./components/ResourceCenter/AdminPage/NewPost/";
-
-import Myblog from './components/ResourceCenter/Myblog';
-import AdminCareerOppurtunities from './components/ResourceCenter/AdminCareerOppurtunities';
+import Myblog from "./components/ResourceCenter/Myblog";
+import AdminCareerOppurtunities from "./components/ResourceCenter/AdminCareerOppurtunities";
 import CreateBlog from "./components/ResourceCenter/AdminPage/NewBlog";
 import CreateJob from "./components/ResourceCenter/AdminPage/NewJob";
 
@@ -81,6 +79,8 @@ import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
 import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
 import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
 import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
+import ApplyForm from "./components/CareerOppurtunities/ApplyForm";
+import UserAuthorization from "./components/ResourceCenter/AdminPage/UserAuthorization";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -160,8 +160,8 @@ const AppRoutes = () => {
         path="/services/Graphic-Designing"
         component={GraphicDesignPage}
       />
-      <Route exact path="/DashBoard/Admin/CreateBlog" component={CreateBlog}/>
-      <Route exact path="/DashBoard/Admin/CreateJob" component={CreateJob}/>
+      <Route exact path="/DashBoard/Admin/CreateBlog" component={CreateBlog} />
+      <Route exact path="/DashBoard/Admin/CreateJob" component={CreateJob} />
       <Route
         exact
         path="/AboutUsComponents/AboutCompany"
@@ -217,6 +217,17 @@ const AppRoutes = () => {
         path="/CareerOppurtunities/DevelopersforHire"
         component={Developerforhire}
       />
+      <Route
+        exact
+        path="/CareerOppurtunities/ApplyForm"
+        component={ApplyForm}
+      />
+      <Route
+        exact
+        path="/ResourceCenter/AdminPage/UserAuthorization"
+        component={UserAuthorization}
+      />
+
       {/* <Route path="*" component={Home} /> */}
       <Route
         exact
