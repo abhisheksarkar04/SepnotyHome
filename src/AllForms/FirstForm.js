@@ -14,8 +14,9 @@ import FirstStep from "./Website/FirstPage"
 
 
 class PersonalDetails extends Component {
-
-  state = {
+constructor(props){
+  super(props);
+  this.state = {
     softwareTypes: [],
     numberOfPages: '',
     formErrors: {
@@ -23,6 +24,8 @@ class PersonalDetails extends Component {
       numberOfPages: ''
     }
   };
+}
+ 
 
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
@@ -53,6 +56,7 @@ class PersonalDetails extends Component {
 
 
     const { softwareTypes, numberOfPages } = this.state;
+    
 
 
    
@@ -85,9 +89,6 @@ class PersonalDetails extends Component {
     // Proceed to the next step or page
     this.props.nextStep();
   };
-
-
-
   continue = e => {
     e.preventDefault();
     
@@ -97,8 +98,7 @@ class PersonalDetails extends Component {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
-    console.log(formData)
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types

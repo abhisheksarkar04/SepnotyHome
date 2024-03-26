@@ -51,6 +51,14 @@ class FirstSoftwarePage extends Component {
 
     const { softwareTypes, numberOfPages } = this.state;
 
+    const formData = {
+       feild1 : {softwareTypes,numberOfPages}
+    }
+    this.props.onDataReceived(formData);
+
+
+    
+
 
    
   // Call the handleFormValues function from FormUtils.js
@@ -79,6 +87,7 @@ class FirstSoftwarePage extends Component {
     // }
     // Store the form data or proceed with further actions
     console.log("Form data:", this.state);
+
     // Proceed to the next step or page
     this.props.nextStep();
   };

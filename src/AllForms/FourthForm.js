@@ -20,7 +20,7 @@ class Summary extends Component {
       field4: {hasMockups,chosenCMS},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     if (!hasMockups || !chosenCMS) {
       this.setState({ error: 'Please answer all questions.' });
       return;
