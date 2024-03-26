@@ -48,7 +48,8 @@ class  FormNo5 extends Component {
       field6: { mediaContent,monthlyVisitors,current},
       // Add more fields as needed
     };
-    console.log(formData)
+    this.props.onDataReceived(formData);
+    
     //this.props.onDataReceived(formData);
 
     if (Object.keys(errors).length === 0) {
@@ -60,8 +61,14 @@ class  FormNo5 extends Component {
     }
   };
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  handleRadioChange = (event) => {
+    this.setState({
+      monthlyVisitors: event.target.value,
+      formErrors: {
+        ...this.state.formErrors,
+        month: ''
+      }
+    });
   };
 
   handleCheckboxChange = (e) => {
@@ -133,14 +140,13 @@ class  FormNo5 extends Component {
                     <CheckBoxCon>
                     <Label htmlfor="Interactive content">
                         <Input1 type="checkbox" id="Interactive content" name='mediatype' value="Interactive content" onClick={this.handleCheckboxChange}/>
-                        
+  
                         Interactive content
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="five" name='mediatype' onClick={this.handleCheckboxChange}/>
+                        <Input type="checkbox" id="five" name='mediatype' onClick={this.handleCheckboxChange}/>
                         <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
-                        
                     </CheckBoxCon>
                     {errors.mediaContent && <Error>{errors.mediaContent}</Error>}
                     <Para1>
@@ -166,13 +172,13 @@ class  FormNo5 extends Component {
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="industry" value="up to 50" onChange={this.handleRadioChange}/>
                   up to 50
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="industry" value="50-100" onChange={this.handleRadioChange}/>
                   50-100
                   </Label>
               </InputContainer>
@@ -271,26 +277,117 @@ class  FormNo5 extends Component {
 }
 
 export default FormNo5;
+const Error = Styled.p`
+font-size:12px;
+color:red;
+`
+const Para1 = Styled.p`
+`
+
 const Button = Styled.div`
 display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
 `
-
+const Button1 = Styled.button`
+background-color:blue;
+height:40px;
+width:120px;
+color:white;
+`
 const Main = Styled.div`
 background-color:#0C111F;
 `
-const Input1 = Styled.input`
-margin-right:10px;
-margin-top:10px;
-
+const Main1 = Styled.div`
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-item:center;
+gap:20px;
 `
-const Error = Styled.div`
-  color: red;
-  margin-top: 5px;
-  font-size:12px;
-`;
+const Heading = Styled.h1`
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color: #263238;
+`
+
+const FormContainer = Styled.div`
+display:flex;
+flex-direction:column;
+padding:20px;
+height:380px;
+width:600px;
+border: 1px solid #C1CAE7;
+background: #C1CAE7;
+gap:20px;
+border-radius:10px;
+`
+const CheckBoxCon = Styled.div`
+margin-top:15px;
+align-items:start;
+justify-content:space-between;
+`
+const Label = Styled.label`
+font-size:16px;
+font-family: Roboto;
+font-weight: 500;
+color:#263238;
+letter-spacing: 0em;
+text-align: left;
+margin-left:10px;
+`
+const Form = Styled.form`
+`
+const Input1 = Styled.input`
+background:transparent;
+border: 1px solid gray;
+font-size:15px;
+color: #263238;
+font-weight:500;
+height:20px;
+margin-right:10px;
+margin-top:0px;
+`
+// const Buttonel = Styled.button`
+//   font-size: 20px;
+//   background-color: #d9d9d9;
+//   border-bottom-right-radius: 10px;
+//   border-top-right-radius: 10px;
+//   border-top-left-radius: 10px;
+//   border-bottom-left-radius: 10px;
+//   padding: 0px;
+//   width:60px;
+//   height:30px;
+//   margin-left: -10px;
+//   border-right: 1px solid #9e9898;
+// `;
+
+
+
+// const Para1 = Styled.p`
+
+// `
+const InputContainer=Styled.div`
+margin-top:5px;
+`
+// const Input1 = Styled.textarea`
+// background:transparent;
+// border: 1px solid #C1CAE7;
+// font-size:15px;
+// color: #263238;
+// font-weight:500;
+// height:15px;
+// `
+const Input = Styled.input`
+margin-top:10px;
+margin-left:10px;
+`
+
 
 const Label1 = Styled.label`
 font-size:16px;
@@ -337,65 +434,4 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
-`
-const Heading = Styled.h1`
-font-family: Roboto;
-font-size: 18px;
-font-weight: 700;
-line-height: 30px;
-letter-spacing: 0em;
-text-align: left;
-color: #263238;
-`
-
-const FormContainer = Styled.div`
-display:flex;
-flex-direction:column;
-border: 1px solid #C1CAE7;
-background: #C1CAE7;
-gap:-20px;
-border-radius:10px;
-padding:20px;
-height:380px;
-width:600px;
-`
-const CheckBoxCon = Styled.div`
-gap:30px;
-align-items:start;
-justify-content:space-between;
-margin-top:5px;
-`
-const Label = Styled.label`
-font-size:16px;
-font-family: Roboto;
-font-weight: 500;
-color:#263238;
-letter-spacing: 0em;
-text-align: left;
-margin-left:10px;
-`
-const Form = Styled.form`
-
-`
-const Para1 = Styled.p`
-color: #263238;
-margin-top:30px;
-margin-bottom:20px;
-`
-const InputContainer=Styled.div`
-margin-top:5px;
-`
-// const Input1 = Styled.textarea`
-// background:transparent;
-// border: 1px solid #C1CAE7;
-// font-size:15px;
-// color: #263238;
-// font-weight:500;
-// height:15px;
-// `
-const Input = Styled.input`
-background: #C1CAE7;
-border: 1px solid #8C8C8C;
-width:250px;
-border-radius:4px;
 `

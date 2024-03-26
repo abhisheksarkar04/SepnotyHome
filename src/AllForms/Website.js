@@ -69,7 +69,7 @@ class Form extends Component {
   state = {
     step: 1,
     recivedData:[],
-    SecondData:"",
+    type:"WebSite",
   };
 
   nextStep = () => {
@@ -92,8 +92,10 @@ class Form extends Component {
   handleDataReceived = (data) => {
     this.setState(prevState => ({
       recivedData: [...prevState.recivedData, data]
-    }));
-    console.log(this.state.recivedData)
+    }), () => {
+      console.log(this.state.recivedData);
+      console.log(this.state.type) // Moved inside the callback
+    });
   }
   render() {
    const {step} = this.state
@@ -159,7 +161,6 @@ class Form extends Component {
           nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
-
         />
         )
 
