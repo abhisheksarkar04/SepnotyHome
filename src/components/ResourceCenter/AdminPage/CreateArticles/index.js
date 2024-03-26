@@ -1,16 +1,12 @@
 import {
   GlobalStyle,
   Container,
-  CreatePostBtn,
   Container1,
   Title,
   Summary,
   ChooseFile,
   Button,
-  NoFile,
   Container2,
-  /* H1Cont,
-    Content, */
   LastButton,
 } from "./styled";
 

@@ -14,8 +14,9 @@ import FirstStep from "./Website/FirstPage"
 
 
 class PersonalDetails extends Component {
-
-  state = {
+constructor(props){
+  super(props);
+  this.state = {
     softwareTypes: [],
     numberOfPages: '',
     formErrors: {
@@ -23,6 +24,8 @@ class PersonalDetails extends Component {
       numberOfPages: ''
     }
   };
+}
+ 
 
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
@@ -53,6 +56,7 @@ class PersonalDetails extends Component {
 
 
     const { softwareTypes, numberOfPages } = this.state;
+    
 
 
    
@@ -83,11 +87,8 @@ class PersonalDetails extends Component {
     // Store the form data or proceed with further actions
     console.log("Form data:", this.state);
     // Proceed to the next step or page
-    this.props.nextStep();
+    
   };
-
-
-
   continue = e => {
     e.preventDefault();
     
@@ -97,7 +98,8 @@ class PersonalDetails extends Component {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    console.log(formData)
+    this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types
@@ -188,7 +190,7 @@ class PersonalDetails extends Component {
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <span style={{ color: 'red' }}>{formErrors.softwareTypes}</span>}
+                {formErrors.softwareTypes && <Error style={{ color: 'red' }}>{formErrors.softwareTypes}</Error>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -244,7 +246,7 @@ class PersonalDetails extends Component {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
+              {formErrors.numberOfPages && <Error style={{ color: 'red' }}>{formErrors.numberOfPages}</Error>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -258,6 +260,9 @@ class PersonalDetails extends Component {
 }
 
 export default PersonalDetails;
+const Error = Styled.p`
+font-size:12px;
+`
 
 const Button = Styled.div`
 display:flex;
@@ -295,7 +300,7 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
