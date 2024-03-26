@@ -144,7 +144,6 @@ const Developerforhire = () => {
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
                             </div>
-
                         </ServiceItemDetails>
                     </div>
                 </ServiceItemCon>

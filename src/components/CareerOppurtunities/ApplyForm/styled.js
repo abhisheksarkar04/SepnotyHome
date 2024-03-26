@@ -21,7 +21,6 @@ export const Container = styled.div`
   align-items: center;
   margin-top:110px;
   padding-top:40px;
-
 `;
 
 export const Container1 = styled.div`

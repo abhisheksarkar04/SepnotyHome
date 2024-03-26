@@ -192,7 +192,6 @@ const UserAuthorization = () => {
                                 </RowApplicants>
                             </tr>
                         ))}
-
                     </tbody>
                 </Table>
             </TableContainer>

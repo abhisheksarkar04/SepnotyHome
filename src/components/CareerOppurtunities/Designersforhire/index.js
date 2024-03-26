@@ -40,11 +40,11 @@ import { Link } from "react-router-dom";
 
 const Designersforhire = (props) => {
   const options = [
-    { value: 'option1', label: 'Table of content' },<br></br>,
-    { value: 'option2', label: 'UI/UX Desiginer' },<br></br>,
-    { value: 'option3', label: 'Digital Marketing' },<br></br>,
-    { value: 'option4', label: 'Graphic Designer' },<br></br>,
-    { value: 'option5', label: 'video edting' },<br></br>,
+    { value: 'option1', label: 'Table of content' }, <br></br>,
+    { value: 'option2', label: 'UI/UX Desiginer' }, <br></br>,
+    { value: 'option3', label: 'Digital Marketing' }, <br></br>,
+    { value: 'option4', label: 'Graphic Designer' }, <br></br>,
+    { value: 'option5', label: 'video edting' }, <br></br>,
 
 
   ];
@@ -65,7 +65,7 @@ const Designersforhire = (props) => {
   const optionStyle = {
     backgroundColor: 'rgba(129, 150, 219, 1)',
     color: 'black',
-  
+
   };
 
   const { closeOtherSections } = props;
@@ -111,33 +111,33 @@ const Designersforhire = (props) => {
                     ))}
                   </select>
                 </div>
-              </DropDown> 
+              </DropDown>
               <div >
-                                {[{ image: img1, name: 'Software Tester ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img2, name: 'Software Developer', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img3, name: 'Cloud Engineer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img4, name: 'Digital Marketing Specialist ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img5, name: 'SEO(Search Engine Optimizer)', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img6, name: 'Video Editor', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img7, name: 'UI/UX Designer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
-                                { image: img8, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                {[{ image: img1, name: 'Software Tester ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img2, name: 'Software Developer', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img3, name: 'Cloud Engineer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img4, name: 'Digital Marketing Specialist ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img5, name: 'SEO(Search Engine Optimizer)', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img6, name: 'Video Editor', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img7, name: 'UI/UX Designer.', experience: '0-2 years', CTC: 'Up to 4 LPA' },
+                { image: img8, name: 'Graphic Designer ', experience: '0-2 years', CTC: 'Up to 4 LPA' },
 
-                                ].map(listing =>
-                                (<ListInnerContainer>
-                                    <ImageCon src={listing.image} alt="dm" />
-                                    <ListDataContainer>
-                                        <Careop>{listing.name}</Careop>
-                                        <Iph>Experience : {listing.experience}<br></br>
-                                            CTC : {listing.CTC}<br></br>
-                                            Onsite</Iph>
-                                    </ListDataContainer>
-                                   <Link  to="/CareerOppurtunities/ApplyForm">
-                                        <ApplyButton >Apply</ApplyButton><br></br>
-                                        <br></br>
-                                        </Link>
-                                </ListInnerContainer>))}
-                                {/* <p>button</p> */}
-                            </div>
+                ].map(listing =>
+                (<ListInnerContainer>
+                  <ImageCon src={listing.image} alt="dm" />
+                  <ListDataContainer>
+                    <Careop>{listing.name}</Careop>
+                    <Iph>Experience : {listing.experience}<br></br>
+                      CTC : {listing.CTC}<br></br>
+                      Onsite</Iph>
+                  </ListDataContainer>
+                  <Link to="/CareerOppurtunities/ApplyForm">
+                    <ApplyButton >Apply</ApplyButton><br></br>
+                    <br></br>
+                  </Link>
+                </ListInnerContainer>))}
+                {/* <p>button</p> */}
+              </div>
             </ServiceItemDetails>
           </div>
         </ServiceItemCon>

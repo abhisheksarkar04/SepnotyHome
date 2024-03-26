@@ -135,7 +135,7 @@ const DashBoard = () => {
   const [showContactUs, setShowContactUs] = useState(false);
   const [showApplicants, setShowApplicants] = useState(false);
   const [showResponse,setShowResponse] = useState(false);
-  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false)
+  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false);
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
 

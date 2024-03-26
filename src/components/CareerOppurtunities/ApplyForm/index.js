@@ -40,7 +40,6 @@ const ApplyForm = () => {
       </ThemeProvider><br></br>
       <br></br>
       <br></br>
-
       <FooterSection />
     </>
   );

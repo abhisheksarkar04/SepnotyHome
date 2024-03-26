@@ -109,7 +109,6 @@ export const Containerthree = styled.div`
   padding-left: 0px;
   width: 100%;
 `;
-
 export const ColumnDiv = styled.div`
   display: flex;
   height: 100%;

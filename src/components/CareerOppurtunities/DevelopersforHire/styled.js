@@ -273,7 +273,6 @@ color:white;
 
 `;
 export const ApplyButton = styled.button`
-  
   padding: 5px 57px 8px 25px;
   border-radius: 20px;
   color: white;
