@@ -105,6 +105,7 @@ export const ListHeading = styled.h1`
   letter-spacing: 0.5px;
   @media screen and (max-width: 576px) {
     font-size: 20px;
+    padding-left: 13%;
 
   }
 
@@ -211,29 +212,12 @@ export const MessageContainer = styled.div`
   flex-direction: column;
   margin: 10px 0 30px 0;
   padding: 0px 20px 0px 5em;
+  @media screen and (max-width: 576px) {
+     flex-direction: column;
+     margin: 10px 0 5px 0;
+     padding: 0px 20px 0px 5px;
+  }
 `;
-
-export const IconList = styled.ul`
-  border-radius: 8px;
-  padding: 0 10px 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10% 0 0;
-  background-image: linear-gradient(#2e6790, #aac2e5, rgba(0, 0, 10, 0.5));
-`;
-export const Icon = styled.img`
-  height: 20px;
-  width: 20px;
-  margin: 0 0 10px 0px;
-`;
-export const ChatHistory = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 30px 20px 60px 20px;
-`;
-
 export const ChatContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -243,7 +227,71 @@ export const ChatContainer = styled.div`
   border-radius: 5px;
   margin-right: 20%;
   padding: 10px;
+  @media screen and (max-width: 576px) {
+    width: 80%;
+    margin-right: 0;
+    margin-left: 10px;
+    padding: 3px;
+ }
 `;
+export const MessageList = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: #c1cae7;
+  border-radius: 7px;
+  @media screen and (max-width: 576px) {
+    width: 80%;
+    margin-top: 80px;
+    margin-left: 10%;
+ }
+`;
+
+export const IconList = styled.ul`
+  border-radius: 8px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  margin: 0 10% 0 0;
+  background-image: linear-gradient(#2e6790, #aac2e5, rgba(0, 0, 10, 0.5));
+  @media screen and (max-width: 576px) {
+    width: 10%;
+    margin: 0 2% 0 0;
+    padding: 0 0px 0 0px;
+ }
+`;
+export const Icon = styled.img`
+  height: 20px;
+  width: 20px;
+  margin: 0 0 10px 0px;
+  @media screen and (max-width: 576px) {
+    height: 20px;
+    width: 20px;
+    margin: 0 0 0px -8px;
+ }
+`;
+export const ChatHistory = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 30px 20px 60px 20px;
+  @media screen and (max-width: 576px) {
+    flex-wrap: wrap;
+    margin: 30px 0px 60px 20px;
+ }
+`;
+
+export const Chat = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 576px) {
+    
+ }
+  
+`;
+
 export const PersonContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -258,6 +306,9 @@ export const Person = styled.img`
   height: 50px;
   width: 50px;
   margin-right: 50px;
+  @media screen and (max-width: 576px) {
+    margin-right: 18px;
+  }
 `;
 
 export const Name = styled.h1`
@@ -279,16 +330,26 @@ export const PersonDetails = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 15px 20px 10px 10px;
+  @media screen and (max-width: 576px) {
+    
+   
+  }
 `;
 export const Icons = styled.img`
   height: 13px;
   width: 13px;
   margin-right: 10px;
+  @media screen and (max-width: 576px) {
+    
+  }
 `;
 
 export const FromContainer = styled.div`
   margin-bottom: 20px;
   align-self: flex-start;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const FromTime = styled.p`
@@ -310,6 +371,9 @@ export const FromMessage = styled.p`
 export const ToContainer = styled.div`
   margin-bottom: 20px;
   align-self: flex-end;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const ToTime = styled.p`
@@ -329,10 +393,7 @@ export const ToMessage = styled.p`
   margin: 0;
 `;
 
-export const Chat = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+
 
 export const TextArea = styled.div`
   background-color: #254989;
@@ -353,6 +414,9 @@ export const ChatHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin: 20px 10px 20px 20px;
+  @media screen and (max-width: 576px) {
+    margin: 10px 10px 10px 10px;
+  }
 `;
 export const SendBg = styled.button`
   height: 23px;
@@ -412,13 +476,7 @@ export const Write = styled.img`
   margin-right: 10px;
 `;
 
-export const MessageList = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  background-color: #c1cae7;
-  border-radius: 7px;
-`;
+
 
 export const MailCon = styled.div`
   background-color: #2b459b;
@@ -473,6 +531,10 @@ export const CommunityDesc = styled.p`
   font-size: 16px;
   color: #ffffff;
   margin-bottom: 10px;
+  @media screen and (max-width: 576px) {
+      width: 90%;
+   
+  }
 `;
 
 export const ConnectButton = styled(Button)`

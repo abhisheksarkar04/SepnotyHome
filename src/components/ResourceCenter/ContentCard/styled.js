@@ -20,6 +20,9 @@ export const Image = styled.img`
 `;
 export const DetailsCon = styled.div`
   padding: 0px 5px 15px 15px;
+  @media screen and (max-width: 576px) {
+    text-align: left;
+  }
 `;
 export const Title = styled.h1`
   font-size: 12px;

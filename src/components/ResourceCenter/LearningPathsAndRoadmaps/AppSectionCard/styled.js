@@ -11,6 +11,12 @@ export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:28px;
 margin: 5px 0px 20px 40px;
+@media screen and (max-width: 576px) {
+  width: 100%;
+  font-size:20px;
+  margin: 5px 0px 20px 50px;
+ 
+}
 `;
 export const HeadingSpan=styled.span`
 width:65px;
@@ -29,6 +35,12 @@ margin-left:40px;
 margin-top:15px;
 margin-bottom:15px;
 line-height:1.6;
+@media screen and (max-width: 576px) {
+  width: 100%;
+  font-size: px;
+
+ 
+}
 `;
 export const ImgCon = styled.div`
   display: flex;
@@ -38,9 +50,20 @@ export const ImgCon = styled.div`
   justify-content: flex-end; /* Add this line */
   margin-left: 40px;
   margin-top:20px;
+  @media screen and (max-width: 576px) {
+    width: 70%;
+   
+  
+   
+  }
 `;
 export const InsertImg=styled.img`
 height:230px;
+@media screen and (max-width: 576px) {
+  
+
+ 
+}
 
 `;
 export const WebTechButton = styled.button`

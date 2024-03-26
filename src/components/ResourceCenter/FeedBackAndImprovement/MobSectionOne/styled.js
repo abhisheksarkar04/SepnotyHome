@@ -17,7 +17,13 @@ font-size:22px;
 margin-top:60px;
 width: 65%;
 color: #fff;
-text-align:justify;
+text-align: ;
+@media screen and (max-width: 576px) {
+    font-size: 18px;
+    width: 90%;
+    margin-left: ;
+    margin-top: 20px;
+  }
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

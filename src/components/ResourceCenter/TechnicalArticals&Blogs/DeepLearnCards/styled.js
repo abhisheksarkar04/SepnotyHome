@@ -10,6 +10,9 @@ export const CardContainer = styled.div`
   flex-direction: column;
   border-radius: 7px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px 0px 0px;
+  }
 `;
 export const CardContainer1 = styled.div`
   width: 160px;
@@ -21,6 +24,10 @@ export const CardContainer1 = styled.div`
   flex-direction: column;
   border-radius: 7px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px 0px -5%;
+    width: 50%;
+  }
 `;
 export const CardContainer2 = styled.div`
   width: 200px;
@@ -32,6 +39,10 @@ export const CardContainer2 = styled.div`
   flex-direction: column;
   border-radius: 7px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px 0px -5%;
+    width: 60%;
+  }
 `;
 
 export const Image = styled.img`
@@ -40,6 +51,10 @@ export const Image = styled.img`
   height: 300px;
   z-index: 1;
   margin-bottom: -10px;
+  @media screen and (max-width: 576px) {
+      margin-left: -50%;
+      width: 50%;
+  }
 `;
 export const Image33 = styled.img`
   width: 200px;
@@ -47,6 +62,9 @@ export const Image33 = styled.img`
   height: 340px;
   z-index: 1;
   margin-bottom: -10px;
+  @media screen and (max-width: 576px) {
+    margin-left: -50%;
+}
 `;
 export const DetailsCon = styled.div`
   padding: 3px 0px 0px 0px;
