@@ -81,6 +81,9 @@ import {
 } from "./styledComponents";
 import CreateUser from "../CreateUser";
 
+import UserAuthorization from "../UserAuthorization";
+
+
 const Lists = [
   {
     id: 1,
@@ -133,6 +136,9 @@ const DashBoard = () => {
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
   const [showApplicants, setShowApplicants] = useState(false);
+
+  const [showResponse,setShowResponse] = useState(false);
+  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false)
   const [showResponse,setShowResponse] = useState(false)
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
@@ -170,8 +176,9 @@ const DashBoard = () => {
     setShowResponse(false);
     setActiveTab("articles");
     setShowApplicants(false);
-  };
 
+    setShowUserAuthorization(false);
+ };
   const toggleEvents = () => {
     setShowResponse(false);
     setShowEvents(true);
@@ -192,6 +199,9 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Events and Workshops");
     setShowApplicants(false);
+
+    setShowUserAuthorization(false);
+
   };
 
   const toggleProjects = () => {
@@ -203,6 +213,7 @@ const DashBoard = () => {
     setShowCreateProject(false);
     setShowReports(false);
     setShowCreateReport(false);
+
     setShowBlog(false);
     setShowEvents(false);
     setShowCareerOpportunities(false);
@@ -212,6 +223,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Projects");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleReports = () => {
@@ -232,6 +244,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Reports");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleBlog = () => {
@@ -243,6 +256,180 @@ const DashBoard = () => {
     setShowCreateProject(false);
     setShowReports(false);
     setShowCreateReport(false);
+    setShowBlog(true);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setActiveTab("Blogs");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCareerOpportunities = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateUser(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(true);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setActiveTab("Career Opportunities");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCreateArticle = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateArticle(true);
+    setShowCreateUser(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+=======
+    setShowBlog(false);
+    setShowEvents(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setActiveTab("Projects");
+    setShowApplicants(false);
+  };
+
+  const toggleReports = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateUser(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+  const toggleCreateProject = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowCreateUser(false);
+    setShowProjects(false);
+
+    setShowCreateProject(true);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowReports(true);
+    setShowCreateArticle(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCreateReport = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowCreateUser(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(true);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCreateBlogs = () => {
+    setShowResponse(false);
+    setShowCreateBlogs(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowCreateUser(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateCareerOpportunities(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCreateCareer = () => {
+    setShowResponse(false);
+    setShowCreateCareerOpportunities(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setShowCreateUser(false);
+=======
+    setShowCreateBlogs(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateReport(false);
+    setShowCreateProject(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setActiveTab("Reports");
+    setShowApplicants(false);
+  };
+
+  const toggleBlog = () => {
+    setShowResponse(false);
+    setShowArticles(false);
+    setShowCreateUser(false);
+    setShowCreateArticle(false);
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowCreateEvent(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleCreateEvent = () => {
+    setShowResponse(false);
+    setShowCreateEvent(true);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
     setShowBlog(true);
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
@@ -264,6 +451,25 @@ const DashBoard = () => {
     setShowReports(false);
     setShowCreateReport(false);
     setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleContactUs = () => {
+    setShowResponse(false);
+    setShowContactUs(true);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    
+    setShowProjects(false);
+    setShowCreateProject(false);
     setShowCareerOpportunities(true);
     setShowCreateBlogs(false);
     setShowCreateCareerOpportunities(false);
@@ -304,6 +510,46 @@ const DashBoard = () => {
     setShowBlog(false);
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
+    setShowEvents(false);
+    setActiveTab("Contact Us");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleUserAuthorization = () => {
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowUserAuthorization(true);
+    setActiveTab("User Authorization");
+    setShowApplicants(false);
+  };
+
+
+  const toggleApplicants = () => {
+    setShowApplicants(true);
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    
+=======
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
@@ -342,6 +588,26 @@ const DashBoard = () => {
     setShowCreateReport(false);
     setShowBlog(false);
     setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setActiveTab("Applicants");
+    setShowUserAuthorization(false);
+  };
+
+
+  const toggleCreateUser = () => {
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setActiveTab("Create User");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+=======
     setShowCreateCareerOpportunities(false);
     setShowEvents(false);
     setShowCreateEvent(false);
@@ -442,7 +708,6 @@ const DashBoard = () => {
     setShowApplicants(false);
   };
 
-
   const toggleResponse = () => {
     setShowResponse(true);
     setShowContactUs(false);
@@ -463,6 +728,8 @@ const DashBoard = () => {
     setShowApplicants(false);
 
     setActiveTab("Responses Received");
+    setShowUserAuthorization(false);
+
   }
 
   return (
@@ -665,6 +932,8 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
+
+              <ArticalCon onClick={toggleUserAuthorization}>
               <ArticalCon>
                 {activeTab === "User Authorization" ? (
                   <>
@@ -708,7 +977,7 @@ const DashBoard = () => {
             {showContactUs && <ContactUsData />}
             {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
-
+            {ShowUserAuthorization && <UserAuthorization />}
             {showResponse && <ResponseData/>}
 
           </Containerthree>

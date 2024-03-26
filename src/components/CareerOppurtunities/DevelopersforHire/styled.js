@@ -274,7 +274,7 @@ color:white;
 `;
 export const ApplyButton = styled.button`
   
-  padding: 5px 25px 5px 25px;
+  padding: 5px 57px 8px 25px;
   border-radius: 20px;
   color: white;
   background-color: rgba(67, 90, 167, 1);
@@ -282,7 +282,7 @@ export const ApplyButton = styled.button`
   outline: none;
   font-size: 15px;
   margin-top: 68px;
-  width:10%;
+  width:15%;
   height:20%;
   margin-left:70px;
 `;

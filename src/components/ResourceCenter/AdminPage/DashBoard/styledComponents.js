@@ -127,6 +127,7 @@ export const ArticalCon = styled.div`
   margin-left: 10px;
   margin-bottom: 25px;
   padding: 4px;
+  color: 
   color: ;
 `;
 export const Icons = styled.img`
@@ -167,6 +168,7 @@ export const DateInput = styled.input`
   align-self: flex-end;
   margin-right: 20px;
   border: none;
+  font-weight: 600;
   border-radius: 5px;
   margin-top: 20px;
   font-weight: 600;
@@ -183,6 +185,7 @@ export const DateInput = styled.input`
 
 export const ActiveTab = styled(IconName)`
   color: #407bff;
+
 `;
 
 export const ActiveIcon = styled(Icons)`
