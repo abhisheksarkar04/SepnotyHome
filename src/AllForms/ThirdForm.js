@@ -22,7 +22,7 @@ class YourIndustry extends Component {
       field3: {selectedService,websiteLink},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     if (!selectedService) {
       this.setState({ error: 'Please select a service.' });
       return;

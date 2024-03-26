@@ -43,12 +43,13 @@ class  FormNo5 extends Component {
   handleNext = () => {
     const errors = this.validateForm();
 
-    const {  mediaContent, paymentSupport, monthlyVisitors } = this.state;
+    const {  mediaContent, paymentSupport, monthlyVisitors ,current} = this.state;
     const formData = {
-      field6: { mediaContent, paymentSupport, monthlyVisitors},
+      field6: { mediaContent,monthlyVisitors,current},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    console.log(formData)
+    //this.props.onDataReceived(formData);
 
     if (Object.keys(errors).length === 0) {
       // No validation errors, proceed to the next step
@@ -153,79 +154,60 @@ class  FormNo5 extends Component {
             </FormContainer>
             <FormContainer>
                 <Form>
-                <Heading>
-                *What is the expected number of monthly visitors?
+                    <Heading>
+                    *How many pages will your website/App
+                      have?
                     </Heading>
-                    
-            <InputContainer>
-            <Label1>
-            <Input1 type='radio' name="industry" value="I am not sure" onClick={this.handleChange}/>
-
-                
-                    I am not sure
-                    </Label1>
-                </InputContainer>
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="Healthcare" onClick={this.handleChange}/>
-
-                
-                    up to 50
-                    </Label1>
-                </InputContainer>
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="50-100" onClick={this.handleChange}/>
-
-                
-                    50-100
-                    </Label1>
-                </InputContainer>
-
-                <InputContainer>
-                <Label1>
-                    <Input1 type='radio' name="industry" value="100-500"  onClick={this.handleChange}/>
-
-                    
-                        100-500
-                    </Label1>
-                </InputContainer>
-
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="500-1,000" onClick={this.handleChange}/>
-                    500-1,000
-                    </Label1>
-                </InputContainer>
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="1,000-5,000" onClick={this.handleChange}/>
-
-                
-                    1,000-5,000
-                    </Label1>
-                </InputContainer>
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="5,000-10,000" onClick={this.handleChange}/>
-
-                
-                    5,000-10,000
-                    </Label1>
-                </InputContainer>
-                <InputContainer>
-                <Label1>
-                <Input1 type='radio' name="industry" value="more than 10,000" onClick={this.handleChange}/>
-
-                
-                    more than 10,000
-                    </Label1>
-            </InputContainer>
-                </Form>
-                
-          
-          {errors.monthlyVisitors && <Error>{errors.monthlyVisitors}</Error>}
-            </FormContainer>
+                    <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="I am not sure" onChange={this.handleRadioChange}/>
+                  I am not sure
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  up to 50
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  50-100
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="100-500" onChange={this.handleRadioChange}/>
+                  100-500
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="500-1,000" onChange={this.handleRadioChange}/>
+                  500-1,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="  1,000-5,000" onChange={this.handleRadioChange}/>
+                  1,000-5,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="5,000-10,000" onChange={this.handleRadioChange}/>
+                  5,000-10,000
+                  </Label>
+              </InputContainer>
+              <InputContainer>
+              <Label>
+                  <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+                  more than 10,000
+                  </Label>
+              </InputContainer>
+                              </Form>
+                          </FormContainer>
            
                 </Mai>
 

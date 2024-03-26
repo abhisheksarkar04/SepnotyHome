@@ -124,7 +124,7 @@ class SeventhForm extends Component {
       const formData = {
         field7 : {compliance,integration,integrationDetails,additionalDetails}
       }
-      handleFormValues(formData)
+      this.props.onDataReceived(formData);
       
   };
 
