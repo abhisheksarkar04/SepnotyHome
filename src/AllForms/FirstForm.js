@@ -87,7 +87,7 @@ constructor(props){
     // Store the form data or proceed with further actions
     console.log("Form data:", this.state);
     // Proceed to the next step or page
-    this.props.nextStep();
+    
   };
   continue = e => {
     e.preventDefault();
@@ -98,6 +98,7 @@ constructor(props){
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
+    console.log(formData)
     this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
@@ -118,7 +119,7 @@ constructor(props){
     }
     
     // If there are no errors, proceed to the next step
-    this.props.nextStep(formData);
+    this.props.nextStep();
 }
 
   render() {

@@ -23,7 +23,7 @@ class SecondForm extends Component {
       field5: {selectedIndustries},
       // Add more fields as needed
     };
-    console.log(formData);
+    this.props.onDataReceived(formData);
     //this.props.onDataReceived(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
