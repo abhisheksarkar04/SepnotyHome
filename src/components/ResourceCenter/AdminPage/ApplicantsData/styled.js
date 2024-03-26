@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 1px solid #ffffff;
   border-radius: 18px;
-  width: b 80%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,80 +18,89 @@ export const Table = styled.table`
   width: 95%;
   color: #ffffff;
   margin: 20px;
-  border-radius: 10px;
-  border: 1px solid #8196db;
+  font-size: 12px;
+  
+  border-radius: 0px;
+  border: 1px solid #407BFF;
 `;
 
 export const Columns = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
+  color: #407BFF;
 `;
 
 export const Rows = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px;
+  border: 1px solid #407BFF;
   horizontal-align: middle; /* Vertically center the text */
 `;
 
 export const SNo = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
+  text-align: center;
+  color: #407BFF;
 `;
 
 export const Name = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
-
+  text-align: center;
+  color: #407BFF;
+  width: 10%;
   padding: 5px;
 `;
 
 export const Company = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
+  color: #407BFF;
+  width: 10%;
+  text-align: center;
 `;
 
 export const Email = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
+  color: #407BFF;
+  width: 10%;
+  text-align: center;
 `;
 
 export const Phone = styled.th`
-  border: 1px solid #8196db;
+  border: 1px solid #407BFF;
   font-weight: 500;
-  color: rgb(129, 150, 219);
+  color: #407BFF;
+  width: 10%;
 
   text-align: center;
   word-wrap: break-word;
 `;
 
 export const RowSno = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px 5px 20px;
+  border: 1px solid #407BFF;
   word-wrap: break-word;
-  width: 4%;
+  text-align: center;
+  width: 5%;
   height: 50px;
 `;
 
 export const RowName = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px 5px 20px;
+  border: 1px solid #407BFF;
+  text-align: center;
   width: 10%;
+
 `;
 
 export const RowCompany = styled.td`
-  border: 1px solid #8196db;
-  padding: 0px 0px 0px 10px;
-  width: 17%;
+  border: 1px solid #407BFF;
+  text-align: center;
+  width: 10%;
 `;
 
 export const RowEmail = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px 5px 0px;
+  border: 1px solid #407BFF;
+  text-align: center;
  
   width: 13%;
   max-width: 145px;
@@ -117,13 +126,13 @@ export const RowEmail = styled.td`
   }
 `;
 export const RowPhone = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px 5px 30px;
+  border: 1px solid #407BFF;
+  text-align: center;
   width: 10%;
 `;
 export const RowMessage = styled.td`
-  border: 1px solid #8196db;
-  padding: 5px 0px 5px 10px;
+  border: 1px solid #407BFF;
+  text-align: center;
   width: 13%;
 `;
 
@@ -151,7 +160,7 @@ justify-content: center;
 `;
 
 export const RowFileUpload=styled.td`
-border: 1px solid #8196db;
+border: 1px solid #407BFF;
   padding: 5px 0px 5px 30px;
   width: 10%;
 `

@@ -32,12 +32,28 @@ import CreateJob from "../NewJob";
 import CreateProject from "../CreateProject";
 import CreateEvent from "../CreateNewEvent";
 import ContactUsData from "../ContactUsData";
+import ApplicantsData from "../ApplicantsData";
 import response from "./Images/response.svg";
 import contactus from "./Images/contactus.svg";
 import createuser from "./Images/createuser.svg";
 import userAuthorization from "./Images/userauthorization.svg";
 import applicants from "./Images/applicants.svg";
+
+import activeArticles from "./Images/activearticles.svg";
+import activeBlog from "./Images/activeblog.svg";
+import activeCareer from "./Images/activecareer.svg";
+import activeReport from "./Images/activereport.svg";
+import activeEvent from "./Images/activeevent.svg";
+import activeResponse from "./Images/activeresponse.svg";
+import activeUser from "./Images/activeuser.svg";
+import activeCreateUser from "./Images/activecreateuser.svg";
+import activeContactUs from "./Images/activecontact.svg";
+import activeApplicants from "./Images/activeapplicants.svg";
+import activeProject from "./Images/activeproject.svg";
+import search from "./Images/search.svg"
+
 import ResponseData from "../ResponseRecived";
+
 
 import {
   Container,
@@ -61,7 +77,9 @@ import {
   CreateCon,
   CreateTitle,
   ActiveTab,
+  ActiveIcon,
 } from "./styledComponents";
+import CreateUser from "../CreateUser";
 
 const Lists = [
   {
@@ -100,6 +118,7 @@ const Lists = [
 
 const DashBoard = () => {
   const [showArticles, setShowArticles] = useState(true);
+  const [showCreateUser, setShowCreateUser] = useState(false);
   const [showEvents, setShowEvents] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showReports, setShowReports] = useState(false);
@@ -113,6 +132,7 @@ const DashBoard = () => {
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
+  const [showApplicants, setShowApplicants] = useState(false);
   const [showResponse,setShowResponse] = useState(false)
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
@@ -135,6 +155,7 @@ const DashBoard = () => {
   const toggleArticles = () => {
     setShowArticles(true);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -148,11 +169,13 @@ const DashBoard = () => {
     setShowContactUs(false);
     setShowResponse(false);
     setActiveTab("articles");
+    setShowApplicants(false);
   };
 
   const toggleEvents = () => {
     setShowResponse(false);
     setShowEvents(true);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowProjects(false);
     setShowReports(false);
@@ -168,11 +191,13 @@ const DashBoard = () => {
     setShowCreateArticle(false);
     setShowContactUs(false);
     setActiveTab("Events and Workshops");
+    setShowApplicants(false);
   };
 
   const toggleProjects = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(true);
     setShowCreateProject(false);
@@ -186,11 +211,13 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Projects");
+    setShowApplicants(false);
   };
 
   const toggleReports = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowEvents(false);
     setShowProjects(false);
     setShowReports(true);
@@ -204,11 +231,13 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Reports");
+    setShowApplicants(false);
   };
 
   const toggleBlog = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(false);
     setShowCreateProject(false);
@@ -222,11 +251,13 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Blogs");
+    setShowApplicants(false);
   };
 
   const toggleCareerOpportunities = () => {
     setShowResponse(false);
     setShowArticles(false);
+    setShowCreateUser(false);
     setShowCreateArticle(false);
     setShowProjects(false);
     setShowCreateProject(false);
@@ -240,12 +271,14 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Career Opportunities");
+    setShowApplicants(false);
   };
 
   const toggleCreateArticle = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(true);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -257,11 +290,13 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
   const toggleCreateProject = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(true);
     setShowReports(false);
@@ -273,12 +308,14 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateReport = () => {
     setShowResponse(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -290,6 +327,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateBlogs = () => {
@@ -297,6 +335,7 @@ const DashBoard = () => {
     setShowCreateBlogs(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -307,6 +346,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateCareer = () => {
@@ -314,6 +354,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+    setShowCreateUser(false);
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -324,14 +365,17 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleCreateEvent = () => {
     setShowResponse(false);
     setShowCreateEvent(true);
     setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+   
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -341,6 +385,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowContactUs(false);
+    setShowApplicants(false);
   };
 
   const toggleContactUs = () => {
@@ -348,8 +393,10 @@ const DashBoard = () => {
     setShowContactUs(true);
     setShowCreateEvent(false);
     setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -359,15 +406,19 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setActiveTab("Contact Us");
+    setShowApplicants(false);
   };
 
-  const toggleResponse = () => {
-    setShowResponse(true);
+  const toggleApplicants = () => {
+    setShowApplicants(true);
+    setShowResponse(false);
     setShowContactUs(false);
     setShowCreateEvent(false);
     setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+    
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -376,8 +427,44 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+    setActiveTab("Applicants");
+  };
+
+
+  const toggleCreateUser = () => {
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(true);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    setActiveTab("Create User");
+    setShowApplicants(false);
+  };
+
+
+  const toggleResponse = () => {
+    setShowResponse(true);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+
+    setShowApplicants(false);
+
     setActiveTab("Responses Received");
   }
+
   return (
     <>
       <Container>
@@ -418,104 +505,177 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
-              ) : null}
+
+              ) : showCreateUser || showCreateUser ? (
+                <CreateCon onClick={toggleCreateUser}>
+                  <AddImg src={add} alt="addButton" />
+                  <CreateTitle>Create User</CreateTitle>
+                </CreateCon>
+              )
+
+               : showContactUs? (
+                <CreateCon >
+                  <AddImg src={search} alt="search" />
+                  <CreateTitle>Search</CreateTitle>
+                </CreateCon>): null}
+
             </ImagesCont>
             <Contactimgcon>
               <Name>Manikumar Pokala</Name>
               <Profile src={profile} alt="profile" />
               <AddImg src={logout} alt="logout" onClick={handleLogout} />
             </Contactimgcon>
+            
           </Containertwo>
 
           <Containerthree>
             <ColumnDiv>
               <ArticalCon onClick={toggleArticles}>
-                <Icons src={vector} alt="icon" />
                 {activeTab === "articles" ? (
-                  <ActiveTab>Articles</ActiveTab>
+                  <>
+                    <Icons src={activeArticles} alt="icon" />
+                    <ActiveTab>Articles</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Articles</IconName>
+                  <>
+                    <Icons src={vector} alt="icon" />
+                    <IconName>Articles</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon onClick={toggleBlog}>
-                <Icons src={blogicon} alt="icon" />
                 {activeTab === "Blogs" ? (
-                  <ActiveTab>Blogs</ActiveTab>
+                  <>
+                    <Icons src={activeBlog} alt="icon" />
+                    <ActiveTab>Blogs</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Blogs</IconName>
+                  <>
+                    <Icons src={blogicon} alt="icon" />
+                    <IconName>Blogs</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon onClick={toggleCareerOpportunities}>
-                <Icons src={careericon} alt="icon" />
                 {activeTab === "Career Opportunities" ? (
-                  <ActiveTab>Career Opportunities</ActiveTab>
+                  <>
+                    <Icons src={activeCareer} alt="icon" />
+                    <ActiveTab>Career Opportunities</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Career Opportunities</IconName>
+                  <>
+                    <Icons src={careericon} alt="icon" />
+                    <IconName>Career Opportunities</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon onClick={toggleReports}>
-                <Icons src={repots} alt="icon" />
                 {activeTab === "Reports" ? (
-                  <ActiveTab>Reports</ActiveTab>
+                  <>
+                    <Icons src={activeReport} alt="icon" />
+                    <ActiveTab>Reports</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Reports</IconName>
+                  <>
+                    <Icons src={repots} alt="icon" />
+                    <IconName>Reports</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon onClick={toggleProjects}>
-                <Icons src={Projects} alt="icon" />
                 {activeTab === "Projects" ? (
-                  <ActiveTab>Projects</ActiveTab>
+                  <>
+                    <Icons src={activeProject} alt="icon" />
+                    <ActiveTab>Projects</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Projects</IconName>
+                  <>
+                    <Icons src={Projects} alt="icon" />
+                    <IconName>Projects</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon onClick={toggleEvents}>
-                <Icons src={eventicon} alt="icon" />
                 {activeTab === "Events and Workshops" ? (
-                  <ActiveTab>Events and Workshops</ActiveTab>
+                  <>
+                    <Icons src={activeEvent} alt="icon" />
+                    <ActiveTab>Events and Workshops</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Events and Workshops</IconName>
-                )}
-              </ArticalCon>
-              <ArticalCon onClick={toggleResponse}>
-                <Icons src={response} alt="icon" />
-                {activeTab === "Responses Received" ? (
-                  <ActiveTab>Responses Received</ActiveTab>
-                ) : (
-                  <IconName>Responses Received</IconName>
+                  <>
+                    <Icons src={eventicon} alt="icon" />
+                    <IconName>Events and Workshops</IconName>
+                  </>
                 )}
               </ArticalCon>
 
+              <ArticalCon onClick={toggleResponse}>
+                
+
+                {activeTab === "Responses Received" ? (
+                  <>
+                    <Icons src={activeResponse} alt="icon" />
+                    <ActiveTab>Responses Received</ActiveTab>
+                  </>
+                ) : (
+                  <>
+                    <Icons src={response} alt="icon" />
+                    <IconName>Responses Received</IconName>
+                  </>
+                )}
+              </ArticalCon>
               <ArticalCon onClick={toggleContactUs}>
-                <Icons src={contactus} alt="icon" />
                 {activeTab === "Contact Us" ? (
-                  <ActiveTab>Contact us</ActiveTab>
+                  <>
+                    <Icons src={activeContactUs} alt="icon" />
+                    <ActiveTab>Contact us</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Contact us</IconName>
+                  <>
+                    <Icons src={contactus} alt="icon" />
+                    <IconName>Contact us</IconName>
+                  </>
                 )}
               </ArticalCon>
-              <ArticalCon>
-                <Icons src={applicants} alt="icon" />
+              <ArticalCon onClick={toggleApplicants}>
                 {activeTab === "Applicants" ? (
-                  <ActiveTab>Applicants</ActiveTab>
+                  <>
+                    <Icons src={activeApplicants} alt="icon" />
+                    <ActiveTab>Applicants</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Applicants</IconName>
+                  <>
+                    <Icons src={applicants} alt="icon" />
+                    <IconName>Applicants</IconName>
+                  </>
                 )}
               </ArticalCon>
-              <ArticalCon>
-                <Icons src={createuser} alt="icon" />
+
+              <ArticalCon onClick={toggleCreateUser}>
+                
                 {activeTab === "Create User" ? (
-                  <ActiveTab>Create User</ActiveTab>
+                  <>
+                    <Icons src={activeCreateUser} alt="icon" />
+                    <ActiveTab>Create User</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>Create User</IconName>
+                  <>
+                    <Icons src={createuser} alt="icon" />
+                    <IconName>Create User</IconName>
+                  </>
                 )}
               </ArticalCon>
               <ArticalCon>
-                <Icons src={userAuthorization} alt="icon" />
                 {activeTab === "User Authorization" ? (
-                  <ActiveTab>User Authorization</ActiveTab>
+                  <>
+                    <Icons src={activeUser} alt="icon" />
+                    <ActiveTab>User Authorization</ActiveTab>
+                  </>
                 ) : (
-                  <IconName>User Authorization</IconName>
+                  <>
+                    <Icons src={userAuthorization} alt="icon" />
+                    <IconName>User Authorization</IconName>
+                  </>
                 )}
               </ArticalCon>
             </ColumnDiv>
@@ -546,7 +706,11 @@ const DashBoard = () => {
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
+            {showApplicants && <ApplicantsData />}
+            {showCreateUser && <CreateUser />}
+
             {showResponse && <ResponseData/>}
+
           </Containerthree>
         </ContainerOne>
       </Container>

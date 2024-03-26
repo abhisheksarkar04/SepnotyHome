@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import "react-quill/dist/quill.snow.css";
 
 export const GlobalStyle = createGlobalStyle` 
  *{ box-sizing: border-box;
@@ -7,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
   font-family: "Inter";
  }
 `;
+
+
 
 export const Container = styled.div`
   width: 75%;
@@ -62,11 +65,11 @@ export const Title = styled.input`
 `;
 
 export const Summary = styled.input`
-  height: 65px;
+  height: 60px;
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
@@ -109,11 +112,15 @@ export const NoFile = styled.p`
   padding-left: 10px;
   font-size: 16px;
 `;
-
 export const Container2 = styled.div`
   height: 250px;
+<<<<<<< HEAD:src/components/ResourceCenter/AdminPage/NewPost/styledComponents.js
+  width: 90%;
+  border: none; /* Remove default border */
+=======
   width: 95%;
   border: none;
+>>>>>>> main:src/components/ResourceCenter/AdminPage/CreateProject/styledComponents.js
   margin-top: 30px;
   border-radius: 3px;
   margin-left: 30px;
@@ -121,6 +128,7 @@ export const Container2 = styled.div`
   background-color: transparent; /* Remove background color */
   color: white;
 `;
+
 
 export const H1Cont = styled.div`
   height: 35px;
@@ -143,7 +151,7 @@ export const LastButton = styled.button`
   width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: -90px;
+  margin-top: 30px;
   color: #fff;
   font-weight: 550;
   padding-left: 30px;
