@@ -56,7 +56,6 @@ import {
     const [value, setValue] = useState("");
     return (
       <Container>
-        <CreatePostBtn>Create New Report</CreatePostBtn>
         <Container1>
           <Title type="text" placeholder="Title" />
           <ChooseFile>

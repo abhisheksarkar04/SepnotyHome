@@ -1,3 +1,9 @@
+import { ThemeProvider } from "styled-components";
+import React, { useState, useRef } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import styled from "styled-components";
+
 import {
   Container,
   CreatePostBtn,
@@ -11,47 +17,54 @@ import {
   /* H1Cont,
   Content, */
   LastButton,
+  GlobalStyle,
 } from "./styledComponents";
-import React, { useState, useRef } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import styled from "styled-components";
 
-const StyledQuill = styled(ReactQuill)`
-  /* Add your custom styles here */
+// const StyledQuill = styled(ReactQuill)`
+//   /* Add your custom styles here */
+//   background-color: #d9d9d9;
+//   border-radius: 10px;
+//   border: 0px solid transparent;
+//   outline: none;
+//   font-size: 20px;
+//   .ql-editor {
+//     font-size: 20px;
+//     line-height: 1.5;
+//     border: none;
+//     color: #fff;
+//     border-radius: 10px;
+//     height: 70px; /* Adjust height as needed */
+//     padding: 10px;
+//     overflow-y: auto;
+//     outline: none;
+//   }
+//   .ql-container {
+//     border: none;
+//   }
+//   .ql-toolbar {
+//     border: 1px solid #000000;
+//     border-radius: 10px;
+//     /* Add border */
+//   }
+// `;
 
-  background-color: #d9d9d9;
-  border: none;
-  border-radius: 0;
-  height: 100%;
-  padding: 0;
-  .ql-editor {
-    background-color: #0c111f;
-    height: 100%;
-    padding: 10px;
-    overflow-y: auto;
-  }
+const theme = {};
 
-  .ql-editor::before {
-    color: rgba(255, 255, 255, 0.5); /* 50% opacity white */
-  }
-`;
+// const modules = {
+//   toolbar: [
+//     [{ header: [1, 2, 3, 4, 5, 6, false] }],
+//     [{ font: [] }],
 
-const modules = {
-  toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    [{ font: [] }],
-
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-  ],
-};
+//     ["bold", "italic", "underline", "strike", "blockquote"],
+//     [
+//       { list: "ordered" },
+//       { list: "bullet" },
+//       { indent: "-1" },
+//       { indent: "+1" },
+//     ],
+//     ["link", "image", "video"],
+//   ],
+// };
 
 const CreateProject = () => {
   const [value, setValue] = useState("");
@@ -69,33 +82,44 @@ const CreateProject = () => {
   };
 
   return (
-    <Container>
-      <CreatePostBtn>Create New Project</CreatePostBtn>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <Summary type="text" placeholder="Project Summary" />
-        <ChooseFile>
-          <Button onClick={handleFileSelect}>Choose File</Button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
-        </ChooseFile>
-        <Container2>
-          <StyledQuill
-            theme="snow"
-            value={value}
-            onChange={setValue}
-            modules={modules}
-            placeholder="project Description"
-          />
-        </Container2>
-        <LastButton>Create Post</LastButton>
-      </Container1>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+
+      <Container>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <Summary type="text" placeholder="Project Description" />
+          <Summary type="text" placeholder="Industry" />
+          <Summary type="text" placeholder="Technology" />
+          <Summary type="text" placeholder="Customer" />
+          <Summary type="text" placeholder="Challenge" />
+          <Summary type="text" placeholder="Solution" />
+          <Summary type="text" placeholder="Results" />
+          <Summary type="text" placeholder="Technology and Tools" />
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+            <NoFile>
+              {selectedFile ? selectedFile.name : "No file chosen"}
+            </NoFile>
+          </ChooseFile>
+          {/* <Container2>
+            <StyledQuill
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+            />
+          </Container2> */}
+          <LastButton>Create Project</LastButton>
+        </Container1>
+      </Container>
+    </ThemeProvider>
   );
 };
 export default CreateProject;

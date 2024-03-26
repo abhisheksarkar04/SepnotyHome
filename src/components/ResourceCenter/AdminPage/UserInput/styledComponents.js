@@ -9,9 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 `;
 export const Container = styled.div`
   background-color: #0c111f;
-  width: 101.2%;
+  width: 100%;
   height: 100vh;
-  margin: -10px 0px -10px -10px;
   padding: 80px 30px 20px 30px;
   display: flex;
   flex-direction: column;
@@ -84,6 +83,7 @@ export const Head = styled.h2`
   font-familt: Sans-serif;
   font-size: 18px;
   color: #bbbbbb;
+  margin-bottom: 20px;
 `;
 
 export const Form = styled.form`
@@ -92,7 +92,7 @@ flex-direction:column;
 `;
 
 export const Input = styled.input`
-  width: 80%;
+  width: 100%;
   height: 35px;
   text-align: start;
   color: Black;
@@ -115,7 +115,7 @@ export const Check = styled.input``;
 
 export const Label = styled.label`
   font-family: roboto;
-  font-size: 8px;
+  font-size: 10px;
   color: white;
   padding: 0px 0 0 5px;
 `;

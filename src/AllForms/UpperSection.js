@@ -54,103 +54,89 @@ const CostHome = () => {
 }
 export default CostHome;
 const D = Styled.div`
-margin-left:60px;
-`
+  margin-left: 60px;
+`;
 
 const Main2 = Styled.div`
-display:flex;
-flex-direction:column;
-width: 100.8%;
-margin-left: -6px;
-background:#0C111F;
-background-size: cover;
-
-`
+  display: flex;
+  flex-direction: column;
+  width: 100.8%;
+  margin-left: -6px;
+  background: #0C111F;
+  background-size: cover;
+`;
 
 const Main = Styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width: auto;
-background-color:#0C111F;
-font-family:'Roboto';
-@media screen and (max-width: 768px) {
-     
+  display: flex;
+  flex-direction: column; /* Change to column for mobile */
+  justify-content: space-between;
+  width: auto;
+  background-color: #0C111F;
+  font-family: 'Roboto';
+  
+  @media screen and (min-width: 567px) {
+    flex-direction: row; /* Reset to row for larger screens */
   }
-`
-// const Button =Styled.div`
-// back
-// `
+`;
+
 const HomeContainer = Styled.div`
-display: flex;
-flex-direction: column;
-margin-top:20px;
-`
-// const Home2 = Styled.div`
-// display: flex;
-// flex-direction:column;
-// justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+`;
 
-// `
 const StarsImage = Styled.img`
-margin-top:50px;
-width: 60%;
-`
+  margin-top: 50px;
+  width: 60%;
+`;
+
 const DevelopContainer = Styled.div`
-margin-top:0px;
-display:flex;
-flex-direction:column;
-margin-left:140px;
-margin-button:-20px;
-`
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Adjusted margin for mobile */
+`;
+
 const Heading = Styled.h1`
-color: #B7B6BD;
-font-size: 40px;
-margin-top:10px;
-`
+  color: #B7B6BD;
+  font-size: 30px; /* Reduced font size for mobile */
+  margin-top: 10px;
+`;
+
 const Heading1 = Styled.h1`
-color:#4C64B2;
-margin-top:10px;
-font-size: 40px;
-`
-// const ParaContainer = Styled.div`
-// `
+  color: #4C64B2;
+  margin-top: 10px;
+  font-size: 30px; /* Reduced font size for mobile */
+`;
+
 const Para1 = Styled.p`
-font-size: 24px;
-font-weight:500;
-color:#B7B6BD;
-margin-top:20px;
-`
+  font-size: 20px; /* Reduced font size for mobile */
+  font-weight: 500;
+  color: #B7B6BD;
+  margin-top: 20px;
+`;
+
 const Heading3 = Styled.h1`
-color:white;
-font-size:32px;
-margin-top:10px;
-`
+  color: white;
+  font-size: 28px; /* Reduced font size for mobile */
+  margin-top: 10px;
+`;
+
 const RightContainer = Styled.div`
-text-align : right;
-display:flex;
-flex-direction:column;
-`
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Image2 = Styled.img`
-top:20%;
-width:600px;
-height:650px;
-position:relative;
-z-index:1;
+  width: 100%; /* Adjusted width to fit smaller screens */
+  height: auto; /* Maintain aspect ratio */
+`;
 
-`
-// const Image3 = Styled.img`
-// position:absolute;
-// width:40%;
-// height:50%;
-// top:70%;
-// left:50%;
-// `
-const SideContainer =   Styled.div`
-display:flex;
-flex-direction:row;
-margin-top:10px;
-gap:20px;
-margin-left:140px;
-
-`
+const SideContainer = Styled.div`
+  display: flex;
+  flex-direction: column; /* Change to column for mobile */
+  margin-top: 10px;
+  gap: 20px;
+  margin-left: 20px; /* Adjusted margin for mobile */
+`;

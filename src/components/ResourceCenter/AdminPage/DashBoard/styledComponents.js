@@ -128,10 +128,12 @@ export const ArticalCon = styled.div`
   margin-bottom: 25px;
   padding: 4px;
   color: 
+  color: ;
 `;
 export const Icons = styled.img`
   height: 37px;
   width: 30px;
+  color: #407bff;
 `;
 
 export const IconName = styled.p`
@@ -156,7 +158,8 @@ export const Containerfour = styled.div`
 
   border: 1px solid #d9d9d9;
   flex-direction: column;
-  justify-content: space-evenly;
+  height: 100vh;
+ 
   border-radius: 18px;
 `;
 
@@ -166,6 +169,10 @@ export const DateInput = styled.input`
   margin-right: 20px;
   border: none;
   font-weight: 600;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 5px;
   background-color: #2b459b;
   color: white;
   &::-webkit-calendar-picker-indicator {
@@ -177,5 +184,10 @@ export const DateInput = styled.input`
 `;
 
 export const ActiveTab = styled(IconName)`
+  color: #407bff;
+
+`;
+
+export const ActiveIcon = styled(Icons)`
   color: #407bff;
 `;

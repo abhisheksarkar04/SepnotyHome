@@ -18,12 +18,12 @@ export const Details = styled.div`
 `;
 export const Name = styled.h1`
   color: #2b459b;
-  font-size: 23px;
+  font-size: 21px;
 `;
 export const TextDts = styled.p`
   color: #fff;
   margin-top: 5px;
-  font-size: 20px;
+  font-size: 19px;
 `;
 export const ApplyButton = styled.button`
   background-color: #435aa7;

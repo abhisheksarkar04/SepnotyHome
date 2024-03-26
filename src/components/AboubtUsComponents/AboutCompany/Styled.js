@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+// For smaller screens (max-width: 576px), apply these styles
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
+
 export const DigitalContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,12 +12,17 @@ export const DigitalContainer = styled.div`
   padding-top: 70px;
   padding-bottom: 20px;
 `;
+
 export const Header = styled.h1`
   font-size: 17px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 5%;
+  ${media.mobile} {
+    font-size: 14px;
+  }
 `;
+
 export const Span = styled.span`
   font-weight: 300;
   color: #ffffff;
@@ -23,6 +33,9 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
+  ${media.mobile} {
+    font-size: 20px;
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -36,6 +49,9 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   padding-top: 20px;
+  ${media.mobile} {
+    font-size: 20px;
+  }
 `;
 
 export const ConRecDesc = styled.p`
@@ -43,12 +59,14 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width:80%;
   padding: 20px 30px 30px 0px;
-font-weight: 400;
-line-height: 40px;
-letter-spacing: 0px;
-text-align: left;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
 
-
+  ${media.mobile} {
+    font-size: 18px;
+  }
 `;
 
 export const Button = styled.button`
@@ -60,6 +78,10 @@ export const Button = styled.button`
   outline: none;
   font-size: 13px;
   margin-top: 20px;
+
+  ${media.mobile} {
+    font-size: 11px;
+  }
 `;
 
 export const Rectangle1 = styled.img`
@@ -69,15 +91,25 @@ export const Rectangle1 = styled.img`
   width: 38%;
   top: 12%;
   z-index: 0;
+  ${media.mobile} {
+    height:30%;
+    width:19%;
+  }
 `;
 
 export const Rectangle2 = styled.img`
   position: absolute;
+  
   right: 17.6%;
   height: 80%;
   width: 60%;
   top: -5%;
   z-index: 0;
+   ${media.mobile} {
+    height:30%;
+    width:30%;
+    display:none;
+  }
 `;
 
 export const Rectangle3 = styled.img`
@@ -89,7 +121,13 @@ export const Rectangle3 = styled.img`
   z-index: 0;
   background:transparent;
   margun-bottom: 20px;
+  ${media.mobile} {
+    height:50%;
+    top: 12%;
+    width:34%;
+  }
 `;
+
 
 export const ListHeading = styled.h1`
   font-size: 25px;
@@ -102,17 +140,24 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 10%;
 `;
+
 export const ServiceItemDesc = styled.p`
   margin-bottom: 20px;
   font-size: 23px;
   margin-left:-32px;
   color: #ffffff;
   width:80%;
-font-weight: 400;
-line-height: 40px;
-letter-spacing: 0px;
-text-align: left;
-margin-top:10px; 
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-top:10px; 
+
+  ${media.mobile} {
+    font-size: 15px;
+    width:100%;
+    line-height: 18px;
+  }
 `;
 
 export const ImageCon = styled.div`
@@ -123,9 +168,15 @@ export const ImageCon = styled.div`
   margin-bottom:30px;
   margin-top:40px;
 `;
+
 export const ServiceItemImg = styled.img`
   width: 650px;
   margin-left: -12%;
+  ${media.mobile} {
+    width:565px;
+    margin-left:-55px;
+
+  }
 `;
 
 export const ServiceItemButton = styled.button`
@@ -136,6 +187,10 @@ export const ServiceItemButton = styled.button`
   font-size: 15px;
   border-radius: 7px;
   padding: 3px 0 3px 0;
+
+  ${media.mobile} {
+    font-size: 11px;
+  }
 `;
 
 export const ServiceItemDetails = styled.div`
@@ -167,4 +222,7 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 20px;
   margin-left: 5em;
+  ${media.mobile} {
+    margin-left: 1.5em;
+  }
 `;

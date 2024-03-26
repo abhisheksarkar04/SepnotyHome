@@ -25,7 +25,6 @@ const Event = (props) => {
         <TextDts>Registration fee -{fee}</TextDts>
       </Details>
       <ButtonCon>
-        <ApplyButton>Apply</ApplyButton>
         <EditCon>
           <EditTool src={editIcon} alt="edit" />
           <EditTool src={deleteIcon} alt="delete" />

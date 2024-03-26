@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper } from 'react-form-stepper';
 import './App.css';
+import handleFormValues from './allFormValues';
 
 import SecondPage from "./Website/SecondPage"
 
@@ -28,6 +29,11 @@ class CourseDetails extends Component {
   continue = e => {
     e.preventDefault();
     const { selectedIndustries } = this.state;
+    const formData = {
+      field2: {selectedIndustries}
+      // Add more fields as needed
+    };
+    this.props.onDataReceived(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
@@ -158,13 +164,13 @@ class CourseDetails extends Component {
                 <Form2>
                 <InputContainer>
 <Label>
-<Input type='checkbox' name="industry" value="Healthcare" onChange={this.handleCheckboxChange}/>
+<Input type='checkbox' name="industry" value="Healthcare" id='' onChange={this.handleCheckboxChange}/>
 Healthcare
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Healthcare" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Retail & Wholesale" onChange={this.handleCheckboxChange}/>
     Retail & Wholesale
     </Label>
 </InputContainer>
@@ -201,31 +207,31 @@ Healthcare
             <Form3>
                 <InputContainer>
 <Label>
-<Input type='checkbox' name="industry" value="Healthcare" onChange={this.handleCheckboxChange}/>
+<Input type='checkbox' name="industry" value="Public sector" onChange={this.handleCheckboxChange}/>
 Public sector
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Healthcare" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Entertainment" onChange={this.handleCheckboxChange}/>
     Entertainment
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Manufacturing" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Education" onChange={this.handleCheckboxChange}/>
     Education
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Finanacial" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Professional services" onChange={this.handleCheckboxChange}/>
     Professional services
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Transportation & Logistics" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Construction" onChange={this.handleCheckboxChange}/>
     Construction
     </Label>
 </InputContainer>
@@ -304,6 +310,7 @@ export default CourseDetails;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 const Button = Styled.div`
 display:flex;
@@ -331,7 +338,7 @@ gap:-10px;
 border-radius:10px;
 padding:20px;
 width:700px;
-height:350px;
+height:380px;
 `
 const Form3 = Styled.div`
 margin-top:40px;
