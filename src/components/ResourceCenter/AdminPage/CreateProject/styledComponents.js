@@ -1,16 +1,24 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import "react-quill/dist/quill.snow.css";
+
+export const GlobalStyle = createGlobalStyle` 
+ *{ box-sizing: border-box;
+  margin: 0px;
+  font-family: "Inter";
+ }
+`;
+
+
 
 export const Container = styled.div`
-  width: 100%;
+  width: 75%;
   background-color: #0c111f;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
+  padding: 10px 0 80px 0;
   align-items: center;
-  ::placeholder {
-    color: black;
-  }
 `;
 
 export const CreatePostBtn = styled.button`
@@ -34,13 +42,13 @@ export const Container1 = styled.div`
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  margin-left: 50px;
+
   padding: 30px;
 `;
 
 export const Title = styled.input`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 20px;
@@ -49,25 +57,34 @@ export const Title = styled.input`
   color: #263238;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
+  border: none;
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const Summary = styled.input`
-  height: 65px;
-  width: 90%;
+  height: 60px;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #263238;
   padding-left: 30px;
   background-color: #d9d9d9;
   outline: none;
-  font-size: 20px;
+  font-size: 16px;
+  border: none;
+
+  ::placeholder {
+    color: black;
+  }
 `;
 
 export const ChooseFile = styled.div`
   height: 65px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
   margin-top: 40px;
@@ -79,26 +96,31 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: #435aa7;
-  color: white;
+  background-color: #d9d9d9;
+  color: #000000;
   font-family: Sans-serif;
-  font-size: 13px;
-  border: none;
+  font-size: 16px;
+  border: 1px solid #000000;
   padding: 7px 15px 7px 15px;
-  border-radius: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
 `;
 
 export const NoFile = styled.p`
   font-family: Sans-serif;
-  font-size: 13px;
   color: black;
   padding-left: 10px;
+  font-size: 16px;
 `;
-
 export const Container2 = styled.div`
   height: 250px;
+<<<<<<< HEAD:src/components/ResourceCenter/AdminPage/NewPost/styledComponents.js
   width: 90%;
-  border: 1px solid #2b459b; /* Border color */
+  border: none; /* Remove default border */
+=======
+  width: 95%;
+  border: none;
+>>>>>>> main:src/components/ResourceCenter/AdminPage/CreateProject/styledComponents.js
   margin-top: 30px;
   border-radius: 3px;
   margin-left: 30px;
@@ -106,6 +128,7 @@ export const Container2 = styled.div`
   background-color: transparent; /* Remove background color */
   color: white;
 `;
+
 
 export const H1Cont = styled.div`
   height: 35px;
@@ -118,19 +141,20 @@ export const H1Cont = styled.div`
 
 export const Content = styled.p`
   font-family: Sans-serif;
-  font-size: 10px;
+  font-size: 20px;
   color: #263238;
   font-weight: bold;
 `;
 
 export const LastButton = styled.button`
   height: 40px;
-  width: 90%;
+  width: 95%;
   border-radius: 10px;
   margin-left: 35px;
-  margin-top: 40px;
-  color: #2b459b;
-  font-weight: bold;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: 550;
   padding-left: 30px;
-  background-color: #d9d9d9;
+  background-color: #2b459b;
+  font-size: 20px;
 `;

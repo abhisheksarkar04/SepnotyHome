@@ -163,7 +163,6 @@ const UserAuthorization = () => {
                                     <ColoredLine color="white" />
                                     <tr> <input type="checkbox" /></tr>
                                 </RowBlog>
-
                                 <RowArticle >{row.article}
                                     <tr> <input type="checkbox" /></tr>
                                     <ColoredLine color="white" />

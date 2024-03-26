@@ -24,7 +24,7 @@ export const Container = styled.div`
 `;
 
 export const Container1 = styled.div`
- 
+
   margin-bottom:40px;
   width: 85%;
   height:490px;

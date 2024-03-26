@@ -205,6 +205,7 @@ export const ServiceItemImg = styled.img`
   margin: 0px;
 `;
 
+
 export const ServiceItemDetails = styled.div`
 margin-left: 117px;
 `;

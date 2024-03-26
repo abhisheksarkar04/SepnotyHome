@@ -1,13 +1,19 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle` 
+ *{ box-sizing: border-box;
+  margin: 0px;
+  font-family: "Inter";
+ }
+`;
 
 export const Container = styled.div`
-  width: 100%;
-
-  background-color: #0c111f;
+  width: 75%;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 80px 0 80px 0;
+
   align-items: center;
 `;
 
@@ -26,33 +32,38 @@ export const CreatePostBtn = styled.button`
 `;
 
 export const Container1 = styled.div`
-  width: 70%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  margin-left: 50px;
+
   padding: 30px;
 `;
 
 export const Title = styled.input`
   height: 40px;
-  width: 90%;
+
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 20px;
   align-items: start;
   padding-left: 30px;
   color: #263238;
   background-color: #d9d9d9;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  ::placeholder {
+    color: black;
+  }
 `;
-
 export const Summary = styled.input`
   height: 65px;
-  width: 90%;
+
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 40px;
   color: #263238;
   padding-left: 30px;
@@ -61,9 +72,9 @@ export const Summary = styled.input`
 
 export const ChooseFile = styled.div`
   height: 65px;
-  width: 90%;
+
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 40px;
   background-color: #d9d9d9;
   padding-left: 30px;
@@ -73,13 +84,14 @@ export const ChooseFile = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 90px;
-  height: 30px;
-  background-color: #435aa7;
-  color: white;
+  background-color: #d9d9d9;
+  color: #000000;
   font-family: Sans-serif;
-  font-size: 13px;
-  border: none;
+  font-size: 16px;
+  border: 1px solid #000000;
+  padding: 7px 15px 7px 15px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px rgba(10, 10, 10, 0.5);
 `;
 
 export const NoFile = styled.p`
@@ -91,11 +103,9 @@ export const NoFile = styled.p`
 
 export const Container2 = styled.div`
   height: 250px;
-  width: 90%;
+
   border: 0px solid transparent;
   margin-top: 30px;
-  border-radius: 3px;
-  margin-left: 30px;
 `;
 
 export const H1Cont = styled.div`
@@ -109,20 +119,18 @@ export const H1Cont = styled.div`
 
 export const Content = styled.p`
   font-family: Sans-serif;
-  font-size: 10px;
-  color: #263238;
-  font-weight: bold;
+  color: black;
+  padding-left: 10px;
+  font-size: 16px;
 `;
 
 export const LastButton = styled.button`
-  height: 40px;
-  width: 90%;
   border-radius: 10px;
-  margin-left: 35px;
+
   margin-top: 40px;
-  color: #2b459b;
+  color: #ffffff;
   font-weight: bold;
-  padding-left: 30px;
-  background-color: #d9d9d9;
-  margin-top:27%;
+  padding: 10px 0px;
+  background-color: #2b459b;
+  font-size: 20px;
 `;

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
+
+import styled from "styled-components";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import styled from "styled-components";
-import dropdown from "./kkkk.svg";
+import { ThemeProvider } from "styled-components";
 
 import {
   Container,
@@ -27,38 +28,69 @@ import {
   TimeInput,
   MapContainer,
   LocationCon,
+  GlobalStyle,
+  Event,
 } from "./style";
+
+const theme = {};
+
+const statesWithCities = [
+  "Hyderabad",
+  "Bangalore",
+  "Chennai",
+  "Trichy",
+  "Mumbai",
+  "Pune",
+  "Kolkata",
+  "Delhi",
+  "Noida",
+  "Jaipur",
+];
 
 const StyledQuill = styled(ReactQuill)`
   /* Add your custom styles here */
   background-color: #d9d9d9;
-  border-radius: 8px;
-  border: 0px solid transparent;
+  border-radius: 10px;
+  border-bottom: 1px solid #2b459b;
+  border-right: 1px solid #2b459b;
+  border-left: 1px solid #2b459b;
+  outline: none;
+  font-size: 20px;
+
   .ql-editor {
     font-size: 16px;
     line-height: 1.5;
-    border: 0px solid transparent;
-    color: #333;
     border: none;
-    border-radius: 8px;
-    background-color: #d9d9d9;
-    height: 200px; /* Adjust height as needed */
+    color: #fff;
+    border-radius: 10px;
+    height: 70px; /* Adjust height as needed */
     padding: 10px;
     overflow-y: auto;
+    outline: none;
+  }
+  .ql-container {
+    border: none;
+  }
+  .ql-toolbar {
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+    /* Add border */
+  }
+  .ql-toolbar .ql-picker-label {
+    font-size: 16px; /* Adjust font size for the toolbar buttons */
+    font-weight: 600;
+    color: #263238;
   }
 `;
 
-const selectStyle = {
-  backgroundColor: "transparent",
-  color: "black",
-  padding: "8px",
-  borderRadius: "10px",
-  width: "200px",
-};
-const optionStyle = {
-  backgroundColor: "white",
-  color: "",
-};
+const fonts = [
+  "Arial",
+  "Georgia",
+  "Verdana",
+  "Courier New",
+  // Add more font styles as needed
+];
 
 const modules = {
   toolbar: [
@@ -75,29 +107,6 @@ const modules = {
     ["link", "image", "video"],
   ],
 };
-
-const Locations = [
-  "Location",
-  "Hyderabad",
-  "Vizag",
-  "Banglore",
-  "Kolkata",
-  "Delhi",
-];
-
-const statesWithCities = [
-  "Hyderabad",
-  "Bangalore",
-  "Chennai",
-  "Trichy",
-  "Mumbai",
-  "Pune",
-  "Kolkata",
-  "Delhi",
-  "Noida",
-  "Jaipur",
-];
-
 const CreateEvent = () => {
   const [value, setValue] = useState("");
   const [current, setcurrent] = useState("");
@@ -107,6 +116,7 @@ const CreateEvent = () => {
   const [time, setTime] = useState("00:00"); // Initial time state
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
+  const [event, setEvent] = useState("Program");
 
   const handleFileSelect = () => {
     fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
@@ -122,13 +132,17 @@ const CreateEvent = () => {
     setSelectedOption(event.target.value);
   };
 
-  const handleChange = (newTime) => {
-    setTime(newTime);
-  };
   const handledatechange = (event) => {
     setcurrent(event.target.value);
   };
 
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
+
+  const handleEventChange = (event) => {
+    setEvent(event.target.value);
+  };
   const filteredOptions = [
     "Location",
     ...statesWithCities
@@ -136,16 +150,33 @@ const CreateEvent = () => {
       .sort((a, b) => a.localeCompare(b)),
   ];
   return (
-    <Container>
-      <CreatePostBtn>Create New Events and Workshops</CreatePostBtn>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <ChooseFil>
-          <DateInput type="date" value={current} onChange={handledatechange} />
-          <TimeInput type="time" value={time} />
-        </ChooseFil>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
 
-        <div>
+      <Container>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <Event
+            id="event"
+            value={event}
+            onChange={handleEventChange}
+            placeholder="Program"
+          >
+            <Option disabled hidden>
+              Program
+            </Option>
+            <Option>Events</Option>
+            <Option>Workshops</Option>
+          </Event>
+          <ChooseFil>
+            <DateInput
+              type="date"
+              value={current}
+              onChange={handledatechange}
+            />
+            <TimeInput type="time" value={time} onChange={handleTimeChange} />
+          </ChooseFil>
+
           <Select>
             id="option-dropdown" value={selectedOption}
             onChange={handleSelectOption}
@@ -155,23 +186,29 @@ const CreateEvent = () => {
               </Option>
             ))}
           </Select>
-        </div>
 
-        <Title type="text" placeholder="Entry Fees" />
-        <ChooseFile>
-          <Button onClick={handleFileSelect}>Choose File</Button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-          <NoFile>{selectedFile ? selectedFile.name : "No file chosen"}</NoFile>
-        </ChooseFile>
-
-        <LastButton>Create Events and Workshops</LastButton>
-      </Container1>
-    </Container>
+          <Title type="text" placeholder="Entry Fees" />
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+          </ChooseFile>
+          <Container2>
+            <StyledQuill
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+            />
+          </Container2>
+          <LastButton>Create Events and Workshops</LastButton>
+        </Container1>
+      </Container>
+    </ThemeProvider>
   );
 };
 
@@ -179,7 +216,7 @@ export default CreateEvent;
 
 const Option = styled.option`
   color: black;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const OptionDropdown = styled.div`

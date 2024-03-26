@@ -1,8 +1,8 @@
 import styled from "styled-components";
 export const Image = styled.img`
-  height: 30vh;
+  height: 30%;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 `;
 export const Container = styled.div`
   margin-top: 10px;
@@ -10,23 +10,23 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
-  width: 80%;
+  width: 75%;
   border: 1px solid #ffffff;
   border-radius: 10px;
-  margin-left: 30px;
-  padding: 3px;
 `;
 export const PortfolioHeading = styled.h1`
   color: #ffffff;
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding-left: 15px;
 `;
 
 export const Desc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 16px;
   line-height: 1.5;
   width: 90%;
+  padding-left: 15px;
 `;
 
 export const SmallPattern = styled.div`
@@ -42,7 +42,7 @@ export const PatternCon = styled.div`
   margin-bottom: 15px;
 `;
 export const ListHeading = styled.h1`
-  font-size: 25px;
+  font-size: 20px;
   color: #8196db;
   font-weight: bold;
   margin-left: -15px;
@@ -50,7 +50,7 @@ export const ListHeading = styled.h1`
 
 export const ContentDesc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 16px;
   margin-left: 55px;
   width: 90%;
   margin-bottom: 15px;
@@ -59,7 +59,7 @@ export const ContentDesc = styled.p`
 
 export const SolutionDesc = styled.p`
   color: #ffffff;
-  font-size: 23px;
+  font-size: 16px;
   height: 60px;
   padding-top: 20px;
   margin-bottom: 10px;
@@ -92,7 +92,7 @@ export const Button = styled.button`
   border: 1px solid #8196db;
   color: #ffffff;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 7px 5px;
   margin-right: 10px;
 `;
@@ -100,14 +100,14 @@ export const Button = styled.button`
 export const TechCon = styled.div`
   border-left: 1px solid #8196db;
   padding: 0px 0px;
-  height: 60px;
-  padding: 5px;
-  margin: 20px 0 30px 0;
+  height: 70px;
+  padding: 10px 20px;
+  margin: 20px 0px;
 `;
 
 export const Techtitle = styled.p`
   color: rgba(217, 217, 217, 0.5);
-  font-size: 25px;
+  font-size: 16px;
 `;
 
 export const SubCon = styled.div`
@@ -139,8 +139,8 @@ export const ContentContainer = styled.div`
 `;
 
 export const Contents = styled.div`
-  padding-left: 1%;
   margin-bottom: 30px;
+  padding-left: 15px;
 `;
 
 export const EditTool = styled.img`

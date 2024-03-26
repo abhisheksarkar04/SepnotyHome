@@ -21,11 +21,6 @@ import {
     ListDataContainer,
     ListInnerContainer,
 
-
-
-
-    // ContactItem,
-    // Container,
 } from "./styled";
 
 import img1 from "../Images/image1.svg";
@@ -42,18 +37,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 const Developerforhire = () => {
     const options = [
-        { value: 'option1', label: 'Table of content' },<br></br>,
-        { value: 'option2', label: 'Java ' },<br></br>,
-        { value: 'option3', label: '.Net' },<br></br>,
-        { value: 'option4', label: 'Python' },<br></br>,
-        { value: 'option5', label: 'PHP' },<br></br>,
-        { value: 'option6', label: 'C++' },<br></br>,
-        { value: 'option7', label: 'Node.js' },<br></br>,
-        { value: 'option8', label: 'Java script' },<br></br>,
-        { value: 'option9', label: 'React Native' },<br></br>,
-        { value: 'option10', label: 'Cloud' },<br></br>,
-        { value: 'option11', label: 'Artificial intelligence' },<br></br>,
-        { value: 'option12', label: 'Machine learning' },<br></br>,
+        { value: 'option1', label: 'Table of content' }, <br></br>,
+        { value: 'option2', label: 'Java ' }, <br></br>,
+        { value: 'option3', label: '.Net' }, <br></br>,
+        { value: 'option4', label: 'Python' }, <br></br>,
+        { value: 'option5', label: 'PHP' }, <br></br>,
+        { value: 'option6', label: 'C++' }, <br></br>,
+        { value: 'option7', label: 'Node.js' }, <br></br>,
+        { value: 'option8', label: 'Java script' }, <br></br>,
+        { value: 'option9', label: 'React Native' }, <br></br>,
+        { value: 'option10', label: 'Cloud' }, <br></br>,
+        { value: 'option11', label: 'Artificial intelligence' }, <br></br>,
+        { value: 'option12', label: 'Machine learning' }, <br></br>,
 
 
 
@@ -69,7 +64,7 @@ const Developerforhire = () => {
         color: 'white',
         padding: '10px',
         borderRadius: '10px',
-        
+
 
 
     };
@@ -77,8 +72,8 @@ const Developerforhire = () => {
         backgroundColor: 'rgba(129, 150, 219, 1)',
         color: 'black',
         borderRadius: '30px',
-        height:'100px',
-        width:'10px'
+        height: '100px',
+        width: '10px'
     };
 
     return (
@@ -136,14 +131,15 @@ const Developerforhire = () => {
                                             CTC : {listing.CTC}<br></br>
                                             Onsite</Iph>
                                     </ListDataContainer>
-                                    <Link  to="/CareerOppurtunities/ApplyForm">
+                                    <Link to="/CareerOppurtunities/ApplyForm">
                                         <ApplyButton >Apply</ApplyButton><br></br>
                                         <br></br>
-                                        </Link>
+                                    </Link>
 
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
                             </div>
+
                         </ServiceItemDetails>
                     </div>
                 </ServiceItemCon>

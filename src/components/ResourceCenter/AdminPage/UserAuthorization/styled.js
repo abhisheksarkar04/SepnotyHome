@@ -171,7 +171,6 @@ export const RowCareerOppertunities = styled.td`
   width: 14%;
   padding-left:45px;
 `;
-
 export const LastButton = styled.button`
   border-radius: 10px;
   margin-top: 10px;

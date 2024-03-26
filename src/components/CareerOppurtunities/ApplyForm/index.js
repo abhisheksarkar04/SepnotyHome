@@ -44,4 +44,5 @@ const ApplyForm = () => {
     </>
   );
 };
+
 export default ApplyForm;

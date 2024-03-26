@@ -10,6 +10,9 @@ export const SectionOneHeading=styled.h1`
 width:40%;
 font-size: 30px;
 margin-bottom:30px;
+@media screen and (max-width: 600px) {
+  width:90%;
+}
 `;
 
 export const SectionOneDescription=styled.p`
@@ -18,6 +21,10 @@ font-size:25px;
 margin-top:30px;
 padding-top: 10px;
 padding-bottom: 20px;
+@media screen and (max-width: 600px) {
+  width:90%;
+  font-size:22px;
+}
 `;
 export const IntroProposalText = styled.button`
 border-radius: 30px;
