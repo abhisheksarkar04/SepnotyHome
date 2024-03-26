@@ -95,6 +95,17 @@ export const RightImg = styled.img`
 `;
 
 
+
+export const DigitalContainer1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #0c111f;
+  padding-top: 70px;
+  width: 100%
+  padding-bottom: 20px;
+  image-size :30%;
+`;
+
 export const DigitalContainer2 = styled.div`
  
   background-color: #0c111f;
@@ -120,6 +131,25 @@ export const Service = styled.h1`
   padding: 10px 30px 20px 5%;
 `;
 
+export const ContentRecomContainer = styled.div`
+  background-image: linear-gradient(#1e3c72, #2a5298);
+  padding: 10px 0px 4% 5%;
+`;
+
+export const ConRecHead = styled.h1`
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+`;
+
+export const ConRecDesc = styled.p`
+  font-size: 20px;
+  color: #ffffff;
+  width: 50%;
+  padding: 20px 30px 30px 0px;
+`;
 
 export const Button = styled.button`
   background-image: linear-gradient(to right, #ffffff, #fff741);
@@ -133,7 +163,7 @@ export const Button = styled.button`
 `;
 export const ApplyButton = styled.button`
   
-padding: 5px 57px 8px 25px;
+  padding: 5px 25px 5px 25px;
   border-radius: 20px;
   color: white;
   background-color: rgba(67, 90, 167, 1);
@@ -141,11 +171,38 @@ padding: 5px 57px 8px 25px;
   outline: none;
   font-size: 15px;
   margin-top: 68px;
-  width:15%;
+  width:10%;
   height:20%;
   margin-left:70px;
 `;
 
+export const Rectangle1 = styled.img`
+  position: absolute;
+  right: 0;
+  height: 68%;
+  width: 38%;
+  top: 12%;
+  z-index: 0;
+`;
+
+export const Rectangle2 = styled.img`
+  position: absolute;
+  right: 17.6%;
+  height: 80%;
+  width: 60%;
+  top: -5%;
+  z-index: 0;
+`;
+
+export const Rectangle3 = styled.img`
+  position: absolute;
+  left: 0%;
+  height: 40%;
+  width: 17%;
+  top: 38%;
+  z-index: 0;
+  margun-bottom: 20px;
+`;
 
 export const ListHeading = styled.h1`
   font-size: 25px;
