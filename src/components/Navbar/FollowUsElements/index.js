@@ -6,11 +6,11 @@ const FollowUsElements = (props) => {
 
   return (
     <>
+      <hr className="hrl" />
       <Items>
         <Logo src={logoSrc} alt={logoName} />
         <Name>{logoName}</Name>
       </Items>
-      <hr className="hrl" />
     </>
   );
 };

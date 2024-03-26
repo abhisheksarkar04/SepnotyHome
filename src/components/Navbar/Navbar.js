@@ -28,13 +28,23 @@ import {
   ResourceCon,
   DownArrow,
   ContactCon,
-  MenuItem,
-  SubMenu,
   FollowUsSection,
   MobileAboutusList,
   MobileServices,
   OtherSectionItems,
   MobileBlogs,
+  MobileCareer,
+  MobileResources,
+  MobileAboutSec,
+  ApproachItems,
+  RecognitionItems,
+  Joinus,
+  Developers,
+  Designers,
+  Insight,
+  MobileContactCon,
+  Contacts,
+  Phone,
 } from "./styledComponents";
 import AboutUsSection from "../AboutUsSection/AboutUs";
 import ServiceSection from "../ServiceSection";
@@ -75,7 +85,6 @@ const followUsElements = [
 ];
 
 const Navbar = () => {
-  const [Mobile, setMobile] = useState(false);
   const [isAboutUsOpen, setAboutUsOpen] = useState(false);
   const [isServiceOpen, setServiceOpen] = useState(false);
   const [isCareerOpen, setCareerOpen] = useState(false);
@@ -83,16 +92,42 @@ const Navbar = () => {
   const [isResourceOpen, setResourceOpen] = useState(false);
   const [isButtonOpen, setButtonOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [aboutUs, setAboutUs] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null);
-  const [activeSubMenu, setActiveSubMenu] = useState(null);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+
   const [isMobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
   const [isMobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isOtherItemsOpen, setOtherItemsOpen] = useState(true);
   const [isMobileBlogsOpen, setMobileBlogsOpen] = useState(false);
+  const [isMobileCareerOpen, setMobileCareerOpen] = useState(false);
+  const [isMobileResourceOpen, setMobileResourceOpen] = useState(false);
+  const [isMobileAboutItemOpen, setMobileAboutItemOpen] = useState(false);
+  const [isApproachOpen, setApproachOpen] = useState(false);
+  const [isRecognitionOpen, setRecognitionOpen] = useState(false);
+  const [isJoinOpen, setJoinOpen] = useState(false);
+  const [isDeveloperOpen, setDeveloperOpen] = useState(false);
+  const [isDesignerOpen, setDesignerOpen] = useState(false);
+  const [isInsightOpen, setInsightOpen] = useState(false);
+  const [isMobileContactsOpen, setMobileContactsOpen] = useState(false);
 
   // const history = useHistory();
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const closeMenuOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        closeMobileMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("click", closeMenuOutside);
+    } else {
+      document.removeEventListener("click", closeMenuOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", closeMenuOutside);
+    };
+  }, [isMenuOpen]);
 
   const aboutUsRef = useRef(null);
   const serviceRef = useRef(null);
@@ -102,7 +137,6 @@ const Navbar = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Attach event listener to the document when any dropdown is open
     const closeDropdownOutside = (e) => {
       if (
         !aboutUsRef.current.contains(e.target) &&
@@ -142,50 +176,101 @@ const Navbar = () => {
     isButtonOpen,
   ]);
 
-  const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
+  const toggleMobileContact = () => {
+    setMobileContactsOpen(!isMobileContactsOpen);
   };
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-  };
-  const toggleSubMenu = (menu) => {
-    if (activeSubMenu === menu) {
-      setActiveSubMenu(null);
-    } else {
-      setActiveSubMenu(menu);
-    }
-  };
-
-  const toggleAbout = () => {
-    setAboutUs(!aboutUs);
+    setMobileAboutUsOpen(false);
+    setMobileServicesOpen(false);
+    setMobileCareerOpen(false);
+    setMobileBlogsOpen(false);
+    setMobileResourceOpen(false);
+    setOtherItemsOpen(true);
   };
 
   const toggleMobileAboutUs = () => {
     setMobileAboutUsOpen(!isMobileAboutUsOpen);
     setMobileServicesOpen(false);
     setMobileBlogsOpen(false);
+    setMobileCareerOpen(false);
+    setMobileResourceOpen(false);
+    setMobileAboutItemOpen(!isMobileAboutUsOpen);
+    setApproachOpen(false);
+    setRecognitionOpen(false);
+    setJoinOpen(false);
     if (!isMobileAboutUsOpen) {
       setOtherItemsOpen(false);
     } else {
       setOtherItemsOpen(true);
     }
   };
-
+  const closeMobileMenu = () => {
+    setMenuOpen(false);
+  };
   const toggleMobileServices = () => {
     setMobileServicesOpen(!isMobileServicesOpen);
     setMobileAboutUsOpen(false);
     setMobileBlogsOpen(false);
+    setMobileCareerOpen(false);
+    setMobileResourceOpen(false);
   };
 
   const toggleMobileBlogs = () => {
     setMobileBlogsOpen(!isMobileBlogsOpen);
     setMobileServicesOpen(false);
     setMobileAboutUsOpen(false);
+    setMobileCareerOpen(false);
+    setMobileResourceOpen(false);
   };
+
+  const toggleMobileCareer = () => {
+    setMobileCareerOpen(!isMobileCareerOpen);
+    setMobileBlogsOpen(false);
+    setMobileServicesOpen(false);
+    setMobileAboutUsOpen(false);
+    setMobileResourceOpen(false);
+  };
+
+  const toggleMobileResouceCenter = () => {
+    setMobileResourceOpen(!isMobileResourceOpen);
+    setMobileCareerOpen(false);
+    setMobileBlogsOpen(false);
+    setMobileServicesOpen(false);
+    setMobileAboutUsOpen(false);
+  };
+
+  const toggleApproach = () => {
+    setApproachOpen(!isApproachOpen);
+    setMobileAboutItemOpen(false);
+    setRecognitionOpen(false);
+    setJoinOpen(false);
+  };
+
+  const toggleRecognition = () => {
+    setRecognitionOpen(!isRecognitionOpen);
+    setApproachOpen(false);
+    setMobileAboutItemOpen(false);
+    setJoinOpen(false);
+  };
+  const toggleJoin = () => {
+    setJoinOpen(!isJoinOpen);
+    setRecognitionOpen(false);
+    setApproachOpen(false);
+    setMobileAboutItemOpen(false);
+  };
+  const toggleDeveloper = () => {
+    setDeveloperOpen(!isDeveloperOpen);
+    setDesignerOpen(false);
+  };
+  const toggleDesigner = () => {
+    setDesignerOpen(!isDesignerOpen);
+    setDeveloperOpen(false);
+  };
+  const toggleInsight = () => {
+    setInsightOpen(!isInsightOpen);
+  };
+
   const toggleAboutUs = (e) => {
     closeOtherSections();
     setAboutUsOpen(!isAboutUsOpen);
@@ -230,6 +315,10 @@ const Navbar = () => {
     setButtonOpen(false);
     // history.push("/");
   };
+  const handleEmailClick = () => {
+    window.location.href = "mailto:contact.us@sepnoty.in";
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -244,7 +333,6 @@ const Navbar = () => {
         <ul
           className="nav-links"
           onClick={(e) => {
-            setMobile(false);
             e.stopPropagation();
           }}
         >
@@ -355,6 +443,10 @@ const Navbar = () => {
         {isMenuOpen && (
           <div>
             <ul className="mobile-list">
+              <div className="inputholder">
+                <input type="search" placeholder="Search" className="input" />
+                <button className="button">&#10006;</button>
+              </div>
               <div className="item">
                 <li className="submenu-item">About us</li>
                 <button className="downcon">
@@ -365,92 +457,124 @@ const Navbar = () => {
                   />
                 </button>
               </div>
+              <hr className="hrl" />
               {isMobileAboutUsOpen && (
                 <MobileAboutusList>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>About Company</li>
-                  </Link>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>Leadership</li>
-                  </Link>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>Experts</li>
-                  </Link>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>Client Review</li>
-                  </Link>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>Our Partners</li>
-                  </Link>
-                  <hr className="hrl" />
-                  <Link to="/">
-                    <li>Location</li>
-                  </Link>
-                  <hr className="hrl" />
+                  {isMobileAboutItemOpen && (
+                    <MobileAboutSec>
+                      <Link to="/AboutUsComponents/AboutCompany">
+                        <li onClick={closeMobileMenu}>About Company</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/AboutLeadership">
+                        <li onClick={closeMobileMenu}>Leadership</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/AboutExperts">
+                        <li onClick={closeMobileMenu}>Experts</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/ClientReviews">
+                        <li onClick={closeMobileMenu}>Client Review</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/OurPatner">
+                        <li onClick={closeMobileMenu}>Our Partners</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/Location">
+                        <li onClick={closeMobileMenu}>Location</li>
+                      </Link>
+                      <hr className="hrl" />
+                    </MobileAboutSec>
+                  )}
+
                   <div className="item">
-                    <Link to="/">
-                      <li>Approach</li>
-                    </Link>
+                    <li>Approach</li>
+
                     <button className="downcon">
-                      <img src={down} alt="down" />
+                      <img
+                        src={isApproachOpen ? up : down}
+                        alt="down"
+                        onClick={toggleApproach}
+                      />
                     </button>
                   </div>
-                  <div>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Pricing models at sepnoty</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Our Approach to Software Development</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li> Sustainability Policy</li>
-                    </Link>
-                  </div>
+                  {isApproachOpen && (
+                    <ApproachItems>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/PricingModels">
+                        <li onClick={closeMobileMenu}>
+                          Pricing models at sepnoty
+                        </li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/SoftwareDevelopment">
+                        <li onClick={closeMobileMenu}>
+                          Our Approach to Software Development
+                        </li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/Sustainability">
+                        <li onClick={closeMobileMenu}>
+                          {" "}
+                          Sustainability Policy
+                        </li>
+                      </Link>
+                    </ApproachItems>
+                  )}
                   <hr className="hrl" />
                   <div className="item">
-                    <Link to="/">
-                      <li>Recognition</li>
-                    </Link>
+                    <li>Recognition</li>
+
                     <button className="downcon">
-                      <img src={down} alt="down" />
+                      <img
+                        src={isRecognitionOpen ? up : down}
+                        alt="down"
+                        onClick={toggleRecognition}
+                      />
                     </button>
                   </div>
-                  <div>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li>Testimonials</li>
-                    </Link>
-                    <hr className="hrl" />
-                    <Link to="/">
-                      <li> Awards</li>
-                    </Link>
-                  </div>
+                  {isRecognitionOpen && (
+                    <RecognitionItems>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/Testiomial">
+                        <li onClick={closeMobileMenu}>Testimonials</li>
+                      </Link>
+                      <hr className="hrl" />
+                      <Link to="/AboutUsComponents/Awards">
+                        <li onClick={closeMobileMenu}> Awards</li>
+                      </Link>
+                    </RecognitionItems>
+                  )}
                   <hr className="hrl" />
                   <div className="item">
-                    <Link to="/">
-                      <li>Join Us</li>
-                    </Link>
+                    <li>Join Us</li>
+
                     <button className="downcon">
-                      <img src={down} alt="down" />
+                      <img
+                        src={isJoinOpen ? up : down}
+                        alt="down"
+                        onClick={toggleJoin}
+                      />
                     </button>
                   </div>
-                  <hr className="hrl" />
-                  <FollowUsSection>
-                    {followUsElements.map((eachLogo) => (
-                      <FollowUsElements key={eachLogo.id} logos={eachLogo} />
-                    ))}
-                  </FollowUsSection>
+
+                  {isJoinOpen && (
+                    <Joinus>
+                      <FollowUsSection>
+                        {followUsElements.map((eachLogo) => (
+                          <FollowUsElements
+                            key={eachLogo.id}
+                            logos={eachLogo}
+                          />
+                        ))}
+                      </FollowUsSection>
+                    </Joinus>
+                  )}
                 </MobileAboutusList>
               )}
-              <hr className="hrl" />
+
               {isOtherItemsOpen && (
                 <OtherSectionItems>
                   <div className="item">
@@ -466,44 +590,52 @@ const Navbar = () => {
                   {isMobileServicesOpen && (
                     <MobileServices>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Software Development</li>
+                      <Link to="/Services/Software-Development">
+                        <li onClick={closeMobileMenu}>Software Development</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Web Development</li>
+                      <Link to="/Services/Web-Development">
+                        <li onClick={closeMobileMenu}>Web Development</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Mobile App Development</li>
+                      <Link to="/Services/Mobile-App-Development">
+                        <li onClick={closeMobileMenu}>
+                          Mobile App Development
+                        </li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>UI/UX Design</li>
+                      <Link to="/services/uiux-design">
+                        <li onClick={closeMobileMenu}>UI/UX Design</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Digital Marketing</li>
+                      <Link to="/Services/Digital-Marketing">
+                        <li onClick={closeMobileMenu}>Digital Marketing</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Graphic Designing</li>
+                      <Link to="/Services/Graphic-Designing">
+                        <li onClick={closeMobileMenu}>Graphic Designing</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Video Editing</li>
+                      <Link to="/Services/Video-Editing">
+                        <li onClick={closeMobileMenu}>Video Editing</li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Cloud Service Integration</li>
+                      <Link to="/Services/Cloud-services-integration">
+                        <li onClick={closeMobileMenu}>
+                          Cloud Service Integration
+                        </li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Cyber Security Provision</li>
+                      <Link to="/Services/Cyber-Security-Provision">
+                        <li onClick={closeMobileMenu}>
+                          Cyber Security Provision
+                        </li>
                       </Link>
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>AI Technology Services Integration</li>
+                      <Link to="/Services/AI-Technology-services-integration">
+                        <li onClick={closeMobileMenu}>
+                          AI Technology Services Integration
+                        </li>
                       </Link>
                     </MobileServices>
                   )}
@@ -522,25 +654,40 @@ const Navbar = () => {
                   {isMobileBlogsOpen && (
                     <MobileBlogs>
                       <hr className="hrl" />
-                      <Link to="/">
+                      <div className="item">
                         <li>Insight and News</li>
-                      </Link>
+
+                        <button className="downcon">
+                          <img
+                            src={isInsightOpen ? up : down}
+                            alt="down"
+                            onClick={toggleInsight}
+                          />
+                        </button>
+                      </div>
+
                       <hr className="hrl" />
-                      <Link to="/">
-                        <li>Thought Leadership</li>
-                      </Link>
-                      <hr className="hrl" />
-                      <Link to="/">
-                        <li>News</li>
-                      </Link>
-                      <hr className="hrl" />
-                      <Link to="/">
-                        <li>Press Inquires</li>
-                      </Link>
-                      <hr className="hrl" />
-                      <Link to="/">
-                        <li>Articles`</li>
-                      </Link>
+                      {isInsightOpen && (
+                        <Insight>
+                          <Link to="/Blog/ThoughtLeadership">
+                            <li onClick={closeMobileMenu}>
+                              Thought Leadership
+                            </li>
+                          </Link>
+                          <hr className="hrl" />
+                          <Link to="/Blog/News">
+                            <li onClick={closeMobileMenu}>News</li>
+                          </Link>
+                          <hr className="hrl" />
+                          <Link to="/Blog/PressInquires">
+                            <li onClick={closeMobileMenu}>Press Inquires</li>
+                          </Link>
+                          <hr className="hrl" />
+                          <Link to="/Blog/Article">
+                            <li onClick={closeMobileMenu}>Articles`</li>
+                          </Link>
+                        </Insight>
+                      )}
                     </MobileBlogs>
                   )}
                   <hr className="hrl" />
@@ -548,26 +695,168 @@ const Navbar = () => {
                     <li>Career Opportunities</li>
 
                     <button className="downcon">
-                      <img src={down} alt="down" />
+                      <img
+                        src={isMobileCareerOpen ? up : down}
+                        alt="arrow"
+                        onClick={toggleMobileCareer}
+                      />
                     </button>
                   </div>
+                  {isMobileCareerOpen && (
+                    <MobileCareer>
+                      <hr className="hrl" />
+                      <div className="item">
+                        <Link to="/CareerOppurtunities/DevelopersforHire">
+                          <li onClick={closeMobileMenu}>Developers for Hire</li>
+                        </Link>
+                        <button className="downcon">
+                          <img
+                            src={isDeveloperOpen ? up : down}
+                            alt="down"
+                            onClick={toggleDeveloper}
+                          />
+                        </button>
+                      </div>{" "}
+                      {isDeveloperOpen && (
+                        <Developers>
+                          <hr className="hrl" />
+                          <li>Java</li>
+                          <hr className="hrl" />
+                          <li>.Net</li>
+                          <hr className="hrl" />
+                          <li>Python</li>
+                          <hr className="hrl" />
+                          <li>PHP</li>
+                          <hr className="hrl" />
+                          <li>C++</li>
+                          <hr className="hrl" />
+                          <li>Node.js</li>
+                          <hr className="hrl" />
+                          <li>Javascript</li>
+                          <hr className="hrl" />
+                          <li>React Native</li>
+                          <hr className="hrl" />
+                          <li>Cloud</li>
+                          <hr className="hrl" />
+                          <li>Artificial Intelligence</li>
+                          <hr className="hrl" />
+                          <li>Machine Learning</li>
+                        </Developers>
+                      )}
+                      <hr className="hrl" />
+                      <div className="item">
+                        <Link to="/CareerOppurtunities/Designersforhire">
+                          <li onClick={closeMobileMenu}>Designers for Hire</li>{" "}
+                        </Link>
+                        <button className="downcon">
+                          <img
+                            src={isDesignerOpen ? up : down}
+                            alt="down"
+                            onClick={toggleDesigner}
+                          />
+                        </button>
+                      </div>
+                      {isDesignerOpen && (
+                        <Designers>
+                          <hr className="hrl" />
+                          <li>UI/UX Design</li>
+                          <hr className="hrl" />
+                          <li>Digital Marketing</li>
+                          <hr className="hrl" />
+                          <li>Graphic Designing</li>
+                          <hr className="hrl" />
+                          <li>Video Editing</li>
+                        </Designers>
+                      )}
+                    </MobileCareer>
+                  )}
                   <hr className="hrl" />
                   <div className="item">
-                    <Link to="/ResourceCenter">
-                      <li>Resource Center</li>
-                    </Link>{" "}
+                    <li>Resource Center</li>
+
                     <button className="downcon">
-                      <img src={down} alt="down" />
+                      <img
+                        src={isMobileResourceOpen ? up : down}
+                        alt="down"
+                        onClick={toggleMobileResouceCenter}
+                      />
                     </button>
                   </div>
+                  {isMobileResourceOpen && (
+                    <MobileResources>
+                      <hr className="hrl" />
+                      <Link to="/resource-center/analytics-and-reporting">
+                        <li onClick={closeMobileMenu}>
+                          Analytics and Reporting
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/content-recommendations">
+                        <li onClick={closeMobileMenu}>
+                          Content Recommendation
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/collaboration-and-community-features">
+                        <li onClick={closeMobileMenu}>
+                          Collaboration and Community Features
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/technical-articles-and-blogs">
+                        <li onClick={closeMobileMenu}>
+                          Technical articles and Blogs
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/video-tutorials">
+                        <li onClick={closeMobileMenu}> Video Tutorials</li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/learning-paths-and-roadmaps">
+                        <li onClick={closeMobileMenu}>
+                          Learning paths and Roadmaps
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/events-and-workshop">
+                        <li onClick={closeMobileMenu}>Events and Workshops</li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/case-studies-and-success-stories">
+                        <li onClick={closeMobileMenu}>
+                          Case studies and success Stories
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                      <Link to="/resource-center/feedback-and-improvement">
+                        <li onClick={closeMobileMenu}>
+                          Feedback and improvement Mechanism
+                        </li>
+                      </Link>{" "}
+                      <hr className="hrl" />
+                    </MobileResources>
+                  )}
                 </OtherSectionItems>
               )}
               <hr className="hrl" />
-              <Link to="/Blog">
-                <li>
-                  <button className="contact-button">Contact Us</button>
-                </li>
-              </Link>
+
+              <li>
+                <button
+                  className="contact-button"
+                  onClick={toggleMobileContact}
+                >
+                  Contact Us
+                </button>
+              </li>
+              {isMobileContactsOpen && (
+                <MobileContactCon>
+                  <Contacts onClick={handleEmailClick}>
+                    contact.us@sepnoty.in
+                  </Contacts>
+                  <Phone href="tel:+918465997345">(+91) 84659 97345</Phone>
+                </MobileContactCon>
+              )}
             </ul>
           </div>
         )}

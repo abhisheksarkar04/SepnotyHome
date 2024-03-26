@@ -147,3 +147,79 @@ export const MobileBlogs = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const MobileCareer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileResources = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileAboutSec = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ApproachItems = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const RecognitionItems = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Joinus = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Developers = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Designers = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Insight = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileContactCon = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #d9d9d9;
+  padding: 10px;
+  width: 180px;
+  height: 100px;
+  margin: 5px 0px 10px 15px;
+
+  border-radius: 10px;
+`;
+
+export const Contacts = styled.p`
+  font-size: 15px;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+  &:hover {
+    color: #2b459b;
+  }
+`;
+
+export const Phone = styled.a`
+  font-size: 15px;
+  color: #2e2e2e;
+
+  &:hover {
+    color: #2b459b;
+  }
+`;
