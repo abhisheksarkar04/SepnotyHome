@@ -79,8 +79,6 @@ import NewReport from "./components/ResourceCenter/AdminPage/NewReport/index";
 import CreateEvent from "./components/ResourceCenter/AdminPage/CreateNewEvent";
 import CreateArticles from "./components/ResourceCenter/AdminPage/CreateArticles";
 import CreateProject from "./components/ResourceCenter/AdminPage/CreateProject";
-import ApplyForm from "./components/CareerOppurtunities/ApplyForm";
-import UserAuthorization from "./components/ResourceCenter/AdminPage/UserAuthorization";
 
 function ScrollToTopOnPageChange() {
   const history = useHistory();
@@ -217,17 +215,6 @@ const AppRoutes = () => {
         path="/CareerOppurtunities/DevelopersforHire"
         component={Developerforhire}
       />
-      <Route
-        exact
-        path="/CareerOppurtunities/ApplyForm"
-        component={ApplyForm}
-      />
-      <Route
-        exact
-        path="/ResourceCenter/AdminPage/UserAuthorization"
-        component={UserAuthorization}
-      />
-
       {/* <Route path="*" component={Home} /> */}
       <Route
         exact

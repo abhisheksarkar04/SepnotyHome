@@ -36,9 +36,9 @@ import img8 from "../Images/image8.svg";
 
 import FooterSection from "../../Footer/FooterSection";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-const Designersforhire = (props) => {
+
+const Designersforhire = () => {
   const options = [
     { value: 'option1', label: 'Table of content' },<br></br>,
     { value: 'option2', label: 'UI/UX Desiginer' },<br></br>,
@@ -68,12 +68,6 @@ const Designersforhire = (props) => {
   
   };
 
-  const { closeOtherSections } = props;
-
-  const handleLinkClick = () => {
-    closeOtherSections();
-  };
-
 
   return (
     <>
@@ -89,7 +83,9 @@ const Designersforhire = (props) => {
               Career Oppurunities
             </LeftHeading><br></br>
             <LeftTitle>"Your big opportunity may be right where you are now." </LeftTitle>
+
           </LeftTextContainer>
+          {/* <RightImg src={ImageRight} alt="not found"></RightImg> */}
         </BlueContainer>
 
         <ServiceItemCon>
@@ -131,13 +127,18 @@ const Designersforhire = (props) => {
                                             CTC : {listing.CTC}<br></br>
                                             Onsite</Iph>
                                     </ListDataContainer>
-                                   <Link  to="/CareerOppurtunities/ApplyForm">
-                                        <ApplyButton >Apply</ApplyButton><br></br>
+                                   
+                                        <ApplyButton>Apply</ApplyButton><br></br>
                                         <br></br>
-                                        </Link>
+                                  
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
                             </div>
+
+
+
+
+              
             </ServiceItemDetails>
           </div>
         </ServiceItemCon>

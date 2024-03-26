@@ -39,7 +39,7 @@ import imga8 from "../Images/imga8.svg";
 
 import FooterSection from "../../Footer/FooterSection";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 const Developerforhire = () => {
     const options = [
         { value: 'option1', label: 'Table of content' },<br></br>,
@@ -136,10 +136,9 @@ const Developerforhire = () => {
                                             CTC : {listing.CTC}<br></br>
                                             Onsite</Iph>
                                     </ListDataContainer>
-                                    <Link  to="/CareerOppurtunities/ApplyForm">
-                                        <ApplyButton >Apply</ApplyButton><br></br>
-                                        <br></br>
-                                        </Link>
+
+                                    <ApplyButton>Apply</ApplyButton><br></br>
+                                    <br></br>
 
                                 </ListInnerContainer>))}
                                 {/* <p>button</p> */}
