@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 /* import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im"; */
 import logo from "../Navbar/assets/logo.svg";
-
+import menu from "../Navbar/assets/menu.svg";
 import downarrow from "../Navbar/assets/downarrow.svg";
+import down from "../Navbar/assets/down.svg";
+import up from "../Navbar/assets/up.svg";
 
 import {
   LogoImg,
@@ -21,6 +23,8 @@ import {
   ResourceCon,
   DownArrow,
   ContactCon,
+  MenuItem,
+  SubMenu,
 } from "./styledComponents";
 import AboutUsSection from "../AboutUsSection/AboutUs";
 import ServiceSection from "../ServiceSection";
@@ -39,6 +43,11 @@ const Navbar = () => {
   const [isBlogOpen, setBlogOpen] = useState(false);
   const [isResourceOpen, setResourceOpen] = useState(false);
   const [isButtonOpen, setButtonOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [aboutUs, setAboutUs] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   // const history = useHistory();
 
@@ -90,6 +99,27 @@ const Navbar = () => {
     isButtonOpen,
   ]);
 
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeDropdowns = () => {
+    setActiveDropdown(null);
+  };
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+  const toggleSubMenu = (menu) => {
+    if (activeSubMenu === menu) {
+      setActiveSubMenu(null);
+    } else {
+      setActiveSubMenu(menu);
+    }
+  };
+
+  const toggleAbout = () => {
+    setAboutUs(!aboutUs);
+  };
   const toggleAboutUs = (e) => {
     closeOtherSections();
     setAboutUsOpen(!isAboutUsOpen);
@@ -145,9 +175,8 @@ const Navbar = () => {
         if large screen ma xa bhane Mobile add huxa
         if mobile screen ma xa bhane nav-links-mobile add huxa
         */}
-
         <ul
-          className={Mobile ? "nav-links-mobile" : "nav-links"}
+          className="nav-links"
           onClick={(e) => {
             setMobile(false);
             e.stopPropagation();
@@ -256,40 +285,167 @@ const Navbar = () => {
             )}
           </DropdownContainer>
         </ul>
-        {/* <ul
-          className={Mobile ? "nav-links-mobile" : "nav-links"}
-          onClick={() => setMobile(false)}
-        >
-          <Link to="/">
-            <li>About us</li>
-          </Link>
-          <Link to="/Services">
-            <li>Services</li>
-          </Link>
-          <Link to="/Blog">
-            <li>Blog</li>
-          </Link>
-          <Link to="/CareerOpportunities">
-            <li>Career Opportunities</li>
-          </Link>
-          <Link to="/ResourceCenter">
-            <li>Resource Center</li>
-          </Link>
-          <Link to="/Blog">
-            <li>
-              <button className="contact-button">Contact Us</button>
-            </li>
-          </Link>
-        </ul>
-        
-        whenever we click on button = setMobile(!Mobile) ==  is mobile oppsite to setMobile 
-       
-        <button
-          className="mobile-menu-icon"
-         onClick={() => setMobile(!Mobile)}
-        >
-          {Mobile ? <ImCross /> : <FaBars />}
-        </button> */}
+        <img src={menu} alt="menu" className="menu-icon" onClick={toggleMenu} />
+        {isMenuOpen && (
+          <div>
+            <ul className="mobile-list">
+              <div className="item" onClick={() => toggleDropdown("aboutUs")}>
+                <li className="submenu-item">About us</li>
+                <button className="downcon">
+                  <img
+                    src={activeDropdown === "aboutUs" ? up : down}
+                    alt="arrow"
+                  />
+                </button>
+              </div>
+              <div>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>About Company</li>
+                </Link>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>Leadership</li>
+                </Link>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>Experts</li>
+                </Link>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>Client Review</li>
+                </Link>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>Our Partners</li>
+                </Link>
+                <hr className="hrl" />
+                <Link to="/">
+                  <li>Location</li>
+                </Link>
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/">
+                    <li>Approach</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/">
+                    <li>Recognition</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/">
+                    <li>Join Us</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>
+              </div>
+              <hr className="hrl" />
+              <MenuItem>
+                <div
+                  className="item"
+                  onClick={() => toggleDropdown("services")}
+                >
+                  <li>Services</li>
+                  <button className="downcon">
+                    <img
+                      src={activeDropdown === "services" ? up : down}
+                      alt="down"
+                    />
+                  </button>{" "}
+                </div>
+                <SubMenu expanded={activeDropdown === "services"}>
+                  <ul className="sub-menu" ref={serviceRef}>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Software Development</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Web Development</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Mobile App Development</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>UI/UX Design</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Digital Marketing</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Graphic Designing</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Video Editing</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Cloud Service Integration</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>Cyber Security Provision</li>
+                    </Link>
+                    <hr className="hrl" />
+                    <Link to="/">
+                      <li>AI Technology Services Integration</li>
+                    </Link>
+                  </ul>
+                </SubMenu>
+              </MenuItem>
+              <hr className="hrl" />
+              <div className="item">
+                <Link to="/Blog">
+                  <li>Blog</li>
+                </Link>
+                <button className="downcon">
+                  <img src={down} alt="down" />
+                </button>
+              </div>
+              <hr className="hrl" />
+              <div className="item">
+                <Link to="/CareerOpportunities">
+                  <li>Career Opportunities</li>
+                </Link>
+                <button className="downcon">
+                  <img src={down} alt="down" />
+                </button>
+              </div>
+              <hr className="hrl" />
+              <div className="item">
+                <Link to="/ResourceCenter">
+                  <li>Resource Center</li>
+                </Link>{" "}
+                <button className="downcon">
+                  <img src={down} alt="down" />
+                </button>
+              </div>
+              <hr className="hrl" />
+              <Link to="/Blog">
+                <li>
+                  <button className="contact-button">Contact Us</button>
+                </li>
+              </Link>
+            </ul>
+          </div>
+        )}
       </nav>
     </>
   );

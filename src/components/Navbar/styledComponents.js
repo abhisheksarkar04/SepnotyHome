@@ -92,3 +92,31 @@ export const ContactCon = styled.div`
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
+
+export const MobileList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 3vh;
+  background-color: #263238;
+  text-align: left;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 43%;
+`;
+
+export const MenuItem = styled.div`
+  /*  position: relative; */
+`;
+
+export const SubMenu = styled.div`
+  display: ${({ expanded }) => (expanded ? "block" : "none")};
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+  top: 100%;
+  position: relative;
+`;
