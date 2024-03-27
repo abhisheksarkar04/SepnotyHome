@@ -52,6 +52,9 @@ export const Rectangle1 = styled.img`
   width: 37%;
   top: 15%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const Rectangle2 = styled.img`
@@ -61,6 +64,9 @@ export const Rectangle2 = styled.img`
   width: 60%;
   top: -1%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const Rectangle3 = styled.img`
@@ -71,6 +77,9 @@ export const Rectangle3 = styled.img`
   top: 41.5%;
   z-index: 0;
   margun-bottom: 20px;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const ListHeading = styled.h1`
