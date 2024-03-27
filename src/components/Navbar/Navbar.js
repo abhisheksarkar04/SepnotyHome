@@ -331,10 +331,7 @@ const Navbar = () => {
         <Link to="/">
           <LogoImg src={logo} alt="not found"></LogoImg>
         </Link>
-        {/*
-        if large screen ma xa bhane Mobile add huxa
-        if mobile screen ma xa bhane nav-links-mobile add huxa
-        */}
+
         <ul
           className="nav-links"
           onClick={(e) => {

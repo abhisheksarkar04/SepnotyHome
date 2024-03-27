@@ -17,6 +17,7 @@ export const Header = styled.h1`
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 576px) {
     padding: 10px 10px 10px 3%;
+    font-size: 14px;
   }
 `;
 export const Span = styled.span`
@@ -31,7 +32,7 @@ export const Service = styled.h1`
   padding: 10px 30px 20px 6%;
   @media screen and (max-width: 576px) {
     padding: 0px 10px 10px 3%;
-    font-size: 17px;
+    font-size: 16px;
   }
 `;
 
@@ -64,7 +65,7 @@ export const ConRecDesc = styled.p`
 
   @media screen and (max-width: 576px) {
     padding: 10px 10px 20px 0;
-    font-size: 15px;
+    font-size: 14px;
     width: 90%;
   }
 `;
@@ -112,7 +113,7 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: -29px;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 16px;
     margin-left: -20px;
   }
 `;
@@ -130,7 +131,7 @@ export const ServiceItemDesc = styled.p`
   width: 80%;
   line-height: 1.5;
   @media screen and (max-width: 576px) {
-    font-size: 15px;
+    font-size: 14px;
     width: 90%;
   }
 `;
@@ -195,5 +196,17 @@ export const PatternCon = styled.div`
 
   @media screen and (max-width: 576px) {
     padding-left: 3%;
+  }
+`;
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+    padding: 10px;
   }
 `;

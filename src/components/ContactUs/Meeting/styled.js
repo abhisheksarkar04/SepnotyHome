@@ -36,7 +36,7 @@ export const BottomDesc = styled.p`
   margin-top: 30px;
   margin-bottom: 30px;
   @media screen and (max-width: 555px) {
-    font-size: 16px;
+    font-size: 15px;
     text-align: justify;
     margin: 0px 10px;
   }
