@@ -11,6 +11,10 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+  ${media.mobile} {
+    width:100%;
+  }
+
 `;
 
 export const Header = styled.h1`
@@ -66,6 +70,7 @@ export const ConRecDesc = styled.p`
 
   ${media.mobile} {
     font-size: 18px;
+    width:100%;
   }
 `;
 
@@ -135,6 +140,12 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: -30px;
   margin-top:20px;
+  ${media.mobile} {
+    font-size: 20px;
+    width:105%;
+    line-height: 18px;
+  }
+  
 `;
 
 export const ServiceItemCon = styled.div`
@@ -155,8 +166,9 @@ export const ServiceItemDesc = styled.p`
 
   ${media.mobile} {
     font-size: 15px;
-    width:100%;
+    width:105%;
     line-height: 18px;
+    margin-left:0px;
   }
 `;
 

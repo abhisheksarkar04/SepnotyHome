@@ -7,6 +7,10 @@ justify-content:center;
 margin-top:100px;
 margin-bottom:100px;
 justify-content:center;
+@media screen and (max-width: 576px) {
+   flex-wrap: wrap;
+
+}
 `;
 
 export const DeepLearnFrame = styled.div`
@@ -14,6 +18,10 @@ display: flex;
 flex-direction: column;
 margin-left:0%;
 width: 40%;
+@media screen and (max-width: 576px) {
+  
+  width: 90%;
+}
 
 `;
 
@@ -92,6 +100,11 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width: 50%;
   padding: 20px 30px 30px 0px;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    font-size: 20px;
+  
+  }
 `;
 
 export const Button = styled.button`
@@ -170,6 +183,12 @@ export const ListItems = styled.ul`
   flex-direction: row;
   flex-wrap:wrap;
   justify-content: space-evenly;
+  @media screen and (max-width: 576px) {
+    justify-content: ;
+    width: 90%;
+    margin-left: -20%;
+    padding: 0px 0 0 0px;
+  }
 `;
 
 export const Rectangle1 = styled.img`
@@ -208,6 +227,10 @@ export const Small = styled.img`
 
 export const ContentContainer = styled.div`
   margin: 5em 2em 3em 5em;
+  @media screen and (max-width: 576px) {
+    margin: 2em 0 50px 2em;
+  
+  }
 `;
 
 export const Small1 = styled.img`

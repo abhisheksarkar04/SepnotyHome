@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const TopicContainer = styled.div`
+export const TopicContainer = styled.li`
   display: flex;
   flex-direction: row;
   padding: 15px 40px 15px 10px;
+  @media screen and (max-width: 576px) {
+    font-size: ;
+    padding: 20px 0px 0px 0px;
+  }
 `;
 export const Profile = styled.img`
   height: 40px;
@@ -12,20 +16,29 @@ export const Profile = styled.img`
 `;
 
 export const AboutCon = styled.div`
-  display: flex;
-  flex-direction: column;
+    text-align: left;
 `;
 
 export const Topic = styled.h1`
   font-size: 14px;
   color: #ffffff;
   width: 70%;
+  @media screen and (max-width: 576px) {
+    font-size: 60%;
+    padding: ;
+    width: 120%;
+    font-weight: none;
+  }
 `;
 
 export const Name = styled.p`
   font-size: 12px;
   color: #ffffff;
   margin: 10px 0 0 0;
+  @media screen and (max-width: 576px) {
+    margin: 3px 0 0 0;
+    font-size: 40%;
+  }
 `;
 
 export const Data = styled.h1`

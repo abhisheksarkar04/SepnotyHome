@@ -11,6 +11,11 @@ export const WebSectionOneHeading=styled.h2`
 font-size: 30px;
 color:white;
 width:60%;
+@media screen and (max-width: 576px) {
+    font-size: 22px;
+    width: 90%;
+  }
+
 `;
 export const WebSectionDescription=styled.p`
 font-size:25px;
@@ -18,6 +23,11 @@ margin-top:60px;
 width:80%;
 color:white;
 line-height: 1.3;
+@media screen and (max-width: 576px) {
+    font-size: 18px;
+    width: 90%;
+    margin-top: 30px;
+  }
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;

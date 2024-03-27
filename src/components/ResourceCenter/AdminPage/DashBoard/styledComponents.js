@@ -156,7 +156,7 @@ export const Containerfour = styled.div`
 
   border: 1px solid #d9d9d9;
   flex-direction: column;
-  justify-content: space-evenly;
+  height: 100%;
   border-radius: 18px;
 `;
 

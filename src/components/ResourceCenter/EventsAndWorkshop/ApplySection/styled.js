@@ -35,7 +35,13 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-left: 14%;
+  @media screen and (max-width: 576px) {
+    margin-left: 6%;
+    width: 98%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
+  }
 
    
   `;
@@ -45,6 +51,11 @@ export const Img = styled.img`
    
   `;
 export const Details = styled.div`
+@media screen and (max-width: 576px) {
+  margin-left: -10%;
+
+
+}
    
   `;
 export const Name = styled.h1`
@@ -64,8 +75,14 @@ export const ApplyButton = styled.button`
     color: #fff;
     font-weight: 600;
     border-radius: 58px;
-    margin-left: 5%;
+    margin-left: 10%;
     cursor: pointer;
+    @media screen and (max-width: 576px) {
+      margin-top: 40px;
+      margin-left: 16%;
+    
+    
+    }
 
    
   `;

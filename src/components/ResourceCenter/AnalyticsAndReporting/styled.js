@@ -156,6 +156,10 @@ export const MobSection1=styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
+    @media screen and (max-width: 576px) {
+      width: ;
+      margin: 30px 0 50px 10px;
+    }
 `;
 
 
@@ -200,6 +204,7 @@ export const GraphImg = styled.img`
     width: 100%;
 
 
+
 `;
 
 export const ProBtn = styled.button`
@@ -221,9 +226,11 @@ padding-left: 0px;
 padding-right: 20px;
 border: none;
 cursor: pointer;
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   height: 30px;
-  align-self:center;
+  width: 22%;
+  align-self: ;
+  margin: 50px 0px 0px 50%;
 }
 `;
 
@@ -237,6 +244,10 @@ export const BtnLearn = styled.button`
   width: 120px;
   color: #fff;
   cursor: pointer;
+  @media screen and (max-width: 576px) {
+    align-self: center;
+    margin: 20px 0 0 35%;
+  }
 
 `;
 
@@ -257,6 +268,10 @@ export const VectorImg = styled.img`
 export const HeadingSection = styled.div`
     margin: 0px 0px 0px 6%;
     display: flex;
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      margin: 0px 0px 0px 4%;
+    }
 
 `;
 
@@ -270,6 +285,9 @@ export const SmallPattern = styled.div`
   position: absolute;
   border-radius: 3px;
   margin-left: 20px;
+   @media screen and (max-width: 576px) {
+    margin-left: 10px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -278,14 +296,18 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 20px;
   width: 202px;
+  @media screen and (max-width: 576px) {
+    width:100%;
+  }
 `;
 export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2B459B;
   font-weight: bold;
   margin-left: auto;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 576px) {
     font-size: 18px;
+    width: 90%;
   }
 `;
 
@@ -294,6 +316,12 @@ export const HeadingSearch = styled.h1`
     color: #fff;
     font-size: 16px;
     font-weight: 400;
+    @media screen and (max-width: 576px) {
+      margin: 20px 0px 20px 50px;
+      justify-content: ;
+      font-weight: bold;
+
+    }
     
 
 `;
@@ -303,12 +331,19 @@ export const ElementsSection = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media screen and (max-width: 576px) {
+      margin: 0px 0px 0px 30px;
+      justify-content: ;
+    }
 
 
 `;
 
 export const SearchSection = styled.div`
     margin: 0px 0px 0px 850px;
+    @media screen and (max-width: 576px) {
+      margin: 0px 0px 0px 0px;
+    }
 
 
 `;
@@ -331,6 +366,11 @@ export const GraphImageItem = styled.img`
     margin: 0px 20px 20px 0px;
    width: 350px;
    height: 380px;
+   @media screen and (max-width: 576px) {
+    width: 110%;
+    height: 90%;
+    margin: 20px 0 0 0px;
+  }
 
 
 `;
@@ -362,7 +402,8 @@ export const ProExtendMain = styled.div`
    display: flex;
    flex-direction: column;
    @media screen and (max-width: 600px) {
-    width: 100%;
+    width: 80%;
+    margin: 0px 0px 50px 20px;
   }
 
 
@@ -374,6 +415,10 @@ export const ProExtendTop = styled.div`
    background-color: #7F8588;
    padding: 20px;
    border-radius: 5px;
+   @media screen and (max-width: 600px) {
+      margin: 30px 0px 0px 20px;
+      width: 99%;
+  }
 
 
 `;
@@ -388,7 +433,7 @@ export const ProExtendBottom = styled.div`
    padding: 20px;
    @media screen and (max-width: 600px) {
     width: 80%;
-    margin: 30px 0px 0px 0; 
+    margin: 30px 0px 0px 20px; 
   }
 
 

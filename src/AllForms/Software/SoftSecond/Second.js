@@ -338,7 +338,7 @@ gap:-10px;
 border-radius:10px;
 padding:20px;
 width:700px;
-height:350px;
+height:380px;
 `
 const Form3 = Styled.div`
 margin-top:40px;

@@ -68,8 +68,8 @@ const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
 class Form extends Component {
   state = {
     step: 1,
-    recivedData:[],
-    SecondData:"",
+    typeOfDevelopement:"website",
+    recivedData:[]
   };
 
   nextStep = () => {
@@ -85,6 +85,7 @@ class Form extends Component {
       step: step - 1
     })
   }
+
   submitData = e => {
     e.preventDefault();
     alert('Data sent');
@@ -92,11 +93,35 @@ class Form extends Component {
   handleDataReceived = (data) => {
     this.setState(prevState => ({
       recivedData: [...prevState.recivedData, data]
-    }));
-    console.log(this.state.recivedData)
+    }), () => {
+      console.log(this.state.recivedData)
+      const jsonData = this.convertToJSON();
+      console.log(jsonData);
+    });
   }
+
+  convertToJSON = () => {
+    const { recivedData } = this.state;
+    const jsonData = {};
+    recivedData.forEach(item => {
+      Object.keys(item).forEach(key => {
+        if (!jsonData.hasOwnProperty(key)) {
+          jsonData[key] = [];
+        }
+        jsonData[key].push(item[key]);
+      });
+    });
+    return jsonData;
+  }
+
   render() {
-   const {step} = this.state
+    const { step, recivedData } = this.state;
+
+    // Function to access a specific received data element by index
+    const getReceivedData = (index) => {
+      return recivedData[index];
+    };
+    console.log(getReceivedData(0))
     
     switch(step) {
       case 1: 
@@ -159,7 +184,6 @@ class Form extends Component {
           nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
-
         />
         )
 
