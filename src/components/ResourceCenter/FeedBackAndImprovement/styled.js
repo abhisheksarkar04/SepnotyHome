@@ -24,6 +24,9 @@ color:white;
 
 export const ServiceItemDetails = styled.div`
   margin: 80px 5% 20px 6%;
+  @media screen and (max-width: 576px) {
+    margin: 50px 0 20px 2%;
+  }
 `;
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
@@ -48,10 +51,14 @@ export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
   font-size: 22px;
   color: #ffffff;
-  width: 90%;
+  width: 85%;
   margin-left: 4%;
   line-height: 1.3;
-  text-align: justify;
+  text-align: ;
+  @media screen and (max-width: 576px) {
+    margin-left: 12%;
+    font-size: 18px;
+  }
 `;
 
 export const SpaceComponent = styled.div`

@@ -11,13 +11,21 @@ export const WebSectionOneHeading=styled.h2`
 font-size: 30px;
 color:white;
 width:30%;
+@media screen and (max-width: 576px) {
+    width: 90%;
+   
+  }
 `;
 export const WebSectionDescription=styled.p`
 font-size:23px;
 margin-top: 30px;
 width: 60%;
 color:white;
-text-align:justify;
+text-align: ;
+@media screen and (max-width: 576px) {
+    width: 90%;
+   
+  }
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;
