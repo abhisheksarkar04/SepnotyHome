@@ -3,15 +3,7 @@ import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 import handleFormValues from "./allFormValues";
-
-
 import FirstStep from "./Website/FirstPage"
-
-
-
-
-
-
 
 class PersonalDetails extends Component {
 constructor(props){
@@ -25,8 +17,6 @@ constructor(props){
     }
   };
 }
- 
-
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
     // console.log(id);
@@ -129,7 +119,7 @@ constructor(props){
         <form onSubmit={this.handleSubmit}>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={0}
             styleConfig={{
               activeBgColor: '#2B459B',
