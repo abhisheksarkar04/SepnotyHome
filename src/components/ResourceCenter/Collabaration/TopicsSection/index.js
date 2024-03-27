@@ -15,7 +15,7 @@ const TopicSection = (props) => {
   const { topicDetails } = props;
   const { image, topic, name, role, likes, views, replies } = topicDetails;
   return (
-    <li>
+
       <TopicContainer>
         <ProfileCon>
           <Profile src={image} alt="profile" />
@@ -40,7 +40,6 @@ const TopicSection = (props) => {
           </SingleData>
         </DataContainer>
       </TopicContainer>
-    </li>
   );
 };
 

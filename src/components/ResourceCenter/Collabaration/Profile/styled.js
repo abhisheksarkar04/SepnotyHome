@@ -27,4 +27,8 @@ export const Profileimg = styled.img`
   height: 50px;
   width: 50px;
   margin-right: 70px;
+  @media screen and (max-width: 576px) {
+    margin-right: 30px;
+   
+  }
 `;

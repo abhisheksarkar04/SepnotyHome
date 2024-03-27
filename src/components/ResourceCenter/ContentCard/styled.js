@@ -7,18 +7,21 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  @media screen and (max-width: 600px) {
-    width: 100px;
+  @media screen and (max-width: 576px) {
+    width: 40%;
     margin: 20px 0px 10px 0px;
   }
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  width: 101%;
   padding-bottom: 10px;
 `;
 export const DetailsCon = styled.div`
   padding: 0px 5px 15px 15px;
+  @media screen and (max-width: 576px) {
+    text-align: left;
+  }
 `;
 export const Title = styled.h1`
   font-size: 12px;

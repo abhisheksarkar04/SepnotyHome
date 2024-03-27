@@ -32,5 +32,10 @@ export const ServiceItemDesc = styled.p`
   
   margin-left: 4%;
   line-height: 1.5;
-  text-align: justify;
+  text-align: ;
+  @media screen and (max-width: 576px) {
+    font-size: 18px;
+    width: 90%;
+    margin-left: 10%;
+  }
 `;
