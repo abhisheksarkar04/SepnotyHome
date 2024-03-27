@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 /* import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im"; */
 import logo from "../Navbar/assets/logo.svg";
-
+import menu from "../Navbar/assets/menu.svg";
 import downarrow from "../Navbar/assets/downarrow.svg";
+import down from "../Navbar/assets/down.svg";
+import up from "../Navbar/assets/up.svg";
 
 import {
   LogoImg,
@@ -39,6 +41,8 @@ const Navbar = () => {
   const [isBlogOpen, setBlogOpen] = useState(false);
   const [isResourceOpen, setResourceOpen] = useState(false);
   const [isButtonOpen, setButtonOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [aboutUs, setAboutUs] = useState(false);
 
   // const history = useHistory();
 
@@ -90,6 +94,14 @@ const Navbar = () => {
     isButtonOpen,
   ]);
 
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+    setAboutUsOpen(false);
+  };
+
+  const toggleAbout = () => {
+    setAboutUs(!aboutUs);
+  };
   const toggleAboutUs = (e) => {
     closeOtherSections();
     setAboutUsOpen(!isAboutUsOpen);
@@ -145,9 +157,8 @@ const Navbar = () => {
         if large screen ma xa bhane Mobile add huxa
         if mobile screen ma xa bhane nav-links-mobile add huxa
         */}
-
         <ul
-          className={Mobile ? "nav-links-mobile" : "nav-links"}
+          className="nav-links"
           onClick={(e) => {
             setMobile(false);
             e.stopPropagation();
@@ -256,40 +267,121 @@ const Navbar = () => {
             )}
           </DropdownContainer>
         </ul>
-        {/* <ul
-          className={Mobile ? "nav-links-mobile" : "nav-links"}
-          onClick={() => setMobile(false)}
-        >
-          <Link to="/">
-            <li>About us</li>
-          </Link>
-          <Link to="/Services">
-            <li>Services</li>
-          </Link>
-          <Link to="/Blog">
-            <li>Blog</li>
-          </Link>
-          <Link to="/CareerOpportunities">
-            <li>Career Opportunities</li>
-          </Link>
-          <Link to="/ResourceCenter">
-            <li>Resource Center</li>
-          </Link>
-          <Link to="/Blog">
-            <li>
-              <button className="contact-button">Contact Us</button>
-            </li>
-          </Link>
-        </ul>
-        
-        whenever we click on button = setMobile(!Mobile) ==  is mobile oppsite to setMobile 
-       
-        <button
-          className="mobile-menu-icon"
-         onClick={() => setMobile(!Mobile)}
-        >
-          {Mobile ? <ImCross /> : <FaBars />}
-        </button> */}
+        <img src={menu} alt="menu" className="menu-icon" onClick={toggleMenu} />
+        {isMenuOpen && (
+          <ul className="mobile-list">
+            <div className="item">
+              <li>About us</li>
+              <button className="downcon">
+                <img
+                  src={aboutUs ? up : down}
+                  alt="arrow"
+                  onClick={toggleAbout}
+                />
+              </button>
+            </div>
+            {aboutUs && (
+              <>
+                <div>
+                  <ul className="mobile-list">
+                    <div className="item">
+                      <Link to="/">
+                        <li>About us</li>
+                      </Link>
+                      <button className="downcon">
+                        <img src={up} alt="up" />
+                      </button>
+                    </div>
+                    <Link to="/">
+                      <li>About Company</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Leadership</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Experts</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Client Review</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Our Partners</li>
+                    </Link>
+                    <Link to="/">
+                      <li>Location</li>
+                    </Link>
+                    <div className="item">
+                      <Link to="/">
+                        <li>Approach</li>
+                      </Link>
+                      <button className="downcon">
+                        <img src={down} alt="down" />
+                      </button>
+                    </div>
+                    <div className="item">
+                      <Link to="/">
+                        <li>Recognition</li>
+                      </Link>
+                      <button className="downcon">
+                        <img src={down} alt="down" />
+                      </button>
+                    </div>
+                    <div className="item">
+                      <Link to="/">
+                        <li>Join Us</li>
+                      </Link>
+                      <button className="downcon">
+                        <img src={down} alt="down" />
+                      </button>
+                    </div>
+                  </ul>
+                </div>
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/Services">
+                    <li>Services</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>{" "}
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/Blog">
+                    <li>Blog</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>{" "}
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/CareerOpportunities">
+                    <li>Career Opportunities</li>
+                  </Link>
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>{" "}
+                <hr className="hrl" />
+                <div className="item">
+                  <Link to="/ResourceCenter">
+                    <li>Resource Center</li>
+                  </Link>{" "}
+                  <button className="downcon">
+                    <img src={down} alt="down" />
+                  </button>
+                </div>
+                <hr className="hrl" />
+                <Link to="/Blog">
+                  <li>
+                    <button className="contact-button">Contact Us</button>
+                  </li>
+                </Link>
+              </>
+            )}
+          </ul>
+        )}
       </nav>
     </>
   );

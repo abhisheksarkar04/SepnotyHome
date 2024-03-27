@@ -34,46 +34,59 @@ function MainPage() {
 export default MainPage;
 
 const ActiveButton = Styled.button`
-background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-color: ${(props) => (props.active ? 'white' : 'black')};
-width: 100px;
-border: 1px solid #8C8C8C;
-border-top-left-radius:10px;
-border-bottom-left-radius:10px;
-font-size:19px;
-height: 45px;
-
+  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active ? 'white' : 'black')};
+  width: 100px;
+  border: 1px solid #8C8C8C;
+  border-radius: 10px; /* Apply border-radius to all corners */
+  font-size: 16px; /* Reduced font size for mobile */
+  height: 45px;
+  
+  @media screen and (max-width: 576px) {
+    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
+    margin-right: 5px; /* Added margin between buttons */
+    margin-bottom: 5px; /* Added margin between buttons */
+  }
 `;
 
 const Buttonel = Styled.button`
-background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-color: ${(props) => (props.active ? 'white' : 'black')};
-width: 110px;
-border: 1px solid #8C8C8C;
-
-font-size:19px;
-height: 45px;
-
-
+  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active ? 'white' : 'black')};
+  width: 110px;
+  border: 1px solid #8C8C8C;
+  font-size: 16px; /* Reduced font size for mobile */
+  height: 45px;
+  
+  @media screen and (max-width: 576px) {
+    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
+    margin-right: 5px; /* Added margin between buttons */
+    margin-bottom: 5px; /* Added margin between buttons */
+  }
 `;
 
 const Butt = Styled.button`
-background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-color: ${(props) => (props.active ? 'white' : 'black')};
-width: 100px;
-border: 1px solid #8C8C8C;
-border-top-right-radius:10px;
-border-bottom-right-radius:10px;
-font-size:19px;
-height: 45px;
+  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active ? 'white' : 'black')};
+  width: 100px;
+  border: 1px solid #8C8C8C;
+  border-radius: 10px; /* Apply border-radius to all corners */
+  font-size: 16px; /* Reduced font size for mobile */
+  height: 45px;
+  
+  @media screen and (max-width: 576px) {
+    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
+    margin-right: 5px; /* Added margin between buttons */
+    margin-bottom: 5px; /* Added margin between buttons */
+  }
+`;
 
-`;
 const ButtonCon = Styled.div`
-display: flex;
-flex-direction: row;
-margin-top: -30px;
-padding: 60px;
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  margin-top: -30px;
+  padding: 20px; /* Reduced padding for smaller screens */
 `;
+
 const FormContainer = Styled.div`
-margin-top:10%;
-`
+  margin-top: 10%;
+`;

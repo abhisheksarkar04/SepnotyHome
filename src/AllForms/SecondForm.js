@@ -33,7 +33,7 @@ class CourseDetails extends Component {
       field2: {selectedIndustries}
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;

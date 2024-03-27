@@ -20,7 +20,7 @@ class Summary extends Component {
       field4: {hasMockups,chosenCMS},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     if (!hasMockups || !chosenCMS) {
       this.setState({ error: 'Please answer all questions.' });
       return;
@@ -78,13 +78,13 @@ Yes
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="Iwill" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will engage third party for UI design" onChange={this.handleMockupsChange} />
     I will engage third party for UI design
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="need" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will need you to provide UI design" onChange={this.handleMockupsChange} />
     I will need you to provide UI design
     </Label>
 </InputContainer>
@@ -106,7 +106,7 @@ No
 <InputContainer>
 <Label>
 <Input type='radio' name="cms" value="Yes" onChange={this.handleCMSChange} />
-                    <Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
+<Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
     </Label>
 </InputContainer>
 {error && <ErrorMessage>{error}</ErrorMessage>}

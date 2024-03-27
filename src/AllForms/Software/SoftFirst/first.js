@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import handleFormValues from '../../allFormValues';
-
-
-
-
-
-
-
-
 class FirstSoftwarePage extends Component {
 
   state = {
@@ -51,10 +43,11 @@ class FirstSoftwarePage extends Component {
 
     const { softwareTypes, numberOfPages } = this.state;
 
-
-   
+    const formData = {
+       feild1 : {softwareTypes,numberOfPages}
+    }
+    this.props.onDataReceived(formData);
   // Call the handleFormValues function from FormUtils.js
-  
     if (softwareTypes.length === 0) {
       this.setState({
         formErrors: {
@@ -185,7 +178,7 @@ class FirstSoftwarePage extends Component {
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <span style={{ color: 'red' }}>{formErrors.softwareTypes}</span>}
+                {formErrors.softwareTypes && <Span style={{ color: 'red' }}>{formErrors.softwareTypes}</Span>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -241,7 +234,7 @@ class FirstSoftwarePage extends Component {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
+              {formErrors.numberOfPages && <Span style={{ color: 'red' }}>{formErrors.numberOfPages}</Span>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -255,6 +248,10 @@ class FirstSoftwarePage extends Component {
 }
 
 export default FirstSoftwarePage;
+
+const Span = Styled.p`
+font-size:12px;
+`
 
 const Button = Styled.div`
 display:flex;
@@ -292,7 +289,7 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;

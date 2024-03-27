@@ -32,7 +32,9 @@ class CourseDetails extends Component {
       field2: {selectedIndustries},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
+
+    //handleFormValues(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
@@ -336,7 +338,7 @@ gap:-10px;
 border-radius:10px;
 padding:20px;
 width:700px;
-height:350px;
+height:380px;
 `
 const Form3 = Styled.div`
 margin-top:40px;

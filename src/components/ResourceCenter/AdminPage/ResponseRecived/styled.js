@@ -79,7 +79,7 @@ export const RowSno = styled.td`
 export const RowName = styled.td`
   border: 1px solid #8196db;
   padding: 5px 0px 5px 20px;
-  width: 10%;
+  width: 5%;
 `;
 
 export const RowCompany = styled.td`

@@ -3,13 +3,12 @@ import React, { Component } from 'react';
 
 import FirstForm from './Software/SoftFirst/first';
 import SecondForm from './Software/SoftSecond/Second';
-import YourIndustry from './ThirdForm';
 import Summary from './FourthForm';
-import SecondForm1 from "./FifthForm"
-import FormNo5 from './SixthForm';
-import SeventhForm from './SeventhForm';
-import CourseDetails1 from './EightthForm';
-import EightthPage from './Website/EightthPage';
+import YourIndustry from './ThirdForm';
+import FormNo5 from "./SixthForm";
+import SecondForm1 from './FifthForm';
+import ThirdForm from "./SeventhForm";
+import FourthForm from "./EightthForm"
 
 const coursesData = [
   {
@@ -67,238 +66,107 @@ const coursesData = [
 const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
 
 class Software extends Component {
-  state = {
-    step: 1,
-    firstname: '',
-    lastname: '',
-    email: '',
-    phone: '',
-    courses: [],
-    level: '',
-    isErrorFirstName: true,
-    isErrorLastName: true,
-    errorMessageFirstName: '',
-    errorMessageLastName: ''
-  };
-
-  nextStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    })
-  }
-
-  prevStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step - 1
-    })
-  }
-
-  handleChange = input => e => {
-    this.setState({
-      [input]: e.target.value
-    })
-
-    if (input === 'firstname') {
-      if (this.state.firstname.length >= 1) {
-        this.setState({
-          isErrorFirstName: false
-        })
-      }
-    }
-
-    else if (input === 'lastname') {
-      if (this.state.lastname.length >= 1) {
-        this.setState({
-          isErrorLastName: false
-        })
-      }
-    }
-  }
-
-  addLevel = e => {
-    const levelChosen = e.target.value;
-    this.setState({
-      level: levelChosen
-    });
-  };
-
-  addCourse = data => {
-    const id = data.map(v => v.id);
-    this.setState({
-      courses: id
-    })
-  };
-
-  validateFirstName = () => {
-    if (this.state.firstname.length < 2) {
+    state = {
+      step: 1,
+      recivedData:[],
+      SecondData:"",
+    };
+  
+    nextStep = () => {
+      const { step } = this.state;
       this.setState({
-        isErrorFirstName: true,
-        errorMessageFirstName: 'Type your first name (at least 2 characters)'
-      });
-      return false;
+        step: step + 1
+      })
     }
-    return true;
-  }
-
-  validateLastName = () => {
-    if (this.state.lastname.length < 2) {
+  
+    prevStep = () => {
+      const { step } = this.state;
       this.setState({
-        isErrorLastName: true,
-        errorMessageLastName: 'Type your last name (at least 2 characters)'
-      });
-      return false;
+        step: step - 1
+      })
     }
-    return true;
-  } 
-
-  submitData = e => {
-    e.preventDefault();
-    alert('Data sent');
-  }
-
-  render() {
-    const {
-      step,
-      firstname,
-      lastname,
-      email,
-      phone,
-      courses,
-      level,
-      isErrorFirstName,
-      isErrorLastName,
-      errorMessageFirstName,
-      errorMessageLastName
-    } = this.state;
-
-    const coursesOptions = coursesData.map(el => ({
-      course: el.courseName,
-      id: el.id,
-      category: el.category
-    }));
-
-    const coursesChosen = coursesData.filter(el => courses.includes(el.id));
-    const coursesChosenSummary = coursesChosen.map(el => (
-      <p key={el.id}>
-        {el.courseName} - {el.category} 
-      </p>
-    ));
-
-    const chosenLevel = level;
-    
-    const levelOptions = levelsData.map((el, index) => (
-      <option key={index} value={el}>
-        {el}
-      </option>
-    ));
-    
-    switch(step) {
-      case 1: 
-        return (
-          <FirstForm
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            firstname={firstname}
-            lastname={lastname}
-            email={email}
-            phone={phone}
-            validateFirstName={this.validateFirstName}
-            validateLastName={this.validateLastName}
-            isErrorFirstName={isErrorFirstName}
-            isErrorLastName={isErrorLastName}
-            errorMessageFirstName={errorMessageFirstName}
-            errorMessageLastName={errorMessageLastName}
-          />
-        )
+    submitData = e => {
+      e.preventDefault();
+      alert('Data sent');
+    }
+    handleDataReceived = (data) => {
+      this.setState(prevState => ({
+        recivedData: [...prevState.recivedData, data]
+      }));
+      console.log(this.state.recivedData)
+    }
+    render() {
+     const {step} = this.state
+      
+      switch(step) {
+        case 1: 
+          return (
+            < FirstForm
+              nextStep={this.nextStep}
+              onDataReceived={this.handleDataReceived}
+            />
+          )
         case 2:
+          return (
+            <SecondForm 
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              onDataReceived={this.handleDataReceived}
+            />
+          )
+        case 3:
+          return (
+            < YourIndustry nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            onDataReceived={this.handleDataReceived}
+            
+            />
+          )
+        case 4:
             return (
-              <SecondForm 
+              < Summary nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              onDataReceived={this.handleDataReceived}
+             />
+            )
+        case 5:
+              return (
+                <SecondForm1  nextStep={this.nextStep}
+                prevStep={this.prevStep}
+                onDataReceived={this.handleDataReceived}
+                />
+              )
+        case 6:
+              return (
+                <FormNo5 
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                addCourse={this.addCourse}
-                coursesOptions={coursesOptions}
-                addLevel={this.addLevel}
-                levelOptions={levelOptions}
-                level={level}
+                onDataReceived={this.handleDataReceived}
+                
               />
-            )
-          case 3:
-            return (
-              < YourIndustry nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              addCourse={this.addCourse}
-              coursesOptions={coursesOptions}
-              addLevel={this.addLevel}
-              levelOptions={levelOptions}
-              level={level}/>
-            )
-          case 4:
-              return (
-                < Summary nextStep={this.nextStep}
-                prevStep={this.prevStep}
-                addCourse={this.addCourse}
-                coursesOptions={coursesOptions}
-                addLevel={this.addLevel}
-                levelOptions={levelOptions}
-                level={level}/>
               )
-          case 5:
-                return (
-                  <SecondForm1  nextStep={this.nextStep}
-                  prevStep={this.prevStep}
-                  addCourse={this.addCourse}
-                  coursesOptions={coursesOptions}
-                  addLevel={this.addLevel}
-                  levelOptions={levelOptions}
-                  level={level}/>
-                )
-          case 6:
-                return (
-                  <FormNo5 
-                  nextStep={this.nextStep}
-                  prevStep={this.prevStep}
-                  firstname={firstname}
-                  lastname={lastname}
-                  email={email}
-                  phone={phone}
-                  coursesChosenSummary={coursesChosenSummary}
-                  chosenLevel={chosenLevel}
-                  submitData={this.submitData}
-                />
-                )
-          case 7:
-            return (
-              <SeventhForm
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              firstname={firstname}
-              lastname={lastname}
-              email={email}
-              phone={phone}
-              coursesChosenSummary={coursesChosenSummary}
-              chosenLevel={chosenLevel}
-              submitData={this.submitData}
-            />
-            )
-          case 8:
-            return(
-              <CourseDetails1 
-              nextStep={this.nextStep}
-              prevStep={this.prevStep}
-              firstname={firstname}
-              lastname={lastname}
-              email={email}
-              phone={phone}
-              coursesChosenSummary={coursesChosenSummary}
-              chosenLevel={chosenLevel}
-              submitData={this.submitData}
-            />
-            )
-      default: return null
+        case 7:
+          return (
+            <ThirdForm 
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            onDataReceived={this.handleDataReceived}
+          />
+          )
+        case 8:
+          return(
+            <FourthForm 
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            onDataReceived={this.handleDataReceived}
+  
+          />
+          )
+  
+            
+        default: return null
+      }
     }
   }
-}
 
 export default Software;
