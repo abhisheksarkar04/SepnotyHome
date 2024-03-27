@@ -6,12 +6,14 @@ color:white;
 padding:30px 0px 30px 0px;
 display:flex;
 flex-direction:column;
+
 `;
 export const InqueryTitle=styled.h2`
 color:white;
 font-size:17px;
 margin:40px 30px 10px 0px;
 margin-left:6%;
+
 `;
 export const InqueryName=styled.h1`
 color:white;
@@ -25,6 +27,11 @@ color:rgba(43, 69, 155, 1);
 margin:45px 0px 30px 0px;
 margin-top:5%;
 padding-left:8%;
+@media screen and (max-width:576px){
+  font-size:20px;
+  margin-top:35px;
+  margin-left:25px;
+}
 `;
 export const HelpJournalDescription=styled.p`
 color:white;
@@ -33,6 +40,11 @@ line-height:1.5;
 margin:25px 0px 20px 0px;
 width:80%;
 padding-left:8%;
+@media screen and (max-width:576px){
+  font-size:22px;
+line-height:1.5;
+width:100%;
+}
 `;
 export const RequestCall=styled.div`
 display:flex;
@@ -40,7 +52,7 @@ flex-direction:row;
 margin:20px 40px 30px 0px;
 padding-left:6%;
 justify-content:space-between;
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     flex-direction:column;
 }
 `;
@@ -49,6 +61,9 @@ display:flex;
 flex-wrap:wrap;
 width:80%;
 margin-bottom:20px;
+@media screen and (max-width:576px){
+  width:100%;
+}
 `;
 export const RequestRight=styled.div`
 display:flex;
@@ -94,11 +109,20 @@ background-color:rgba(193, 202, 231, 1);
 position: relative;
 width:60%;
 padding-bottom:5px;
+@media screen and (max-width:576px){
+  width:90%;
+  margin:5px;
+  padding:5px;
+}
 `;
 export const MediaImg=styled.img`
 width:150px;
 height:40px;
 margin-right:30px;
+@media screen and (max-width:576px){
+  width:100px;
+  margin-right:10px;
+}
 `;
 
 const arrowAnimation = keyframes`
@@ -145,6 +169,11 @@ justify-content:space-between;
 flex-wrap:wrap;
 padding:30px 120px 20px 0px;
 padding-left:6%;
+@media screen and (max-width:576px){
+  flex-direction:column;
+  padding-left:3%;
+  padding-right:60px;
+}
 `;
 export const SeeMoreButton=styled.button`
 background-color:white;
@@ -261,6 +290,9 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 border-radius:1px;
 margin-left:6%;
+@media screen and (max-width:576px){
+  margin-top:20px;
+}
 `;
 export const ContactCon = styled.div`
   background-color:rgba(12, 17, 31, 1);

@@ -1,11 +1,4 @@
-import {
-  BottomCon,
-  BottomHeading,
-  BottomDesc,
-  Button,
-  Image,
-  QueryContainer,
-} from "./styled";
+import { QueryContainer } from "./styled";
 
 import ContactForm from "../ContactForm";
 import Meeting from "../Meeting";

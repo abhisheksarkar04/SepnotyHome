@@ -60,6 +60,12 @@ export const ListHeading = styled.h1`
   margin-top: 5px;
   font-weight: bold;
   margin-left: -29px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    font-size: 20px;
+    margin-left: -20px;
+   
+  }
 `;
 
 
@@ -114,6 +120,10 @@ export const LearnPara = styled.p`
   text-align:left;
   margin-left: 8%;
   margin-bottom: 40px;
+  @media screen and (max-width: 576px) {
+    margin-left: 14%;
+   
+  }
 
 `;
 
@@ -129,7 +139,10 @@ export const OrderListSection = styled.ol`
     font-weight: 400;
    
   }
- 
+  @media screen and (max-width: 576px) {
+    margin-left: 10%;
+   
+  }
 `;
 
 

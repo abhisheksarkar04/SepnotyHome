@@ -45,6 +45,11 @@ export const ListHeading = styled.h1`
   color: #89A4FF;
   font-weight: bold;
   margin-left: -28px;
+  @media screen and (max-width: 576px) {
+    width: 96%;
+    font-size: 20px;
+   
+  }
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
@@ -53,7 +58,13 @@ export const ServiceItemDesc = styled.p`
   width: 80%;
   margin-left: 2%;
   line-height: 1.5;
-  text-align: justify;
+  text-align: ;
+  @media screen and (max-width: 576px) {
+    width: 96%;
+    margin-left: 6%;
+    font-size: 16px;
+   
+  }
 `;
 
 export const SpaceComponent = styled.div`
@@ -64,8 +75,6 @@ export const ListItemSection = styled.ul`
  
  font-size: 20px; 
  font-weight: 900;
-  margin-right: 10%;
-  margin-left: 5%;
   margin: 40px 10% 0 5%;
   list-style-type: none;
   & > li {
@@ -75,7 +84,17 @@ export const ListItemSection = styled.ul`
     margin-left: 0px;
    
   }
-  
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin: 0px 0 0 -4%;
+    & > li {
+      color: #89A4FF;
+      line-height: 1.5;
+      margin-left: 0px;
+     
+    }
+   
+  }
    
 `;
 export const LearnPara1 = styled.p`
@@ -85,12 +104,27 @@ export const LearnPara1 = styled.p`
    font-size: 22px;
    margin-top:-10px;
    margin-bottom: 30px;
+   @media screen and (max-width: 576px) {
+    width: 100%;
+    margin-left: 6%;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+   
+  }
 `;
 export const ListHead = styled.h2`
    font-size: 22px;
    color: #89A4FF;
    margin-bottom: 15px;
    font-weight: 500;
+   @media screen and (max-width: 576px) {
+    width: 96%;
+    margin-left: 6%;
+    text-align: left;
+
+   
+  }
 `;
 
 export const OrderListSection = styled.ul`
@@ -105,6 +139,14 @@ export const OrderListSection = styled.ul`
     font-weight: 500;
    
   }
+  @media screen and (max-width: 576px) {
+    text-align: left;
+    & > li{
+      text-align: left;
+      font-size: 18px;
+      margin: -40px 0 -40px 20px;
+    }
+  }
  
 `;
 
@@ -116,5 +158,13 @@ export const LearnPara11 = styled.h2`
    font-size:22px;
    width: 70%;
    font-weight: 10;
+   @media screen and (max-width: 576px) {
+    margin-left: 14%;
+    font-size:18px;
+   width: 82%;
+   margin-top:50px;
+
+
+  }
    
 `;

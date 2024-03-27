@@ -7,11 +7,17 @@ width:100%;
 min-height: 40vh;
 
 margin-bottom: 30px;
+
 `;
 export const WebSectionOneHeading=styled.h2`
 font-size: 30px;
 color:white;
 width:30%;
+@media screen and (max-width: 576px) {
+  width: 96%;
+  font-size: 25px;
+ 
+}
 `;
 export const WebSectionDescription=styled.p`
 font-size: 22px;
@@ -20,6 +26,11 @@ width: 70%;
 color:white;
 line-height: 1.3;
 text-align:;
+@media screen and (max-width: 576px) {
+  width: 96%;
+  font-size: 20px;
+ 
+}
 `;
 export const BackgroundShapeOne=styled.span`
 position: absolute;

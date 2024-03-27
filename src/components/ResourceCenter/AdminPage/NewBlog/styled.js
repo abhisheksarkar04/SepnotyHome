@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
 `;
 

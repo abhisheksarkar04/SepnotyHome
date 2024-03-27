@@ -9,70 +9,81 @@ export const DigitalContainer = styled.div`
 `;
 
 export const ListDataContainer = styled.div`
-margin-top:5%;
-display:flex;
-flex-direction:column;
-text-align:left;
-line-height:20px;
-width:20%;
-margin-left:5%;
-font-size: 18px;
-
-
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 20px;
+  width: 30%;
+  margin-left: 5%;
+  font-size: 18px;
 `;
-export const ListInnerContainer = styled.div`
-display:flex;
-width:100%;
-text-align:center;
+export const ListInnerContainer = styled.li`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
+
 export const BlueContainer = styled.div`
- display:flex;
- background-color:rgba(43, 69, 155, 1);
- flex-direction:row;
- padding:30px;
- justify-content:space-between;
- color:white;
- height:250px;  
+  display: flex;
+  background-color: rgba(43, 69, 155, 1);
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-between;
+  color: white;
+  height: 250px;
+
+  @media screen and (width: 576px) {
+    padding: 20px 0px 30px 5px;
+  }
 `;
 export const LeftTextContainer = styled.div`
-display:flex;
-flex-direction:column;
-text-align:left;
-line-height:20px;
-width:60%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 20px;
+  width: 70%;
 
+  @media screen and (width: 576px) {
+    width: 90%;
+  }
 `;
 export const LeftHeading = styled.h2`
-color:white;
-font-weight:700;
-font-size:30px;
-margin-bottom:20px;
-margin-left:5%;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-left: 5%;
 `;
 
 export const LeftTitle = styled.p`
-font-size:25px;
-color:white;
-margin-top:20px;
-margin-left:5%;
+  font-size: 25px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 5%;
 `;
 export const LeftDescription = styled.p`
-font-size:14px;
-color:white;
-line-height:20px;
-margin-bottom:20px;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+  margin-bottom: 20px;
 `;
 export const LeftButton = styled.button`
-background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(252,252,252,0) 0%, rgba(252,252,252,1) 0%, rgba(246,251,34,1) 100%);
-border:none;
-color:rgba(35, 69, 129, 1);
-border-radius:20px;
-padding:10px 20px 10px 20px;
-width:150px;
-font-size:15px;
-font-weight:600;
-margin-left:6%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(252, 252, 252, 0) 0%,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(246, 251, 34, 1) 100%
+  );
+  border: none;
+  color: rgba(35, 69, 129, 1);
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 150px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 6%;
 `;
 export const Header = styled.h1`
   font-size: 15px;
@@ -90,7 +101,7 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
-`
+`;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
@@ -123,36 +134,29 @@ export const Button = styled.button`
   margin-top: 20px;
 `;
 export const select = styled.select`
-  
   padding: 5px 25px 5px 25px;
   border-radius: 20px;
-  background-color:rgba(43, 69, 155, 1);
+  background-color: rgba(43, 69, 155, 1);
   border: 0px;
   outline: none;
   font-size: 13px;
   margin-top: 20px;
 `;
 export const TableofContent = styled.button`
-margin-left: 80%;
+  margin-left: 80%;
   border-radius: 20px;
   color: rgba(43, 69, 155, 1);
-  background-color:rgba(43, 69, 155, 1);
+  background-color: rgba(43, 69, 155, 1);
   border: 0px;
 `;
 export const Dropdownbtn = styled.button`
-  display:flex;
- 
+  display: flex;
 `;
 export const DropDown = styled.div`
-margin-left:65%;
-  position:absolute;
- 
+  margin-left: 65%;
+  position: absolute;
 `;
-export const Dropdowncontent = styled.div`
- 
- 
-`;
-
+export const Dropdowncontent = styled.div``;
 
 export const Rectangle1 = styled.img`
   position: absolute;
@@ -200,7 +204,7 @@ export const Small = styled.img`
 `;
 export const ServiceItemCon = styled.div`
   margin-top: 5.5%;
-  margin:10px;
+  margin: 10px;
 `;
 export const ServiceItemDesc = styled.p`
 margin-bottom: 20px;
@@ -229,18 +233,18 @@ export const Iph = styled.p`
 `;
 
 export const CareerInfo = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-flex-wrap:wrap;
-padding:30px 150px 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 150px 20px 30px;
 `;
 export const ImageCon = styled.img`
-  width: 20%;
-  
+  width: 25%;
+
   display: flex;
   flex-direction: column;
-  padding: 15px 5px 5px 10px;
+  margin: 15px 5px 5px 10px;
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
@@ -248,14 +252,14 @@ export const ServiceItemImg = styled.img`
 `;
 
 export const ServiceItemDetails = styled.div`
-margin-left: 117px;
+  margin-left: 117px;
 `;
 export const CareeInfo = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-flex-wrap:wrap;
-padding:30px 150px 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 150px 20px 30px;
 `;
 export const Dropdown = styled.button`
 margin-left: 80%;
@@ -266,14 +270,12 @@ margin-left: 80%;
   color:white;
 `;
 export const DropdownContent = styled.button`
-display: block;
-margin-top: 10px;
-min-width: 160px;
-color:white;
-
+  display: block;
+  margin-top: 10px;
+  min-width: 160px;
+  color: white;
 `;
 export const ApplyButton = styled.button`
-  
   padding: 5px 25px 5px 25px;
   border-radius: 20px;
   color: white;
@@ -282,7 +284,12 @@ export const ApplyButton = styled.button`
   outline: none;
   font-size: 15px;
   margin-top: 68px;
-  width:10%;
-  height:20%;
-  margin-left:70px;
+  width: 10%;
+  height: 20%;
+  margin-left: 70px;
+`;
+
+export const TableItemsList = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
