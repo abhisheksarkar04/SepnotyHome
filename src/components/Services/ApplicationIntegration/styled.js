@@ -11,7 +11,7 @@ export const DigitalContainer = styled.div`
   }
 `;
 export const Header = styled.h1`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
@@ -31,7 +31,7 @@ export const Service = styled.h1`
   padding: 10px 30px 20px 6%;
   @media screen and (max-width: 576px) {
     padding: 0px 10px 10px 3%;
-    font-size: 17px;
+    font-size: 16px;
   }
 `;
 
@@ -110,7 +110,7 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: -29px;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 16px;
     margin-left: -20px;
   }
 `;
@@ -212,4 +212,16 @@ export const BackButton = styled.button`
   cursor: pointer;
   font-size: 30px;
   margin-right: 95%;
+`;
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 `;

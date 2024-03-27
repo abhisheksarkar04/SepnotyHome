@@ -37,6 +37,7 @@ import {
   PatternCon,
   CardHeading,
   GradingBg,
+  QueryContainer,
 } from "./styled";
 
 import { Link } from "react-router-dom";
@@ -47,7 +48,7 @@ import trim from "../Images/trim.svg";
 import CV from "../Images/CorporateVideo.svg";
 import SM from "../Images/socialmedia.svg";
 import outsource from "../Images/outsource.svg";
-import Contact from "../../ContactUs/SepnotyQuerySection";
+
 import FooterSection from "../../Footer/FooterSection";
 import editer from "../Images/editer.svg";
 import clipping from "../Images/videoclipping.svg";
@@ -58,6 +59,8 @@ import resolve from "../Images/resolve.svg";
 import rush from "../Images/rush.svg";
 import premier from "../Images/premier.svg";
 import crop from "../Images/crop.svg";
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 
 const VideoEditing = () => {
   const heading = "Have a question About our Services ?";
@@ -296,7 +299,10 @@ const VideoEditing = () => {
           </ToolsCardCon>
         </ToolsCon>
       </DigitalContainer>
-      <Contact heading={heading} />
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
       <FooterSection />
     </>
   );
