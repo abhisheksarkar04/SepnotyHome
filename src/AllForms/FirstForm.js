@@ -17,10 +17,10 @@ class PersonalDetails extends Component {
 constructor(props){
   super(props);
   this.state = {
-    softwareTypes: [],
+    typeOfWebsite: [],
     numberOfPages: '',
     formErrors: {
-      softwareTypes: '',
+      typeOfWebsite: '',
       numberOfPages: ''
     }
   };
@@ -31,12 +31,12 @@ constructor(props){
     const { id, checked } = event.target;
     // console.log(id);
     this.setState(prevState => ({
-      softwareTypes: checked
-        ? [...prevState.softwareTypes, id]
-        : prevState.softwareTypes.filter(type => type !== id),
+      typeOfWebsite: checked
+        ? [...prevState.typeOfWebsite, id]
+        : prevState.typeOfWebsite.filter(type => type !== id),
       formErrors: {
         ...prevState.formErrors,
-        softwareTypes: ''
+        typeOfWebsite: ''
       }
     }));
   };
@@ -55,18 +55,18 @@ constructor(props){
     event.preventDefault();
 
 
-    const { softwareTypes, numberOfPages } = this.state;
+    const { typeOfWebsite, numberOfPages } = this.state;
     
 
 
    
   // Call the handleFormValues function from FormUtils.js
   
-    if (softwareTypes.length === 0) {
+    if (typeOfWebsite.length === 0) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
-          softwareTypes: 'Please select at least one type of software.'
+          typeOfWebsite: 'Please select at least one type of software.'
         }
       });
       return;
@@ -93,17 +93,16 @@ constructor(props){
     e.preventDefault();
     
     // Check for errors
-    const { softwareTypes, numberOfPages } = this.state;
+    const { typeOfWebsite, numberOfPages } = this.state;
     const formData = {
-      field1: {softwareTypes , numberOfPages},
+      field1: {typeOfWebsite , numberOfPages},
       // Add more fields as needed
     };
-    console.log(formData)
     this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types
-    if (softwareTypes.length === 0) {
+    if (typeOfWebsite.length === 0) {
         formErrors.softwareTypes = 'Please select at least one type of software.';
     }
 
@@ -123,7 +122,7 @@ constructor(props){
 }
 
   render() {
-    const { softwareTypes, numberOfPages, formErrors } = this.state;
+    const { typeOfWebsite, numberOfPages, formErrors } = this.state;
 
     return (
       <Main className='form'>
@@ -152,45 +151,45 @@ constructor(props){
                          *Choose the type of  you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="Corporate Website/App" checked={softwareTypes.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="Corporate Website/App" checked={typeOfWebsite.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
                     <Label htmlfor="Corporate Website/App">
                         Corporate Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         <Label htmlfor="Portfolio Website/App">
-                        <Input type="checkbox" id="Portfolio Website/App" checked={softwareTypes.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Portfolio Website/App" checked={typeOfWebsite.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
                          Portfolio Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Digital Media Website/App">
-                        <Input type="checkbox" id="Digital Media Website/App" checked={softwareTypes.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Digital Media Website/App" checked={typeOfWebsite.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
                         Digital Media Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Educational Website/App">
-                        <Input type="checkbox" id="Educational Website/App" checked={softwareTypes.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Educational Website/App" checked={typeOfWebsite.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
                         Educational Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Content aggregator">
-                        <Input type="checkbox" id="Content aggregator" checked={softwareTypes.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Content aggregator" checked={typeOfWebsite.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
                         Content aggregator(eg: Forum)
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={softwareTypes.includes('6st')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="6st" checked={typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
                         <Input1 type="text" id="6st" placeholder="others (please specify"/>
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <Error style={{ color: 'red' }}>{formErrors.softwareTypes}</Error>}
+                {formErrors.typeOfWebsite && <Error style={{ color: 'red' }}>{formErrors.typeOfWebsite}</Error>}
             </FormContainer>
             <FormContainer>
                 <Form>

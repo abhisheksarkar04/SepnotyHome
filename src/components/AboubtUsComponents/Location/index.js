@@ -58,9 +58,9 @@ const Location= () => {
           <Rectangle1 src={rectangle1} alt="not-found" />
         </ContentRecomContainer>
         <ServiceItemCon>
-            <div>
+            <Div>
                 <iframe title="sepnoty" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.438013800391!2d79.98526797473207!3d14.9126707856115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7bf369e53fd7%3A0xe0d967314b1ab7f1!2sSepnoty!5e0!3m2!1sen!2sin!4v1709201233005!5m2!1sen!2sin" width="100%" height="600" style={{border:"0"}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </Div>
             <Main>
               <PP>Contact Us:</PP>
               <Img src={GroupImg}/>
@@ -79,6 +79,16 @@ const Location= () => {
 };
 
 export default Location;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
+
+const Div = styled.div`
+${media.mobile}{
+  width:90%;
+  margin-left:5%;
+}
+`
 
 const P = styled.p`
 color:white;
@@ -100,4 +110,7 @@ color:white;
 const Img = styled.img`
 height:24px;
 margin-left:-97%;
+${media.mobile}{
+  margin-left:-92%;
+}
 `

@@ -45,7 +45,7 @@ const ActiveButton = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:60px;
+    width:76px;
   }
   
   
@@ -59,7 +59,7 @@ const Buttonel = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:60px;
+    width:76px;
   }
   
   
@@ -74,7 +74,7 @@ const Butt = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:60px;
+    width:76px;
   }
   
   
@@ -93,6 +93,6 @@ const ButtonCon = Styled.div`
 const FormContainer = Styled.div`
   margin-top: 10%;
   ${media.mobile} {
-    width:576px;
+    width:100%;
   }
 `;
