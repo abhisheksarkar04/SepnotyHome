@@ -12,11 +12,13 @@ import menu from "../Navbar/assets/menu.svg";
 import downarrow from "../Navbar/assets/downarrow.svg";
 import down from "../Navbar/assets/down.svg";
 import up from "../Navbar/assets/up.svg";
+
 import behance from "./assets/behance.svg";
 import facebook from "../Navbar/assets/facebook.svg";
 import figma from "../Navbar/assets/figma.svg";
 import instagram from "../Navbar/assets/instagram.svg";
 import twitter from "../Navbar/assets/TwitterX.svg";
+
 
 import {
   LogoImg,
@@ -93,6 +95,7 @@ const Navbar = () => {
   const [isButtonOpen, setButtonOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+
   const [isMobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
   const [isMobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isOtherItemsOpen, setOtherItemsOpen] = useState(true);
@@ -107,6 +110,7 @@ const Navbar = () => {
   const [isDesignerOpen, setDesignerOpen] = useState(false);
   const [isInsightOpen, setInsightOpen] = useState(false);
   const [isMobileContactsOpen, setMobileContactsOpen] = useState(false);
+
 
   // const history = useHistory();
   const menuRef = useRef(null);
@@ -175,6 +179,7 @@ const Navbar = () => {
     isResourceOpen,
     isButtonOpen,
   ]);
+
 
   const toggleMobileContact = () => {
     setMobileContactsOpen(!isMobileContactsOpen);
@@ -271,6 +276,8 @@ const Navbar = () => {
     setInsightOpen(!isInsightOpen);
   };
 
+
+ 
   const toggleAboutUs = (e) => {
     closeOtherSections();
     setAboutUsOpen(!isAboutUsOpen);
@@ -441,6 +448,7 @@ const Navbar = () => {
         </ul>
         <img src={menu} alt="menu" className="menu-icon" onClick={toggleMenu} />
         {isMenuOpen && (
+
           <div>
             <ul className="mobile-list">
               <div className="inputholder">
@@ -859,6 +867,8 @@ const Navbar = () => {
               )}
             </ul>
           </div>
+
+
         )}
       </nav>
     </>

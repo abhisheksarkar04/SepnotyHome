@@ -27,7 +27,9 @@ a {
 
 @media screen and (max-width: 576px) {
   .navbar {
+
     height: 7vh;
+
   }
 }
 
@@ -79,7 +81,9 @@ button {
     transition: all 0.5s ease-in-out;
     color: #ffffff;
     font-size: 15px;
+
     padding: 10px 0px 7px 15px;
+
     margin: 0px;
   }
   ul li:hover {
@@ -143,6 +147,7 @@ button {
 .mobile-list {
   display: flex;
   flex-direction: column;
+
   position: absolute;
   right: 0;
   top: 6vh;
@@ -151,6 +156,7 @@ button {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
+
   width: 43%;
 }
 
@@ -171,7 +177,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-top: 10px;
+
   height: 25px;
   padding: 5px 10px;
   width: auto;
@@ -179,6 +187,7 @@ button {
 
 .hrl {
   width: 100%;
+
   border: 1px solid rgb(255, 255, 255, 0.5);
 }
 
@@ -227,3 +236,5 @@ button {
   border-left: 1px solid rgb(255, 255, 255, 0.25);
   font-weight: normal;
 }
+
+ 

@@ -15,6 +15,7 @@ import {
     SeeMoreButton,
     SeeMoreCon,
     HrLine,
+    HlLine,
     DownArrow,
     Click,
 } from './styledComponents';
@@ -154,7 +155,7 @@ const AllArticles = () => {
         <CardArticle key={eachItem.uniqueNo} details={eachItem} />
       ))}
       <SeeMoreCon>
-    <HrLine />
+    <HlLine />
     <Click>
     <div>
     <SeeMoreButton onClick={loadMore}>See More Articles</SeeMoreButton></div>
