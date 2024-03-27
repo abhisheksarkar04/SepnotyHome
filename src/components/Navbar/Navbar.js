@@ -12,11 +12,14 @@ import menu from "../Navbar/assets/menu.svg";
 import downarrow from "../Navbar/assets/downarrow.svg";
 import down from "../Navbar/assets/down.svg";
 import up from "../Navbar/assets/up.svg";
+<<<<<<< HEAD
 import behance from "./assets/behance.svg";
 import facebook from "../Navbar/assets/facebook.svg";
 import figma from "../Navbar/assets/figma.svg";
 import instagram from "../Navbar/assets/instagram.svg";
 import twitter from "../Navbar/assets/TwitterX.svg";
+=======
+>>>>>>> main
 
 import {
   LogoImg,
@@ -92,6 +95,7 @@ const Navbar = () => {
   const [isResourceOpen, setResourceOpen] = useState(false);
   const [isButtonOpen, setButtonOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
+<<<<<<< HEAD
 
   const [isMobileAboutUsOpen, setMobileAboutUsOpen] = useState(false);
   const [isMobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -107,6 +111,9 @@ const Navbar = () => {
   const [isDesignerOpen, setDesignerOpen] = useState(false);
   const [isInsightOpen, setInsightOpen] = useState(false);
   const [isMobileContactsOpen, setMobileContactsOpen] = useState(false);
+=======
+  const [aboutUs, setAboutUs] = useState(false);
+>>>>>>> main
 
   // const history = useHistory();
   const menuRef = useRef(null);
@@ -180,6 +187,7 @@ const Navbar = () => {
     isMenuOpen,
   ]);
 
+<<<<<<< HEAD
   const toggleMobileContact = () => {
     setMobileContactsOpen(!isMobileContactsOpen);
   };
@@ -273,6 +281,16 @@ const Navbar = () => {
   };
   const toggleInsight = () => {
     setInsightOpen(!isInsightOpen);
+  };
+
+=======
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+    setAboutUsOpen(false);
+  };
+
+  const toggleAbout = () => {
+    setAboutUs(!aboutUs);
   };
 
   const toggleAboutUs = (e) => {
@@ -443,6 +461,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
         </ul>
+<<<<<<< HEAD
         <div className="mobile" ref={menuRef}>
           <img
             src={menu}
@@ -879,6 +898,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
       </nav>
     </>
   );
