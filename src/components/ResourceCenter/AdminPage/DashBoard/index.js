@@ -139,8 +139,7 @@ const DashBoard = () => {
 
 
   const handleLogout = () => {
-    // Perform any necessary cleanup or logout logic
-    // Redirect the user to the login page
+  
     history.push("/resource-center/admin-login"); // Replace "/login" with the path to your login page
   };
 
