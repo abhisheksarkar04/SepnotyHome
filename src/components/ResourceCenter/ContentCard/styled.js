@@ -7,7 +7,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-
   @media screen and (max-width: 576px) {
     width: 40%;
     margin: 20px 0px 10px 0px;
