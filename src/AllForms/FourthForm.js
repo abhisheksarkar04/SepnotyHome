@@ -50,7 +50,7 @@ class Summary extends Component {
       <Main className='form'>
         <div>
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={3}
             styleConfig={{
               activeBgColor: '#2B459B',

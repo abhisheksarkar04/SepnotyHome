@@ -1,6 +1,6 @@
 import React,{Component} from "react"
 import { Stepper } from 'react-form-stepper';
-
+import "../../App.css";
 import Styled from "styled-components";
 
 import FirstPage from "./FirstPage";
@@ -22,7 +22,7 @@ class FirstSoftwarePage extends Component {
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:''},{label:''},{label:''},{label:''}]}
             activeStep={0}
             styleConfig={{
               activeBgColor: '#2B459B',
