@@ -1,4 +1,5 @@
 import {
+
   Header,
   Service,
   Span,
@@ -23,6 +24,7 @@ import {
 
   // ContactItem,
   // Container,
+
 } from "./styled";
 
 import img1 from "../Images/image1.svg";
@@ -36,6 +38,7 @@ import imga8 from "../Images/imga8.svg";
 
 import FooterSection from "../../Footer/FooterSection";
 import { useState } from "react";
+
 
 const JobList = [
   {
@@ -214,6 +217,7 @@ const Developerforhire = () => {
       <FooterSection />
     </>
   );
+
 };
 
 export default Developerforhire;

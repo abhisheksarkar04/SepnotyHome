@@ -79,6 +79,7 @@ import {
   ActiveIcon,
 } from "./styledComponents";
 import CreateUser from "../CreateUser";
+import UserAuthorization from "../UserAuthorization";
 
 const Lists = [
   {
@@ -132,7 +133,10 @@ const DashBoard = () => {
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
   const [showApplicants, setShowApplicants] = useState(false);
-  const [showResponse, setShowResponse] = useState(false);
+
+  const [showResponse,setShowResponse] = useState(false);
+  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false);
+
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
 
@@ -168,6 +172,7 @@ const DashBoard = () => {
     setShowResponse(false);
     setActiveTab("articles");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleEvents = () => {
@@ -190,6 +195,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Events and Workshops");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleProjects = () => {
@@ -210,6 +216,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Projects");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleReports = () => {
@@ -230,6 +237,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Reports");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleBlog = () => {
@@ -250,6 +258,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Blogs");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCareerOpportunities = () => {
@@ -270,6 +279,7 @@ const DashBoard = () => {
     setShowContactUs(false);
     setActiveTab("Career Opportunities");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateArticle = () => {
@@ -289,6 +299,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
   const toggleCreateProject = () => {
     setShowResponse(false);
@@ -307,6 +318,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateReport = () => {
@@ -326,6 +338,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateBlogs = () => {
@@ -345,6 +358,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateCareer = () => {
@@ -364,6 +378,7 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateEvent = () => {
@@ -384,6 +399,7 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowContactUs(false);
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleContactUs = () => {
@@ -405,7 +421,31 @@ const DashBoard = () => {
     setShowEvents(false);
     setActiveTab("Contact Us");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
+
+  const toggleUserAuthorization = () => {
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+    
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowUserAuthorization(true);
+    setActiveTab("User Authorization");
+    setShowApplicants(false);
+  };
+
 
   const toggleApplicants = () => {
     setShowApplicants(true);
@@ -426,6 +466,7 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setActiveTab("Applicants");
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateUser = () => {
@@ -437,6 +478,7 @@ const DashBoard = () => {
     setShowCreateArticle(false);
     setActiveTab("Create User");
     setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleResponse = () => {
@@ -457,7 +499,10 @@ const DashBoard = () => {
     setShowApplicants(false);
 
     setActiveTab("Responses Received");
-  };
+
+    setShowUserAuthorization(false);
+  }
+
 
   return (
     <>
@@ -652,7 +697,7 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon onClick={toggleUserAuthorization}>
                 {activeTab === "User Authorization" ? (
                   <>
                     <Icons src={activeUser} alt="icon" />
@@ -696,7 +741,10 @@ const DashBoard = () => {
             {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
 
-            {showResponse && <ResponseData />}
+            {ShowUserAuthorization && <UserAuthorization />}
+            {showResponse && <ResponseData/>}
+
+
           </Containerthree>
         </ContainerOne>
       </Container>

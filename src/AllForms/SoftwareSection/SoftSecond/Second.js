@@ -29,7 +29,7 @@ class SecondSoftware extends Component{
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:''},{label:''},{label:''},{label:''}]}
             activeStep={1}
             styleConfig={{
               activeBgColor: '#2B459B',

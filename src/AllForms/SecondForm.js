@@ -141,13 +141,13 @@ class CourseDetails extends Component {
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={1}
             styleConfig={{
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
               inactiveBgColor: '#fff',
-              inactiveTextColor: 'fff',
+              inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
               size: '1em'

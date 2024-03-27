@@ -66,6 +66,7 @@ export const ConRecDesc = styled.p`
 
   ${media.mobile} {
     font-size: 18px;
+    width:100%;
   }
 `;
 
@@ -155,7 +156,7 @@ export const ServiceItemDesc = styled.p`
 
   ${media.mobile} {
     font-size: 15px;
-    width:100%;
+    width:105%;
     line-height: 18px;
   }
 `;

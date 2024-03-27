@@ -67,7 +67,7 @@ class YourIndustry extends Component {
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={2}
             styleConfig={{
               activeBgColor: '#2B459B',
@@ -87,73 +87,75 @@ class YourIndustry extends Component {
                 <Heading>
                 *What service(s) do you need?
                 </Heading>
-                <Form2>
+                <div>
                 <InputContainer>
 <Label>
-<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+<Input  type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
 Website development
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
     Technical Consulting
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
     UX design / Redesign
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
     UI design / Redesign
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Transportation & Logistics" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Transportation & Logistics" onChange={this.handleRadioChange}/>
     CMS development
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Telecommunications" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Telecommunications" onChange={this.handleRadioChange}/>
     Technical SEO
     </Label>
 </InputContainer>
+</div>
 
-                </Form2>
+                
 
             </Form1>
             <Form1>
             <Form3>
                 <InputContainer>
 <Label>
-<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+<Input type='radio'  name="industry" value="Migration to a new CMS" onChange={this.handleRadioChange}/>
 Migration to a new CMS
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Delivery of new features" onChange={this.handleRadioChange}/>
     Delivery of new features
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Troubleshooting" onChange={this.handleRadioChange}/>
     Troubleshooting
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
     <Input1 type="text" placeholder="others (please specify)"/>
     </Label>
 </InputContainer>
+
 <InputContainer>
 <P>
 Please provide a link to your existing website if you have one</P>
@@ -164,8 +166,11 @@ Please provide a link to your existing website if you have one</P>
               onChange={this.handleWebsiteLinkChange}
             /></InputContainer>
  {error && <ErrorMessage>{error}</ErrorMessage>}
+ 
                 </Form3>
+               
             </Form1>
+           
         </Main1>
             
           <Button style={{textAlign: 'center'}}>

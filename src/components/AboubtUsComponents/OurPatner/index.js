@@ -199,57 +199,105 @@ const OurPatner = () => {
 
 export default OurPatner;
 
-const He = Styled.h1`
+
+  const media = {
+    mobile: '@media(max-width: 576px)'
+  };
+
+  const He = Styled.h1`
+
   margin-left:100px;
   margin-top:120px;
   font-size:24px;
   margin-bottom:-49px;
   color:white;
 
+
   `;
 
 const Main = Styled.div`
+
+  ${media.mobile}{
+    font-size:18px;
+    margin-left:30px;
+  }
+  `
+  
+  const Main = Styled.div`
+
   display:flex;
   flex-wrap : wrap;
   margin-left:100px;
   gap:180px;
   margin-top:190px;
   margin-bottom:190px;
-  `;
-const Main1 = Styled.div`
+
+  ${media.mobile}{
+    width:100%;
+    margin-left:30px;
+  }
+  `
+  const Main1 = Styled.div`
+
   width:300px;
   align-item:center;
   justify-content:center;
   height:300px;
   border-radius:20px;
   margin-bottom:-179px;
-  `;
-// const Heading = Styled.h1`
-// margin-top:20px;
-// text-align:center;
-// font-size: 20px;
-// color: #2b459b;
-// font-weight: bold;
-// `
-const Image5 = Styled.img`
+`
+
+  ${media.mobile}{
+    width:100px;
+
+  }
+  
+  `
+  // const Heading = Styled.h1`
+  // margin-top:20px;
+  // text-align:center;
+  // font-size: 20px;
+  // color: #2b459b;
+  // font-weight: bold;
+  // `
+  const Image5 = Styled.img`
   height:70px;
   margin-top:10px;
   margin-bottom:10px;
-  `;
-const Para1 = Styled.p`
+  ${media.mobile}{
+    height:50px;
+  }
+  `
+  const Para1 = Styled.p`
+
   margin-top:2px;
   font-size:16px;
   width:330px;
   color:white;
-  `;
-const Img = Styled.img`
+
+  ${media.mobile}{
+    font-size:14px;
+    width:240px;
+  }
+  `
+  const Img = Styled.img`
   width:350px;
-  `;
-const Par = Styled.p`
+  ${media.mobile}{
+    width:250px;
+  }
+  `
+  const Par = Styled.p`
+
   margin-left:100px;
   width:55%;
   margin-top:100px;
   margin-bottom:-109px;
   font-size:20px;
   color:white;
-  `;
+
+  ${media.mobile}{
+    width:90%;
+    margin-left:30px;
+  }
+  `
+

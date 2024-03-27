@@ -66,7 +66,7 @@ class CourseDetails extends Component {
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
               inactiveBgColor: '#fff',
-              inactiveTextColor: 'fff',
+              inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
               size: '1em'
@@ -177,6 +177,9 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
 }
 
 export default CourseDetails;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const CheckboxError = styled.div`
   color: red;
   font-size: 12px;
@@ -225,6 +228,9 @@ align-items:center;
 border-radius: 10px;
 width: 800px;
 margin-left: -80px;
+${media.mobile} {
+  width:770px;
+}
 `;
 const Mai = styled.div`
 height:550px;

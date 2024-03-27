@@ -32,6 +32,9 @@ function MainPage() {
 }
 
 export default MainPage;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 
 const ActiveButton = Styled.button`
   background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
@@ -41,12 +44,11 @@ const ActiveButton = Styled.button`
   border-radius: 10px; /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
-  
-  @media screen and (max-width: 576px) {
-    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
-    margin-right: 5px; /* Added margin between buttons */
-    margin-bottom: 5px; /* Added margin between buttons */
+  ${media.mobile} {
+    width:76px;
   }
+  
+  
 `;
 
 const Buttonel = Styled.button`
@@ -56,12 +58,11 @@ const Buttonel = Styled.button`
   border: 1px solid #8C8C8C;
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
-  
-  @media screen and (max-width: 576px) {
-    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
-    margin-right: 5px; /* Added margin between buttons */
-    margin-bottom: 5px; /* Added margin between buttons */
+  ${media.mobile} {
+    width:76px;
   }
+  
+  
 `;
 
 const Butt = Styled.button`
@@ -72,12 +73,11 @@ const Butt = Styled.button`
   border-radius: 10px; /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
-  
-  @media screen and (max-width: 576px) {
-    width: calc(33.33% - 10px); /* Adjusted width for smaller screens */
-    margin-right: 5px; /* Added margin between buttons */
-    margin-bottom: 5px; /* Added margin between buttons */
+  ${media.mobile} {
+    width:76px;
   }
+  
+  
 `;
 
 const ButtonCon = Styled.div`
@@ -85,8 +85,14 @@ const ButtonCon = Styled.div`
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   margin-top: -30px;
   padding: 20px; /* Reduced padding for smaller screens */
+  ${media.mobile} {
+    margin-left:0px;
+  }
 `;
 
 const FormContainer = Styled.div`
   margin-top: 10%;
+  ${media.mobile} {
+    width:100%;
+  }
 `;
