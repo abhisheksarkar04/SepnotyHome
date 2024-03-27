@@ -9,6 +9,7 @@ export const QueryContainer = styled.div`
   background-color: rgba(12, 17, 31, 1);
   @media screen and (max-width: 555px) {
     flex-direction: column;
+    padding: 10px;
   }
 `;
 
@@ -22,7 +23,6 @@ export const BottomCon = styled.div`
   align-items: center;
   @media screen and (max-width: 555px) {
     width: 100%;
-    margin-top: -120px;
   }
 `;
 
@@ -32,6 +32,9 @@ export const BottomHeading = styled.h1`
   font-weight: bold;
   text-align: center;
   line-height: 1.75em;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 
 export const BottomDesc = styled.p`
@@ -41,8 +44,10 @@ export const BottomDesc = styled.p`
   line-height: 1.5em;
   margin-top: 30px;
   margin-bottom: 30px;
-  @media screen and (max-width: 555px) {
-    font-size: 18px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 0px;
   }
 `;
 
