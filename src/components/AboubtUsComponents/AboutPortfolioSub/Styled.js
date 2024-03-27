@@ -11,6 +11,9 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+  ${media.mobile} {
+    width:100%;
+  }
 `;
 
 export const Header = styled.h1`

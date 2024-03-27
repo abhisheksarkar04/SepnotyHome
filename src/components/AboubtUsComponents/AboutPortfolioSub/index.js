@@ -67,7 +67,7 @@ on various technical aspects of a business, project, or initiative.
 
                         </Heading>
                         <Para1>
-                        Technical consulting requires a deep understanding of technologies and, strong analytical  skills, effective communication, & the ability of translation of complex technical concepts  into actionable recommendations for the non-technical stakeholders. 
+                        Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders. 
                         </Para1>
                     </X>
                 </WebsiteContainer>
@@ -153,6 +153,7 @@ on various technical aspects of a business, project, or initiative.
 
   `
   const Para1 = Styled.p`
+  color:white
 `
 const WebsiteContainer = Styled.div`
   display:flex;
