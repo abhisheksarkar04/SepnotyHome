@@ -27,11 +27,7 @@ a {
 
 @media screen and (max-width: 576px) {
   .navbar {
-<<<<<<< HEAD
     height: 7vh;
-=======
-    height: 3vh;
->>>>>>> main
   }
 }
 
@@ -246,4 +242,3 @@ button {
     display: none;
   }
 }
-
