@@ -276,7 +276,9 @@ export const DropdownContent = styled.button`
   color: white;
 `;
 export const ApplyButton = styled.button`
+
   padding: 5px 25px 5px 25px;
+
   border-radius: 20px;
   color: white;
   background-color: rgba(67, 90, 167, 1);
@@ -284,12 +286,15 @@ export const ApplyButton = styled.button`
   outline: none;
   font-size: 15px;
   margin-top: 68px;
-  width: 10%;
-  height: 20%;
-  margin-left: 70px;
+
+  width:15%;
+  height:20%;
+  margin-left:70px;
+
 `;
 
 export const TableItemsList = styled.div`
   display: flex;
   flex-direction: row;
+
 `;
