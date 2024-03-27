@@ -1,40 +1,38 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 40px 30px 0px;
+  padding: 30px 10px 30px 10px;
+  background-color: rgba(0, 0, 150, 0.15);
+  border-radius: 8px;
+  border: 1px solid #cecece;
+  height: 350px;
+  width: 300px;
+  color: #b7b6bd;
+  transition: background-color 0.8s ease;
 
-    margin: 20px 40px 30px 0px;
-
-    padding: 30px 10px 30px 10px;
-    background-color: rgba(0, 0, 150, 0.15);
-    border-radius: 8px;
-    border: 1px solid #cecece;
-    height: 350px;
-    width: 300px;
-    color: #b7b6bd;
-    transition: background-color 0.8s ease;
-    &:hover {
-      background-color: #c7cee8;
-    }
-
-    &:hover p {
-      color: #263238;
-      text-align: justify;
-    }
+  &:hover {
+    background-color: #c7cee8;
   }
-  @media screen and (min-width: 1550px) {
-    height: 380px;
-    width: 350px;
+
+  &:hover p {
+    color: #263238;
+    text-align: justify;
   }
+
   @media screen and (max-width: 555px) {
     border-radius: 12px;
     flex: 45%;
     width: 70%;
     height: 430px;
     margin: 20px 10px 10px 0px;
+  }
+  @media screen and (min-width: 1550px) {
+    height: 380px;
+    width: 350px;
   }
 `;
 
