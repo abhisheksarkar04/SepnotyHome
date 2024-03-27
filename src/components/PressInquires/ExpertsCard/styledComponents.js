@@ -5,6 +5,11 @@ export const ExpertCardContainer=styled.div`
  width:30%;
  margin-right:16%;
  margin-bottom:20px;
+ @media screen and (max-width:576px){
+    width:100%;
+    margin:0px;
+    margin-bottom:20px;
+ }
 `;
 export const ExpertImg=styled.img`
 width:40px;

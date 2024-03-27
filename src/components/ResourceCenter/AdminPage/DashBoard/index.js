@@ -438,6 +438,8 @@ const DashBoard = () => {
     setShowCreateUser(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+<<<<<<< HEAD
+=======
     setActiveTab("Create User");
     setShowApplicants(false);
   };
@@ -451,6 +453,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowCreateArticle(false);
 
+>>>>>>> abac56848b2608f989af616938e611443201a6b6
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -459,11 +462,16 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+<<<<<<< HEAD
+    setActiveTab("Create User");
+  };
+=======
 
     setShowApplicants(false);
 
     setActiveTab("Responses Received");
   }
+>>>>>>> abac56848b2608f989af616938e611443201a6b6
 
   return (
     <>
@@ -708,9 +716,13 @@ const DashBoard = () => {
             {showContactUs && <ContactUsData />}
             {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
+<<<<<<< HEAD
+            
+=======
 
             {showResponse && <ResponseData/>}
 
+>>>>>>> abac56848b2608f989af616938e611443201a6b6
           </Containerthree>
         </ContainerOne>
       </Container>

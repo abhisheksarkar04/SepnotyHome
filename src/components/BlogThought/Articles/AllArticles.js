@@ -13,6 +13,7 @@ import {
     ArticlesContainer,
     SeeMoreButton,
     SeeMoreCon,
+    HlLine,
     HrLine,
     DownArrow,
     Click,
@@ -154,7 +155,7 @@ const AllArticles = () => {
         <CardArticle key={eachItem.uniqueNo} details={eachItem} />
       ))}
     <SeeMoreCon>
-    <HrLine />
+    <HlLine />
     <Click>
     <div>
     <SeeMoreButton onClick={loadMore}>See More Articles</SeeMoreButton></div>
