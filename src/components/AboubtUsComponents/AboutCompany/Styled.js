@@ -151,7 +151,7 @@ export const ServiceItemImg = styled.img`
   width: 650px;
   margin-left: -12%;
   ${media.mobile} {
-    width:565px;
+    width:540px;
     margin-left:-42px;
 
   }
