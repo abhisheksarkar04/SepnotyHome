@@ -76,7 +76,7 @@ class YourIndustry extends Component {
               inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
-              size: '1.5em'
+              size: '1em'
             }}
             className={'stepper'}
             stepClassName={'stepper__step'}

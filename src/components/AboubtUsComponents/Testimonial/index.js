@@ -177,10 +177,9 @@ import {
   ${
     media.mobile
   }{
-    margin-left:0px;
     display:flex;
     flex-direction:row;
-    gap:80px;
+    gap:60px;
     margin-left:10px;
   }
   `
