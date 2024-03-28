@@ -265,6 +265,9 @@ related information for your article or would want to speak with one of our prof
   flex-direction:column;
   gap : 10px;
   margin-left:100px;
+  @media screen and (max-width: 576px) {
+    margin-left:40px;
+  }
   `
   const Heading = Styled.div`
   font-size: 18px;
@@ -277,6 +280,9 @@ related information for your article or would want to speak with one of our prof
   flex-direction:column;
   gap : 20px;
   margin-left:100px;
+  @media screen and (max-width: 576px) {
+    margin-left:60px;
+  }
 
  
  `;

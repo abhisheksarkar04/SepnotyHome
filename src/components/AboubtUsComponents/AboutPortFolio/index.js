@@ -165,7 +165,7 @@ on various technical aspects of a business, project, or initiative.
   
   export default AboutPortFolio;
   const media = {
-    mobile: '@media(max-width: 576px)'
+    mobile: '@media(max-width: 556px)'
   };
   
   const ExpertContainer = Styled.div`
@@ -176,7 +176,7 @@ on various technical aspects of a business, project, or initiative.
   margin-bottom:60px;
   ${media.mobile}{
     width:100%;
-    margin-left:108%;
+    margin-left:118%;
   }
   `
   const WebsiteContainer = Styled.div`
@@ -201,7 +201,8 @@ on various technical aspects of a business, project, or initiative.
     media.mobile
   }{
     font-size:14px;
-    width:40%;
+    width:70%;
+    margin-left:-27%;
   }
 
   `
@@ -229,7 +230,7 @@ on various technical aspects of a business, project, or initiative.
       media.mobile
     }{
       height:150px;
-      margin-top:50px;
+      margin-top:70px;
     }
  `
  const Para1 = Styled.p`
@@ -249,7 +250,6 @@ ${
   media.mobile
 }{
   font-size:14px;
-  margin-left:-190px;
  
 }
 `

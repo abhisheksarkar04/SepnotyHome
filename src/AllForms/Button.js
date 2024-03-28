@@ -45,7 +45,7 @@ const ActiveButton = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:76px;
+    width:106px;
   }
   
   
@@ -59,7 +59,7 @@ const Buttonel = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:76px;
+    width:106px;
   }
   
   
@@ -74,7 +74,7 @@ const Butt = Styled.button`
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:76px;
+    width:106px;
   }
   
   
