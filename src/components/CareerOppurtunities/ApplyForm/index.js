@@ -10,6 +10,7 @@ import {
   Span,
   LastButton,
   Event,
+  List1,
 } from "./styled";
 import FooterSection from "../../Footer/FooterSection";
 import { ThemeProvider } from "styled-components";
@@ -22,10 +23,11 @@ const ApplyForm = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Container>
-
+          <List1>
           <Header>
-            Career Oppurunities &gt; <Span>Apply</Span>
+          Career Oppurunities &gt; <Span>Apply</Span>
           </Header>
+          </List1>
           <Container1>
             <Title type="text" placeholder="Applicant Name" />
             <Title type="text" placeholder="E-Mail" />

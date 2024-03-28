@@ -6,90 +6,146 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 100px;
+
+  @media screen and (max-width: 576px) {
+    width:133%;
+ 
+
+ }
+  
 `;
 
 export const ListDataContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 20px;
-  width: 30%;
-  margin-left: 5%;
-  font-size: 18px;
-`;
-export const ListInnerContainer = styled.li`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
+margin-top:5%;
+display:flex;
+flex-direction:column;
+text-align:left;
+line-height:20px;
+width:20%;
+margin-left:5%;
+font-size: 18px;
 
+@media screen and (max-width: 576px) {
+  font-size: 10px;
+  width:160px;
+  margin:5px;
+  padding-top:20px;
+ 
+ 
+  }
+
+
+`;
+export const ListInnerContainer = styled.div`
+display:flex;
+width:100%;
+text-align:center;
+
+
+@media screen and (max-width: 576px) {
+  font-size:14px;
+  margin-left:-140px;
+   padding-top:50px;
+  padding-inline:-30px;
+  margin-bottom: -60px;
+
+  }
+`;
 export const BlueContainer = styled.div`
-  display: flex;
-  background-color: rgba(43, 69, 155, 1);
-  flex-direction: row;
-  padding: 30px;
-  justify-content: space-between;
-  color: white;
-  height: 250px;
+ display:flex;
+ background-color:rgba(43, 69, 155, 1);
+ flex-direction:row;
+ padding:30px;
+ justify-content:space-between;
+ color:white;
+ height:250px;  
 
-  @media screen and (width: 576px) {
-    padding: 20px 0px 30px 5px;
+
+ @media screen and (max-width: 576px) {
+  width:133%;
+  height:110px;
+  padding-top:10px;
+
   }
 `;
 export const LeftTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  line-height: 20px;
-  width: 70%;
+display:flex;
+flex-direction:column;
+text-align:left;
+line-height:20px;
+width:60%;
 
-  @media screen and (width: 576px) {
-    width: 90%;
+@media screen and (max-width: 576px) {
+  margin:0px;
+  margin-right:100px;
+  margin-inline:-13px;
+  
   }
+
 `;
 export const LeftHeading = styled.h2`
-  color: white;
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-left: 5%;
+color:white;
+font-weight:700;
+font-size:30px;
+margin-bottom:20px;
+margin-left:5%;
+
+@media screen and (max-width: 576px) {
+  font-size:20px;
+  width:110%;
+  margin:0px;
+  margin-bottom:1px;
+ 
+
+  }
 `;
 
 export const LeftTitle = styled.p`
-  font-size: 25px;
-  color: white;
-  margin-top: 20px;
-  margin-left: 5%;
+font-size:25px;
+color:white;
+margin-top:20px;
+margin-left:5%;
+
+@media screen and (max-width: 576px) {
+  font-size:14px;
+  width:100%;
+  margin-left:1px;
+  margin-top:1px;
+
+  }
+
+
 `;
 export const LeftDescription = styled.p`
-  font-size: 14px;
-  color: white;
-  line-height: 20px;
-  margin-bottom: 20px;
+font-size:14px;
+color:white;
+line-height:20px;
+margin-bottom:20px;
 `;
 export const LeftButton = styled.button`
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(252, 252, 252, 0) 0%,
-    rgba(252, 252, 252, 1) 0%,
-    rgba(246, 251, 34, 1) 100%
-  );
-  border: none;
-  color: rgba(35, 69, 129, 1);
-  border-radius: 20px;
-  padding: 10px 20px 10px 20px;
-  width: 150px;
-  font-size: 15px;
-  font-weight: 600;
-  margin-left: 6%;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(252,252,252,0) 0%, rgba(252,252,252,1) 0%, rgba(246,251,34,1) 100%);
+border:none;
+color:rgba(35, 69, 129, 1);
+border-radius:20px;
+padding:10px 20px 10px 20px;
+width:150px;
+font-size:15px;
+font-weight:600;
+margin-left:6%;
 `;
 export const Header = styled.h1`
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
+  padding-left:70px;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+    width:100%;
+    margin:0px;
+    padding-left:15px;
+    }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -101,8 +157,13 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
-`;
 
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+    padding-left:15px;
+    }
+`
+  ;
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
@@ -134,57 +195,41 @@ export const Button = styled.button`
   margin-top: 20px;
 `;
 export const select = styled.select`
+  
   padding: 5px 25px 5px 25px;
   border-radius: 20px;
-  background-color: rgba(43, 69, 155, 1);
+  background-color:rgba(43, 69, 155, 1);
   border: 0px;
   outline: none;
   font-size: 13px;
   margin-top: 20px;
 `;
 export const TableofContent = styled.button`
-  margin-left: 80%;
+margin-left: 80%;
   border-radius: 20px;
   color: rgba(43, 69, 155, 1);
-  background-color: rgba(43, 69, 155, 1);
+  background-color:rgba(43, 69, 155, 1);
   border: 0px;
 `;
 export const Dropdownbtn = styled.button`
-  display: flex;
+  display:flex;
+ 
 `;
 export const DropDown = styled.div`
-  margin-left: 65%;
-  position: absolute;
-`;
-export const Dropdowncontent = styled.div``;
+margin-left:65%;
+  position:absolute;
 
-export const Rectangle1 = styled.img`
-  position: absolute;
-  right: 0;
-  height: 68%;
-  width: 38%;
-  top: 12%;
-  z-index: 0;
-`;
+  @media screen and (max-width: 576px) {
+ margin-left:-95px;
 
-export const Rectangle2 = styled.img`
-  position: absolute;
-  right: 17.6%;
-  height: 80%;
-  width: 60%;
-  top: -5%;
-  z-index: 0;
+    }
+ 
+`;
+export const Dropdowncontent = styled.div`
+ 
+ 
 `;
 
-export const Rectangle3 = styled.img`
-  position: absolute;
-  left: 0%;
-  height: 40%;
-  width: 17%;
-  top: 38%;
-  z-index: 0;
-  margun-bottom: 20px;
-`;
 
 export const ListHeading = styled.h1`
   font-size: 25px;
@@ -192,6 +237,12 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: 4.7em;
   margin-top: 1em;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin:5px;
+    margin-left:20px;
+    }
 `;
 
 export const Small = styled.img`
@@ -204,7 +255,23 @@ export const Small = styled.img`
 `;
 export const ServiceItemCon = styled.div`
   margin-top: 5.5%;
-  margin: 10px;
+  margin:10px;
+
+  @media screen and (max-width: 576px) {
+    
+    margin:0px;
+    }
+`;
+
+export const TableItemsList = styled.div`
+
+
+@media screen and (max-width: 576px) {
+  margin-right:10px;
+ 
+  }
+
+    }
 `;
 export const ServiceItemDesc = styled.p`
 margin-bottom: 20px;
@@ -214,6 +281,17 @@ magin:0px;
 width:80%;
 text-align: justify;
 padding -left:6%;
+
+@media screen and (max-width: 576px) {
+    
+
+  margin-left:-95px;
+  text-align: left;
+  width:90%;
+  font-size:14px;
+  }
+
+
 `;
 export const Careop = styled.p`
   padding-inline :50px
@@ -224,27 +302,46 @@ export const Careop = styled.p`
   padding-bottom:10px;
   font-size: 18px;
 
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    width:160px;
+   
+  
+    }
+
 `;
 export const Iph = styled.p`
   position: absolute
  
   font-size: 15px;
   color: #ffffff;
+
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    width:160px;
+    
+  
+    }
 `;
 
 export const CareerInfo = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 30px 150px 20px 30px;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+flex-wrap:wrap;
+padding:30px 150px 20px 30px;
 `;
 export const ImageCon = styled.img`
-  width: 25%;
-
+  width: 20%;
+  
   display: flex;
   flex-direction: column;
-  margin: 15px 5px 5px 10px;
+  padding: 15px 5px 5px 10px;
+
+  @media screen and (max-width: 576px) {
+    height:160px;
+    width: 160px;;
+    }
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
@@ -252,33 +349,35 @@ export const ServiceItemImg = styled.img`
 `;
 
 export const ServiceItemDetails = styled.div`
-  margin-left: 117px;
+margin-left: 117px;
+
+@media screen and (max-width: 576px) {
+  
+  }
 `;
 export const CareeInfo = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 30px 150px 20px 30px;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+flex-wrap:wrap;
+padding:30px 150px 20px 30px;
 `;
-export const Dropdown = styled.button`
-margin-left: 80%;
-  border-radius: 20px;
-  color: rgba(43, 69, 155, 1);
-  background-color:rgba(43, 69, 155, 1);b
-  border: 0px;
-  color:white;
-`;
+
 export const DropdownContent = styled.button`
-  display: block;
-  margin-top: 10px;
-  min-width: 160px;
-  color: white;
+display: block;
+margin-top: 10px;
+min-width: 160px;
+color:white;
+
+@media screen and (max-width: 576px) {
+  margin-inline: -50px;
+ 
+  }
+
 `;
 export const ApplyButton = styled.button`
-
-  padding: 5px 25px 5px 25px;
-
+  
+  padding: 5px 57px 8px 25px;
   border-radius: 20px;
   color: white;
   background-color: rgba(67, 90, 167, 1);
@@ -286,15 +385,19 @@ export const ApplyButton = styled.button`
   outline: none;
   font-size: 15px;
   margin-top: 68px;
-
   width:15%;
   height:20%;
   margin-left:70px;
 
-`;
+  @media screen and (max-width: 576px) {
+    margin:0px;
+    margin-top:115px;
+    margin-left:-260px;
+    height:25px;
+    width:15px;
+    text-align:center;
+    padding: 3px 50px 20px 15px;
 
-export const TableItemsList = styled.div`
-  display: flex;
-  flex-direction: row;
-
+   
+    }
 `;
