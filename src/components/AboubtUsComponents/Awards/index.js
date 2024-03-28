@@ -165,6 +165,9 @@ including websites, apps, social media, video, podcasts, & more, across various 
   };
   
   export default Awards;
+  const media = {
+    mobile: '@media(max-width: 576px)'
+  };
   
   const Main = Styled.div`
   display:flex;
@@ -172,6 +175,12 @@ including websites, apps, social media, video, podcasts, & more, across various 
   margin-left:110px;
   gap:140px;
   margin-bottom:190px;
+  ${
+    media.mobile
+  }{
+    margin-left:20px;
+    gap:50px;
+  }
   `
   const Main1 = Styled.div`
   border: 1px solid #FFFFFF;
@@ -183,6 +192,13 @@ including websites, apps, social media, video, podcasts, & more, across various 
   border-radius:8px;
   margin-bottom:-120px;
   padding:10px;
+  ${
+    media.mobile
+  }{
+    height:200px;
+    width:230px;
+    margin-bottom:-10px;
+  }
   `
   const Heading = Styled.h1`
   text-align:center;
@@ -190,18 +206,25 @@ including websites, apps, social media, video, podcasts, & more, across various 
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
+  ${media.mobile}{
+    font-size:13px;
+  }
   `
   const Image5 = Styled.img`
   height:90px;
   align-item:center;
   justify-content:start;
   margin-left:90px;
-
-  
   margin-top:10px;
+  ${media.mobile}{
+    height:45px;
+  }
   `
   const Para1 = Styled.p`
   margin-top:10px;
   text-align:center;
   color:white;
+  ${media.mobile}{
+    font-size:13px;
+  }
   `

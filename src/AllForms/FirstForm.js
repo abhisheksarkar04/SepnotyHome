@@ -14,7 +14,8 @@ constructor(props){
     formErrors: {
       typeOfWebsite: '',
       numberOfPages: ''
-    }
+    },
+    activeStep: 0
   };
 }
   handleCheckboxChange = (event) => {
@@ -109,18 +110,19 @@ constructor(props){
     
     // If there are no errors, proceed to the next step
     this.props.nextStep();
+    this.setState(prevState => ({ activeStep: prevState.activeStep + 1 }));
 }
 
   render() {
-    const { typeOfWebsite, numberOfPages, formErrors } = this.state;
+    const { typeOfWebsite, numberOfPages, formErrors ,activeStep} = this.state;
 
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
 
-          <Stepper
+        <Stepper
             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
-            activeStep={0}
+            activeStep={0} // Use activeStep from state
             styleConfig={{
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
@@ -128,11 +130,14 @@ constructor(props){
               inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
-              size: '1em'
+              size: '1.5em'
             }}
             className={'stepper'}
             stepClassName={'stepper__step'}
+            
+            
           />
+
 
       <Main1>
             <FormContainer>

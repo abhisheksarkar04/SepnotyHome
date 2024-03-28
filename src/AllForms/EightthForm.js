@@ -315,7 +315,7 @@ width:60px;
 border-radius:5px;
 font-size:12px;
 height: 30px;
-
+border: 1px solid #8C8C8C;
 
 `
 const Button2 = styled.button`
