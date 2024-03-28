@@ -13,7 +13,7 @@ import downarrow from "../Navbar/assets/downarrow.svg";
 import down from "../Navbar/assets/down.svg";
 import up from "../Navbar/assets/up.svg";
 
-import behance from "./assets/behance.svg";
+import behance from "../Navbar/assets/behance.svg";
 import facebook from "../Navbar/assets/facebook.svg";
 import figma from "../Navbar/assets/figma.svg";
 import instagram from "../Navbar/assets/instagram.svg";
