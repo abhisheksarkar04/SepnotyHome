@@ -184,12 +184,28 @@ export const ListItems = styled.ul`
   flex-wrap:wrap;
   justify-content: space-evenly;
   @media screen and (max-width: 576px) {
-    justify-content: ;
+    justify-content: space-between;
     width: 90%;
-    margin-left: -20%;
+    margin-left: 0%;
     padding: 0px 0 0 0px;
   }
 `;
+
+
+
+
+export const ListOne = styled.li`
+    margin-right: 1%;
+    @media screen and (max-width: 576px) {
+      justify-content: space-between;
+      width: 50%;
+      margin-left: 0%;
+      padding: 30px 0 0 0px;
+    }
+ 
+`;
+
+
 
 export const Rectangle1 = styled.img`
   position: absolute;

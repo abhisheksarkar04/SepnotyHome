@@ -64,11 +64,18 @@ import {
   DeepHeading,
   Span,
   HeadingCon,
+  ListOne,
 } from "./styled";
 
 
 const StyledPlayer = styled(ReactPlayer)`
-    padding-right: 8%;
+    padding-right: 0%;
+    @media screen and (max-width: 576px) {
+
+      padding: 28%;
+      
+    
+    }
 `;
 
 const cardList = [
@@ -130,14 +137,14 @@ const VideoTutorials = () => {
               <DeepLearnFrame>
                  <ImageContainer>
                  <StyledPlayer 
-                 style={{ width: '300px' }}
+                 style={{ width: '600px' }}
                  controls={true} url="https://youtu.be/6ryPbOfz03U?si=kh21q0Ku9lFzarSQ" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
                  </ImageContainer>
                  <Button>Watch More</Button>
               </DeepLearnFrame>
               <ListItems>
-                    <li>
+                    <ListOne>
                       <Image src={image1} />
                       <CardContainer2>
                         <DetailsCon>
@@ -146,8 +153,8 @@ const VideoTutorials = () => {
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image src={image2} />
                       <CardContainer2>
                         <DetailsCon>
@@ -155,8 +162,8 @@ const VideoTutorials = () => {
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image33 src={image3} />
                       <CardContainer2>
                         <DetailsCon>
@@ -164,8 +171,8 @@ const VideoTutorials = () => {
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image4} />
                       <CardContainer>
                         <DetailsCon>
@@ -174,8 +181,8 @@ const VideoTutorials = () => {
                         <RedText> Deep learning frameworks </RedText>
                         <RedText> (e.g., TensorFlow, PyTorch) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image5} />
                       <CardContainer>
                         <DetailsCon>
@@ -184,8 +191,8 @@ const VideoTutorials = () => {
                         <RedText> Big data platforms  </RedText>
                         <RedText> (e.g., Hadoop, Spark) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageB src={image6} />
                       <CardContainer1>
                         <DetailsCon>
@@ -194,7 +201,7 @@ const VideoTutorials = () => {
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
                       </CardContainer1>
-                    </li>
+                    </ListOne>
                 </ListItems>
             </TechnicalArticalsMain>
           </FirstSection>
@@ -212,7 +219,7 @@ const VideoTutorials = () => {
                  <Button>Watch More</Button>
               </DeepLearnFrame>
               <ListItems>
-                    <li>
+                    <ListOne>
                       <Image src={image1} />
                       <CardContainer2>
                         <DetailsCon>
@@ -221,8 +228,8 @@ const VideoTutorials = () => {
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image src={image2} />
                       <CardContainer2>
                         <DetailsCon>
@@ -230,8 +237,8 @@ const VideoTutorials = () => {
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image33 src={image3} />
                       <CardContainer2>
                         <DetailsCon>
@@ -239,8 +246,8 @@ const VideoTutorials = () => {
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image4} />
                       <CardContainer>
                         <DetailsCon>
@@ -249,8 +256,8 @@ const VideoTutorials = () => {
                         <RedText> Deep learning frameworks </RedText>
                         <RedText> (e.g., TensorFlow, PyTorch) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image5} />
                       <CardContainer>
                         <DetailsCon>
@@ -259,8 +266,8 @@ const VideoTutorials = () => {
                         <RedText> Big data platforms  </RedText>
                         <RedText> (e.g., Hadoop, Spark) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageB src={image6} />
                       <CardContainer1>
                         <DetailsCon>
@@ -269,7 +276,7 @@ const VideoTutorials = () => {
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
                       </CardContainer1>
-                    </li>
+                    </ListOne>
                 </ListItems>
             </TechnicalArticalsMain>
           </div>

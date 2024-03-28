@@ -139,6 +139,7 @@ export const ProMainDiv = styled.div`
       @media screen and (max-width: 600px) {
         width: 100%;
         padding: 30px 30px 0px 40px;
+        
       }
 
 
@@ -159,6 +160,8 @@ export const MobSection1=styled.div`
     @media screen and (max-width: 576px) {
       width: ;
       margin: 30px 0 50px 10px;
+      justify-content: center;
+      align-items: center;
     }
 `;
 
@@ -172,13 +175,21 @@ export const ProTop = styled.div`
     background-color: #263238;
     background-size: cover;
     height: 50%;
+   
+    @media screen and (max-width: 576px) {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
 
 `;
 export const ProBottom = styled.div`
     background-color: #D9D9D980;
     height: 35%;
     padding: 0 0 30px 0;
-
+    @media screen and (max-width: 576px) {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
 
 `;
         
@@ -367,9 +378,9 @@ export const GraphImageItem = styled.img`
    width: 350px;
    height: 380px;
    @media screen and (max-width: 576px) {
-    width: 110%;
+    width: 100%;
     height: 90%;
-    margin: 20px 0 0 0px;
+    margin: 20px 0 0 12%;
   }
 
 
