@@ -104,7 +104,11 @@
 }
 
 .stepper {
-  padding: 3vh 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3vh 0!important;
 }
 
 .stepper__step {
@@ -125,4 +129,18 @@
   margin-top: 0;
   color: red;
   font-size: 90%;
+}
+.stepper__step.active {
+  background-color: #2B459B;
+  color: #fff;
+}
+
+.stepper__step.inactive {
+  background-color: #fff;
+  color: #2b7cff;
+}
+
+.stepper__step.completed {
+  background-color: #407B24;
+  color: #fff;
 }

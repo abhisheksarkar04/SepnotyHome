@@ -70,7 +70,7 @@ ${media.mobile} {
 const Main2 = Styled.div`
 display:flex;
 flex-direction:column;
-width: 100.8%;
+width: 100%;
 margin-left: -6px;
 background:#0C111F;
 background-size: cover;

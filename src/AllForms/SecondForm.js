@@ -25,6 +25,14 @@ class CourseDetails extends Component {
       error: ''
     };
   }
+ 
+    shouldComponentUpdate(nextProps) {
+        if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 
   continue = e => {
     e.preventDefault();
@@ -150,7 +158,7 @@ class CourseDetails extends Component {
               inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
-              size: '1em'
+              size: '1.5em'
             }}
             className={'stepper'}
             stepClassName={'stepper__step'}

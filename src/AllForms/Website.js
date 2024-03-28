@@ -7,7 +7,8 @@ import YourIndustry from './ThirdForm';
 import FormNo5 from "./SixthForm";
 import SecondForm from './FifthForm';
 import ThirdForm from "./SeventhForm";
-import FourthForm from "./EightthForm"
+import FourthForm from "./EightthForm";
+import { Stepper,Step,StepLevel } from 'react-form-stepper';
 
 //Sample data
 const coursesData = [
