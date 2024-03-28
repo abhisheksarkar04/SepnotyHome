@@ -277,6 +277,9 @@ class  FormNo5 extends Component {
 }
 
 export default FormNo5;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const Error = Styled.p`
 font-size:12px;
 color:red;
@@ -298,6 +301,7 @@ color:white;
 `
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{width:100%}
 `
 const Main1 = Styled.div`
 display:flex;
@@ -305,6 +309,8 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{gap:0px;
+justify-content-start;}
 `
 const Heading = Styled.h1`
 font-family: Roboto;
@@ -314,6 +320,7 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${media.mobile}{font-size:15px;}
 `
 
 const FormContainer = Styled.div`
@@ -326,6 +333,9 @@ border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
+${media.mobile}{
+gap:0px;}
+
 `
 const CheckBoxCon = Styled.div`
 margin-top:15px;
@@ -340,8 +350,12 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 margin-left:10px;
+${media.mobile}{
+  margin-top:0px;
+}
 `
 const Form = Styled.form`
+${media.mobile}{width:220px;}
 `
 const Input1 = Styled.input`
 background:transparent;
@@ -373,7 +387,7 @@ margin-top:0px;
 
 // `
 const InputContainer=Styled.div`
-margin-top:5px;
+margin-top:2px;
 `
 // const Input1 = Styled.textarea`
 // background:transparent;
@@ -410,6 +424,8 @@ color: ${(props) => (props.active ? 'white' : 'black')};
   font-size: 20px;
   width:60px;
   height:30px;
+  ${media.mobile}{width:50px;
+  height:30px;}
   
 `;
 
@@ -426,6 +442,9 @@ color: ${(props) => (props.active ? 'white' : 'black')};
   height:30px;
   margin-left: -10px;
   border-right: 1px solid #9e9898;
+  ${media.mobile}{width:50px;
+    height:30px;}
+    
 `;
 
 const Mai = Styled.div`

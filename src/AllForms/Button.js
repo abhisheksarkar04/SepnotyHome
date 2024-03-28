@@ -91,6 +91,7 @@ const ButtonCon = Styled.div`
 `;
 
 const FormContainer = Styled.div`
+width:100%;
   margin-top: 10%;
   ${media.mobile} {
     width:100%;

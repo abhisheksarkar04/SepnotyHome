@@ -214,11 +214,15 @@ margin-left:-90px;
 
 const Main = styled.div`
 background-color:#0C111F;
+${media.mobile} {
+  width:100%;
+}
 `
 const Input1 = styled.input`
 margin-left:-630px;
 color: #C1CAE7;
 cursor: pointer;
+${media.mobile}{margin-left:-400px}
 
 `;
 const M = styled.div`
@@ -229,7 +233,8 @@ border-radius: 10px;
 width: 800px;
 margin-left: -80px;
 ${media.mobile} {
-  width:770px;
+  width:450px;
+  margin-left:10px;
 }
 `;
 const Mai = styled.div`
@@ -251,6 +256,7 @@ letter-spacing: 0em;
 text-align: left;
 color:#2B459B;
 margin-left:30px;
+${media.mobile}{font-size:14px}
 `
 const P2 = styled.div`
 margin-left:30px;
@@ -260,6 +266,7 @@ color:#263238;
 font-weight: 500;
 margin-top:18px;
 width: 80%;
+${media.mobile}{font-size:13px;}
 `
 const P3 = styled.p`
 font-size: 16px;

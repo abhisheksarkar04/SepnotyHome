@@ -254,6 +254,9 @@ constructor(props){
 }
 
 export default PersonalDetails;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const Error = Styled.p`
 font-size:12px;
 `
@@ -272,6 +275,9 @@ color:white;
 `
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 const Main1 = Styled.div`
 display:flex;
@@ -279,6 +285,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:2px;
+  margin-left:-30px;
+}
 `
 const Heading = Styled.h1`
 font-family: Roboto;
@@ -288,6 +301,11 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${
+  media.mobile
+}{
+  font-size:13px;
+}
 `
 
 const FormContainer = Styled.div`
@@ -300,6 +318,11 @@ border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
+${media.mobile}{
+  width:380px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const CheckBoxCon = Styled.div`
 margin-top:15px;
@@ -313,8 +336,16 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+${media.mobile}{
+  font-size:13px;
+}
 `
 const Form = Styled.form`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input1 = Styled.input`
 background:transparent;
@@ -324,6 +355,7 @@ color: #263238;
 font-weight:500;
 height:20px;
 margin-left:10px;
+${media.mobile}{font-size:13px;}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;

@@ -85,6 +85,7 @@ class YourIndustry extends Component {
 
 <Main1>
             <Form1>
+              <Fom>
                 <Heading>
                 *What service(s) do you need?
                 </Heading>
@@ -126,6 +127,7 @@ Website development
     </Label>
 </InputContainer>
 </div>
+</Fom>
 
                 
 
@@ -187,6 +189,9 @@ Please provide a link to your existing website if you have one</P>
 }
 
 export default YourIndustry;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 
 const Button = Styled.div`
 display:flex;
@@ -194,9 +199,19 @@ justify-content:end;
 margin-top:90px;
 margin-left:-90px;
 `
+const Fom = Styled.div`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
+`
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 
 const P = Styled.p`
@@ -211,6 +226,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:1px;
+  margin-left:-30px;
+}
 `
 const Form1 = Styled.div`
 display:flex;
@@ -260,9 +282,19 @@ background: #C1CAE7;
 border: 1px solid #8C8C8C;
 width:250px;
 border-radius:4px;
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Form3 = Styled.div`
 margin-top:50px;
+${media.mobile}{
+  width:227px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const ErrorMessage = Styled.div`
   color: red;
