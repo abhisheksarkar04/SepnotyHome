@@ -75,7 +75,7 @@ margin-left: -6px;
 background:#0C111F;
 background-size: cover;
 ${media.mobile} {
-    width:736px;
+    width:100%;
   }
 
 `

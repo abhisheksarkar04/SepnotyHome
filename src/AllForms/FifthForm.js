@@ -164,6 +164,9 @@ class SecondForm extends Component {
 }
 
 export default SecondForm;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 
 const Button = Styled.div`
 display:flex;
@@ -179,6 +182,9 @@ const ErrorMessage = Styled.div`
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 
 const Mai = Styled.div`
@@ -196,6 +202,9 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${media.mobile}{
+  font-size:15px;
+}
 `
 
 const FormContainer = Styled.div`
@@ -228,10 +237,18 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 margin-left:10px;
+${media.mobile}{
+  font-size:13px;
+}
 `
 const Form = Styled.form`
-
+${media.mobile}{
+  width:220px;
+}
 `
 const Form1 = Styled.form`
 margin-top:60px;
+${media.mobile}{
+  width:220px;
+}
 `

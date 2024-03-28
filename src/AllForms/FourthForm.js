@@ -128,6 +128,9 @@ No
 }
 
 export default Summary;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
@@ -143,6 +146,7 @@ margin-left:-90px;
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{width:100%}
 `
 
 const Mai = Styled.div`
@@ -172,7 +176,11 @@ font-family:Roboto;
 margin-bottom:30px;
 `
 const Form2 = Styled.form`
-
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input = Styled.input`
 margin-right:10px;
@@ -203,6 +211,11 @@ background: #C1CAE7;
 border: 1px solid #8C8C8C;
 width:250px;
 border-radius:4px;
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 // const Input2 = Styled.input`
 // background: #C1CAE7;
