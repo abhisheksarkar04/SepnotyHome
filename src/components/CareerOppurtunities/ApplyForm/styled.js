@@ -10,17 +10,25 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  margin-top: 90px;
+ 
   margin-left:10px;
   width: 98%;
-  height:500px;
+  height:550px;
   background-color: rgba(12, 17, 31, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:110px;
+  margin-top:45px;
   padding-top:40px;
+
+  @media screen and (max-width: 576px) {
+    
+    width:98%;
+    margin-top:1px;
+    margin-bottom:20px;
+    padding-bottom:170px;
+    }
 `;
 
 export const Container1 = styled.div`
@@ -39,6 +47,22 @@ export const Container1 = styled.div`
   font-size: 13px;
   padding-bottom: 50px;
 
+  @media screen and (max-width: 576px) {
+    width:95%;
+    margin:5px;
+    
+    }
+
+`;
+export const List1 = styled.div`
+  margin-top: 90px;
+  
+  @media screen and (max-width: 576px) {
+    
+    width:90%;
+    padding-top:50px;
+    font-size: 13px;
+    }
 `;
 
 export const Title = styled.input`
@@ -53,6 +77,13 @@ export const Title = styled.input`
   background-color: #d9d9d9;
   outline: none;
   border: none;
+
+  @media screen and (max-width: 576px) {
+    width:320px;
+    margin:5px;
+    margin-inline:-15px;
+    height:48px;
+    }
  
 `;
 
@@ -66,14 +97,26 @@ export const ChooseFile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (max-width: 576px) {
+    width:320px;
+    margin:5px;
+    margin-inline:-15px;
+    height:50px;
+    }
 `;
 export const Header = styled.h1`
-  font-size: 15px;
-  font-weight: bold;
-  color: #ffffff;
-  margin:1px;
-  padding: 30px 20px 30px 5%;
- margin-right:1000px;
+font-size: 15px;
+font-weight: bold;
+color: #ffffff;
+padding-bottom:20px;
+margin-right:950px;
+
+@media screen and (max-width: 576px) {
+  font-size:14px;
+  width:100%;
+  margin:0px;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -88,6 +131,15 @@ export const Button = styled.button`
   padding: 10px 20px 10px 20px;
   border-radius: 2px;
   border: 1px solid #000000;
+
+  @media screen and (max-width: 576px) {
+    
+    height:40px;
+    width:115px;
+    text-align:justify;
+    font-size:12px;
+    margin-inline:-20px;
+    }
 `;
 
 export const NoFile = styled.p`
@@ -96,6 +148,12 @@ export const NoFile = styled.p`
   color: black;
   padding-left: 10px;
   background-color: transparent;
+
+  @media screen and (max-width: 576px) {
+   
+    margin-left:20px;
+    font-size:12px;
+    }
 `;
 
 export const LastButton = styled.button`
@@ -106,4 +164,12 @@ export const LastButton = styled.button`
   padding: 10px 0px;
   background-color: #2b459b;
   font-size: 16px;
+
+
+  @media screen and (max-width: 576px) {
+    width:320px;
+    margin:5px;
+    margin-inline:-15px;
+    
+    }
 `;

@@ -38,54 +38,54 @@ import imga8 from "../Images/imga8.svg";
 
 import FooterSection from "../../Footer/FooterSection";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const JobList = [
   {
     image: img1,
-    name: "Software Tester ",
+    name: "Java Script ",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: img2,
-    name: "Software Developer",
+    name: "C++",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga3,
-    name: "Cloud Engineer.",
+    name: "Node.js",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga4,
-    name: "Digital Marketing Specialist ",
+    name: "PHP ",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga5,
-    name: "SEO(Search Engine Optimizer)",
+    name: "React Native",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga6,
-    name: "Video Editor",
+    name: "Python",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga7,
-    name: "UI/UX Designer.",
+    name: ".Net",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
   {
     image: imga8,
-    name: "Graphic Designer ",
+    name: "Java ",
     experience: "0-2 years",
     CTC: "Up to 4 LPA",
   },
@@ -201,8 +201,10 @@ const Developerforhire = () => {
                           Onsite
                         </Iph>
                       </ListDataContainer>
-
-                      <ApplyButton>Apply</ApplyButton>
+                      <Link to="/CareerOppurtunities/ApplyForm">
+                        <ApplyButton >Apply</ApplyButton><br></br>
+                        <br></br>
+                      </Link>
                       <br></br>
                       <br></br>
                     </ListInnerContainer>
