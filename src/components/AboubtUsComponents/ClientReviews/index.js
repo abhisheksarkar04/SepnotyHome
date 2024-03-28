@@ -203,6 +203,7 @@ outsourcing services</P>
     media.mobile
   }{
     width:100%;
+    margin-left:3%;
   }
 
   `
