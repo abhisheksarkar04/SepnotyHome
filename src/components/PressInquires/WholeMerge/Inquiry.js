@@ -314,7 +314,7 @@ const Inquiry = () => {
         <Image src={netimg} alt=".net" />
         <Image src={laravel} alt="laravel" />
         <Image src={php} alt="Php" />
-        <Img src={sys} alt="Symfony" />
+        <Image src={sys} alt="Symfony" />
     </ImgContainer>
       <div>
       <TransparentBg />

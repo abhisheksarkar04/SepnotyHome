@@ -1,10 +1,11 @@
 import React from 'react'
 import {
     Expert,
-    ExpHeading,ExpText,ExpImgRole,ExpImg,ExpRole,ExpRol,
+    ExpText,ExpImgRole,ExpImg,ExpRole,ExpRol,
     ExpName,
-    TransparentBg,
+    
 } from './styled';
+import { HelpJournalTitle, TransparentBg } from '../WholeMerge/styledComponents';
 
 
 const ExpertCardDetail = (props) => {
@@ -15,7 +16,7 @@ const ExpertCardDetail = (props) => {
    <Expert>
    <div>
    <TransparentBg />
-   <ExpHeading>{heading}</ExpHeading>
+   <HelpJournalTitle>{heading}</HelpJournalTitle>
    </div>
    <ExpText>{topicText}</ExpText>
    <ExpImgRole>

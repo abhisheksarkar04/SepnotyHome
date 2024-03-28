@@ -4,7 +4,11 @@ export const Expert = styled.div`
 display:flex;
 flex-direction:column;
 padding:10px 20px 10px 40px;
-
+@media screen and (max-width:576px){
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
 `;
 export const ExpHeading=styled.h2`
 font-size:24px;
@@ -12,6 +16,8 @@ color:rgba(43, 69, 155, 1);
 margin-bottom:30px;
 margin-left:35px;
 margin-top:10px;
+
+
 `;
 export const ExpText=styled.p`
 color:white;
@@ -26,6 +32,9 @@ display:flex;
 flex-direction:row;
 justify-content:space-between;
 width:25%;
+@media screen and (max-width:576px){
+    width:60%;
+}
 `;
 export const ExpImg=styled.img`
 width:45px;
