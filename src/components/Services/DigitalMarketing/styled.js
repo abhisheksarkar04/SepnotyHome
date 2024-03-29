@@ -121,7 +121,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 3.5%;
   @media screen and (max-width: 576px) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 `;
 export const ServiceItemDesc = styled.p`
