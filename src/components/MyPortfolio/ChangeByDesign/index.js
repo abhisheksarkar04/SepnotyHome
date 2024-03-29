@@ -7,6 +7,8 @@ import wearable from "../images/wearable.png";
 import CaseStudy from "../CaseStudies";
 /* import ContactForm from "../../ContactUs/ContactForm"; */
 import FooterSection from "../../Footer/FooterSection";
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 import {
   Container,
   Desc,
@@ -28,6 +30,9 @@ import {
   List,
   ContentContainer,
   Contents,
+  QueryContainer,
+  ListCon,
+  ListConHeader,
 } from "./styled";
 
 const caseStudies = [
@@ -46,6 +51,7 @@ const caseStudies = [
 ];
 // import main from "../../assets/images/Capture.PNG"
 const ChangeByDesign = () => {
+  const heading = "Have a question to our team or need help with your project?";
   return (
     <>
       <Container>
@@ -148,9 +154,9 @@ const ChangeByDesign = () => {
 
               <ContentDesc>
                 Android: Android SDK, Android Studio, Eclipse, ADT Plugin, JAR
-                Signer, SQLite, Volley, Gradle, logcat, UiAutomator Windows
-                Phone 7: Windows Phone Toolkit, NLog Desktop: C++, Python
-                ,WebRTC, Visual Studio
+                Signer, SQLite, Volley, Gradle, logcat, UiAutomator <br />
+                Windows Phone 7: Windows Phone Toolkit, NLog <br />{" "}
+                Desktop: C++, Python ,WebRTC, Visual Studio
               </ContentDesc>
             </div>
             <div>
@@ -159,6 +165,17 @@ const ChangeByDesign = () => {
             </div>
           </Contents>
         </ContentContainer>
+      </Container>
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
+      <ListCon>
+        <ListConHeader>
+          <SmallPattern></SmallPattern>
+          <ListHeading>More Case Studies</ListHeading>
+        </ListConHeader>
+
         <List>
           {caseStudies.map((each) => (
             <CaseStudy key={each.id} details={each} />
@@ -166,7 +183,7 @@ const ChangeByDesign = () => {
         </List>
 
         <MoreCaseStudies>See More Case Studies</MoreCaseStudies>
-      </Container>
+      </ListCon>
       <FooterSection />
     </>
   );

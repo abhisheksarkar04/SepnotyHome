@@ -16,6 +16,7 @@ import {
   DownCon,
   Browse,
   CaseStudyCon,
+  SeeMore,
 } from "./styled";
 
 import { useState } from "react";
@@ -102,8 +103,12 @@ const caseStudiesList = [
   },
 ];
 const PortfolioHome = () => {
+  const [activeTab, setActiveTab] = useState("By Service");
   const [showAllCaseStudies, setShowAllCaseStudies] = useState(false);
 
+  const toggleActiveTab = (active) => {
+    setActiveTab(active);
+  };
   const toggleCaseStudies = () => {
     setShowAllCaseStudies(!showAllCaseStudies);
   };
@@ -114,15 +119,40 @@ const PortfolioHome = () => {
           Selected Success Stories from Our 200k -Project Portfolio
         </Heading>
         <SearchContainer>
-          <Input type="search" placeholder="Search" />
+          <Input type="search" placeholder="Search Case Studies" />
           <SearchIcon src={search} alt="search" />
         </SearchContainer>
         <Filter>
-          <Items>By Service</Items>
-          <Items>By Solution</Items>
-          <Items>By Technology</Items>
-          <Items>By Industry</Items>
-          <Items>By Region</Items>
+          <Items
+            active={activeTab === "By Service"}
+            onClick={() => toggleActiveTab("By Service")}
+          >
+            By Service
+          </Items>
+          <Items
+            active={activeTab === "By Solution"}
+            onClick={() => toggleActiveTab("By Solution")}
+          >
+            By Solution
+          </Items>
+          <Items
+            active={activeTab === "By Technology"}
+            onClick={() => toggleActiveTab("By Technology")}
+          >
+            By Technology
+          </Items>
+          <Items
+            active={activeTab === "By Industry"}
+            onClick={() => toggleActiveTab("By Industry")}
+          >
+            By Industry
+          </Items>
+          <Items
+            active={activeTab === "By Region"}
+            onClick={() => toggleActiveTab("By Region")}
+          >
+            By Region
+          </Items>
         </Filter>
       </TitleContainer>
       <Break />
@@ -153,11 +183,15 @@ const PortfolioHome = () => {
               ? "Show Less Case Studies"
               : "See More Case Studies"}
           </SeeMoreButton>
+          <SeeMore onClick={toggleCaseStudies}>
+            {showAllCaseStudies ? "Show Less " : "See More "}
+          </SeeMore>
           <Down src={down} alt="down" />
         </DownCon>
         <HrLine />
       </SeeMoreCon>
       <Browse>Browse all Case Studies</Browse>
+
       <FooterSection />
     </Container>
   );

@@ -120,6 +120,7 @@ export const ServiceItemCon = styled.div`
   padding-left: 6%;
   @media screen and (max-width: 576px) {
     padding-left: 3%;
+    margin-top: 50px;
   }
 `;
 
