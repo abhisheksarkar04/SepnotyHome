@@ -31,6 +31,7 @@ import {
     // Container,
   } from "./Styled";
   import rectangle1 from "../images/Rectangle 1.svg"
+  import Re from "./Images/re.svg";
   import rectangle2 from "../images/Rectangle2.svg";
   import rectangle3 from "../images/Rectangle3.svg";
   import FooterSection from "../../Footer/FooterSection";

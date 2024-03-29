@@ -19,8 +19,11 @@ import {
   ItemCon,
   SmallPattern,
   PatternCon,
+  QueryContainer,
 } from "./styled";
 
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 import { Link } from "react-router-dom";
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
@@ -30,7 +33,7 @@ import endpoint from "../Images/endpoint.svg";
 import protection from "../Images/protection.svg";
 import MSS from "../Images/MSS.svg";
 import network from "../Images/network.svg";
-import Contact from "../../ContactUs/SepnotyQuerySection";
+
 import FooterSection from "../../Footer/FooterSection";
 
 const CyberSecurity = () => {
@@ -162,7 +165,10 @@ const CyberSecurity = () => {
         </ServiceItemCon>
       </DigitalContainer>
 
-      <Contact heading={heading} />
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
 
       <FooterSection />
     </>

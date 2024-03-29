@@ -20,13 +20,16 @@ import {
   PatternCon,
   CorporateItems,
   BackButton,
+  QueryContainer,
 } from "./styled";
 
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 import protection from "../Images/protection.svg";
 import rectangle1 from "../Images/Rectangle 1.svg";
 import rectangle2 from "../Images/Rectangle2.svg";
 import rectangle3 from "../Images/Rectangle3.svg";
-import Contact from "../../ContactUs/SepnotyQuerySection";
+
 import FooterSection from "../../Footer/FooterSection";
 import { useHistory } from "react-router-dom";
 
@@ -108,7 +111,10 @@ const DataProtection = () => {
         <BackButton onClick={handleBackClick}>&larr;</BackButton>
       </DigitalContainer>
 
-      <Contact heading={heading} />
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
 
       <FooterSection />
     </>

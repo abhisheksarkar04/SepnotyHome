@@ -18,6 +18,7 @@ import {
   ServiceItemCon,
   PatternCon,
   SmallPattern,
+  QueryContainer,
 } from "./styled";
 
 import { Link } from "react-router-dom";
@@ -30,8 +31,8 @@ import SEO from "../Images/seo.svg";
 import SMM from "../Images/smm.svg";
 import CM from "../Images/ContentMarketing.svg";
 
-import Contact from "../../ContactUs/SepnotyQuerySection";
-
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 import FooterSection from "../../Footer/FooterSection";
 
 const DigitalMarketing = () => {
@@ -137,7 +138,10 @@ const DigitalMarketing = () => {
           </div>
         </ServiceItemCon>
       </DigitalContainer>
-      <Contact heading={heading} />
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
       <FooterSection />
     </>
   );

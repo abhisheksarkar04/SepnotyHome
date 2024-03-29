@@ -20,51 +20,51 @@ import {
   GlobalStyle,
 } from "./styledComponents";
 
-const StyledQuill = styled(ReactQuill)`
-  /* Add your custom styles here */
-  background-color: #d9d9d9;
-  border-radius: 10px;
-  border: 0px solid transparent;
-  outline: none;
-  font-size: 20px;
-  .ql-editor {
-    font-size: 20px;
-    line-height: 1.5;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    height: 70px; /* Adjust height as needed */
-    padding: 10px;
-    overflow-y: auto;
-    outline: none;
-  }
-  .ql-container {
-    border: none;
-  }
-  .ql-toolbar {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    /* Add border */
-  }
-`;
+// const StyledQuill = styled(ReactQuill)`
+//   /* Add your custom styles here */
+//   background-color: #d9d9d9;
+//   border-radius: 10px;
+//   border: 0px solid transparent;
+//   outline: none;
+//   font-size: 20px;
+//   .ql-editor {
+//     font-size: 20px;
+//     line-height: 1.5;
+//     border: none;
+//     color: #fff;
+//     border-radius: 10px;
+//     height: 70px; /* Adjust height as needed */
+//     padding: 10px;
+//     overflow-y: auto;
+//     outline: none;
+//   }
+//   .ql-container {
+//     border: none;
+//   }
+//   .ql-toolbar {
+//     border: 1px solid #000000;
+//     border-radius: 10px;
+//     /* Add border */
+//   }
+// `;
 
 const theme = {};
 
-const modules = {
-  toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    [{ font: [] }],
+// const modules = {
+//   toolbar: [
+//     [{ header: [1, 2, 3, 4, 5, 6, false] }],
+//     [{ font: [] }],
 
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-  ],
-};
+//     ["bold", "italic", "underline", "strike", "blockquote"],
+//     [
+//       { list: "ordered" },
+//       { list: "bullet" },
+//       { indent: "-1" },
+//       { indent: "+1" },
+//     ],
+//     ["link", "image", "video"],
+//   ],
+// };
 
 const CreateProject = () => {
   const [value, setValue] = useState("");
@@ -89,6 +89,13 @@ const CreateProject = () => {
         <Container1>
           <Title type="text" placeholder="Title" />
           <Summary type="text" placeholder="Project Description" />
+          <Summary type="text" placeholder="Industry" />
+          <Summary type="text" placeholder="Technology" />
+          <Summary type="text" placeholder="Customer" />
+          <Summary type="text" placeholder="Challenge" />
+          <Summary type="text" placeholder="Solution" />
+          <Summary type="text" placeholder="Results" />
+          <Summary type="text" placeholder="Technology and Tools" />
           <ChooseFile>
             <Button onClick={handleFileSelect}>Choose File</Button>
             <input
@@ -101,14 +108,14 @@ const CreateProject = () => {
               {selectedFile ? selectedFile.name : "No file chosen"}
             </NoFile>
           </ChooseFile>
-          <Container2>
+          {/* <Container2>
             <StyledQuill
               theme="snow"
               value={value}
               onChange={setValue}
               modules={modules}
             />
-          </Container2>
+          </Container2> */}
           <LastButton>Create Project</LastButton>
         </Container1>
       </Container>

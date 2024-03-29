@@ -8,112 +8,56 @@ import EightthPage from "./Website/EightthPage"
 
 class CourseDetails extends Component {
   state = {
-    fullName: '',
-    companyName: '',
-    workEmail: '',
-    phoneNumber: '',
-    current: "Any",
+    fullName: "",
+    companyName: "",
+    workEmail: "",
+    phoneNumber: "",
+    preferredCommunication: "", // Update state to store preferred communication
     agreeToContact: false,
     agreeToProvideInfo: false,
-    formErrors: {
-      fullName: '',
-      companyName: '',
-      workEmail: '',
-      phoneNumber: '',
-    },
-  };
-  handleButtonClick = (page) => {
-    this.setState({ current: page });
+  }
+  handleInputChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+    
   }
 
-  handleInputChange = e => {
-    const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    }, () => {
-      this.validateField(name, value);
-    });
-  };
-
-  validateField(fieldName, value) {
-    let fieldValidationErrors = this.state.formErrors;
-    let fullNameValid = this.state.fullName;
-    let companyNameValid = this.state.companyName;
-    let workEmailValid = this.state.workEmail;
-    let phoneNumberValid = this.state.phoneNumber;
-
-    switch (fieldName) {
-      case 'fullName':
-        fullNameValid = value.trim().length > 0;
-        fieldValidationErrors.fullName = fullNameValid ? '' : 'Full name is required';
-        break;
-      case 'companyName':
-        companyNameValid = value.trim().length > 0;
-        fieldValidationErrors.companyName = companyNameValid ? '' : 'Company name is required';
-        break;
-      case 'workEmail':
-        workEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-        fieldValidationErrors.workEmail = workEmailValid ? '' : 'Valid work email is required';
-        break;
-      case 'phoneNumber':
-        phoneNumberValid = value.trim().length > 0;
-        fieldValidationErrors.phoneNumber = phoneNumberValid ? '' : 'Phone number is required';
-        break;
-      default:
-        break;
-    }
-
-    this.setState({
-      formErrors: fieldValidationErrors,
-    });
+  handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    this.setState({ [name]: checked });
   }
 
-  handleSubmit = e => {
+  areCheckboxesChecked = () => {
+    const { agreeToContact, agreeToProvideInfo } = this.state;
+    return agreeToContact && agreeToProvideInfo;
+    
+  }
+  handleButtonClick =(page) => {
+    this.setState({preferredCommunication:page})
+    
+  }
+  back = e => {
     e.preventDefault();
+    this.props.prevStep();
+  }
 
-    if (this.isFormValid()) {
-      const formData = {
-        fullName: this.state.fullName,
-        companyName: this.state.companyName,
-        workEmail: this.state.workEmail,
-        phoneNumber: this.state.phoneNumber,
-        preferredCommunication: this.state.current,
-        agreeToContact: this.state.agreeToContact,
-        agreeToProvideInfo: this.state.agreeToProvideInfo,
-      };
-
-      console.log('Form Data:', formData);
-
-      // Navigate to the next step
-      this.props.nextStep();
-    } else {
-      console.log('Form Validation Failed');
+  submitdata = () => {
+    const {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
+    const formData = {
+      feild8 : {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
     }
-  };
+    this.props.onDataReceived(formData);
+  }
 
-  isFormValid = () => {
-    const { fullName, companyName, workEmail, phoneNumber, agreeToContact, agreeToProvideInfo } = this.state;
-    return fullName.trim() !== '' &&
-      companyName.trim() !== '' &&
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail) &&
-      phoneNumber.trim() !== '' &&
-      agreeToContact &&
-      agreeToProvideInfo;
-  };
 
-  handleAgreeToContactChange = e => {
-    this.setState({ agreeToContact: e.target.checked });
-  };
-
-  handleAgreeToProvideInfoChange = e => {
-    this.setState({ agreeToProvideInfo: e.target.checked });
-  };
-
+  
   render() {
-    const { formErrors, current } = this.state;
+    const {preferredCommunication} = this.state;
+    const { agreeToContact, agreeToProvideInfo } = this.state;
+    const isSubmitDisabled = !this.areCheckboxesChecked();
+    
     return (
       <Main className='form'>
-        <form onSubmit={this.handleSubmit}>
+        <form>
 
           <Stepper
             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
@@ -122,7 +66,7 @@ class CourseDetails extends Component {
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
               inactiveBgColor: '#fff',
-              inactiveTextColor: 'fff',
+              inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
               size: '1em'
@@ -148,7 +92,7 @@ class CourseDetails extends Component {
                 value={this.state.fullName}
                 onChange={this.handleInputChange}
               />
-              {formErrors.fullName && <Error>{formErrors.fullName}</Error>}
+              
             </M3>
             <M3>
               <P4>*Company name</P4>
@@ -158,7 +102,6 @@ class CourseDetails extends Component {
                 value={this.state.companyName}
                 onChange={this.handleInputChange}
               />
-              {formErrors.companyName && <Error>{formErrors.companyName}</Error>}
             </M3>
           </M2>
           <M2>
@@ -170,7 +113,7 @@ class CourseDetails extends Component {
                 value={this.state.workEmail}
                 onChange={this.handleInputChange}
               />
-              {formErrors.workEmail && <Error>{formErrors.workEmail}</Error>}
+              
             </M3>
             <M3>
               <P4>*Phone number</P4>
@@ -180,22 +123,23 @@ class CourseDetails extends Component {
                 value={this.state.phoneNumber}
                 onChange={this.handleInputChange}
               />
-              {formErrors.phoneNumber && <Error>{formErrors.phoneNumber}</Error>}
+              
             </M3>
           </M2><br/>
         <M33>
             <P8>Preferred way of communication:</P8>
-            <Button1 type="button" active={current === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
-            <Button2 type="button" active={current === 'Email'}  onClick={() => this.handleButtonClick('Email')}>Email</Button2>
-            <Button3 type="button" active={current === 'Phone'}  onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
+            <Button1 type="button" active={preferredCommunication === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
+            <Button2 type="button" active={preferredCommunication === 'Email'}  onClick={() => this.handleButtonClick('Email')}>Email</Button2>
+            <Button3 type="button" active={preferredCommunication === 'Phone'}  onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
         </M33>
         <br/>
         <M3>
                 <Input1 
-                  type="checkbox" 
-                  id="agreeToContact" 
-                  checked={this.state.agreeToContact} 
-                  onChange={this.handleAgreeToContactChange} 
+                  type="checkbox"
+                  id="agreeToContact"
+                  name="agreeToContact"
+                  checked={agreeToContact}
+                  onChange={this.handleCheckboxChange} 
                 />
                 <Label htmlFor="agreeToContact">
                   I agree to have Sepnoty contact me Via email, Phone, Messenger.
@@ -204,14 +148,16 @@ class CourseDetails extends Component {
               <br/>
               <M3>
                 <Input1 
-                  type="checkbox" 
-                  id="agreeToProvideInfo" 
-                  checked={this.state.agreeToProvideInfo} 
-                  onChange={this.handleAgreeToProvideInfoChange} 
+                  type="checkbox"
+                  id="agreeToProvideInfo"
+                  name="agreeToProvideInfo"
+                  checked={agreeToProvideInfo}
+                  onChange={this.handleCheckboxChange}
                 />
                 <Label htmlFor="agreeToProvideInfo">
                   I agree to have Sepnoty provide my request information to sepnoty affiliated development centres.
                 </Label>
+                
               </M3>
         <br/>
         <P5>Your personal data will be stored for ten years on US servers in accordance with GDPR, and erased thereafter. 
@@ -223,7 +169,7 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
         </form>
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button type="submit" className='buttons__button buttons__button--next' onClick={this.continue}>Submit</button>
+            <button type="submit" className='buttons__button buttons__button--next' disabled={isSubmitDisabled} onClick={this.submitdata} >Submit</button>
           </Button>
       </Main>
     )
@@ -231,6 +177,17 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
 }
 
 export default CourseDetails;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
+const CheckboxError = styled.div`
+  color: red;
+  font-size: 12px;
+`;
+
+const SubmitButton = styled.button`
+  /* Your button styles */
+`;
 const P8 = styled.p`
 font-size: 15px;
 font-weight: 700;
@@ -257,11 +214,15 @@ margin-left:-90px;
 
 const Main = styled.div`
 background-color:#0C111F;
+${media.mobile} {
+  width:100%;
+}
 `
 const Input1 = styled.input`
 margin-left:-630px;
 color: #C1CAE7;
 cursor: pointer;
+${media.mobile}{margin-left:-400px}
 
 `;
 const M = styled.div`
@@ -271,6 +232,10 @@ align-items:center;
 border-radius: 10px;
 width: 800px;
 margin-left: -80px;
+${media.mobile} {
+  width:450px;
+  margin-left:10px;
+}
 `;
 const Mai = styled.div`
 height:550px;
@@ -291,6 +256,7 @@ letter-spacing: 0em;
 text-align: left;
 color:#2B459B;
 margin-left:30px;
+${media.mobile}{font-size:14px}
 `
 const P2 = styled.div`
 margin-left:30px;
@@ -300,6 +266,7 @@ color:#263238;
 font-weight: 500;
 margin-top:18px;
 width: 80%;
+${media.mobile}{font-size:13px;}
 `
 const P3 = styled.p`
 font-size: 16px;
@@ -355,7 +322,7 @@ width:60px;
 border-radius:5px;
 font-size:12px;
 height: 30px;
-
+border: 1px solid #8C8C8C;
 
 `
 const Button2 = styled.button`

@@ -164,6 +164,9 @@ on various technical aspects of a business, project, or initiative.
   };
   
   export default AboutPortFolio;
+  const media = {
+    mobile: '@media(max-width: 556px)'
+  };
   
   const ExpertContainer = Styled.div`
   display:flex;
@@ -171,11 +174,22 @@ on various technical aspects of a business, project, or initiative.
   gap : 30px;
   margin-left:48%;
   margin-bottom:60px;
+  ${media.mobile}{
+    width:100%;
+    margin-left:118%;
+  }
   `
   const WebsiteContainer = Styled.div`
   display:flex;
   flex-direction:row;
   gap : 40px;
+  height:50%;
+  ${
+    media.mobile
+  }{
+    font-size:14px;
+    width:80%;
+  }
 
 
   `
@@ -183,6 +197,13 @@ on various technical aspects of a business, project, or initiative.
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
+  ${
+    media.mobile
+  }{
+    font-size:14px;
+    width:70%;
+    margin-left:-27%;
+  }
 
   `
  const X = Styled.div`
@@ -196,10 +217,7 @@ on various technical aspects of a business, project, or initiative.
  const Y = Styled.div`
  display:flex;
   flex-direction:row;
-  gap : 10px;
-  
-
- 
+  gap : 10px; 
  `;
 
 
@@ -208,16 +226,33 @@ on various technical aspects of a business, project, or initiative.
     margin-top:10px;
     height:250px;
     margin-left:-600px;
+    ${
+      media.mobile
+    }{
+      height:150px;
+      margin-top:70px;
+    }
  `
  const Para1 = Styled.p`
  font-size:20px;
  color:white;
+ ${
+  media.mobile
+}{
+  font-size:14px;
+  width:40%;
+}
 `
 const Para2 = Styled.p`
 
 color:white;
+${
+  media.mobile
+}{
+  font-size:14px;
+ 
+}
 `
 const Image1 = Styled.img`
 height:20px;
-
 `;

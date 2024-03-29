@@ -32,6 +32,7 @@ import CreateJob from "../NewJob";
 import CreateProject from "../CreateProject";
 import CreateEvent from "../CreateNewEvent";
 import ContactUsData from "../ContactUsData";
+import ApplicantsData from "../ApplicantsData";
 import response from "./Images/response.svg";
 import contactus from "./Images/contactus.svg";
 import createuser from "./Images/createuser.svg";
@@ -49,10 +50,9 @@ import activeCreateUser from "./Images/activecreateuser.svg";
 import activeContactUs from "./Images/activecontact.svg";
 import activeApplicants from "./Images/activeapplicants.svg";
 import activeProject from "./Images/activeproject.svg";
-import search from "./Images/search.svg"
+import search from "./Images/search.svg";
 
 import ResponseData from "../ResponseRecived";
-
 
 import {
   Container,
@@ -79,6 +79,7 @@ import {
   ActiveIcon,
 } from "./styledComponents";
 import CreateUser from "../CreateUser";
+import UserAuthorization from "../UserAuthorization";
 
 const Lists = [
   {
@@ -131,10 +132,13 @@ const DashBoard = () => {
   const [showCreateCareerOpportunities, setShowCreateCareerOpportunities] =
     useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
-  const [showResponse,setShowResponse] = useState(false)
+  const [showApplicants, setShowApplicants] = useState(false);
+
+  const [showResponse,setShowResponse] = useState(false);
+  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false);
+
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
-
 
   const handleLogout = () => {
     // Perform any necessary cleanup or logout logic
@@ -167,6 +171,8 @@ const DashBoard = () => {
     setShowContactUs(false);
     setShowResponse(false);
     setActiveTab("articles");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleEvents = () => {
@@ -188,6 +194,8 @@ const DashBoard = () => {
     setShowCreateArticle(false);
     setShowContactUs(false);
     setActiveTab("Events and Workshops");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleProjects = () => {
@@ -207,6 +215,8 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Projects");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleReports = () => {
@@ -226,6 +236,8 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Reports");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleBlog = () => {
@@ -245,6 +257,8 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Blogs");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCareerOpportunities = () => {
@@ -264,6 +278,8 @@ const DashBoard = () => {
     setShowCreateEvent(false);
     setShowContactUs(false);
     setActiveTab("Career Opportunities");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateArticle = () => {
@@ -282,6 +298,8 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
   const toggleCreateProject = () => {
     setShowResponse(false);
@@ -299,6 +317,8 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateReport = () => {
@@ -317,6 +337,8 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateBlogs = () => {
@@ -335,6 +357,8 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateCareer = () => {
@@ -353,6 +377,8 @@ const DashBoard = () => {
     setShowEvents(false);
     setShowCreateEvent(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateEvent = () => {
@@ -362,7 +388,7 @@ const DashBoard = () => {
     setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
-   
+
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -372,6 +398,8 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowContactUs(false);
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
   const toggleContactUs = () => {
@@ -382,7 +410,7 @@ const DashBoard = () => {
     setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
-    
+
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -392,6 +420,58 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setActiveTab("Contact Us");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
+  };
+
+  const toggleUserAuthorization = () => {
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+
+    setActiveTab("Create User");
+
+    
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+    setShowUserAuthorization(true);
+    setActiveTab("User Authorization");
+    setShowApplicants(false);
+
+  };
+
+
+  const toggleApplicants = () => {
+    setShowApplicants(true);
+    setShowResponse(false);
+    setShowContactUs(false);
+    setShowCreateEvent(false);
+    setShowCreateCareerOpportunities(false);
+    setShowCreateUser(false);
+    setShowArticles(false);
+    setShowCreateArticle(false);
+
+    setShowProjects(false);
+    setShowCreateProject(false);
+    setShowReports(false);
+    setShowCreateReport(false);
+    setShowBlog(false);
+    setShowCareerOpportunities(false);
+    setShowCreateBlogs(false);
+    setShowEvents(false);
+
+    setActiveTab("Applicants");
+    setShowUserAuthorization(false);
   };
 
   const toggleCreateUser = () => {
@@ -401,7 +481,10 @@ const DashBoard = () => {
     setShowCreateUser(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+
     setActiveTab("Create User");
+    setShowApplicants(false);
+    setShowUserAuthorization(false);
   };
 
 
@@ -412,7 +495,6 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowArticles(false);
     setShowCreateArticle(false);
-
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -421,14 +503,15 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
-
-    setActiveTab("Create User");
-  };
-
-
-    
-
+    setShowApplicants(false);
  
+
+    setActiveTab("Responses Received");
+
+    setShowUserAuthorization(false);
+  }
+
+
 
   return (
     <>
@@ -470,27 +553,30 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create Event and Workshop</CreateTitle>
                 </CreateCon>
-
               ) : showCreateUser || showCreateUser ? (
                 <CreateCon onClick={toggleCreateUser}>
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
+
               )
 
               : showContactUs? (
                 <CreateCon >
+
+              ) : showContactUs ? (
+                <CreateCon>
+
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
-                </CreateCon>): null}
-
+                </CreateCon>
+              ) : null}
             </ImagesCont>
             <Contactimgcon>
               <Name>Manikumar Pokala</Name>
               <Profile src={profile} alt="profile" />
               <AddImg src={logout} alt="logout" onClick={handleLogout} />
             </Contactimgcon>
-            
           </Containertwo>
 
           <Containerthree>
@@ -575,8 +661,6 @@ const DashBoard = () => {
               </ArticalCon>
 
               <ArticalCon onClick={toggleResponse}>
-                
-
                 {activeTab === "Responses Received" ? (
                   <>
                     <Icons src={activeResponse} alt="icon" />
@@ -602,7 +686,7 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon onClick={toggleApplicants}>
                 {activeTab === "Applicants" ? (
                   <>
                     <Icons src={activeApplicants} alt="icon" />
@@ -617,7 +701,6 @@ const DashBoard = () => {
               </ArticalCon>
 
               <ArticalCon onClick={toggleCreateUser}>
-                
                 {activeTab === "Create User" ? (
                   <>
                     <Icons src={activeCreateUser} alt="icon" />
@@ -630,7 +713,7 @@ const DashBoard = () => {
                   </>
                 )}
               </ArticalCon>
-              <ArticalCon>
+              <ArticalCon onClick={toggleUserAuthorization}>
                 {activeTab === "User Authorization" ? (
                   <>
                     <Icons src={activeUser} alt="icon" />
@@ -671,11 +754,16 @@ const DashBoard = () => {
             {showCreateProject && <CreateProject />}
             {showCreateEvent && <CreateEvent />}
             {showContactUs && <ContactUsData />}
-
+            {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
 
 
+            {ShowUserAuthorization && <UserAuthorization />}
             {showResponse && <ResponseData/>}
+
+
+
+
 
           </Containerthree>
         </ContainerOne>

@@ -253,8 +253,13 @@ export const Sections = styled.p`
 
 export const Section = styled.p`
   font-size: 10px;
-  color: #ffffff;
-  @media screen and (min-width: 768px) {
+  color: #d9d9d9;
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    height: 20px;
+    margin-right: 0px;
+    padding-left: 6px;
+    text-align: center;
   }
 `;
 

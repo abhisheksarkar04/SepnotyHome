@@ -20,7 +20,7 @@ class Summary extends Component {
       field4: {hasMockups,chosenCMS},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     if (!hasMockups || !chosenCMS) {
       this.setState({ error: 'Please answer all questions.' });
       return;
@@ -50,7 +50,7 @@ class Summary extends Component {
       <Main className='form'>
         <div>
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={3}
             styleConfig={{
               activeBgColor: '#2B459B',
@@ -78,13 +78,13 @@ Yes
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="Iwill" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will engage third party for UI design" onChange={this.handleMockupsChange} />
     I will engage third party for UI design
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="need" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will need you to provide UI design" onChange={this.handleMockupsChange} />
     I will need you to provide UI design
     </Label>
 </InputContainer>
@@ -106,7 +106,7 @@ No
 <InputContainer>
 <Label>
 <Input type='radio' name="cms" value="Yes" onChange={this.handleCMSChange} />
-                    <Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
+<Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
     </Label>
 </InputContainer>
 {error && <ErrorMessage>{error}</ErrorMessage>}
@@ -128,6 +128,9 @@ No
 }
 
 export default Summary;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
@@ -143,6 +146,7 @@ margin-left:-90px;
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{width:100%}
 `
 
 const Mai = Styled.div`
@@ -172,7 +176,11 @@ font-family:Roboto;
 margin-bottom:30px;
 `
 const Form2 = Styled.form`
-
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input = Styled.input`
 margin-right:10px;
@@ -203,6 +211,11 @@ background: #C1CAE7;
 border: 1px solid #8C8C8C;
 width:250px;
 border-radius:4px;
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 // const Input2 = Styled.input`
 // background: #C1CAE7;

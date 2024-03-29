@@ -12,7 +12,7 @@ export const CardListContainer = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 30px 10%;
@@ -31,7 +31,6 @@ export const Description = styled.p`
   width: 600px;
   font-weight: bold;
   @media screen and (max-width: 555px) {
-
     font-size: 17px;
     width: 95%;
     margin-left: -20px;

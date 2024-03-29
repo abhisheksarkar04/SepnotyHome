@@ -16,7 +16,7 @@ import sendIcon from "../images/sendIcon.svg";
 import write from "../images/write.svg";
 import SearchIcon from "../images/SearchIcon.svg";
 import mail from "../images/mail.svg";
-import Profile from "../Profile";
+import Profile from "./Profile";
 import FooterSection from "../../Footer/FooterSection";
 
 import {
@@ -90,7 +90,7 @@ const topicList = [
     id: 1,
     image: profile,
     topic:
-      "BoostingEfficiency and Driving Growth: The role of ERP in the Fastener Industry",
+      "Boosting Efficiency and Driving Growth: The role of ERP in the Fastener Industry",
     name: "Nick Carter",
     role: "Technical Consultant",
     likes: 20,
@@ -101,7 +101,7 @@ const topicList = [
     id: 2,
     image: profile,
     topic:
-      "BoostingEfficiency and Driving Growth: The role of ERP in the Fastener Industry",
+      "Boosting Efficiency and Driving Growth: The role of ERP in the Fastener Industry",
     name: "Nick Carter",
     role: "Technical Consultant",
     likes: 20,

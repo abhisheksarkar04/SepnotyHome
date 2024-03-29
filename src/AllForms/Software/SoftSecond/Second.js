@@ -32,7 +32,9 @@ class CourseDetails extends Component {
       field2: {selectedIndustries},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
+
+    //handleFormValues(formData);
     if (selectedIndustries.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
@@ -306,9 +308,14 @@ Public sector
 
 export default CourseDetails;
 
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
+
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 const Button = Styled.div`
 display:flex;
@@ -319,6 +326,9 @@ margin-left:-90px;
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 const Main1 = Styled.div`
 display:flex;
@@ -326,6 +336,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:2px;
+  margin-left:-30px;
+}
 `
 const Form1 = Styled.div`
 display:flex;
@@ -336,10 +353,20 @@ gap:-10px;
 border-radius:10px;
 padding:20px;
 width:700px;
-height:350px;
+height:380px;
+${media.mobile}{
+  width:380px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Form3 = Styled.div`
 margin-top:40px;
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Heading = Styled.h1`
 color:#263238;
@@ -347,8 +374,18 @@ font-size:18px;
 font-weight:700;
 margin-bottom:20px;
 font:family:Roboto;
+${
+  media.mobile
+}{
+  font-size:13px;
+}
 `
 const Form2 = Styled.form`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input = Styled.input`
 margin-right:10px;

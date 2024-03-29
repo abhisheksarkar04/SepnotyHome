@@ -177,10 +177,18 @@ outsourcing services</P>
   };
   
   export default ClientReviews;
+  const media = {
+    mobile: '@media(max-width: 576px)'
+  };
 
   const P = Styled.p`
   margin-top:20px;
   color:white;
+  ${media.mobile}{
+   font-size:12px;
+   margin-top:0px;
+   width:600px;;
+  }
   `
 
   const Main1 = Styled.div`
@@ -189,9 +197,14 @@ outsourcing services</P>
   flex-wrap : wrap;
   margin-top:20px;
   width: 85%;
-  height: 100vh;
   margin-left: 6.5%;
   margin-bottom: 32%;
+  ${
+    media.mobile
+  }{
+    width:100%;
+    margin-left:3%;
+  }
 
   `
   const Main2 = Styled.div`
@@ -199,15 +212,19 @@ outsourcing services</P>
   flex-direction:column;
   border: 0.99px solid #FFFFFF;
   background: #2f333f;
-
-
-  
   gap:20px;
   border-radius:7px;
   padding: 20px;
   height:320px;
   width:350px;
   margin: 0 20px 30px 20px;
+  ${
+    media.mobile
+  }{
+    width:230px;
+    height:250px;
+  }
+
   `;
   const Main3 = Styled.div`
   display:flex;
@@ -218,6 +235,13 @@ outsourcing services</P>
   const Para = Styled.p`
       font-size: 16px;
       color:white;
+      ${
+        media.mobile
+      }{
+        font-size:13px;
+        margin-top:-10px;
+        gap:0px;
+      }
   
   `;
   const Image1 = Styled.img`
@@ -225,9 +249,22 @@ outsourcing services</P>
   margin-right: 10px;
   margin-top:10px;
 margin-right:10px;
+${
+  media.mobile
+}{
+  height:40px;
+  margin-top:10px;
+}
   `
   const Image2 = Styled.img`
   height:45px;
   width:140px;
   margin-top:10px;
+  ${
+    media.mobile
+  }{
+    width:80px;
+    height:25px
+    margin-top:-10px;
+  }
   `

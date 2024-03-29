@@ -2,10 +2,10 @@ import Styled from "styled-components";
 import Button from "./Button"
 import Image from "./images/Stars.svg"
 
-// import image2 from "./images/Group 1261153425.svg";
+import image2 from "./images/charan.svg";
 
 import Stars from "./images/Stars2.svg"
-import image2 from "./images/Standing.svg";
+//import image2 from "./images/Standing.svg";
 // import Stars from "./images/Stars2.svg"
 // import image2 from "./images/Standing.svg";
 // import Stars from "./images/Stars2.svg"
@@ -34,7 +34,7 @@ const CostHome = () => {
                     Calculator
                 </Heading1>
                 <Para1>
-                    To expedite the estimation of your website<br/> development cost, kindly provide some basic <br/>information about your business requirements<br/> by answering a few straightforward questions.<br/> This will assist our experts in offering a more<br/> accurate assessment.
+                    To expedite the estimation of your website development cost, kindly provide some basic information about your business requirements by answering a few straightforward questions. This will assist our experts in offering a more accurate assessment.
                     </Para1>
                 <Heading3>
                 What type of development do you need?
@@ -53,17 +53,30 @@ const CostHome = () => {
     )
 }
 export default CostHome;
+
+const media = {
+    mobile: '@media(max-width: 576px)'
+  };
+
+
 const D = Styled.div`
-margin-left:60px;
+margin-left:110px;
+margin-top:20px;
+${media.mobile} {
+    margin-left:10px;
+  }
 `
 
 const Main2 = Styled.div`
 display:flex;
 flex-direction:column;
-width: 100.8%;
+width: 100%;
 margin-left: -6px;
 background:#0C111F;
 background-size: cover;
+${media.mobile} {
+    width:100%;
+  }
 
 `
 
@@ -74,10 +87,7 @@ justify-content: space-between;
 width: auto;
 background-color:#0C111F;
 font-family:'Roboto';
-@media screen and (max-width: 768px) {
-     
-  }
-`
+
 // const Button =Styled.div`
 // back
 // `
@@ -85,6 +95,7 @@ const HomeContainer = Styled.div`
 display: flex;
 flex-direction: column;
 margin-top:20px;
+
 `
 // const Home2 = Styled.div`
 // display: flex;
@@ -95,6 +106,10 @@ margin-top:20px;
 const StarsImage = Styled.img`
 margin-top:50px;
 width: 60%;
+${media.mobile} {
+    width:170.66px;
+    height:206px;
+  }
 `
 const DevelopContainer = Styled.div`
 margin-top:0px;
@@ -102,16 +117,29 @@ display:flex;
 flex-direction:column;
 margin-left:140px;
 margin-button:-20px;
+${media.mobile} {
+    margin-left:50px;
+    margin-top:1px;
+  }
 `
 const Heading = Styled.h1`
 color: #B7B6BD;
 font-size: 40px;
 margin-top:10px;
+${media.mobile} {
+    font-size:15px;
+    
+  }
+
 `
 const Heading1 = Styled.h1`
 color:#4C64B2;
 margin-top:10px;
 font-size: 40px;
+${media.mobile} {
+    font-size:15px;
+    margin-left:-20px;
+  }
 `
 // const ParaContainer = Styled.div`
 // `
@@ -120,11 +148,20 @@ font-size: 24px;
 font-weight:500;
 color:#B7B6BD;
 margin-top:20px;
+${media.mobile} {
+    font-size:14px;
+    margin-left:-20px;
+    margin-top:3px;
+  }
 `
 const Heading3 = Styled.h1`
 color:white;
 font-size:32px;
 margin-top:10px;
+${media.mobile} {
+   font-size:14px;
+   margin-left:-20px;
+  }
 `
 const RightContainer = Styled.div`
 text-align : right;
@@ -137,20 +174,22 @@ width:600px;
 height:650px;
 position:relative;
 z-index:1;
-
+${media.mobile} {
+    width:300px;
+height:350px;
+  }
 `
-// const Image3 = Styled.img`
-// position:absolute;
-// width:40%;
-// height:50%;
-// top:70%;
-// left:50%;
-// `
+
 const SideContainer =   Styled.div`
 display:flex;
 flex-direction:row;
 margin-top:10px;
 gap:20px;
 margin-left:140px;
+${media.mobile} {
+    margin-left:30px;
+    margin-top:-20px;
+    //margin-left:-20px;
+  }
 
 `

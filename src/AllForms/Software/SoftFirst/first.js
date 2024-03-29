@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import handleFormValues from '../../allFormValues';
-
-
-
-
-
-
-
-
 class FirstSoftwarePage extends Component {
 
   state = {
@@ -51,10 +43,11 @@ class FirstSoftwarePage extends Component {
 
     const { softwareTypes, numberOfPages } = this.state;
 
-
-   
+    const formData = {
+       feild1 : {softwareTypes,numberOfPages}
+    }
+    this.props.onDataReceived(formData);
   // Call the handleFormValues function from FormUtils.js
-  
     if (softwareTypes.length === 0) {
       this.setState({
         formErrors: {
@@ -185,7 +178,7 @@ class FirstSoftwarePage extends Component {
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <span style={{ color: 'red' }}>{formErrors.softwareTypes}</span>}
+                {formErrors.softwareTypes && <Span style={{ color: 'red' }}>{formErrors.softwareTypes}</Span>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -241,7 +234,7 @@ class FirstSoftwarePage extends Component {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <span style={{ color: 'red' }}>{formErrors.numberOfPages}</span>}
+              {formErrors.numberOfPages && <Span style={{ color: 'red' }}>{formErrors.numberOfPages}</Span>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -255,6 +248,12 @@ class FirstSoftwarePage extends Component {
 }
 
 export default FirstSoftwarePage;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
+const Span = Styled.p`
+font-size:12px;
+`
 
 const Button = Styled.div`
 display:flex;
@@ -270,6 +269,9 @@ color:white;
 `
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 const Main1 = Styled.div`
 display:flex;
@@ -277,6 +279,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:2px;
+  margin-left:-30px;
+}
 `
 const Heading = Styled.h1`
 font-family: Roboto;
@@ -286,18 +295,28 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${
+  media.mobile
+}{
+  font-size:13px;
+}
 `
 
 const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:350px;
+height:380px;
 width:600px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
+${media.mobile}{
+  width:380px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const CheckBoxCon = Styled.div`
 margin-top:15px;
@@ -311,8 +330,16 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+${media.mobile}{
+  font-size:13px;
+}
 `
 const Form = Styled.form`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input1 = Styled.input`
 background:transparent;
@@ -322,6 +349,7 @@ color: #263238;
 font-weight:500;
 height:20px;
 margin-left:10px;
+${media.mobile}{font-size:13px;}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;
