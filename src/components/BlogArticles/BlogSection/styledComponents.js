@@ -44,6 +44,7 @@ export const FilterBoxCon=styled.div`
 padding:5px 10px 5px 10px;
 text-align:center;
 background-color:white;
+cursor:pointer;
 color:black;
 width:auto;
 height:auto;

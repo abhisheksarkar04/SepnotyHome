@@ -63,6 +63,8 @@ width:80%;
 margin-bottom:20px;
 @media screen and (max-width:576px){
   width:100%;
+  margin-bottom:10px;
+  justify-content: space-between;
 }
 `;
 export const RequestRight=styled.div`
@@ -110,9 +112,12 @@ position: relative;
 width:60%;
 padding-bottom:5px;
 @media screen and (max-width:576px){
-  width:90%;
+  width:95%;
   margin:5px;
+  margin-right:10px;
+  margin-left:10px;
   padding:5px;
+  margin-bottom:20px;
 }
 `;
 export const MediaImg=styled.img`
@@ -184,6 +189,11 @@ border-radius:20px;
 cursor:pointer;
 font-weight:400;
 width:11%;
+@media screen and (max-width:576px){
+  width:30%;
+  margin-left:35%;
+  
+}
 `;
 export const TrustWorthy=styled.h2`
 font-size:24px;
@@ -197,6 +207,11 @@ color:white;
 width:80%;
 margin:30px 0px 30px 0px;
 margin-left:6%;
+@media screen and (max-width:576px){
+  width:100%;
+  magin-left:3%;
+  margin-right:2px;
+}
 `;
 export const TrustDescription = styled.ul`
   font-size: 20px;
@@ -206,17 +221,28 @@ export const TrustDescription = styled.ul`
   display: flex;
   flex-direction: column;
   list-style-type: disc; 
+  @media screen and (max-width:576px){
+    width:95%;
+    margin-left:0%;
+    margin-right:0px;
+  }
 `;
 
 export const TrustDescriptionItems = styled.li`
   list-style-type: none;
   color: white;
   margin-bottom: 7px;
-  width:80%;
+ 
   &:before {
     content: '•'; /* Unicode character for a bullet point */
     color: white;
     margin-right: 5px;
+  }
+  @media screen and (max-width:576px){
+    
+    margin-left:0%;
+    margin-right:0px;
+    font-size:20px;
   }
 `;
 
@@ -232,6 +258,10 @@ export const ImgContainer = styled.div`
   margin-bottom: 30px;
   padding:5px;
   margin-top:5%;
+  @media screen and (max-width:576px){
+    width:95%;
+    margin-left:3%;
+  }
 `;
 
 export const Image = styled.img`
@@ -239,6 +269,11 @@ export const Image = styled.img`
   width: 180px;
   padding: 0px 50px 0px 50px;
   border-right: 1px solid #abaaaa;
+  @media screen and (max-width:576px){
+    height:30px;
+    width:80px;
+    padding:0px;
+  }
 `;
 
 export const Img = styled(Image)`
@@ -263,7 +298,9 @@ flex-wrap:wrap;
 margin:10px 30px 40px 0px;
 margin-left:6%;
 width:57%;
-
+@media screen and (max-width:576px){
+  width:95%;
+}
 `;
 export const TrustWorthyText=styled.p`
 font-size:20px;
@@ -272,6 +309,10 @@ margin:10px 30px 20px 0px;
 margin-left:6%;
 line-height:1.5;
 width:80%;
+@media screen and (max-width:576px){
+  width:94%;
+  margin-right:3%;
+}
 `;
 
 export const ExpContainer=styled.div`
@@ -279,6 +320,10 @@ display:flex;
 flex-direction:column;
 padding-left:3%;
 width:80%;
+@media screen and (max-width:576px){
+  width:100%;
+  padding:0px;
+}
 `;
 export const TransparentBg=styled.span`
 width:60px;

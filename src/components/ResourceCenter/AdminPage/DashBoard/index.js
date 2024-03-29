@@ -432,6 +432,9 @@ const DashBoard = () => {
     setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+
+    setActiveTab("Create User");
+
     
     setShowProjects(false);
     setShowCreateProject(false);
@@ -444,6 +447,7 @@ const DashBoard = () => {
     setShowUserAuthorization(true);
     setActiveTab("User Authorization");
     setShowApplicants(false);
+
   };
 
 
@@ -465,6 +469,7 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+
     setActiveTab("Applicants");
     setShowUserAuthorization(false);
   };
@@ -476,10 +481,12 @@ const DashBoard = () => {
     setShowCreateUser(true);
     setShowArticles(false);
     setShowCreateArticle(false);
+
     setActiveTab("Create User");
     setShowApplicants(false);
     setShowUserAuthorization(false);
   };
+
 
   const toggleResponse = () => {
     setShowResponse(true);
@@ -497,11 +504,13 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowApplicants(false);
+ 
 
     setActiveTab("Responses Received");
 
     setShowUserAuthorization(false);
   }
+
 
 
   return (
@@ -549,8 +558,15 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
+
+              )
+
+              : showContactUs? (
+                <CreateCon >
+
               ) : showContactUs ? (
                 <CreateCon>
+
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
                 </CreateCon>
@@ -741,8 +757,12 @@ const DashBoard = () => {
             {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
 
+
             {ShowUserAuthorization && <UserAuthorization />}
             {showResponse && <ResponseData/>}
+
+
+
 
 
           </Containerthree>

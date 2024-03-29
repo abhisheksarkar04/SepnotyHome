@@ -35,6 +35,7 @@ display:flex;
 flex-wrap:wrap;
 margin-left:40px;
 margin-right:40px;
+
 @media screen and (max-width: 576px) {
     margin-left:5px; 
     margin-right:5px;
@@ -48,6 +49,7 @@ color:black;
 width:auto;
 height:auto;
 margin:5px;
+cursor:pointer;
 border-radius:7px;
 font-size:12px;
 &:hover{
