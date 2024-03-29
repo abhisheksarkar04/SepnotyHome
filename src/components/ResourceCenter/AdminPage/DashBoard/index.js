@@ -134,8 +134,8 @@ const DashBoard = () => {
   const [showContactUs, setShowContactUs] = useState(false);
   const [showApplicants, setShowApplicants] = useState(false);
 
-  const [showResponse,setShowResponse] = useState(false);
-  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false);
+  const [showResponse, setShowResponse] = useState(false);
+  const [ShowUserAuthorization, setShowUserAuthorization] = useState(false);
 
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
@@ -435,7 +435,6 @@ const DashBoard = () => {
 
     setActiveTab("Create User");
 
-    
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -447,9 +446,7 @@ const DashBoard = () => {
     setShowUserAuthorization(true);
     setActiveTab("User Authorization");
     setShowApplicants(false);
-
   };
-
 
   const toggleApplicants = () => {
     setShowApplicants(true);
@@ -487,7 +484,6 @@ const DashBoard = () => {
     setShowUserAuthorization(false);
   };
 
-
   const toggleResponse = () => {
     setShowResponse(true);
     setShowContactUs(false);
@@ -504,14 +500,11 @@ const DashBoard = () => {
     setShowCreateBlogs(false);
     setShowEvents(false);
     setShowApplicants(false);
- 
 
     setActiveTab("Responses Received");
 
     setShowUserAuthorization(false);
-  }
-
-
+  };
 
   return (
     <>
@@ -558,15 +551,8 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
-
-              )
-
-              : showContactUs? (
-                <CreateCon >
-
               ) : showContactUs ? (
                 <CreateCon>
-
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
                 </CreateCon>
@@ -757,14 +743,8 @@ const DashBoard = () => {
             {showApplicants && <ApplicantsData />}
             {showCreateUser && <CreateUser />}
 
-
             {ShowUserAuthorization && <UserAuthorization />}
-            {showResponse && <ResponseData/>}
-
-
-
-
-
+            {showResponse && <ResponseData />}
           </Containerthree>
         </ContainerOne>
       </Container>
