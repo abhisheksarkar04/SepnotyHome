@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding-top: 10%;
   background-color: #0c111f;
-  width: 100vw;
+  width: 100%;
 `;
 export const TitleContainer = styled.div`
   display: flex;
@@ -97,8 +97,7 @@ export const Break1 = styled.hr`
 export const SeeMoreCon = styled.div`
   display: flex;
   flex-direction: row;
-
-  width: 100vw;
+  width: 100%;
 `;
 export const SeeMoreButton = styled.button`
   display: flex;

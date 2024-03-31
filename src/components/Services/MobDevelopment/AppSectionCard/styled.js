@@ -10,15 +10,21 @@ color:rgba(43, 69, 155, 1);
 font-size:26px;
 margin:0px 0px 20px 0px;
 padding-left:2%;
+@media screen and (max-width:576px){
+  font-size:16px;
+  padding-left:4%;
+}
 `;
 export const HeadingSpan=styled.span`
 width:65px;
 height:8%;
 margin-top:-9px;
-
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
+@media screen and (max-width:576px){
+  width:45px;
+}
 `;
 export const AppAbout=styled.p`
 font-size:24px;
@@ -28,6 +34,10 @@ color:white;
 padding-left:2%;
 margin-top:18px;
 margin-bottom:18px;
+@media screen and (max-width:576px){
+  font-size:14px;
+  padding-left:4%;
+}
 `;
 export const ImgCon = styled.div`
   display: flex;
@@ -36,6 +46,10 @@ export const ImgCon = styled.div`
   position: relative; /* Add this line */
   justify-content: flex-end; /* Add this line */
   padding-left:2%;
+  @media screen and (max-width:576px){
+    
+    padding-left:4%;
+  }
 `;
 export const InsertImg=styled.img`
 

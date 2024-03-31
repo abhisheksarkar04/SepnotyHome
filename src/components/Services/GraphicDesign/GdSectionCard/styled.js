@@ -3,13 +3,19 @@ export const AppCardCon=styled.div`
 display:flex;
 flex-direction:column;
 padding:10px;
-
 margin-bottom:30px;
+@media screen and (max-width:576px){
+  padding:0px;
+}
 `;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
 font-size:26px;
 margin:0px 0px 20px 47px;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:5%;
+}
 `;
 export const HeadingSpan=styled.span`
 width:65px;
@@ -19,6 +25,10 @@ margin-left:15px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
+@media screen and (max-width:576px){
+  width:45px;
+  margin-left:0px;
+}
 `;
 export const AppAbout=styled.p`
 font-size:24px;
@@ -27,6 +37,10 @@ color:white;
 margin-left:47px;
 margin-top:15px;
 margin-bottom:15px;
+@media screen and (max-width:576px){
+  font-size:14px;
+  margin-left:5%;
+}
 `;
 export const ImgCon = styled.div`
   display: flex;
@@ -35,6 +49,10 @@ export const ImgCon = styled.div`
   position: relative; /* Add this line */
   justify-content: flex-end; /* Add this line */
   margin-left:47px;
+  @media screen and (max-width:576px){
+  
+    margin-left:5%;
+  }
 `;
 export const InsertImg=styled.img`
 

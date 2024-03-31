@@ -559,12 +559,7 @@ const DashBoard = () => {
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
 
-              )
-
-              : showContactUs? (
-                <CreateCon >
-
-              ) : showContactUs ? (
+              ) :showContactUs || showContactUs ? (
                 <CreateCon>
 
                   <AddImg src={search} alt="search" />
