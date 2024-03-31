@@ -15,6 +15,10 @@ export const Heading = styled.h1`
   color: #ffffff;
   font-size: 35px;
   margin-bottom: 15px;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    padding: 30px 0px 10px 0px;
+  }
 `;
 export const SearchContainer = styled.div`
   display: flex;
@@ -40,6 +44,13 @@ export const Input = styled.input`
     font-weight: 500;
     padding: 5px;
   }
+  @media screen and (max-width: 576px) {
+    width: 200px;
+    &::placeholder {
+      color: #9ea6aa;
+      font-weight: 500;
+    }
+  }
 `;
 
 export const SearchIcon = styled.img`
@@ -50,6 +61,7 @@ export const SearchIcon = styled.img`
 export const Filter = styled.div`
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
 `;
 
 export const Items = styled.p`
@@ -57,6 +69,11 @@ export const Items = styled.p`
   color: #ffffff;
   margin-right: 20px;
   padding-bottom: 5px;
+  border-bottom: ${({ active }) => (active ? "1px solid #407BFF" : "")};
+  @media screen and (max-width: 576px) {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
 `;
 
 export const Break = styled.hr`
@@ -78,15 +95,17 @@ export const FilterBoxCon = styled.div`
     background-color: rgba(43, 69, 155, 1);
     color: white;
   }
+  @media screen and (max-width: 576px) {
+    font-size: 12.8px;
+    margin: 5px 0px 5px 4px;
+    padding: 3px 4px;
+  }
 `;
 
 export const FiltersContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-
-
-
 
 export const Break1 = styled.hr`
   color: #ffffff;
@@ -109,12 +128,15 @@ export const SeeMoreButton = styled.button`
   cursor: pointer;
   position: relative;
   color: #ffffff;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const HrLine = styled.hr`
   height: 1px;
   color: white;
-  width: 43%;
+  width: 40%;
 
   margin-top: 20px;
 `;
@@ -122,6 +144,10 @@ export const HrLine = styled.hr`
 export const Down = styled.img`
   height: 15px;
   width: 15px;
+  @media screen and (max-width: 576px) {
+    height: 12px;
+    width: 12px;
+  }
 `;
 
 export const DownCon = styled.div`
@@ -135,15 +161,30 @@ export const Browse = styled.p`
   color: #ffffff;
   padding-bottom: 5%;
   margin-left: 1%;
+  @media screen and (max-width: 576px) {
+    font-size: 13px;
+  }
 `;
 
 export const CaseStudyCon = styled.div`
   margin: 30px 5% 6% 7%;
+  @media screen and (max-width: 576px) {
+    margin: 10px 5px 30px 5px;
+  }
 `;
 
-export const CaseStudyImage = styled.img`
-  width: 13%;
-  margin-right: 5%;
+export const SeeMore = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 13px 5px 5px 5px;
+  cursor: pointer;
+  position: relative;
+  color: #ffffff;
+  font-size: 13px;
+  @media screen and (min-width: 577px) {
+    display: none;
+  }
 `;
-
-

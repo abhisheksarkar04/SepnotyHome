@@ -69,6 +69,7 @@ const HomeSection = () => {
 
   return (
     <>
+
   <Home>
   <Homehd1>
             Empowering The Next Generation of Software And Web-App Development
@@ -82,16 +83,40 @@ const HomeSection = () => {
             Sepnoty, is a Developing agency  Specialized in Delivering World class Solutions For Web and Mobile Through Mature And Development Technology.
   </Homep1>
   <HomeButtonVideo>
+
+      <Intro>
+        <Intro1>
+          <Intro2>
+            <Introhd1>
+              Empowering The Next Generation of Software And Web-App Development
+            </Introhd1>
+
+            <Introp1>
+              Sepnoty, is a Developing agency Specialized in Delivering World
+              class Solutions For Web and Mobile Through Mature And Development
+              Technology.
+            </Introp1>
+            <IntroButtonVideo>
+
               <Link to="/getproposal">
                 <HomeProposalText>Get a Proposal</HomeProposalText>
               </Link>
-              
+
               <HomePlayVideo>
                 <HomePlayButton src={play} alt="not found" />
                 <HomeVideoText>Watch Our Intro</HomeVideoText>
               </HomePlayVideo>
   </HomeButtonVideo>
   <CirclesText>
+
+
+              <IntroPlayVideo>
+                <IntroPlayButton src={play} alt="not found" />
+                <IntroVideoText>Watch Our Intro</IntroVideoText>
+              </IntroPlayVideo>
+            </IntroButtonVideo>
+            <Intro3>
+
               <IntroCircles>
                 <IntroWhiteCircle />
                 <IntroWhiteCircle />
@@ -128,6 +153,54 @@ const HomeSection = () => {
                 <HomeProposalTextRight>Get a Proposal</HomeProposalTextRight>
               </Link>
             <IntroExplorePart>
+              <IntroAchievements>
+                <IntroOrangeText>{projects}</IntroOrangeText>
+
+                <IntroBlackText>Projects Done</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{active}</IntroOrangeText>
+
+                <IntroBlackText>Active Customers</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{customer}</IntroOrangeText>
+
+                <IntroBlackText>Customers Support</IntroBlackText>
+              </IntroAchievements>
+            </IntroExplorePart>
+          </IntroRightPart>
+
+          <IntroButtonVideo2>
+            <Link to="/getproposal">
+              <IntroProposalText>Get a Proposal</IntroProposalText>
+            </Link>
+            <IntroPlayVideo>
+              <IntroPlayButton src={play} alt="not found" />
+              <IntroVideoText>Watch Our Intro</IntroVideoText>
+            </IntroPlayVideo>
+            <Introp11>
+              Sepnoty, is a Developing agency Specialized in Delivering World
+              class Solutions For Web and Mobile Through Mature And Development
+              Technology.
+            </Introp11>
+          </IntroButtonVideo2>
+        </Intro1>
+        <Intro33>
+          <IntroCircles>
+            <IntroWhiteCircle />
+            <IntroWhiteCircle />
+            <IntroWhiteCircle />
+            <IntroBlueCircle />
+            <IntroBlueCircle />
+          </IntroCircles>
+
+          <IntroRightText>
+            1.8k People bought our services today.
+          </IntroRightText>
+        </Intro33>
+
+        <IntroExplorePart2>
           <IntroAchievements>
             <IntroOrangeText>{projects}</IntroOrangeText>
 
@@ -143,11 +216,16 @@ const HomeSection = () => {
 
             <IntroBlackText>Customers Support</IntroBlackText>
           </IntroAchievements>
+
         </IntroExplorePart>
           </HomeRight>
   </HomeLeftRight>
   </Home>
   </>
+
+        </IntroExplorePart2>
+      </Intro>
+    </>
 
   );
 };
