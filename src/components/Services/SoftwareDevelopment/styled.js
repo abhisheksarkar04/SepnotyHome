@@ -5,20 +5,30 @@ export const SoftDevSection = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
+  @media screen and (max-width:576px){
+    width:100%;
+  }
 `;
 export const ServiceSpan = styled.span`
   font-weight: normal;
-  font-size: 20px;
+  
 `;
 export const PageTitle = styled.h2`
   color: white;
   font-size: 20px;
   padding: 100px 0px 20px 6%;
+  @media screen and (max-width:576px){
+    padding: 100px 0px 20px 3%; 
+    font-size: 14px;
+  }
 `;
 
 export const SectionThreeHeading = styled.h2`
   font-size: 25px;
   text-align: center;
+  @media screen and (max-width:576px){
+    font-size:20px;
+  }
 `;
 export const SpanThree = styled.span`
   color: rgba(43, 69, 155, 1);
@@ -30,12 +40,21 @@ export const SectionThreeDescription = styled.p`
   margin: 40px;
   word-spacing: 3px;
   margin-left: 6%;
+  @media screen and (max-width:576px){
+    width:90%;
+    margin-left: 3%;
+    font-size:14px;
+  }
 `;
 export const SectionThree = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 6%;
   justify-content: space-between;
+  @media screen and (max-width:576px){
+    padding:3%;
+    justify-content:center;
+  }
 `;
 export const SectionFour = styled.div`
   background-color: rgba(37, 73, 137, 1);
@@ -48,6 +67,9 @@ export const SectionFourHeading = styled.h2`
   color: white;
   align-self: center;
   font-size: 28px;
+  @media screen and (max-width:576px){
+    font-size:20px;
+  }
 `;
 export const SectionFourDescription = styled.p`
   font-size: 24px;
@@ -56,6 +78,10 @@ export const SectionFourDescription = styled.p`
   margin: 40px;
   word-spacing: 3px;
   margin-left: 6%;
+  @media screen and (max-width:576px){
+    font-size:14px;
+    width: 90%;
+  }
 `;
 export const ChooseSection = styled.div`
   display: flex;
@@ -72,12 +98,19 @@ export const SectionFiveHeading = styled.h2`
   font-size: 28px;
   text-align: center;
   margin-top: 25px;
+  @media screen and (max-width:576px){
+    font-size:20px;
+    
+  }
 `;
 export const SectionFiveTitle = styled.h3`
   font-size: 30px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px;
+  @media screen and (max-width:576px){
+    font-size:20px;
+  }
 `;
 export const SpanFive = styled.span`
   color: rgba(43, 69, 155, 1);
@@ -90,6 +123,10 @@ export const WorksCon = styled.div`
   margin-top: 30px;
   margin-bottom: 20px;
   padding-left: 6%;
+  @media screen and (max-width:576px){
+    justify-content:center;
+    padding-left: 0%;
+  }
 `;
 export const SectionSix = styled.div`
   padding: 30px;
