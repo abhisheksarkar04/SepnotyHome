@@ -8,6 +8,8 @@ import {
   Description,
   CuateImage,
   CuateImage11,
+  HeadImgCon,
+  Header,
 } from "./styled";
 
 import django from "./Images/django-logo.svg";
@@ -22,7 +24,7 @@ import Php from "./Images/PhP.svg";
 /* import cuate from "./Images/cuate.svg"; */
 
 import idea from "./Images/idea.svg";
-
+import cuate from "./Images/cuate11.svg";
 const Idea = () => (
   <>
     <Container>
@@ -37,7 +39,10 @@ const Idea = () => (
       </ImgContainer>
       <ContentContainer>
         <div>
-          <CuateImage11 src={idea} alt="Idea" />
+          <HeadImgCon>
+            <Header>From Idea-To-Development</Header>
+            <CuateImage11 src={cuate} alt="Idea" />
+          </HeadImgCon>
           <Heading>From Idea-To-Development</Heading>
           <Description>
             we are a development agency focused on delivering top-tier solution

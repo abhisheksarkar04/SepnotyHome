@@ -104,7 +104,9 @@ export const FilterBoxCon = styled.div`
 
 export const FiltersContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: wrap;
+  width: 100%;
 `;
 
 export const Break1 = styled.hr`
@@ -116,7 +118,7 @@ export const Break1 = styled.hr`
 export const SeeMoreCon = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+
 `;
 export const SeeMoreButton = styled.button`
   display: flex;
@@ -136,11 +138,16 @@ export const SeeMoreButton = styled.button`
 export const HrLine = styled.hr`
   height: 1px;
   color: white;
-  width: 40%;
-
+  width: 42%;
   margin-top: 20px;
 `;
 
+export const HrL = styled.hr`
+  height: 1px;
+  color: white;
+  width: 42%;
+  margin-top: 20px;
+`;
 export const Down = styled.img`
   height: 15px;
   width: 15px;

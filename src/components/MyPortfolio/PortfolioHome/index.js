@@ -17,6 +17,7 @@ import {
   Browse,
   CaseStudyCon,
   SeeMore,
+  HrL,
 } from "./styled";
 
 import { useState } from "react";
@@ -188,7 +189,7 @@ const PortfolioHome = () => {
           </SeeMore>
           <Down src={down} alt="down" />
         </DownCon>
-        <HrLine />
+        <HrL />
       </SeeMoreCon>
       <Browse>Browse all Case Studies</Browse>
 
