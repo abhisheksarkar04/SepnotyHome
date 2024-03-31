@@ -18,7 +18,7 @@ export const ImgContainer = styled.div`
   // ${"" /* width: 80%; */}
 
   @media screen and (max-width: 576px) {
-    margin: 20px -10px 0 -10px;
+    margin: 0px -10px 0 -10px;
 
     margin-top: 20px;
   }
@@ -46,6 +46,9 @@ export const ContentContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: 5% 0 5% 5%;
+  @media screen and (max-width: 576px) {
+    margin: -20px 10px 10px 0px;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -71,7 +74,7 @@ export const Description = styled.p`
     width: 320px;
     padding-top: 0px;
     line-height: 2;
-    margin-left: -30px;
+    margin-left: 0px;
     margin-top: -40px;
   }
 `;
@@ -96,7 +99,8 @@ export const CuateImage = styled.img`
 export const CuateImage11 = styled.img`
   width: 40%;
   height: 250px;
-  margin-left: 3%;
+  margin-left: 0px;
+  margin-right: -15px;
 `;
 
 export const PatternCon = styled.div`
@@ -108,8 +112,8 @@ export const HeadImgCon = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  jusftify-content: center;
-  margin: 0px -30px 0px -30px;
+  justify-content: space-between;
+  margin: 0px 0px 0px 0px;
 
   @media screen and (min-width: 577px) {
     display: none;
@@ -120,5 +124,5 @@ export const Header = styled.h1`
   font-size: 15px;
   margin-top: 50px;
   color: #4c64b2;
-  margin-right: 30px;
+  margin-right: 3%;
 `;

@@ -119,7 +119,6 @@ export const SeeMoreCon = styled.div`
   display: flex;
   flex-direction: row;
 
-  width: 100vw;
 `;
 export const SeeMoreButton = styled.button`
   display: flex;

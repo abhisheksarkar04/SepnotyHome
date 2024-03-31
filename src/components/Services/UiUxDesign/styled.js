@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const UiUxDesignPage = styled.div`
   background-color: rgba(12, 17, 31, 1);
-  width: 100vw;
+  width: 100%;
 `;
 export const ServiceSpan = styled.span`
   font-weight: normal;
