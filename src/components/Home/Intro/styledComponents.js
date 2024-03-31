@@ -234,7 +234,7 @@ export const IntroExplorePart = styled.div`
   @media screen and (max-width: 576px) {
     display: none;
     padding: 30px 0px 50px 30px;
-    justify-content: space-between;
+    
     
    }
 `;

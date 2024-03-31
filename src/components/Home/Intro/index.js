@@ -82,21 +82,9 @@ const HomeSection = () => {
   <Homep1>
             Sepnoty, is a Developing agency  Specialized in Delivering World class Solutions For Web and Mobile Through Mature And Development Technology.
   </Homep1>
+
   <HomeButtonVideo>
 
-      <Intro>
-        <Intro1>
-          <Intro2>
-            <Introhd1>
-              Empowering The Next Generation of Software And Web-App Development
-            </Introhd1>
-
-            <Introp1>
-              Sepnoty, is a Developing agency Specialized in Delivering World
-              class Solutions For Web and Mobile Through Mature And Development
-              Technology.
-            </Introp1>
-            <IntroButtonVideo>
 
               <Link to="/getproposal">
                 <HomeProposalText>Get a Proposal</HomeProposalText>
@@ -108,15 +96,6 @@ const HomeSection = () => {
               </HomePlayVideo>
   </HomeButtonVideo>
   <CirclesText>
-
-
-              <IntroPlayVideo>
-                <IntroPlayButton src={play} alt="not found" />
-                <IntroVideoText>Watch Our Intro</IntroVideoText>
-              </IntroPlayVideo>
-            </IntroButtonVideo>
-            <Intro3>
-
               <IntroCircles>
                 <IntroWhiteCircle />
                 <IntroWhiteCircle />
@@ -169,36 +148,11 @@ const HomeSection = () => {
                 <IntroBlackText>Customers Support</IntroBlackText>
               </IntroAchievements>
             </IntroExplorePart>
-          </IntroRightPart>
+          
 
-          <IntroButtonVideo2>
-            <Link to="/getproposal">
-              <IntroProposalText>Get a Proposal</IntroProposalText>
-            </Link>
-            <IntroPlayVideo>
-              <IntroPlayButton src={play} alt="not found" />
-              <IntroVideoText>Watch Our Intro</IntroVideoText>
-            </IntroPlayVideo>
-            <Introp11>
-              Sepnoty, is a Developing agency Specialized in Delivering World
-              class Solutions For Web and Mobile Through Mature And Development
-              Technology.
-            </Introp11>
-          </IntroButtonVideo2>
-        </Intro1>
-        <Intro33>
-          <IntroCircles>
-            <IntroWhiteCircle />
-            <IntroWhiteCircle />
-            <IntroWhiteCircle />
-            <IntroBlueCircle />
-            <IntroBlueCircle />
-          </IntroCircles>
-
-          <IntroRightText>
-            1.8k People bought our services today.
-          </IntroRightText>
-        </Intro33>
+          
+        
+       
 
         <IntroExplorePart2>
           <IntroAchievements>
@@ -217,15 +171,13 @@ const HomeSection = () => {
             <IntroBlackText>Customers Support</IntroBlackText>
           </IntroAchievements>
 
-        </IntroExplorePart>
+        </IntroExplorePart2>
           </HomeRight>
   </HomeLeftRight>
   </Home>
   </>
 
-        </IntroExplorePart2>
-      </Intro>
-    </>
+      
 
   );
 };
