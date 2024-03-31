@@ -551,7 +551,12 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
+
+
+              ) :showContactUs || showContactUs ? (
+
               ) : showContactUs ? (
+
                 <CreateCon>
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
