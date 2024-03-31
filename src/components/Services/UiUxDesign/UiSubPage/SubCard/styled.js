@@ -5,6 +5,9 @@ display:flex;
 flex-direction:column;
 padding:20px;
 padding-top:70px 0px 60px 30px;
+@media screen and (max-width:576px){
+  padding-left:2%;
+}
 `;
 
 export const SubHead=styled.h2`
@@ -12,6 +15,10 @@ color:rgba(43, 69, 155, 1);
 font-size:28px;
 margin:60px 0px 20px 47px;
 z-index:1;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:42px;
+}
 `;
 export const SubHeadSpan = styled.span`
   width: 65px;
@@ -21,17 +28,28 @@ export const SubHeadSpan = styled.span`
   position: absolute;
   background-color: rgba(129, 150, 219, 0.3); /* Adjust the alpha value as needed */
   z-index:0;
+  @media screen and (max-width:576px){
+    width:45px;
+  }
 `;
 export const SubPageImg=styled.img`
-width:300px;
-height:300px;
+width:30vw;
+height:40vh;
 margin-left:40px;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:42px;
+}
 `;
 export const SubPara=styled.p`
 font-size:20px;
 margin:0px 0px 20px 47px;
 color:white;
 width:80%;
+@media screen and (max-width:576px){
+  font-size:14px;
+  width:90%;
+}
 `;
 export const BackButton=styled.button`
 

@@ -20,8 +20,6 @@ const Top = () => {
     <AdServices1>
     <AdServDots src={pattern} alt="not found"></AdServDots>
      <AdSeviceLeftText>
-
-
      <AdServiceRightPart1>
      <AdServiceRightImg src={Serveimg} alt="not found">
      </AdServiceRightImg>

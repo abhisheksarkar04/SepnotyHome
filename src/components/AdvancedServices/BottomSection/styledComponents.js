@@ -4,10 +4,9 @@ export const ServiceCards=styled.div`
 display:flex;
 flex-direction:row;
 flex-wrap:wrap;
-
 padding: 0px 60px 0px 60px;
 justify-content:space-around;
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     justify-content:space-between;
     flex-wrap: wrap;
     padding: 0px 10px 0px 0px;
@@ -33,11 +32,11 @@ transition: transform 0.3s, background-color 0.3s;
     transform: scale(1.05); /* Zoom out effect */
     background-color: #254989; /* Change color on hover */
   }
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     flex: 44%;
     width:40%;
     margin:10px;
-    height:30vh;
+    height:60vh;
     background-color: #D6DAE7;
     border-radius:5px;
 }
@@ -122,15 +121,14 @@ export const PopUpCardContainer = styled.div`
   height:500px;
   display:flex;
   flex-direction:column;
-  
+  border:1px solid white;
   color:white;
-  @media screen and (max-width:555px){
-    height: 40%;
-    width: auto;
+  @media screen and (max-width:576px){
+    height: 60%;
+    width:40%;
     top: 50%;
-    margin-left: -5%;
-    font-size: 100%;
-
+    margin-left: -20%;
+    
   }
 `;
 export const PopupLftRgt=styled.div`

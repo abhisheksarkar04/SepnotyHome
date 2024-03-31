@@ -9,6 +9,9 @@ width:30%;
 justify-content: center;
 margin-top:25px;
 margin-right:10px;
+@media screen and (max-width:576px){
+    width:70%;
+  }
 `;
 export const WebTechImg=styled.img`
 width: 50px;

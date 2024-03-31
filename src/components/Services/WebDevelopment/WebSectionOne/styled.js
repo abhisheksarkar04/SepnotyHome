@@ -6,12 +6,19 @@ padding:40px 0px 20px 0px;
 padding-left:6%;
 width:100%;
 min-height: 40vh;
+@media screen and (max-width:576px){
+    padding-left:3%;
+    padding-top:10px;
+  }
 `;
 export const WebSectionOneHeading=styled.h2`
 font-size:26px;
 color:white;
 width:30%;
-
+@media screen and (max-width:576px){
+    width:50%;
+    font-size:20px;
+  }
 `;
 export const WebSectionDescription=styled.p`
 font-size:24px;
@@ -19,8 +26,10 @@ margin-top:20px;
 width:80%;
 color:white;
 text-align:justify;
-
-
+@media screen and (max-width:576px){
+    font-size:14px;
+    width:90%;
+}
 `;
 export const BackgroundShapeOne=styled.span`
 position:absolute;
