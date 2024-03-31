@@ -23,7 +23,7 @@ export const CardContainer = styled.div`
     text-align: justify;
   }
 
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     border-radius: 12px;
     flex: 45%;
     width: 70%;
@@ -42,7 +42,7 @@ export const CardHeader = styled.div`
   align-items: center;
   padding-left: 10px;
 
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     padding: 0px;
   }
 `;
@@ -53,7 +53,7 @@ export const CardNumber = styled.h1`
   @media screen and (min-width: 1550px) {
     font-size: 23px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 18px;
     margin-top: -18px;
     align-self: flex-start;
@@ -68,7 +68,7 @@ export const CardTitle = styled.h1`
   @media screen and (min-width: 1550px) {
     font-size: 20px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 18px;
     margin-top: -20px;
     align-self: flex-end;
@@ -84,7 +84,7 @@ export const CardParagraph = styled.p`
   @media screen and (min-width: 1550px) {
     font-size: 17px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 90%;
     line-height: 1.5em;
     margin: -10px 0 10px 0;
@@ -104,7 +104,7 @@ export const Button = styled.button`
   @media screen and (min-width: 1550px) {
     font-size: 17px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     height: 10%;
     font-size: 8px;
   }
@@ -119,7 +119,7 @@ export const PopupContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 71%;
     height: 52%;
     left: 10%;
@@ -133,7 +133,7 @@ export const PopupContent = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 `;
@@ -151,7 +151,7 @@ export const PopupTitle = styled.h1`
   font-size: 18px;
   text-align: center;
   margin-bottom: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 100%;
   }
 `;
@@ -160,7 +160,7 @@ export const PopupImage = styled.img`
   height: 120px;
   width: 120px;
   margin: 0px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     height: 80px;
     width: 80px;
     align-self: center;
@@ -177,7 +177,7 @@ export const PopupHeading = styled.h1`
   font-weight: 500;
   font-size: 16px;
   text-align: center;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 80%;
   }
 `;
@@ -187,7 +187,7 @@ export const Header = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 30px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
   }
 `;
 
@@ -197,7 +197,7 @@ export const PopupDesc = styled.p`
   padding: 20px;
   line-height: 1.25em;
   font-weight: 500;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 70%;
     width: ;
   }

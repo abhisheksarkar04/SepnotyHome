@@ -16,7 +16,7 @@ export const CardListContainer = styled.ul`
   justify-content: space-between;
   align-items: center;
   margin: 30px 10%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-wrap: wrap;
 
     margin-left: -40px;
@@ -30,7 +30,7 @@ export const Description = styled.p`
   color: #858585;
   width: 600px;
   font-weight: bold;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 17px;
     width: 95%;
     margin-left: -20px;

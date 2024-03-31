@@ -19,7 +19,7 @@ export const AdSeviceLeftText = styled.div`
 `;
 export const AdServiceLeftHeading = styled.h2`
   font-size: 30px;
-  color: #B7B6BD;
+  color: #b7b6bd;
   margin-top: 20px;
   @media screen and (max-width: 768px) {
     display: none;
@@ -27,13 +27,12 @@ export const AdServiceLeftHeading = styled.h2`
 `;
 export const AdServiceLeftHeading1 = styled.h2`
   font-size: 25px;
-  color: #B7B6BD;
+  color: #b7b6bd;
   margin-top: 150px;
   display: none;
   @media screen and (max-width: 768px) {
     display: inline;
     width: 300px;
-
   }
 `;
 export const AdServiceLeftHeadingBlue = styled.span`
@@ -49,7 +48,7 @@ export const AdServiceLeftDescript = styled.p`
   margin-top: 20px;
   font-size: 20px;
   width: 60%;
-  color: #B7B6BD;
+  color: #b7b6bd;
   letter-spacing: 1px;
   @media screen and (max-width: 768px) {
     font-size: 16px;

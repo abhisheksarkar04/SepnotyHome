@@ -8,6 +8,7 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
   @media screen and (max-width: 576px) {
     padding-bottom: 0px;
+    width: 100%;
   }
 `;
 
@@ -289,7 +290,7 @@ export const ToolsCard = styled.div`
   margin: 30px 30px 30px 30px;
   @media screen and (max-width: 576px) {
     width: 290px;
-    margin: 10px;
+    margin: 10px 0px 10px 0px;
     height: 270px;
   }
 `;
