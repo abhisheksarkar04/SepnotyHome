@@ -17,7 +17,7 @@ padding: 15px;
 border-radius: 8px;
 margin-left: 30%;
 box-shadow:rgba(43, 69, 155, 1);
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 576px) {
   width: 100%;
   margin-left: 0%;
   ${'' /* height: 48vh; */}
@@ -38,10 +38,10 @@ export const OurWorkList=styled.ul`
   justify-content: center;
   list-style: none;
 
-  @media screen and (max-width: 555px) {
-      flex-direction: row;
+  @media screen and (max-width: 576px) {
+      
       flex-wrap:wrap;
-      margin-left:-70px;
+      
   }
 `;
 
@@ -55,10 +55,11 @@ export const OurWorkServiceCardContainer=styled.li`
   box-sizing: border-box;
   width:28%;
   height:40%;
-  @media screen and (max-width: 555px) {
-    flex:30%;
+  @media screen and (max-width: 576px) {
+    padding:0px;
     margin-left: 0px;
-    width: 90%;
+    width: 50%;
+
 }
 `;
 
@@ -76,7 +77,6 @@ height: 5px;
   border:none;
   align-self: center;
   background-color:#2B459B;
-  
 `;
 
 export const OurWorkServiceDetails=styled.div`
@@ -90,8 +90,8 @@ text-align:left;
 line-height: 18px;
 color:#B7B6BD;
 margin-left: 30px;
-@media screen and (max-width: 555px) {
-  width: 80%;
+@media screen and (max-width: 576px) {
+  width: 100%;
   font-size: 8px;
 }
 `;
@@ -124,9 +124,9 @@ font-family: Roboto;
 color:#B7B6BD;
 line-height: 40px;
 margin-top: 30px;
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 576px) {
   margin-top: 30px;
-  font-size: 15px;
+  font-size: 14px;
 }
 }
 `;
@@ -148,7 +148,7 @@ border-radius:8px;
 border:none;
 font-size: 15px;
 background: rgba(43, 69, 155, 1);
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 576px) {
   border-radius:5px;
 }
 `;
@@ -183,7 +183,7 @@ export const AdServRightDots = styled.img`
   margin-top: -250px;
   height: 330px;
   width: 350px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
