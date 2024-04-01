@@ -386,7 +386,7 @@ ${
   font-size:13px;
 }
 `
-const Form2 = Styled.form`
+const Form2 = Styled.div`
 ${media.mobile}{
   width:220px;
   border-radius:5px;
