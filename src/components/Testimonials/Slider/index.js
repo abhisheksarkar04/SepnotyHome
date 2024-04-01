@@ -1,33 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import Buttons from "../Buttons/index";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 export default function CommentsSection() {
-    const [activeIndex, setActiveIndex] = useState(1);
-    const [slidesPerView, setSlidesPerView] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(1);
+  const [slidesPerView, setSlidesPerView] = useState(3);
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 576) {
-                setSlidesPerView(2);
-            } else {
-                setSlidesPerView(3);
-            }
-        };
-
-        handleResize(); // Call once to set initial value
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const handleSlideChange = (swiper) => {
-        setActiveIndex(swiper.activeIndex);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 576) {
+        setSlidesPerView(2);
+      } else {
+        setSlidesPerView(3);
+      }
     };
+
 
     const comments = [
         {
@@ -99,6 +90,7 @@ export default function CommentsSection() {
             </StyledSwiper>
         </>
     );
+
 }
 
 const StyledSwiper = Styled(Swiper)`
@@ -109,27 +101,20 @@ const StyledSwiper = Styled(Swiper)`
     }
 `;
 
-
-
-
 const Main = Styled.div`
 position:on;
 background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);
-`
+`;
 
 // const Main = Styled.div`
 // position:on;
 // background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);
 // `
 
-
-
 // const Main = Styled.div`
 // position:on;
 // background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);
 // `
-
-
 
 const MainContainer = Styled.div`
 display: flex;
@@ -151,7 +136,7 @@ width:450px;
     height: 250px;
     margin-right:20px;
   }
-`
+`;
 const CardContainer = Styled.div`
 background: #121415;
 border-radius:15px;
@@ -171,13 +156,13 @@ margin-bottom:10px;
   width: calc(100% - 30px);
 
   }
-`
+`;
 const Stars = Styled.a`
 font-size:10px;
 margin-bottom:5px;
-`
+`;
 const Para1 = Styled.p`
-color:${(props) => (props.active ? '#2B459B' : '#343D48')};
+color:${(props) => (props.active ? "#2B459B" : "#343D48")};
 font-size: 18px;
 font-weight: 700;
 line-height: 33px;
@@ -191,9 +176,9 @@ margin-top:10px;
     width:100%;
 
   }
-`
+`;
 const Para2 = Styled.p`
-color:${(props) => (props.active ? '#2B459B' : 'white')};
+color:${(props) => (props.active ? "#2B459B" : "white")};
 font-size: 18px;
 font-weight: 400;
 line-height: 38px;
@@ -205,25 +190,25 @@ margin-top:10px;
     line-height: 18px;
     width:100%;
   }
-`
+`;
 const ProfileCon = Styled.div`
 display: flex;
 flex-direction:row;
 gap:20px;
 margin-top:20px;
-`
+`;
 const Image = Styled.img`
 @media screen and (max-width:576px){
     height: 20px;
     width:20px;
   }
 
-`
+`;
 const Details = Styled.div`
 display: flex;
 flex-direction:column;
 
-`
+`;
 const Name = Styled.a`
 color:#2B459B;
 font-size:15px;
@@ -231,12 +216,13 @@ font-size:15px;
 @media screen and (max-width:576px){
     font-size:10px;
   }
-`
+`;
 const Role = Styled.a`
 color:#2B459B;
 font-size:12px;
 @media screen and (max-width:576px){
     font-size:10px;
+
 
   }`
 

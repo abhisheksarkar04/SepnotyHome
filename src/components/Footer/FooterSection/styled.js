@@ -115,6 +115,7 @@ export const ContactHeading = styled.h1`
     text-align: left;
   }
 `;
+export const NewsContainer = styled.div``;
 
 export const NewsHeading = styled.h1`
   font-size: 17px;
@@ -145,12 +146,12 @@ export const InputHolder = styled.input`
   padding: 7px;
   width: 200px;
   outline: none;
-  z-index: 2;
 
   & ::placeholder {
     color: #e2dccc;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 576px) {
+    width: 180px;
   }
 `;
 
@@ -160,12 +161,6 @@ export const EmailMsg = styled.p`
   padding-top: 10px;
   @media screen and (max-width: 576px) {
     margin-bottom: 20px;
-  }
-`;
-
-export const NewsContainer = styled.div`
-  @media screen and (max-width: 576px) {
-    display: none;
   }
 `;
 

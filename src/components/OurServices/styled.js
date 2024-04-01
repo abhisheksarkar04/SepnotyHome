@@ -5,6 +5,7 @@ export const Container = styled.div`
   padding: 10px;
   @media screen and (max-width: 576px) {
     padding: 30px;
+    width: 100%;
   }
 `;
 
@@ -114,7 +115,8 @@ export const HeadImgCon = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0px 0px 0px 0px;
-
+  width: 100%;
+  flex-flow: wrap;
   @media screen and (min-width: 577px) {
     display: none;
   }

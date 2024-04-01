@@ -28,6 +28,8 @@ a {
 @media screen and (max-width: 576px) {
   .navbar {
     height: 7vh;
+    padding: 0px 5px;
+    width: 100%;
   }
 }
 
@@ -59,10 +61,7 @@ a {
   text-align: center;
   font-size: 80px;
 }
-.mobile-menu-icon {
-  display: none;
-  color: white;
-}
+
 button {
   border: none;
   text-decoration: none;
@@ -86,11 +85,6 @@ button {
   }
   ul li:hover {
     color: #6b7eb1;
-  }
-  .mobile-menu-icon {
-    position: absolute;
-    display: block;
-    right: 20px;
   }
   .hero h1 {
     font-size: 50px;
