@@ -76,6 +76,9 @@ export const Desc = Styled.p`
 `;
 export const SliderCon = Styled.div`
 padding-left:20px;
+@media screen and (max-width:576px){
+  gap:30px;
+}
 `;
 
 // background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);
