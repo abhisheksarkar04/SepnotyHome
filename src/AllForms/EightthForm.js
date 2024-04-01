@@ -40,10 +40,11 @@ class CourseDetails extends Component {
     this.props.prevStep();
   }
 
-  submitdata = () => {
-    const {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
+  submitdata = (e) => {
+    e.preventDefault();
+    const {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
     const formData = {
-      feild8 : {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
+      feild8 : {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
     }
     this.props.onDataReceived(formData);
   }
@@ -166,11 +167,12 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
         </Mai>
         
         </M>
-        </form>
+        
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
             <button type="submit" className='buttons__button buttons__button--next' disabled={isSubmitDisabled} onClick={this.submitdata} >Submit</button>
           </Button>
+          </form>
       </Main>
     )
   }
@@ -354,17 +356,12 @@ const Span = styled.span`
 color:#BC2424;
 `
 const P5 = styled.p`
-
 font-size:12px;
-
 font-size:13px;
 line-height: 1.5;
 line-space: 20px;
 font-weight: 600;
-
 margin-left:40px;
-
 margin-left:20px;
-
 color:#263238;
 `

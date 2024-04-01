@@ -62,6 +62,10 @@ export default function CommentsSection() {
             role: "CEO Tech Industry",
             image: "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg"
         }
+
+
+
+        
     ];
 
     return (
@@ -236,5 +240,3 @@ font-size:12px;
 
   }`
 
-  }
-`

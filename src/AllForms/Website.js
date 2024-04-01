@@ -95,7 +95,6 @@ class Form extends Component {
     this.setState(prevState => ({
       recivedData: [...prevState.recivedData, data]
     }), () => {
-      console.log(this.state.recivedData)
       const jsonData = this.convertToJSON();
       console.log(jsonData);
     });
@@ -122,7 +121,7 @@ class Form extends Component {
     const getReceivedData = (index) => {
       return recivedData[index];
     };
-    console.log(getReceivedData(0))
+    //console.log(getReceivedData(0))
     
     switch(step) {
       case 1: 
