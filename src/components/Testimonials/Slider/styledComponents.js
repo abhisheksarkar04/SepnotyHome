@@ -15,7 +15,7 @@ padding: 10px;
 height:350px;
 margin-top:30px;
 width:450px;
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     width:300px;
     height:200px;
     margin-left:-10px;
@@ -30,7 +30,7 @@ height: 400px;
 width:400px;
 box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     height: 250px;
     width: 400px;
   }
@@ -50,10 +50,10 @@ text-align: left;
 margin-top:10px;
 
 
-@media screen and (max-width:455px){
 
 
-@media screen and (max-width:555px){
+
+@media screen and (max-width:576px){
     font-size: 8px;
   }
 `
@@ -68,10 +68,8 @@ text-align: left;
 margin-top:10px;
 
 
-@media screen and (max-width:455px){
 
-
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     font-size: 8px;
     line-height: 18px;
   }
@@ -83,7 +81,7 @@ gap:20px;
 margin-top:20px;
 `
 export const Image = Styled.img`
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     height: 20px;
     width:20px;
   }
@@ -100,12 +98,10 @@ font-size:15px;
 font-family: Lexend;
 
 
-@media screen and (max-width:455px){
-
-@media screen and (max-width:555px){
 
 
-@media screen and (max-width:555px){
+
+@media screen and (max-width:576px){
 
     font-size:10px;
   }
@@ -115,12 +111,9 @@ color:#2B459B;
 font-size:12px;
 font-family: Lexend;
 
-@media screen and (max-width:455px){
-
-@media screen and (max-width:555px){
 
 
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
 
     font-size:8px;
   }

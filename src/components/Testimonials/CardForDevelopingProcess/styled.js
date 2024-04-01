@@ -25,10 +25,10 @@ export const CardContainer = styled.div`
 
   @media screen and (max-width: 576px) {
     border-radius: 12px;
-    flex: 45%;
-    width: 70%;
-    height: 430px;
-    margin: 20px 10px 10px 0px;
+    height: 300px;
+    width: 47%;
+    margin: 10px 10px 10px 0px;
+    padding: 10px 0px;
   }
   @media screen and (min-width: 1550px) {
     height: 380px;
@@ -38,12 +38,10 @@ export const CardContainer = styled.div`
 
 export const CardHeader = styled.div`
   display: flex;
-
   align-items: center;
   padding-left: 10px;
-
   @media screen and (max-width: 576px) {
-    padding: 0px;
+    padding: 0px 0px 0px 5px;
   }
 `;
 
@@ -55,8 +53,6 @@ export const CardNumber = styled.h1`
   }
   @media screen and (max-width: 576px) {
     font-size: 18px;
-    margin-top: -18px;
-    align-self: flex-start;
   }
 `;
 
@@ -69,9 +65,7 @@ export const CardTitle = styled.h1`
     font-size: 20px;
   }
   @media screen and (max-width: 576px) {
-    font-size: 18px;
-    margin-top: -20px;
-    align-self: flex-end;
+    font-size: 15px;
   }
 `;
 
@@ -81,14 +75,17 @@ export const CardParagraph = styled.p`
   color: #b7b6bd;
   line-height: 1.5em;
   padding-left: 10px;
+
   @media screen and (min-width: 1550px) {
-    font-size: 17px;
+    font-size: 14px;
+    padding-left: 10px;
   }
   @media screen and (max-width: 576px) {
-    font-size: 90%;
+    font-size: 13px;
     line-height: 1.5em;
     margin: -10px 0 10px 0;
     font-weight: 500;
+    padding-left: 5px;
   }
 `;
 
@@ -105,8 +102,8 @@ export const Button = styled.button`
     font-size: 17px;
   }
   @media screen and (max-width: 576px) {
-    height: 10%;
-    font-size: 8px;
+    font-size: 14px;
+    padding: 8px 30px 8px 30px;
   }
 `;
 
