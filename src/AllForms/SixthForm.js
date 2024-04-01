@@ -354,7 +354,7 @@ ${media.mobile}{
   margin-top:0px;
 }
 `
-const Form = Styled.form`
+const Form = Styled.div`
 ${media.mobile}{width:220px;}
 `
 const Input1 = Styled.input`
