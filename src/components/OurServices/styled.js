@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-color: #0c111f;
   padding: 10px;
   @media screen and (max-width: 576px) {
-    padding: 30px;
+    padding: 15px;
     width: 100%;
   }
 `;
@@ -19,7 +19,7 @@ export const ImgContainer = styled.div`
   // ${"" /* width: 80%; */}
 
   @media screen and (max-width: 576px) {
-    margin: 0px -10px 0 -10px;
+    margin: 0px -5px 0 -5px;
 
     margin-top: 20px;
   }
@@ -32,7 +32,7 @@ export const Image = styled.img`
   border-right: 1px solid #abaaaa;
   @media screen and (max-width: 576px) {
     height: 15px;
-    width: 15%;
+    width: 14.5%;
     padding: 0px 10px 0px 10px;
     border-right: 1px solid #abaaaa;
   }
@@ -98,10 +98,10 @@ export const CuateImage = styled.img`
 `;
 
 export const CuateImage11 = styled.img`
-  width: 40%;
+  width: 36%;
   height: 250px;
   margin-left: 0px;
-  margin-right: -15px;
+  margin-right: 0px;
 `;
 
 export const PatternCon = styled.div`
@@ -113,10 +113,10 @@ export const HeadImgCon = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin: 0px 0px 0px 0px;
+
+  margin: 0px 10px 0px 0px;
   width: 100%;
-  flex-flow: wrap;
+
   @media screen and (min-width: 577px) {
     display: none;
   }

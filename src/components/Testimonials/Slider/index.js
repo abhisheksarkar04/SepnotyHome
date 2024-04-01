@@ -19,78 +19,90 @@ export default function CommentsSection() {
       }
     };
 
+    handleResize(); // Call once to set initial value
 
-    const comments = [
-        {
-            stars: "⭐⭐⭐⭐⭐",
-            para1: "Modern look & trending design",
-            para2: "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-            name: "Naqash Shahid",
-            role: "CEO Tech Industry",
-            image: "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg"
-        },
-        {
-            stars: "⭐⭐⭐⭐⭐",
-            para1: "Design Quality & performance",
-            para2: "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-            name: "Bianca",
-            role: "Program Manager",
-            image: "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg"
-        },
-        {
-            stars: "⭐⭐⭐⭐⭐",
-            para1: "Layout and organized layers",
-            para2: "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-            name: "Denny Hilguston",
-            role: "CEO Tech Industry",
-            image: "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg"
-        },
-        {
-            stars: "⭐⭐⭐⭐⭐",
-            para1: "Modern look & trending design",
-            para2: "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-            name: "Naqash Shahid",
-            role: "CEO Tech Industry",
-            image: "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg"
-        }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
 
+  const comments = [
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Modern look & trending design",
+      para2:
+        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      name: "Naqash Shahid",
+      role: "CEO Tech Industry",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Design Quality & performance",
+      para2:
+        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      name: "Bianca",
+      role: "Program Manager",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Layout and organized layers",
+      para2:
+        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      name: "Denny Hilguston",
+      role: "CEO Tech Industry",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Modern look & trending design",
+      para2:
+        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
+      name: "Naqash Shahid",
+      role: "CEO Tech Industry",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+  ];
 
-        
-    ];
-
-    return (
-        <>
-            <StyledSwiper
-                onSlideChange={handleSlideChange}
-                slidesPerView={slidesPerView}
-                spaceBetween={30}
-                modules={[Pagination]}
-                className="mySwiper"
-            >
-                {comments.map((comment, index) => (
-                    <SwiperSlide key={index}>
-                        <MainContainer>
-                            <CardContainer active={activeIndex === index} activeIndex={index}>
-                                <Stars>{comment.stars}</Stars>
-                                <Para1 active={activeIndex === index}>{comment.para1}</Para1>
-                                <Para2>{comment.para2}</Para2>
-                                <ProfileCon>
-                                    <Image src={comment.image} />
-                                    <Details>
-                                        <Name>{comment.name}</Name>
-                                        <Role>{comment.role}</Role>
-                                    </Details>
-                                </ProfileCon>
-                            </CardContainer>
-                        </MainContainer>
-                    </SwiperSlide>
-                ))}
-                <Buttons />
-            </StyledSwiper>
-        </>
-    );
-
+  return (
+    <>
+      <StyledSwiper
+        onSlideChange={handleSlideChange}
+        slidesPerView={slidesPerView}
+        spaceBetween={30}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {comments.map((comment, index) => (
+          <SwiperSlide key={index}>
+            <MainContainer>
+              <CardContainer active={activeIndex === index} activeIndex={index}>
+                <Stars>{comment.stars}</Stars>
+                <Para1 active={activeIndex === index}>{comment.para1}</Para1>
+                <Para2>{comment.para2}</Para2>
+                <ProfileCon>
+                  <Image src={comment.image} />
+                  <Details>
+                    <Name>{comment.name}</Name>
+                    <Role>{comment.role}</Role>
+                  </Details>
+                </ProfileCon>
+              </CardContainer>
+            </MainContainer>
+          </SwiperSlide>
+        ))}
+        <Buttons />
+      </StyledSwiper>
+    </>
+  );
 }
 
 const StyledSwiper = Styled(Swiper)`
@@ -223,6 +235,4 @@ font-size:12px;
 @media screen and (max-width:576px){
     font-size:10px;
 
-
-  }`
-
+  }`;
