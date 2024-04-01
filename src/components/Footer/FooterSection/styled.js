@@ -17,20 +17,27 @@ export const Container = styled.div`
   z-index: 2;
   background-image: url(${layout});
   background-size: cover;
+  @media screen and (max-width: 576px) {
+    padding: 25px 25px 5px 25px;
+  }
 `;
 
 export const FooterContainer = styled.div`
-  @media screen and (min-width: 768px) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-flow: wrap;
+  @media screen and (max-width: 576px) {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `;
 
 export const LogoContainer = styled.div`
-  @media screen and (min-width: 768px) {
+  margin-right: 0px;
+  @media screen and (max-width: 576px) {
     margin-right: 0px;
   }
 `;
@@ -40,9 +47,10 @@ export const SepnotyLogo = styled.img`
   width: 360px;
   margin: -50px -25px 0px -22px;
 
-  @media screen and (max-width: 555px) {
-    height: 66px;
-    width: 220px;
+  @media screen and (max-width: 576px) {
+    height: 50px;
+    width: 250px;
+    margin: -40px 0 0px -40px;
   }
 `;
 
@@ -51,7 +59,7 @@ export const SepnotyDescription = styled.p`
   width: 398px;
   margin-top: 20px;
   color: #fff;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 14px;
     width: 258px;
     font-weight: 500px;
@@ -61,32 +69,31 @@ export const SepnotyDescription = styled.p`
 export const SepnotyDescription1 = styled.p`
   margin-top: 10px;
   color: #fff;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
 
 export const ServiceContainer = styled.div`
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
   }
 `;
 
 export const ServiceHeading = styled.h1`
-  @media screen and (min-width: 768px) {
-    font-size: 17px;
-    font-weight: 600;
-    border-bottom: 2px solid #cac7ee;
-    width: 64px;
-    color: #cac7ee;
-    margin-bottom: 16px;
-  }
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 2px solid #cac7ee;
+  width: 64px;
+  color: #cac7ee;
+  margin-bottom: 16px;
 `;
 
 export const ServiceItems = styled.p`
   font-size: 14px;
   margin-top: 10px;
-  color: #fff;
-  @media screen and (min-width: 768px) {
+  color: #d9d9d9;
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
   }
 `;
 
@@ -101,20 +108,21 @@ export const ContactHeading = styled.h1`
   color: #cac7ee;
   margin-bottom: 16px;
 
-  @media screen and (max-width: 555px) {
-    margin-bottom: 6px;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 0px;
     margin-top: 10px;
-    text-align: center;
+    font-size: 14px;
     text-align: left;
   }
 `;
+export const NewsContainer = styled.div``;
 
 export const NewsHeading = styled.h1`
   font-size: 17px;
   color: #b44555;
   margin-bottom: 10px;
-  @media screen and (max-width: 555px) {
-    margin-top: 20px;
+  @media screen and (max-width: 576px) {
+    margin-top: 10px;
     margin-bottom: 5px;
   }
 `;
@@ -124,7 +132,7 @@ export const NewsDesc = styled.p`
   color: #969595;
   padding: 10px 0px 10px;
   width: 316px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -138,12 +146,12 @@ export const InputHolder = styled.input`
   padding: 7px;
   width: 200px;
   outline: none;
-  z-index: 2;
 
   & ::placeholder {
     color: #e2dccc;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 576px) {
+    width: 180px;
   }
 `;
 
@@ -151,14 +159,8 @@ export const EmailMsg = styled.p`
   font-size: 12px;
   color: #969595;
   padding-top: 10px;
-  @media screen and (max-width: 555px) {
-    margin-bottom: 20px;
-  }
-`;
-
-export const NewsContainer = styled.div`
   @media screen and (max-width: 576px) {
-    display: none;
+    margin-bottom: 20px;
   }
 `;
 
@@ -184,7 +186,7 @@ export const CopywriteContainer = styled.div`
   & .copywrite-icon {
     font-size: 10px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
     margin-left: -20px;
     justify-content: none;
@@ -196,17 +198,19 @@ export const Copyright = styled.img`
   height: 18px;
   width: 18px;
   margin-right: 5px;
-  @media screen and (max-width: 555px) {
-    height: 22px;
-    width: 22px;
+  @media screen and (max-width: 576px) {
+    ${
+      "" /*     height: 22px;
+    width: 22px; */
+    }
   }
 `;
 
 export const CopywriteContent = styled.p`
   font-size: 10px;
   color: #d9d9d9;
-  @media screen and (max-width: 555px) {
-    font-size: 18px;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
   }
 `;
 
@@ -216,10 +220,11 @@ export const BottomContainer = styled.div`
   justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 20px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: flex-start;
+    margin-left: 20px;
   }
 `;
 
@@ -227,10 +232,8 @@ export const SectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-right: 0px;
-  @media screen and (max-width: 555px) {
-    width: 90%;
-    justify-content: space-around;
-    margin: 10px 0 10px -15px;
+  @media screen and (max-width: 576px) {
+    margin: 10px 0px 10px -20px;
   }
 `;
 
@@ -242,7 +245,7 @@ export const Sections = styled.p`
   margin-right: 10px;
   padding-right: 10px;
   height: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 12px;
     height: 20px;
     margin-right: 0px;
@@ -253,26 +256,33 @@ export const Sections = styled.p`
 
 export const Section = styled.p`
   font-size: 10px;
-  color: #ffffff;
-  @media screen and (min-width: 768px) {
+  color: #d9d9d9;
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    height: 20px;
+    margin-right: 0px;
+    padding-left: 6px;
+    text-align: center;
   }
 `;
 
-export const FollowUsContainer = styled.div`
+export const FollowUsContainer = styled.ul`
   display: flex;
-  display: none;
   flex-direction: column;
 
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
 
 export const FollowUsContainer1 = styled.div`
-  order: 8;
-  @media screen and (max-width: 555px) {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0px;
+  padding: 0px;
+  @media screen and (min-width: 577px) {
+    display: none;
   }
 `;
 
@@ -281,35 +291,35 @@ export const FollowUsSection = styled.ul`
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
-
-  @media screen and (max-width: 555px) {
+  margin: 0px;
+  @media screen and (max-width: 576px) {
+    display: flex;
     flex-direction: row;
-    justify-content: none;
+    margin-right: 180px;
   }
 `;
 
 export const ServiceContact = styled.div`
   display: flex;
   flex-direction: row;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    & > div1 {
-      order: 3;
-    }
   }
 `;
 
 export const ServiceCon = styled.div`
   margin-right: 80px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
+    order: 1;
     margin-right: 0px;
   }
 `;
 export const ContactCon = styled.div`
   margin-right: 80px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
+    order: 0;
     margin-right: 0px;
   }
 `;

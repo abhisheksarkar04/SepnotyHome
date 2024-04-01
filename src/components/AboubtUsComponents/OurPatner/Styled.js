@@ -1,46 +1,49 @@
 import styled from "styled-components";
 
-// For smaller screens (max-width: 576px), apply these styles
-const media = {
-  mobile: '@media(max-width: 576px)'
-};
-
 export const DigitalContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+  @media screen and (max-width: 576px) {
+    padding-bottom: 0px;
+    width:100%;
+  }
 `;
-
 export const Header = styled.h1`
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
   color: #ffffff;
-  padding: 30px 20px 30px 5%;
-  ${media.mobile} {
+  padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 10px 3%;
     font-size: 14px;
   }
 `;
-
 export const Span = styled.span`
   font-weight: 300;
   color: #ffffff;
 `;
 
 export const Service = styled.h1`
-  font-size: 30px;
+  font-size: 30 px;
   color: #ffffff;
   font-weight: 600;
-  padding: 10px 30px 20px 5%;
-  ${media.mobile} {
-    font-size: 20px;
+  padding: 10px 30px 20px 6%;
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 10px 3%;
+    font-size: 16px;
   }
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
-  padding: 10px 0px 4% 5%;
+  padding: 15px 0px 5% 6%;
+  @media screen and (max-width: 576px) {
+    padding: 5px 10px 0px 3%;
+    height: 200px;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -48,8 +51,9 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
-  padding-top: 20px;
-  ${media.mobile} {
+  padding: 30px 0px 20px 0px;
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 0px 0;
     font-size: 20px;
   }
 `;
@@ -57,58 +61,37 @@ export const ConRecHead = styled.h1`
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width:80%;
-  padding: 20px 30px 30px 0px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0px;
-  text-align: left;
+  width: 70%;
+  padding: 0px 30px 30px 0px;
 
-  ${media.mobile} {
-    font-size: 18px;
-  }
-`;
-
-export const Button = styled.button`
-  background-image: linear-gradient(to right, #ffffff, #fff741);
-  padding: 5px 25px 5px 25px;
-  border-radius: 20px;
-  color: #234581;
-  border: 0px;
-  outline: none;
-  font-size: 13px;
-  margin-top: 20px;
-
-  ${media.mobile} {
-    font-size: 11px;
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 20px 0;
+    font-size: 14px;
+    width: 90%;
   }
 `;
 
 export const Rectangle1 = styled.img`
   position: absolute;
   right: 0;
-  height: 68%;
-  width: 38%;
-  top: 12%;
+  height: 65%;
+  width: 37%;
+  top: 15%;
   z-index: 0;
-  ${media.mobile} {
-    height:30%;
-    width:19%;
+  @media screen and (max-width: 576px) {
+    display: none;
   }
 `;
 
 export const Rectangle2 = styled.img`
   position: absolute;
-  
-  right: 17.6%;
+  right: 16.5%;
   height: 80%;
   width: 60%;
-  top: -5%;
+  top: -1%;
   z-index: 0;
-   ${media.mobile} {
-    height:30%;
-    width:30%;
-    display:none;
+  @media screen and (max-width: 576px) {
+    display: none;
   }
 `;
 
@@ -117,66 +100,61 @@ export const Rectangle3 = styled.img`
   left: 0%;
   height: 40%;
   width: 17%;
-  top: 38%;
+  top: 41.5%;
   z-index: 0;
-  background:transparent;
   margun-bottom: 20px;
-  ${media.mobile} {
-    height:50%;
-    top: 12%;
-    width:34%;
+  @media screen and (max-width: 576px) {
+    display: none;
   }
 `;
-
 
 export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: -30px;
-  margin-top:20px;
+  margin-left: -29px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin-left: -20px;
+  }
 `;
 
 export const ServiceItemCon = styled.div`
-  margin-top: 10%;
+  margin-top: 3.5%;
+  @media screen and (max-width: 576px) {
+    margin-top: 30px;
+  }
 `;
-
 export const ServiceItemDesc = styled.p`
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 23px;
-  margin-left:-32px;
   color: #ffffff;
-  width:80%;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0px;
-  text-align: left;
-  margin-top:10px; 
-
-  ${media.mobile} {
-    font-size: 15px;
-    width:100%;
-    line-height: 18px;
+  width: 80%;
+  line-height: 1.5;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+    width: 90%;
   }
 `;
 
 export const ImageCon = styled.div`
-  width: 16%;
+  width: 25%;
   margin: 0px;
   display: flex;
   flex-direction: column;
-  margin-bottom:30px;
-  margin-top:40px;
-`;
-
-export const ServiceItemImg = styled.img`
-  width: 650px;
-  margin-left: -12%;
-  ${media.mobile} {
-    width:565px;
-    margin-left:-55px;
-
+  @media screen and (max-width: 576px) {
+    width: 50%;
+    gap:30px;
   }
+`;
+export const ServiceItemImg = styled.img`
+  width: 100%;
+  margin: 0px;
+  @media screen and (max-width: 576px) {
+    width:365px;
+    margin-left:-2px
+  }
+  
 `;
 
 export const ServiceItemButton = styled.button`
@@ -184,20 +162,17 @@ export const ServiceItemButton = styled.button`
   background-color: #d9d9d9;
   margin-top: -13px;
   color: #2b459b;
-  font-size: 15px;
+  font-size: 17px;
   border-radius: 7px;
-  padding: 3px 0 3px 0;
-
-  ${media.mobile} {
-    font-size: 11px;
+  padding: 7px 0 7px 0;
+  @media screen and (max-width: 576px) {
+    padding: 4px 0px 4px;
+    font-size: 14px;
   }
 `;
 
 export const ServiceItemDetails = styled.div`
-  margin-top: 20px;
-  margin-left: 10%;
-  margin-right: 5%;
-  margin: 20px 5% 28px 10%;
+  margin: 20px 5% 35px 8.3%;
 `;
 
 export const ConatctCon = styled.div`
@@ -210,10 +185,13 @@ export const ConatctCon = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
   border-radius: 3px;
-  margin-top:20px;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+    width: 45px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -221,8 +199,21 @@ export const PatternCon = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 5em;
-  ${media.mobile} {
-    margin-left: 1.5em;
+  padding-left: 6%;
+
+  @media screen and (max-width: 576px) {
+    padding-left: 3%;
+  }
+`;
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+    padding: 10px;
   }
 `;

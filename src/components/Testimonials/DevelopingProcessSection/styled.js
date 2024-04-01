@@ -7,35 +7,38 @@ export const BgContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 30px 0px 30px 30px;
+  @media screen and (max-width: 576px) {
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+  }
 `;
 export const CardListContainer = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 30px 10%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-wrap: wrap;
-
-    margin-left: -40px;
-    margin-right: 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
   }
 `;
 
 export const Description = styled.p`
   font-family: "inter", sans-serif;
   font-size: 20px;
-  color: #858585;
+  color: #b7b6bd;
   width: 600px;
   font-weight: bold;
-  @media screen and (max-width: 555px) {
-
-    font-size: 17px;
-    width: 95%;
-    margin-left: -20px;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+    padding: 0px 15px;
     line-height: 30px;
+    font-weight: 500;
+    width: 100%;
   }
 `;
 
@@ -60,4 +63,7 @@ export const Process = styled.span`
 export const Heading = styled.h1`
   margin-bottom: 30px;
   font-size: 20px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
 `;

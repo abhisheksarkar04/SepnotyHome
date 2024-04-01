@@ -41,6 +41,45 @@ import {
   import FooterSection from "../../Footer/FooterSection";
   
   const Awards= () => {
+    const awardsData = [
+      {
+          heading: "Webby Awards",
+          para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+      },
+      {
+        heading: "Webby Awards",
+        para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+    },
+    {
+      heading: "Webby Awards",
+      para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+  },
+  {
+    heading: "Webby Awards",
+    para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+ }, 
+ {
+  heading: "Webby Awards",
+  para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+},
+{
+  heading: "Webby Awards",
+  para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+},
+{
+  heading: "Webby Awards",
+  para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+},
+{
+  heading: "Webby Awards",
+  para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+},
+{
+  heading: "Webby Awards",
+  para1: "Recognizes excellence on the internet, including websites, apps, social media, video, podcasts, & more, across various categories."
+},
+      // Add more objects as needed
+  ];
     return (
       <>
         <DigitalContainer>
@@ -66,97 +105,14 @@ import {
             </div>
             </ServiceItemCon>
             <Main>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-                <Main1>
-                    <Image5 src={GroupImg} alt="not-found"/>
-                    <Heading>
-                    Webby Awards
-                    </Heading>
-                    <Para1>
-                    Recognizes excellence on the internet, 
-including websites, apps, social media, video, podcasts, & more, across various categories.
-                    </Para1>
-                </Main1>
-            </Main>
+                    {awardsData.map((award, index) => (
+                        <Main1 key={index}>
+                            <Image5 src={GroupImg} alt="not-found"/>
+                            <Heading>{award.heading}</Heading>
+                            <Para1>{award.para1}</Para1>
+                        </Main1>
+                    ))}
+                </Main>
         </DigitalContainer>
         <FooterSection />
       </>
@@ -165,6 +121,9 @@ including websites, apps, social media, video, podcasts, & more, across various 
   };
   
   export default Awards;
+  const media = {
+    mobile: '@media(max-width: 576px)'
+  };
   
   const Main = Styled.div`
   display:flex;
@@ -172,6 +131,12 @@ including websites, apps, social media, video, podcasts, & more, across various 
   margin-left:110px;
   gap:140px;
   margin-bottom:190px;
+  ${
+    media.mobile
+  }{
+    margin-left:20px;
+    gap:50px;
+  }
   `
   const Main1 = Styled.div`
   border: 1px solid #FFFFFF;
@@ -183,6 +148,13 @@ including websites, apps, social media, video, podcasts, & more, across various 
   border-radius:8px;
   margin-bottom:-120px;
   padding:10px;
+  ${
+    media.mobile
+  }{
+    height:200px;
+    width:230px;
+    margin-bottom:-10px;
+  }
   `
   const Heading = Styled.h1`
   text-align:center;
@@ -190,18 +162,25 @@ including websites, apps, social media, video, podcasts, & more, across various 
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
+  ${media.mobile}{
+    font-size:13px;
+  }
   `
   const Image5 = Styled.img`
   height:90px;
   align-item:center;
   justify-content:start;
   margin-left:90px;
-
-  
   margin-top:10px;
+  ${media.mobile}{
+    height:45px;
+  }
   `
   const Para1 = Styled.p`
   margin-top:10px;
   text-align:center;
   color:white;
+  ${media.mobile}{
+    font-size:13px;
+  }
   `

@@ -4,17 +4,16 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   margin: 20px 40px 30px 0px;
-
   padding: 30px 10px 30px 10px;
   background-color: rgba(0, 0, 150, 0.15);
   border-radius: 8px;
   border: 1px solid #cecece;
   height: 350px;
-  width: 280px;
+  width: 300px;
   color: #b7b6bd;
   transition: background-color 0.8s ease;
+
   &:hover {
     background-color: #c7cee8;
   }
@@ -24,33 +23,36 @@ export const CardContainer = styled.div`
     text-align: justify;
   }
 
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     border-radius: 12px;
-    flex: 45%;
-    width: 70%;
-    height: 430px;
-    margin: 20px 10px 10px 0px;
+    height: 300px;
+    width: 47%;
+    margin: 10px 10px 10px 0px;
+    padding: 10px 0px;
+  }
+  @media screen and (min-width: 1550px) {
+    height: 380px;
+    width: 350px;
   }
 `;
 
 export const CardHeader = styled.div`
   display: flex;
-
   align-items: center;
   padding-left: 10px;
-
-  @media screen and (max-width: 555px) {
-    padding: 0px;
+  @media screen and (max-width: 576px) {
+    padding: 0px 0px 0px 5px;
   }
 `;
 
 export const CardNumber = styled.h1`
   font-size: 20px;
   color: #33499e;
-  @media screen and (max-width: 555px) {
+  @media screen and (min-width: 1550px) {
+    font-size: 23px;
+  }
+  @media screen and (max-width: 576px) {
     font-size: 18px;
-    margin-top: -18px;
-    align-self: flex-start;
   }
 `;
 
@@ -59,10 +61,11 @@ export const CardTitle = styled.h1`
   font-size: 17px;
   color: #2b459b;
   padding-top: 3px;
-  @media screen and (max-width: 555px) {
-    font-size: 18px;
-    margin-top: -20px;
-    align-self: flex-end;
+  @media screen and (min-width: 1550px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 15px;
   }
 `;
 
@@ -72,11 +75,17 @@ export const CardParagraph = styled.p`
   color: #b7b6bd;
   line-height: 1.5em;
   padding-left: 10px;
-  @media screen and (max-width: 555px) {
-    font-size: 90%;
+
+  @media screen and (min-width: 1550px) {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 13px;
     line-height: 1.5em;
     margin: -10px 0 10px 0;
     font-weight: 500;
+    padding-left: 5px;
   }
 `;
 
@@ -89,9 +98,12 @@ export const Button = styled.button`
   border-width: 0px;
   border-radius: 20px;
   align-self: center;
-  @media screen and (max-width: 555px) {
-    height: 10%;
-    font-size: 8px;
+  @media screen and (min-width: 1550px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+    padding: 8px 30px 8px 30px;
   }
 `;
 
@@ -104,7 +116,7 @@ export const PopupContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 71%;
     height: 52%;
     left: 10%;
@@ -118,7 +130,7 @@ export const PopupContent = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 `;
@@ -136,7 +148,7 @@ export const PopupTitle = styled.h1`
   font-size: 18px;
   text-align: center;
   margin-bottom: 10px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 100%;
   }
 `;
@@ -145,7 +157,7 @@ export const PopupImage = styled.img`
   height: 120px;
   width: 120px;
   margin: 0px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     height: 80px;
     width: 80px;
     align-self: center;
@@ -162,7 +174,7 @@ export const PopupHeading = styled.h1`
   font-weight: 500;
   font-size: 16px;
   text-align: center;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 80%;
   }
 `;
@@ -172,7 +184,7 @@ export const Header = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 30px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
   }
 `;
 
@@ -182,7 +194,7 @@ export const PopupDesc = styled.p`
   padding: 20px;
   line-height: 1.25em;
   font-weight: 500;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 70%;
     width: ;
   }

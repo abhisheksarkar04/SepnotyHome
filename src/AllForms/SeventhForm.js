@@ -136,13 +136,13 @@ class SeventhForm extends Component {
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={6}
             styleConfig={{
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
               inactiveBgColor: '#fff',
-              inactiveTextColor: 'fff',
+              inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
               size: '1em'
@@ -273,13 +273,14 @@ class SeventhForm extends Component {
 }
 
 export default SeventhForm;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 
 const Error = Styled.div`
   color: red;
   margin-top: 10px;
 `;
-
-
 const Button = Styled.div`
 display:flex;
 justify-content:end;
@@ -289,22 +290,11 @@ margin-left:-90px;
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{width:100%}
 `
 const Heading1 = Styled.h1`
-
-
 font-family: Roboto;
-
 font-size: 18px;
-
-font-family: Inter;
-font-size: 20px;
-font-family: Inter;
-font-size: 20px;
-
-font-size: 15px;
-
-
 font-weight: 700;
 line-height: 20px;
 letter-spacing: 0em;
@@ -312,6 +302,7 @@ text-align: left;
 color: #263238;
 margin-top:20px;
 margin-bottom:10px;
+${media.mobile}{font-size:15px;}
 `
 
 const Mai = Styled.div`
@@ -320,6 +311,7 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{gap:10px;justify-content:start;align-items:start;margin-left:-30px;}
 `
 const Heading = Styled.h1`
 font-family: Roboto;
@@ -333,6 +325,7 @@ line-height: 20px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${media.mobile}{font-size:15px;}
 `
 
 const FormContainer = Styled.div`
@@ -345,6 +338,9 @@ border-radius:10px;
 padding:20px;
 height:350px;
 width:600px;
+${media.mobile}{
+  width:230px;
+}
 `
 const CheckBoxCon = Styled.div`
 gap:30px;
@@ -368,8 +364,12 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 margin-left:10px;
+${media.mobile}{font-size:13px;}
 `
 const Form = Styled.form`
+${media.mobile}{
+  width:250px;
+}
 
 `
 // const Para1 = Styled.p`
@@ -386,6 +386,9 @@ height: 18px;
 color: black;
 padding: 10px;
 border-radius:4px;
+${media.mobile}{
+  width:180px;
+}
 
 `
 const Input = Styled.input`
@@ -401,8 +404,11 @@ border-radius:10px;
 padding:20px;
 height:350px;
 width:600px;
+${media.mobile}{
+  width:250px;
+}
 `
-const Form2 = Styled.form`
+const Form2 = Styled.div`
 
 `
 const Input3 = Styled.input`
@@ -418,5 +424,6 @@ border-radius:4px;
 color: black;
 padding: 8px;
 text-align: left;
+${media.mobile}{width:200px;}
 `
 

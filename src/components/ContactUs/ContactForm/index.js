@@ -32,11 +32,10 @@ import {
   DragHead,
   InputCon,
   ErrorMsg,
-  Popup,
-  PopupMessage,
-  CloseButton,
+  LabelDiv,
+  Label,
+  LabelCon,
 } from "./styled";
-
 
 const contactListItem = [
   {
@@ -302,7 +301,7 @@ const ContactForm = (props) => {
                 />
                 {phoneError && <ErrorMsg>{phoneError}</ErrorMsg>}
               </InputCon>
-              <div>
+              <LabelDiv>
                 <SepnotyContact
                   type="checkbox"
                   id="contact"
@@ -310,11 +309,14 @@ const ContactForm = (props) => {
                   checked={agreement.contact}
                   onChange={(e) => changeHandler("agreement", e)}
                 />
-                <label htmlFor="sepnotyContact">
-                  I agree to have Sepnoty contact me via email, phone,
-                  messengers
-                </label>
-                <br />
+                <LabelCon>
+                  <Label htmlFor="sepnotyContact">
+                    I agree to have Sepnoty contact me via email, phone,
+                    messengers
+                  </Label>
+                </LabelCon>
+              </LabelDiv>
+              <LabelDiv>
                 <RequestSepnoty
                   type="Checkbox"
                   id="requestInfo"
@@ -322,11 +324,13 @@ const ContactForm = (props) => {
                   checked={agreement.requestInfo}
                   onChange={(e) => changeHandler("agreement", e)}
                 />
-                <label htmlFor="requestSepnoty">
-                  I agree to have Sepnoty provide my request Information to
-                  Sepnoty affiliated development center
-                </label>
-              </div>
+                <LabelCon>
+                  <Label htmlFor="requestSepnoty">
+                    I agree to have Sepnoty provide my request Information to
+                    Sepnoty affiliated development center
+                  </Label>
+                </LabelCon>
+              </LabelDiv>
             </ContactInputList>
             <ContactButtonCon>
               <ContactButton

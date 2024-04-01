@@ -4,6 +4,10 @@ export const SectionTwoCon=styled.div`
 display:flex;
 justify-content:center;
 padding:60px 50px 60px 50px;
+@media screen and (max-width:576px){
+  padding:35px;
+  
+}
 `;
 export const SectionTwoComponent=styled.div`
 display:flex;
@@ -14,7 +18,10 @@ border:1px solid rgba(255, 255, 255, 1);
 border-radius:10px;
 width:23%;
 padding-bottom: 40px;
-
+@media screen and (max-width:576px){
+  padding:10px;
+  width:40%;
+}
 `;
 export const ComponentHeading = styled.h1`
   color: #ff9f00; /* Bright orange color */
@@ -26,12 +33,17 @@ export const ComponentHeading = styled.h1`
     -1px -1px 0 #ffffff,
     1px -1px 0 #ffffff,
     -1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff; /* White shadow to simulate stroke */
+    1px 1px 0 #ffffff; 
+    @media screen and (max-width:576px){
+      font-size:40px;
+    }
 `;
-
 
 export const ComponentTitle=styled.p`
 color: #BEBEBE;
 font-size:22px;
  margin-top: 0px;
+ @media screen and (max-width:576px){
+  font-size:14px;
+}
 `;

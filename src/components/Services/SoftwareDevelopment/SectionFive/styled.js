@@ -4,6 +4,9 @@ export const WorkCardCon=styled.div`
 display:flex;
 flex-direction:column;
 margin-right:4%;
+@media screen and (max-width:576px){
+    margin-bottom:20px;
+}
 `;
 export const WorkImg=styled.img`
 width:400px;

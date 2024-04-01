@@ -6,12 +6,19 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+  @media screen and (max-width: 576px) {
+    padding-bottom: 0px;
+  }
 `;
 export const Header = styled.h1`
   font-size: 15px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 10px 3%;
+    font-size: 14px;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -23,11 +30,19 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 6%;
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 10px 3%;
+    font-size: 16px;
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 6%;
+  @media screen and (max-width: 576px) {
+    padding: 5px 10px 0px 3%;
+    height: 200px;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -36,6 +51,10 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   padding: 30px 0px 20px 0px;
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 0px 0;
+    font-size: 20px;
+  }
 `;
 
 export const ConRecDesc = styled.p`
@@ -43,6 +62,11 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width: 70%;
   padding: 0px 30px 30px 0px;
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 20px 0;
+    font-size: 14px;
+    width: 90%;
+  }
 `;
 
 export const Rectangle1 = styled.img`
@@ -52,6 +76,9 @@ export const Rectangle1 = styled.img`
   width: 37%;
   top: 15%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const Rectangle2 = styled.img`
@@ -61,6 +88,9 @@ export const Rectangle2 = styled.img`
   width: 60%;
   top: -1%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const Rectangle3 = styled.img`
@@ -70,6 +100,9 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const ListHeading = styled.h1`
@@ -77,10 +110,17 @@ export const ListHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-left: -29px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin-left: -20px;
+  }
 `;
 
 export const ServiceItemCon = styled.div`
   margin-top: 6.8%;
+  @media screen and (max-width: 576px) {
+    margin-top: 50px;
+  }
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 23px;
@@ -88,6 +128,10 @@ export const ServiceItemDesc = styled.p`
   color: #ffffff;
   width: 80%;
   line-height: 1.5;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+    width: 90%;
+  }
 `;
 
 export const ImageCon = styled.div`
@@ -95,6 +139,9 @@ export const ImageCon = styled.div`
   margin: 0px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 576px) {
+    width: 50%;
+  }
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
@@ -113,6 +160,9 @@ export const ServiceItemButton = styled.button`
 
 export const ServiceItemDetails = styled.div`
   margin: 20px 5% 20px 8.2%;
+  @media screen and (max-width: 576px) {
+    margin: 20px 5% 20px 8.8%;
+  }
 `;
 
 export const ConatctCon = styled.div`
@@ -128,6 +178,10 @@ export const SmallPattern = styled.div`
   height: 50px;
   width: 60px;
   border-radius: 3px;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+    width: 45px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -136,6 +190,9 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 0px;
   margin-left: 5em;
+  @media screen and (max-width: 576px) {
+    margin-left: 3%;
+  }
 `;
 
 export const SeoItemsCon = styled.div`
@@ -156,11 +213,28 @@ export const SeolistItem = styled.li`
   margin-left: 9.5%;
   padding-right: 7%;
   width: 80%;
+  @media screen and (max-width: 576px) {
+    margin-left: 13%;
+    font-size: 14px;
+    width: 90%;
+  }
 `;
-export const BackButton=styled.button`
-color:rgba(43, 69, 155, 1);
-border:none;
-cursor:pointer;
-font-size:30px;
-margin-right:95%;
+export const BackButton = styled.button`
+  color: rgba(43, 69, 155, 1);
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 95%;
+`;
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
 `;

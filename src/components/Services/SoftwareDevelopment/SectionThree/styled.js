@@ -8,9 +8,11 @@ export const ServiceCardCon = styled.div`
   border-radius: 7px;
   background-color: white;
   width: 30%;
-
   margin-bottom: 23px;
   position: relative;
+  @media screen and (max-width:576px){
+    width:70%;
+  }
 `;
 export const ServiceImgName = styled.div`
   display: flex;

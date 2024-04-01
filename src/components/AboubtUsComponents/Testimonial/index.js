@@ -159,6 +159,10 @@ import {
   };
   
   export default Testimonial;
+  const media = {
+    mobile: '@media(max-width: 576px)'
+  };
+  
   const Spam = Styled.span`
   margin-left:50px;
   `
@@ -166,10 +170,18 @@ import {
   const Main1 = Styled.div`
   display:flex;
   flex-direction:row;
-  flex-wrap : wrap;
+  flex-wrap:wrap;
   gap:140px;
   margin-left:110px;
   margin-bottom:190px;
+  ${
+    media.mobile
+  }{
+    display:flex;
+    flex-direction:row;
+    gap:60px;
+    margin-left:10px;
+  }
   `
   const Main2 = Styled.div`
   border: 0.99px solid #FFFFFF;
@@ -185,7 +197,13 @@ import {
   margin-bottom:-120px;
 
 
-
+${
+  media.mobile
+}{
+  height:270px;
+  width:240px;
+  margin-bottom:-40px;
+}
 
   
   `
@@ -193,12 +211,23 @@ import {
   margin-bottom:10px;
   height:80px;
   margin-top:10px;
+  ${
+    media.mobile
+  }{
+    height:50px;
+  }
   `
   const P = Styled.p`
   margin-top:10px;
   color:white;
   text-align:center;
   width:100%;
+  ${
+    media.mobile
+  }{
+    font-size:13px;
+    margin-top:0px;
+  }
   `
 
 

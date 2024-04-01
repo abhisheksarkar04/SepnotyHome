@@ -8,9 +8,9 @@ export const BottomCon = styled.div`
   width: 35%;
   margin: 0px;
   align-items: center;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
-    margin-top: -120px;
+    padding: 0px 30px;
   }
 `;
 
@@ -20,6 +20,13 @@ export const BottomHeading = styled.h1`
   font-weight: bold;
   text-align: center;
   line-height: 1.75em;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    padding: 0px;
+    width: 70%;
+  }
 `;
 
 export const BottomDesc = styled.p`
@@ -29,8 +36,10 @@ export const BottomDesc = styled.p`
   line-height: 1.5em;
   margin-top: 30px;
   margin-bottom: 30px;
-  @media screen and (max-width: 555px) {
-    font-size: 18px;
+  @media screen and (max-width: 576px) {
+    font-size: 15px;
+    text-align: justify;
+    margin: 0px 10px;
   }
 `;
 
@@ -47,9 +56,8 @@ export const Button = styled.button`
 `;
 
 export const Image = styled.img`
-  width: 90%;
-  @media screen and (max-width: 555px) {
-    height: 200px;
-    width: 60%;
+  width: 100%;
+  @media screen and (max-width: 576px) {
+    width: 100%;
   }
 `;

@@ -19,7 +19,7 @@ a {
   padding: 0px 20px;
   background-color: #0c111f;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 2;
   top: 0;
   /*box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
@@ -27,7 +27,9 @@ a {
 
 @media screen and (max-width: 576px) {
   .navbar {
-    height: 3vh;
+    height: 7vh;
+    padding: 0px 5px;
+    width: 100%;
   }
 }
 
@@ -59,10 +61,7 @@ a {
   text-align: center;
   font-size: 80px;
 }
-.mobile-menu-icon {
-  display: none;
-  color: white;
-}
+
 button {
   border: none;
   text-decoration: none;
@@ -79,16 +78,13 @@ button {
     transition: all 0.5s ease-in-out;
     color: #ffffff;
     font-size: 15px;
-    padding: 10px 0px 0px 15px;
+
+    padding: 10px 0px 7px 15px;
+
     margin: 0px;
   }
   ul li:hover {
     color: #6b7eb1;
-  }
-  .mobile-menu-icon {
-    position: absolute;
-    display: block;
-    right: 20px;
   }
   .hero h1 {
     font-size: 50px;
@@ -131,7 +127,8 @@ button {
 }
 
 .menu-icon {
-  margin-left: auto;
+  height: 15px;
+  width: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -143,15 +140,17 @@ button {
 .mobile-list {
   display: flex;
   flex-direction: column;
-  list-style-type: none;
+
   position: absolute;
   right: 0;
-  top: 3vh;
+  top: 6vh;
   background-color: #263238;
+  text-align: left;
+  list-style-type: none;
   margin: 0px;
   padding: 0px;
-  text-align: left;
-  width: 43%;
+
+  width: 52%;
 }
 
 @media screen and (min-width: 768px) {
@@ -171,7 +170,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+
+  margin-top: 10px;
+
   height: 25px;
   padding: 5px 10px;
   width: auto;
@@ -179,5 +180,61 @@ button {
 
 .hrl {
   width: 100%;
-  border: 0.1px solid rgb(255, 255, 255, 0.5);
+
+  border: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+
+  right: 0;
+  background-color: #263238;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 10px);
+  bottom: 90;
+  /* Position the submenu below the parent item */
+}
+
+.submenu-item {
+  display: block;
+}
+
+.inputholder {
+  background-color: #010309;
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  background: transparent;
+  width: 86%;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  padding: 5px 0px 5px 15px;
+  ::placeholder {
+    color: rgb(255, 255, 255, 0.5);
+  }
+}
+
+.button {
+  background-color: transparent;
+  color: #ffffff;
+  border-left: 1px solid rgb(255, 255, 255, 0.25);
+  font-weight: normal;
+}
+
+.mobile {
+  margin-left: auto;
+}
+@media screen and (min-width: 577px) {
+  .mobile {
+    display: none;
+  }
 }

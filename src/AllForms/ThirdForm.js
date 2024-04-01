@@ -67,7 +67,7 @@ class YourIndustry extends Component {
         <form>
 
           <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
+             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
             activeStep={2}
             styleConfig={{
               activeBgColor: '#2B459B',
@@ -80,80 +80,85 @@ class YourIndustry extends Component {
             }}
             className={'stepper'}
             stepClassName={'stepper__step'}
+           
           />
 
 <Main1>
             <Form1>
+              <Fom>
                 <Heading>
                 *What service(s) do you need?
                 </Heading>
-                <Form2>
+                <div>
                 <InputContainer>
 <Label>
-<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+<Input  type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
 Website development
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
     Technical Consulting
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
     UX design / Redesign
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
     UI design / Redesign
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Transportation & Logistics" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Transportation & Logistics" onChange={this.handleRadioChange}/>
     CMS development
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Telecommunications" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Telecommunications" onChange={this.handleRadioChange}/>
     Technical SEO
     </Label>
 </InputContainer>
+</div>
+</Fom>
 
-                </Form2>
+                
 
             </Form1>
             <Form1>
             <Form3>
                 <InputContainer>
 <Label>
-<Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+<Input type='radio'  name="industry" value="Migration to a new CMS" onChange={this.handleRadioChange}/>
 Migration to a new CMS
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Delivery of new features" onChange={this.handleRadioChange}/>
     Delivery of new features
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Manufacturing" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Troubleshooting" onChange={this.handleRadioChange}/>
     Troubleshooting
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio' name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
+    <Input type='radio'  name="industry" value="Finanacial" onChange={this.handleRadioChange}/>
     <Input1 type="text" placeholder="others (please specify)"/>
     </Label>
 </InputContainer>
+
 <InputContainer>
 <P>
 Please provide a link to your existing website if you have one</P>
@@ -164,8 +169,11 @@ Please provide a link to your existing website if you have one</P>
               onChange={this.handleWebsiteLinkChange}
             /></InputContainer>
  {error && <ErrorMessage>{error}</ErrorMessage>}
+ 
                 </Form3>
+               
             </Form1>
+           
         </Main1>
             
           <Button style={{textAlign: 'center'}}>
@@ -181,6 +189,9 @@ Please provide a link to your existing website if you have one</P>
 }
 
 export default YourIndustry;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 
 const Button = Styled.div`
 display:flex;
@@ -188,9 +199,19 @@ justify-content:end;
 margin-top:90px;
 margin-left:-90px;
 `
+const Fom = Styled.div`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
+`
 
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 
 const P = Styled.p`
@@ -205,6 +226,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:1px;
+  margin-left:-30px;
+}
 `
 const Form1 = Styled.div`
 display:flex;
@@ -254,9 +282,19 @@ background: #C1CAE7;
 border: 1px solid #8C8C8C;
 width:250px;
 border-radius:4px;
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Form3 = Styled.div`
 margin-top:50px;
+${media.mobile}{
+  width:227px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const ErrorMessage = Styled.div`
   color: red;

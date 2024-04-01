@@ -3,40 +3,31 @@ import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 import handleFormValues from "./allFormValues";
-
-
 import FirstStep from "./Website/FirstPage"
-
-
-
-
-
-
 
 class PersonalDetails extends Component {
 constructor(props){
   super(props);
   this.state = {
-    softwareTypes: [],
+    typeOfWebsite: [],
     numberOfPages: '',
     formErrors: {
-      softwareTypes: '',
+      typeOfWebsite: '',
       numberOfPages: ''
-    }
+    },
+    activeStep: 0
   };
 }
- 
-
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
     // console.log(id);
     this.setState(prevState => ({
-      softwareTypes: checked
-        ? [...prevState.softwareTypes, id]
-        : prevState.softwareTypes.filter(type => type !== id),
+      typeOfWebsite: checked
+        ? [...prevState.typeOfWebsite, id]
+        : prevState.typeOfWebsite.filter(type => type !== id),
       formErrors: {
         ...prevState.formErrors,
-        softwareTypes: ''
+        typeOfWebsite: ''
       }
     }));
   };
@@ -55,18 +46,18 @@ constructor(props){
     event.preventDefault();
 
 
-    const { softwareTypes, numberOfPages } = this.state;
+    const { typeOfWebsite, numberOfPages } = this.state;
     
 
 
    
   // Call the handleFormValues function from FormUtils.js
   
-    if (softwareTypes.length === 0) {
+    if (typeOfWebsite.length === 0) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
-          softwareTypes: 'Please select at least one type of software.'
+          typeOfWebsite: 'Please select at least one type of software.'
         }
       });
       return;
@@ -93,17 +84,16 @@ constructor(props){
     e.preventDefault();
     
     // Check for errors
-    const { softwareTypes, numberOfPages } = this.state;
+    const { typeOfWebsite, numberOfPages } = this.state;
     const formData = {
-      field1: {softwareTypes , numberOfPages},
+      field1: {typeOfWebsite , numberOfPages},
       // Add more fields as needed
     };
-    console.log(formData)
     this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types
-    if (softwareTypes.length === 0) {
+    if (typeOfWebsite.length === 0) {
         formErrors.softwareTypes = 'Please select at least one type of software.';
     }
 
@@ -120,31 +110,31 @@ constructor(props){
     
     // If there are no errors, proceed to the next step
     this.props.nextStep();
+    this.setState(prevState => ({ activeStep: prevState.activeStep + 1 }));
 }
 
   render() {
-    const { softwareTypes, numberOfPages, formErrors } = this.state;
+    const { typeOfWebsite, numberOfPages, formErrors ,activeStep} = this.state;
 
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
 
-          <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
-            activeStep={0}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
-
+        <Stepper
+  steps={[{ label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }]}
+  activeStep={this.state.activeStep} // Use activeStep from state
+  styleConfig={{
+    activeBgColor: '#2B459B',
+    activeTextColor: '#fff',
+    inactiveBgColor: '#fff',
+    inactiveTextColor: '#2b7cff',
+    completedBgColor: '#407B24',
+    completedTextColor: '#fff',
+    size: '1em'
+  }}
+  className={'stepper'}
+  stepClassName={'stepper__step'}
+/>
       <Main1>
             <FormContainer>
                 <Form>
@@ -152,45 +142,45 @@ constructor(props){
                          *Choose the type of  you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="Corporate Website/App" checked={softwareTypes.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="Corporate Website/App" checked={typeOfWebsite.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
                     <Label htmlfor="Corporate Website/App">
                         Corporate Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         <Label htmlfor="Portfolio Website/App">
-                        <Input type="checkbox" id="Portfolio Website/App" checked={softwareTypes.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Portfolio Website/App" checked={typeOfWebsite.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
                          Portfolio Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Digital Media Website/App">
-                        <Input type="checkbox" id="Digital Media Website/App" checked={softwareTypes.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Digital Media Website/App" checked={typeOfWebsite.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
                         Digital Media Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Educational Website/App">
-                        <Input type="checkbox" id="Educational Website/App" checked={softwareTypes.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Educational Website/App" checked={typeOfWebsite.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
                         Educational Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Content aggregator">
-                        <Input type="checkbox" id="Content aggregator" checked={softwareTypes.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Content aggregator" checked={typeOfWebsite.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
                         Content aggregator(eg: Forum)
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={softwareTypes.includes('6st')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="6st" checked={typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
                         <Input1 type="text" id="6st" placeholder="others (please specify"/>
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <Error style={{ color: 'red' }}>{formErrors.softwareTypes}</Error>}
+                {formErrors.typeOfWebsite && <Error style={{ color: 'red' }}>{formErrors.typeOfWebsite}</Error>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -260,6 +250,9 @@ constructor(props){
 }
 
 export default PersonalDetails;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const Error = Styled.p`
 font-size:12px;
 `
@@ -278,6 +271,9 @@ color:white;
 `
 const Main = Styled.div`
 background-color:#0C111F;
+${media.mobile}{
+  width:100%;
+}
 `
 const Main1 = Styled.div`
 display:flex;
@@ -285,6 +281,13 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  justify-content:start;
+  align-item:start;
+  gap:2px;
+  margin-left:-30px;
+}
 `
 const Heading = Styled.h1`
 font-family: Roboto;
@@ -294,6 +297,11 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+${
+  media.mobile
+}{
+  font-size:13px;
+}
 `
 
 const FormContainer = Styled.div`
@@ -306,6 +314,11 @@ border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
+${media.mobile}{
+  width:380px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const CheckBoxCon = Styled.div`
 margin-top:15px;
@@ -319,8 +332,16 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+${media.mobile}{
+  font-size:13px;
+}
 `
-const Form = Styled.form`
+const Form = Styled.div`
+${media.mobile}{
+  width:220px;
+  border-radius:5px;
+  gap:0px;
+}
 `
 const Input1 = Styled.input`
 background:transparent;
@@ -330,6 +351,7 @@ color: #263238;
 font-weight:500;
 height:20px;
 margin-left:10px;
+${media.mobile}{font-size:13px;}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;

@@ -40,10 +40,11 @@ class CourseDetails extends Component {
     this.props.prevStep();
   }
 
-  submitdata = () => {
-    const {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
+  submitdata = (e) => {
+    e.preventDefault();
+    const {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
     const formData = {
-      feild8 : {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
+      feild8 : {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
     }
     this.props.onDataReceived(formData);
   }
@@ -66,7 +67,7 @@ class CourseDetails extends Component {
               activeBgColor: '#2B459B',
               activeTextColor: '#fff',
               inactiveBgColor: '#fff',
-              inactiveTextColor: 'fff',
+              inactiveTextColor: '#2b7cff',
               completedBgColor: '#407B24',
               completedTextColor: '#fff',
               size: '1em'
@@ -166,17 +167,21 @@ Refer to our <Span>Privacy Policy</Span> for details.</P5>
         </Mai>
         
         </M>
-        </form>
+        
         <Button className='buttons'>
             <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
             <button type="submit" className='buttons__button buttons__button--next' disabled={isSubmitDisabled} onClick={this.submitdata} >Submit</button>
           </Button>
+          </form>
       </Main>
     )
   }
 }
 
 export default CourseDetails;
+const media = {
+  mobile: '@media(max-width: 576px)'
+};
 const CheckboxError = styled.div`
   color: red;
   font-size: 12px;
@@ -211,11 +216,15 @@ margin-left:-90px;
 
 const Main = styled.div`
 background-color:#0C111F;
+${media.mobile} {
+  width:100%;
+}
 `
 const Input1 = styled.input`
 margin-left:-630px;
 color: #C1CAE7;
 cursor: pointer;
+${media.mobile}{margin-left:-400px}
 
 `;
 const M = styled.div`
@@ -225,6 +234,10 @@ align-items:center;
 border-radius: 10px;
 width: 800px;
 margin-left: -80px;
+${media.mobile} {
+  width:450px;
+  margin-left:10px;
+}
 `;
 const Mai = styled.div`
 height:550px;
@@ -245,6 +258,7 @@ letter-spacing: 0em;
 text-align: left;
 color:#2B459B;
 margin-left:30px;
+${media.mobile}{font-size:14px}
 `
 const P2 = styled.div`
 margin-left:30px;
@@ -254,6 +268,7 @@ color:#263238;
 font-weight: 500;
 margin-top:18px;
 width: 80%;
+${media.mobile}{font-size:13px;}
 `
 const P3 = styled.p`
 font-size: 16px;
@@ -309,7 +324,7 @@ width:60px;
 border-radius:5px;
 font-size:12px;
 height: 30px;
-
+border: 1px solid #8C8C8C;
 
 `
 const Button2 = styled.button`
@@ -341,17 +356,12 @@ const Span = styled.span`
 color:#BC2424;
 `
 const P5 = styled.p`
-
 font-size:12px;
-
 font-size:13px;
 line-height: 1.5;
 line-space: 20px;
 font-weight: 600;
-
 margin-left:40px;
-
 margin-left:20px;
-
 color:#263238;
 `

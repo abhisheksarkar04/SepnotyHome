@@ -4,31 +4,34 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 
 import {
-  Intro1,
-  Intro2,
-  Intro3,
-  Intro33,
-  Introhd1,
-  Introp1,
-  Introp11,
   IntroCircles,
   IntroWhiteCircle,
   IntroBlueCircle,
   IntroRightText,
-  IntroButtonVideo,
-  IntroButtonVideo2,
-  IntroProposalText,
-  IntroPlayVideo,
-  IntroPlayButton,
-  IntroVideoText,
   IntroExplorePart,
   IntroExplorePart2,
   IntroAchievements,
   IntroOrangeText,
   IntroBlackText,
-  Intro,
-  IntroRightPart,
   IntroRightImg,
+  Home,
+  Homehd1,
+  HomeLefthd1,
+  HomeLeftRight,
+  HomeLeft,
+  Homep1,
+  HomeButtonVideo,
+  HomeProposalText,
+  HomeProposalTextRight,
+  HomePlayVideo,
+  HomePlayButton,
+  HomeVideoText,
+  CirclesText,
+  HomeRight,
+  HomeExplorePartLeft,
+  HomeAchievements,
+  HomeOrangeText,
+  HomeBlackText,
 } from "./styledComponents";
 
 /*
@@ -49,27 +52,32 @@ const HomeSection = () => {
 
   return (
     <>
-      <Intro>
-        <Intro1>
-          <Intro2>
-            <Introhd1>
-            Empowering The Next Generation of Software And Web-App Development
-            </Introhd1>
+      <Home>
+        <Homehd1>
+          Empowering The Next Generation of Software And Web-App Development
+        </Homehd1>
+        <HomeLeftRight>
+          <HomeLeft>
+            <HomeLefthd1>
+              Empowering The Next Generation of Software And Web-App Development
+            </HomeLefthd1>
+            <Homep1>
+              Sepnoty, is a Developing agency Specialized in Delivering World
+              class Solutions For Web and Mobile Through Mature And Development
+              Technology.
+            </Homep1>
 
-            <Introp1>
-            Sepnoty, is a Developing agency  Specialized in Delivering World class Solutions For Web and Mobile Through Mature And Development Technology.
-            </Introp1>
-            <IntroButtonVideo>
+            <HomeButtonVideo>
               <Link to="/getproposal">
-                <IntroProposalText>Get a Proposal</IntroProposalText>
+                <HomeProposalText>Get a Proposal</HomeProposalText>
               </Link>
-              
-              <IntroPlayVideo>
-                <IntroPlayButton src={play} alt="not found" />
-                <IntroVideoText>Watch Our Intro</IntroVideoText>
-              </IntroPlayVideo>
-            </IntroButtonVideo>
-            <Intro3>
+
+              <HomePlayVideo>
+                <HomePlayButton src={play} alt="not found" />
+                <HomeVideoText>Watch Our Intro</HomeVideoText>
+              </HomePlayVideo>
+            </HomeButtonVideo>
+            <CirclesText>
               <IntroCircles>
                 <IntroWhiteCircle />
                 <IntroWhiteCircle />
@@ -81,73 +89,68 @@ const HomeSection = () => {
               <IntroRightText>
                 1.8k People bought our services today.
               </IntroRightText>
-            </Intro3>
-          </Intro2>
-          <IntroRightPart>
+            </CirclesText>
+            <HomeExplorePartLeft>
+              <HomeAchievements>
+                <HomeOrangeText>{projects}</HomeOrangeText>
+
+                <HomeBlackText>Projects Done</HomeBlackText>
+              </HomeAchievements>
+              <HomeAchievements>
+                <HomeOrangeText>{active}</HomeOrangeText>
+
+                <HomeBlackText>Active Customers</HomeBlackText>
+              </HomeAchievements>
+              <HomeAchievements>
+                <HomeOrangeText>{customer}</HomeOrangeText>
+
+                <HomeBlackText>Customers Support</HomeBlackText>
+              </HomeAchievements>
+            </HomeExplorePartLeft>
+          </HomeLeft>
+          <HomeRight>
             <IntroRightImg src={Introimage} alt="not found" />
+            <Link to="/getproposal">
+              <HomeProposalTextRight>Get a Proposal</HomeProposalTextRight>
+            </Link>
             <IntroExplorePart>
-          <IntroAchievements>
-            <IntroOrangeText>{projects}</IntroOrangeText>
+              <IntroAchievements>
+                <IntroOrangeText>{projects}</IntroOrangeText>
 
-            <IntroBlackText>Projects Done</IntroBlackText>
-          </IntroAchievements>
-          <IntroAchievements>
-            <IntroOrangeText>{active}</IntroOrangeText>
+                <IntroBlackText>Projects Done</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{active}</IntroOrangeText>
 
-            <IntroBlackText>Active Customers</IntroBlackText>
-          </IntroAchievements>
-          <IntroAchievements>
-            <IntroOrangeText>{customer}</IntroOrangeText>
+                <IntroBlackText>Active Customers</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{customer}</IntroOrangeText>
 
-            <IntroBlackText>Customers Support</IntroBlackText>
-          </IntroAchievements>
-        </IntroExplorePart>
-          </IntroRightPart>
-         
-          <IntroButtonVideo2>
-              <IntroProposalText>Get a Proposal</IntroProposalText>
-              <IntroPlayVideo>
-                <IntroPlayButton src={play} alt="not found" />
-                <IntroVideoText>Watch Our Intro</IntroVideoText>
-              </IntroPlayVideo>
-              <Introp11>
-              Sepnoty, is a Developing agency Specialized in Delivering World class Solutions For Web and Mobile Through Mature And Development Technology.
-            </Introp11>
-            </IntroButtonVideo2>
-        </Intro1>
-        <Intro33>
-              <IntroCircles>
-                <IntroWhiteCircle />
-                <IntroWhiteCircle />
-                <IntroWhiteCircle />
-                <IntroBlueCircle />
-                <IntroBlueCircle />
-              </IntroCircles>
+                <IntroBlackText>Customers Support</IntroBlackText>
+              </IntroAchievements>
+            </IntroExplorePart>
 
-              <IntroRightText>
-                1.8k People bought our services today.
-              </IntroRightText>
-            </Intro33>
-          
             <IntroExplorePart2>
-                <IntroAchievements>
-                  <IntroOrangeText>{projects}</IntroOrangeText>
+              <IntroAchievements>
+                <IntroOrangeText>{projects}</IntroOrangeText>
 
-                  <IntroBlackText>Projects Done</IntroBlackText>
-                </IntroAchievements>
-                <IntroAchievements>
-                  <IntroOrangeText>{active}</IntroOrangeText>
+                <IntroBlackText>Projects Done</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{active}</IntroOrangeText>
 
-                  <IntroBlackText>Active Customers</IntroBlackText>
-                </IntroAchievements>
-                <IntroAchievements>
-                  <IntroOrangeText>{customer}</IntroOrangeText>
+                <IntroBlackText>Active Customers</IntroBlackText>
+              </IntroAchievements>
+              <IntroAchievements>
+                <IntroOrangeText>{customer}</IntroOrangeText>
 
-                  <IntroBlackText>Customers Support</IntroBlackText>
-                </IntroAchievements>
+                <IntroBlackText>Customers Support</IntroBlackText>
+              </IntroAchievements>
             </IntroExplorePart2>
-        
-      </Intro>
+          </HomeRight>
+        </HomeLeftRight>
+      </Home>
     </>
   );
 };

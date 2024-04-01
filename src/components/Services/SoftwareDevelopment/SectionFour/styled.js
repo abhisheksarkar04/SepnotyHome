@@ -3,17 +3,21 @@ import styled from "styled-components";
 export const ChooseCardCon = styled.div`
   display: flex;
   flex-direction: column;
-  
   padding: 25px;
   width: 45%;
-  height: 270px; /* Fixed height */
+  height: 270px; 
   color: black;
   box-shadow: 0px 15px 20px -10px rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   background-color: white;
   margin-right: 20px;
   margin-bottom: 35px;
-  overflow: hidden; /* Hide overflow text */
+  overflow: hidden; 
+  @media screen and (max-width:576px){
+    width:80%;
+    justify-content:center;
+    height:300px;
+  }
 `;
 
 

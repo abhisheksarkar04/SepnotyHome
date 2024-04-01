@@ -18,6 +18,7 @@ import {
   ServiceItemCon,
   SmallPattern,
   PatternCon,
+  QueryContainer,
 } from "./styled";
 
 import { Link } from "react-router-dom";
@@ -28,7 +29,9 @@ import data from "../Images/data.svg";
 import framework from "../Images/framework.svg";
 import monitoring from "../Images/monitoring.svg";
 import usecases from "../Images/usecases.svg";
-import Contact from "../../ContactUs/SepnotyQuerySection";
+
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 import FooterSection from "../../Footer/FooterSection";
 
 const AiTechnologyServices = () => {
@@ -140,7 +143,10 @@ const AiTechnologyServices = () => {
         </ServiceItemCon>
       </DigitalContainer>
 
-      <Contact heading={heading} />
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
 
       <FooterSection />
     </>

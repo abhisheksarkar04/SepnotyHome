@@ -7,6 +7,11 @@ export const ContactContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.25);
   width: 65%;
   margin: 20px 5% 10px 0px;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+  }
 `;
 
 export const ContactQueryContainer = styled.div`
@@ -15,12 +20,11 @@ export const ContactQueryContainer = styled.div`
   border-bottom-left-radius: 10px;
   background-color: rgba(250, 250, 250, 1);
   width: 72%;
-  @media screen and (max-width: 555px) {
-    width: 800px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
     border-radius: 10px;
-    margin-left: -70px;
+    margin: 10px 0px 10px 0px;
     padding: 20px 0px 20px 15px;
-    margin-right: -90px;
   }
 `;
 
@@ -29,8 +33,8 @@ export const ContactHeading = styled.h1`
   color: rgba(61, 61, 61, 1);
 
   margin: 10px;
-  @media screen and (max-width: 555px) {
-    font-size: 16px;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
     padding-right: 0px;
   }
 `;
@@ -40,6 +44,9 @@ export const ContactDescription = styled.p`
   color: #4e4e4e;
   margin: 10px;
   width: 80%;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 export const ContactTextarea = styled.textarea`
@@ -56,8 +63,8 @@ export const ContactTextarea = styled.textarea`
     color: #8c8c8c;
     font-size: 13px;
   }
-  @media screen and (max-width: 555px) {
-    width: 60%;
+  @media screen and (max-width: 576px) {
+    width: 80%;
     height: 90px;
   }
 `;
@@ -98,37 +105,14 @@ export const ContactInputList = styled.div`
 
 export const SepnotyContact = styled.input`
   accent-color: #5368a3;
-  margin-bottom: 10px;
+  margin-top: 4px;
   cursor: pointer;
-
-  & + label {
-    font-size: 13px;
-    color: #4e4e4e;
-    margin: 10px;
-  }
-  @media screen and (max-width: 555px) {
-    & + label {
-      font-size: 8px;
-      color: #4e4e4e;
-      margin: 10px;
-    }
-  }
 `;
 
 export const RequestSepnoty = styled.input`
   accent-color: #5368a3;
-  & + label {
-    font-size: 13px;
-    color: #4e4e4e;
-    margin: 10px;
-  }
-  @media screen and (max-width: 555px) {
-    & + label {
-      font-size: 8px;
-      color: #4e4e4e;
-      margin: 0px 0px 0px 10px;
-    }
-  }
+  margin-top: 4px;
+  cursor: pointer;
 `;
 
 export const ContactButtonCon = styled.div`
@@ -161,7 +145,7 @@ export const ContactContactssContainer = styled.div`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 28%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -213,6 +197,9 @@ export const ContactUsInput = styled.input`
     color: #8c8c8c;
     font-size: 13px;
   }
+  @media screen and (max-width: 576px) {
+    width: 160px;
+  }
 `;
 
 export const InputCon = styled.div`
@@ -248,7 +235,7 @@ export const PopupMessage = styled.p`
   color: #333;
   color: #ffffff;
 
-  margin-top:  20px;
+  margin-top: 20px;
 `;
 
 export const CloseButton = styled.button`
@@ -259,4 +246,39 @@ export const CloseButton = styled.button`
   cursor: pointer;
   align-self: flex-end;
   color: #ffffff;
+`;
+
+export const LabelDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 10px;
+`;
+
+export const Label = styled.label`
+  font-size: 14px;
+  color: #4e4e4e;
+`;
+
+export const LabelCon = styled.div`
+  margin-left: 12px;
+`;
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    padding: 10px;
+  }
+`;
+export const Image = styled.img`
+  width: 90%;
+  @media screen and (max-width: 576px) {
+    height: 200px;
+    width: 60%;
+  }
 `;

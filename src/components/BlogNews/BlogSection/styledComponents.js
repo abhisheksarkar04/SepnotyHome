@@ -35,6 +35,7 @@ display:flex;
 flex-wrap:wrap;
 margin-left:40px;
 margin-right:40px;
+
 @media screen and (max-width: 576px) {
     margin-left:5px; 
     margin-right:5px;
@@ -50,6 +51,7 @@ height:auto;
 margin:5px;
 border-radius:7px;
 font-size:12px;
+cursor:pointer;
 &:hover{
     background-color:rgba(43, 69, 155, 1);
     color:white;

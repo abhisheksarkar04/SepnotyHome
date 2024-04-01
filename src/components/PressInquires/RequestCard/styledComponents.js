@@ -15,8 +15,8 @@ margin:15px;
 @media screen and (max-width:576px){
     width:43%;
     justify-content: space-between;
-height: 50%;
-    margin:5px;
+height:700px
+    margin:3px;
     padding:7px;
 }
 `;
@@ -46,6 +46,7 @@ font-size:15px;
 width:90%;
 margin-bottom:10px;
 align-items:center;
+
 @media screen and (max-width:576px){
     font-size:14px;
 }
