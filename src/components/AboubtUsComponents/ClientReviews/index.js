@@ -42,6 +42,63 @@ import {
   import FooterSection from "../../Footer/FooterSection";
   
   const ClientReviews= () => {
+    const reviewData = [
+      {
+          image: GroupImg,
+          subImage: Image,
+          company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+          description: "a global provider of Business Processes outsourcing services"
+      },
+      {
+        image: GroupImg,
+        subImage: Image,
+        company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+        description: "a global provider of Business Processes outsourcing services"
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+      description: "a global provider of Business Processes outsourcing services"
+  }, 
+  {
+    image: GroupImg,
+    subImage: Image,
+    company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+    description: "a global provider of Business Processes outsourcing services"
+},
+{
+  image: GroupImg,
+  subImage: Image,
+  company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+  description: "a global provider of Business Processes outsourcing services"
+},
+{
+  image: GroupImg,
+  subImage: Image,
+  company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+  description: "a global provider of Business Processes outsourcing services"
+},
+{
+  image: GroupImg,
+  subImage: Image,
+  company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+  description: "a global provider of Business Processes outsourcing services"
+},
+{
+  image: GroupImg,
+  subImage: Image,
+  company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+  description: "a global provider of Business Processes outsourcing services"
+},
+{
+  image: GroupImg,
+  subImage: Image,
+  company: "Stinger Technologies,a global provider of Business Processesoutsourcing services",
+  description: "a global provider of Business Processes outsourcing services"
+},
+      // Add more objects as needed
+  ];
     return (
       <>
         <DigitalContainer>
@@ -73,100 +130,17 @@ We band together  businesses from more than 35 nations and 30 different industri
             </div>
             </ServiceItemCon>
             <Main1>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                
-                
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-                            a global provider of Business Processes
-                            outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-                          a global provider of Business Processes
-                          outsourcing services
-                        </P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-                <Main2>
-                    <Image2 src={GroupImg} alt="not=found"/>
-                    <Main3>
-                        <Image1 src={Image} alt="not-found"/>
-                        <P>Stinger Technologies, 
-a global provider of Business Processes
-outsourcing services</P>
-                    </Main3>
-                    <Para>Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, </Para>
-                </Main2>
-            </Main1>
+                    {reviewData.map((review, index) => (
+                        <Main2 key={index}>
+                            <Image2 src={review.image} alt="not-found"/>
+                            <Main3>
+                                <Image1 src={review.subImage} alt="not-found"/>
+                                <P>{review.company}</P>
+                            </Main3>
+                            <Para>{review.description}</Para>
+                        </Main2>
+                    ))}
+                </Main1>
             <FooterSection />
         </DigitalContainer>
         

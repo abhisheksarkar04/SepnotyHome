@@ -1,10 +1,19 @@
 import Styled from "styled-components";
 
 
+
+
 export const Main = Styled.div`
 position:on;
 background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);
 `
+const StyledSwiper = Styled(Swiper)`
+    @media screen and (max-width: 576px) {
+        .swiper-slide {
+            width: calc(100% / 2); // Set width for mobile view
+        }
+    }
+`;
 
 
 
