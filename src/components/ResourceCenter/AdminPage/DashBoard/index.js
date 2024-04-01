@@ -433,7 +433,11 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowCreateArticle(false);
 
+    
+
+
     setActiveTab("Create User");
+
 
     setShowProjects(false);
     setShowCreateProject(false);
@@ -466,7 +470,6 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
-
     setActiveTab("Applicants");
     setShowUserAuthorization(false);
   };
@@ -478,7 +481,6 @@ const DashBoard = () => {
     setShowCreateUser(true);
     setShowArticles(false);
     setShowCreateArticle(false);
-
     setActiveTab("Create User");
     setShowApplicants(false);
     setShowUserAuthorization(false);
@@ -504,7 +506,7 @@ const DashBoard = () => {
     setActiveTab("Responses Received");
 
     setShowUserAuthorization(false);
-  };
+
 
   return (
     <>
@@ -552,8 +554,12 @@ const DashBoard = () => {
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
 
+              ) : showContactUs ? (
+
+
 
               ) :showContactUs || showContactUs ? (
+
                 <CreateCon>
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
@@ -746,7 +752,13 @@ const DashBoard = () => {
             {showCreateUser && <CreateUser />}
 
             {ShowUserAuthorization && <UserAuthorization />}
+
+            {showResponse && <ResponseData/>}
+
+
+
             {showResponse && <ResponseData />}
+
           </Containerthree>
         </ContainerOne>
       </Container>
