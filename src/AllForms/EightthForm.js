@@ -40,10 +40,11 @@ class CourseDetails extends Component {
     this.props.prevStep();
   }
 
-  submitdata = () => {
-    const {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
+  submitdata = (e) => {
+    e.preventDefault();
+    const {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo} = this.state
     const formData = {
-      feild8 : {fullname,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
+      feild8 : {fullName,workEmail,phoneNumber,companyName,preferredCommunication,agreeToContact,agreeToProvideInfo}
     }
     this.props.onDataReceived(formData);
   }

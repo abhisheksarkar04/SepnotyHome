@@ -114,14 +114,15 @@ import {
                     </WebsiteContainer>
                 ))}
             </ExpertContainer>
+            <FooterSection />
         </DigitalContainer>
+        
+
     );
 };
 
 export default AboutPortfolio;
-  const media = {
-    mobile: '@media(max-width: 576px)'
-  };
+  
   
   const ExpertContainer = Styled.div`
   display:flex;
@@ -129,37 +130,28 @@ export default AboutPortfolio;
   gap:50px;
   margin-left:48%;
   margin-bottom:60px;
-  ${media.mobile}{
+  @media screen and (max-width: 576px) {
     width:100%;
-    margin-left:118%;
   }
+  
   `
   const WebsiteContainer = Styled.div`
   display:flex;
   flex-direction:row;
   gap : 40px;
   height:50%;
-  ${
-    media.mobile
-  }{
-    font-size:14px;
-    width:80%;
-  }
-
-
   `
   const Heading = Styled.div`
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
-  ${
-    media.mobile
-  }{
+  @media screen and (max-width: 576px) {
     font-size:14px;
-    width:70%;
-    margin-left:-27%;
+    margin:-20px 0px 0px 0px;
+    width:100%;
   }
+  
 
   `
  const X = Styled.div`
@@ -169,6 +161,9 @@ export default AboutPortfolio;
   margin-top:0px;
   height:200px;
   width:700px;
+  @media screen and (max-width: 576px) {
+   width:100%;
+  }
  `;
  const Y = Styled.div`
  display:flex;
@@ -182,37 +177,29 @@ export default AboutPortfolio;
     margin-top:10px;
     height:250px;
     margin-left:-600px;
-    ${
-      media.mobile
-    }{
+    @media screen and (max-width: 576px) {
+      margin-left:-200px;
       height:150px;
-      margin-top:70px;
     }
+   
  `
  const Para1 = Styled.p`
  font-size:20px;
  color:white;
- ${
-  media.mobile
-}{
+ @media screen and (max-width: 576px) {
   font-size:14px;
-  width:40%;
 }
+
 `
 const Para2 = Styled.p`
 margin-top:-20px;
 color:white;
-${
-  media.mobile
-}{
+@media screen and (max-width: 576px) {
   font-size:14px;
- 
 }
+
 `
 const Image1 = Styled.img`
 height:20px;
 margin-top:-20px;
-${media.mobile}{
-
-}
 `;

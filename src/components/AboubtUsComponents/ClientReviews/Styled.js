@@ -8,6 +8,7 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
   @media screen and (max-width: 576px) {
     padding-bottom: 0px;
+    width:100%
   }
 `;
 export const Header = styled.h1`

@@ -164,7 +164,6 @@ we have collaborations with industry leaders in cloud technologies, data managem
   ${media.mobile}{
     font-size:18px;
     margin-left:30px;
-    margin-top:60px;
   }
   `
   
@@ -177,8 +176,8 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-bottom:190px;
   ${media.mobile}{
     width:100%;
-    margin-left:30px;
     gap:160px;
+    margin-left:10px;
   }
   `
   const Main1 = Styled.div`
@@ -189,7 +188,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   border-radius:20px;
   margin-bottom:-179px;
   ${media.mobile}{
-    width:100px;
+    width:100%;
 
   }
   
@@ -216,13 +215,13 @@ we have collaborations with industry leaders in cloud technologies, data managem
   color:white;
   ${media.mobile}{
     font-size:14px;
-    width:240px;
+    width:100%;
   }
   `
   const Img = Styled.img`
   width:350px;
   ${media.mobile}{
-    width:250px;
+    width:100%;
   }
   `
   const Par = Styled.p`
@@ -233,7 +232,6 @@ we have collaborations with industry leaders in cloud technologies, data managem
   font-size:20px;
   color:white;
   ${media.mobile}{
-    width:90%;
-    margin-left:30px;
+    width:100%;
   }
   `

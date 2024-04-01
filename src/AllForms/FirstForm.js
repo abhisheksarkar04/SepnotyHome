@@ -135,9 +135,6 @@ constructor(props){
   className={'stepper'}
   stepClassName={'stepper__step'}
 />
-
-
-
       <Main1>
             <FormContainer>
                 <Form>
