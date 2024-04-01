@@ -151,18 +151,20 @@ We band together  businesses from more than 35 nations and 30 different industri
   };
   
   export default ClientReviews;
-  const media = {
-    mobile: '@media(max-width: 576px)'
-  };
+  
 
   const P = Styled.p`
   margin-top:20px;
   color:white;
-  ${media.mobile}{
-   font-size:12px;
-   margin-top:0px;
-   width:600px;;
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+    width:53px;
+    height:98px;
+    margin-top:-10px;
+    margin-left:-10px;
+
   }
+  
   `
 
   const Main1 = Styled.div`
@@ -173,13 +175,10 @@ We band together  businesses from more than 35 nations and 30 different industri
   width: 85%;
   margin-left: 6.5%;
   margin-bottom: 32%;
-  ${
-    media.mobile
-  }{
-    width:100%;
-    margin-left:3%;
+  @media screen and (max-width: 576px) {
+    width:85%;
+    margin:0px;
   }
-
   `
   const Main2 = Styled.div`
   display:flex;
@@ -192,12 +191,11 @@ We band together  businesses from more than 35 nations and 30 different industri
   height:320px;
   width:350px;
   margin: 0 20px 30px 20px;
-  ${
-    media.mobile
-  }{
-    width:230px;
-    height:250px;
+  @media screen and (max-width: 576px) {
+    width:219px;
+    height:300px;
   }
+ 
 
   `;
   const Main3 = Styled.div`
@@ -209,13 +207,13 @@ We band together  businesses from more than 35 nations and 30 different industri
   const Para = Styled.p`
       font-size: 16px;
       color:white;
-      ${
-        media.mobile
-      }{
-        font-size:13px;
-        margin-top:-10px;
-        gap:0px;
+      @media screen and (max-width: 576px) {
+        font-size:14px;
+        width:153px;
+        height:98px;
+        margin-top:40px;
       }
+     
   
   `;
   const Image1 = Styled.img`
@@ -223,22 +221,19 @@ We band together  businesses from more than 35 nations and 30 different industri
   margin-right: 10px;
   margin-top:10px;
 margin-right:10px;
-${
-  media.mobile
-}{
+@media screen and (max-width: 576px) {
   height:40px;
-  margin-top:10px;
+  margin:0px;
+  
 }
   `
   const Image2 = Styled.img`
   height:45px;
   width:140px;
   margin-top:10px;
-  ${
-    media.mobile
-  }{
-    width:80px;
-    height:25px
-    margin-top:-10px;
+  @media screen and (max-width: 576px) {
+    height:30px;
+    width:90px;
+    
   }
   `

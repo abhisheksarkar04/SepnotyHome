@@ -175,7 +175,7 @@ margin-bottom:20px;
 font-family:Roboto;
 margin-bottom:30px;
 `
-const Form2 = Styled.form`
+const Form2 = Styled.div`
 ${media.mobile}{
   width:220px;
   border-radius:5px;

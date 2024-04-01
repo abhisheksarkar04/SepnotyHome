@@ -408,7 +408,7 @@ ${media.mobile}{
   width:250px;
 }
 `
-const Form2 = Styled.form`
+const Form2 = Styled.div`
 
 `
 const Input3 = Styled.input`

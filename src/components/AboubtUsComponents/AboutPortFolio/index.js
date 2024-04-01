@@ -76,94 +76,95 @@ const AboutPortfolio = () => {
     // Add more objects as needed
   ];
 
-  return (
-    <DigitalContainer>
-      <Header>
-        Resource centre &gt; <Span>Portfolio</Span>
-      </Header>
-      <Service>About Us</Service>
-      <ContentRecomContainer>
-        <ConRecHead>About Portfolio</ConRecHead>
-        <ConRecDesc>
-          If you're looking to create a portfolio, whether for showcasing your
-          work, academic achievements, or other accomplishments.
-        </ConRecDesc>
-        <Rectangle3 src={rectangle3} alt="not-found" />
-        <Rectangle2 src={rectangle2} alt="not-found" />
-        <Rectangle1 src={rectangle1} alt="not-found" />
-      </ContentRecomContainer>
-      <ServiceItemCon>
-        <PatternCon>
-          <SmallPattern></SmallPattern>
-          <ListHeading>About Portfolio</ListHeading>
-        </PatternCon>
-        <ServiceItemDetails>
-          <ServiceItemDesc>
-            Today's enterprises need a full-stack intelligent business solution,
-            from business solutions to managed services like technical
-            consulting, UI/UX redesign, CMS development and migration, website
-            development, and technical SEO. They require partners who can
-            provide value, agility, and financial certainty and who possess
-            extensive knowledge and experience.
-          </ServiceItemDesc>
-        </ServiceItemDetails>
-      </ServiceItemCon>
-      <ExpertContainer>
-        {websiteData.map((data, index) => (
-          <WebsiteContainer key={index}>
-            <Image src={data.imgSrc} alt="not-found" />
-            <X>
-              <Link to="/portfolio">
-                <Heading>{data.heading}</Heading>
-              </Link>
-              <Para1>{data.para1}</Para1>
-              <Y>
-                <Para2>Learn More </Para2>
-                <Image1 src={Export} />
-              </Y>
-            </X>
-          </WebsiteContainer>
-        ))}
-      </ExpertContainer>
-    </DigitalContainer>
-  );
+
+    return (
+        <DigitalContainer>
+            <Header>
+                Resource centre &gt; <Span>Portfolio</Span>
+            </Header>
+            <Service>About Us</Service>
+            <ContentRecomContainer>
+                <ConRecHead>About Portfolio</ConRecHead>
+                <ConRecDesc>
+                    If you're looking to create a portfolio, whether for showcasing your work, academic achievements, or other accomplishments.
+                </ConRecDesc>
+                <Rectangle3 src={rectangle3} alt="not-found" />
+                <Rectangle2 src={rectangle2} alt="not-found" />
+                <Rectangle1 src={rectangle1} alt="not-found" /> 
+            </ContentRecomContainer>
+            <ServiceItemCon>
+                <PatternCon>
+                    <SmallPattern></SmallPattern>
+                    <ListHeading>About Portfolio</ListHeading>
+                </PatternCon>
+                <ServiceItemDetails>
+                    <ServiceItemDesc>
+                        Today's enterprises need a full-stack intelligent business solution, from business solutions to managed services like technical consulting, UI/UX redesign, CMS development and migration, website development, and technical SEO. They require partners who can provide value, agility, and financial certainty and who possess extensive knowledge and experience.
+                    </ServiceItemDesc>
+                </ServiceItemDetails>
+            </ServiceItemCon>
+            <ExpertContainer>
+                {websiteData.map((data, index) => (
+                    <WebsiteContainer key={index}>
+                        <Image src={data.imgSrc} alt="not-found" />
+                        <X>
+                            <Link to="/portfolio">
+                                <Heading>{data.heading}</Heading>
+                            </Link>
+                            <Para1>{data.para1}</Para1>
+                            <Y>
+                                <Para2>Learn More </Para2>
+                                <Image1 src={Export}/>
+                            </Y>
+                        </X>
+                    </WebsiteContainer>
+                ))}
+            </ExpertContainer>
+            <FooterSection />
+        </DigitalContainer>
+        
+
+    );
 };
 
 export default AboutPortfolio;
-const media = {
-  mobile: "@media(max-width: 576px)",
-};
+  
+  
+  const ExpertContainer = Styled.div`
 
-const ExpertContainer = Styled.div`
   display:flex;
   flex-direction:column;
   gap:50px;
  
   margin-bottom:60px;
- 
-  `;
-const WebsiteContainer = Styled.div`
+
+  @media screen and (max-width: 576px) {
+    width:100%;
+  }
+  
+  `
+  const WebsiteContainer = Styled.div`
+
   display:flex;
   flex-direction:row;
   gap : 40px;
   height:50%;
-  ${media.mobile}{
-    font-size:14px;
-    width:80%;
-  }
 
+  `
+  const Heading = Styled.div`
 
-  `;
-const Heading = Styled.div`
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
-  ${media.mobile}{
+
+  @media screen and (max-width: 576px) {
+
     font-size:14px;
-    width:70%;
-    margin-left:-27%;
+    margin:-20px 0px 0px 0px;
+    width:100%;
   }
+  
 
   `;
 const X = Styled.div`
@@ -173,6 +174,9 @@ const X = Styled.div`
   margin-top:0px;
   height:200px;
   width:700px;
+  @media screen and (max-width: 576px) {
+   width:100%;
+  }
  `;
 const Y = Styled.div`
  display:flex;
@@ -184,31 +188,37 @@ const Image = Styled.img`
     margin-top:10px;
     height:250px;
     margin-left:-600px;
-    ${media.mobile}{
+
+    @media screen and (max-width: 576px) {
+      margin-left:-200px;
+
       height:150px;
-      margin-top:70px;
     }
- `;
-const Para1 = Styled.p`
+
+   
+ `
+ const Para1 = Styled.p`
  font-size:20px;
  color:white;
- ${media.mobile}{
+ @media screen and (max-width: 576px) {
+
   font-size:14px;
-  width:40%;
 }
-`;
+
+
+`
 const Para2 = Styled.p`
 margin-top:-20px;
 color:white;
-${media.mobile}{
+@media screen and (max-width: 576px) {
+
   font-size:14px;
- 
 }
-`;
+
+
+`
 const Image1 = Styled.img`
 height:20px;
 margin-top:-20px;
-${media.mobile}{
-
-}
 `;
+

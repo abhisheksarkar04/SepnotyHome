@@ -1,7 +1,5 @@
 import styled from "styled-components";
-const media = {
-  mobile: '@media(max-width: 576px)'
-};
+
 export const DigitalContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -123,7 +121,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 3.5%;
   @media screen and (max-width: 576px) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 `;
 export const ServiceItemDesc = styled.p`
@@ -139,21 +137,19 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-  width: 25%;
+  width: 100%;
   margin: 0px;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 576px) {
-    width: 50%;
+    width: 100%;
   }
 `;
 export const ServiceItemImg = styled.img`
   width: 650px;
-  margin-left: -12%;
-  ${media.mobile} {
-    width:540px;
-    margin-left:-42px;
-
+  margin: 0px;
+  @media screen and (max-width: 576px) {
+    width:100%;
   }
 `;
 
@@ -212,7 +208,7 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }
