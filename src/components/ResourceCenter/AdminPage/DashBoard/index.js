@@ -433,11 +433,7 @@ const DashBoard = () => {
     setShowArticles(false);
     setShowCreateArticle(false);
 
-    
-
-
     setActiveTab("Create User");
-
 
     setShowProjects(false);
     setShowCreateProject(false);
@@ -506,7 +502,7 @@ const DashBoard = () => {
     setActiveTab("Responses Received");
 
     setShowUserAuthorization(false);
-
+  };
 
   return (
     <>
@@ -553,13 +549,7 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
-
               ) : showContactUs ? (
-
-
-
-              ) :showContactUs || showContactUs ? (
-
                 <CreateCon>
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
@@ -753,12 +743,7 @@ const DashBoard = () => {
 
             {ShowUserAuthorization && <UserAuthorization />}
 
-            {showResponse && <ResponseData/>}
-
-
-
             {showResponse && <ResponseData />}
-
           </Containerthree>
         </ContainerOne>
       </Container>
