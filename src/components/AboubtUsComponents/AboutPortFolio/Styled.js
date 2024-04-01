@@ -8,7 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
   @media screen and (max-width: 576px) {
     padding-bottom: 0px;
-    width:100%;
   }
 `;
 export const Header = styled.h1`
@@ -144,17 +143,16 @@ export const ImageCon = styled.div`
   flex-direction: column;
   @media screen and (max-width: 576px) {
     width: 50%;
-    gap:30px;
+    gap: 30px;
   }
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
   margin: 0px;
   @media screen and (max-width: 576px) {
-    width:365px;
-    margin-left:-2px
+    width: 365px;
+    margin-left: -2px;
   }
-  
 `;
 
 export const ServiceItemButton = styled.button`
@@ -212,7 +210,7 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }
