@@ -67,6 +67,7 @@ const followUsElements = [
     logoName: "Figma",
   },
 ];
+
 const theme = {};
 
 class FooterSection extends Component {

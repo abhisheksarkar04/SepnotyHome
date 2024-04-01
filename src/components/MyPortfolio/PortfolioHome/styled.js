@@ -118,7 +118,6 @@ export const Break1 = styled.hr`
 export const SeeMoreCon = styled.div`
   display: flex;
   flex-direction: row;
-
 `;
 export const SeeMoreButton = styled.button`
   display: flex;

@@ -6,7 +6,8 @@ export const Logo = styled.img`
   margin-right: 10px;
   @media screen and (max-width: 576px) {
     margin-bottom: 0px;
-    margin-left: -17px;
+    margin-left: -20px;
+    margin-right: auto;
     height: 18px;
     width: 18px;
   }
@@ -16,8 +17,9 @@ export const Items = styled.li`
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
+
   @media screen and (max-width: 576px) {
-    margin-bottom: 0px;
+    margin-right: -130px;
   }
 `;
 
@@ -27,6 +29,7 @@ export const Name = styled.p`
 
   @media screen and (max-width: 576px) {
     display: none;
+    font-size: 0px;
   }
 `;
 /* @media screen and (max-width: 576px) {

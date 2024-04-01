@@ -28,10 +28,18 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   flex-flow: wrap;
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;
 
 export const LogoContainer = styled.div`
   margin-right: 0px;
+  @media screen and (max-width: 576px) {
+    margin-right: 0px;
+  }
 `;
 
 export const SepnotyLogo = styled.img`
@@ -272,10 +280,10 @@ export const FollowUsContainer = styled.ul`
   }
 `;
 
-export const FollowUsContainer1 = styled.ul`
+export const FollowUsContainer1 = styled.div`
   display: flex;
   flex-direction: column;
-  list-style-type: none;
+
   margin: 0px;
   padding: 0px;
   @media screen and (min-width: 577px) {
@@ -288,10 +296,11 @@ export const FollowUsSection = styled.ul`
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
-
+  margin: 0px;
   @media screen and (max-width: 576px) {
+    display: flex;
     flex-direction: row;
-    justify-content: none;
+    margin-right: 180px;
   }
 `;
 
@@ -302,9 +311,6 @@ export const ServiceContact = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    & > div1 {
-      order: 3;
-    }
   }
 `;
 
@@ -319,6 +325,6 @@ export const ContactCon = styled.div`
   margin-right: 80px;
   @media screen and (max-width: 576px) {
     order: 0;
-    margin-right: 50px;
+    margin-right: 0px;
   }
 `;
