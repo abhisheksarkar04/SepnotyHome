@@ -10,6 +10,7 @@ justify-content:center;
 @media screen and (max-width: 576px) {
    flex-wrap: wrap;
 
+   margin-top:40px;
 }
 `;
 
@@ -30,15 +31,21 @@ display: flex;
 flex-direction: column;
 background-color: #645E5E;
 background-size: cover;
-width: 200px;
 border-radius: 8px;
+
+
+`;
+export const ImageContainer2 = styled.div`
+display: flex;
+flex-direction: column;
+background-color: #645E5E;
+background-size: fit;
+border-radius: 8px;
+height: 52%;
+width: 93%;
 @media screen and (max-width: 576px) {
-  width: 200px;
-  font-size: 20px;
-  display:;
-
+  height: 69%;
 }
-
 
 `;
 export const DeepLearnImage = styled.img`
@@ -46,7 +53,7 @@ export const DeepLearnImage = styled.img`
   
 `;
 export const DeepLearnImage2 = styled.img`
-  height: 52vh;
+  height: 53vh;
   
 `;
 export const DeepHeading = styled.h2`
@@ -77,6 +84,11 @@ export const Header = styled.h1`
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  
+    padding: 10px 20px 10px 6%;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -88,6 +100,10 @@ export const Resource = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 0px 30px 20px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -100,16 +116,21 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  
+  }
 `;
 
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width: 50%;
+  width: 80%;
   padding: 20px 30px 30px 0px;
   @media screen and (max-width: 576px) {
     width: 90%;
-    font-size: 20px;
+    font-size: 14px;
   
   }
 `;
@@ -134,6 +155,12 @@ export const ListHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-left: 2.6%;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    font-size: 16px;
+    margin-left: 6%;
+  
+  }
 `;
 
 export const SearchHeading = styled.p`
@@ -192,7 +219,7 @@ export const ListItems = styled.ul`
   justify-content: space-evenly;
   @media screen and (max-width: 576px) {
     justify-content: space-between;
-    width: 90%;
+    width: 98%;
     margin-left: 0%;
     padding: 0px 0 0 0px;
   }
@@ -206,7 +233,7 @@ export const ListOne = styled.li`
     @media screen and (max-width: 576px) {
       justify-content: space-between;
       width: 50%;
-      margin-left: 0%;
+      margin-right: 0%;
       padding: 30px 0 0 0px;
     }
  
@@ -246,6 +273,11 @@ export const Small = styled.img`
   height: 55px;
   width: 60px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 60px;
+    width: 45px;
+  
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -260,9 +292,13 @@ export const Small1 = styled.img`
   position: absolute;
   height: 55px;
   width: 60px;
+  @media screen and (max-width: 576px) {
+    height: 60px;
+    width: 40px;
+  
+  }
  
 `;
-
 
 
 export const HeadingCon = styled.div`

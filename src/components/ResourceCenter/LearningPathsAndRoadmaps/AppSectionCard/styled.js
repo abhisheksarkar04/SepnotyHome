@@ -6,6 +6,12 @@ padding:10px;
 width:75%;
 margin-bottom:30px;
 margin-top: 40px;
+@media screen and (max-width: 576px) {
+  width: 95%;
+  padding: 0px;
+  margin-left: -28px;
+ 
+}
 `;
 export const WebSectionTwoHeading=styled.h2`
 color:rgba(43, 69, 155, 1);
@@ -13,7 +19,7 @@ font-size:28px;
 margin: 5px 0px 20px 40px;
 @media screen and (max-width: 576px) {
   width: 100%;
-  font-size:20px;
+  font-size:16px;
   margin: 5px 0px 20px 50px;
  
 }
@@ -37,7 +43,7 @@ margin-bottom:15px;
 line-height:1.6;
 @media screen and (max-width: 576px) {
   width: 100%;
-  font-size: px;
+  font-size: 14px;
 
  
 }

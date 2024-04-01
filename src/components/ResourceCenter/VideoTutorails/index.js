@@ -1,13 +1,13 @@
 // import searchIcon from "../images/search.svg";
 import DeepLearnCards from "./DeepLearnCards";
-// import DeepLearnStructure from "./images/Rectangle 6283.svg";
+import DeepLearnStructure from "./images/Rectangle 6283.svg";
 import FooterSection from "../../Footer/FooterSection";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
 import small from "../images/Rectanglesmall.svg";
 import ReactPlayer from "react-player"
-// import DeepLearningImg from "./images/Rectangle 6268.png"
+import DeepLearningImg from "./images/Rectangle 6268.png"
 import styled from 'styled-components';
 
 
@@ -38,6 +38,8 @@ import {
   Container,
   Header,
   Resource,
+  DeepLearnImage2,
+  ImageContainer2,
   ContentRecomContainer,
   ConRecHead,
   ConRecDesc,
@@ -60,12 +62,14 @@ import {
   Small1,
   TechnicalArticalsMain,
   ImageContainer,
-  // DeepLearnImage,
+  DeepLearnImage,
   DeepHeading,
+  // DeepLearnStructure,
   Span,
   HeadingCon,
   ListOne,
 } from "./styled";
+
 
 
 const StyledPlayer = styled(ReactPlayer)`
@@ -136,9 +140,7 @@ const VideoTutorials = () => {
             <TechnicalArticalsMain>
               <DeepLearnFrame>
                  <ImageContainer>
-                 <StyledPlayer 
-                 style={{ width: '600px' }}
-                 controls={true} url="https://youtu.be/6ryPbOfz03U?si=kh21q0Ku9lFzarSQ" />
+                 <DeepLearnImage src={DeepLearningImg} alt="Deep Learning" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
                  </ImageContainer>
                  <Button>Watch More</Button>
@@ -212,10 +214,10 @@ const VideoTutorials = () => {
             </HeadingCon>
             <TechnicalArticalsMain>
               <DeepLearnFrame>
-                 <ImageContainer>
-                 <StyledPlayer controls={true} url="https://youtu.be/6M5VXKLf4D4?si=Tx6ZZxa8IrRtOTxW" />
+              <ImageContainer2>
+                 <DeepLearnImage2 src={DeepLearnStructure} alt="Deep Learning" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
-                 </ImageContainer>
+                 </ImageContainer2>
                  <Button>Watch More</Button>
               </DeepLearnFrame>
               <ListItems>

@@ -15,7 +15,7 @@ color:white;
 width:30%;
 @media screen and (max-width: 576px) {
   width: 96%;
-  font-size: 25px;
+  font-size: 20px;
  
 }
 `;
@@ -28,7 +28,7 @@ line-height: 1.3;
 text-align:;
 @media screen and (max-width: 576px) {
   width: 96%;
-  font-size: 20px;
+  font-size: 14px;
  
 }
 `;
@@ -65,4 +65,11 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+    width:120px;
+    font-size: 18px;
+    border-radius: 28px;
+   
+  }
 `;

@@ -10,9 +10,9 @@ margin-bottom: 30px;
 export const WebSectionOneHeading=styled.h2`
 font-size: 30px;
 color:white;
-width:30%;
+
 @media screen and (max-width: 576px) {
-    width: 90%;
+  font-size: 20px;
    
   }
 `;
@@ -24,6 +24,7 @@ color:white;
 text-align: ;
 @media screen and (max-width: 576px) {
     width: 90%;
+    font-size: 16px;
    
   }
 `;

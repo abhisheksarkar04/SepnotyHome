@@ -16,7 +16,7 @@ export const Header = styled.h1`
   color: #ffffff;
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 600px) {
-    font-size: 16px;
+    font-size: 14px;
 }
 `;
 export const Span = styled.span`
@@ -30,7 +30,7 @@ export const Resource = styled.h1`
   font-weight: 600;
   padding: 0px 30px 20px 6%;
   @media screen and (max-width: 600px) {
-    font-size: 25px;
+    font-size: 16px;
 }
 `;
 
@@ -49,7 +49,7 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 600px) {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
   }
@@ -62,7 +62,7 @@ export const ConRecDesc = styled.p`
   padding: 15px 30px 15px 0px;
   @media screen and (max-width: 600px) {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0px 10px 15px 0px;
   }
 `;

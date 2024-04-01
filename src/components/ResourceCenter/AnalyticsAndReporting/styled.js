@@ -108,6 +108,9 @@ font-size: 18px;
 color:white;
 font-weight: 600;
 padding: 125px 0px 10px 6%;
+@media screen and (max-width: 600px) {
+  font-size: 14px;
+}
 `;
 export const GdHeading=styled.h1`
 font-size: 30px;
@@ -115,6 +118,8 @@ font-weight:700;
 margin: 0px 0px 15px 0px;
 color:white;
 padding: 20px 0px 10px 6%;
+@media screen and (max-width: 600px) {
+  font-size: 16px;
 `;
 
 export const AnalyticsSection = styled.div`
