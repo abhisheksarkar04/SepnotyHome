@@ -141,8 +141,7 @@ const DashBoard = () => {
   const history = useHistory();
 
   const handleLogout = () => {
-    // Perform any necessary cleanup or logout logic
-    // Redirect the user to the login page
+  
     history.push("/resource-center/admin-login"); // Replace "/login" with the path to your login page
   };
 
@@ -489,6 +488,7 @@ const DashBoard = () => {
     setShowCreateCareerOpportunities(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -497,6 +497,7 @@ const DashBoard = () => {
     setShowCareerOpportunities(false);
     setShowCreateBlogs(false);
     setShowEvents(false);
+
     setShowApplicants(false);
 
     setActiveTab("Responses Received");
@@ -506,7 +507,7 @@ const DashBoard = () => {
 
   return (
     <>
-      <Container>
+     <Container>
         <Resources>
           Resources &gt; Admin login &gt; <SpanHead>Dashboard Page</SpanHead>
         </Resources>

@@ -5,6 +5,9 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: #0c111f;
   padding-top: 70px;
+  @media screen and (max-width: 600px) {
+    padding-top: 20px;
+}
 `;
 
 export const Header = styled.h1`
@@ -12,6 +15,9 @@ export const Header = styled.h1`
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+}
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -23,6 +29,9 @@ export const Resource = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 0px 30px 20px 6%;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+}
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -30,6 +39,7 @@ export const ContentRecomContainer = styled.div`
   padding: 3% 0px 3% 6%;
   @media screen and (max-width: 600px) {
       background-color: ;
+      padding: 1% 0px 3% 6%;
   }
 `;
 
@@ -39,18 +49,21 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 600px) {
-    
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 `;
 
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width: 50%;
+  width: 70%;
   padding: 15px 30px 15px 0px;
   @media screen and (max-width: 600px) {
-    width: 80%;
-    font-size: 18px;
+    width: 100%;
+    font-size: 14px;
+    padding: 0px 10px 15px 0px;
   }
 `;
 
@@ -69,12 +82,24 @@ export const Button = styled.button`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 23px;
   color: #2b459b;
   font-weight: bold;
   margin-left:  2.3%;
   @media screen and (max-width: 576px) {
-    margin-left:  7.0%;
+    margin-left:  7.9%;
+    font-size: 18px;
+  }
+`;
+
+export const HeadingCon = styled.div`
+  display: flex;
+  justify-content: ;
+  align-items: center;
+  @media screen and (max-width: 576px) {
+    margin-top:  20px;
+    margin-bottom:  20px;
+    font-size: 18px;
   }
 `;
 
@@ -128,7 +153,7 @@ export const FirstSection = styled.div`
   flex-direction: column;
 `;
 
-export const ListItems = styled.ul`
+export const ListItems = styled.div`
   list-style-type: none;
   padding: 0px;
   margin: 0px;
@@ -137,11 +162,8 @@ export const ListItems = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   @media screen and (max-width: 576px) {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: ;
+    width: 90%;
+    
   }
 `;
 

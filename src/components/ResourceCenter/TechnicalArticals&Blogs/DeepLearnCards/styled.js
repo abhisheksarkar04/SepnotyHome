@@ -11,7 +11,7 @@ export const CardContainer = styled.div`
   border-radius: 7px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -20px;
   }
 `;
 export const CardContainer1 = styled.div`
@@ -25,8 +25,8 @@ export const CardContainer1 = styled.div`
   border-radius: 7px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    margin: 0px 0px 0px -5%;
-    width: 50%;
+    margin: 0px 0px 0px -6%;
+    width: 160px;
   }
 `;
 export const CardContainer2 = styled.div`
@@ -40,8 +40,10 @@ export const CardContainer2 = styled.div`
   border-radius: 7px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    margin: 0px 0px 0px -5%;
-    width: 60%;
+    margin: 0px 20px 0px -10%;
+    width: 190px;
+    height: 16vh;
+    
   }
 `;
 
@@ -52,8 +54,8 @@ export const Image = styled.img`
   z-index: 1;
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
-      margin-left: -50%;
-      width: 50%;
+      width: 190px;
+      margin: 0px 0px -10px -10%;
   }
 `;
 export const Image33 = styled.img`
@@ -63,7 +65,9 @@ export const Image33 = styled.img`
   z-index: 1;
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
-    margin-left: -50%;
+    margin-left: -10%;
+    width: 190px;
+    height: 325px;
 }
 `;
 export const DetailsCon = styled.div`
@@ -101,6 +105,9 @@ export const ImageA = styled.img`
   height: 230px;
   z-index: 1;
   margin-bottom: -10px;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px -10px -20px;
+  }
 `;
 export const ImageB = styled.img`
   width: 160px;
@@ -109,4 +116,8 @@ export const ImageB = styled.img`
   z-index: 1;
   margin-top: 40px;
   margin-bottom: -10px;
+  @media screen and (max-width: 576px) {
+    margin-top: 0px;
+    margin-left: -6%;
+}
 `;

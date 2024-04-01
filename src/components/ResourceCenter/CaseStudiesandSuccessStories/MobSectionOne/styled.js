@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
-background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 0px 6%;
+background-color:#2B459B;
+padding:40px 0px 40px 6%;
 width:100%;
-min-height: 40vh;
 margin-bottom: 30px;
 `;
 export const WebSectionOneHeading=styled.h2`
@@ -12,7 +11,7 @@ font-size: 30px;
 color:white;
 width:60%;
 @media screen and (max-width: 576px) {
-    font-size: 22px;
+    font-size: 20px;
     width: 90%;
   }
 
@@ -24,7 +23,7 @@ width:80%;
 color:white;
 line-height: 1.3;
 @media screen and (max-width: 576px) {
-    font-size: 18px;
+    font-size: 14px;
     width: 90%;
     margin-top: 30px;
   }

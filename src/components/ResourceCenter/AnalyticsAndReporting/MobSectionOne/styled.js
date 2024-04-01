@@ -12,6 +12,7 @@ font-size: 30px;
 margin-bottom:30px;
 @media screen and (max-width: 600px) {
   width:90%;
+  font-size: 20px;
 }
 `;
 
@@ -23,7 +24,7 @@ padding-top: 10px;
 padding-bottom: 20px;
 @media screen and (max-width: 600px) {
   width:90%;
-  font-size:22px;
+  font-size:14px;
 }
 `;
 export const IntroProposalText = styled.button`
@@ -44,9 +45,11 @@ border: none;
 font-family: "roboto";
 cursor: pointer;
 z-index: 0;
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 576px) {
   height: 30px;
   align-self:center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 `;
 export const BackgroundShapeOne=styled.span`
