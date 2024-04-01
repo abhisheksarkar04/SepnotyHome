@@ -124,7 +124,7 @@ export const Button = styled.button`
   padding: 7px 5px;
   margin-right: 10px;
   @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 13px;
   }
 `;
 

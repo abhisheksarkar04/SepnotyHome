@@ -138,11 +138,19 @@ padding: 10px;
 height:350px;
 margin-top:30px;
 width:450px;
+
 @media screen and (max-width: 576px) {
   width:300px; /* Adjust width for mobile view */
   height: 250px;
   margin-right:20px;
 }
+
+@media screen and (max-width:576px){
+  margin-top: 10px;
+    width: 350px;
+    height: 250px;
+    margin-right:20px;
+  }
 `
 const CardContainer = Styled.div`
 background: #121415;
@@ -154,9 +162,14 @@ width:400px;
 box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
 @media screen and (max-width:576px){
+
     height: 350px;
     width: 300px;
     margin-right:30px;
+
+  height: 350px;
+  width: calc(100% - 30px);
+
   }
 `
 const Stars = Styled.a`
@@ -173,6 +186,10 @@ text-align: left;
 margin-top:10px;
 @media screen and (max-width:576px){
     font-size: 12px;
+
+
+    width:100%;
+
   }
 `
 const Para2 = Styled.p`
@@ -220,4 +237,8 @@ color:#2B459B;
 font-size:12px;
 @media screen and (max-width:576px){
     font-size:10px;
+
   }`
+
+  }
+`
