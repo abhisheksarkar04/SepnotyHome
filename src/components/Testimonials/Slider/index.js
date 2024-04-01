@@ -165,11 +165,11 @@ padding: 10px;
 height:350px;
 margin-top:30px;
 width:450px;
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
   margin-top: 10px;
-    width: 190%;
+    width: 350px;
     height: 250px;
-    margin-left:-10px;
+    margin-right:20px;
   }
 `
 const CardContainer = Styled.div`
@@ -181,9 +181,9 @@ height: 400px;
 width:400px;
 box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
-@media screen and (max-width:555px){
-    height: 350px;
-    width: 100%;
+@media screen and (max-width:576px){
+  height: 350px;
+  width: calc(100% - 30px);
   }
 `
 const Stars = Styled.a`
@@ -198,8 +198,9 @@ line-height: 33px;
 letter-spacing: 0px;
 text-align: left;
 margin-top:10px;
-@media screen and (max-width:555px){
-    font-size: 8px;
+@media screen and (max-width:576px){
+    font-size: 12px;
+    width:100%;
   }
 `
 const Para2 = Styled.p`
@@ -210,9 +211,10 @@ line-height: 38px;
 letter-spacing: 0px;
 text-align: left;
 margin-top:10px;
-@media screen and (max-width:555px){
-    font-size: 8px;
+@media screen and (max-width:576px){
+    font-size: 10px;
     line-height: 18px;
+    width:100%;
   }
 `
 const ProfileCon = Styled.div`
@@ -222,7 +224,7 @@ gap:20px;
 margin-top:20px;
 `
 const Image = Styled.img`
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     height: 20px;
     width:20px;
   }
@@ -237,14 +239,14 @@ const Name = Styled.a`
 color:#2B459B;
 font-size:15px;
 
-@media screen and (max-width:555px){
+@media screen and (max-width:576px){
     font-size:10px;
   }
 `
 const Role = Styled.a`
 color:#2B459B;
 font-size:12px;
-@media screen and (max-width:555px){
-    font-size:8px;
+@media screen and (max-width:576px){
+    font-size:10px;
   }
 `
