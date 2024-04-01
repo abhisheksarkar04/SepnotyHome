@@ -21,7 +21,7 @@ export const Heading = Styled.h1`
 color: #2B459B;
 font-size: 40px;
 margin-bottom: 0px;
-  @media screen and (max-width:555px){
+  @media screen and (max-width:576px){
     font-size: 20px;
     font-family: "roboto";
     text-align: center;
@@ -65,17 +65,20 @@ export const Desc = Styled.p`
   margin-top:50px
   font-weight: 500;
   margin-top:100px;
-  @media screen and (max-width:555px){
+  @media screen and (max-width:576px){
     font-size: 15px;
     font-family: "roboto";
     margin: 60px 0 0 20px;
-    text-align: left;
+    text-align: center;
     width: 90%;
     text-shadow: 0px 0px 0px;
   }
 `;
 export const SliderCon = Styled.div`
 padding-left:20px;
+@media screen and (max-width:576px){
+  gap:30px;
+}
 `;
 
 // background: linear-gradient(to left, #333, #333 55%, #eee 100%, #333 75%);

@@ -41,137 +41,92 @@ import {
   // import ContactForm from "../../ContactUs/ContactForm";
   import FooterSection from "../../Footer/FooterSection";
   
-  const AboutPortFolio= () => {
+  const AboutPortfolio = () => {
+    const websiteData = [
+        {
+            imgSrc: Export1,
+            heading: "Website development can be a fascinating & rewarding endeavor.",
+            para1: "Throughout the development process, it is = essential to consider factors like user experience, search engine optimization (SEO), accessibility, and security to create a successful and effective website."
+        },
+        {
+            imgSrc: Export1,
+            heading: "Technical consulting involves providing expert advice & guidance on various technical aspects of a business, project, or initiative.",
+            para1: "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders."
+        },
+        {
+            imgSrc: Export1,
+            heading: "Redesigning the User Interface (UI) & User Experience (UX) of a website or application can significantly improve its usability, aesthetics, and overall effectiveness.",
+            para1: "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders."
+        },
+        {
+          imgSrc: Export1,
+          heading: "Developing & migrating a (CMS) Content Management System involves several necessary steps for ensuring a very smooth transition and optimal functionality. ",
+          para1: "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders."
+      },
+      {
+        imgSrc: Export1,
+        heading: "Technical SEO refers to the procedure of optimizing a website's technical aspects to improve its search engine visibility and ranking. ",
+        para1: "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders."
+    },
+        // Add more objects as needed
+    ];
+
     return (
-      <>
         <DigitalContainer>
-          <Header>
-          Resource centre &gt; <Span>Portfolio</Span>
-          </Header>
-          <Service>About Us</Service>
-          <ContentRecomContainer>
-            <ConRecHead>About Portfolio</ConRecHead>
-            <ConRecDesc>
-            If you're looking to create a portfolio, whether for showcasing your work, academic achievements, or other accomplishments.
-            </ConRecDesc>
-              <Rectangle3 src={rectangle3} alt="not-found" />
-            <Rectangle2 src={rectangle2} alt="not-found" />
-            <Rectangle1 src={rectangle1} alt="not-found" /> 
-          </ContentRecomContainer>
-          <ServiceItemCon>
-            <div>
-              <PatternCon>
-                <SmallPattern></SmallPattern>
-                <ListHeading>About Portfolio</ListHeading>
-              </PatternCon>
-  
-              <ServiceItemDetails>
-                <ServiceItemDesc>
-                Today's enterprises need a full-stack intelligent business solution, from business solutions to managed services like technical consulting, UI/UX redesign, CMS development and migration, website development, and technical SEO. They require partners who can provide value, agility, and financial certainty and who possess extensive knowledge and experience.
-                </ServiceItemDesc>
-              </ServiceItemDetails>
-            </div>
+            <Header>
+                Resource centre &gt; <Span>Portfolio</Span>
+            </Header>
+            <Service>About Us</Service>
+            <ContentRecomContainer>
+                <ConRecHead>About Portfolio</ConRecHead>
+                <ConRecDesc>
+                    If you're looking to create a portfolio, whether for showcasing your work, academic achievements, or other accomplishments.
+                </ConRecDesc>
+                <Rectangle3 src={rectangle3} alt="not-found" />
+                <Rectangle2 src={rectangle2} alt="not-found" />
+                <Rectangle1 src={rectangle1} alt="not-found" /> 
+            </ContentRecomContainer>
+            <ServiceItemCon>
+                <PatternCon>
+                    <SmallPattern></SmallPattern>
+                    <ListHeading>About Portfolio</ListHeading>
+                </PatternCon>
+                <ServiceItemDetails>
+                    <ServiceItemDesc>
+                        Today's enterprises need a full-stack intelligent business solution, from business solutions to managed services like technical consulting, UI/UX redesign, CMS development and migration, website development, and technical SEO. They require partners who can provide value, agility, and financial certainty and who possess extensive knowledge and experience.
+                    </ServiceItemDesc>
+                </ServiceItemDetails>
             </ServiceItemCon>
             <ExpertContainer>
-                <WebsiteContainer>
-                    <Image src={Export1} alt="not-found"/>
-                    <X>
-                        <Link to="/portfolio"><Heading>
-                        Website development can be a fascinating & rewarding endeavor.
-                        </Heading></Link>
-                        <Para1>
-                        Throughout the development process, it is = essential to consider factors like user experience, search engine optimization (SEO), accessibility, and security to create a successful and effective website.
-                        </Para1>
-                        <Y>
-                            <Para2>Learn More </Para2>
-                            <Image1 src={Export}/>
-                        </Y>
-                    </X>
-                </WebsiteContainer>
-                <WebsiteContainer>
-                    <Image src={Export1} alt="not-found"/>
-                    <X>
-                        <Heading>
-                        Technical consulting involves providing expert advice & guidance 
-on various technical aspects of a business, project, or initiative.
-</Heading>          
-                        <Para1>
-                        Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders. 
-                        </Para1>
-                        <Y>
-                            <Para2>Learn More </Para2>
-                            <Image1 src={Export}/>
-                        </Y>
-                    </X>
-                </WebsiteContainer>
-                <WebsiteContainer>
-                    <Image src={Export1} alt="not-found"/>
-                    <X>
-                        <Heading>
-                        Redesigning the User Interface (UI) & User Experience (UX) 
-of a website or application can significantly improve its usability,aesthetics, and overall effectiveness.
-                        </Heading>
-                        <Para1>
-                        Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders. 
-                        </Para1>
-                        <Y>
-                            <Para2>Learn More </Para2>
-                            <Image1 src={Export}/>
-                        </Y>
-                    </X>
-                </WebsiteContainer>
-                <WebsiteContainer>
-                    <Image src={Export1} alt="not-found"/>
-                    <X>
-                        <Heading>
-                        Technical consulting involves providing expert advice & guidance 
-on various technical aspects of a business, project, or initiative.
-
-                        </Heading>
-                        <Para1>
-                        Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders. 
-                        </Para1>
-                        <Y>
-                            <Para2>Learn More </Para2>
-                            <Image1 src={Export}/>
-                        </Y>
-                    </X>
-                </WebsiteContainer>
-                <WebsiteContainer>
-                    <Image src={Export1} alt="not-found"/>
-                    <X>
-                        <Heading>
-                        Technical consulting involves providing expert advice & guidance 
-on various technical aspects of a business, project, or initiative.
-
-                        </Heading>
-                        <Para1>
-                        Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders. 
-                        </Para1>
-                        <Y>
-                            <Para2>Learn More </Para2>
-                            <Image1 src={Export}/>
-                        </Y>
-                    </X>
-                </WebsiteContainer>
+                {websiteData.map((data, index) => (
+                    <WebsiteContainer key={index}>
+                        <Image src={data.imgSrc} alt="not-found" />
+                        <X>
+                            <Link to="/portfolio">
+                                <Heading>{data.heading}</Heading>
+                            </Link>
+                            <Para1>{data.para1}</Para1>
+                            <Y>
+                                <Para2>Learn More </Para2>
+                                <Image1 src={Export}/>
+                            </Y>
+                        </X>
+                    </WebsiteContainer>
+                ))}
             </ExpertContainer>
-           
         </DigitalContainer>
-        <FooterSection />
-      </>
     );
-  
-  };
-  
-  export default AboutPortFolio;
+};
+
+export default AboutPortfolio;
   const media = {
-    mobile: '@media(max-width: 556px)'
+    mobile: '@media(max-width: 576px)'
   };
   
   const ExpertContainer = Styled.div`
   display:flex;
   flex-direction:column;
-  gap : 30px;
+  gap:50px;
   margin-left:48%;
   margin-bottom:60px;
   ${media.mobile}{
@@ -197,6 +152,7 @@ on various technical aspects of a business, project, or initiative.
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
+  margin-top:10px;
   ${
     media.mobile
   }{
@@ -210,7 +166,7 @@ on various technical aspects of a business, project, or initiative.
  display:flex;
   flex-direction:column;
   gap:20px;
-  margin-top:20px;
+  margin-top:0px;
   height:200px;
   width:700px;
  `;
@@ -244,7 +200,7 @@ on various technical aspects of a business, project, or initiative.
 }
 `
 const Para2 = Styled.p`
-
+margin-top:-20px;
 color:white;
 ${
   media.mobile
@@ -255,4 +211,8 @@ ${
 `
 const Image1 = Styled.img`
 height:20px;
+margin-top:-20px;
+${media.mobile}{
+
+}
 `;
