@@ -5,7 +5,7 @@ export const AdServices1 = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:576px) {
     flex-direction: column;
     justify-content: center;
   }
@@ -21,7 +21,7 @@ export const AdServiceLeftHeading = styled.h2`
   font-size: 30px;
   color: #b7b6bd;
   margin-top: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:576px) {
     display: none;
   }
 `;
@@ -30,7 +30,7 @@ export const AdServiceLeftHeading1 = styled.h2`
   color: #b7b6bd;
   margin-top: 150px;
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:576px) {
     display: inline;
     width: 300px;
   }
@@ -38,7 +38,7 @@ export const AdServiceLeftHeading1 = styled.h2`
 export const AdServiceLeftHeadingBlue = styled.span`
   color: #4c64b2;
   font-size: 30px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:576px) {
     font-size: 25px;
     width: 300px;
   }
@@ -50,7 +50,7 @@ export const AdServiceLeftDescript = styled.p`
   width: 60%;
   color: #b7b6bd;
   letter-spacing: 1px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:576px) {
     font-size: 16px;
     line-height: 20px;
     width: 100%;
@@ -59,15 +59,16 @@ export const AdServiceLeftDescript = styled.p`
 `;
 export const AdServiceRightPart = styled.div`
   text-align: right;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
 export const AdServiceRightPart1 = styled.div`
   text-align: right;
   display: none;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: flex;
+    font-size:25px;
   }
 `;
 export const AdServiceRightImg = styled.img`
@@ -75,7 +76,7 @@ export const AdServiceRightImg = styled.img`
   height: 650px;
   position: relative;
   z-index: 1;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 200px;
     height: 200px;
     margin-left: -100px;
@@ -87,7 +88,7 @@ export const AdServDots = styled.img`
   left: 0;
   width: 350px;
   height: 200px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width:576px) {
     top: 1000px;
     width: 330px;
     height: 220px;
@@ -100,7 +101,7 @@ export const AdServRightDots = styled.img`
   z-index: 0;
   margin-top: 250px;
   height: 450px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width:576px) {
     display: none;
   }
 `;

@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const UiUxDesignPage = styled.div`
   background-color: rgba(12, 17, 31, 1);
   width: 100%;
+  @media screen and (max-width:576px){
+    width: 100%;
+  }
 `;
 export const ServiceSpan = styled.span`
   font-weight: normal;
