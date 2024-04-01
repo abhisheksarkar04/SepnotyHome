@@ -134,8 +134,8 @@ const DashBoard = () => {
   const [showContactUs, setShowContactUs] = useState(false);
   const [showApplicants, setShowApplicants] = useState(false);
 
-  const [showResponse,setShowResponse] = useState(false);
-  const [ShowUserAuthorization,setShowUserAuthorization] = useState(false);
+  const [showResponse, setShowResponse] = useState(false);
+  const [ShowUserAuthorization, setShowUserAuthorization] = useState(false);
 
   const [activeTab, setActiveTab] = useState("articles");
   const history = useHistory();
@@ -432,7 +432,13 @@ const DashBoard = () => {
     setShowCreateUser(false);
     setShowArticles(false);
     setShowCreateArticle(false);
+
     
+
+
+    setActiveTab("Create User");
+
+
     setShowProjects(false);
     setShowCreateProject(false);
     setShowReports(false);
@@ -445,7 +451,6 @@ const DashBoard = () => {
     setActiveTab("User Authorization");
     setShowApplicants(false);
   };
-
 
   const toggleApplicants = () => {
     setShowApplicants(true);
@@ -501,7 +506,6 @@ const DashBoard = () => {
     setActiveTab("Responses Received");
 
     setShowUserAuthorization(false);
-  }
 
 
   return (
@@ -549,7 +553,13 @@ const DashBoard = () => {
                   <AddImg src={add} alt="addButton" />
                   <CreateTitle>Create User</CreateTitle>
                 </CreateCon>
+
               ) : showContactUs ? (
+
+
+
+              ) :showContactUs || showContactUs ? (
+
                 <CreateCon>
                   <AddImg src={search} alt="search" />
                   <CreateTitle>Search</CreateTitle>
@@ -742,8 +752,12 @@ const DashBoard = () => {
             {showCreateUser && <CreateUser />}
 
             {ShowUserAuthorization && <UserAuthorization />}
+
             {showResponse && <ResponseData/>}
 
+
+
+            {showResponse && <ResponseData />}
 
           </Containerthree>
         </ContainerOne>

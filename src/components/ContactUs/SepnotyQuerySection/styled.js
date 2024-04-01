@@ -7,7 +7,7 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }
@@ -21,7 +21,7 @@ export const BottomCon = styled.div`
   width: 35%;
   margin: 0px;
   align-items: center;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 `;
@@ -65,7 +65,7 @@ export const Button = styled.button`
 
 export const Image = styled.img`
   width: 90%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     height: 200px;
     width: 60%;
   }

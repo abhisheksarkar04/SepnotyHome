@@ -15,7 +15,7 @@ export const ContactQueryContainer = styled.div`
   border-bottom-left-radius: 10px;
   background-color: rgba(250, 250, 250, 1);
   width: 72%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 800px;
     border-radius: 10px;
     margin-left: -70px;
@@ -59,7 +59,7 @@ export const ContactTextarea = styled.textarea`
     color: #8c8c8c;
     font-size: 13px;
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 80%;
     height: 90px;
   }
@@ -141,7 +141,7 @@ export const ContactContactssContainer = styled.div`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 28%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -266,14 +266,14 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }
 `;
 export const Image = styled.img`
   width: 90%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     height: 200px;
     width: 60%;
   }

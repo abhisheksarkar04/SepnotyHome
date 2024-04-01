@@ -12,6 +12,10 @@ color:rgba(43, 69, 155, 1);
 font-size:24px;
 margin: 60px 0px 20px 50px;
 z-index:1;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:40px;
+}
 `;
 export const SubHeadSpan = styled.span`
   width: 65px;
@@ -21,6 +25,9 @@ export const SubHeadSpan = styled.span`
   position: absolute;
   background-color: rgba(129, 150, 219, 0.3); /* Adjust the alpha value as needed */
   z-index:0;
+  @media screen and (max-width:576px){
+    width:45px;
+  }
 `;
 export const SubPageImg=styled.img`
 width: 70px;
@@ -33,6 +40,10 @@ font-size: 20px;
 margin: 30px 0px 20px 50px;
 color:white;
 width: 80%;
+@media screen and (max-width:576px){
+font-size:14px;
+margin-left:40px;
+}
 `;
 export const BackButton=styled.button`
 color:rgba(43, 69, 155, 1);
@@ -52,6 +63,12 @@ margin-top:25px;
 margin-right:25px;
 margin-left:30px;
 padding:25px;
+@media screen and (max-width:576px){
+  width:60%;
+  margin-top:40px;
+  align-self:center;
+  padding:25px 30px 25px 30px;
+}
 `;
 export const SubCardText=styled.p`
   font-size:16px;

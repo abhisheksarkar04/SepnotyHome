@@ -483,6 +483,10 @@ const Navbar = () => {
                           <li onClick={closeMobileMenu}>Experts</li>
                         </Link>
                         <hr className="hrl" />
+                        <Link to="/AboutUsComponents/AboutPortfolio">
+                          <li onClick={closeMobileMenu}>Portfolio</li>
+                        </Link>
+                        <hr className="hrl" />
                         <Link to="/AboutUsComponents/ClientReviews">
                           <li onClick={closeMobileMenu}>Client Review</li>
                         </Link>

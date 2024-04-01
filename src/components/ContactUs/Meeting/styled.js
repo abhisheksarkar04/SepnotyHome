@@ -8,7 +8,7 @@ export const BottomCon = styled.div`
   width: 35%;
   margin: 0px;
   align-items: center;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 `;
@@ -35,7 +35,7 @@ export const BottomDesc = styled.p`
   line-height: 1.5em;
   margin-top: 30px;
   margin-bottom: 30px;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     font-size: 15px;
     text-align: justify;
     margin: 0px 10px;
@@ -56,7 +56,7 @@ export const Button = styled.button`
 
 export const Image = styled.img`
   width: 100%;
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 `;
