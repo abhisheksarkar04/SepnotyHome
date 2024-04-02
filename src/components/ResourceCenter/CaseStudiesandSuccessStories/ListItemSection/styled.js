@@ -27,7 +27,7 @@ export const PatternCon = styled.div`
   margin-left: 2%;
 `;
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 25px;
   color: #89A4FF;
   font-weight: bold;
   margin-left: -30px;
@@ -39,7 +39,7 @@ export const ListHeading = styled.h1`
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
-  font-size: 18px;
+  font-size: 23px;
   margin-top: 20px;
   color: #ffffff;
   width: 80%;
