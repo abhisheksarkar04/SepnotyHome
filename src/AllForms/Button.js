@@ -41,11 +41,12 @@ const ActiveButton = Styled.button`
   color: ${(props) => (props.active ? 'white' : 'black')};
   width: 100px;
   border: 1px solid #8C8C8C;
-  border-radius: 10px; /* Apply border-radius to all corners */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius:10px; /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:106px;
+    width:100%;
   }
   
   
@@ -56,10 +57,12 @@ const Buttonel = Styled.button`
   color: ${(props) => (props.active ? 'white' : 'black')};
   width: 110px;
   border: 1px solid #8C8C8C;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:10px;
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:106px;
+    width:100%;
   }
   
   
@@ -69,12 +72,15 @@ const Butt = Styled.button`
   background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
   color: ${(props) => (props.active ? 'white' : 'black')};
   width: 100px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:10px;
   border: 1px solid #8C8C8C;
-  border-radius: 10px; /* Apply border-radius to all corners */
+  margin-left:-5px;
+   /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
   height: 45px;
   ${media.mobile} {
-    width:106px;
+    width:100%;
   }
   
   
@@ -82,6 +88,7 @@ const Butt = Styled.button`
 
 const ButtonCon = Styled.div`
   display: flex;
+  flex-direction:row;
   flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   margin-top: -30px;
   padding: 20px; /* Reduced padding for smaller screens */
@@ -91,7 +98,6 @@ const ButtonCon = Styled.div`
 `;
 
 const FormContainer = Styled.div`
-width:100%;
   margin-top: 10%;
   ${media.mobile} {
     width:100%;

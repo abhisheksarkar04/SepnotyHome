@@ -92,8 +92,23 @@ class Software extends Component {
     handleDataReceived = (data) => {
       this.setState(prevState => ({
         recivedData: [...prevState.recivedData, data]
-      }));
-      console.log(this.state.recivedData)
+      }), () => {
+        const jsonData = this.convertToJSON();
+        console.log(jsonData);
+      });
+    }
+    convertToJSON = () => {
+      const { recivedData } = this.state;
+      const jsonData = {};
+      recivedData.forEach(item => {
+        Object.keys(item).forEach(key => {
+          if (!jsonData.hasOwnProperty(key)) {
+            jsonData[key] = [];
+          }
+          jsonData[key].push(item[key]);
+        });
+      });
+      return jsonData;
     }
     render() {
      const {step} = this.state

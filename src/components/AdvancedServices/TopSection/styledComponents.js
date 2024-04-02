@@ -31,15 +31,15 @@ export const AdServiceLeftHeading1 = styled.h2`
   margin-top: 150px;
   display: none;
   @media screen and (max-width:576px) {
-    display: inline;
+    display: block;
     width: 300px;
+    font-size: 20px;
+    margin-left: -50px;
   }
 `;
 export const AdServiceLeftHeadingBlue = styled.span`
   color: #4c64b2;
-  font-size: 30px;
-  @media screen and (max-width:576px) {
-    font-size: 25px;
+  @media screen and (max-width:576px) {  
     width: 300px;
   }
 `;

@@ -241,12 +241,12 @@ ${media.mobile}{
   font-size:13px;
 }
 `
-const Form = Styled.form`
+const Form = Styled.div`
 ${media.mobile}{
   width:220px;
 }
 `
-const Form1 = Styled.form`
+const Form1 = Styled.div`
 margin-top:60px;
 ${media.mobile}{
   width:220px;

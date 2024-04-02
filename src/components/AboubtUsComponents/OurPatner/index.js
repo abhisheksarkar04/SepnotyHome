@@ -151,9 +151,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   
   export default OurPatner;
 
-  const media = {
-    mobile: '@media(max-width: 576px)'
-  };
+  
 
   const He = Styled.h1`
   margin-left:100px;
@@ -161,11 +159,11 @@ we have collaborations with industry leaders in cloud technologies, data managem
   font-size:24px;
   margin-bottom:-49px;
   color:white;
-  ${media.mobile}{
-    font-size:18px;
+  @media screen and (max-width:576px){
+    font-size:16px;
     margin-left:30px;
-    margin-top:60px;
   }
+  
   `
   
   const Main = Styled.div`
@@ -175,11 +173,11 @@ we have collaborations with industry leaders in cloud technologies, data managem
   gap:180px;
   margin-top:190px;
   margin-bottom:190px;
-  ${media.mobile}{
-    width:100%;
-    margin-left:30px;
-    gap:160px;
+  @media screen and (max-width:576px){
+    margin-left:5px;
+    gap:50px;
   }
+  
   `
   const Main1 = Styled.div`
   width:300px;
@@ -188,9 +186,10 @@ we have collaborations with industry leaders in cloud technologies, data managem
   height:300px;
   border-radius:20px;
   margin-bottom:-179px;
-  ${media.mobile}{
-    width:100px;
-
+  @media screen and (max-width : 576px){
+    width:150px;
+    align-items:left;
+    margin-bottom:-20px;
   }
   
   `
@@ -205,25 +204,29 @@ we have collaborations with industry leaders in cloud technologies, data managem
   height:70px;
   margin-top:10px;
   margin-bottom:10px;
-  ${media.mobile}{
-    height:50px;
+  @media screen and (max-width:576px){
+    height:45px;
   }
+ 
   `
   const Para1 = Styled.p`
   margin-top:2px;
   font-size:16px;
   width:330px;
   color:white;
-  ${media.mobile}{
+  @media screen and (max-width :576px){
     font-size:14px;
-    width:240px;
+    width:160px;
+    line-height:1.2;
   }
+  
   `
   const Img = Styled.img`
   width:350px;
-  ${media.mobile}{
-    width:250px;
+  @media screen and (max-width:576px){
+    width:100%;
   }
+
   `
   const Par = Styled.p`
   margin-left:100px;
@@ -232,8 +235,9 @@ we have collaborations with industry leaders in cloud technologies, data managem
   margin-bottom:-109px;
   font-size:20px;
   color:white;
-  ${media.mobile}{
-    width:90%;
+  @media screen and (max-width:576px){
+    font-size:14px;
+    width:65%;
     margin-left:30px;
   }
   `

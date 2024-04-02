@@ -10,6 +10,10 @@ font-size:18px;
 font-weight:600;
 color:white;
 padding:105px 0px 10px 6%;
+@media screen and (max-width: 576px) {
+  font-size: 14px;
+  padding:50px 0px 10px 6%;
+}
 `;
 export const WebSpan=styled.span`
 color: #fff;
@@ -20,10 +24,17 @@ font-size: 30px;
 font-weight:700;
 margin: 30px 0px 35px 6%;
 color:white;
+@media screen and (max-width: 576px) {
+  font-size: 16px;
+  margin: 10px 0px 35px 6%;
+}
 `;
 
 export const ServiceItemDetails = styled.div`
   margin: 80px 5% 20px 0;
+  @media screen and (max-width: 576px) {
+    margin: 40px 5% 10px 0;
+  }
 `;
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
@@ -31,6 +42,10 @@ export const SmallPattern = styled.div`
   width: 60px;
   border-radius: 3px;
   position: absolute;
+  @media screen and (max-width: 576px) {
+    height: 45px;
+    width: 50px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -39,6 +54,8 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 20px;
   margin-left: 6%;
+  @media screen and (max-width: 576px) {
+  }
 `;
 
 export const ListHeading = styled.h1`
@@ -46,6 +63,9 @@ export const ListHeading = styled.h1`
   color: #89A4FF;
   font-weight: bold;
   margin-left: 28px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 100px;
@@ -57,8 +77,10 @@ export const ServiceItemDesc = styled.p`
   line-height: 1.5;
   text-align: ;
   @media screen and (max-width: 576px) {
-    font-size: 18px;
-    width: 90%;
+    font-size: 14px;
+    width: 85%;
+    margin-bottom: 60px;
+    margin-top: 30px;
     margin-left: 12%;
   }
 `;
@@ -103,9 +125,9 @@ export const LearnPara1 = styled.p`
    margin-top: -10px;
    margin-bottom: 30px;
    @media screen and (max-width: 576px) {
-    width: 100%;
+    width: 90%;
     margin-left: 6%;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     margin-bottom: 0px;
    
@@ -121,9 +143,9 @@ export const LearnPara2 = styled.p`
    margin-bottom: 60px;
    @media screen and (max-width: 576px) {
     margin-left: 12%;
-    font-size:18px;
+    font-size:14px;
    width: 82%;
-   margin-top:0px;
+   margin-top: 20px;
 
 
   }
@@ -137,6 +159,7 @@ export const ListHead = styled.h2`
    font-weight: 500;
    @media screen and (max-width: 576px) {
     width: 96%;
+    font-size: 16px;
     margin-left: 6%;
     margin-top: 0px;
     text-align: left;

@@ -207,6 +207,6 @@ export const QueryContainer = styled.div`
   background-color: rgba(12, 17, 31, 1);
   @media screen and (max-width: 576px) {
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 0px;
   }
 `;

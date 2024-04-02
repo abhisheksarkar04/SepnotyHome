@@ -10,11 +10,20 @@ font-size:18px;
 font-weight:600;
 color:white;
 padding: 100px 0px 10px 6%;
+@media screen and (max-width: 576px) {
+  font-size: 14px;
+  padding: 60px 0px 10px 6%;
+ 
+}
 `;
 export const WebSpan=styled.span`
 color: #fff;
 font-size: 16px;
 font-weight: 400;
+@media screen and (max-width: 576px) {
+  font-size: 14px;
+ 
+}
 `;
 export const WebHeading=styled.h1`
 font-size: 30px;
@@ -22,6 +31,10 @@ font-weight:700;
 padding-left: 6%;
 margin:20px 0px 40px 0;
 color:white;
+@media screen and (max-width: 576px) {
+  font-size: 16px;
+ 
+}
 `;
 
 export const ServiceItemDetails = styled.div`
@@ -32,6 +45,11 @@ export const SmallPattern = styled.div`
   height: 55px;
   width: 60px;
   border-radius: 3px;
+  @media screen and (max-width: 576px) {
+    height: 45px;
+    width: 50px;
+   
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -47,7 +65,8 @@ export const ListHeading = styled.h1`
   margin-left: -28px;
   @media screen and (max-width: 576px) {
     width: 96%;
-    font-size: 20px;
+    font-size: 16px;
+    margin-left: -20px;
    
   }
 `;
@@ -60,9 +79,9 @@ export const ServiceItemDesc = styled.p`
   line-height: 1.5;
   text-align: ;
   @media screen and (max-width: 576px) {
-    width: 96%;
+    width: 90%;
     margin-left: 6%;
-    font-size: 16px;
+    font-size: 14px;
    
   }
 `;
@@ -105,9 +124,9 @@ export const LearnPara1 = styled.p`
    margin-top:-10px;
    margin-bottom: 30px;
    @media screen and (max-width: 576px) {
-    width: 100%;
+    width: 90%;
     margin-left: 6%;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     margin-bottom: 0px;
    
@@ -120,6 +139,7 @@ export const ListHead = styled.h2`
    font-weight: 500;
    @media screen and (max-width: 576px) {
     width: 96%;
+    font-size: 16px;
     margin-left: 6%;
     text-align: left;
 
@@ -143,8 +163,8 @@ export const OrderListSection = styled.ul`
     text-align: left;
     & > li{
       text-align: left;
-      font-size: 18px;
-      margin: -40px 0 -40px 20px;
+      font-size: 14px;
+      margin: -5px 0 0 0;
     }
   }
  
@@ -159,9 +179,9 @@ export const LearnPara11 = styled.h2`
    width: 70%;
    font-weight: 10;
    @media screen and (max-width: 576px) {
-    margin-left: 14%;
-    font-size:18px;
-   width: 82%;
+    margin-left: 12%;
+    font-size:14px;
+   width: 80%;
    margin-top:50px;
 
 

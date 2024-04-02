@@ -87,7 +87,7 @@ class FirstSoftwarePage extends Component {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
-    handleFormValues(formData);
+    this.props.onDataReceived(formData);
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types

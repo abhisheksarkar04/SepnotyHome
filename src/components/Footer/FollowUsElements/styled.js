@@ -19,7 +19,6 @@ export const Items = styled.li`
   margin-bottom: 10px;
 
   @media screen and (max-width: 576px) {
-    margin-right: -130px;
   }
 `;
 
