@@ -131,10 +131,8 @@ import {
   margin-left:110px;
   gap:140px;
   margin-bottom:190px;
-  ${
-    media.mobile
-  }{
-    margin-left:20px;
+  @media screen and (max-width:576px){
+    margin-left:5px;
     gap:50px;
   }
   `
@@ -148,12 +146,9 @@ import {
   border-radius:8px;
   margin-bottom:-120px;
   padding:10px;
-  ${
-    media.mobile
-  }{
-    height:200px;
-    width:230px;
-    margin-bottom:-10px;
+  @media screen and (max-width : 576px){
+    width:150px;
+    margin-bottom:20px;
   }
   `
   const Heading = Styled.h1`
@@ -172,9 +167,10 @@ import {
   justify-content:start;
   margin-left:90px;
   margin-top:10px;
-  ${media.mobile}{
-    height:45px;
-  }
+ @media screen and (max-width:576px){
+  margin-left:40px;
+  height:40px;
+ }
   `
   const Para1 = Styled.p`
   margin-top:10px;
@@ -182,5 +178,6 @@ import {
   color:white;
   ${media.mobile}{
     font-size:13px;
+    height:100px;
   }
   `

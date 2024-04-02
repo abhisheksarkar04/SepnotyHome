@@ -133,20 +133,38 @@ export default AboutPortfolio;
   const ExpertContainer = Styled.div`
 
   display:flex;
+
+  flex-direction:column; 
+  padding-left:6%;
+
   flex-direction:column;
   gap:50px;
  
   margin-bottom:60px;
 
+
   @media screen and (max-width: 576px) {
-    width:100%;
+    padding-left: 3%;
   }
-  
   `
   const WebsiteContainer = Styled.div`
 
   display:flex;
   flex-direction:row;
+  margin-bottom:30px;
+  padding-top:20px;
+  @media screen and (max-width: 576px) {
+    padding-bottom:50px;
+  }
+  `
+  const Heading = Styled.div`
+  font-size: 25px;
+  color: #2b459b;
+  font-weight: bold;
+  margin-top:15px;
+  width:85%;
+  line-height:1.5;
+  padding-bottom:20px;
   gap : 40px;
   height:50%;
 
@@ -157,12 +175,14 @@ export default AboutPortfolio;
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
-
   @media screen and (max-width: 576px) {
-
     font-size:14px;
     margin:-20px 0px 0px 0px;
-    width:100%;
+    width:150%;
+    line-height:1.0;
+    margin-top:-22%;
+    margin-left:-60%;
+    margin-bottom:10px;
   }
   
 
@@ -170,10 +190,6 @@ export default AboutPortfolio;
 const X = Styled.div`
  display:flex;
   flex-direction:column;
-  gap:20px;
-  margin-top:0px;
-  height:200px;
-  width:700px;
   @media screen and (max-width: 576px) {
    width:100%;
   }
@@ -181,44 +197,64 @@ const X = Styled.div`
 const Y = Styled.div`
  display:flex;
   flex-direction:row;
-  gap : 10px; 
+  align-items:center;
+  @media screen and (max-width: 576px) {
+    margin-left:-60%;
+  }
  `;
 
 const Image = Styled.img`
     margin-top:10px;
     height:250px;
+
+    margin-right:7%;
+    @media screen and (max-width: 576px) {
+      margin-left:7%;
+      height:110px;
+      width:110px;
+      margin-top:20px;
     margin-left:-600px;
 
     @media screen and (max-width: 576px) {
       margin-left:-200px;
-
       height:150px;
     }
 
    
  `
  const Para1 = Styled.p`
- font-size:20px;
+ font-size:21px;
+ padding-bottom:15px;
+ line-height:1.5;
+ width:85%;
  color:white;
  @media screen and (max-width: 576px) {
-
+  font-size:13px;
+  width:100%;
+  line-height:1.2;
+  margin-top:-10px;
   font-size:14px;
 }
 
 
 `
 const Para2 = Styled.p`
-margin-top:-20px;
+font-size:21px;
 color:white;
 @media screen and (max-width: 576px) {
-
+  font-size:12px;
   font-size:14px;
 }
 
 
 `
 const Image1 = Styled.img`
+height:23px;
+margin-left:10px;
+@media screen and (max-width : 576px){
+  height:23px;
+}
+`;
 height:20px;
 margin-top:-20px;
 `;
-
