@@ -34,6 +34,7 @@ import Export1 from "../images/Rectangle 6654.svg";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
+import FooterSection from "../../Footer/FooterSection";
 // import ContactForm from "../../ContactUs/ContactForm";
 //import FooterSection from "../../Footer/FooterSection";
 
@@ -158,19 +159,6 @@ export default AboutPortfolio;
   }
   `
   const Heading = Styled.div`
-  font-size: 25px;
-  color: #2b459b;
-  font-weight: bold;
-  margin-top:15px;
-  width:85%;
-  line-height:1.5;
-  padding-bottom:20px;
-  gap : 40px;
-  height:50%;
-
-  `
-  const Heading = Styled.div`
-
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
@@ -184,7 +172,6 @@ export default AboutPortfolio;
     margin-left:-60%;
     margin-bottom:10px;
   }
-  
 
   `;
 const X = Styled.div`
@@ -255,6 +242,4 @@ margin-left:10px;
   height:23px;
 }
 `;
-height:20px;
-margin-top:-20px;
-`;
+
