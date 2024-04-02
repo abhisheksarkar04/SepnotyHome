@@ -35,7 +35,7 @@ import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
 // import ContactForm from "../../ContactUs/ContactForm";
-//import FooterSection from "../../Footer/FooterSection";
+import FooterSection from "../../Footer/FooterSection";
 
 const AboutPortfolio = () => {
   const websiteData = [
@@ -157,7 +157,7 @@ export default AboutPortfolio;
     padding-bottom:50px;
   }
   `
-  const Heading = Styled.div`
+  /* const Heading = Styled.div`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
@@ -167,10 +167,9 @@ export default AboutPortfolio;
   padding-bottom:20px;
   gap : 40px;
   height:50%;
+  ` */
 
-  `
   const Heading = Styled.div`
-
   font-size: 21px;
   color: #2b459b;
   font-weight: bold;
@@ -254,7 +253,6 @@ margin-left:10px;
 @media screen and (max-width : 576px){
   height:23px;
 }
-`;
 height:20px;
 margin-top:-20px;
 `;
