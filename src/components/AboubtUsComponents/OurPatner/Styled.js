@@ -8,7 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
   @media screen and (max-width: 576px) {
     padding-bottom: 0px;
-    width:100%;
   }
 `;
 export const Header = styled.h1`
@@ -67,7 +66,6 @@ export const ConRecDesc = styled.p`
   @media screen and (max-width: 576px) {
     padding: 10px 10px 20px 0;
     font-size: 14px;
-    width: 90%;
   }
 `;
 
@@ -122,7 +120,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 3.5%;
   @media screen and (max-width: 576px) {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 `;
 export const ServiceItemDesc = styled.p`
@@ -138,23 +136,20 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-  width: 25%;
+  width: 100%;
   margin: 0px;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 576px) {
-    width: 50%;
-    gap:30px;
+    width: 100%;
   }
 `;
 export const ServiceItemImg = styled.img`
-  width: 100%;
+  width: 650px;
   margin: 0px;
   @media screen and (max-width: 576px) {
-    width:365px;
-    margin-left:-2px
+    width:100%;
   }
-  
 `;
 
 export const ServiceItemButton = styled.button`
@@ -212,7 +207,7 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }

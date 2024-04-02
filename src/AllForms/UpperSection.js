@@ -70,46 +70,41 @@ ${media.mobile} {
 const Main2 = Styled.div`
 display:flex;
 flex-direction:column;
-width: 100%;
-margin-left: -6px;
 background:#0C111F;
 background-size: cover;
-${media.mobile} {
-    width:100%;
-  }
-
+@media screen and (max-width: 576px) {
+  width:100%;
+}
 `
 
 const Main = Styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-width: auto;
+width: 100%;
 background-color:#0C111F;
 font-family:'Roboto';
+${media.mobile}{
+  width:100%;
+}
 
-// const Button =Styled.div`
-// back
-// `
+`
 const HomeContainer = Styled.div`
 display: flex;
 flex-direction: column;
 margin-top:20px;
-
+${media.mobile}{
+width:100%;
+}
 `
-// const Home2 = Styled.div`
-// display: flex;
-// flex-direction:column;
-// justify-content: flex-start;
-
-// `
 const StarsImage = Styled.img`
 margin-top:50px;
 width: 60%;
-${media.mobile} {
-    width:170.66px;
-    height:206px;
-  }
+@media screen and (max-width: 576px) {
+  width:170.66px;
+  height:206px;
+}
+    
 `
 const DevelopContainer = Styled.div`
 margin-top:0px;
@@ -141,8 +136,6 @@ ${media.mobile} {
     margin-left:-20px;
   }
 `
-// const ParaContainer = Styled.div`
-// `
 const Para1 = Styled.p`
 font-size: 24px;
 font-weight:500;
@@ -161,6 +154,7 @@ margin-top:10px;
 ${media.mobile} {
    font-size:14px;
    margin-left:-20px;
+   width:300px;
   }
 `
 const RightContainer = Styled.div`
@@ -176,7 +170,7 @@ position:relative;
 z-index:1;
 ${media.mobile} {
     width:300px;
-height:350px;
+    height:350px;
   }
 `
 
@@ -189,7 +183,6 @@ margin-left:140px;
 ${media.mobile} {
     margin-left:30px;
     margin-top:-20px;
-    //margin-left:-20px;
-  }
+}
 
 `

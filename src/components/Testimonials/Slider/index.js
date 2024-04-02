@@ -140,17 +140,11 @@ margin-top:30px;
 width:450px;
 
 @media screen and (max-width: 576px) {
-  width:300px; /* Adjust width for mobile view */
+  width:170px; /* Adjust width for mobile view */
   height: 250px;
   margin-right:20px;
+  margin-left:-20px;
 }
-
-@media screen and (max-width:576px){
-  margin-top: 10px;
-    width: 350px;
-    height: 250px;
-    margin-right:20px;
-  }
 `
 const CardContainer = Styled.div`
 background: #121415;
@@ -162,13 +156,9 @@ width:400px;
 box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
 @media screen and (max-width:576px){
-
-    height: 350px;
-    width: 300px;
-    margin-right:30px;
-
-  height: 350px;
-  width: calc(100% - 30px);
+    height: 230px;
+    width: 180px;
+    margin-right:20px;
 
   }
 `
@@ -186,10 +176,9 @@ text-align: left;
 margin-top:10px;
 @media screen and (max-width:576px){
     font-size: 12px;
-
-
     width:100%;
-
+    margin-top:0px;
+    line-height:20px;
   }
 `
 const Para2 = Styled.p`
@@ -204,6 +193,7 @@ margin-top:10px;
     font-size: 10px;
     line-height: 18px;
     width:100%;
+    margin-top:3px;
   }
 `
 const ProfileCon = Styled.div`
@@ -211,6 +201,10 @@ display: flex;
 flex-direction:row;
 gap:20px;
 margin-top:20px;
+@media screen and (max-width:576px){
+    gap:10px;
+    margin-top:10px;
+}
 `
 const Image = Styled.img`
 @media screen and (max-width:576px){
