@@ -110,26 +110,34 @@ const AboutPortfolio = () => {
       </ServiceItemCon>
       <ExpertContainer>
         {websiteData.map((data, index) => (
-          <WebsiteContainer key={index}>
-            <Mobilediv>
+          <>
+            <MobileCon>
+              <Heading>{data.heading}</Heading>
+              <ImageDescCon>
+                <Mobilediv>
+                  <Image src={data.imgSrc} alt="not-found" />
+                  <Y>
+                    <Para2>Learn More </Para2>
+                    <Image1 src={Export} />
+                  </Y>
+                </Mobilediv>
+                <Para1>{data.para1}</Para1>
+              </ImageDescCon>
+            </MobileCon>
+            <WebsiteContainer key={index}>
               <Image src={data.imgSrc} alt="not-found" />
-              <Y>
-                <Para2>Learn More </Para2>
-                <Image1 src={Export} />
-              </Y>
-            </Mobilediv>
-            <Image src={data.imgSrc} alt="not-found" />
-            <X>
-              <Link to="/portfolio">
-                <Heading>{data.heading}</Heading>
-              </Link>
-              <Para1>{data.para1}</Para1>
-              <Y>
-                <Para2>Learn More </Para2>
-                <Image1 src={Export} />
-              </Y>
-            </X>
-          </WebsiteContainer>
+              <X>
+                <Link to="/portfolio">
+                  <Heading>{data.heading}</Heading>
+                </Link>
+                <Para1>{data.para1}</Para1>
+                <Y>
+                  <Para2>Learn More </Para2>
+                  <Image1 src={Export} />
+                </Y>
+              </X>
+            </WebsiteContainer>
+          </>
         ))}
       </ExpertContainer>
       <FooterSection />
@@ -139,6 +147,10 @@ const AboutPortfolio = () => {
 
 export default AboutPortfolio;
 
+const ImageDescCon = Styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const ExpertContainer = Styled.div`
 
   display:flex;
@@ -163,7 +175,7 @@ const WebsiteContainer = Styled.div`
   margin-bottom:30px;
   padding-top:20px;
   @media screen and (max-width: 576px) {
-    padding-bottom:50px;
+   display: none;
   }
   `;
 /* const Heading = Styled.div`
@@ -183,13 +195,9 @@ const Heading = Styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-top:10px;
-  @media screen and (max-width: 576px) {
-    font-size:14px;
-    margin:-20px 0px 0px 0px;
-    margin-bottom:10px;
+  @media screen and (max-width: 576px){
+    font-size: 16px;
   }
-  
-
   `;
 const X = Styled.div`
  display:flex;
@@ -203,7 +211,7 @@ const Y = Styled.div`
   flex-direction:row;
   align-items:center;
   @media screen and (max-width: 576px) {
-   
+   display: none;
  `;
 
 const Image = Styled.img`
@@ -212,10 +220,7 @@ const Image = Styled.img`
 
     margin-right:7%;
     @media screen and (max-width: 576px) {
-      margin-left:7%;
-      height:110px;
-      width:110px;
-      margin-top:20px;
+      display: none;
  `;
 const Para1 = Styled.p`
  font-size:21px;
@@ -256,15 +261,13 @@ margin-top:-20px;
 const Mobilediv = Styled.div`
 display: flex;
 flex-direction: column;
+align-items: center;
 @media screen and (min-width : 577px){
   display:  none;
 }
 `;
 
-const Image4 = Styled.img`
-    margin-top:10px;
-    height:250px;
-
-    margin-right:7%;
-    
- `;
+export const MobileCon = Styled.div`
+  display: flex;
+  flex-direction: column;
+`;
