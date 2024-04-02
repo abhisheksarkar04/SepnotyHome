@@ -37,7 +37,7 @@ margin-bottom:12px;
 align-items:center;
 font-size:20px;
 @media screen and (max-width:576px){
-    font-size:17px;
+    font-size:16px;
 }
 `;
 export const RequestDescription=styled.p`

@@ -249,6 +249,7 @@ export const IntroAchievements = styled.div`
   @media screen and (max-width: 576px) {
     width: 100px;
     margin-right: 0px;
+   
   }
 `;
 export const IntroOrangeText = styled.h2`
@@ -263,7 +264,7 @@ export const IntroOrangeText = styled.h2`
 export const IntroBlackText = styled.p`
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
   }
@@ -331,7 +332,7 @@ export const Homehd1 = styled.h1`
     font-size: 17px;
     letter-spacing: 0px;
     width: 100%;
-    margin: 85px 0px 0px 20px;
+    margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
     padding-right: 20px;
@@ -495,6 +496,8 @@ export const HomeExplorePartLeft = styled.div`
 
   @media screen and (max-width: 576px) {
     display: flex;
+    align-items:center;
+
   }
 `;
 
@@ -515,7 +518,7 @@ export const HomeOrangeText = styled.h2`
 export const HomeBlackText = styled.p`
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
   }

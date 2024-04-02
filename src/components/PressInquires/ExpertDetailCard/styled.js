@@ -16,7 +16,10 @@ color:rgba(43, 69, 155, 1);
 margin-bottom:30px;
 margin-left:35px;
 margin-top:10px;
-
+@media screen and (max-width:576px){
+    font-size:16px;
+    margin-left:3%;
+  }
 
 `;
 export const ExpText=styled.p`
@@ -26,6 +29,10 @@ line-height:1.5;
 margin-bottom:15px;
 margin-left:37px;
 padding-top:5px;
+@media screen and (max-width:576px){
+    font-size:14px;
+    margin-left:3%;
+  }
 `;
 export const ExpImgRole=styled.div`
 display:flex;
@@ -52,10 +59,16 @@ font-weight:600;
 color:white;
 font-size:17px;
 margin-bottom:4px;
+@media screen and (max-width:576px){
+    font-size:14px;
+  }
 `;
 export const ExpRol=styled.p`
 font-size:17px;
 color:white;
+@media screen and (max-width:576px){
+    font-size:14px;
+  }
 `;
 export const TransparentBg=styled.span`
 width:65px;
