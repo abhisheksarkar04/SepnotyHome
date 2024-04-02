@@ -177,8 +177,6 @@ import {
   ${
     media.mobile
   }{
-    display:flex;
-    flex-direction:row;
     gap:60px;
     margin-left:10px;
   }
@@ -195,15 +193,13 @@ import {
   width:330px;
   padding:11px;
   margin-bottom:-120px;
-
-
-${
-  media.mobile
-}{
-  height:270px;
-  width:240px;
-  margin-bottom:-40px;
-}
+  @media screen and (max-width : 576px){
+    width:160px;
+    align-items:left;
+    margin-bottom:-20px;
+    padding:5px;
+    height:300px;
+  }
 
   
   `
@@ -215,6 +211,8 @@ ${
     media.mobile
   }{
     height:50px;
+    margin-top:0px;
+    margin-bottom:0px;
   }
   `
   const P = Styled.p`
