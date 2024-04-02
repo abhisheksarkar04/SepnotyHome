@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
-background-color:rgba(37, 73, 137, 1);
+background-color: #2B459B;
 padding:40px 0px 0px 6%;
 width: 100%;
 min-height: 40vh;
 margin-bottom: 30px;
+@media screen and (max-width: 576px) {
+  min-height: 30vh;
+}
 `;
 export const WebSectionOneHeading=styled.h2`
 font-size:30px;
 color:white;
 width:30%;
+@media screen and (max-width: 576px) {
+  font-size: 20px;
+}
 `;
 export const WebSectionDescription=styled.p`
 font-size:22px;
@@ -19,9 +25,8 @@ width: 65%;
 color: #fff;
 text-align: ;
 @media screen and (max-width: 576px) {
-    font-size: 18px;
-    width: 90%;
-    margin-left: ;
+    font-size: 14px;
+    width: 85%;
     margin-top: 20px;
   }
 `;

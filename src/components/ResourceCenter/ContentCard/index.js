@@ -15,7 +15,6 @@ const ContentCard = (props) => {
   const { cardDetails } = props;
   const { title, heading, image, description } = cardDetails;
   return (
-    <li>
       <CardContainer>
         <Image src={image} />
         <DetailsCon>
@@ -29,7 +28,6 @@ const ContentCard = (props) => {
           </button>
         </ButtonCon>
       </CardContainer>
-    </li>
   );
 };
 

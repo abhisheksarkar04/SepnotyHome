@@ -58,6 +58,7 @@ import {
   DeepLearnImage,
   DeepHeading,
   DeepLearnImage2,
+  ListOne,
  
   Span,
   RedText,
@@ -128,7 +129,7 @@ const TechnicalArticals = () => {
                  <Button>View More</Button>
               </DeepLearnFrame>
                 <ListItems>
-                    <li>
+                    <ListOne>
                       <Image src={image1} />
                       <CardContainer2>
                         <DetailsCon>
@@ -137,8 +138,8 @@ const TechnicalArticals = () => {
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image src={image2} />
                       <CardContainer2>
                         <DetailsCon>
@@ -146,8 +147,8 @@ const TechnicalArticals = () => {
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image33 src={image3} />
                       <CardContainer2>
                         <DetailsCon>
@@ -155,8 +156,8 @@ const TechnicalArticals = () => {
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image4} />
                       <CardContainer>
                         <DetailsCon>
@@ -165,8 +166,8 @@ const TechnicalArticals = () => {
                         <RedText> Deep learning frameworks </RedText>
                         <RedText> (e.g., TensorFlow, PyTorch) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image5} />
                       <CardContainer>
                         <DetailsCon>
@@ -175,8 +176,8 @@ const TechnicalArticals = () => {
                         <RedText> Big data platforms  </RedText>
                         <RedText> (e.g., Hadoop, Spark) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageB src={image6} />
                       <CardContainer1>
                         <DetailsCon>
@@ -185,7 +186,7 @@ const TechnicalArticals = () => {
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
                       </CardContainer1>
-                    </li>
+                    </ListOne>
                 </ListItems>
             </TechnicalArticalsMain>
           </FirstSection>
@@ -203,7 +204,7 @@ const TechnicalArticals = () => {
                  <Button>View More</Button>
               </DeepLearnFrame>
               <ListItems>
-                    <li>
+                    <ListOne>
                       <Image src={image1} />
                       <CardContainer2>
                         <DetailsCon>
@@ -212,8 +213,8 @@ const TechnicalArticals = () => {
                         <RedText>(e.g., GDPR, HIPAA)</RedText>
                         <RedText>Ethical hacking and penetration testing</RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image src={image2} />
                       <CardContainer2>
                         <DetailsCon>
@@ -221,8 +222,8 @@ const TechnicalArticals = () => {
                         </DetailsCon>
                         <RedText> (e.g., firewalls, VPNs, intrusion detection systems) </RedText>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <Image33 src={image3} />
                       <CardContainer2>
                         <DetailsCon>
@@ -230,8 +231,8 @@ const TechnicalArticals = () => {
                         </DetailsCon>
                         <ButtonCon> Learn More </ButtonCon>
                       </CardContainer2>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image4} />
                       <CardContainer>
                         <DetailsCon>
@@ -240,8 +241,8 @@ const TechnicalArticals = () => {
                         <RedText> Deep learning frameworks </RedText>
                         <RedText> (e.g., TensorFlow, PyTorch) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageA src={image5} />
                       <CardContainer>
                         <DetailsCon>
@@ -250,8 +251,8 @@ const TechnicalArticals = () => {
                         <RedText> Big data platforms  </RedText>
                         <RedText> (e.g., Hadoop, Spark) </RedText> 
                       </CardContainer>
-                    </li>
-                    <li>
+                    </ListOne>
+                    <ListOne>
                       <ImageB src={image6} />
                       <CardContainer1>
                         <DetailsCon>
@@ -260,7 +261,7 @@ const TechnicalArticals = () => {
 
                         <RedText> (e.g., GDPR, HIPAA) </RedText>
                       </CardContainer1>
-                    </li>
+                    </ListOne>
                 </ListItems>
             </TechnicalArticalsMain>
           </div>

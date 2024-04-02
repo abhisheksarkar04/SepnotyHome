@@ -137,6 +137,7 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
+
 width: 100%;
 margin: 0px;
 display: flex;
@@ -145,14 +146,16 @@ flex-direction: column;
   width: 100%;
   gap:20px;
 }
+
 `;
 export const ServiceItemImg = styled.img`
   width: 100%;
   margin: 0px;
   @media screen and (max-width: 576px) {
+
     width:100%;
+
   }
-  
 `;
 
 export const ServiceItemButton = styled.button`
@@ -210,7 +213,7 @@ export const QueryContainer = styled.div`
   margin: 0px;
   padding: 50px 0px;
   background-color: rgba(12, 17, 31, 1);
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
     padding: 10px;
   }

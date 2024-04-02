@@ -10,12 +10,13 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.h1`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 576px) {
     font-size: 16px;
+    padding: 10px 20px 20px 6%;
   }
 `;
 export const Span = styled.span`
@@ -28,6 +29,9 @@ export const Resource = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 0px 30px 20px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -41,7 +45,8 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 576px) {
-    font-size: 26px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -51,8 +56,9 @@ export const ConRecDesc = styled.p`
   width: 50%;
   padding: 20px 30px 30px 0px;
   @media screen and (max-width: 576px) {
-    font-size: 20px;
-    width: 100%;
+    font-size: 14px;
+    width: 80%;
+    padding: 0px 30px 30px 0px;
   }
 `;
 
@@ -104,7 +110,7 @@ export const ListHeading = styled.h1`
   padding-left: 9%;
   letter-spacing: 0.5px;
   @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 16px;
     padding-left: 13%;
 
   }
@@ -117,6 +123,11 @@ export const Small = styled.img`
   width: 60px;
   z-index: 0;
   margin-left: 7%;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+  width: 48px;
+
+  }
 `;
 
 export const Small1 = styled.img`
@@ -125,6 +136,11 @@ export const Small1 = styled.img`
   width: 60px;
   margin-left: 7%;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 43px;
+  width: 60px;
+
+  }
 `;
 export const Small2 = styled.img`
   position: absolute;
@@ -132,6 +148,11 @@ export const Small2 = styled.img`
   margin-left: 7%;
   width: 60px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 43px;
+  width: 55px;
+
+  }
 `;
 export const LabelCont = styled.div`
   display: flex;
@@ -526,13 +547,18 @@ export const CommunityHeading = styled.h1`
   color: #8196db;
   font-weight: 500;
   margin-bottom: 20px;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+
+  }
 `;
 export const CommunityDesc = styled.p`
   font-size: 16px;
   color: #ffffff;
   margin-bottom: 10px;
   @media screen and (max-width: 576px) {
-      width: 90%;
+      width: 70%;
+      font-size: 14px;
    
   }
 `;

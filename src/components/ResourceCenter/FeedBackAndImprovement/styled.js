@@ -10,6 +10,10 @@ font-size: 18px;
 font-weight:600;
 color:white;
 padding:105px 0px 20px 6%;
+@media screen and (max-width: 576px) {
+  padding:50px 0px 20px 6%;
+  font-size: 14px;
+}
 `;
 export const WebSpan=styled.span`
 color: #fff;
@@ -20,6 +24,10 @@ font-size: 30px;
 font-weight:700;
 margin:10px 0px 15px 6%;
 color:white;
+@media screen and (max-width: 576px) {
+  font-size: 16px;
+  margin: 0px 0px 15px 6%;
+}
 `;
 
 export const ServiceItemDetails = styled.div`
@@ -57,7 +65,8 @@ export const ServiceItemDesc = styled.p`
   text-align: ;
   @media screen and (max-width: 576px) {
     margin-left: 12%;
-    font-size: 18px;
+    width: 80%;
+    font-size: 14px;
   }
 `;
 

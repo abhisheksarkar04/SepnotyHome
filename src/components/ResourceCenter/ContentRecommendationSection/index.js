@@ -29,8 +29,8 @@ import {
   ContentContainer,
   Small1,
   Span,
+  HeadingCon,
 } from "./styled";
-import { HeadingCon } from "../VideoTutorails/styled";
 
 const cardList = [
   {

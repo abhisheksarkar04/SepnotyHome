@@ -7,6 +7,11 @@ export const ContactContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.25);
   width: 65%;
   margin: 20px 5% 10px 0px;
+  @media screen and (max-width: 576px) {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+  }
 `;
 
 export const ContactQueryContainer = styled.div`
@@ -16,11 +21,10 @@ export const ContactQueryContainer = styled.div`
   background-color: rgba(250, 250, 250, 1);
   width: 72%;
   @media screen and (max-width: 576px) {
-    width: 800px;
+    width: 100%;
     border-radius: 10px;
-    margin-left: -70px;
+    margin: 10px 0px 10px 0px;
     padding: 20px 0px 20px 15px;
-    margin-right: -90px;
   }
 `;
 

@@ -10,6 +10,7 @@ export const BottomCon = styled.div`
   align-items: center;
   @media screen and (max-width: 576px) {
     width: 100%;
+    padding: 0px 30px;
   }
 `;
 

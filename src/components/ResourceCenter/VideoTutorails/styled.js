@@ -7,14 +7,22 @@ justify-content:center;
 margin-top:100px;
 margin-bottom:100px;
 justify-content:center;
+@media screen and (max-width: 576px) {
+   flex-wrap: wrap;
 
-
+   margin-top:40px;
+}
 `;
 
 export const DeepLearnFrame = styled.div`
 display: flex;
 flex-direction: column;
-width: 42%;
+margin-left:0%;
+width: 40%;
+@media screen and (max-width: 576px) {
+  
+  width: 90%;
+}
 
 `;
 
@@ -25,19 +33,44 @@ background-color: #645E5E;
 background-size: cover;
 border-radius: 8px;
 
+
+`;
+export const ImageContainer2 = styled.div`
+display: flex;
+flex-direction: column;
+background-color: #645E5E;
+background-size: fit;
+border-radius: 8px;
+height: 52%;
+width: 93%;
+@media screen and (max-width: 576px) {
+  height: 69%;
+}
+
 `;
 export const DeepLearnImage = styled.img`
-  height: 45vh;
+  height: 48vh;
   
-
-
+`;
+export const DeepLearnImage2 = styled.img`
+  height: 53vh;
+  
 `;
 export const DeepHeading = styled.h2`
   font-height:20px;
   text-align:center;
   padding:20px;
-
+  color: #fff;
 `;
+
+export const RedText = styled.p`
+  color: #D01E1E;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: px;
+  margin-top: 8px;
+`;
+
 
 export const Container = styled.div`
   display: flex;
@@ -51,6 +84,11 @@ export const Header = styled.h1`
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  
+    padding: 10px 20px 10px 6%;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -62,6 +100,10 @@ export const Resource = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 0px 30px 20px 6%;
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+  
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -74,13 +116,23 @@ export const ConRecHead = styled.h1`
   color: #ffffff;
   margin-bottom: 30px;
   font-weight: bold;
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  
+  }
 `;
 
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width: 60%;
+  width: 80%;
   padding: 20px 30px 30px 0px;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    font-size: 14px;
+  
+  }
 `;
 
 export const Button = styled.button`
@@ -102,14 +154,13 @@ export const ListHeading = styled.h1`
   font-size: 25px;
   color: #2b459b;
   font-weight: bold;
-  margin-left: 2%;
-  align-self: center;
-`;
-
-export const HeadingCon = styled.div`
-  display: flex;
-  justify-content: ;
-  align-items: center;
+  margin-left: 2.6%;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    font-size: 16px;
+    margin-left: 6%;
+  
+  }
 `;
 
 export const SearchHeading = styled.p`
@@ -158,15 +209,37 @@ export const FirstSection = styled.div`
 `;
 
 export const ListItems = styled.ul`
-list-style-type: none;
-padding: 0px 0 0 0px;
-width:60%;
-margin: 0px;
-display: flex;
-flex-direction: row;
-flex-wrap:wrap;
-justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0px 0 0 25px;
+  width:60%;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  @media screen and (max-width: 576px) {
+    justify-content: space-between;
+    width: 98%;
+    margin-left: 0%;
+    padding: 0px 0 0 0px;
+  }
 `;
+
+
+
+
+export const ListOne = styled.li`
+    margin-right: 1%;
+    @media screen and (max-width: 576px) {
+      justify-content: space-between;
+      width: 50%;
+      margin-right: 0%;
+      padding: 30px 0 0 0px;
+    }
+ 
+`;
+
+
 
 export const Rectangle1 = styled.img`
   position: absolute;
@@ -197,33 +270,39 @@ export const Rectangle3 = styled.img`
 
 export const Small = styled.img`
   position: absolute;
-
   height: 55px;
   width: 60px;
-
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 60px;
+    width: 45px;
+  
+  }
 `;
 
 export const ContentContainer = styled.div`
   margin: 5em 2em 3em 5em;
+  @media screen and (max-width: 576px) {
+    margin: 2em 0 50px 2em;
+  
+  }
 `;
 
 export const Small1 = styled.img`
   position: absolute;
   height: 55px;
   width: 60px;
+  @media screen and (max-width: 576px) {
+    height: 60px;
+    width: 40px;
+  
+  }
+ 
 `;
-export const Image = styled.img`
-
-`;
 
 
-
-
-export const RedText = styled.p`
-  color: #D01E1E;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: px;
-  margin-top: 8px;
+export const HeadingCon = styled.div`
+  display: flex;
+  justify-content: ;
+  align-items: center;
 `;

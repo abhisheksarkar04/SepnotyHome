@@ -21,7 +21,7 @@
   justify-content: center;
   height: 490px;
   border-radius: 5px;
-  background-color:#0C111F;
+  background-color: #0c111f;
 }
 
 .carousel-item-text {
@@ -117,7 +117,7 @@
   width: 350px;
   height: 300px;
   background-color: #fff;
-  
+
   padding: 15px;
   border-radius: 15px;
   position: absolute;
@@ -185,7 +185,7 @@
   align-self: center;
   text-align: center;
   margin-bottom: 20px;
-  color: #4C64B2;
+  color: #4c64b2;
 }
 
 .service-list {
@@ -202,7 +202,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 608px) {
+@media screen and (max-width: 576px) {
   .service-list {
     flex-direction: column;
   }

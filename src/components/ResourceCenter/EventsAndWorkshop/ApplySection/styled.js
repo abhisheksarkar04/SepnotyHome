@@ -9,6 +9,12 @@ export const SmallPattern = styled.div`
   height: 55px;
   width: 60px;
   border-radius: 3px;
+  @media screen and (max-width: 576px) {
+   
+    height: 45px;
+  width: 45px;
+  
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -21,9 +27,14 @@ export const PatternCon = styled.div`
 `;
 export const ListHeading = styled.h1`
   font-size: 25px;
-  color: #89A4FF;
+  color: #2B459B;
   font-weight: bold;
   margin-left: -32px;
+  @media screen and (max-width: 576px) {
+    margin-left: -18px;
+    font-size: 16px;
+  
+  }
 `;
 
 
@@ -36,7 +47,7 @@ export const Container = styled.div`
   align-items: center;
   margin-left: 14%;
   @media screen and (max-width: 576px) {
-    margin-left: 6%;
+    margin-left: 4%;
     width: 98%;
     flex-wrap: wrap;
     justify-content: space-around;
