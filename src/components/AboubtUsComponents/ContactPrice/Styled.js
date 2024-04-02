@@ -6,12 +6,25 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+
+  @media screen and (max-width: 576px) {
+    width:380px;
+ }
 `;
 export const Header = styled.h1`
   font-size: 17px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 5%;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+    
+    margin:0px;
+    height:0px;
+    margin-bottom:-11px;
+    padding-left:15px;
+    }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -23,11 +36,24 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
+
+  
+  @media screen and (max-width: 576px) {
+    font-size:16px;
+    padding-left:15px;
+ 
+    }
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
+
+  @media screen and (max-width: 576px) {
+    width:380px;
+    height:190px;
+   
+    }
 `;
 
 export const ConRecHead = styled.h1`
@@ -36,6 +62,13 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   padding-top: 20px;
+
+  
+  @media screen and (max-width: 576px) {
+    font-size:20px;
+    padding-top:1px;
+   
+    }
 `;
 
 export const ConRecDesc = styled.p`
@@ -45,6 +78,15 @@ export const ConRecDesc = styled.p`
   padding: 20px 30px 30px 0px;
   margin-left:0px;
   margin-bottom:40px;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+    padding-top:1px;
+    width:380px;
+    text-align:justify;
+    margin:-22px;
+    margin-left:0px;
+    
 `;
 
 export const Button = styled.button`

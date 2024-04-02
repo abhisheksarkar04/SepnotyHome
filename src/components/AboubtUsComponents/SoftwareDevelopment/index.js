@@ -117,10 +117,24 @@ const OrderContainer = styled.ol`
 margin-left:85px;
 gap:16px;
 margin-bottom:80px;
+
+@media screen and (max-width: 576px) {
+  font-size:16px;
+
+  }
 `
 const List = styled.li`
 margin-top:10px;
 width:80%;
 font-size:20px;
 color:white;
+
+@media screen and (max-width: 576px) {
+  font-size:16px;
+margin:-130px;
+margin-inline:-85px;
+margin-bottom:140px;
+width:350px;
+
+  }
 `
