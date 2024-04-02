@@ -166,7 +166,7 @@ class CourseDetails extends Component {
 
 <Main1>
             <Form1>
-                <Heading>
+                <Heading> 
                 *What is your industry?
                 </Heading>
                 <Form2>

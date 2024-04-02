@@ -57,7 +57,7 @@ export const ListHeading = styled.h1`
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
-  font-size: 22px;
+  font-size: 23px;
   color: #ffffff;
   width: 85%;
   margin-left: 4%;

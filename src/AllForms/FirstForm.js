@@ -122,7 +122,7 @@ constructor(props){
 
         <Stepper
   steps={[{ label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }]}
-  activeStep={this.state.activeStep} // Use activeStep from state
+  activeStep={0} // Use activeStep from state
   styleConfig={{
     activeBgColor: '#2B459B',
     activeTextColor: '#fff',
