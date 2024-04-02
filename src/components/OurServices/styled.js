@@ -128,3 +128,42 @@ export const Header = styled.h1`
   color: #4c64b2;
   margin-right: 3%;
 `;
+
+export const Nodejs = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-right: 1px solid #abaaaa;
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 13%;
+    padding: 3px 10px 3px 10px;
+    border-right: 1px solid #abaaaa;
+  }
+`;
+
+export const Python = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-right: 1px solid #abaaaa;
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 15%;
+     padding: 0px 10px;
+    border-right: 1px solid #abaaaa;
+  }
+`;
+
+export const Php=styled.img`
+height: 30px;
+width: 200px;
+padding: 0px 30px 0px 30px;
+border-right: 1px solid #abaaaa;
+@media screen and (max-width: 576px) {
+  height: 15px;
+  width: 15%;
+   padding: 3px 10px;
+  border-right: 1px solid #abaaaa;
+}
+`;
