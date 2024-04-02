@@ -211,16 +211,15 @@ const Y = Styled.div`
   flex-direction:row;
   align-items:center;
   @media screen and (max-width: 576px) {
-   display: none;
+   
  `;
 
 const Image = Styled.img`
     margin-top:10px;
     height:250px;
-
     margin-right:7%;
     @media screen and (max-width: 576px) {
-      display: none;
+      
  `;
 const Para1 = Styled.p`
  font-size:21px;

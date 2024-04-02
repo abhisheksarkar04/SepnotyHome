@@ -211,7 +211,6 @@ export const CardHolder = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   flex-flow: wrap;
   @media screen and (max-width: 576px) {
     display: flex;
@@ -276,6 +275,9 @@ export const ToolsCardCon = styled.div`
   @media screen and (max-width: 576px) {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding: 0px 0px;
   }
 `;
 

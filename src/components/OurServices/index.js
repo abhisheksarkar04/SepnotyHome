@@ -10,15 +10,18 @@ import {
   CuateImage11,
   HeadImgCon,
   Header,
+  Nodejs,
+  Python,
+  Php
 } from "./styled";
 
 import django from "./Images/django-logo.svg";
 import node from "./Images/Node.js_logo_2015 2.png";
 import laravel from "./Images/laravel-logo.svg";
-import Python from "./Images/Python-Logo 2.svg";
+import python from "./Images/Python-Logo 2.svg";
 import Symfony from "./Images/Symfony-logo.svg";
 import net from "./Images/net-logo.svg";
-import Php from "./Images/PhP.svg";
+import php from "./Images/PhP.svg";
 // import cuate from "./Images/cuate.svg";
 // import pattern from "./Images/pattern.svg";
 /* import cuate from "./Images/cuate.svg"; */
@@ -29,12 +32,12 @@ const Idea = () => (
   <>
     <Container>
       <ImgContainer>
-        <Image src={node} alt="Node.js" />
-        <Image src={Python} alt="Python" />
-        <Image src={django} alt="django" />
-        <Image src={net} alt=".net" />
-        <Image src={laravel} alt="laravel" />
-        <Image src={Php} alt="Php" />
+        <Nodejs src={node} alt="Node.js" />
+        <Python src={python} alt="Python" />
+        <Python src={django} alt="django" />
+        <Python src={net} alt=".net" />
+        <Python src={laravel} alt="laravel" />
+        <Php src={php} alt="Php" />
         <Img src={Symfony} alt="Symfony" />
       </ImgContainer>
       <ContentContainer>
