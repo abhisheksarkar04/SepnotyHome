@@ -146,7 +146,14 @@ width:450px;
 `
 
 
-
+/* @media screen and (max-width:576px){
+  margin-top: 10px;
+    width: 350px;
+    height: 250px;
+    margin-right:20px;
+  }
+`;
+ */
 
 const CardContainer = Styled.div`
 background: #121415;
@@ -208,7 +215,9 @@ margin-top:20px;
     gap:10px;
     margin-top:10px;
 }
-`
+
+
+`;
 
 const Image = Styled.img`
 @media screen and (max-width:576px){
