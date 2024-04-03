@@ -59,7 +59,7 @@ export const PatternCon = styled.div`
 `;
 
 export const ListHeading = styled.h1`
-  font-size: 22px;
+  font-size: 25px;
   color: #89A4FF;
   font-weight: bold;
   margin-left: 28px;
@@ -70,7 +70,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemDesc = styled.p`
   margin-bottom: 100px;
   margin-top: 50px;
-  font-size: 22px;
+  font-size: 23px;
   color: #ffffff;
   width: 60%;
   margin-left: 8%;
@@ -119,7 +119,7 @@ export const ListItemSection = styled.ul`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 1;
-   font-size: 22px;
+   font-size: 23px;
    width: 80%;
    margin-left: -4%;
    margin-top: -10px;
@@ -151,7 +151,7 @@ export const LearnPara2 = styled.p`
   }
 `;
 export const ListHead = styled.h2`
-   font-size: 22px;
+   font-size: 25px;
    color: #89A4FF;
    margin-left: -4%;
    margin-top: 40px;

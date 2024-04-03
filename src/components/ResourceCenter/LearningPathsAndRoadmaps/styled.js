@@ -82,7 +82,7 @@ export const ListHeading = styled.h1`
 
 export const ListItemSection = styled.ol`
  
- font-size: 16px; 
+ font-size: 25px; 
  font-weight: 900;
   margin-right: 20%;
   margin-left: 7%;
@@ -100,7 +100,7 @@ export const ListItemSection = styled.ol`
 export const LearnPara1 = styled.p`
    color:#fff;
    font-weight: 10;
-   font-size: 20px;
+   font-size: 23px;
    margin-top: 20px;
    margin-left: -2%;
    @media screen and (max-width: 576px) {
@@ -111,14 +111,14 @@ export const LearnPara1 = styled.p`
 export const LearnPara3 = styled.p`
    color:#fff;
    font-weight: 10;
-   font-size:18px;
+   font-size:23px;
    margin-left: 6%;
    margin-top: 20px;
    
 `;
 export const ListHead = styled.h2`
    color: #89A4FF;
-   font-size: 22px;
+   font-size: 25px;
    font-weight: 100;
    margin-top: 20px;
    @media screen and (max-width: 576px) {
@@ -127,12 +127,11 @@ export const ListHead = styled.h2`
 `;
 
 export const LearnPara = styled.p`
-  font-size:18px;
+  font-size:23px;
   font-weight: 0; 
-  line-height:1.5;
+  line-height:1.3;
   color: #FFF;
-  width:62%;
-  word-spacing: 2px;
+  width:72%;
   text-align:left;
   margin-left: 8%;
   margin-bottom: 40px;
@@ -152,7 +151,7 @@ export const OrderListSection = styled.ol`
     color:#fff;
     display: list-item;
     line-height: 1.9;
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 400;
   }
   @media screen and (max-width: 576px) {

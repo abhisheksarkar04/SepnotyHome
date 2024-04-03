@@ -126,6 +126,7 @@ const Para = styled.p`
     margin:0px;
     text-align:left;
    
+   
     }
   `
   const Para3 = styled.p`
@@ -139,7 +140,7 @@ const Para = styled.p`
    width:465px;
     color:white;
     margin:-60px;
-    margin-top:20px;
+    margin-top:30px;
     text-align:left;
    
     }
@@ -194,22 +195,14 @@ const Main2 = styled.div`
     color:white;
     margin:-560px;
     margin-left:-80px;
-    margin-bottom:20px;
+    margin-bottom:40px;
   
     }
 
   
   `
   
-const Image = styled.img`
-  height:260px;
-  margin-right:10px;
-  margin-left:-130px;
-  margin-top:120px;
 
-
-  
-  `
 const Para1 = styled.p`
   font-size:24px;
   margin-bottom:10px;
@@ -218,7 +211,8 @@ const Para1 = styled.p`
   @media screen and (max-width: 576px) {
     font-size:16px;
     color:white;
-
+    margin-top:10px;
+    margin-bottom:20px;
     }
 
 
