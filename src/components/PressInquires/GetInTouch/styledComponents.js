@@ -8,6 +8,9 @@ export const BlueContainer=styled.div`
  padding-left:6%;
  justify-content:space-between;
  color:white;
+ @media screen and (max-width:576px){
+  padding-left:3%;
+ }
 `;
 export const LeftTextContainer=styled.div`
 display:flex;

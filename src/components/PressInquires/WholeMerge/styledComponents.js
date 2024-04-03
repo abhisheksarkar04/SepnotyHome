@@ -237,7 +237,7 @@ width:80%;
 margin:30px 0px 30px 0px;
 margin-left:6%;
 @media screen and (max-width:576px){
-  width:100%;
+  
   margin-left:3%;
   margin-right:2px;
   font-size:14px;

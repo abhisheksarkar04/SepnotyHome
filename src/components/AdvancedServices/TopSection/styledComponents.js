@@ -53,7 +53,7 @@ export const AdServiceLeftDescript = styled.p`
   @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 1.5;
-    width: 100%;
+    width: 97%;
     margin-left: 10px;
   }
 `;
