@@ -126,6 +126,7 @@ const Para = styled.p`
     margin:0px;
     text-align:left;
    
+   
     }
   `
   const Para3 = styled.p`
@@ -139,7 +140,7 @@ const Para = styled.p`
    width:465px;
     color:white;
     margin:-60px;
-    margin-top:20px;
+    margin-top:30px;
     text-align:left;
    
     }
@@ -194,7 +195,7 @@ const Main2 = styled.div`
     color:white;
     margin:-560px;
     margin-left:-80px;
-    margin-bottom:20px;
+    margin-bottom:40px;
   
     }
 
@@ -210,7 +211,8 @@ const Para1 = styled.p`
   @media screen and (max-width: 576px) {
     font-size:16px;
     color:white;
-
+    margin-top:10px;
+    margin-bottom:20px;
     }
 
 
