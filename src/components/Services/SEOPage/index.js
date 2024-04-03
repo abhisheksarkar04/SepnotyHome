@@ -46,11 +46,11 @@ const SEOPage = (props) => {
     <>
       <DigitalContainer>
         <Header>
-          Services &gt; <Span>DigitalMarketing</Span>
+          Services &gt; <Span>Digital Marketing</Span>
         </Header>
         <Service>Services</Service>
         <ContentRecomContainer>
-          <ConRecHead>DigitalMarketing</ConRecHead>
+          <ConRecHead>Digital Marketing</ConRecHead>
           <ConRecDesc>
             "The aim of marketing is to know and understand the customer so well
             the services or products fit them and sell itself."

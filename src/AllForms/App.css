@@ -3,20 +3,20 @@
   margin: 0 auto;
 }
 
-.main-container__header, .main-container__subheader {
+.main-container__header,
+.main-container__subheader {
   text-align: center;
 }
-
 
 .form {
   width: 700px;
   margin: 0 auto;
-  background-color: #fafafa;
+  background-color: transparent;
   padding: 25px 15px;
 }
 
 .form-group {
-  text-align: center
+  text-align: center;
 }
 
 .form-group__element {
@@ -58,12 +58,12 @@
 
 .buttons__button--next {
   background-color: #003487;
-  color: #fff
+  color: #fff;
 }
 
 .buttons__button--back {
   background-color: #fff;
-  color: #003487
+  color: #003487;
 }
 
 .select {
@@ -78,7 +78,7 @@
 }
 
 .select__item:hover {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .table {
@@ -108,7 +108,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 3vh 0!important;
+  padding: 3vh 0 !important;
 }
 
 .stepper__step {
@@ -131,7 +131,7 @@
   font-size: 90%;
 }
 .stepper__step.active {
-  background-color: #2B459B;
+  background-color: #2b459b;
   color: #fff;
 }
 
@@ -141,6 +141,6 @@
 }
 
 .stepper__step.completed {
-  background-color: #407B24;
+  background-color: #407b24;
   color: #fff;
 }
