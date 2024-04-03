@@ -151,9 +151,9 @@ const Main = Styled.div`
   margin-bottom:12%;
 
   @media screen and (max-width: 576px) {
-    height: 390px;
-    width: 300px;
-    margin:10px;
+    height: 400px;
+    width: 350px;
+    margin:20px;
     overflow-x: auto; 
   overflow-y: hidden;
   

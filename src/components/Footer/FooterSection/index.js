@@ -83,10 +83,10 @@ class FooterSection extends Component {
               </div>
               <SepnotyDescription>
                 We're happy to speak to businesses at any stage of their journey
-                <SepnotyDescription1>
-                  -no query too big or small.
-                </SepnotyDescription1>
               </SepnotyDescription>
+              <SepnotyDescription1>
+                -no query too big or small.
+              </SepnotyDescription1>
             </LogoContainer>
             <FollowUsContainer1>
               <ContactHeading>Follow Us</ContactHeading>

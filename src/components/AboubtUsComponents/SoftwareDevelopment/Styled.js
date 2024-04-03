@@ -8,7 +8,7 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-    width:400px;
+    width:423px;
     height:2400px;
  
     }
@@ -52,7 +52,7 @@ export const ContentRecomContainer = styled.div`
   padding: 10px 0px 4% 5%;
 
   @media screen and (max-width: 576px) {
-    width:400px;
+    width:423px;
     height:210px;
    
     }
