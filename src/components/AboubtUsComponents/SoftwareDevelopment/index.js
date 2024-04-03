@@ -51,7 +51,7 @@ const Software= () => {
         <ContentRecomContainer>
           <ConRecHead>Our Approach to Sofware Development</ConRecHead>
           <ConRecDesc>
-          Software development encompasses a wide range of methodologies and approaches, each with its own strengths and weaknesses. The choice of approach depends on factors such as project requirements, team dynamics, timeline, budget, and organizational culture. Here are some common approaches to software development:
+          SoftwareConRecDesc development encompasses a wide range of methodologies and approaches, each with its own strengths and weaknesses. The choice of approach depends on factors such as project requirements, team dynamics, timeline, budget, and organizational culture. Here are some common approaches to software development:
           </ConRecDesc>
           <Rectangle3 src={rectangle3} alt="not-found" />
           <Rectangle2 src={rectangle2} alt="not-found" />
