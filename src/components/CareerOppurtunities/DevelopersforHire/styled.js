@@ -9,10 +9,6 @@ export const DigitalContainer = styled.div`
 
   @media screen and (max-width: 576px) {
 
-    width:423px;
-
-    width:382px;
-
  }
   
 `;
@@ -65,7 +61,7 @@ export const BlueContainer = styled.div`
 
 
  @media screen and (max-width: 576px) {
-  width:423px;
+ 
   height:110px;
   padding-top:10px;
 

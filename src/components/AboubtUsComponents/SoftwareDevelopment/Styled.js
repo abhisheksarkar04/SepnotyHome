@@ -8,11 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-
-    width:423px;
-
-    width:400px;
-
     height:2400px;
  
     }
@@ -57,9 +52,6 @@ export const ContentRecomContainer = styled.div`
 
   @media screen and (max-width: 576px) {
 
-    width:423px;
-
-    width:400px;
 
     height:210px;
    
@@ -124,9 +116,9 @@ export const Rectangle1 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:185px;
-   width: 190px;
+  
    board-radius:2px;
-   margin-inline: -100px;
+  
 
     }
 `;
@@ -166,7 +158,7 @@ export const Rectangle3 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:40px;
-   width: 190px;
+   
    board-radius:2px;
     }
 `;
