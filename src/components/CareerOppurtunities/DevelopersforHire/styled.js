@@ -8,7 +8,11 @@ export const DigitalContainer = styled.div`
   padding-bottom: 100px;
 
   @media screen and (max-width: 576px) {
+
     width:423px;
+
+    width:382px;
+
  }
   
 `;
