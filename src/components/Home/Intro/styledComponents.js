@@ -284,7 +284,7 @@ export const IntroRightImg = styled.img`
   margin-right: 100px;
   margin-bottom: 100px;
   @media screen and (max-width: 576px) {
-    width: 100%;
+    width: 90%;
     height: 430px;
     margin-left: -60px;
     margin-top: -70px;
@@ -331,7 +331,7 @@ export const Homehd1 = styled.h1`
   @media screen and (max-width: 576px) {
     font-size: 17px;
     letter-spacing: 0px;
-    width: 100%;
+    width:95%;
     margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
