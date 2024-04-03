@@ -38,7 +38,7 @@ export const WebSectionTwoHeading = styled.h2`
   padding-top: 10px;
   @media screen and (max-width:576px){
     font-size:20px;
-    margin-left:10%;
+    margin-left:8%;
   }
 `;
 export const HeadingSpan = styled.span`
@@ -50,7 +50,8 @@ export const HeadingSpan = styled.span`
   background-color: rgba(129, 150, 219, 0.25);
   z-index: 0;
   @media screen and (max-width:576px){
-    height:50px;
+    height:6%;
+    width:45px;
     margin-left:4%;
   }
 `;

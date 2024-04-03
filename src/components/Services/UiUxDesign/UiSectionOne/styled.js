@@ -55,7 +55,7 @@ export const BackgroundShapeTwo = styled.span`
   gap: 0;
   z-index: 0;
   @media screen and (max-width:576px){
-    height: 280px;
-    margin-top: -50px;
+    height: 300px;
+    margin-top: -30px;
   }
 `;

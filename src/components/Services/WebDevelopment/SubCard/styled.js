@@ -5,6 +5,9 @@ display:flex;
 flex-direction:column;
 padding:20px;
 padding-top:70px 0px 60px 30px;
+@media screen and (max-width:576px){
+  padding-left:3%;
+}
 `;
 
 export const SubHead=styled.h2`
@@ -14,7 +17,7 @@ margin: 60px 0px 20px 50px;
 z-index:1;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:40px;
+  margin-left:25px;
 }
 `;
 export const SubHeadSpan = styled.span`
@@ -27,6 +30,8 @@ export const SubHeadSpan = styled.span`
   z-index:0;
   @media screen and (max-width:576px){
     width:45px;
+    height:6%;
+    margin-left:0%;
   }
 `;
 export const SubPageImg=styled.img`
@@ -42,7 +47,7 @@ color:white;
 width: 80%;
 @media screen and (max-width:576px){
 font-size:14px;
-margin-left:40px;
+margin-left:25px;
 }
 `;
 export const BackButton=styled.button`
