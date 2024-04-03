@@ -80,6 +80,10 @@ export const RequestRight=styled.div`
 display:flex;
 flex-direction:column;
 justify-content:Flex-start;
+@media screen and (max-width:576px){
+  justify-content:center;
+  align-items:center;
+}
 
 `;
 export const CalenderImg=styled.img`
@@ -211,9 +215,9 @@ cursor:pointer;
 font-weight:400;
 width:11%;
 @media screen and (max-width:576px){
-  width:30%;
+  width:35%;
   margin-left:35%;
-  
+  font-size:14px;
 }
 `;
 export const TrustWorthy=styled.h2`
@@ -381,4 +385,7 @@ export const ContactCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

@@ -37,7 +37,7 @@ margin-bottom:12px;
 align-items:center;
 font-size:20px;
 @media screen and (max-width:576px){
-    font-size:16px;
+    font-size:14px;
 }
 `;
 export const RequestDescription=styled.p`
@@ -48,7 +48,7 @@ margin-bottom:10px;
 align-items:center;
 
 @media screen and (max-width:576px){
-    font-size:14px;
+    font-size:12px;
 }
 `;
 export const RequestTxt=styled.h3`
@@ -58,7 +58,7 @@ margin-left:61%;
 margin-top:30px;
 @media screen and (max-width:576px){
     margin-left:15%;
-    font-size:10px;
+    font-size:12px;
     margin-right:0px;
 }
 `;

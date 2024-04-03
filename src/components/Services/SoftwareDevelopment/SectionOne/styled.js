@@ -47,6 +47,9 @@ export const BackgroundShapeOne = styled.span`
   top: 7;
   left: 0;
   z-index: 0;
+  @media screen and (max-width:576px){
+    margin-top:17px;
+  }
 `;
 export const BackgroundShapeTwo = styled.span`
   position: absolute;
@@ -60,4 +63,8 @@ export const BackgroundShapeTwo = styled.span`
   right: 0;
   gap: 0;
   z-index: 0;
+  @media screen and (max-width:576px){
+    height:320px;
+    margin-top: -50px;
+  }
 `;
