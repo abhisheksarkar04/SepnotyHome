@@ -8,7 +8,7 @@ import article7 from '../assets/article7.svg';
 import article8 from '../assets/article8.svg';
 import article9 from '../assets/article9.svg';
 import article1 from '../assets/article1.png';
-import downarrow from '../assets/Vector.png';
+import down from '../assets/down.svg';
 import {
     ArticlesContainer,
     SeeMoreButton,
@@ -160,7 +160,7 @@ const AllArticles = () => {
     <div>
     <SeeMoreButton onClick={loadMore}>See More Articles</SeeMoreButton></div>
     <div>
-    <DownArrow><img src={downarrow} alt="arrow icon not found"/></DownArrow>
+    <DownArrow src={down} alt="arrow icon not found"/>
     </div>
     </Click>
     <HrLine />
