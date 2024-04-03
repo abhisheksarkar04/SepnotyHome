@@ -8,7 +8,7 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-    width:420px;
+    width:400px;
     height:2400px;
  
     }
@@ -52,7 +52,7 @@ export const ContentRecomContainer = styled.div`
   padding: 10px 0px 4% 5%;
 
   @media screen and (max-width: 576px) {
-    width:420px;
+    width:400px;
     height:210px;
    
     }
@@ -208,7 +208,7 @@ export const ServiceItemImg = styled.img`
 
   @media screen and (max-width: 576px) {
     height: 270px;
-    width: 400px;
+    width: 370px;
     margin:20px;
     margin-top: 2300%;
     margin-inline: -320px;
