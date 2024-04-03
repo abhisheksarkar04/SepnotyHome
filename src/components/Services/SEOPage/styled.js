@@ -216,7 +216,7 @@ export const SeolistItem = styled.li`
   @media screen and (max-width: 576px) {
     margin-left: 13%;
     font-size: 14px;
-    width: 90%;
+    width: 85%;
   }
 `;
 export const BackButton = styled.button`
