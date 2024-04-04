@@ -41,7 +41,9 @@ class YourIndustry extends Component {
   };
 
   handleWebsiteLinkChange = (e) => {
-    this.setState({ websiteLink: e.target.value });
+    this.props.updateFormData({
+      websiteLink: e.target.value
+    });
   };
 
   back = (e) => {
