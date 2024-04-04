@@ -54,8 +54,9 @@ export const Introhd1 = styled.h1`
   @media screen and (max-width: 576px) {
     font-size: 24px;
     letter-spacing: 0px;
-    width: 100%;
+    width: 90%;
     margin-top: 60px;
+    margin-bottom: 0px;
   }
 `;
 export const Introp1 = styled.p`
@@ -136,6 +137,9 @@ export const IntroRightText = styled.p`
   margin-top: 15px;
   color: white;
   padding: 0px 0px 40px 0px;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 export const IntroButtonVideo = styled.div`
   display: flex;
@@ -247,9 +251,9 @@ export const IntroAchievements = styled.div`
   margin-right: 40px;
   text-align: center;
   @media screen and (max-width: 576px) {
-    width: 100px;
     margin-right: 0px;
-   
+    width: 100px;
+    font-size: 14px;
   }
 `;
 export const IntroOrangeText = styled.h2`
@@ -267,6 +271,7 @@ export const IntroBlackText = styled.p`
     font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
+    text-align: center;
   }
 `;
 export const IntroExploreText = styled.a`
@@ -284,10 +289,10 @@ export const IntroRightImg = styled.img`
   margin-right: 100px;
   margin-bottom: 100px;
   @media screen and (max-width: 576px) {
-    width: 90%;
+    width: 86%;
     height: 430px;
-    margin-left: -60px;
-    margin-top: -70px;
+    margin-left: -50px;
+    margin-top: -90px;
     margin-right: 100px;
     margin-bottom: 0px;
   }
@@ -331,7 +336,7 @@ export const Homehd1 = styled.h1`
   @media screen and (max-width: 576px) {
     font-size: 17px;
     letter-spacing: 0px;
-    width:95%;
+    width: 95%;
     margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
@@ -349,9 +354,9 @@ export const HomeLeftRight = styled.div`
   height: 100%;
   width: 100%;
   font-family: "Roboto";
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
-    padding: 0px 0px 0px 30px;
+    padding: 0px 0px 0px 20px;
   }
 `;
 export const HomeLefthd1 = styled.h1`
@@ -428,17 +433,16 @@ export const HomeProposalTextRight = styled.button`
     rgba(246, 251, 34, 1) 100%
   );
   color: rgba(35, 69, 129, 1);
-  height: 40px;
+
   margin-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 10px 25px 10px 25px;
   border: none;
   font-family: "roboto";
   cursor: pointer;
   display: none;
   @media screen and (max-width: 576px) {
     margin-top: -70px;
-    padding: 10px 26px 10px 26px;
+    padding: 5px 26px 5px 26px;
     margin-left: 20%;
     display: block;
     margin-bottom: 20px;
@@ -451,6 +455,7 @@ export const HomePlayVideo = styled.div`
   display: flex;
   @media screen and (max-width: 555px) {
     display: flex;
+    margin: 0px 0px 10px 0px;
   }
 `;
 export const HomePlayButton = styled.img`
@@ -459,9 +464,10 @@ export const HomePlayButton = styled.img`
   height: 30px;
   width: 30px;
   @media screen and (max-width: 576px) {
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     margin: 0px;
+    border: 0px;
   }
 `;
 export const HomeVideoText = styled.p`
@@ -484,6 +490,8 @@ export const CirclesText = styled.div`
 export const HomeRight = styled.div`
   @media screen and (max-width: 576px) {
     order: 0;
+    padding: 0px;
+    margin: 0px;
   }
 `;
 export const HomeExplorePartLeft = styled.div`
@@ -496,8 +504,7 @@ export const HomeExplorePartLeft = styled.div`
 
   @media screen and (max-width: 576px) {
     display: flex;
-    align-items:center;
-
+    align-items: center;
   }
 `;
 
@@ -521,5 +528,25 @@ export const HomeBlackText = styled.p`
     font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
+  }
+`;
+
+export const MobileIntro = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 577px) {
+    display: none;
+  }
+`;
+
+export const Homep2 = styled.p`
+  color: #ececec;
+  line-height: 2;
+  width: 95%;
+  font-weight: 500;
+  margin-bottom: 0px;
+  font-size: 14px;
+  @media screen and (min-width: 577px) {
+    display: none;
   }
 `;

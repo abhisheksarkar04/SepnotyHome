@@ -32,6 +32,8 @@ import {
   HomeAchievements,
   HomeOrangeText,
   HomeBlackText,
+  MobileIntro,
+  Homep2,
 } from "./styledComponents";
 
 /*
@@ -113,6 +115,17 @@ const HomeSection = () => {
             <Link to="/getproposal">
               <HomeProposalTextRight>Get a Proposal</HomeProposalTextRight>
             </Link>
+            <MobileIntro>
+              <HomePlayVideo>
+                <HomePlayButton src={play} alt="not found" />
+                <HomeVideoText>Watch Our Intro</HomeVideoText>
+              </HomePlayVideo>
+              <Homep2>
+                Sepnoty, is a Developing agency Specialized in Delivering World
+                class Solutions For Web and Mobile Through Mature And
+                Development Technology.
+              </Homep2>
+            </MobileIntro>
             <IntroExplorePart>
               <IntroAchievements>
                 <IntroOrangeText>{projects}</IntroOrangeText>
