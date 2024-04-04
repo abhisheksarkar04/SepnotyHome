@@ -25,6 +25,7 @@ background: transparent;
 border: 0px;
 font-size:25px;
 color:white;
+cursor: pointer;
 
 &:hover {
     color: #254989;
@@ -39,6 +40,7 @@ background: transparent;
 border: 0px;
 font-size:25px;
 color:white;
+cursor: pointer;
 
 &:hover {
     color: #254989;

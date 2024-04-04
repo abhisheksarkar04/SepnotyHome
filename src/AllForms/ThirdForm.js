@@ -8,9 +8,6 @@ import handleFormValues from './allFormValues';
 import ThirdPage from '../AllForms/Website/ThirdPage';
 
 
-
-import ThirdPage from "../AllForms/Website/ThirdPage";
-
 class YourIndustry extends Component {
 
  state = {
@@ -150,28 +147,6 @@ Website development
             </Form1>
             <Form1>
               <Form3>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Migration to a new CMS"
-                      onChange={this.handleRadioChange}
-                    />
-                    Migration to a new CMS
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Delivery of new features"
-                      onChange={this.handleRadioChange}
-                    />
-                    Delivery of new features
-                  </Label>
-                </InputContainer>
                 <InputContainer>
 
 <Label>
@@ -394,7 +369,7 @@ ${media.mobile}{
 }
 `;
 const Form3 = Styled.div`
-margin-top:50px;
+margin-top:30px;
 ${media.mobile}{
   border-radius:5px;
   gap:0px;
