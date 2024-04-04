@@ -5,7 +5,7 @@ import Image from "./images/Stars.svg"
 import image2 from "./images/charan.svg";
 
 import Stars from "./images/Stars2.svg"
-//import image2 from "./images/Standing.svg";
+import image3 from "./images/Standing.svg";
 // import Stars from "./images/Stars2.svg"
 // import image2 from "./images/Standing.svg";
 // import Stars from "./images/Stars2.svg"
@@ -23,7 +23,7 @@ const CostHome = () => {
             <StarsImage src={Image}/>
                 <SideContainer>
                 <Heading>
-                 Website development 
+                 Website development
                 </Heading>
                 <Heading1>
                     Cost
@@ -41,6 +41,8 @@ const CostHome = () => {
                 </Heading3>
                 </DevelopContainer>
             </HomeContainer>
+           
+            <Image3 src={image3}/>
             <RightContainer>
             <Image2 src={image2}/>
             </RightContainer> 
@@ -58,7 +60,22 @@ const media = {
     mobile: '@media(max-width: 576px)'
   };
 
+  const Right2 = Styled.div`
+  width:70%;
+  margin-top: 220px;
+  margin-left:-110px;
+  @media screen (min-width : 577px){
+display:none;
+  }
+  `
 
+const Image3 = Styled.img`
+width:45%;
+margin-left:-110px;
+@media screen and (min-width : 577px){
+display:none;
+}
+`
 const D = Styled.div`
 margin-left:110px;
 margin-top:20px;
@@ -73,7 +90,6 @@ flex-direction:column;
 background:#0C111F;
 background-size: cover;
 @media screen and (max-width: 576px) {
-  width:100%;
 }
 `
 
@@ -85,7 +101,6 @@ width: 100%;
 background-color:#0C111F;
 font-family:'Roboto';
 ${media.mobile}{
-  width:100%;
 }
 
 `
@@ -113,8 +128,8 @@ flex-direction:column;
 margin-left:140px;
 margin-button:-20px;
 ${media.mobile} {
-    margin-left:50px;
     margin-top:1px;
+    margin-left:40px;
   }
 `
 const Heading = Styled.h1`
@@ -122,10 +137,8 @@ color: #B7B6BD;
 font-size: 40px;
 margin-top:10px;
 ${media.mobile} {
-    font-size:15px;
-    
+    font-size:15px;  
   }
-
 `
 const Heading1 = Styled.h1`
 color:#4C64B2;
@@ -143,8 +156,9 @@ color:#B7B6BD;
 margin-top:20px;
 ${media.mobile} {
     font-size:14px;
-    margin-left:-20px;
     margin-top:3px;
+    width:80%;
+    margin-left:-20px;
   }
 `
 const Heading3 = Styled.h1`
@@ -154,23 +168,28 @@ margin-top:10px;
 ${media.mobile} {
    font-size:14px;
    margin-left:-20px;
-   width:300px;
+   width:100%;
   }
 `
 const RightContainer = Styled.div`
-text-align : right;
+text-align:right;
 display:flex;
+width:40%;
+margin-top: 220px;
 flex-direction:column;
+${media.mobile}{
+  width:100%;
+  display:none;
+}
 `
 const Image2 = Styled.img`
 top:20%;
-width:600px;
-height:650px;
 position:relative;
 z-index:1;
 ${media.mobile} {
     width:300px;
     height:350px;
+    display:none;
   }
 `
 
@@ -181,7 +200,7 @@ margin-top:10px;
 gap:20px;
 margin-left:140px;
 ${media.mobile} {
-    margin-left:30px;
+    margin-left:20px;
     margin-top:-20px;
 }
 

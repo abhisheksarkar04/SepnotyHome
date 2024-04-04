@@ -157,9 +157,7 @@ We band together  businesses from more than 35 nations and 30 different industri
   margin-top:20px;
   color:white;
   @media screen and (max-width: 576px) {
-    font-size:14px;
-    width:53px;
-    height:98px;
+    font-size:12px;
     margin-top:-10px;
     margin-left:-10px;
 
@@ -176,8 +174,9 @@ We band together  businesses from more than 35 nations and 30 different industri
   margin-left: 6.5%;
   margin-bottom: 32%;
   @media screen and (max-width: 576px) {
-    width:85%;
-    margin:0px;
+    gap:10px;
+    margin-left:0px;
+    justify-content:center;
   }
   `
   const Main2 = Styled.div`
@@ -192,8 +191,9 @@ We band together  businesses from more than 35 nations and 30 different industri
   width:350px;
   margin: 0 20px 30px 20px;
   @media screen and (max-width: 576px) {
-    width:219px;
-    height:300px;
+    width:47%;
+    height:240px;
+    margin:0px;
   }
  
 
@@ -209,12 +209,8 @@ We band together  businesses from more than 35 nations and 30 different industri
       color:white;
       @media screen and (max-width: 576px) {
         font-size:14px;
-        width:153px;
-        height:98px;
-        margin-top:40px;
+        width:90%;
       }
-     
-  
   `;
   const Image1 = Styled.img`
   height: 80px;
@@ -224,7 +220,6 @@ margin-right:10px;
 @media screen and (max-width: 576px) {
   height:40px;
   margin:0px;
-  
 }
   `
   const Image2 = Styled.img`
@@ -233,7 +228,6 @@ margin-right:10px;
   margin-top:10px;
   @media screen and (max-width: 576px) {
     height:30px;
-    width:90px;
-    
+    width:90px; 
   }
   `

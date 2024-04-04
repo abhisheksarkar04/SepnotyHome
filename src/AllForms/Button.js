@@ -39,15 +39,17 @@ const media = {
 const ActiveButton = Styled.button`
   background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
   color: ${(props) => (props.active ? 'white' : 'black')};
-  width: 100px;
+  
   border: 1px solid #8C8C8C;
   border-top-left-radius: 10px;
   border-bottom-left-radius:10px; /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
-  height: 45px;
+  padding: 10px 20px 10px 20px; 
   ${media.mobile} {
-    width:100%;
+    padding: 5px 10px 5px 10px; 
+    font-size:12px;
   }
+
   
   
 `;
@@ -55,14 +57,15 @@ const ActiveButton = Styled.button`
 const Buttonel = Styled.button`
   background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
   color: ${(props) => (props.active ? 'white' : 'black')};
-  width: 110px;
+  
   border: 1px solid #8C8C8C;
   border-top-right-radius: 10px;
   border-bottom-right-radius:10px;
   font-size: 16px; /* Reduced font size for mobile */
-  height: 45px;
+  padding: 10px 20px 10px 20px; 
   ${media.mobile} {
-    width:100%;
+    padding: 5px 10px 5px 10px; 
+    font-size:12px;
   }
   
   
@@ -71,16 +74,17 @@ const Buttonel = Styled.button`
 const Butt = Styled.button`
   background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
   color: ${(props) => (props.active ? 'white' : 'black')};
-  width: 100px;
+
   border-top-right-radius: 10px;
   border-bottom-right-radius:10px;
   border: 1px solid #8C8C8C;
   margin-left:-5px;
    /* Apply border-radius to all corners */
   font-size: 16px; /* Reduced font size for mobile */
-  height: 45px;
+  padding: 10px 20px 10px 20px; 
   ${media.mobile} {
-    width:100%;
+    font-size:12px;
+    padding: 5px 10px 5px 10px; 
   }
   
   
@@ -94,6 +98,7 @@ const ButtonCon = Styled.div`
   padding: 20px; /* Reduced padding for smaller screens */
   ${media.mobile} {
     margin-left:0px;
+    width:100%;
   }
 `;
 

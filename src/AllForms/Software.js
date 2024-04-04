@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import FirstForm from './Software/SoftFirst/first';
-import SecondForm from './Software/SoftSecond/Second';
+import CourseDetails from './Software/SoftSecond/Second';
 import Summary from './FourthForm';
 import YourIndustry from './ThirdForm';
 import FormNo5 from "./SixthForm";
@@ -123,7 +123,7 @@ class Software extends Component {
           )
         case 2:
           return (
-            <SecondForm 
+            <CourseDetails
               nextStep={this.nextStep}
               prevStep={this.prevStep}
               onDataReceived={this.handleDataReceived}
