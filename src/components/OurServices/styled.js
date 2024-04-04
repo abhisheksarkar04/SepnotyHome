@@ -72,7 +72,7 @@ export const Description = styled.p`
   line-height: 1.5em;
   @media screen and (max-width: 576px) {
     font-size: 14px;
-    width: 320px;
+    width: 80%;
     padding-top: 0px;
     line-height: 2;
     margin-left: 0px;
@@ -98,7 +98,7 @@ export const CuateImage = styled.img`
 `;
 
 export const CuateImage11 = styled.img`
-  width: 36%;
+  width: 35%;
   height: 250px;
   margin-left: 0px;
   margin-right: 0px;
@@ -150,20 +150,20 @@ export const Python = styled.img`
   @media screen and (max-width: 576px) {
     height: 15px;
     width: 15%;
-     padding: 0px 10px;
+    padding: 0px 10px;
     border-right: 1px solid #abaaaa;
   }
 `;
 
-export const Php=styled.img`
-height: 30px;
-width: 200px;
-padding: 0px 30px 0px 30px;
-border-right: 1px solid #abaaaa;
-@media screen and (max-width: 576px) {
-  height: 15px;
-  width: 15%;
-   padding: 3px 10px;
+export const Php = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
   border-right: 1px solid #abaaaa;
-}
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 15%;
+    padding: 3px 10px;
+    border-right: 1px solid #abaaaa;
+  }
 `;
