@@ -15,25 +15,17 @@ class FirstSoftwarePage extends Component {
 
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
-    // console.log(id);
-    this.setState(prevState => ({
-      softwareTypes: checked
-        ? [...prevState.softwareTypes, id]
-        : prevState.softwareTypes.filter(type => type !== id),
-      formErrors: {
-        ...prevState.formErrors,
-        softwareTypes: ''
-      }
-    }));
+    const typeOfSoftware = this.props.formData.typeOfSoftware || [];
+    this.props.updateFormData({
+      typeOfSoftware: checked
+        ? [...typeOfSoftware, id]
+        : typeOfSoftware.filter(type => type !== id)
+    });
   };
 
   handleRadioChange = (event) => {
-    this.setState({
-      numberOfPages: event.target.value,
-      formErrors: {
-        ...this.state.formErrors,
-        numberOfPages: ''
-      }
+    this.props.updateFormData({
+      numberOfPages: event.target.value
     });
   };
 
@@ -42,13 +34,9 @@ class FirstSoftwarePage extends Component {
 
 
     const { softwareTypes, numberOfPages } = this.state;
-
-    const formData = {
-       feild1 : {softwareTypes,numberOfPages}
-    }
-    this.props.onDataReceived(formData);
+    const {typeOfSoftware,tools} = this.props.formData
   // Call the handleFormValues function from FormUtils.js
-    if (softwareTypes.length === 0) {
+    if (typeOfSoftware.length === 0) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
@@ -57,7 +45,7 @@ class FirstSoftwarePage extends Component {
       });
       return;
     }
-    if (!numberOfPages) {
+    if (!tools) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
@@ -71,7 +59,7 @@ class FirstSoftwarePage extends Component {
         
     // }
     // Store the form data or proceed with further actions
-    console.log("Form data:", this.state);
+  
     // Proceed to the next step or page
     this.props.nextStep();
   };
@@ -80,23 +68,23 @@ class FirstSoftwarePage extends Component {
 
   continue = e => {
     e.preventDefault();
-    
+    const {typeOfSoftware,tools} = this.props.formData
     // Check for errors
-    const { softwareTypes, numberOfPages } = this.state;
+    /* const { softwareTypes, numberOfPages } = this.state;
     const formData = {
       field1: {softwareTypes , numberOfPages},
       // Add more fields as needed
     };
-    this.props.onDataReceived(formData);
+    this.props.onDataReceived(formData); */
     const formErrors = {};
     // console.log(softwareTypes,numberOfPages);
     // Check software types
-    if (softwareTypes.length === 0) {
+    if (typeOfSoftware.length === 0) {
         formErrors.softwareTypes = 'Please select at least one type of software.';
     }
 
     // Check number of pages
-    if (!numberOfPages) {
+    if (!tools) {
         formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
     }
 
@@ -112,6 +100,7 @@ class FirstSoftwarePage extends Component {
 
   render() {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
+    const {typeOfSoftware,tools} = this.props
 
     return (
       <Main className='form'>
@@ -140,35 +129,35 @@ class FirstSoftwarePage extends Component {
                     *Choose the type of Software you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="System software" checked={softwareTypes.includes('System software')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="System software" checked={typeOfSoftware.includes('System software')} onChange={this.handleCheckboxChange} />
                     <Label htmlfor="System software">
                     System software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         <Label htmlfor="Utility software">
-                        <Input type="checkbox" id="Utility software" checked={softwareTypes.includes('Utility software')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Utility software" checked={typeOfSoftware.includes('Utility software')} onChange={this.handleCheckboxChange} />
                         Utility software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Application software">
-                        <Input type="checkbox" id="Application software" checked={softwareTypes.includes('Application software')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Application software" checked={typeOfSoftware.includes('Application software')} onChange={this.handleCheckboxChange} />
                         Application software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Designing software">
-                        <Input type="checkbox" id="Designing software" checked={softwareTypes.includes('Designing software')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Designing software" checked={typeOfSoftware.includes('Designing software')} onChange={this.handleCheckboxChange} />
                         Designing software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
                         <Label htmlfor="Programming software">
-                        <Input type="checkbox" id="Programming software" checked={softwareTypes.includes('Programming software')} onChange={this.handleCheckboxChange} />
+                        <Input type="checkbox" id="Programming software" checked={typeOfSoftware.includes('Programming software')} onChange={this.handleCheckboxChange} />
                         Programming software
                         </Label>
                     </CheckBoxCon>
@@ -183,54 +172,53 @@ class FirstSoftwarePage extends Component {
             <FormContainer>
                 <Form>
                     <Heading>
-                    *How many pages will your website/App
-                      have?
+                    *How many Tools will your Software have?
                     </Heading>
                     <InputContainer>
-              <Label>
-                  <Input type='radio' name="industry" value="I am not sure" onChange={this.handleRadioChange}/>
-                  I am not sure
+                  <Label>
+                    <Input type='radio' name="numberOfPages" value="I am not sure" checked={tools === "I am not sure"} onChange={this.handleRadioChange} />
+                    I am not sure
                   </Label>
-              </InputContainer>
+                </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="up to 50" checked={tools === "up to 50"} onChange={this.handleRadioChange}/>
                   up to 50
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="50-100" checked={tools === "50-100"} onChange={this.handleRadioChange}/>
                   50-100
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="100-500" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="100-500" checked={tools === "100-500"} onChange={this.handleRadioChange}/>
                   100-500
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="500-1,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="500-1,000" checked={tools === "500-1,000"} onChange={this.handleRadioChange}/>
                   500-1,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  1,000-5,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={tools === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="5,000-10,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="5,000-10,000" checked={tools === "5,000-10,000"} onChange={this.handleRadioChange}/>
                   5,000-10,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="more than 10,000" checked={tools === "more than 10,000"} onChange={this.handleRadioChange}/>
                   more than 10,000
                   </Label>
               </InputContainer>
@@ -307,13 +295,13 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:600px;
+width:90%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width:380px;
+  width:52%;
   border-radius:5px;
   gap:0px;
 }
@@ -336,7 +324,7 @@ ${media.mobile}{
 `
 const Form = Styled.form`
 ${media.mobile}{
-  width:220px;
+  width:100%;
   border-radius:5px;
   gap:0px;
 }

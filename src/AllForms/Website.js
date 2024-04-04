@@ -70,9 +70,9 @@ class Form extends Component {
   state = {
     activeStep:0,
     step: 1,
-
     formData: {
       step1: {
+        typeofDevelopment:"website",
         typeOfWebsite: [],
         numberOfPages: '',
       },
@@ -81,6 +81,7 @@ class Form extends Component {
       },
       step3:{
         services:"",
+        webisiteLink:"",
       },
       step4:{
         UIDesignMockups:"",
@@ -105,9 +106,10 @@ class Form extends Component {
     	companyName:"",
     	phoneNumber:"",
     	wayOfCommunication:"",
-      contact:true,
-      info:true
-      
+      agreement:{
+        contact: true,
+        requestInfo: true,
+      }
       }
       
     },
@@ -133,7 +135,8 @@ class Form extends Component {
     e.preventDefault();
 
     const { formData } = this.state;
-    console.log(formData); // Log all form data
+    const formattedData = this.convertToDesiredFormat(formData);
+    console.log(formattedData); //Log all form data
     alert('Data sent');
   }
   handleDataReceived = (data) => {
@@ -250,62 +253,31 @@ class Form extends Component {
 
   convertToDesiredFormat = (formData) => {
     const {
-      typeOfDevelopement,
-      typeOfWebsite,
-      numberOfPages,
-      industryType,
-      services,
-      UIDesignMockups,
-      chosenCMS,
-      appFeatures,
-      typeOfMedia,
-      paymentSystem,
-      visitors,
-      complianceRequirements,
-      externalIntegration,
-      details,
-      username,
-      email,
-      companyName,
-      phoneNumber,
-      wayOfCommunication,
-      contact,
-      info
-     
+      step1,
+      step2,
+      step3,
+      step4,
+      step5,
+      step6,
+      step7,
+      step8,
     } = formData;
-
+  
     const formattedData = {
-      typeOfDevelopement: typeOfDevelopement || "",
-      typeOfWebsite: typeOfWebsite || [],
-      numberOfPages: numberOfPages || "",
-      industryType: industryType || [],
-      services: services || "",
-      UIDesignMockups: UIDesignMockups || "",
-      chosenCMS: chosenCMS || "",
-      appFeatures: appFeatures || [],
-      typeOfMedia: typeOfMedia || [],
-      paymentSystem: paymentSystem || false,
-      visitors: visitors || "",
-      complianceRequirements: complianceRequirements || [],
-      externalIntegration: externalIntegration || false,
-      details: details || "",
-      username: username || "",
-      email: email || "",
-      companyName: companyName || "",
-      phoneNumber: phoneNumber || "",
-      wayOfCommunication: wayOfCommunication || "",
-      info:info||true,
-      contact:contact||true
+      ...step1,
+      ...step2,
+      ...step3,
+      ...step4,
+      ...step5,
+      ...step6,
+      ...step7,
+      ...step8,
     };
-
-
+  
     return formattedData;
-  } 
-  submitData = e => {
-    e.preventDefault();
-    const { formData } = this.state;
-    console.log(this.convertToDesiredFormat);
-  }
+  };
+  
+  
   render() {
     const { step, formData ,activeStep} = this.state;
     //console.log(formData);

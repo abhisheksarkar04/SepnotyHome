@@ -1,10 +1,14 @@
-import React, { Component } from "react";
-import Styled from "styled-components";
-import "./App.css";
-import handleFormValues from "./allFormValues";
-import { Stepper, Step } from "react-form-stepper";
 
-import SecondPage from "./Website/SecondPage";
+
+import React, { Component } from 'react';
+import Styled from "styled-components"
+import './App.css';
+import handleFormValues from './allFormValues';
+import { Stepper, Step } from 'react-form-stepper';
+
+import SecondPage from "./Website/SecondPage"
+
+
 
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
@@ -45,7 +49,9 @@ class CourseDetails extends Component {
   };
 
   handleCheckboxChange = (e) => {
-    const { value, checked, id } = e.target;
+
+    const {checked ,id} = e.target;
+    
 
     this.props.updateFormData({
       industryType: checked

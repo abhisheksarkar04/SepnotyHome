@@ -51,10 +51,7 @@ export const ContentRecomContainer = styled.div`
   padding: 10px 0px 4% 5%;
 
   @media screen and (max-width: 576px) {
-
-
     height:210px;
-   
     }
 `;
 
@@ -68,7 +65,7 @@ export const ConRecHead = styled.h1`
   @media screen and (max-width: 576px) {
     font-size:20px;
     padding-top:1px;
-    width:336px;
+    width:380px;
     }
 `;
 
@@ -81,8 +78,8 @@ export const ConRecDesc = styled.p`
   @media screen and (max-width: 576px) {
     font-size:14px;
     padding-top:1px;
-    width:336px;
-    text-align:justify;
+    width:380px;
+   
     margin:-22px;
     margin-left:0px;
     
@@ -116,10 +113,7 @@ export const Rectangle1 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:185px;
-  
    board-radius:2px;
-  
-
     }
 `;
 
@@ -158,7 +152,6 @@ export const Rectangle3 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:40px;
-   
    board-radius:2px;
     }
 `;
@@ -171,10 +164,9 @@ export const ListHeading = styled.h1`
 
   @media screen and (max-width: 576px) {
     font-size:16px;
-    margin-inline:-30px;
+    margin-inline:-35px;
     margin-bottom: 2080px;
-    
-    
+    width:350px;
     }
 `;
 
@@ -186,7 +178,6 @@ export const ServiceItemCon = styled.div`
     height:200px;
     margin-bottom:20px;
     padding-bottom:10px;
-    
     }
 `;
 export const ServiceItemDesc = styled.p`
@@ -210,7 +201,7 @@ export const ServiceItemImg = styled.img`
     height: 270px;
     width: 370px;
     margin:20px;
-    margin-top: 2300%;
+    margin-top: 2750%;
     margin-inline: -320px;
     
     }
@@ -248,8 +239,8 @@ export const SmallPattern = styled.div`
   border-radius: 3px;
 
   @media screen and (max-width: 576px) {
-    height: 40px;
-    width: 50px;
+    height: 50px;
+    width: 60px;
     margin:20px;
     border-radius: 3px;
     margin-bottom: 2100px;
@@ -266,6 +257,6 @@ export const PatternCon = styled.div`
 
   @media screen and (max-width: 576px) {
     font-size:10px;
-   margin:0px;
+   margin:10px;
     }
 `;
