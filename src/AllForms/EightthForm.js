@@ -288,7 +288,7 @@ const Main = styled.div`
   }
 `;
 const Input1 = styled.input`
-  margin-left: -630px;
+margin-left:-80%;
   color: #c1cae7;
   cursor: pointer;
   ${media.mobile} {
@@ -300,16 +300,14 @@ const M = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  width: 800px;
-  margin-left: -80px;
+  margin-left:20%;
+  width: 80%;
   ${media.mobile} {
-    width: 450px;
-    margin-left: 10px;
+    width: 25%;
+    margin-left:33%;
   }
 `;
 const Mai = styled.div`
-  height: 550px;
-  width: 800px;
   padding: 30px 40px 10px 40px;
   background-color: #c1cae7;
   display: flex;

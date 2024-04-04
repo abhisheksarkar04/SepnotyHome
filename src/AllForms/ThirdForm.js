@@ -1,10 +1,13 @@
-import React, { Component } from "react";
-import Styled from "styled-components";
-import { Stepper, Step } from "react-form-stepper";
-import "./App.css";
-import handleFormValues from "./allFormValues";
 
-import ThirdPage from "../AllForms/Website/ThirdPage";
+import React, { Component } from 'react';
+import Styled from "styled-components"
+import { Stepper ,Step } from 'react-form-stepper';
+import './App.css';
+import handleFormValues from './allFormValues';
+
+import ThirdPage from '../AllForms/Website/ThirdPage';
+
+
 
 class YourIndustry extends Component {
   state = {
@@ -168,75 +171,33 @@ class YourIndustry extends Component {
             <Form1>
               <Form3>
                 <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Migration to a new CMS"
-                      onChange={this.handleRadioChange}
-                    />
-                    Migration to a new CMS
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Delivery of new features"
-                      onChange={this.handleRadioChange}
-                    />
-                    Delivery of new features
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Migration to a new CMS"
-                      checked={formData.services === "Migration to a new CMS"}
-                      onChange={this.handleRadioChange}
-                    />
-                    Migration to a new CMS
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Delivery of new features"
-                      checked={formData.services === "Delivery of new features"}
-                      onChange={this.handleRadioChange}
-                    />
-                    Delivery of new features
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Troubleshooting"
-                      checked={formData.services === "Troubleshooting"}
-                      onChange={this.handleRadioChange}
-                    />
-                    Troubleshooting
-                  </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="industry"
-                      value="Finanacial"
-                      checked={formData.services === "Finanacial"}
-                      onChange={this.handleRadioChange}
-                    />
-                    <Input1 type="text" placeholder="others (please specify)" />
-                  </Label>
-                </InputContainer>
+
+
+<Label>
+<Input type='radio'  name="industry" value="Migration to a new CMS" checked={formData.services==="Migration to a new CMS"}  onChange={this.handleRadioChange}/>
+Migration to a new CMS
+</Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio'  name="industry" value="Delivery of new features" checked={formData.services==="Delivery of new features"} onChange={this.handleRadioChange}/>
+    Delivery of new features
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio'  name="industry" value="Troubleshooting" checked={formData.services==="Troubleshooting"} onChange={this.handleRadioChange}/>
+    Troubleshooting
+    </Label>
+</InputContainer>
+<InputContainer>
+<Label>
+    <Input type='radio'  name="industry" value="Finanacial" checked={formData.services ==="Finanacial"} onChange={this.handleRadioChange}/>
+    <Input1 type="text" placeholder="others (please specify)"/>
+    </Label>
+</InputContainer>
+
+
 
                 <InputContainer>
                   <P>
@@ -429,7 +390,7 @@ ${media.mobile}{
 }
 `;
 const Form3 = Styled.div`
-margin-top:50px;
+margin-top:30px;
 ${media.mobile}{
   border-radius:5px;
   gap:0px;

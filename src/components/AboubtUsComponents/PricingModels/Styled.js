@@ -53,7 +53,7 @@ export const ContentRecomContainer = styled.div`
   padding: 10px 0px 4% 5%;
 
   @media screen and (max-width: 576px) {
-   
+    
     height:190px;
    
     }
@@ -84,7 +84,7 @@ export const ConRecDesc = styled.p`
   @media screen and (max-width: 576px) {
     font-size:14px;
     padding-top:1px;
-    width:336px;
+    width:380px;
     text-align:justify;
     margin:-22px;
     margin-left:0px;
