@@ -42,7 +42,7 @@ import styled from "styled-components";
 
 const Sustainability = () => {
   return (
-    <>
+    <><div>
       <DigitalContainer>
         <Header>
           Approaches &gt; <Span>Sustainability Policy</Span>
@@ -76,10 +76,11 @@ const Sustainability = () => {
               </Para>
             </Main2>
 
-            {/* <ImageCon>
+            <ImageCon>
               <ServiceItemImg src={GroupImg} alt="dm" />
-            </ImageCon> */}
+            </ImageCon>
           </Main1>
+          <Main1>
           <Main3>
           <Para1>
             Our Commitment:
@@ -88,7 +89,9 @@ const Sustainability = () => {
             Sepnoty is committed to promoting sustainability in all aspects of our operations. We recognize that our activities have social, environmental, and economic impacts, and we are dedicated to minimizing our negative impacts while maximizing positive contributions to society and the planet.
             Sustainability Policy is classified into five divisions.
           </Para>
-          </Main3><Spam></Spam>
+          </Main3>
+          </Main1>
+          <Spam></Spam>
           <Para2>Environmental Stewardship
           </Para2>
           <Para2>Social Responsibility
@@ -105,6 +108,7 @@ const Sustainability = () => {
 
         </Main>
       </DigitalContainer>
+      </div>
       <FooterSection />
     </>
   );
@@ -118,6 +122,13 @@ const Para = styled.p`
   font-weight:500;
   width:1100px;
   color:white;
+  @media screen and (max-width: 576px) {
+    font-size:16px;
+     width:350px;
+     margin-inline:-10px;
+  
+
+    }
 
 
   `
@@ -127,6 +138,14 @@ const Para = styled.p`
   width:1100px;
   color:white;
 
+  @media screen and (max-width: 576px) {
+    font-size:16px;
+    width:350px;
+    margin-left:35px;
+  
+
+    }
+
 
   `
   const Para2 = styled.p`
@@ -134,6 +153,12 @@ const Para = styled.p`
   font-weight:500;
   width:1100px;
   color:white;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+     width:250px;
+     margin-left:35px;
+    }
 
  
   `
@@ -145,8 +170,7 @@ const Main = styled.div`
   margin-bottom:60px;
 
   @media screen and (max-width: 576px) {
-     font-size:10px;
-   
+
    margin:0px;
  
      }
@@ -154,10 +178,25 @@ const Main = styled.div`
 const Main1 = styled.div`
   display:flex;
   flex-direction:row;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+  margin-left:45px;
+
+    }
   `
 const Main2 = styled.div`
   display:flex;
   flex-direction:column;
+
+  @media screen and (max-width: 576px) {
+    font-size:14px;
+  margin:-106px;
+  margin-left:0px;
+ 
+  
+
+    }
 
  
   `
@@ -167,7 +206,9 @@ const Main2 = styled.div`
   display:flex;
   flex-direction:column;
 
-  
+  @media screen and (max-width: 576px) {
+    margin-bottom:5px;
+    }
   `
   
 
@@ -175,6 +216,10 @@ const Para1 = styled.p`
   font-size:24px;
   margin-bottom:10px;
   color:white;
+
+  @media screen and (max-width: 576px) {
+    font-size:16px;
+    }
 
   `
 const Spam = styled.span`

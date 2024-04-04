@@ -114,7 +114,6 @@ const PriceModel = () => {
               Advance
             </Heading1>
             <Para1>
-
               For teams that want to collaborate and build for themselves and their customers.
             </Para1>
 
