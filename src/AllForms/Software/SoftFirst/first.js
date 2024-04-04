@@ -307,13 +307,13 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:600px;
+width:90%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width:380px;
+  width:52%;
   border-radius:5px;
   gap:0px;
 }

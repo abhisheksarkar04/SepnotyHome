@@ -104,17 +104,6 @@ Yes
               <Heading>*Have you chosen a CMS?</Heading>
               <Form2>
                 <InputContainer>
-                  <Label>
-                    <Input
-                      type="radio"
-                      name="cms"
-                      value="No"
-                      onChange={this.handleCMSChange}
-                    />
-                    No
-                  </Label>
-                </InputContainer>
-                <InputContainer>
 <Label>
 <Input type='radio' name="cms" value="No" checked={chosenCMS==="No"} onChange={this.handleCMSChange} />
 No

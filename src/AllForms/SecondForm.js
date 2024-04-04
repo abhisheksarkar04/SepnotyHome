@@ -8,14 +8,6 @@ import { Stepper, Step } from 'react-form-stepper';
 import SecondPage from "./Website/SecondPage"
 
 
-
-
-
-
-
-
-import SecondPage from "./Website/SecondPage";
-
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
@@ -56,7 +48,7 @@ constructor(props) {
   };
 
   handleCheckboxChange = (e) => {
-    const { value, checked ,id} = e.target;
+    const {checked ,id} = e.target;
     
     this.props.updateFormData({
       industryType:checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType = this.props.formData.industryType.filter(type => type !== id)
