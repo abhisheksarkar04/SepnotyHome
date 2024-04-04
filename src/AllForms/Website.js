@@ -1,75 +1,76 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import PersonalDetails from './FirstForm';
-import CourseDetails from './SecondForm';
-import Summary from './FourthForm';
-import YourIndustry from './ThirdForm';
+import PersonalDetails from "./FirstForm";
+import CourseDetails from "./SecondForm";
+import Summary from "./FourthForm";
+import YourIndustry from "./ThirdForm";
 import FormNo5 from "./SixthForm";
-import SecondForm from './FifthForm';
+import SecondForm from "./FifthForm";
 import ThirdForm from "./SeventhForm";
 import FourthForm from "./EightthForm";
-import { Stepper,Step,StepLevel } from 'react-form-stepper';
+import { Stepper, Step, StepLevel } from "react-form-stepper";
 
 //Sample data
 const coursesData = [
   {
     id: 1,
-    courseName: 'HTML',
-    category: 'Front-end'
+    courseName: "HTML",
+    category: "Front-end",
   },
   {
     id: 2,
-    courseName: 'CSS',
-    category: 'Front-end'
+    courseName: "CSS",
+    category: "Front-end",
   },
   {
     id: 3,
-    courseName: 'JavaScript',
-    category: 'Front-end'
+    courseName: "JavaScript",
+    category: "Front-end",
   },
   {
     id: 4,
-    courseName: 'React',
-    category: 'Front-end'
+    courseName: "React",
+    category: "Front-end",
   },
   {
     id: 5,
-    courseName: 'Angular',
-    category: 'Front-end'
+    courseName: "Angular",
+    category: "Front-end",
   },
   {
     id: 6,
-    courseName: 'Vue',
-    category: 'Front-end'
+    courseName: "Vue",
+    category: "Front-end",
   },
   {
     id: 7,
-    courseName: 'Java',
-    category: 'Back-end'
+    courseName: "Java",
+    category: "Back-end",
   },
   {
     id: 8,
-    courseName: 'Python',
-    category: 'Back-end'
+    courseName: "Python",
+    category: "Back-end",
   },
   {
     id: 9,
-    courseName: 'PHP',
-    category: 'Back-end'
+    courseName: "PHP",
+    category: "Back-end",
   },
   {
     id: 10,
-    courseName: 'Express',
-    category: 'Back-end'
-  }       
+    courseName: "Express",
+    category: "Back-end",
+  },
 ];
 
-const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
+const levelsData = ["Beginner", "Intermediate", "Advanced"];
 
 class Form extends Component {
   state = {
     activeStep:0,
     step: 1,
+
     formData: {
       step1: {
         typeOfWebsite: [],
@@ -111,24 +112,26 @@ class Form extends Component {
       
     },
     recivedData:[]
+
   };
 
   nextStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step + 1
-    })
-  }
+      step: step + 1,
+    });
+  };
 
   prevStep = () => {
     const { step } = this.state;
     this.setState({
-      step: step - 1
-    })
-  }
+      step: step - 1,
+    });
+  };
 
-  submitData = e => {
+  submitData = (e) => {
     e.preventDefault();
+
     const { formData } = this.state;
     console.log(formData); // Log all form data
     alert('Data sent');
@@ -244,6 +247,7 @@ class Form extends Component {
     }
   }
 
+
   convertToDesiredFormat = (formData) => {
     const {
       typeOfDevelopement,
@@ -294,6 +298,7 @@ class Form extends Component {
       contact:contact||true
     };
 
+
     return formattedData;
   } 
   submitData = e => {
@@ -310,36 +315,41 @@ class Form extends Component {
         return (
           <PersonalDetails
           activeStep={activeStep}
+
             nextStep={this.nextStep}
             onDataReceived={this.handleDataReceived}
             formData={formData.step1}
             updateFormData={this.updateFormData}
           />
-        )
+        );
       case 2:
         return (
-          <CourseDetails 
+          <CourseDetails
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
             formData={formData.step2}
             updateFormData={this.updateFormData}
           />
-        )
+        );
       case 3:
         return (
+
           < YourIndustry nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
           formData={formData.step3}// Pass formData as props
           updateFormData={this.updateFormData}
+
           />
-        )
+        );
       case 4:
-          return (
-            < Summary nextStep={this.nextStep}
+        return (
+          <Summary
+            nextStep={this.nextStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
+
             formData={formData.step4} // Pass formData as props
             updateFormData={this.updateFormData}
            />
@@ -390,6 +400,7 @@ class Form extends Component {
       default: return null
 
       
+
     }
     
   }

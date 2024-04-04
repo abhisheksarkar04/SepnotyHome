@@ -1,17 +1,19 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper , Step } from 'react-form-stepper';
 import './App.css';
 import handleFormValues from './allFormValues';
 
-import FourthPage from './Website/FourthPage';
+
+import FourthPage from "./Website/FourthPage";
 
 class Summary extends Component {
-
   state = {
     error: ''
+
   };
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
   const { UIDesignMockups, chosenCMS } = this.props.formData;
 
@@ -19,15 +21,17 @@ class Summary extends Component {
     this.setState({ error: 'Please answer all questions.' });
     return;
   }
+
     // Store the selected data in parent component or wherever required
     // this.props.storeData(hasMockups, chosenCMS);
     this.props.nextStep();
-  }
+  };
 
   handleMockupsChange = (e) => {
     this.props.updateFormData({
       UIDesignMockups: e.target.value
     });
+
   };
   
   handleCMSChange = (e) => {
@@ -37,17 +41,19 @@ class Summary extends Component {
     });
   };
   back = e => {
+
     e.preventDefault();
     this.props.prevStep();
-  }
+  };
 
   render() {
     const { error } = this.state;
     const {UIDesignMockups,chosenCMS} = this.props.formData
 
     return (
-      <Main className='form'>
+      <Main className="form">
         <div>
+
         <StyledStepper
           activeStep={3}
           styleConfig={{
@@ -70,10 +76,8 @@ class Summary extends Component {
         </StyledStepper>
           <Mai>
             <Form1>
-                <Heading>
-                *Do you have UI design mockups?
-                </Heading>
-                <Form2>
+              <Heading>*Do you have UI design mockups?</Heading>
+              <Form2>
                 <InputContainer>
 <Label>
 <Input type='radio' name="mockups" value="Yes" checked={UIDesignMockups === "Yes"}  onChange={this.handleMockupsChange} />
@@ -94,13 +98,22 @@ Yes
 </InputContainer>
                 </Form2>
 
-                
+         
             </Form1>
             <Form1>
-            <Heading>
-            *Have you chosen a CMS?
-                </Heading>
-            <Form2>
+              <Heading>*Have you chosen a CMS?</Heading>
+              <Form2>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="radio"
+                      name="cms"
+                      value="No"
+                      onChange={this.handleCMSChange}
+                    />
+                    No
+                  </Label>
+                </InputContainer>
                 <InputContainer>
 <Label>
 <Input type='radio' name="cms" value="No" checked={chosenCMS==="No"} onChange={this.handleCMSChange} />
@@ -116,24 +129,32 @@ No
 {error && <ErrorMessage>{error}</ErrorMessage>}
 
                 </Form2>
-            </Form1>
-        </Mai>
-         
 
-          
+            </Form1>
+          </Mai>
         </div>
-        <Button className='buttons'>
-            <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
+        <Button className="buttons">
+          <button
+            className="buttons__button buttons__button--back"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            className="buttons__button buttons__button--next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </Button>
       </Main>
-    )
+    );
   }
 }
 
 export default Summary;
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 const ErrorMessage = Styled.div`
   color: red;
@@ -146,12 +167,12 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{width:100%}
-`
+`;
 
 const Mai = Styled.div`
 display:flex;
@@ -159,7 +180,7 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
-`
+`;
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
@@ -186,19 +207,19 @@ font-weight:700;
 margin-bottom:20px;
 font-family:Roboto;
 margin-bottom:30px;
-`
+`;
 const Form2 = Styled.div`
 ${media.mobile}{
   border-radius:5px;
   gap:0px;
 }
-`
+`;
 const Input = Styled.input`
 margin-right:10px;
-`
-const InputContainer=Styled.div`
+`;
+const InputContainer = Styled.div`
 margin-top:10px;
-`
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -240,6 +261,7 @@ const StyledStep = Styled(Step)`
   & > div {
     color: #0f6bff !important;
   }
+
 `;
 // const Input2 = Styled.input`
 // background: #C1CAE7;

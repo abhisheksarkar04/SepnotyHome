@@ -41,23 +41,23 @@ top:7;
 left:0;
 z-index:0;
 @media screen and (max-width:576px){
-    height:200px;
+    
 }
 `;
-export const BackgroundShapeTwo=styled.span`
-position:absolute;
-width:250px;
-height:350px;
-margin-top: -80px;
-margin-right:0px;
-background-color:rgba(129, 150, 219, 0.25);
-z-index:0;
-top:-25;
-right:0;
-gap:0;
-z-index:0;
-@media screen and (max-width:576px){
-    height:280px;
-    margin-top: -60px;
-}
+export const BackgroundShapeTwo = styled.span`
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  margin-top: -80px;
+  margin-right: 0px;
+  background-color: rgba(129, 150, 219, 0.25);
+  z-index: 0;
+  top: -25;
+  right: 0;
+  gap: 0;
+  z-index: 0;
+  @media screen and (max-width:576px){
+    height:300px;
+    margin-top: -50px;
+  }
 `;

@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import './App.css';
@@ -45,20 +46,16 @@ handleRadioChange = (event) => {
   handleSubmit = (event) => {
     event.preventDefault();
 
-
     const { typeOfWebsite, numberOfPages } = this.state;
-    
 
+    // Call the handleFormValues function from FormUtils.js
 
-   
-  // Call the handleFormValues function from FormUtils.js
-  
     if (typeOfWebsite.length === 0) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
-          typeOfWebsite: 'Please select at least one type of software.'
-        }
+          typeOfWebsite: "Please select at least one type of software.",
+        },
       });
       return;
     }
@@ -66,31 +63,35 @@ handleRadioChange = (event) => {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
-          numberOfPages: 'Please select the number of pages for your website/App.'
-        }
+          numberOfPages:
+            "Please select the number of pages for your website/App.",
+        },
       });
       return;
     }
-   
+
     // if(softwareTypes.length === 0 && !numberOfPages){
-        
+
     // }
     // Store the form data or proceed with further actions
     console.log("Form data:", this.state);
     // Proceed to the next step or page
-    
   };
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
+
     const { typeOfWebsite, numberOfPages } = this.props.formData;
     const formErrors = {};
     // Check software types
     //console.log("Form data:", this.props.formData);
     if (typeOfWebsite.length === 0) {
+
       formErrors.softwareTypes = 'Please select at least one type of software.';
+
     }
     // Check number of pages
     if (!numberOfPages) {
+
       formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
     }
     // If there are errors, update the state with the errors
@@ -98,6 +99,7 @@ handleRadioChange = (event) => {
       this.setState({ formErrors });
       return; // Prevent navigation to the next step/page
     }
+
     // If there are no errors, proceed to the next step
     this.props.nextStep();
   }
@@ -107,7 +109,7 @@ handleRadioChange = (event) => {
     const {formData} = this.props
 
     return (
-      <Main className='form'>
+      <Main className="form">
         <form onSubmit={this.handleSubmit}>
         <StyledStepper
           activeStep={0}
@@ -246,12 +248,13 @@ handleRadioChange = (event) => {
           </Main>
                   )
                 }
+
 }
 
 export default PersonalDetails;
 
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 const StyledStepper = Styled(Stepper)`
   display: flex;
@@ -276,20 +279,20 @@ const StyledStep = Styled(Step)`
 
 const Error = Styled.p`
 font-size:12px;
-`
+`;
 
 const Button = Styled.div`
 display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 const Button1 = Styled.button`
 background-color:blue;
 height:40px;
 width:120px;
 color:white;
-`
+`;
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
@@ -297,7 +300,7 @@ ${media.mobile}{
  margin: 0;
   padding: 0px;
 }
-`
+`;
 const Main1 = Styled.div`
 display:flex;
 flex-direction:row;
@@ -312,7 +315,7 @@ ${media.mobile}{
   justify-content:space-between;
 
 }
-`
+`;
 const Heading = Styled.h1`
 font-family: Roboto;
 font-size: 18px;
@@ -321,14 +324,16 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
+
 ${
   media.mobile
 }{
   font-size:14px;
   line-height: 1.5;
   color:#263238;
+
 }
-`
+`;
 
 const FormContainer = Styled.div`
 display:flex;
@@ -349,12 +354,12 @@ ${media.mobile}{
   padding:5px;
 
 }
-`
+`;
 const CheckBoxCon = Styled.div`
 margin-top:15px;
 align-items:start;
 justify-content:space-between;
-`
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -365,13 +370,13 @@ text-align: left;
 ${media.mobile}{
   font-size:11px;
 }
-`
+`;
 const Form = Styled.div`
 
 ${media.mobile}{
  
 }
-`
+`;
 const Input1 = Styled.input`
 background:transparent;
 border: 1px solid gray;
@@ -386,6 +391,7 @@ ${media.mobile}{
   width:110px;
 }
 `
+
 // const Buttonel = Styled.button`
 //   font-size: 20px;
 //   background-color: #d9d9d9;
@@ -400,14 +406,12 @@ ${media.mobile}{
 //   border-right: 1px solid #9e9898;
 // `;
 
-
-
 // const Para1 = Styled.p`
 
 // `
-const InputContainer=Styled.div`
+const InputContainer = Styled.div`
 margin-top:5px;
-`
+`;
 // const Input1 = Styled.textarea`
 // background:transparent;
 // border: 1px solid #C1CAE7;
@@ -423,3 +427,4 @@ margin-top:10px;
   margin-right: 5px;
 }
 `
+

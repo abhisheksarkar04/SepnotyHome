@@ -6,12 +6,20 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+
+  @media screen and (max-width: 576px) {
+     
+   padding-bottom:0px;
+
+    }
+
 `;
 export const Header = styled.h1`
   font-size: 17px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 5%;
+
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -23,11 +31,22 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
+
+
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
+
+  
+  @media screen and (max-width: 576px) {
+     
+   margin:0px;
+ 
+     }
+
+ 
 `;
 
 export const ConRecHead = styled.h1`
@@ -36,6 +55,8 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   padding-top: 20px;
+
+
 `;
 
 export const ConRecDesc = styled.p`
@@ -43,6 +64,8 @@ export const ConRecDesc = styled.p`
   color: #ffffff;
   width:80%;
   padding: 20px 30px 30px 0px;
+
+ 
 
 `;
 
@@ -64,6 +87,8 @@ export const Rectangle1 = styled.img`
   width: 38%;
   top: 12%;
   z-index: 0;
+
+
 `;
 
 export const Rectangle2 = styled.img`
@@ -73,6 +98,7 @@ export const Rectangle2 = styled.img`
   width: 60%;
   top: -5%;
   z-index: 0;
+
 `;
 
 export const Rectangle3 = styled.img`
@@ -84,6 +110,8 @@ export const Rectangle3 = styled.img`
   z-index: 0;
   background:transparent;
   margun-bottom: 20px;
+
+ 
 `;
 
 export const ListHeading = styled.h1`
@@ -92,6 +120,8 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: -30px;
   margin-top:50px;
+
+
 `;
 
 export const ServiceItemCon = styled.div`
@@ -103,9 +133,6 @@ export const ServiceItemDesc = styled.p`
   color: #ffffff;
   margin-top:50px;
 
-
-
-  
 `;
 
 export const ImageCon = styled.div`
@@ -113,10 +140,31 @@ export const ImageCon = styled.div`
   margin: 0px;
   display: flex;
   flex-direction: column;
+
+  
+  @media screen and (max-width: 576px) {
+     
+    width:100px;
+    height:100px
+   
+ 
+     }
+  
+
 `;
 export const ServiceItemImg = styled.img`
-  width: 500px;
-  margin-left: -30%;
+  width: 300px;
+ 
+  margin-top:120px;
+
+  @media screen and (max-width: 576px) {
+     
+    width:100px;
+    height:100px
+   margin:0px;
+ 
+     }
+
 `;
 
 export const ServiceItemButton = styled.button`
@@ -150,6 +198,8 @@ export const SmallPattern = styled.div`
   width: 60px;
   border-radius: 3px;
   margin-top:50px;
+
+
 `;
 
 export const PatternCon = styled.div`
@@ -158,4 +208,6 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 60px;
   margin-left: 5em;
+
+  
 `;

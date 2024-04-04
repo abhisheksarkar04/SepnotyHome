@@ -8,8 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 100px;
 
   @media screen and (max-width: 576px) {
-    width:133%;
- 
 
  }
   
@@ -48,6 +46,7 @@ text-align:center;
    padding-top:50px;
   padding-inline:-30px;
   margin-bottom: -60px;
+  width:330px;
 
   }
 `;
@@ -62,7 +61,7 @@ export const BlueContainer = styled.div`
 
 
  @media screen and (max-width: 576px) {
-  width:133%;
+ 
   height:110px;
   padding-top:10px;
 
@@ -92,7 +91,7 @@ margin-left:5%;
 
 @media screen and (max-width: 576px) {
   font-size:20px;
-  width:110%;
+  width:100%;
   margin:0px;
   margin-bottom:1px;
  
@@ -108,7 +107,7 @@ margin-left:5%;
 
 @media screen and (max-width: 576px) {
   font-size:14px;
-  width:100%;
+  width:300px;
   margin-left:1px;
   margin-top:1px;
 
@@ -287,8 +286,9 @@ padding -left:6%;
 
   margin-left:-95px;
   text-align: left;
-  width:90%;
+  width:360px;
   font-size:14px;
+ 
   }
 
 

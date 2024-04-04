@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper ,Step} from 'react-form-stepper';
@@ -7,16 +8,20 @@ import handleFormValues from './allFormValues';
 import FifthPage from './Website/FifthPage';
 
 
+import FifthPage from "./Website/FifthPage";
+
 class SecondForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       error: ''
+
     };
   }
 
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
+
     const {formData} = this.props
     const appFeatures = formData
 
@@ -30,23 +35,24 @@ class SecondForm extends Component {
   };
 
   handleCheckboxChange = (e) => {
+
     const { value, checked ,id} = e.target;
     this.props.updateFormData({
       appFeatures:checked ? [...this.props.formData.appFeatures, id] : this.props.formData.appFeatures = this.props.formData.appFeatures.filter(type => type !== id)
     })
   }
 
-  back = e => {
+
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
-
 
   render() {
     const { error } = this.state;
     const {appFeatures} = this.props.formData
     return (
-      <Main className='form'>
+      <Main className="form">
         <form>
 
         <StyledStepper
@@ -70,8 +76,9 @@ class SecondForm extends Component {
           <StyledStep />
         </StyledStepper>
 
-<Mai>
+          <Mai>
             <FormContainer>
+
                 <Form>
                     <Heading>
                     *What Software features/capabilities do you need?
@@ -146,25 +153,33 @@ class SecondForm extends Component {
                         <In type="text" placeholder='others (please specify)'/>
                     </CheckBoxCon>
 
-                    {error && <ErrorMessage>{error}</ErrorMessage>}
-                </Form1>
+                {error && <ErrorMessage>{error}</ErrorMessage>}
+              </Form1>
             </FormContainer>
-        </Mai>
-            
-
+          </Mai>
         </form>
-        <Button style={{textAlign: 'center'}}>
-          <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
+        <Button style={{ textAlign: "center" }}>
+          <button
+            className="buttons__button buttons__button--back"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            className="buttons__button buttons__button--next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </Button>
       </Main>
-    )
+    );
   }
 }
 
 export default SecondForm;
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 const StyledStepper = Styled(Stepper)`
   display: flex;
@@ -192,7 +207,7 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 const ErrorMessage = Styled.div`
   color: red;
   margin-top: 10px;
@@ -204,7 +219,7 @@ background-color:#0C111F;
 ${media.mobile}{
   width:100%;
 }
-`
+`;
 
 const Mai = Styled.div`
 display:flex;
@@ -227,7 +242,7 @@ color: #263238;
 ${media.mobile}{
   font-size:15px;
 }
-`
+`;
 
 const FormContainer = Styled.div`
 display:flex;
@@ -249,6 +264,7 @@ ${media.mobile}{
   height:380px;;
 }
 `
+
 const In = Styled.input`
 background:transparent;
 border: 1px solid gray;
@@ -263,7 +279,7 @@ gap:30px;
 align-items:start;
 justify-content:space-between;
 margin-top:20px;
-`
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -275,15 +291,15 @@ margin-left:10px;
 ${media.mobile}{
   font-size:11px;
 }
-`
+`;
 const Form = Styled.div`
 ${media.mobile}{
   width:100%;
 }
-`
+`;
 const Form1 = Styled.div`
 margin-top:60px;
 ${media.mobile}{
   width:100%;
 }
-`
+`;

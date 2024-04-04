@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import './App.css';
@@ -13,6 +14,7 @@ import SecondPage from "./Website/SecondPage"
 
 
 
+import SecondPage from "./Website/SecondPage";
 
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
@@ -22,10 +24,22 @@ constructor(props) {
     super(props);
     this.state = {
       error: ''
+
     };
   }
 
-  continue = e => {
+  shouldComponentUpdate(nextProps) {
+    if (
+      this.props.addCourse !== nextProps.addCourse ||
+      this.props.level !== nextProps.level
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  continue = (e) => {
     e.preventDefault();
     const {formData} = this.props
     const {industryType} = formData
@@ -35,6 +49,7 @@ constructor(props) {
     //handleFormValues(formData);
     if (industryType.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
+
       return;
     }
     this.props.nextStep();
@@ -47,14 +62,12 @@ constructor(props) {
       industryType:checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType = this.props.formData.industryType.filter(type => type !== id)
     })
     
-
   };
 
-  back = e => {
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
-
 
   render() {
     const { error } = this.state;
@@ -62,7 +75,7 @@ constructor(props) {
     // const { 
     //   // // coursesOptions,
     //   // levelOptions,
-    //   // // addCourse, 
+    //   // // addCourse,
     //   // addLevel,
     //   // level,
     // } = this.props;
@@ -136,8 +149,9 @@ constructor(props) {
     // ];
 
     return (
-      <Main className='form'>
+      <Main className="form">
         <form>
+
 
         <StyledStepper
           activeStep={1}
@@ -161,13 +175,12 @@ constructor(props) {
         </StyledStepper>
 
 
-<Main1>
+          <Main1>
             <Form1>
-                <Heading>
-                *What is your industry?
-                </Heading>
-                <Form2>
+              <Heading>*What is your industry?</Heading>
+              <Form2>
                 <InputContainer>
+
 <Label>
 <Input type='checkbox' name="industry" id="Healthcare" checked={industryType.includes('Healthcare')} value="Healthcare"  onChange={this.handleCheckboxChange}/>
 Healthcare
@@ -209,7 +222,7 @@ Healthcare
                 
             </Form1>
             <Form1>
-            <Form3>
+              <Form3>
                 <InputContainer>
 <Label>
 <Input type='checkbox' name="industry" id="Public sector" value="Public sector" checked={industryType.includes('Public sector')} onChange={this.handleCheckboxChange}/>
@@ -247,9 +260,9 @@ Public sector
 
                 </Form3>
                 {error && <ErrorMessage>{error}</ErrorMessage>}
+
             </Form1>
-            
-        </Main1>
+          </Main1>
 
           {/* <div className='select'>
             <select
@@ -265,8 +278,7 @@ Public sector
 
           {/* <div className='table'> */}
 
-
-{/* 
+          {/* 
             <MuiThemeProvider theme={theme}>
               <MaterialTable
                 title='Choose courses'
@@ -297,23 +309,30 @@ Public sector
             </MuiThemeProvider> */}
 
           {/* </div> */}
-
-          
-
         </form>
-        <Button className='buttons'>
-            <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
+        <Button className="buttons">
+          <button
+            className="buttons__button buttons__button--back"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            className="buttons__button buttons__button--next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </Button>
       </Main>
-    )
+    );
   }
 }
 
 export default CourseDetails;
 
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 
 const StyledStepper = Styled(Stepper)`
@@ -347,14 +366,14 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
 }
-`
+`;
 const Main1 = Styled.div`
 display:flex;
 flex-direction:row;
@@ -368,7 +387,7 @@ ${media.mobile}{
   padding-right: 0px;
   justify-content:space-between;
 }
-`
+`;
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
@@ -383,31 +402,31 @@ ${media.mobile}{
   width: 52%;
   border-radius:12px;
   gap:0px;
+
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:5px;
   height:300px;
 
 `
+
 const Form3 = Styled.div`
 margin-top:40px;
 ${media.mobile}{
   margin-top:15px;
 
 }
-`
+`;
 const Heading = Styled.h1`
 color:#263238;
 font-size:18px;
 font-weight:700;
 margin-bottom:20px;
 font:family:Roboto;
-${
-  media.mobile
-}{
+${media.mobile}{
   font-size:13px;
 }
-`
+`;
 const Form2 = Styled.div`
 margin-top:-20px;
 ${media.mobile}{
@@ -415,7 +434,7 @@ ${media.mobile}{
   border-radius:5px;
   gap:0px;
 }
-`
+`;
 const Input = Styled.input`
 margin-right:10px;
 ${media.mobile}{
@@ -426,6 +445,7 @@ const InputContainer=Styled.div`
 margin-top:20px;
 
 `
+
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -444,3 +464,4 @@ border: 1px solid gray;
   width:110px;
 }
 `
+

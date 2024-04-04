@@ -245,4 +245,6 @@ font-size:12px;
 @media screen and (max-width:576px){
     font-size:10px;
 
+
   }`;
+

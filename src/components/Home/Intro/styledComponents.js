@@ -238,7 +238,7 @@ export const IntroExplorePart2 = styled.div`
   line-height: 1.5;
   margin-top: -20px;
   @media screen and (max-width: 576px) {
-    display: flex;
+    display: none;
     padding: 30px 0px 50px 30px;
     justify-content: space-between;
   }
@@ -249,6 +249,7 @@ export const IntroAchievements = styled.div`
   @media screen and (max-width: 576px) {
     width: 100px;
     margin-right: 0px;
+   
   }
 `;
 export const IntroOrangeText = styled.h2`
@@ -263,7 +264,7 @@ export const IntroOrangeText = styled.h2`
 export const IntroBlackText = styled.p`
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
   }
@@ -283,12 +284,12 @@ export const IntroRightImg = styled.img`
   margin-right: 100px;
   margin-bottom: 100px;
   @media screen and (max-width: 576px) {
-    width: 100%;
+    width: 90%;
     height: 430px;
     margin-left: -60px;
-    margin-top: 0px;
+    margin-top: -70px;
     margin-right: 100px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 `;
 export const TransparentImg = styled.img`
@@ -328,12 +329,13 @@ export const Homehd1 = styled.h1`
   margin: 85px 0px 0px 0px;
   display: none;
   @media screen and (max-width: 576px) {
-    font-size: 24px;
+    font-size: 17px;
     letter-spacing: 0px;
-    width: 99%;
-    margin: 85px 0px 0px 20px;
+    width:95%;
+    margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
+    padding-right: 20px;
   }
 `;
 
@@ -349,7 +351,7 @@ export const HomeLeftRight = styled.div`
   font-family: "Roboto";
   @media screen and (max-width: 1080px) {
     flex-direction: column;
-    padding: 45px 0px 0px 30px;
+    padding: 0px 0px 0px 30px;
   }
 `;
 export const HomeLefthd1 = styled.h1`
@@ -435,11 +437,12 @@ export const HomeProposalTextRight = styled.button`
   cursor: pointer;
   display: none;
   @media screen and (max-width: 576px) {
-    margin-top: 0px;
-    height: 30px;
-    margin-left: 30%;
+    margin-top: -70px;
+    padding: 10px 26px 10px 26px;
+    margin-left: 20%;
     display: block;
     margin-bottom: 20px;
+    font-size: 14px;
   }
 `;
 export const HomePlayVideo = styled.div`
@@ -493,6 +496,8 @@ export const HomeExplorePartLeft = styled.div`
 
   @media screen and (max-width: 576px) {
     display: flex;
+    align-items:center;
+
   }
 `;
 
@@ -513,7 +518,7 @@ export const HomeOrangeText = styled.h2`
 export const HomeBlackText = styled.p`
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
   }

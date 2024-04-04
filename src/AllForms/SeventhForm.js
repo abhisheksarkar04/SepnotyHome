@@ -1,43 +1,45 @@
+
 import React, { Component } from 'react';
 import { Stepper ,Step} from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
+
 // import SecondPage from "./Forms/SevenPage"
 
-import SevenPage from './Website/SevenPage';
-import handleFormValues from './allFormValues';
-
-
+import SevenPage from "./Website/SevenPage";
+import handleFormValues from "./allFormValues";
 
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
-class SeventhForm extends Component {
+class ThirdForm extends Component {
   state = {
     compliance: [],
-    integration: '',
-    integrationDetails: '',
-    additionalDetails: '',
+    integration: "",
+    integrationDetails: "",
+    additionalDetails: "",
     formErrors: {
-      compliance: '',
-      integration: '',
-      integrationDetails: '',
-      additionalDetails: ''
-    }
+      compliance: "",
+      integration: "",
+      integrationDetails: "",
+      additionalDetails: "",
+    },
   };
 
   validateForm = () => {
-    const { compliance , integration, integrationDetails,additionalDetails} = this.state;
+    const { compliance, integration, integrationDetails, additionalDetails } =
+      this.state;
     const formErrors = {};
     const {complianceRequirements,details} = this.props.formData
+
 
     if (complianceRequirements.length === 0) {
       formErrors.compliance = "Please select at least one compliance requirement";
     }
     if (!details) {
+
       formErrors.additionalDetails = "Please add additional details";
-    }
-    else{
+    } else {
       this.props.nextStep();
     }
 
@@ -45,8 +47,9 @@ class SeventhForm extends Component {
     return Object.keys(formErrors).length === 0;
   };
 
-  handleIntegrationChange = event => {
+  handleIntegrationChange = (event) => {
     const { name, value } = event.target;
+
 
     const {externalIntegration} = this.props.formData
 
@@ -65,56 +68,69 @@ class SeventhForm extends Component {
         ? [...complianceRequirements, id]
         : complianceRequirements.filter(type => type !== id)
     });
+
   };
 
-  handleIntegrationChange = event => {
+  handleIntegrationChange = (event) => {
     const { name, value } = event.target;
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       [name]: value,
       formErrors: {
         ...prevState.formErrors,
-        integration: '',
-        integrationDetails: ''
-      }
+        integration: "",
+        integrationDetails: "",
+      },
     }));
   };
 
-  back = e => {
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
 
-  handleAdditionalDetailsChange = event => {
+  handleAdditionalDetailsChange = (event) => {
     const { name, value } = event.target;
+
 
     this.props.updateFormData({
       details:event.target.value
       })
-  };
-  
 
-  continue = e => {
+  };
+
+  continue = (e) => {
     e.preventDefault();
-    const {compliance,integration,integrationDetails,additionalDetails} = this.state
+    const { compliance, integration, integrationDetails, additionalDetails } =
+      this.state;
     if (this.validateForm()) {
       // Store the selected compliance options in state or proceed further
-     
     }
-      const formData = {
-        field7 : {compliance,integration,integrationDetails,additionalDetails}
-      }
-      this.props.onDataReceived(formData);
-      
+    const formData = {
+      field7: {
+        compliance,
+        integration,
+        integrationDetails,
+        additionalDetails,
+      },
+    };
+    this.props.onDataReceived(formData);
   };
 
   render() {
-    const { compliance, formErrors ,integration, integrationDetails,additionalDetails} = this.state;
+    const {
+      compliance,
+      formErrors,
+      integration,
+      integrationDetails,
+      additionalDetails,
+    } = this.state;
 
     const {complianceRequirements} = this.props.formData
 
     return (
-      <Main className='form'>
+      <Main className="form">
         <form>
+
         <StyledStepper
           activeStep={6}
           styleConfig={{
@@ -188,78 +204,92 @@ class SeventhForm extends Component {
                     </CheckBoxCon>
                     {formErrors.compliance && <Error>{formErrors.compliance}</Error>}
                 </Form>
+
             </FormContainer>
             <Form1>
-            <Heading>
-            *Do you need integration with any external or internal systems?
-                    </Heading>
-            <Form2>
-            <InputContainer>
-          <Label>
-            <input 
-              type='radio' 
-              name="integration" 
-              value="No" 
-              checked={integration === "No"} 
-              onChange={this.handleIntegrationChange} 
-            />
-            No
-          </Label>
-        </InputContainer>
-        <InputContainer>
-          <Label>
-            <input 
-              type='radio' 
-              name="integration" 
-              value="Yes (Please Specify)" 
-              checked={integration === "Yes (Please Specify)"} 
-              onChange={this.handleIntegrationChange} 
-            />
-            Yes (Please Specify)
-            {integration === "Yes (Please Specify)" && (
-              <Input1 
-                type="text" 
-                name="integrationDetails" 
-                value={integrationDetails} 
-                onChange={this.handleIntegrationChange}
-                placeholder="Please specify integration details"
+              <Heading>
+                *Do you need integration with any external or internal systems?
+              </Heading>
+              <Form2>
+                <InputContainer>
+                  <Label>
+                    <input
+                      type="radio"
+                      name="integration"
+                      value="No"
+                      checked={integration === "No"}
+                      onChange={this.handleIntegrationChange}
+                    />
+                    No
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <input
+                      type="radio"
+                      name="integration"
+                      value="Yes (Please Specify)"
+                      checked={integration === "Yes (Please Specify)"}
+                      onChange={this.handleIntegrationChange}
+                    />
+                    Yes (Please Specify)
+                    {integration === "Yes (Please Specify)" && (
+                      <Input1
+                        type="text"
+                        name="integrationDetails"
+                        value={integrationDetails}
+                        onChange={this.handleIntegrationChange}
+                        placeholder="Please specify integration details"
+                      />
+                    )}
+                  </Label>
+                  {formErrors.integration && (
+                    <Error>{formErrors.integration}</Error>
+                  )}
+                  {formErrors.integrationDetails && (
+                    <Error>{formErrors.integrationDetails}</Error>
+                  )}
+                </InputContainer>
+                <Heading1>
+                  *Do you need integration with any external or internal
+                  systems?
+                </Heading1>
+              </Form2>
+              <Input3
+                type="text"
+                name="additionalDetails"
+                value={additionalDetails}
+                onChange={this.handleAdditionalDetailsChange}
+                placeholder="Please add here"
               />
-            )}
-          </Label>
-          {formErrors.integration && <Error>{formErrors.integration}</Error>}
-          {formErrors.integrationDetails && <Error>{formErrors.integrationDetails}</Error>}
-        </InputContainer>
-<Heading1>
-            *Do you need integration with any external or internal systems?
-                    </Heading1>
-
-                </Form2>
-                <Input3 
-          type="text" 
-          name="additionalDetails" 
-          value={additionalDetails} 
-          onChange={this.handleAdditionalDetailsChange}
-          placeholder="Please add here"
-        />
-        {formErrors.additionalDetails && <Error>{formErrors.additionalDetails}</Error>}
-                
-         
-                
+              {formErrors.additionalDetails && (
+                <Error>{formErrors.additionalDetails}</Error>
+              )}
             </Form1>
-        </Mai>
+          </Mai>
         </form>
-        <Button className='buttons'>
-            <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
+        <Button className="buttons">
+          <button
+            className="buttons__button buttons__button--back"
+            onClick={this.back}
+          >
+            Back
+          </button>
+          <button
+            className="buttons__button buttons__button--next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </Button>
       </Main>
-    )
+    );
   }
 }
 
-export default SeventhForm;
+export default ThirdForm;
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 
 const Error = Styled.div`
@@ -272,12 +302,12 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{width:100%}
-`
+`;
 const Heading1 = Styled.h1`
 font-family: Roboto;
 font-size: 18px;
@@ -289,7 +319,7 @@ color: #263238;
 margin-top:20px;
 margin-bottom:10px;
 ${media.mobile}{font-size:15px;}
-`
+`;
 
 const Mai = Styled.div`
 display:flex;
@@ -298,7 +328,7 @@ justify-content:center;
 align-item:center;
 gap:20px;
 ${media.mobile}{gap:10px;justify-content:start;align-items:start;margin-left:-30px;}
-`
+`;
 const Heading = Styled.h1`
 font-family: Roboto;
 font-size: 18px;
@@ -308,6 +338,7 @@ letter-spacing: 0em;
 text-align: left;
 color: #263238;
 ${media.mobile}{font-size:15px;}
+
 `
 const StyledStepper = Styled(Stepper)`
   display: flex;
@@ -328,6 +359,7 @@ const StyledStep = Styled(Step)`
   & > div {
     color: #0f6bff !important;
   }
+
 `;
 
 const FormContainer = Styled.div`
@@ -343,13 +375,13 @@ width:90%;
 ${media.mobile}{
   width:50%;
 }
-`
+`;
 const CheckBoxCon = Styled.div`
 gap:30px;
 align-items:start;
 justify-content:space-between;
 margin-top:13px;
-`
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -360,19 +392,21 @@ letter-spacing: 0em;
 text-align: left;
 margin-left:10px;
 ${media.mobile}{font-size:13px;}
+
 `
 const Form = Styled.div`
+
 ${media.mobile}{
  width:100%;
 }
 
-`
+`;
 // const Para1 = Styled.p`
 
 // `
-const InputContainer=Styled.div`
+const InputContainer = Styled.div`
 margin-top:20px;
-`
+`;
 const Input1 = Styled.input`
 background: #C1CAE7;
 border: 1px solid #8C8C8C;
@@ -385,11 +419,13 @@ ${media.mobile}{
   width:120px;
 }
 
-`
+`;
 const Input = Styled.input`
 margin-right:10px;
+
 margin-left:10px;
 `
+
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
@@ -403,10 +439,10 @@ width:600px;
 ${media.mobile}{
   width:250px;
 }
-`
+`;
 const Form2 = Styled.div`
 
-`
+`;
 const Input3 = Styled.input`
 background: #C1CAE7;
 border: 1px solid #8C8C8C;
@@ -422,3 +458,4 @@ padding: 8px;
 text-align: left;
 ${media.mobile}{width:200px;}
 `
+

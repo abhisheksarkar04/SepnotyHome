@@ -205,6 +205,7 @@ const Y = Styled.div`
   flex-direction:row;
   align-items:center;
   @media screen and (max-width: 576px) {
+
  `;
 
 const Image = Styled.img`
@@ -212,9 +213,11 @@ const Image = Styled.img`
     height:250px;
     margin-right:7%;
     @media screen and (max-width: 576px) {
+
       height:110px;
       margin-bottom:10px;
       margin-right:10px;
+
  `;
 const Para1 = Styled.p`
  font-size:21px;

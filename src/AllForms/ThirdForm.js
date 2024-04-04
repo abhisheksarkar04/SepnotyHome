@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper ,Step } from 'react-form-stepper';
@@ -8,19 +9,25 @@ import ThirdPage from '../AllForms/Website/ThirdPage';
 
 
 
+import ThirdPage from "../AllForms/Website/ThirdPage";
+
 class YourIndustry extends Component {
+
  state = {
       error: ''
     };
 
-  continue = e => {
+
+  continue = (e) => {
     e.preventDefault();
+
     const {formData} = this.props;
     const {services} = formData
     console.log(services)
     
     if (!services) {
       this.setState({ error: 'Please select a service.' });
+
       return;
     }
     // Store the selected data in parent component or wherever required
@@ -29,22 +36,24 @@ class YourIndustry extends Component {
   };
 
   handleRadioChange = (e) => {
+
     this.props.updateFormData({
       services: e.target.value
     });
+
   };
 
   handleWebsiteLinkChange = (e) => {
     this.setState({ websiteLink: e.target.value });
   };
 
-  back = e => {
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
-  }
-
+  };
 
   render() {
+
     const {error} = this.state
     const {formData} = this.props
     // const { 
@@ -53,6 +62,7 @@ class YourIndustry extends Component {
     //   email, 
     //   phone, 
     //   handleChange, 
+
     //   validateFirstName,
     //   validateLastName,
     //   isErrorFirstName,
@@ -62,8 +72,9 @@ class YourIndustry extends Component {
     // } = this.props;
 
     return (
-      <Main className='form'>
+      <Main className="form">
         <form>
+
         <StyledStepper
           activeStep={2}
           styleConfig={{
@@ -86,13 +97,14 @@ class YourIndustry extends Component {
         </StyledStepper>
           
 
-<Main1>
+
+
+          <Main1>
             <Form1>
               <Fom>
-                <Heading>
-                *What service(s) do you need?
-                </Heading>
+                <Heading>*What service(s) do you need?</Heading>
                 <div>
+
                 <InputContainer>
 <Label>
 <Input  type='radio' name="industry" value="Website development" checked={formData.services==="Website development"} onChange={this.handleRadioChange}/>
@@ -134,10 +146,34 @@ Website development
 
                 
 
+
             </Form1>
             <Form1>
-            <Form3>
+              <Form3>
                 <InputContainer>
+                  <Label>
+                    <Input
+                      type="radio"
+                      name="industry"
+                      value="Migration to a new CMS"
+                      onChange={this.handleRadioChange}
+                    />
+                    Migration to a new CMS
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="radio"
+                      name="industry"
+                      value="Delivery of new features"
+                      onChange={this.handleRadioChange}
+                    />
+                    Delivery of new features
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+
 <Label>
 <Input type='radio'  name="industry" value="Migration to a new CMS" checked={formData.services==="Migration to a new CMS"}  onChange={this.handleRadioChange}/>
 Migration to a new CMS
@@ -162,38 +198,47 @@ Migration to a new CMS
     </Label>
 </InputContainer>
 
-<InputContainer>
-<P>
-Please provide a link to your existing website if you have one</P>
-<Input2 
-              type="text" 
-              placeholder="Please add here"
-              value={this.state.websiteLink}
-              onChange={this.handleWebsiteLinkChange}
-            /></InputContainer>
- {error && <ErrorMessage>{error}</ErrorMessage>}
- 
-                </Form3>
-               
-            </Form1>
-           
-        </Main1>
-            
-          <Button style={{textAlign: 'center'}}>
-          <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-            
-          </Button>
 
+                <InputContainer>
+                  <P>
+                    Please provide a link to your existing website if you have
+                    one
+                  </P>
+                  <Input2
+                    type="text"
+                    placeholder="Please add here"
+                    value={this.state.websiteLink}
+                    onChange={this.handleWebsiteLinkChange}
+                  />
+                </InputContainer>
+                {error && <ErrorMessage>{error}</ErrorMessage>}
+              </Form3>
+            </Form1>
+          </Main1>
+
+          <Button style={{ textAlign: "center" }}>
+            <button
+              className="buttons__button buttons__button--back"
+              onClick={this.back}
+            >
+              Back
+            </button>
+            <button
+              className="buttons__button buttons__button--next"
+              onClick={this.continue}
+            >
+              Next
+            </button>
+          </Button>
         </form>
       </Main>
-    )
+    );
   }
 }
 
 export default YourIndustry;
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 
 const StyledStepper = Styled(Stepper)`
@@ -223,30 +268,32 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
 const Fom = Styled.div`
 ${media.mobile}{
   border-radius:5px;
   gap:0px;
 }
-`
+`;
 
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
 }
-`
+`;
 
 const P = Styled.p`
 color:#000000;
 font-size:15px;
 margin-bottom:10px;
+
 ${media.mobile}{
   font-size:11px;
   width:90%;
 }
 `
+
 
 const Main1 = Styled.div`
 display:flex;
@@ -261,7 +308,7 @@ ${media.mobile}{
   padding-right: 0px;
   justify-content:space-between;
 }
-`
+`;
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
@@ -272,6 +319,7 @@ border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
+
 ${media.mobile}{
   width: 53%;
   border-radius:12px;
@@ -297,15 +345,16 @@ ${
   font-weight: 700;
 }
 `
+
 const Form2 = Styled.form`
 
-`
+`;
 const Input = Styled.input`
 margin-right:10px;
-`
-const InputContainer=Styled.div`
+`;
+const InputContainer = Styled.div`
 margin-top:20px;
-`
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family:Roboto;
@@ -313,10 +362,12 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+
 ${media.mobile}{
   font-size:11px;
 }
 `
+
 const Input1 = Styled.input`
 background:transparent;
 border: 1px solid gray;
@@ -324,11 +375,13 @@ font-size:15px;
 color: #263238;
 font-weight:500;
 margin-left:10px;
+
 ${media.mobile}{
   font-size:11px;
   width:130px;;
 }
 `
+
 const Input2 = Styled.input`
 background: #C1CAE7;
 border: 1px solid #8C8C8C;
@@ -339,15 +392,17 @@ ${media.mobile}{
   border-radius:5px;
   gap:0px;
 }
-`
+`;
 const Form3 = Styled.div`
 margin-top:50px;
 ${media.mobile}{
   border-radius:5px;
   gap:0px;
 }
+
 `
 const ErrorMessage = Styled.p`
+
   color: red;
   margin-top: 10px;
   font-size:12px;

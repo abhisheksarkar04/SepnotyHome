@@ -28,6 +28,7 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
   margin-left:0px;
 }
 `;

@@ -31,6 +31,7 @@ export const SubHeadSpan = styled.span`
   @media screen and (max-width:576px){
     width:45px;
     margin-left:0%;
+    height:6%;
   }
 `;
 export const SubPageImg=styled.img`

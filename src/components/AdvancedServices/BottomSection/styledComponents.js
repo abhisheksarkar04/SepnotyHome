@@ -7,9 +7,9 @@ export const ServiceCards = styled.div`
   padding: 0px 60px 0px 60px;
   justify-content: space-around;
   @media screen and (max-width: 576px) {
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    margin-left: 0px;
   }
 `;
 
@@ -32,12 +32,18 @@ export const ServiceCardContainer = styled.div`
     background-color: #254989; /* Change color on hover */
   }
   @media screen and (max-width: 576px) {
-    flex: 44%;
-    width: 40%;
+    width: 44%;
     margin: 10px;
-    height: 60vh;
+    height: 280px;
     background-color: #d6dae7;
     border-radius: 5px;
+    padding: 10px 0px;
+
+    &: hover {
+      p {
+        color: #cbcbcb;
+      }
+    }
   }
 `;
 
@@ -60,7 +66,8 @@ export const ServiceTitle = styled.h2`
     color: #fff;
   }
   @media screen and (max-width: 576px) {
-    font-size: 15px;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
 `;
 export const ServiceDescription = styled.p`
@@ -69,15 +76,21 @@ export const ServiceDescription = styled.p`
   font-weight: bold;
   line-height: 20px;
   @media screen and (max-width: 576px) {
-    font-size: 10%;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    color: #263238;
+    font-weight: 550;
+    margin: 0px 5px;
+    padding: 0px 2px;
+    flex-grow: 1;
+    word-spacing: 3px;
   }
 `;
 export const ServiceButton = styled.button`
   padding: 7px 10px 7px 10px;
   color: white;
-  width: 160px;
-  height: 40px;
+
   font-size: 15px;
   align-self: center;
   margin-top: 40px;
@@ -95,10 +108,10 @@ export const ServiceButton = styled.button`
   }
   @media screen and (max-width: 576px) {
     border-radius: 10px;
-    height: 15%;
-    width: 100%;
+    padding: 7px 10px 7px 10px;
     font-size: 12px;
     margin-top: auto;
+    background-color: #2b459b;
   }
 `;
 
