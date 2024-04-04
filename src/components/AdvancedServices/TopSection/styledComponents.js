@@ -54,8 +54,9 @@ export const AdServiceLeftDescript = styled.p`
   @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 1.5;
-    width: 97%;
-    margin-left: 0px;
+    width: 93%;
+    margin-left: -10px;
+    letter-spacing: 0px;
   }
 `;
 export const AdServiceRightPart = styled.div`
@@ -77,8 +78,8 @@ export const AdServiceRightImg = styled.img`
   width: 600px;
   height: 650px;
   @media screen and (max-width: 576px) {
-    width: 80%;
-    height: 250px;
+    width: 77%;
+    height: 230px;
     margin-left: -30px;
   }
 `;
