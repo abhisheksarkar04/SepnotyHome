@@ -17,6 +17,7 @@ export const ChooseCardCon = styled.div`
     width:80%;
     justify-content:center;
     height:300px;
+    padding:15px;
   }
 `;
 
@@ -26,9 +27,15 @@ font-weight:600;
 margin-bottom:15px;
 font-size:18px;
 text-align:justify;
+@media screen and (max-width:576px){
+  font-size:16px;
+}
 `;
 export const ChooseText=styled.p`
 font-size:15px;
 line-height:22px;
 text-align:justify;
+@media screen and (max-width:576px){
+  font-size:14px;
+}
 `;

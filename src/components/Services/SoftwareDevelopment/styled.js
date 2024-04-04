@@ -91,6 +91,12 @@ export const ChooseSection = styled.div`
   width: 80%;
   align-items: center;
   margin: auto;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+    justify-content:center;
+    align-self:center;
+    margin-left:16%;
+  }
 `;
 
 export const SectionFiveHeading = styled.h2`
@@ -137,4 +143,7 @@ export const ContactCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

@@ -8,6 +8,9 @@ export const BlueContainer=styled.div`
  padding-left:6%;
  justify-content:space-between;
  color:white;
+ @media screen and (max-width:576px){
+  padding-left:3%;
+ }
 `;
 export const LeftTextContainer=styled.div`
 display:flex;
@@ -27,7 +30,7 @@ font-weight:700;
 font-size:28px;
 margin-bottom:20px;
 @media screen and (max-width: 576px) {
-    font-size:25px;
+    font-size:20px;
   }
 `;
 export const LeftTitle=styled.p`
@@ -35,7 +38,7 @@ font-size:25px;
 color:white;
 margin-bottom:40px;
 @media screen and (max-width: 576px) {
-    font-size:20px;
+    font-size:16px;
   }
 `;
 export const LeftDescription=styled.p`
@@ -44,7 +47,7 @@ color:white;
 line-height:25px;
 margin-bottom:20px;
 @media screen and (max-width: 576px) {
-    font-size:18px;
+    font-size:14px;
   }
 `;
 export const LeftButton=styled.button`

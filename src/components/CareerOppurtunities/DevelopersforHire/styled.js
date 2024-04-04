@@ -8,8 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 100px;
 
   @media screen and (max-width: 576px) {
-    width:380px;
- 
 
  }
   
@@ -63,7 +61,7 @@ export const BlueContainer = styled.div`
 
 
  @media screen and (max-width: 576px) {
-  width:380px;
+ 
   height:110px;
   padding-top:10px;
 
@@ -93,7 +91,7 @@ margin-left:5%;
 
 @media screen and (max-width: 576px) {
   font-size:20px;
-  width:110%;
+  width:100%;
   margin:0px;
   margin-bottom:1px;
  

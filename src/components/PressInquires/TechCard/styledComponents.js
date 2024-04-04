@@ -21,6 +21,10 @@ export const TechCardContainer = styled.div`
     right: 10px;
     font-size: 17px;
     color: white;
+   
+  }
+  @media screen and (max-width:576px){
+    width:120px;
   }
 `;
 

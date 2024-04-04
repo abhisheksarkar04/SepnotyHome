@@ -5,7 +5,8 @@ display:flex;
 flex-direction:column;
 margin-right:4%;
 @media screen and (max-width:576px){
-    margin-bottom:20px;
+    margin-bottom:30px;
+    margin-left:5%;
 }
 `;
 export const WorkImg=styled.img`

@@ -31,6 +31,7 @@ export const SubHeadSpan = styled.span`
   z-index:0;
   @media screen and (max-width:576px){
     width:45px;
+    height:6%;
     margin-left:0px;
   }
 `;

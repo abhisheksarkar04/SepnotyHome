@@ -49,7 +49,6 @@ const Location= () => {
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>
-          <ConRecHead>About Our Location</ConRecHead>
           <ConRecDesc>
           Sepnoty is headquartered in Bangalore, In order to effectively collaborate with regional industry leaders and startups and to access   local talent, we are constantly broadening our global reach.
           </ConRecDesc>

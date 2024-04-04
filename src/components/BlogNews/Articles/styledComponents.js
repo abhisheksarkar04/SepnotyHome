@@ -42,18 +42,14 @@ export const SeeMoreButton = styled.button`
     margin-top:15px;
   }
 `;
-export const DownArrow=styled.button`
-color:white;
-font-size:40px;
-align-self:center;
-cursor:pointer;
-margin-left:50px;
+export const DownArrow=styled.img`
+height:15px;
+width:15px;
+margin-left:70px;
 @media screen and (max-width: 576px) {
-  font-size:5px;
-  margin-left:1px;
-  height:5px;
-  width:5px;
-}
+  height:12px;
+  width:12px;
+  margin-left:25px;
 `;
 export const HlLine=styled.hr`
 height:1px;

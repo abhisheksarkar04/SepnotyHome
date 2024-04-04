@@ -8,7 +8,6 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-    width:420px;
     height:2400px;
  
     }
@@ -52,7 +51,8 @@ export const ContentRecomContainer = styled.div`
   padding: 10px 0px 4% 5%;
 
   @media screen and (max-width: 576px) {
-    width:420px;
+
+
     height:210px;
    
     }
@@ -116,9 +116,9 @@ export const Rectangle1 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:185px;
-   width: 190px;
+  
    board-radius:2px;
-   margin-inline: -100px;
+  
 
     }
 `;
@@ -158,7 +158,7 @@ export const Rectangle3 = styled.img`
    z-index: 0;
    background:transparent;
    margin-top:40px;
-   width: 190px;
+   
    board-radius:2px;
     }
 `;
@@ -208,7 +208,7 @@ export const ServiceItemImg = styled.img`
 
   @media screen and (max-width: 576px) {
     height: 270px;
-    width: 400px;
+    width: 370px;
     margin:20px;
     margin-top: 2300%;
     margin-inline: -320px;

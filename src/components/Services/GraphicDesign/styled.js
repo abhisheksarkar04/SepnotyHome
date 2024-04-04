@@ -51,6 +51,7 @@ margin-left:6%;
 margin-top:-6px;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
   margin-left:3%;
 }
 `;
@@ -98,4 +99,7 @@ background-color: rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

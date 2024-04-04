@@ -1,24 +1,42 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Stepper } from "react-form-stepper";
-import "./App.css";
+
+import React, { Component } from 'react';
+import styled from "styled-components"
+import { Stepper ,Step} from 'react-form-stepper';
+import './App.css';
+
 
 import EightthPage from "./Website/EightthPage";
 
 class FourthForm extends Component {
   state = {
-    fullName: "",
-    companyName: "",
-    workEmail: "",
-    phoneNumber: "",
-    preferredCommunication: "", // Update state to store preferred communication
+     // Update state to store preferred communication
+     preferredCommunication:"",
     agreeToContact: false,
     agreeToProvideInfo: false,
-  };
-  handleInputChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  }
+  
+  handlenameChange = (e) => {
+    this.props.updateFormData({
+      username: e.target.value
+    });
+  }
+  handlecompanyChange = (e) => {
+    this.props.updateFormData({
+      companyName:e.target.value
+    })
+  }
 
+
+  handleEmailChange = (e) => {
+    this.props.updateFormData({
+      email:e.target.value
+    })
+  }
+  handleNumberChange = (e) => {
+    this.props.updateFormData({
+      phoneNumber:e.target.value
+    })
+  }
   handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
     this.setState({ [name]: checked });
@@ -26,151 +44,130 @@ class FourthForm extends Component {
 
   areCheckboxesChecked = () => {
     const { agreeToContact, agreeToProvideInfo } = this.state;
+    const {requestInfo,contact} = this.props.formData
+
+    /* this.props.updateFormData({
+      contact:!contact
+    })
+    this.props.updateFormData({
+      requestInfo:!requestInfo
+    }) */
     return agreeToContact && agreeToProvideInfo;
-  };
-  handleButtonClick = (page) => {
-    this.setState({ preferredCommunication: page });
-  };
-  back = (e) => {
+    
+  }
+  handleButtonClick =(page) => {
+    this.props.updateFormData({
+      wayOfCommunication:page,
+    })
+    this.setState({
+      preferredCommunication:page
+    })
+    
+  }
+  back = e => {
     e.preventDefault();
     this.props.prevStep();
   };
 
-  submitdata = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
-    const {
-      fullName,
-      workEmail,
-      phoneNumber,
-      companyName,
-      preferredCommunication,
-      agreeToContact,
-      agreeToProvideInfo,
-    } = this.state;
-    const formData = {
-      feild8: {
-        fullName,
-        workEmail,
-        phoneNumber,
-        companyName,
-        preferredCommunication,
-        agreeToContact,
-        agreeToProvideInfo,
-      },
-    };
-    this.props.onDataReceived(formData);
-  };
+    // You can perform any final validations or processing here before submitting
+    this.props.onSubmit(e); // This will call the submitData function in the parent component (Form)
+  }
+
+
 
   render() {
     const { preferredCommunication } = this.state;
     const { agreeToContact, agreeToProvideInfo } = this.state;
     const isSubmitDisabled = !this.areCheckboxesChecked();
-
+    const { formData } = this.props;
+    
     return (
-      <Main className="form">
-        <form>
-          <Stepper
-            steps={[
-              { label: "" },
-              { label: "" },
-              { label: "" },
-              { label: "" },
-              { label: "" },
-              { label: "" },
-              { label: "" },
-              { label: "" },
-            ]}
-            activeStep={7}
-            styleConfig={{
-              activeBgColor: "#2B459B",
-              activeTextColor: "#fff",
-              inactiveBgColor: "#fff",
-              inactiveTextColor: "#2b7cff",
-              completedBgColor: "#407B24",
-              completedTextColor: "#fff",
-              size: "1em",
-            }}
-            className={"stepper"}
-            stepClassName={"stepper__step"}
-          />
+      <Main className='form'>
+        <form onSubmit={this.handleSubmit}>
+        <StyledStepper
+          activeStep={7}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+          
 
-          <M>
-            <Mai>
-              <P1>Almost done!</P1>
-              <P2>
-                Please let us know where we should send your estimate. Our
-                experts may need to ask a few extra questions to calculate a
-                precise quote for your case.
-              </P2>
-              <P3>Your contact data</P3>
-              <M2>
-                <M3>
-                  <P4>*Full name</P4>
-                  <Input
-                    type="text"
-                    name="fullName"
-                    value={this.state.fullName}
-                    onChange={this.handleInputChange}
-                  />
-                </M3>
-                <M3>
-                  <P4>*Company name</P4>
-                  <Input
-                    type="text"
-                    name="companyName"
-                    value={this.state.companyName}
-                    onChange={this.handleInputChange}
-                  />
-                </M3>
-              </M2>
-              <M2>
-                <M3>
-                  <P4>*Work email</P4>
-                  <Input
-                    type="email"
-                    name="workEmail"
-                    value={this.state.workEmail}
-                    onChange={this.handleInputChange}
-                  />
-                </M3>
-                <M3>
-                  <P4>*Phone number</P4>
-                  <Input
-                    type="text"
-                    name="phoneNumber"
-                    value={this.state.phoneNumber}
-                    onChange={this.handleInputChange}
-                  />
-                </M3>
-              </M2>
-              <br />
-              <M33>
-                <P8>Preferred way of communication:</P8>
-                <Button1
-                  type="button"
-                  active={preferredCommunication === "Any"}
-                  onClick={() => this.handleButtonClick("Any")}
-                >
-                  Any
-                </Button1>
-                <Button2
-                  type="button"
-                  active={preferredCommunication === "Email"}
-                  onClick={() => this.handleButtonClick("Email")}
-                >
-                  Email
-                </Button2>
-                <Button3
-                  type="button"
-                  active={preferredCommunication === "Phone"}
-                  onClick={() => this.handleButtonClick("Phone")}
-                >
-                  Phone
-                </Button3>
-              </M33>
-              <br />
-              <M3>
-                <Input1
+<M> 
+        <Mai><P1>
+        Almost done!
+        </P1>
+        <P2>
+        Please let us know where we should send your estimate. Our experts may need to ask a few extra questions to calculate a precise quote for your case.
+        </P2>
+        <P3>Your contact data</P3>
+        <M2>
+            <M3>
+              <P4>*Full name</P4>
+              <Input
+  type="text"
+  name="username" // Corrected the name attribute
+  value={formData.username}
+  onChange={this.handlenameChange} // Corrected the function name
+/>
+              
+            </M3>
+            <M3>
+              <P4>*Company name</P4>
+              <Input
+                type="text"
+                name="companyName"
+                value={formData.companyName}
+                onChange={this.handlecompanyChange}
+              />
+            </M3>
+          </M2>
+          <M2>
+            <M3>
+              <P4>*Work email</P4>
+              <Input
+                type="email"
+                name="workEmail"
+                value={formData.email}
+                onChange={this.handleEmailChange}
+              />
+              
+            </M3>
+            <M3>
+              <P4>*Phone number</P4>
+              <Input
+                type="text"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={this.handleNumberChange}
+              />
+              
+            </M3>
+          </M2><br/>
+        <M33>
+            <P8>Preferred way of communication:</P8>
+            <Button1 type="button" active={preferredCommunication === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
+            <Button2 type="button" active={preferredCommunication === 'Email'}  onClick={() => this.handleButtonClick('Email')}>Email</Button2>
+            <Button3 type="button" active={preferredCommunication === 'Phone'}  onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
+        </M33>
+        <br/>
+        <M3>
+                <Input1 
                   type="checkbox"
                   id="agreeToContact"
                   name="agreeToContact"
@@ -240,6 +237,26 @@ const CheckboxError = styled.div`
 
 const SubmitButton = styled.button`
   /* Your button styles */
+`;
+const StyledStepper = styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
 `;
 const P8 = styled.p`
   font-size: 15px;

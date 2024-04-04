@@ -8,10 +8,11 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-    width:560px;
-    height:1650px;
-   
+     
+   padding-bottom:0px;
+
     }
+
 `;
 export const Header = styled.h1`
   font-size: 17px;
@@ -19,12 +20,6 @@ export const Header = styled.h1`
   color: #ffffff;
   padding: 30px 20px 30px 5%;
 
-  @media screen and (max-width: 576px) {
-    font-size:14px;
-   
-    margin-bottom:-11px;
-    padding-left:15px;
-    }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -37,11 +32,7 @@ export const Service = styled.h1`
   font-weight: 600;
   padding: 10px 30px 20px 5%;
 
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-    padding-left:15px;
-   
-    }
+
 `;
 
 export const ContentRecomContainer = styled.div`
@@ -50,10 +41,12 @@ export const ContentRecomContainer = styled.div`
 
   
   @media screen and (max-width: 576px) {
-    width:560px;
-    height:150px;
-   
-    }
+     
+   margin:0px;
+ 
+     }
+
+ 
 `;
 
 export const ConRecHead = styled.h1`
@@ -63,11 +56,7 @@ export const ConRecHead = styled.h1`
   font-weight: bold;
   padding-top: 20px;
 
-  @media screen and (max-width: 576px) {
-    font-size:20px;
-    padding-top:1px;
-    width:336px;
-    }
+
 `;
 
 export const ConRecDesc = styled.p`
@@ -76,15 +65,7 @@ export const ConRecDesc = styled.p`
   width:80%;
   padding: 20px 30px 30px 0px;
 
-  @media screen and (max-width: 576px) {
-    font-size:14px;
-    padding-top:1px;
-    width:500px;
-    text-align:justify;
-    margin:-22px;
-    margin-left:0px;
-    
-    }
+ 
 
 `;
 
@@ -107,19 +88,7 @@ export const Rectangle1 = styled.img`
   top: 12%;
   z-index: 0;
 
-  
-  @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:1px;
-   height: 150px;
-   z-index: 0;
-   background:transparent;
-   margin-top:130px;
-   width: 190px;
-   board-radius:2px;
-   margin-inline: -130px;
 
-    }
 `;
 
 export const Rectangle2 = styled.img`
@@ -130,14 +99,6 @@ export const Rectangle2 = styled.img`
   top: -5%;
   z-index: 0;
 
-  @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:10px;
-   height: 150px;
-   z-index: 0;
-   position: absolute;
-   top:10%;
-    }
 `;
 
 export const Rectangle3 = styled.img`
@@ -150,16 +111,7 @@ export const Rectangle3 = styled.img`
   background:transparent;
   margun-bottom: 20px;
 
-  @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:1px;
-   height: 150px;
-   z-index: 0;
-   background:transparent;
-   margin-top:-10px;
-   width: 190px;
-   board-radius:2px;
-    }
+ 
 `;
 
 export const ListHeading = styled.h1`
@@ -169,10 +121,7 @@ export const ListHeading = styled.h1`
   margin-left: -30px;
   margin-top:50px;
 
-  @media screen and (max-width: 576px) {
-    font-size:18px;
-    margin:-30px;
-    }
+
 `;
 
 export const ServiceItemCon = styled.div`
@@ -191,28 +140,31 @@ export const ImageCon = styled.div`
   margin: 0px;
   display: flex;
   flex-direction: column;
+
   
   @media screen and (max-width: 576px) {
-    height: 250px;
-    width: 350px;
-    margin:20px;
-    margin-top: 480px;
+     
+    width:100px;
+    height:100px
+   
+ 
+     }
   
-    }
+
 `;
 export const ServiceItemImg = styled.img`
   width: 300px;
-  margin-left: -140%;
+ 
   margin-top:120px;
 
   @media screen and (max-width: 576px) {
-    height: 350px;
-    width: 450px;
-    margin:20px;
-    margin-top: 220%;
-    margin-inline: -330px;
-    
-    }
+     
+    width:100px;
+    height:100px
+   margin:0px;
+ 
+     }
+
 `;
 
 export const ServiceItemButton = styled.button`
@@ -247,12 +199,7 @@ export const SmallPattern = styled.div`
   border-radius: 3px;
   margin-top:50px;
 
-  @media screen and (max-width: 576px) {
-    height: 40px;
-    width: 50px;
-    margin:20px;
-    border-radius: 3px;
-    }
+
 `;
 
 export const PatternCon = styled.div`
@@ -262,8 +209,5 @@ export const PatternCon = styled.div`
   margin-bottom: 60px;
   margin-left: 5em;
 
-  @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:0px;
-    }
+  
 `;

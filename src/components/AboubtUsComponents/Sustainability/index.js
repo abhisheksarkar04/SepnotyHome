@@ -76,9 +76,9 @@ const Sustainability = () => {
               </Para>
             </Main2>
 
-            <ImageCon>
+            {/* <ImageCon>
               <ServiceItemImg src={GroupImg} alt="dm" />
-            </ImageCon>
+            </ImageCon> */}
           </Main1>
           <Main3>
           <Para1>
@@ -119,14 +119,7 @@ const Para = styled.p`
   width:1100px;
   color:white;
 
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-   width:480px;
-    color:white;
-    margin:0px;
-    text-align:left;
-   
-    }
+
   `
   const Para3 = styled.p`
   font-size:20px;
@@ -134,15 +127,7 @@ const Para = styled.p`
   width:1100px;
   color:white;
 
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-   width:465px;
-    color:white;
-    margin:-60px;
-    margin-top:20px;
-    text-align:left;
-   
-    }
+
   `
   const Para2 = styled.p`
   font-size:20px;
@@ -150,15 +135,7 @@ const Para = styled.p`
   width:1100px;
   color:white;
 
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-   
-    color:white;
-    margin:-80px;
-    margin-bottom:10px;
-    margin-top:5px;  
-   
-    }
+ 
   `
 const Main = styled.div`
   display:flex;
@@ -166,6 +143,13 @@ const Main = styled.div`
   margin-left:120px;
   gap:10px;
   margin-bottom:60px;
+
+  @media screen and (max-width: 576px) {
+     font-size:10px;
+   
+   margin:0px;
+ 
+     }
   `
 const Main1 = styled.div`
   display:flex;
@@ -175,52 +159,22 @@ const Main2 = styled.div`
   display:flex;
   flex-direction:column;
 
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-   width:400px;
-    color:white;
-    margin:-80px;
-   margin-top:20px;
-    }
+ 
   `
   
 
   const Main3 = styled.div`
   display:flex;
   flex-direction:column;
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-   width:400px;
-    color:white;
-    margin:-560px;
-    margin-left:-80px;
-    margin-bottom:20px;
-  
-    }
 
   
   `
   
-const Image = styled.img`
-  height:260px;
-  margin-right:10px;
-  margin-left:-130px;
-  margin-top:120px;
 
-
-  
-  `
 const Para1 = styled.p`
   font-size:24px;
   margin-bottom:10px;
   color:white;
-
-  @media screen and (max-width: 576px) {
-    font-size:16px;
-    color:white;
-
-    }
-
 
   `
 const Spam = styled.span`

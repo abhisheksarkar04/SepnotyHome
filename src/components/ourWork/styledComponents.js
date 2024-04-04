@@ -1,28 +1,26 @@
 import styled from "styled-components";
 
 export const OurWorkContainer = styled.div`
-background-color:#0C111F;
-padding:30px;
-display:flex
-flex-direction:column;
-text-align: center;
-
+  background-color: #0c111f;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 `;
 
 export const OurWorkCard = styled.div`
   width: 40%;
-  ${"" /* height: 45vh; */}
-  background-color: #DFE3F0;
+  background-color: #dfe3f0;
   padding: 15px;
   border-radius: 8px;
   margin-left: 30%;
   box-shadow: rgba(43, 69, 155, 1);
   @media screen and (max-width: 576px) {
     width: 100%;
-    margin-left: 0%;
-    ${"" /* height: 48vh; */}
+    margin-left: 0;
   }
 `;
+
 export const OurWorkHeading = styled.h1`
   font-size: 20px;
   align-self: center;
@@ -36,9 +34,10 @@ export const OurWorkList = styled.ul`
   flex-direction: row;
   justify-content: center;
   list-style: none;
-
+  padding: 0;
   @media screen and (max-width: 576px) {
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 `;
 
@@ -53,8 +52,8 @@ export const OurWorkServiceCardContainer = styled.li`
   width: 28%;
   height: 40%;
   @media screen and (max-width: 576px) {
-    padding: 0px;
-    margin-left: 0px;
+    padding: 0;
+    margin-left: 0;
     width: 50%;
   }
 `;
@@ -85,10 +84,12 @@ export const OurWorkDescription = styled.p`
   text-align: left;
   line-height: 18px;
   color: #b7b6bd;
-  margin-left: 30px;
+  margin-left: 0;
   @media screen and (max-width: 576px) {
-    width: 100%;
-    font-size: 8px;
+    text-align: center;
+    font-size:14px;
+    margin-top:10px;
+    margin-bottom:5px;
   }
 `;
 
@@ -101,18 +102,22 @@ export const OurWorkTextContainer = styled.div`
   margin-top: 40px;
   line-height: 20px;
 `;
+
 export const OurWorkOur = styled.h2`
   color: white;
 `;
+
 export const OurWorkOurText = styled.span`
   background-color: #2b459b;
   color: #fff;
   padding: 2px 4px;
-  border-radius: 9px 0px 0px 9px;
+  border-radius: 9px 0 0 9px;
 `;
+
 export const OurWorkText = styled.span`
   color: #2b459b;
 `;
+
 export const OurWorkPara = styled.p`
   font-size: 22px;
   font-family: Roboto;
@@ -120,7 +125,6 @@ export const OurWorkPara = styled.p`
   line-height: 40px;
   margin-top: 30px;
   @media screen and (max-width: 576px) {
-    margin-top: 30px;
     font-size: 13px;
   }
 `;
@@ -129,22 +133,24 @@ export const OurWorkCardTitle = styled.h2`
   color: rgba(43, 69, 155, 1);
   text-align: center;
 `;
+
 export const OurWorkButton = styled.button`
-padding: 10px;
-width: 150px;
-height:40px
-margin: 10px;
-cursor: pointer;
-color:white;
-font-size:16px;
-border-radius:8px;
-border:none;
-font-size: 15px;
-background: rgba(43, 69, 155, 1);
-@media screen and (max-width: 576px) {
-  border-radius:5px;
-}
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  background: rgba(43, 69, 155, 1);
+  @media screen and (max-width: 576px) {
+    border-radius: 5px;
+  }
 `;
+
 export const OurWorkSideHeading = styled.h3`
   color: #263238;
   font-size: 18px;
@@ -154,16 +160,19 @@ export const OurWorkSideHeading = styled.h3`
   margin-top: 10px;
   margin-left: 20px;
 `;
+
 export const OurWorkThreeCol = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
 `;
+
 export const Details = styled.h4`
   font-weight: bold;
   color: black;
 `;
+
 export const Details2 = styled.h4`
   font-weight: 500;
   color: black;
