@@ -527,6 +527,7 @@ export const HomeBlackText = styled.p`
     font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
+    text-align: center;
   }
 `;
 
