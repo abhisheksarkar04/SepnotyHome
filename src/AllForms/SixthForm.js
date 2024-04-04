@@ -5,9 +5,6 @@ import Styled from "styled-components"
 import './App.css';
 
 
-import SixthPage from "./Website/SixthPage";
-import handleFormValues from "./allFormValues";
-
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 

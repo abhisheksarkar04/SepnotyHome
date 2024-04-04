@@ -1,12 +1,8 @@
 
 import React, { Component } from 'react';
 import Styled from "styled-components"
-import { Stepper , Step } from 'react-form-stepper';
+import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from './allFormValues';
-
-
-import FourthPage from "./Website/FourthPage";
 
 class Summary extends Component {
   state = {

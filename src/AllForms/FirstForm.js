@@ -1,10 +1,8 @@
 
 import React, { Component } from 'react';
 import Styled from "styled-components"
+import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from "./allFormValues";
-import FirstStep from "./Website/FirstPage";
-import { Stepper, Step ,StepLabel} from 'react-form-stepper';
 
 
 class PersonalDetails extends Component {

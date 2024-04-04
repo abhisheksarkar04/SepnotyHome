@@ -3,10 +3,8 @@
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import './App.css';
-import handleFormValues from './allFormValues';
 import { Stepper, Step } from 'react-form-stepper';
 
-import SecondPage from "./Website/SecondPage"
 
 
 
@@ -51,8 +49,6 @@ class CourseDetails extends Component {
   handleCheckboxChange = (e) => {
 
     const {checked ,id} = e.target;
-    
-
     this.props.updateFormData({
       industryType: checked
         ? [...this.props.formData.industryType, id]
