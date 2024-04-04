@@ -65,7 +65,7 @@ export const ConRecHead = styled.h1`
   @media screen and (max-width: 576px) {
     font-size:20px;
     padding-top:1px;
-    width:380px;
+    width:373px;
     }
 `;
 
@@ -78,8 +78,7 @@ export const ConRecDesc = styled.p`
   @media screen and (max-width: 576px) {
     font-size:14px;
     padding-top:1px;
-    width:380px;
-   
+    width:370px;
     margin:-22px;
     margin-left:0px;
     
@@ -164,9 +163,9 @@ export const ListHeading = styled.h1`
 
   @media screen and (max-width: 576px) {
     font-size:16px;
-    margin-inline:-35px;
+    margin-inline:-40px;
     margin-bottom: 2080px;
-    width:350px;
+    width:320px;
     }
 `;
 
@@ -192,6 +191,7 @@ export const ImageCon = styled.div`
   margin: 0px;
   display: flex;
   flex-direction: column;
+ 
 `;
 export const ServiceItemImg = styled.img`
   width: 400px;
@@ -199,10 +199,11 @@ export const ServiceItemImg = styled.img`
 
   @media screen and (max-width: 576px) {
     height: 270px;
-    width: 370px;
+    width: 350px;
     margin:20px;
-    margin-top: 2750%;
-    margin-inline: -320px;
+    margin-top: 600px;
+    margin-inline: -310px;
+    position: absolute;
     
     }
 `;
@@ -244,7 +245,6 @@ export const SmallPattern = styled.div`
     margin:20px;
     border-radius: 3px;
     margin-bottom: 2100px;
-    
     }
 `;
 
