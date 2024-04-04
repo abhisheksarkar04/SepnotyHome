@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import FirstForm from './Software/SoftFirst/first';
-import CourseDetails from './Software/SoftSecond/Second';
+import CourseDetails from './SecondForm';
 import Summary from './FourthForm';
 import YourIndustry from './ThirdForm';
 import FormNo5 from "./SixthForm";
@@ -68,8 +68,49 @@ const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
 class Software extends Component {
     state = {
       step: 1,
-      recivedData:[],
-      SecondData:"",
+      formData: {
+        step1: {
+          typeofDevelopment:"software",
+          typeOfSoftware:"",
+          tools:"",
+        },
+        step2:{
+          industryType:[],
+        },
+        step3:{
+          services:"",
+          webisiteLink:"",
+        },
+        step4:{
+          UIDesignMockups:"",
+          chosenCMS:"",
+        },
+        step5:{
+          appFeatures:[],
+        },
+        step6:{
+          typeOfMedia:[],
+          paymentSystem: true,
+          visitors:"",
+        },
+        step7:{
+          complianceRequirements:[],
+          externalIntegration: true,
+          details:"",
+        },
+        step8:{
+        username:"",
+        email:"",
+        companyName:"",
+        phoneNumber:"",
+        wayOfCommunication:"",
+        agreement:{
+          contact: true,
+          requestInfo: true,
+        }
+        }
+        
+      },
     };
   
     nextStep = () => {
@@ -85,31 +126,144 @@ class Software extends Component {
         step: step - 1
       })
     }
-    submitData = e => {
+    submitData = (e) => {
       e.preventDefault();
+  
+      const { formData } = this.state;
+      const formattedData = this.convertToDesiredFormat(formData);
+      console.log(formattedData); //Log all form data
       alert('Data sent');
     }
-    handleDataReceived = (data) => {
-      this.setState(prevState => ({
-        recivedData: [...prevState.recivedData, data]
-      }), () => {
-        const jsonData = this.convertToJSON();
-        console.log(jsonData);
-      });
+
+    updateFormData = (data) => {
+      const { step, formData } = this.state;
+      // Update the corresponding step data in formData based on the current step
+      switch (step) {
+        case 1:
+          this.setState({
+            formData: {
+              ...formData,
+              step1: {
+                ...formData.step1,
+                ...data // Update both typeOfWebsite and numberOfPages
+              }
+            }
+          });
+          break;
+        case 2:
+          this.setState({
+            formData: {
+              ...formData,
+              step2: {
+                ...formData.step2,
+                ...data
+              }
+            }
+          });
+          break;
+        case 3:
+          this.setState({
+            formData: {
+              ...formData,
+              step3: {
+                ...formData.step3,
+                ...data
+  
+                
+              }
+             
+            }
+            
+          });
+          break;
+          case 4:
+          this.setState({
+            formData: {
+              ...formData,
+              step4: {
+                ...formData.step4,
+                ...data
+              }
+            }
+          });
+          break;
+          case 5:
+          this.setState({
+            formData: {
+              ...formData,
+              step5: {
+                ...formData.step5,
+                ...data
+              }
+            }
+          });
+          break;
+          case 6:
+            this.setState({
+              formData: {
+                ...formData,
+                step6: {
+                  ...formData.step6,
+                  ...data
+                }
+              }
+            });
+            break;
+            case 7:
+              this.setState({
+                formData: {
+                  ...formData,
+                  step7: {
+                    ...formData.step7,
+                    ...data
+                  }
+                }
+              });
+              break;
+              case 8:
+                this.setState({
+                  formData: {
+                    ...formData,
+                    step8: {
+                      ...formData.step8,
+                      ...data
+                    }
+                  }
+                });
+                
+        default:
+          break;
+      }
     }
-    convertToJSON = () => {
-      const { recivedData } = this.state;
-      const jsonData = {};
-      recivedData.forEach(item => {
-        Object.keys(item).forEach(key => {
-          if (!jsonData.hasOwnProperty(key)) {
-            jsonData[key] = [];
-          }
-          jsonData[key].push(item[key]);
-        });
-      });
-      return jsonData;
-    }
+  
+  
+    convertToDesiredFormat = (formData) => {
+      const {
+        step1,
+        step2,
+        step3,
+        step4,
+        step5,
+        step6,
+        step7,
+        step8,
+      } = formData;
+    
+      const formattedData = {
+        ...step1,
+        ...step2,
+        ...step3,
+        ...step4,
+        ...step5,
+        ...step6,
+        ...step7,
+        ...step8,
+      };
+    
+      return formattedData;
+    };
+    
+
     render() {
      const {step} = this.state
       
