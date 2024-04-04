@@ -32,9 +32,10 @@ export const AdServiceLeftHeading1 = styled.h2`
   display: none;
   @media screen and (max-width: 576px) {
     display: block;
-    width: 300px;
+    width: 90%;
     font-size: 20px;
-    margin-left: -220px;
+    margin-left: -160px;
+    padding-top: 20px;
   }
 `;
 export const AdServiceLeftHeadingBlue = styled.span`
@@ -54,7 +55,7 @@ export const AdServiceLeftDescript = styled.p`
     font-size: 14px;
     line-height: 1.5;
     width: 97%;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 `;
 export const AdServiceRightPart = styled.div`
@@ -76,9 +77,9 @@ export const AdServiceRightImg = styled.img`
   width: 600px;
   height: 650px;
   @media screen and (max-width: 576px) {
-    width: 300px;
-    height: 235px;
-    margin-left: 0px;
+    width: 80%;
+    height: 250px;
+    margin-left: -30px;
   }
 `;
 export const AdServDots = styled.img`

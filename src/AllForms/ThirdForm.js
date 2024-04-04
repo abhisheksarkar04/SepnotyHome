@@ -8,22 +8,21 @@ import handleFormValues from './allFormValues';
 import ThirdPage from '../AllForms/Website/ThirdPage';
 
 
+
 class YourIndustry extends Component {
-
- state = {
-      error: ''
-    };
-
+  state = {
+    error: "",
+  };
 
   continue = (e) => {
     e.preventDefault();
 
-    const {formData} = this.props;
-    const {services} = formData
-    console.log(services)
-    
+    const { formData } = this.props;
+    const { services } = formData;
+    console.log(services);
+
     if (!services) {
-      this.setState({ error: 'Please select a service.' });
+      this.setState({ error: "Please select a service." });
 
       return;
     }
@@ -33,11 +32,9 @@ class YourIndustry extends Component {
   };
 
   handleRadioChange = (e) => {
-
     this.props.updateFormData({
-      services: e.target.value
+      services: e.target.value,
     });
-
   };
 
   handleWebsiteLinkChange = (e) => {
@@ -50,15 +47,14 @@ class YourIndustry extends Component {
   };
 
   render() {
-
-    const {error} = this.state
-    const {formData} = this.props
-    // const { 
-    //   firstname, 
-    //   lastname, 
-    //   email, 
-    //   phone, 
-    //   handleChange, 
+    const { error } = this.state;
+    const { formData } = this.props;
+    // const {
+    //   firstname,
+    //   lastname,
+    //   email,
+    //   phone,
+    //   handleChange,
 
     //   validateFirstName,
     //   validateLastName,
@@ -71,83 +67,111 @@ class YourIndustry extends Component {
     return (
       <Main className="form">
         <form>
-
-        <StyledStepper
-          activeStep={2}
-          styleConfig={{
-            activeBgColor: "#2B459B",
-            activeTextColor: "#fff",
-            inactiveBgColor: "#fff",
-            inactiveTextColor: "#2b7cff",
-            completedBgColor: "#407B24",
-            completedTextColor: "#fff",
-          }}
-        >
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-        </StyledStepper>
-          
-
-
+          <StyledStepper
+            activeStep={2}
+            styleConfig={{
+              activeBgColor: "#2B459B",
+              activeTextColor: "#fff",
+              inactiveBgColor: "#fff",
+              inactiveTextColor: "#2b7cff",
+              completedBgColor: "#407B24",
+              completedTextColor: "#fff",
+            }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper>
 
           <Main1>
             <Form1>
               <Fom>
                 <Heading>*What service(s) do you need?</Heading>
                 <div>
-
-                <InputContainer>
-<Label>
-<Input  type='radio' name="industry" value="Website development" checked={formData.services==="Website development"} onChange={this.handleRadioChange}/>
-Website development
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio'  name="industry" value="Technical Consulting" checked={formData.services==="Technical Consulting"} onChange={this.handleRadioChange}/>
-    Technical Consulting
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio'  name="industry" value="UX design / Redesign" checked={formData.services==="UX design / Redesign"}  onChange={this.handleRadioChange}/>
-    UX design / Redesign
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio'  name="industry" value="Finanacial" checked={formData.services==="Finanacial"} onChange={this.handleRadioChange}/>
-    Finanacial
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio'  name="industry" value="CMS development" checked={formData.services==="CMS development"} onChange={this.handleRadioChange}/>
-    CMS development
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='radio'  name="industry" value="Technical SEO" checked={formData.services==="Technical SEO"} onChange={this.handleRadioChange}/>
-    Technical SEO
-    </Label>
-</InputContainer>
-</div>
-</Fom>
-
-                
-
-
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="Website development"
+                        checked={formData.services === "Website development"}
+                        onChange={this.handleRadioChange}
+                      />
+                      Website development
+                    </Label>
+                  </InputContainer>
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="Technical Consulting"
+                        checked={formData.services === "Technical Consulting"}
+                        onChange={this.handleRadioChange}
+                      />
+                      Technical Consulting
+                    </Label>
+                  </InputContainer>
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="UX design / Redesign"
+                        checked={formData.services === "UX design / Redesign"}
+                        onChange={this.handleRadioChange}
+                      />
+                      UX design / Redesign
+                    </Label>
+                  </InputContainer>
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="Finanacial"
+                        checked={formData.services === "Finanacial"}
+                        onChange={this.handleRadioChange}
+                      />
+                      Finanacial
+                    </Label>
+                  </InputContainer>
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="CMS development"
+                        checked={formData.services === "CMS development"}
+                        onChange={this.handleRadioChange}
+                      />
+                      CMS development
+                    </Label>
+                  </InputContainer>
+                  <InputContainer>
+                    <Label>
+                      <Input
+                        type="radio"
+                        name="industry"
+                        value="Technical SEO"
+                        checked={formData.services === "Technical SEO"}
+                        onChange={this.handleRadioChange}
+                      />
+                      Technical SEO
+                    </Label>
+                  </InputContainer>
+                </div>
+              </Fom>
             </Form1>
             <Form1>
               <Form3>
                 <InputContainer>
+
 
 <Label>
 <Input type='radio'  name="industry" value="Migration to a new CMS" checked={formData.services==="Migration to a new CMS"}  onChange={this.handleRadioChange}/>
@@ -172,6 +196,7 @@ Migration to a new CMS
     <Input1 type="text" placeholder="others (please specify)"/>
     </Label>
 </InputContainer>
+
 
 
                 <InputContainer>
@@ -237,7 +262,6 @@ const StyledStep = Styled(Step)`
   }
 `;
 
-
 const Button = Styled.div`
 display:flex;
 justify-content:end;
@@ -267,8 +291,7 @@ ${media.mobile}{
   font-size:11px;
   width:90%;
 }
-`
-
+`;
 
 const Main1 = Styled.div`
 display:flex;
@@ -303,7 +326,7 @@ ${media.mobile}{
   line-height: 1;
   padding:5px;
   height:300px;
-`
+`;
 const Heading = Styled.h1`
 font-family: Roboto;
 font-size: 18px;
@@ -311,15 +334,13 @@ font-weight: 700;
 line-height: 30px;
 letter-spacing: 0em;
 color: #263238;
-${
-  media.mobile
-}{
+${media.mobile}{
   font-size:13px;
   line-height: 1.5;
   color:#263238;
   font-weight: 700;
 }
-`
+`;
 
 const Form2 = Styled.form`
 
@@ -341,7 +362,7 @@ text-align: left;
 ${media.mobile}{
   font-size:11px;
 }
-`
+`;
 
 const Input1 = Styled.input`
 background:transparent;
@@ -355,7 +376,7 @@ ${media.mobile}{
   font-size:11px;
   width:130px;;
 }
-`
+`;
 
 const Input2 = Styled.input`
 background: #C1CAE7;
@@ -375,7 +396,7 @@ ${media.mobile}{
   gap:0px;
 }
 
-`
+`;
 const ErrorMessage = Styled.p`
 
   color: red;

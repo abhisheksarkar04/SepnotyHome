@@ -1,4 +1,5 @@
 
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import './App.css';
@@ -8,15 +9,15 @@ import { Stepper, Step } from 'react-form-stepper';
 import SecondPage from "./Website/SecondPage"
 
 
+
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class CourseDetails extends Component {
-constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      error: ''
-
+      error: "",
     };
   }
 
@@ -33,14 +34,14 @@ constructor(props) {
 
   continue = (e) => {
     e.preventDefault();
-    const {formData} = this.props
-    const {industryType} = formData
+    const { formData } = this.props;
+    const { industryType } = formData;
 
-    console.log(formData)
+    console.log(formData);
 
     //handleFormValues(formData);
     if (industryType.length === 0) {
-      this.setState({ error: 'Please select at least one industry.' });
+      this.setState({ error: "Please select at least one industry." });
 
       return;
     }
@@ -48,12 +49,16 @@ constructor(props) {
   };
 
   handleCheckboxChange = (e) => {
+
     const {checked ,id} = e.target;
     
+
     this.props.updateFormData({
-      industryType:checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType = this.props.formData.industryType.filter(type => type !== id)
-    })
-    
+      industryType: checked
+        ? [...this.props.formData.industryType, id]
+        : (this.props.formData.industryType =
+            this.props.formData.industryType.filter((type) => type !== id)),
+    });
   };
 
   back = (e) => {
@@ -63,8 +68,8 @@ constructor(props) {
 
   render() {
     const { error } = this.state;
-    const {industryType} = this.props.formData
-    // const { 
+    const { industryType } = this.props.formData;
+    // const {
     //   // // coursesOptions,
     //   // levelOptions,
     //   // // addCourse,
@@ -143,116 +148,191 @@ constructor(props) {
     return (
       <Main className="form">
         <form>
-
-
-        <StyledStepper
-          activeStep={1}
-          styleConfig={{
-            activeBgColor: "#2B459B",
-            activeTextColor: "#fff",
-            inactiveBgColor: "#fff",
-            inactiveTextColor: "#2b7cff",
-            completedBgColor: "#407B24",
-            completedTextColor: "#fff",
-          }}
-        >
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-        </StyledStepper>
-
+          <StyledStepper
+            activeStep={1}
+            styleConfig={{
+              activeBgColor: "#2B459B",
+              activeTextColor: "#fff",
+              inactiveBgColor: "#fff",
+              inactiveTextColor: "#2b7cff",
+              completedBgColor: "#407B24",
+              completedTextColor: "#fff",
+            }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper>
 
           <Main1>
             <Form1>
               <Heading>*What is your industry?</Heading>
               <Form2>
                 <InputContainer>
-
-<Label>
-<Input type='checkbox' name="industry" id="Healthcare" checked={industryType.includes('Healthcare')} value="Healthcare"  onChange={this.handleCheckboxChange}/>
-Healthcare
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id='Retail & Wholesale' value="Retail & Wholesale" checked={industryType.includes('Retail & Wholesale')} onChange={this.handleCheckboxChange}/>
-    Retail & Wholesale
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Manufacturing" id='Manufacturing' checked={industryType.includes('Manufacturing')} onChange={this.handleCheckboxChange}/>
-    Manufacturing
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id="Finanacial" value="Finanacial" checked={industryType.includes('Finanacial')} onChange={this.handleCheckboxChange}/>
-    Finanacial
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id="Transportation & Logistics" value="Transportation & Logistics" checked={industryType.includes('Transportation & Logistics')} onChange={this.handleCheckboxChange}/>
-    Transportation & Logistics
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id='Telecommunications' value="Telecommunications" checked={industryType.includes('Telecommunications')} onChange={this.handleCheckboxChange}/>
-    Telecommunications
-    </Label>
-</InputContainer>
-
-                </Form2>
-
-                
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Healthcare"
+                      checked={industryType.includes("Healthcare")}
+                      value="Healthcare"
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Healthcare
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Retail & Wholesale"
+                      value="Retail & Wholesale"
+                      checked={industryType.includes("Retail & Wholesale")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Retail & Wholesale
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      value="Manufacturing"
+                      id="Manufacturing"
+                      checked={industryType.includes("Manufacturing")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Manufacturing
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Finanacial"
+                      value="Finanacial"
+                      checked={industryType.includes("Finanacial")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Finanacial
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Transportation & Logistics"
+                      value="Transportation & Logistics"
+                      checked={industryType.includes(
+                        "Transportation & Logistics"
+                      )}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Transportation & Logistics
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Telecommunications"
+                      value="Telecommunications"
+                      checked={industryType.includes("Telecommunications")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Telecommunications
+                  </Label>
+                </InputContainer>
+              </Form2>
             </Form1>
             <Form1>
               <Form3>
                 <InputContainer>
-<Label>
-<Input type='checkbox' name="industry" id="Public sector" value="Public sector" checked={industryType.includes('Public sector')} onChange={this.handleCheckboxChange}/>
-Public sector
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id='Entertainment' value="Entertainment" checked={industryType.includes('Entertainment')} onChange={this.handleCheckboxChange}/>
-    Entertainment
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id="Education" value="Education" checked={industryType.includes('Education')} onChange={this.handleCheckboxChange}/>
-    Education
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id='Professional services' value="Professional services" checked={industryType.includes('Professional services')} onChange={this.handleCheckboxChange}/>
-    Professional services
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" id="Construction" value="Construction" checked={industryType.includes('Construction')} onChange={this.handleCheckboxChange}/>
-    Construction
-    </Label>
-</InputContainer>
-<InputContainer>
-    <Input type='checkbox' name="industry" value="Telecommunications" onChange={this.handleCheckboxChange}/>
-    <Input1 type="text" placeholder="others (please specify)"/>
-</InputContainer>
-
-                </Form3>
-                {error && <ErrorMessage>{error}</ErrorMessage>}
-
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Public sector"
+                      value="Public sector"
+                      checked={industryType.includes("Public sector")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Public sector
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Entertainment"
+                      value="Entertainment"
+                      checked={industryType.includes("Entertainment")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Entertainment
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Education"
+                      value="Education"
+                      checked={industryType.includes("Education")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Education
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Professional services"
+                      value="Professional services"
+                      checked={industryType.includes("Professional services")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Professional services
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Label>
+                    <Input
+                      type="checkbox"
+                      name="industry"
+                      id="Construction"
+                      value="Construction"
+                      checked={industryType.includes("Construction")}
+                      onChange={this.handleCheckboxChange}
+                    />
+                    Construction
+                  </Label>
+                </InputContainer>
+                <InputContainer>
+                  <Input
+                    type="checkbox"
+                    name="industry"
+                    value="Telecommunications"
+                    onChange={this.handleCheckboxChange}
+                  />
+                  <Input1 type="text" placeholder="others (please specify)" />
+                </InputContainer>
+              </Form3>
+              {error && <ErrorMessage>{error}</ErrorMessage>}
             </Form1>
           </Main1>
 
@@ -400,7 +480,7 @@ ${media.mobile}{
   padding:5px;
   height:300px;
 
-`
+`;
 
 const Form3 = Styled.div`
 margin-top:40px;
@@ -432,11 +512,11 @@ margin-right:10px;
 ${media.mobile}{
   margin-right:5px;
 }
-`
-const InputContainer=Styled.div`
+`;
+const InputContainer = Styled.div`
 margin-top:20px;
 
-`
+`;
 
 const Label = Styled.label`
 font-size:16px;
@@ -448,12 +528,11 @@ text-align: left;
 @media screen and (max-width:576px){
   font-size:11px;
 }
-`
+`;
 const Input1 = Styled.input`
 background:transparent;
 border: 1px solid gray;
 @media screen and (max-width:576px){
   width:110px;
 }
-`
-
+`;
