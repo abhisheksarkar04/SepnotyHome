@@ -162,6 +162,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   @media screen and (max-width:576px){
     font-size:16px;
     margin-left:30px;
+    margin-top:40px;
   }
   
   `
@@ -176,6 +177,7 @@ we have collaborations with industry leaders in cloud technologies, data managem
   @media screen and (max-width:576px){
     margin-left:5px;
     gap:50px;
+    justify-content:center;
   }
   
   `

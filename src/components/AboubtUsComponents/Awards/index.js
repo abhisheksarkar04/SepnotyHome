@@ -134,6 +134,7 @@ import {
   @media screen and (max-width:576px){
     margin-left:5px;
     gap:50px;
+    justify-content:center;
   }
   `
   const Main1 = Styled.div`

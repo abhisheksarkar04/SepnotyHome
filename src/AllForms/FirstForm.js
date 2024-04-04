@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 import handleFormValues from "./allFormValues";
-import FirstStep from "./Website/FirstPage"
+import FirstStep from "./Website/FirstPage";
+import { Stepper, Step ,StepLabel} from 'react-form-stepper';
+
 
 class PersonalDetails extends Component {
 constructor(props){
   super(props);
   this.state = {
-    typeOfWebsite: [],
-    numberOfPages: '',
     formErrors: {
       typeOfWebsite: '',
       numberOfPages: ''
@@ -18,29 +17,30 @@ constructor(props){
     activeStep: 0
   };
 }
-  handleCheckboxChange = (event) => {
-    const { id, checked } = event.target;
-    // console.log(id);
-    this.setState(prevState => ({
-      typeOfWebsite: checked
-        ? [...prevState.typeOfWebsite, id]
-        : prevState.typeOfWebsite.filter(type => type !== id),
-      formErrors: {
-        ...prevState.formErrors,
-        typeOfWebsite: ''
-      }
-    }));
-  };
+componentDidMount() {
+  // Initialization tasks after the component is mounted
+  console.log("SecondSoftware component mounted");
+}
 
-  handleRadioChange = (event) => {
-    this.setState({
-      numberOfPages: event.target.value,
-      formErrors: {
-        ...this.state.formErrors,
-        numberOfPages: ''
-      }
-    });
-  };
+componentWillUnmount() {
+  // Cleanup tasks before the component is unmounted
+  console.log("SecondSoftware component unmounted");
+}
+handleCheckboxChange = (event) => {
+  const { id, checked } = event.target;
+  const typeOfWebsite = this.props.formData.typeOfWebsite || [];
+  this.props.updateFormData({
+    typeOfWebsite: checked
+      ? [...typeOfWebsite, id]
+      : typeOfWebsite.filter(type => type !== id)
+  });
+};
+
+handleRadioChange = (event) => {
+  this.props.updateFormData({
+    numberOfPages: event.target.value
+  });
+};
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -82,167 +82,166 @@ constructor(props){
   };
   continue = e => {
     e.preventDefault();
-    
-    // Check for errors
-    const { typeOfWebsite, numberOfPages } = this.state;
-    const formData = {
-      field1: {typeOfWebsite , numberOfPages},
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData);
+    const { typeOfWebsite, numberOfPages } = this.props.formData;
     const formErrors = {};
-    // console.log(softwareTypes,numberOfPages);
     // Check software types
+    //console.log("Form data:", this.props.formData);
     if (typeOfWebsite.length === 0) {
-        formErrors.softwareTypes = 'Please select at least one type of software.';
+      formErrors.softwareTypes = 'Please select at least one type of software.';
     }
-
     // Check number of pages
     if (!numberOfPages) {
-        formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
+      formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
     }
-
     // If there are errors, update the state with the errors
     if (Object.keys(formErrors).length > 0) {
-        this.setState({ formErrors });
-        return; // Prevent navigation to the next step/page
+      this.setState({ formErrors });
+      return; // Prevent navigation to the next step/page
     }
-    
     // If there are no errors, proceed to the next step
     this.props.nextStep();
-    this.setState(prevState => ({ activeStep: prevState.activeStep + 1 }));
-}
+  }
 
   render() {
     const { typeOfWebsite, numberOfPages, formErrors ,activeStep} = this.state;
+    const {formData} = this.props
 
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
+        <StyledStepper
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
 
-        <Stepper
-  steps={[{ label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }, { label: '' }]}
-  activeStep={this.state.activeStep} // Use activeStep from state
-  styleConfig={{
-    activeBgColor: '#2B459B',
-    activeTextColor: '#fff',
-    inactiveBgColor: '#fff',
-    inactiveTextColor: '#2b7cff',
-    completedBgColor: '#407B24',
-    completedTextColor: '#fff',
-    size: '1em'
-  }}
-  className={'stepper'}
-  stepClassName={'stepper__step'}
-/>
+
+
+        
       <Main1>
             <FormContainer>
-                <Form>
+            <Form>
+               
                     <Heading>
                          *Choose the type of  you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="Corporate Website/App" checked={typeOfWebsite.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
-                    <Label htmlfor="Corporate Website/App">
+                    <Input type="checkbox" id="Corporate Website/App" value="Corporate Website/App" checked={formData.typeOfWebsite.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
+                    <Label htmlFor='Corporate Website/App'>
                         Corporate Website/App
-                        </Label>
+                        </Label >
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Label htmlfor="Portfolio Website/App">
-                        <Input type="checkbox" id="Portfolio Website/App" checked={typeOfWebsite.includes('Portfolio Website/App')} onChange={this.handleCheckboxChange} />
+                        <Label>
+                        <Input type="checkbox" id="Portfolio Website/App" value="Portfolio Website/App" checked={formData.typeOfWebsite.includes("Portfolio Website/App")} onChange={this.handleCheckboxChange} />
                          Portfolio Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Digital Media Website/App">
-                        <Input type="checkbox" id="Digital Media Website/App" checked={typeOfWebsite.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
+                        <Label>
+                        <Input type="checkbox" id="Digital Media Website/App" checked={formData.typeOfWebsite.includes('Digital Media Website/App')} onChange={this.handleCheckboxChange} />
                         Digital Media Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Educational Website/App">
-                        <Input type="checkbox" id="Educational Website/App" checked={typeOfWebsite.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
+                        <Label>
+                        <Input type="checkbox" id="Educational Website/App" checked={formData.typeOfWebsite.includes('Educational Website/App')} onChange={this.handleCheckboxChange} />
                         Educational Website/App
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Content aggregator">
-                        <Input type="checkbox" id="Content aggregator" checked={typeOfWebsite.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
+                        <Label>
+                        <Input type="checkbox" id="Content aggregator" checked={formData.typeOfWebsite.includes('Content aggregator')} onChange={this.handleCheckboxChange} />
                         Content aggregator(eg: Forum)
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="6st" checked={formData.typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
                         <Input1 type="text" id="6st" placeholder="others (please specify"/>
                     </CheckBoxCon>
-
-                </Form>
                 {formErrors.typeOfWebsite && <Error style={{ color: 'red' }}>{formErrors.typeOfWebsite}</Error>}
+                </Form>
             </FormContainer>
             <FormContainer>
-                <Form>
+              <Form>
+               
                     <Heading>
                     *How many pages will your website/App
                       have?
                     </Heading>
                     <InputContainer>
-              <Label>
-                  <Input type='radio' name="industry" value="I am not sure" onChange={this.handleRadioChange}/>
-                  I am not sure
+                  <Label>
+                    <Input type='radio' name="numberOfPages" value="I am not sure" checked={formData.numberOfPages === "I am not sure"} onChange={this.handleRadioChange} />
+                    I am not sure
                   </Label>
-              </InputContainer>
+                </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="up to 50" checked={formData.numberOfPages === "up to 50"} onChange={this.handleRadioChange}/>
                   up to 50
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="50-100" checked={formData.numberOfPages === "50-100"} onChange={this.handleRadioChange}/>
                   50-100
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="100-500" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="100-500" checked={formData.numberOfPages === "100-500"} onChange={this.handleRadioChange}/>
                   100-500
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="500-1,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="500-1,000" checked={formData.numberOfPages === "500-1,000"} onChange={this.handleRadioChange}/>
                   500-1,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  1,000-5,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={formData.numberOfPages === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="5,000-10,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="5,000-10,000" checked={formData.numberOfPages === "5,000-10,000"} onChange={this.handleRadioChange}/>
                   5,000-10,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="more than 10,000" checked={formData.numberOfPages === "more than 10,000"} onChange={this.handleRadioChange}/>
                   more than 10,000
                   </Label>
               </InputContainer>
               {formErrors.numberOfPages && <Error style={{ color: 'red' }}>{formErrors.numberOfPages}</Error>}
-                              </Form>
+              </Form>
                           </FormContainer>
                       </Main1>
                       </form>
                       <Button style={{textAlign: 'center'}}>
-                      <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
+                      <button className='buttons__button buttons__button--next'  onClick={this.continue}>Next</button>
                         </Button>
           </Main>
                   )
@@ -250,9 +249,31 @@ constructor(props){
 }
 
 export default PersonalDetails;
+
 const media = {
   mobile: '@media(max-width: 576px)'
 };
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
+
 const Error = Styled.p`
 font-size:12px;
 `
@@ -273,6 +294,8 @@ const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
+ margin: 0;
+  padding: 0px;
 }
 `
 const Main1 = Styled.div`
@@ -283,10 +306,11 @@ align-item:center;
 gap:20px;
 ${media.mobile}{
   width:100%;
-  justify-content:start;
-  align-item:start;
-  gap:2px;
-  margin-left:-30px;
+  gap: 6px;
+  margin: 0px 0px 0px -20px;
+  padding-right: 0px;
+  justify-content:space-between;
+
 }
 `
 const Heading = Styled.h1`
@@ -300,7 +324,9 @@ color: #263238;
 ${
   media.mobile
 }{
-  font-size:13px;
+  font-size:14px;
+  line-height: 1.5;
+  color:#263238;
 }
 `
 
@@ -309,15 +335,19 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:600px;
+width:90%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width:380px;
-  border-radius:5px;
+  width: 50%;
+  border-radius:12px;
   gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
+
 }
 `
 const CheckBoxCon = Styled.div`
@@ -333,14 +363,13 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 ${media.mobile}{
-  font-size:13px;
+  font-size:11px;
 }
 `
 const Form = Styled.div`
+
 ${media.mobile}{
-  width:220px;
-  border-radius:5px;
-  gap:0px;
+ 
 }
 `
 const Input1 = Styled.input`
@@ -351,7 +380,11 @@ color: #263238;
 font-weight:500;
 height:20px;
 margin-left:10px;
-${media.mobile}{font-size:13px;}
+${media.mobile}{
+  font-size:11px;
+  
+  width:110px;
+}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;
@@ -386,4 +419,7 @@ margin-top:5px;
 const Input = Styled.input`
 margin-right:10px;
 margin-top:10px;
+@media screen and (max-width: 576px){
+  margin-right: 5px;
+}
 `

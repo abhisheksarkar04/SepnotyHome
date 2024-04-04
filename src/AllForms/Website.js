@@ -68,8 +68,48 @@ const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
 
 class Form extends Component {
   state = {
+    activeStep:0,
     step: 1,
-    typeOfDevelopement:"website",
+    formData: {
+      step1: {
+        typeOfWebsite: [],
+        numberOfPages: '',
+      },
+      step2:{
+        industryType:[],
+      },
+      step3:{
+        services:"",
+      },
+      step4:{
+        UIDesignMockups:"",
+    	  chosenCMS:"",
+      },
+      step5:{
+        appFeatures:[],
+      },
+      step6:{
+        typeOfMedia:[],
+    	  paymentSystem: true,
+    	  visitors:"",
+      },
+      step7:{
+        complianceRequirements:[],
+    	  externalIntegration: true,
+        details:"",
+      },
+      step8:{
+      username:"",
+    	email:"",
+    	companyName:"",
+    	phoneNumber:"",
+    	wayOfCommunication:"",
+      contact:true,
+      info:true
+      
+      }
+      
+    },
     recivedData:[]
   };
 
@@ -89,46 +129,191 @@ class Form extends Component {
 
   submitData = e => {
     e.preventDefault();
+    const { formData } = this.state;
+    console.log(formData); // Log all form data
     alert('Data sent');
   }
   handleDataReceived = (data) => {
     this.setState(prevState => ({
       recivedData: [...prevState.recivedData, data]
+      
     }), () => {
-      const jsonData = this.convertToJSON();
-      console.log(jsonData);
+   
+
     });
   }
 
-  convertToJSON = () => {
-    const { recivedData } = this.state;
-    const jsonData = {};
-    recivedData.forEach(item => {
-      Object.keys(item).forEach(key => {
-        if (!jsonData.hasOwnProperty(key)) {
-          jsonData[key] = [];
-        }
-        jsonData[key].push(item[key]);
-      });
-    });
-    return jsonData;
+  updateFormData = (data) => {
+    const { step, formData } = this.state;
+    // Update the corresponding step data in formData based on the current step
+    switch (step) {
+      case 1:
+        this.setState({
+          formData: {
+            ...formData,
+            step1: {
+              ...formData.step1,
+              ...data // Update both typeOfWebsite and numberOfPages
+            }
+          }
+        });
+        break;
+      case 2:
+        this.setState({
+          formData: {
+            ...formData,
+            step2: {
+              ...formData.step2,
+              ...data
+            }
+          }
+        });
+        break;
+      case 3:
+        this.setState({
+          formData: {
+            ...formData,
+            step3: {
+              ...formData.step3,
+              ...data
+
+              
+            }
+           
+          }
+          
+        });
+        break;
+        case 4:
+        this.setState({
+          formData: {
+            ...formData,
+            step4: {
+              ...formData.step4,
+              ...data
+            }
+          }
+        });
+        break;
+        case 5:
+        this.setState({
+          formData: {
+            ...formData,
+            step5: {
+              ...formData.step5,
+              ...data
+            }
+          }
+        });
+        break;
+        case 6:
+          this.setState({
+            formData: {
+              ...formData,
+              step6: {
+                ...formData.step6,
+                ...data
+              }
+            }
+          });
+          break;
+          case 7:
+            this.setState({
+              formData: {
+                ...formData,
+                step7: {
+                  ...formData.step7,
+                  ...data
+                }
+              }
+            });
+            break;
+            case 8:
+              this.setState({
+                formData: {
+                  ...formData,
+                  step8: {
+                    ...formData.step8,
+                    ...data
+                  }
+                }
+              });
+              
+      default:
+        break;
+    }
   }
 
-  render() {
-    const { step, recivedData } = this.state;
+  convertToDesiredFormat = (formData) => {
+    const {
+      typeOfDevelopement,
+      typeOfWebsite,
+      numberOfPages,
+      industryType,
+      services,
+      UIDesignMockups,
+      chosenCMS,
+      appFeatures,
+      typeOfMedia,
+      paymentSystem,
+      visitors,
+      complianceRequirements,
+      externalIntegration,
+      details,
+      username,
+      email,
+      companyName,
+      phoneNumber,
+      wayOfCommunication,
+      contact,
+      info
+     
+    } = formData;
 
-    // Function to access a specific received data element by index
-    const getReceivedData = (index) => {
-      return recivedData[index];
+    const formattedData = {
+      typeOfDevelopement: typeOfDevelopement || "",
+      typeOfWebsite: typeOfWebsite || [],
+      numberOfPages: numberOfPages || "",
+      industryType: industryType || [],
+      services: services || "",
+      UIDesignMockups: UIDesignMockups || "",
+      chosenCMS: chosenCMS || "",
+      appFeatures: appFeatures || [],
+      typeOfMedia: typeOfMedia || [],
+      paymentSystem: paymentSystem || false,
+      visitors: visitors || "",
+      complianceRequirements: complianceRequirements || [],
+      externalIntegration: externalIntegration || false,
+      details: details || "",
+      username: username || "",
+      email: email || "",
+      companyName: companyName || "",
+      phoneNumber: phoneNumber || "",
+      wayOfCommunication: wayOfCommunication || "",
+      info:info||true,
+      contact:contact||true
     };
-    //console.log(getReceivedData(0))
+
+    return formattedData;
+  } 
+  submitData = e => {
+    e.preventDefault();
+    const { formData } = this.state;
+    console.log(this.convertToDesiredFormat);
+  }
+  render() {
+    const { step, formData ,activeStep} = this.state;
+    //console.log(formData);
     
     switch(step) {
       case 1: 
         return (
-          <PersonalDetails 
+          <PersonalDetails
+          activeStep={activeStep}
             nextStep={this.nextStep}
             onDataReceived={this.handleDataReceived}
+            formData={formData.step1}
+            updateFormData={this.updateFormData}
           />
         )
       case 2:
@@ -137,6 +322,8 @@ class Form extends Component {
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
+            formData={formData.step2}
+            updateFormData={this.updateFormData}
           />
         )
       case 3:
@@ -144,7 +331,8 @@ class Form extends Component {
           < YourIndustry nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
-          
+          formData={formData.step3}// Pass formData as props
+          updateFormData={this.updateFormData}
           />
         )
       case 4:
@@ -152,6 +340,8 @@ class Form extends Component {
             < Summary nextStep={this.nextStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
+            formData={formData.step4} // Pass formData as props
+            updateFormData={this.updateFormData}
            />
           )
       case 5:
@@ -159,6 +349,8 @@ class Form extends Component {
               <SecondForm  nextStep={this.nextStep}
               prevStep={this.prevStep}
               onDataReceived={this.handleDataReceived}
+              formData={formData.step5} // Pass formData as props
+            updateFormData={this.updateFormData}
               />
             )
       case 6:
@@ -167,6 +359,8 @@ class Form extends Component {
               nextStep={this.nextStep}
               prevStep={this.prevStep}
               onDataReceived={this.handleDataReceived}
+              formData={formData.step6} // Pass formData as props
+            updateFormData={this.updateFormData}
               
             />
             )
@@ -176,6 +370,8 @@ class Form extends Component {
           nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
+          formData={formData.step7} // Pass formData as props
+          updateFormData={this.updateFormData}
         />
         )
       case 8:
@@ -184,13 +380,20 @@ class Form extends Component {
           nextStep={this.nextStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
+          formData={formData.step8} // Pass formData as props
+          updateFormData={this.updateFormData}
+          onSubmit={this.submitData}
         />
         )
 
           
       default: return null
+
+      
     }
+    
   }
 }
+
 
 export default Form;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Styled from "styled-components"
-import { Stepper } from 'react-form-stepper';
+import { Stepper , Step } from 'react-form-stepper';
 import './App.css';
 import handleFormValues from './allFormValues';
 
@@ -9,35 +9,33 @@ import FourthPage from './Website/FourthPage';
 class Summary extends Component {
 
   state = {
-    hasMockups: '',
-    chosenCMS: '',
     error: ''
   };
   continue = e => {
     e.preventDefault();
-    const { hasMockups, chosenCMS } = this.state;
-    const formData = {
-      field4: {hasMockups,chosenCMS},
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData);
-    if (!hasMockups || !chosenCMS) {
-      this.setState({ error: 'Please answer all questions.' });
-      return;
-    }
+  const { UIDesignMockups, chosenCMS } = this.props.formData;
+
+  if (!UIDesignMockups || !chosenCMS) {
+    this.setState({ error: 'Please answer all questions.' });
+    return;
+  }
     // Store the selected data in parent component or wherever required
     // this.props.storeData(hasMockups, chosenCMS);
     this.props.nextStep();
   }
 
   handleMockupsChange = (e) => {
-    this.setState({ hasMockups: e.target.value, error: '' });
+    this.props.updateFormData({
+      UIDesignMockups: e.target.value
+    });
   };
-
+  
   handleCMSChange = (e) => {
-    this.setState({ chosenCMS: e.target.value });
+    const { name, value } = e.target;
+    this.props.updateFormData({
+     chosenCMS:e.target.value
+    });
   };
-
   back = e => {
     e.preventDefault();
     this.props.prevStep();
@@ -45,25 +43,31 @@ class Summary extends Component {
 
   render() {
     const { error } = this.state;
+    const {UIDesignMockups,chosenCMS} = this.props.formData
 
     return (
       <Main className='form'>
         <div>
-          <Stepper
-             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
-            activeStep={3}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
+        <StyledStepper
+          activeStep={3}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
           <Mai>
             <Form1>
                 <Heading>
@@ -72,19 +76,19 @@ class Summary extends Component {
                 <Form2>
                 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="Yes" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="Yes" checked={UIDesignMockups === "Yes"}  onChange={this.handleMockupsChange} />
 Yes
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="I will engage third party for UI design" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will engage third party for UI design" checked={UIDesignMockups === "I will engage third party for UI design"} onChange={this.handleMockupsChange} />
     I will engage third party for UI design
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="mockups" value="I will need you to provide UI design" onChange={this.handleMockupsChange} />
+<Input type='radio' name="mockups" value="I will need you to provide UI design" checked={UIDesignMockups === "I will need you to provide UI design"} onChange={this.handleMockupsChange} />
     I will need you to provide UI design
     </Label>
 </InputContainer>
@@ -99,13 +103,13 @@ Yes
             <Form2>
                 <InputContainer>
 <Label>
-<Input type='radio' name="cms" value="No" onChange={this.handleCMSChange} />
+<Input type='radio' name="cms" value="No" checked={chosenCMS==="No"} onChange={this.handleCMSChange} />
 No
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-<Input type='radio' name="cms" value="Yes" onChange={this.handleCMSChange} />
+<Input type='radio' name="cms" value="Yes" checked={chosenCMS==="Yes"} onChange={this.handleCMSChange} />
 <Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
     </Label>
 </InputContainer>
@@ -159,13 +163,21 @@ gap:20px;
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
-border: 1px solid #C1CAE7;
-background: #C1CAE7;
-gap:-20px;
-border-radius:10px;
 padding:20px;
 height:380px;
-width:400px;
+width:90%;
+border: 1px solid #C1CAE7;
+background: #C1CAE7;
+gap:20px;
+border-radius:10px;
+${media.mobile}{
+  width: 52%;
+  border-radius:12px;
+  gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
+  height:300px;
 `
 const Heading = Styled.h1`
 color:#263238;
@@ -177,7 +189,6 @@ margin-bottom:30px;
 `
 const Form2 = Styled.div`
 ${media.mobile}{
-  width:220px;
   border-radius:5px;
   gap:0px;
 }
@@ -189,22 +200,15 @@ const InputContainer=Styled.div`
 margin-top:10px;
 `
 const Label = Styled.label`
-
-
 font-size:16px;
 font-family: Roboto;
-
-
-
-font-size:17px;
-font-family: Inter;
-
-font-size:14px;
-
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+${media.mobile}{
+  font-size:11px;
+}
 `
 const Input1 = Styled.input`
 background: #C1CAE7;
@@ -212,11 +216,31 @@ border: 1px solid #8C8C8C;
 width:250px;
 border-radius:4px;
 ${media.mobile}{
-  width:220px;
+  width:120px;
   border-radius:5px;
   gap:0px;
 }
 `
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
 // const Input2 = Styled.input`
 // background: #C1CAE7;
 // border: 1px solid gray;

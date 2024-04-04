@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Stepper } from 'react-form-stepper';
+import { Stepper ,Step} from 'react-form-stepper';
 import Styled from "styled-components"
 import './App.css';
 // import SecondPage from "./Forms/SevenPage"
@@ -29,16 +29,12 @@ class SeventhForm extends Component {
   validateForm = () => {
     const { compliance , integration, integrationDetails,additionalDetails} = this.state;
     const formErrors = {};
+    const {complianceRequirements,details} = this.props.formData
 
-    if (compliance.length === 0) {
+    if (complianceRequirements.length === 0) {
       formErrors.compliance = "Please select at least one compliance requirement";
     }
-    if (!integration) {
-      formErrors.integration = "Please select whether you need integration or not";
-    } else if (integration === "Yes (Please Specify)" && !integrationDetails) {
-      formErrors.integrationDetails = "Please specify integration details";
-    }
-    if (!additionalDetails) {
+    if (!details) {
       formErrors.additionalDetails = "Please add additional details";
     }
     else{
@@ -52,36 +48,23 @@ class SeventhForm extends Component {
   handleIntegrationChange = event => {
     const { name, value } = event.target;
 
-    this.setState({
-      [name]: value,
-      formErrors: {
-        ...this.state.formErrors,
-        [name]: ''
-      }
-    });
+    const {externalIntegration} = this.props.formData
+
+    this.props.updateFormData({
+    externalIntegration:!externalIntegration
+    })
+      
   };
 
   handleCheckboxChange = event => {
-    const { id, checked } = event.target;
-    const { compliance } = this.state;
 
-    if (checked) {
-      this.setState(prevState => ({
-        compliance: [...prevState.compliance, id],
-        formErrors: {
-          ...prevState.formErrors,
-          compliance: ''
-        }
-      }));
-    } else {
-      this.setState(prevState => ({
-        compliance: prevState.compliance.filter(type => type !== id),
-        formErrors: {
-          ...prevState.formErrors,
-          compliance: ''
-        }
-      }));
-    }
+    const { id, checked } = event.target;
+    const complianceRequirements = this.props.formData.complianceRequirements || [];
+    this.props.updateFormData({
+      complianceRequirements: checked
+        ? [...complianceRequirements, id]
+        : complianceRequirements.filter(type => type !== id)
+    });
   };
 
   handleIntegrationChange = event => {
@@ -104,13 +87,9 @@ class SeventhForm extends Component {
   handleAdditionalDetailsChange = event => {
     const { name, value } = event.target;
 
-    this.setState({
-      [name]: value,
-      formErrors: {
-        ...this.state.formErrors,
-        [name]: ''
-      }
-    });
+    this.props.updateFormData({
+      details:event.target.value
+      })
   };
   
 
@@ -131,26 +110,32 @@ class SeventhForm extends Component {
   render() {
     const { compliance, formErrors ,integration, integrationDetails,additionalDetails} = this.state;
 
+    const {complianceRequirements} = this.props.formData
+
     return (
       <Main className='form'>
         <form>
-
-          <Stepper
-             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
-            activeStep={6}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
-
+        <StyledStepper
+          activeStep={6}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+          
 <Mai>
             <FormContainer>
                 <Form>
@@ -162,7 +147,7 @@ class SeventhForm extends Component {
               <input 
                 type="checkbox" 
                 id="No" 
-                checked={compliance.includes("No")} 
+                checked={complianceRequirements.includes("No")} 
                 onChange={this.handleCheckboxChange} 
               />
               No
@@ -170,28 +155,28 @@ class SeventhForm extends Component {
           </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="HIPPA">
-                        <input type="checkbox" id="HIPPA" checked={compliance.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
                         
                         HIPPA
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="PCI DSS">
-                        <input type="checkbox" id="PCI DSS" name='compliance' checked={compliance.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
                         
                         PCI DSS
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="GDPR">
-                        <input type="checkbox" id="GDPR" name='compliance' checked={compliance.includes("GDPR")} onChange={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
                         
                         GDPR
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="I need your consultation on compliance">
-                        <input type="checkbox" id="I need your consultation on compliance" name='compliance' checked={compliance.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
                         
                         I need your consultation on compliance
                         </Label>
@@ -280,6 +265,7 @@ const media = {
 const Error = Styled.div`
   color: red;
   margin-top: 10px;
+  font-size:12px;
 `;
 const Button = Styled.div`
 display:flex;
@@ -315,11 +301,7 @@ ${media.mobile}{gap:10px;justify-content:start;align-items:start;margin-left:-30
 `
 const Heading = Styled.h1`
 font-family: Roboto;
-
 font-size: 18px;
-
-font-size: 15px;
-
 font-weight: 700;
 line-height: 20px;
 letter-spacing: 0em;
@@ -327,6 +309,26 @@ text-align: left;
 color: #263238;
 ${media.mobile}{font-size:15px;}
 `
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
 
 const FormContainer = Styled.div`
 display:flex;
@@ -337,9 +339,9 @@ gap:-20px;
 border-radius:10px;
 padding:20px;
 height:350px;
-width:600px;
+width:90%;
 ${media.mobile}{
-  width:230px;
+  width:50%;
 }
 `
 const CheckBoxCon = Styled.div`
@@ -349,16 +351,9 @@ justify-content:space-between;
 margin-top:13px;
 `
 const Label = Styled.label`
-
 font-size:16px;
-
-
 font-family: Roboto;
-
-font-family: Inter;
-
 font-size:15px;
-
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
@@ -366,9 +361,9 @@ text-align: left;
 margin-left:10px;
 ${media.mobile}{font-size:13px;}
 `
-const Form = Styled.form`
+const Form = Styled.div`
 ${media.mobile}{
-  width:250px;
+ width:100%;
 }
 
 `
@@ -387,12 +382,13 @@ color: black;
 padding: 10px;
 border-radius:4px;
 ${media.mobile}{
-  width:180px;
+  width:120px;
 }
 
 `
 const Input = Styled.input`
 margin-right:10px;
+margin-left:10px;
 `
 const Form1 = Styled.div`
 display:flex;
@@ -426,4 +422,3 @@ padding: 8px;
 text-align: left;
 ${media.mobile}{width:200px;}
 `
-

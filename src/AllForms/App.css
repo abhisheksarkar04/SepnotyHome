@@ -11,7 +11,7 @@
 .form {
   width: 700px;
   margin: 0 auto;
-  background-color: #fafafa;
+  background-color:transparent;
   padding: 25px 15px;
 }
 
@@ -59,8 +59,18 @@
 .buttons__button--next {
   background-color: #003487;
   color: #fff
+  
 }
 
+@media screen and (max-width:576px){
+  .buttons__button--next{
+    width:80px;
+  }
+  .buttons__button--back{
+    width:80px;
+  }
+
+}
 .buttons__button--back {
   background-color: #fff;
   color: #003487

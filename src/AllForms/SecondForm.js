@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Styled from "styled-components"
-import { Stepper } from 'react-form-stepper';
 import './App.css';
 import handleFormValues from './allFormValues';
+import { Stepper, Step } from 'react-form-stepper';
 
 import SecondPage from "./Website/SecondPage"
 
@@ -18,31 +18,22 @@ import SecondPage from "./Website/SecondPage"
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class CourseDetails extends Component {
-  constructor(props) {
+constructor(props) {
     super(props);
     this.state = {
-      selectedIndustries: [],
       error: ''
     };
   }
- 
-    shouldComponentUpdate(nextProps) {
-        if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-          return true;
-        } else {
-          return false;
-        }
-      }
 
   continue = e => {
     e.preventDefault();
-    const { selectedIndustries } = this.state;
-    const formData = {
-      field2: {selectedIndustries}
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData);
-    if (selectedIndustries.length === 0) {
+    const {formData} = this.props
+    const {industryType} = formData
+
+    console.log(formData)
+
+    //handleFormValues(formData);
+    if (industryType.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
     }
@@ -50,14 +41,13 @@ class CourseDetails extends Component {
   };
 
   handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    let selectedIndustries = [...this.state.selectedIndustries];
-    if (checked) {
-      selectedIndustries.push(value);
-    } else {
-      selectedIndustries = selectedIndustries.filter(industry => industry !== value);
-    }
-    this.setState({ selectedIndustries, error: '' });
+    const { value, checked ,id} = e.target;
+    
+    this.props.updateFormData({
+      industryType:checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType = this.props.formData.industryType.filter(type => type !== id)
+    })
+    
+
   };
 
   back = e => {
@@ -68,6 +58,7 @@ class CourseDetails extends Component {
 
   render() {
     const { error } = this.state;
+    const {industryType} = this.props.formData
     // const { 
     //   // // coursesOptions,
     //   // levelOptions,
@@ -148,21 +139,27 @@ class CourseDetails extends Component {
       <Main className='form'>
         <form>
 
-          <Stepper
-             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
-            activeStep={1}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
+        <StyledStepper
+          activeStep={1}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+
 
 <Main1>
             <Form1>
@@ -172,37 +169,37 @@ class CourseDetails extends Component {
                 <Form2>
                 <InputContainer>
 <Label>
-<Input type='checkbox' name="industry" value="Healthcare" id='' onChange={this.handleCheckboxChange}/>
+<Input type='checkbox' name="industry" id="Healthcare" checked={industryType.includes('Healthcare')} value="Healthcare"  onChange={this.handleCheckboxChange}/>
 Healthcare
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Retail & Wholesale" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id='Retail & Wholesale' value="Retail & Wholesale" checked={industryType.includes('Retail & Wholesale')} onChange={this.handleCheckboxChange}/>
     Retail & Wholesale
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Manufacturing" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" value="Manufacturing" id='Manufacturing' checked={industryType.includes('Manufacturing')} onChange={this.handleCheckboxChange}/>
     Manufacturing
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Finanacial" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id="Finanacial" value="Finanacial" checked={industryType.includes('Finanacial')} onChange={this.handleCheckboxChange}/>
     Finanacial
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Transportation & Logistics" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id="Transportation & Logistics" value="Transportation & Logistics" checked={industryType.includes('Transportation & Logistics')} onChange={this.handleCheckboxChange}/>
     Transportation & Logistics
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Telecommunications" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id='Telecommunications' value="Telecommunications" checked={industryType.includes('Telecommunications')} onChange={this.handleCheckboxChange}/>
     Telecommunications
     </Label>
 </InputContainer>
@@ -215,31 +212,31 @@ Healthcare
             <Form3>
                 <InputContainer>
 <Label>
-<Input type='checkbox' name="industry" value="Public sector" onChange={this.handleCheckboxChange}/>
+<Input type='checkbox' name="industry" id="Public sector" value="Public sector" checked={industryType.includes('Public sector')} onChange={this.handleCheckboxChange}/>
 Public sector
 </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Entertainment" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id='Entertainment' value="Entertainment" checked={industryType.includes('Entertainment')} onChange={this.handleCheckboxChange}/>
     Entertainment
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Education" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id="Education" value="Education" checked={industryType.includes('Education')} onChange={this.handleCheckboxChange}/>
     Education
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Professional services" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id='Professional services' value="Professional services" checked={industryType.includes('Professional services')} onChange={this.handleCheckboxChange}/>
     Professional services
     </Label>
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='checkbox' name="industry" value="Construction" onChange={this.handleCheckboxChange}/>
+    <Input type='checkbox' name="industry" id="Construction" value="Construction" checked={industryType.includes('Construction')} onChange={this.handleCheckboxChange}/>
     Construction
     </Label>
 </InputContainer>
@@ -314,11 +311,33 @@ Public sector
 }
 
 export default CourseDetails;
+
 const media = {
   mobile: '@media(max-width: 576px)'
 };
 
-const ErrorMessage = Styled.div`
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
+
+const ErrorMessage = Styled.p`
   color: red;
   margin-top: 10px;
   font-size:12px;
@@ -344,34 +363,37 @@ align-item:center;
 gap:20px;
 ${media.mobile}{
   width:100%;
-  justify-content:start;
-  align-item:start;
-  gap:2px;
-  margin-left:-30px;
+  gap: 6px;
+  margin: 0px 0px 0px -20px;
+  padding-right: 0px;
+  justify-content:space-between;
 }
 `
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
+padding:20px;
+height:380px;
+width:90%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
-gap:-10px;
+gap:20px;
 border-radius:10px;
-padding:20px;
-width:700px;
-height:380px;
 ${media.mobile}{
-  width:380px;
-  border-radius:5px;
+  width: 52%;
+  border-radius:12px;
   gap:0px;
-}
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
+  height:300px;
+
 `
 const Form3 = Styled.div`
 margin-top:40px;
 ${media.mobile}{
-  width:220px;
-  border-radius:5px;
-  gap:0px;
+  margin-top:15px;
+
 }
 `
 const Heading = Styled.h1`
@@ -387,6 +409,7 @@ ${
 }
 `
 const Form2 = Styled.div`
+margin-top:-20px;
 ${media.mobile}{
   width:220px;
   border-radius:5px;
@@ -395,9 +418,13 @@ ${media.mobile}{
 `
 const Input = Styled.input`
 margin-right:10px;
+${media.mobile}{
+  margin-right:5px;
+}
 `
 const InputContainer=Styled.div`
 margin-top:20px;
+
 `
 const Label = Styled.label`
 font-size:16px;
@@ -406,8 +433,14 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+@media screen and (max-width:576px){
+  font-size:11px;
+}
 `
 const Input1 = Styled.input`
 background:transparent;
 border: 1px solid gray;
+@media screen and (max-width:576px){
+  width:110px;
+}
 `
