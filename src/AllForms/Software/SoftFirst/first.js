@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Stepper } from 'react-form-stepper';
 import Styled from "styled-components"
-import handleFormValues from '../../allFormValues';
 class FirstSoftwarePage extends Component {
 
   state = {
@@ -25,7 +24,7 @@ class FirstSoftwarePage extends Component {
 
   handleRadioChange = (event) => {
     this.props.updateFormData({
-      numberOfPages: event.target.value
+      tools: event.target.value
     });
   };
 
@@ -100,7 +99,9 @@ class FirstSoftwarePage extends Component {
 
   render() {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
-    const {typeOfSoftware,tools} = this.props
+    const {formData} = this.props
+
+    const {typeOfSoftware,tools} = formData
 
     return (
       <Main className='form'>
@@ -162,7 +163,7 @@ class FirstSoftwarePage extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={softwareTypes.includes('6st')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="6st" checked={typeOfSoftware.includes('6st')} onChange={this.handleCheckboxChange} />
                         <Input1 type="text" id="6st" placeholder="others (please specify"/>
                     </CheckBoxCon>
 

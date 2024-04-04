@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from './allFormValues';
-
-import ThirdPage from '../AllForms/Website/ThirdPage';
 
 
 

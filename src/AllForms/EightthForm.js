@@ -5,8 +5,6 @@ import { Stepper ,Step} from 'react-form-stepper';
 import './App.css';
 
 
-import EightthPage from "./Website/EightthPage";
-
 class FourthForm extends Component {
   state = {
      // Update state to store preferred communication

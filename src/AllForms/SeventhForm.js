@@ -6,8 +6,6 @@ import './App.css';
 
 // import SecondPage from "./Forms/SevenPage"
 
-import SevenPage from "./Website/SevenPage";
-import handleFormValues from "./allFormValues";
 
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
