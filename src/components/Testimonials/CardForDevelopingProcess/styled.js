@@ -65,7 +65,7 @@ export const CardTitle = styled.h1`
     font-size: 20px;
   }
   @media screen and (max-width: 576px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 `;
 
@@ -116,13 +116,13 @@ export const PopupContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  z-index: 2;
   @media screen and (max-width: 576px) {
     width: 71%;
-    height: 52%;
-    left: 10%;
-    top: 35%;
-
-    margin: 10px 10px 10px -20px;
+    height: auto;
+    left: 15%;
+    top: 15%;
+    padding: 5px;
   }
 `;
 
@@ -131,7 +131,7 @@ export const PopupContent = styled.div`
   flex-direction: row;
   margin-bottom: 10px;
   @media screen and (max-width: 576px) {
-    flex-direction: column;
+    flex-direction: row;
   }
 `;
 
@@ -149,7 +149,7 @@ export const PopupTitle = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   @media screen and (max-width: 576px) {
-    font-size: 100%;
+    font-size: 16;
   }
 `;
 
@@ -175,7 +175,7 @@ export const PopupHeading = styled.h1`
   font-size: 16px;
   text-align: center;
   @media screen and (max-width: 576px) {
-    font-size: 80%;
+    font-size: 14px;
   }
 `;
 
@@ -195,7 +195,8 @@ export const PopupDesc = styled.p`
   line-height: 1.25em;
   font-weight: 500;
   @media screen and (max-width: 576px) {
-    font-size: 70%;
+    font-size: 14px;
+    padding: 10px;
     width: ;
   }
 `;

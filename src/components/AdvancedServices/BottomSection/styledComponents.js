@@ -135,10 +135,12 @@ export const PopUpCardContainer = styled.div`
   border: 1px solid white;
   color: white;
   @media screen and (max-width: 576px) {
-    height: 60%;
-    width: 40%;
-    top: 50%;
-    margin-left: -20%;
+    height: auto;
+    width: 80%;
+    top: 15%;
+    left: 10%;
+    transform: translate(0, 0);
+    padding: 10px;
   }
 `;
 export const PopupLftRgt = styled.div`
@@ -166,7 +168,7 @@ export const PopUpTitle = styled.h2`
   font-size: 18px;
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 80%;
+    font-size: 16px;
   }
 `;
 
@@ -177,7 +179,7 @@ export const PopUpDescription = styled.p`
   line-height: 20px;
   margin-top: 20px;
   @media screen and (max-width: 576px) {
-    font-size: 10px;
+    font-size: 14px;
   }
 `;
 
@@ -197,9 +199,10 @@ export const PopupText = styled.p`
   text-align: justify;
   padding: 20px 35px 20px 35px;
   @media screen and (max-width: 576px) {
-    font-size: 20%;
+    font-size: 14px;
     padding: 10px 5px 0px 5px;
-    line-height: 15px;
+    line-height: 1.5;
+    text-align: left;
   }
 `;
 
