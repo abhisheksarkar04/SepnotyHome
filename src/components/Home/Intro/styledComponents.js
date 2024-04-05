@@ -543,7 +543,7 @@ export const MobileIntro = styled.div`
 export const Homep2 = styled.p`
   color: #ececec;
   line-height: 2;
-  width: 95%;
+  width: 93%;
   font-weight: 500;
   margin-bottom: 0px;
   font-size: 14px;
