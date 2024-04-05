@@ -72,7 +72,7 @@ export const Description = styled.p`
   line-height: 1.5em;
   @media screen and (max-width: 576px) {
     font-size: 14px;
-    width: 80%;
+    width: 90%;
     padding-top: 0px;
     line-height: 2;
     margin-left: 0px;
@@ -115,7 +115,7 @@ export const HeadImgCon = styled.div`
   align-items: center;
 
   margin: 0px 10px 0px 0px;
-  width: 100%;
+  width: 96%;
 
   @media screen and (min-width: 577px) {
     display: none;

@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-color: #0c111f;
   flex-direction: column;
   padding: 40px 40px 5px 40px;
-  z-index: 2;
+
   background-image: url(${layout});
   background-size: cover;
   @media screen and (max-width: 576px) {

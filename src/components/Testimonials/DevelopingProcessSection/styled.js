@@ -24,6 +24,7 @@ export const CardListContainer = styled.ul`
     flex-wrap: wrap;
     margin: 0px;
     padding: 0px 0px 0px 10px;
+    justify-content: center;
   }
 `;
 

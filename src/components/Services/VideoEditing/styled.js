@@ -202,7 +202,8 @@ export const CardContainer = styled.div`
   margin: 30px 1px 30px 01px;
 
   @media screen and (max-width: 576px) {
-    width: 290px;
+    width: 94%;
+
     margin: 10px 0px 10px 0px;
   }
 `;
@@ -275,9 +276,11 @@ export const ToolsCardCon = styled.div`
   @media screen and (max-width: 576px) {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     align-items: center;
     padding: 0px 0px;
+    height: auto;
+    margin: 0px 20px 0px 10px;
   }
 `;
 
@@ -291,9 +294,9 @@ export const ToolsCard = styled.div`
   padding: 30px 20px 30px 30px;
   margin: 30px 30px 30px 30px;
   @media screen and (max-width: 576px) {
-    width: 290px;
+    width: 93%;
     margin: 10px 0px 10px 0px;
-    height: 270px;
+    height: 250px;
   }
 `;
 

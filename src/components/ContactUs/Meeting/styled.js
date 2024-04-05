@@ -25,7 +25,7 @@ export const BottomHeading = styled.h1`
     margin-bottom: 10px;
     line-height: 1.5em;
     padding: 0px;
-    width: 70%;
+    width: 90%;
   }
 `;
 

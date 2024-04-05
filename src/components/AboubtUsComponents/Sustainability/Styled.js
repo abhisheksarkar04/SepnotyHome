@@ -8,11 +8,8 @@ export const DigitalContainer = styled.div`
   padding-bottom: 20px;
 
   @media screen and (max-width: 576px) {
-     height:1500px;
-   padding-bottom:0px;
-
-    }
-
+    padding-bottom: 10px;
+  }
 `;
 export const Header = styled.h1`
   font-size: 17px;
@@ -20,15 +17,10 @@ export const Header = styled.h1`
   color: #ffffff;
   padding: 30px 20px 30px 5%;
 
-
   @media screen and (max-width: 576px) {
-    font-size:14px; 
-    margin:0px;
-    height:0px;
-    margin-bottom:-11px;
-    padding-left:15px;
-    }
-
+    font-size: 14px;
+    padding: 10px 10px 10px 3%;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -42,24 +34,19 @@ export const Service = styled.h1`
   padding: 10px 30px 20px 5%;
 
   @media screen and (max-width: 576px) {
-    font-size:16px;
-    padding-left:15px;
- 
-    }
-
-
+    padding: 0px 10px 10px 3%;
+    font-size: 16px;
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
 
-    @media screen and (max-width: 576px) {
-      height:150px;
-      }
-     
-
- 
+  @media screen and (max-width: 576px) {
+    height: 200px;
+    padding: 15px 10px 0px 3%;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -70,33 +57,22 @@ export const ConRecHead = styled.h1`
   padding-top: 20px;
 
   @media screen and (max-width: 576px) {
-    font-size:20px;
-    padding-top:1px;
-    width:336px;
-    }
-
-
+    padding: 0px 10px 10px 0;
+    font-size: 16px;
+  }
 `;
 
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width:80%;
+  width: 80%;
   padding: 20px 30px 30px 0px;
 
-  
   @media screen and (max-width: 576px) {
-    font-size:14px;
-    padding-top:1px;
-     width:380px;
-    text-align:justify;
-    margin:-22px;
-    margin-left:0px;
-    
-    }
-
- 
-
+    padding: 0px 0px 20px 0px;
+    font-size: 14px;
+    width: 95%;
+  }
 `;
 
 export const Button = styled.button`
@@ -119,15 +95,13 @@ export const Rectangle1 = styled.img`
   z-index: 0;
 
   @media screen and (max-width: 576px) {
-    font-size:10px;
-   height: 300px;
-   z-index: 0;
-   background:transparent;
-   margin-top:20px;
-   board-radius:2px;
-    }
-
-
+    font-size: 10px;
+    height: 300px;
+    z-index: 0;
+    background: transparent;
+    margin-top: 20px;
+    board-radius: 2px;
+  }
 `;
 
 export const Rectangle2 = styled.img`
@@ -139,14 +113,13 @@ export const Rectangle2 = styled.img`
   z-index: 0;
 
   @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:10px;
-   height: 150px;
-   z-index: 0;
-   position: absolute;
-   top:10%;
-    }
-
+    font-size: 10px;
+    margin: 10px;
+    height: 150px;
+    z-index: 0;
+    position: absolute;
+    top: 10%;
+  }
 `;
 
 export const Rectangle3 = styled.img`
@@ -156,19 +129,17 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
-  background:transparent;
+  background: transparent;
   margun-bottom: 20px;
   @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:1px;
-   height: 150px;
-   z-index: 0;
-   background:transparent;
-   margin-top:0px;
-   board-radius:2px;
-    }
-
- 
+    font-size: 10px;
+    margin: 1px;
+    height: 150px;
+    z-index: 0;
+    background: transparent;
+    margin-top: 0px;
+    board-radius: 2px;
+  }
 `;
 
 export const ListHeading = styled.h1`
@@ -176,34 +147,27 @@ export const ListHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-left: -30px;
-  margin-top:50px;
+  margin-top: 50px;
 
   @media screen and (max-width: 576px) {
-    font-size:16px;
-    
-    margin:-30px;
-    
-    }
+    font-size: 16px;
 
-
+    margin-left: -20px;
+  }
 `;
 
 export const ServiceItemCon = styled.div`
   margin-top: 5.9%;
 
   @media screen and (max-width: 576px) {
-    margin:0px;
-    height:200px;
-    
-    
-    }
+    margin: 0px;
+  }
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 20px;
   font-size: 20px;
   color: #ffffff;
-  margin-top:50px;
-
+  margin-top: 50px;
 `;
 
 export const ImageCon = styled.div`
@@ -212,31 +176,20 @@ export const ImageCon = styled.div`
   display: flex;
   flex-direction: column;
 
-  
   @media screen and (max-width: 576px) {
-     
-    width:100px;
-    height:100px
-     }
-  
-
+    width: 100px;
+    height: 100px;
+  }
 `;
 export const ServiceItemImg = styled.img`
-  width: 300px;
- 
-  margin-top:120px;
-  margin-inline:-200px;
+  width: 25%;
+
+  margin-top: 120px;
+  margin-inline: -200px;
 
   @media screen and (max-width: 576px) {
-    height: 270px;
-    width: 370px;
-    margin:20px;
-    margin-top: 700px;
-    margin-inline: -250px;
-    position: absolute;
-    
-    }
-
+    display: none;
+  }
 `;
 
 export const ServiceItemButton = styled.button`
@@ -266,20 +219,15 @@ export const ConatctCon = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
   border-radius: 3px;
-  margin-top:50px;
+  margin-top: 50px;
 
   @media screen and (max-width: 576px) {
-    height: 40px;
+    height: 45px;
     width: 50px;
-    margin:15px;
-    border-radius: 3px;
-
-    }
-
-
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -290,9 +238,15 @@ export const PatternCon = styled.div`
   margin-left: 5em;
 
   @media screen and (max-width: 576px) {
-    font-size:10px;
-   margin:2px;
-    }
+    font-size: 10px;
+    margin-left: 3%;
+  }
+`;
 
-  
+export const ServiceItemImg2 = styled.img`
+  width: 100%;
+  padding: 3%;
+  @media screen and (min-width: 577px) {
+    display: none;
+  }
 `;
