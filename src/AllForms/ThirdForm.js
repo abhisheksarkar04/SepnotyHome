@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Styled from "styled-components"
 import { Stepper ,Step } from 'react-form-stepper';
@@ -11,27 +10,53 @@ class YourIndustry extends Component {
     error: "",
   };
 
+  validateFormData = (formData) => {
+    const { services, websiteLink, otherServiceDetails } = formData;
+
+    // Check if services are selected
+    if (!services) {
+      this.setState({ error: "Please select a service." });
+      return false;
+    }
+
+    // Check if the "Others" option is selected and otherServiceDetails is provided
+    if (services === "others" && !otherServiceDetails) {
+      this.setState({ error: "Please provide details for the 'Others' option." });
+      return false;
+    }
+
+    return true;
+  };
+
   continue = (e) => {
     e.preventDefault();
 
     const { formData } = this.props;
-    const { services } = formData;
-    console.log(services);
 
-    if (!services) {
-      this.setState({ error: "Please select a service." });
-
+    if (!this.validateFormData(formData)) {
       return;
     }
+
     // Store the selected data in parent component or wherever required
     // this.props.storeData(selectedService, websiteLink);
     this.props.nextStep();
   };
 
   handleRadioChange = (e) => {
+    const selectedService = e.target.value;
+    let error = "";
+
+    // Clear error when user selects a service
+    if (selectedService !== "others") {
+      error = "";
+    }
+
     this.props.updateFormData({
-      services: e.target.value,
+      services: selectedService,
+      otherServiceDetails: "", // Clear otherServiceDetails when user selects a service
     });
+
+    this.setState({ error });
   };
 
   handleWebsiteLinkChange = (e) => {
@@ -40,10 +65,17 @@ class YourIndustry extends Component {
     });
   };
 
+  handleOtherServiceDetailsChange = (e) => {
+    this.props.updateFormData({
+      otherServiceDetails: e.target.value
+    });
+  };
+
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
+
 
   render() {
     const { error } = this.state;
@@ -133,11 +165,11 @@ class YourIndustry extends Component {
                       <Input
                         type="radio"
                         name="industry"
-                        value="Finanacial"
-                        checked={formData.services === "Finanacial"}
+                        value="UI design/Redesign"
+                        checked={formData.services === "UI design/Redesign"}
                         onChange={this.handleRadioChange}
                       />
-                      Finanacial
+                      UI design/Redesign
                     </Label>
                   </InputContainer>
                   <InputContainer>
@@ -191,8 +223,11 @@ Migration to a new CMS
 </InputContainer>
 <InputContainer>
 <Label>
-    <Input type='radio'  name="industry" value="Finanacial" checked={formData.services ==="Finanacial"} onChange={this.handleRadioChange}/>
-    <Input1 type="text" placeholder="others (please specify)"/>
+    <Input type='radio'  name="industry" value="others" checked={formData.services ==="others"} onChange={this.handleRadioChange}/>
+    <Input1  type="text"
+                      placeholder="others (please specify)"
+                      value={formData.otherServiceDetails}
+                      onChange={this.handleOtherServiceDetailsChange} />
     </Label>
 </InputContainer>
 

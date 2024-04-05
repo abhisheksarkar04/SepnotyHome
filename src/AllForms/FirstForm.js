@@ -219,7 +219,7 @@ handleRadioChange = (event) => {
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={formData.numberOfPages === "1,000-5,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="1,000-5,000" checked={formData.numberOfPages === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>

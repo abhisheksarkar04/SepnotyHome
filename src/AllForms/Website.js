@@ -82,10 +82,12 @@ class Form extends Component {
       step3:{
         services:"",
         webisiteLink:"",
+        otherServiceDetails:"",
       },
       step4:{
         UIDesignMockups:"",
     	  chosenCMS:"",
+        cmsDetails:"",
       },
       step5:{
         appFeatures:[],
@@ -98,20 +100,21 @@ class Form extends Component {
       step7:{
         complianceRequirements:[],
     	  externalIntegration: true,
+        integrationDetails:"",
         details:"",
+        otherCompliance:"",
       },
       step8:{
       username:"",
     	email:"",
     	companyName:"",
     	phoneNumber:"",
-    	wayOfCommunication:"",
+    	wayOfCommunication:"Any",
       agreement:{
-        contact: true,
-        requestInfo: true,
+        contact: false,
+        requestInfo: false,
       }
       }
-      
     },
     recivedData:[]
 
