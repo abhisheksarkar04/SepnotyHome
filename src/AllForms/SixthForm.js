@@ -33,7 +33,7 @@ class FormNo5 extends Component {
     const errors = "";
 
     if (typeOfMedia.length === 0) {
-      errors.mediaContent = 'Please select at least one media content type.';
+      errors = 'Please select at least one media content type.';
     }
 
     if (!visitors) {

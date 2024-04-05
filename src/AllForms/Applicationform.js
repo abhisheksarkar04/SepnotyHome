@@ -72,7 +72,7 @@ class Application extends Component {
     step: 1,
     formData: {
       step1: {
-        typeofDevelopment:"website",
+        typeofDevelopment:"Application",
         typeOfWebsite: [],
         numberOfPages: '',
       },
@@ -97,18 +97,19 @@ class Application extends Component {
       },
       step7:{
         complianceRequirements:[],
-    	  externalIntegration: true,
+        integrationDetails:"",
         details:"",
+        otherCompliance:"",
       },
       step8:{
       username:"",
     	email:"",
     	companyName:"",
     	phoneNumber:"",
-    	wayOfCommunication:"",
+    	wayOfCommunication:"Any",
       agreement:{
-        contact: true,
-        requestInfo: true,
+        contact: false,
+        requestInfo: false,
       }
       }
       

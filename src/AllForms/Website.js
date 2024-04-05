@@ -99,7 +99,6 @@ class Form extends Component {
       },
       step7:{
         complianceRequirements:[],
-    	  externalIntegration: true,
         integrationDetails:"",
         details:"",
         otherCompliance:"",

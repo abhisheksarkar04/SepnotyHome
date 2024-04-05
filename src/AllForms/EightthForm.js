@@ -3,12 +3,75 @@ import React, { Component } from 'react';
 import styled from "styled-components"
 import { Stepper ,Step} from 'react-form-stepper';
 import './App.css';
+import submit from "./images/submit.svg";
+
+
+
+const Popup = ({ onClose }) => (
+  <PopupContainer>
+    <PopupContent>
+      <Img src={submit}/>
+      <SubPara>Submitted <br/> successfully!</SubPara>
+      <CloseButton onClick={onClose}>Close</CloseButton>
+    </PopupContent>
+  </PopupContainer>
+);
+
+const SubPara = styled.p`
+color:white;
+font-size:32px;
+margin-buttom:50px;
+`
+
+const PopupContainer = styled.div`
+position: fixed;
+top: 20%;
+left: 40%;
+width: 360px;
+background-color: black;
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+padding: 10px;
+@media screen and (max-width: 576px) {
+  width: 71%;
+  height: 52%;
+  left: 10%;
+  top: 35%;
+  margin: 10px 10px 10px -20px;
+`;
+const Img = styled.img`
+height:30%;
+`
+
+const PopupContent = styled.div`
+margin-top:50px;
+  background-color:black;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  height:500px;
+  gap:30px;
+`;
+
+const CloseButton = styled.button`
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #2B459B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
 
 
 class FourthForm extends Component {
   state = {
     preferredCommunication: "Any",
     error: "",
+    submitted: false,
   }
 
   handlenameChange = (e) => {
@@ -67,8 +130,9 @@ class FourthForm extends Component {
   }
 
   handleButtonClick = (page) => {
+    
     this.props.updateFormData({
-      wayOfCommunication: page,
+      wayOfCommunication: this.state.preferredCommunication,
     })
     this.setState({
       preferredCommunication: page
@@ -97,17 +161,18 @@ class FourthForm extends Component {
     }
   
     // Validation passed, clear error and proceed with form submission
-    this.setState({ error: "" });
+    this.setState({ error: "", submitted: true });
     this.props.onSubmit(e);
   }
   
   render() {
-    const { preferredCommunication, error } = this.state;
+    const { preferredCommunication, error ,submitted } = this.state;
     const isSubmitDisabled = error !== "" || !this.areCheckboxesChecked();
     const { formData } = this.props;
 
     return (
       <Main className='form'>
+       
         <form onSubmit={this.handleSubmit}>
           <StyledStepper
             activeStep={7}
@@ -131,6 +196,7 @@ class FourthForm extends Component {
           </StyledStepper>
 
           <M>
+          {submitted && <Popup onClose={() => this.setState({ submitted: false })} />}
             <Mai>
               <P1>Almost done!</P1>
               <P2>Please let us know where we should send your estimate. Our experts may need to ask a few extra questions to calculate a precise quote for your case.</P2>
@@ -230,7 +296,9 @@ class FourthForm extends Component {
               Submit
             </button>
           </Button>
+          
         </form>
+        
       </Main>
     );
   }
@@ -294,11 +362,12 @@ const Button = styled.div`
 const Main = styled.div`
   background-color: #0c111f;
   ${media.mobile} {
-    width: 100%;
+    width: 80%;
+    margin-left:-10%;
   }
 `;
 const Input1 = styled.input`
-margin-left:-80%;
+  margin-left:-80%;
   color: #c1cae7;
   cursor: pointer;
   ${media.mobile} {
@@ -310,11 +379,11 @@ const M = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-left:20%;
+  margin-left:10%;
   width: 80%;
   ${media.mobile} {
-    width: 25%;
-    margin-left:33%;
+    width: 10%;
+    margin-left:auto;
   }
 `;
 const Mai = styled.div`
@@ -325,6 +394,9 @@ const Mai = styled.div`
   border-radius: 10px;
   border: 1px solid #c1cae7;
   margin-left: 0px;
+  ${media.mobile}{
+    padding:0px;
+  }
 `;
 const P1 = styled.p`
   font-size: 18px;
@@ -336,6 +408,7 @@ const P1 = styled.p`
   margin-left: 30px;
   ${media.mobile} {
     font-size: 14px;
+    margin-left:3px;
   }
 `;
 const P2 = styled.div`
@@ -348,6 +421,7 @@ const P2 = styled.div`
   width: 80%;
   ${media.mobile} {
     font-size: 13px;
+    margin-left:3px;
   }
 `;
 const P3 = styled.p`
@@ -358,11 +432,19 @@ const P3 = styled.p`
   margin-left: 30px;
   margin-top: 15px;
   margin-bottom: 0px;
+  ${media.mobile}{
+    font-size:11px;
+    margin-left:0px;;
+
+  }
 `;
 const M2 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 40px;
+  ${media.mobile}{
+    gap:20px;
+  }
 `;
 const M3 = styled.div`
   display: flex;
@@ -385,6 +467,9 @@ const P4 = styled.p`
   color: #263238;
   margin-left: 30px;
   margin-bottom: 15px;
+  ${media.mobile}{
+    font-size:12px;
+  }
 `;
 const Input = styled.input`
 margin-left:30px;
@@ -395,6 +480,9 @@ width:180px;
 height: 30px;
 margin-bottom: -90px
 border-radius: 3px;
+${media.mobile}{
+  width:120px;
+}
 `;
 const Button1 = styled.button`
   background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
