@@ -7,61 +7,74 @@ import './App.css';
 
 class FourthForm extends Component {
   state = {
-     // Update state to store preferred communication
-     preferredCommunication:"",
-    agreeToContact: false,
-    agreeToProvideInfo: false,
+    preferredCommunication: "Any",
+    error: "",
   }
-  
+
   handlenameChange = (e) => {
     this.props.updateFormData({
       username: e.target.value
     });
   }
+
   handlecompanyChange = (e) => {
     this.props.updateFormData({
-      companyName:e.target.value
+      companyName: e.target.value
     })
   }
-
 
   handleEmailChange = (e) => {
-    this.props.updateFormData({
-      email:e.target.value
-    })
+    const email = e.target.value;
+    const emailPattern = /\S+@\S+\.\S+/; // Regular expression pattern for email validation
+
+    if (!emailPattern.test(email)) {
+      this.setState({ error: "Please enter a valid email address." });
+    } else {
+      this.setState({ error: "" });
+      this.props.updateFormData({ email });
+    }
   }
+
   handleNumberChange = (e) => {
-    this.props.updateFormData({
-      phoneNumber:e.target.value
-    })
+    const phoneNumber = e.target.value;
+    const phonePattern = /^\d{10}$/; 
+    // Regular expression pattern for 10-digit phone number
+
+    this.props.updateFormData({ phoneNumber });
+
+    if (!phonePattern.test(phoneNumber)) {
+      this.setState({ error: "Phone number must be 10 digits." });
+    } else {
+      this.setState({ error: "" });
+      
+    }
   }
+
   handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
-    this.setState({ [name]: checked });
+    const { contact, requestInfo } = this.props.formData.agreement;
+    this.props.updateFormData({
+      agreement: {
+        ...this.props.formData.agreement,
+        [name]: checked
+      }
+    });
   };
 
   areCheckboxesChecked = () => {
-    const { agreeToContact, agreeToProvideInfo } = this.state;
-    const {requestInfo,contact} = this.props.formData
-
-    /* this.props.updateFormData({
-      contact:!contact
-    })
-    this.props.updateFormData({
-      requestInfo:!requestInfo
-    }) */
-    return agreeToContact && agreeToProvideInfo;
-    
+    const { agreement } = this.props.formData;
+    return agreement.contact && agreement.requestInfo;
   }
-  handleButtonClick =(page) => {
+
+  handleButtonClick = (page) => {
     this.props.updateFormData({
-      wayOfCommunication:page,
+      wayOfCommunication: page,
     })
     this.setState({
-      preferredCommunication:page
+      preferredCommunication: page
     })
-    
   }
+
   back = e => {
     e.preventDefault();
     this.props.prevStep();
@@ -69,112 +82,116 @@ class FourthForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform any final validations or processing here before submitting
-    this.props.onSubmit(e); // This will call the submitData function in the parent component (Form)
+    const { email, phoneNumber, agreement, username, companyName } = this.props.formData;
+  
+    // Check if any required fields are empty
+    if (!username || !companyName || !email || !phoneNumber) {
+      this.setState({ error: "Please fill out all required fields." });
+      return; // Exit early
+    }
+  
+    // Check if checkboxes are checked
+    if (!agreement.contact || !agreement.requestInfo) {
+      this.setState({ error: "Please agree to both checkboxes." });
+      return; // Exit early
+    }
+  
+    // Validation passed, clear error and proceed with form submission
+    this.setState({ error: "" });
+    this.props.onSubmit(e);
   }
-
-
-
+  
   render() {
-    const { preferredCommunication } = this.state;
-    const { agreeToContact, agreeToProvideInfo } = this.state;
-    const isSubmitDisabled = !this.areCheckboxesChecked();
+    const { preferredCommunication, error } = this.state;
+    const isSubmitDisabled = error !== "" || !this.areCheckboxesChecked();
     const { formData } = this.props;
-    
+
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
-        <StyledStepper
-          activeStep={7}
-          styleConfig={{
-            activeBgColor: "#2B459B",
-            activeTextColor: "#fff",
-            inactiveBgColor: "#fff",
-            inactiveTextColor: "#2b7cff",
-            completedBgColor: "#407B24",
-            completedTextColor: "#fff",
-          }}
-        >
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-          <StyledStep />
-        </StyledStepper>
-          
+          <StyledStepper
+            activeStep={7}
+            styleConfig={{
+              activeBgColor: "#2B459B",
+              activeTextColor: "#fff",
+              inactiveBgColor: "#fff",
+              inactiveTextColor: "#2b7cff",
+              completedBgColor: "#407B24",
+              completedTextColor: "#fff",
+            }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper>
 
-<M> 
-        <Mai><P1>
-        Almost done!
-        </P1>
-        <P2>
-        Please let us know where we should send your estimate. Our experts may need to ask a few extra questions to calculate a precise quote for your case.
-        </P2>
-        <P3>Your contact data</P3>
-        <M2>
-            <M3>
-              <P4>*Full name</P4>
-              <Input
-  type="text"
-  name="username" // Corrected the name attribute
-  value={formData.username}
-  onChange={this.handlenameChange} // Corrected the function name
-/>
-              
-            </M3>
-            <M3>
-              <P4>*Company name</P4>
-              <Input
-                type="text"
-                name="companyName"
-                value={formData.companyName}
-                onChange={this.handlecompanyChange}
-              />
-            </M3>
-          </M2>
-          <M2>
-            <M3>
-              <P4>*Work email</P4>
-              <Input
-                type="email"
-                name="workEmail"
-                value={formData.email}
-                onChange={this.handleEmailChange}
-              />
-              
-            </M3>
-            <M3>
-              <P4>*Phone number</P4>
-              <Input
-                type="text"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={this.handleNumberChange}
-              />
-              
-            </M3>
-          </M2><br/>
-        <M33>
-            <P8>Preferred way of communication:</P8>
-            <Button1 type="button" active={preferredCommunication === 'Any'}  onClick={() => this.handleButtonClick('Any')}>Any</Button1>
-            <Button2 type="button" active={preferredCommunication === 'Email'}  onClick={() => this.handleButtonClick('Email')}>Email</Button2>
-            <Button3 type="button" active={preferredCommunication === 'Phone'}  onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
-        </M33>
-        <br/>
-        <M3>
-                <Input1 
+          <M>
+            <Mai>
+              <P1>Almost done!</P1>
+              <P2>Please let us know where we should send your estimate. Our experts may need to ask a few extra questions to calculate a precise quote for your case.</P2>
+              <P3>Your contact data</P3>
+              <M2>
+                <M3>
+                  <P4>*Full name</P4>
+                  <Input
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={this.handlenameChange}
+                  />
+                </M3>
+                <M3>
+                  <P4>*Company name</P4>
+                  <Input
+                    type="text"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={this.handlecompanyChange}
+                  />
+                </M3>
+              </M2>
+              <M2>
+                <M3>
+                  <P4>*Work email</P4>
+                  <Input
+                    type="email"
+                    name="workEmail"
+                    value={formData.email}
+                    onChange={this.handleEmailChange}
+                  />
+                </M3>
+                <M3>
+                  <P4>*Phone number</P4>
+                  <Input
+                    type="text"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={this.handleNumberChange}
+                  />
+                </M3>
+              </M2><br />
+              <M33>
+                <P8>Preferred way of communication:</P8>
+                <Button1 type="button" active={preferredCommunication === 'Any'} onClick={() => this.handleButtonClick('Any')}>Any</Button1>
+                <Button2 type="button" active={preferredCommunication === 'Email'} onClick={() => this.handleButtonClick('Email')}>Email</Button2>
+                <Button3 type="button" active={preferredCommunication === 'Phone'} onClick={() => this.handleButtonClick('Phone')} >Phone</Button3>
+              </M33>
+              <br />
+              <M3>
+                <Input1
                   type="checkbox"
                   id="agreeToContact"
-                  name="agreeToContact"
-                  checked={agreeToContact}
+                  name="contact"
+                  checked={formData.agreement.contact}
                   onChange={this.handleCheckboxChange}
                 />
                 <Label htmlFor="agreeToContact">
-                  I agree to have Sepnoty contact me Via email, Phone,
-                  Messenger.
+                  I agree to have Sepnoty contact me Via email, Phone, Messenger.
                 </Label>
               </M3>
               <br />
@@ -182,23 +199,19 @@ class FourthForm extends Component {
                 <Input1
                   type="checkbox"
                   id="agreeToProvideInfo"
-                  name="agreeToProvideInfo"
-                  checked={agreeToProvideInfo}
+                  name="requestInfo"
+                  checked={formData.agreement.requestInfo}
                   onChange={this.handleCheckboxChange}
                 />
                 <Label htmlFor="agreeToProvideInfo">
-                  I agree to have Sepnoty provide my request information to
-                  sepnoty affiliated development centres.
+                  I agree to have Sepnoty provide my request information to sepnoty affiliated development centres.
                 </Label>
               </M3>
               <br />
               <P5>
-                Your personal data will be stored for ten years on US servers in
-                accordance with GDPR, and erased thereafter. We'll share it with
-                our development centre to address your request, ensuring GDPR
-                compliance at both locations. Refer to our{" "}
-                <Span>Privacy Policy</Span> for details.
+                Your personal data will be stored for ten years on US servers in accordance with GDPR, and erased thereafter. We'll share it with our development centre to address your request, ensuring GDPR compliance at both locations. Refer to our <Span>Privacy Policy</Span> for details.
               </P5>
+              {error && <Error>{error}</Error>}
             </Mai>
           </M>
 
@@ -213,7 +226,6 @@ class FourthForm extends Component {
               type="submit"
               className="buttons__button buttons__button--next"
               disabled={isSubmitDisabled}
-              onClick={this.submitdata}
             >
               Submit
             </button>
