@@ -199,6 +199,7 @@ export const ContactUsInput = styled.input`
   }
   @media screen and (max-width: 576px) {
     width: 160px;
+    margin-right: 10px;
   }
 `;
 

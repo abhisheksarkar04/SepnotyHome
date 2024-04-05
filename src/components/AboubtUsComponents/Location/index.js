@@ -30,86 +30,97 @@ import {
   // ContactItem,
   // Container,
 } from "./Styled";
-import rectangle1 from "../images/Rectangle 1.svg"
+import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
 
-import GroupImg from "../images/Rectangle 6605.svg"
+import GroupImg from "../images/Rectangle 6605.svg";
 
 // import ContactForm from "../../ContactUs/ContactForm";
 import FooterSection from "../../Footer/FooterSection";
 import styled from "styled-components";
 
-const Location= () => {
+const Location = () => {
   return (
     <>
       <DigitalContainer>
         <Header>
-        Company &gt; <Span>Our Partners</Span>
+          Company &gt; <Span>Our Partners</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>
           <ConRecDesc>
-          Sepnoty is headquartered in Bangalore, In order to effectively collaborate with regional industry leaders and startups and to access   local talent, we are constantly broadening our global reach.
+            Sepnoty is headquartered in Bangalore, In order to effectively
+            collaborate with regional industry leaders and startups and to
+            access local talent, we are constantly broadening our global reach.
           </ConRecDesc>
           <Rectangle3 src={rectangle3} alt="not-found" />
           <Rectangle2 src={rectangle2} alt="not-found" />
           <Rectangle1 src={rectangle1} alt="not-found" />
         </ContentRecomContainer>
         <ServiceItemCon>
-            <Div>
-                <iframe title="sepnoty" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.438013800391!2d79.98526797473207!3d14.9126707856115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7bf369e53fd7%3A0xe0d967314b1ab7f1!2sSepnoty!5e0!3m2!1sen!2sin!4v1709201233005!5m2!1sen!2sin" width="100%" height="600" style={{border:"0"}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </Div>
-            <Main>
-              <PP>Contact Us:</PP>
-              <Img src={GroupImg}/>
-              <P>Sepnoty<br/>
-                WX7M+8CG, Udayagiri Rd,<br/> 
-                Vaddi Palem, Janathapet,<br/>
-                Kavali, Andhra Pradesh 524201
-              </P>
-              </Main>
-          </ServiceItemCon>
+          <Div>
+            <iframe
+              title="sepnoty"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.438013800391!2d79.98526797473207!3d14.9126707856115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b7bf369e53fd7%3A0xe0d967314b1ab7f1!2sSepnoty!5e0!3m2!1sen!2sin!4v1709201233005!5m2!1sen!2sin"
+              width="100%"
+              height="600"
+              style={{ border: "0" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Div>
+          <Main>
+            <PP>Contact Us:</PP>
+            <Img src={GroupImg} />
+            <P>
+              Sepnoty
+              <br />
+              WX7M+8CG, Udayagiri Rd,
+              <br />
+              Vaddi Palem, Janathapet,
+              <br />
+              Kavali, Andhra Pradesh 524201
+            </P>
+          </Main>
+        </ServiceItemCon>
       </DigitalContainer>
       <FooterSection />
     </>
   );
-
 };
 
 export default Location;
 const media = {
-  mobile: '@media(max-width: 576px)'
+  mobile: "@media(max-width: 576px)",
 };
 
 const Div = styled.div`
-${media.mobile}{
-  width:90%;
-  margin-left:5%;
-}
-`
+  ${media.mobile} {
+    width: 100%;
+    margin-left: 0;
+  }
+`;
 
 const P = styled.p`
-color:white;
-`
+  color: white;
+`;
 const Main = styled.div`
-display:flex;
-flex-direction:column;
-padding:20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 
-
-
-gap:10px;
-
-`
+  gap: 10px;
+`;
 const PP = styled.p`
-font-size:25px;
-color:white;
-`
+  font-size: 25px;
+  color: white;
+`;
 const Img = styled.img`
-height:24px;
-margin-left:-97%;
-${media.mobile}{
-  margin-left:-92%;
-}
-`
+  height: 24px;
+  margin-left: -97%;
+  ${media.mobile} {
+    margin-left: -92%;
+  }
+`;

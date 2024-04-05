@@ -336,7 +336,7 @@ export const Homehd1 = styled.h1`
   @media screen and (max-width: 576px) {
     font-size: 17px;
     letter-spacing: 0px;
-    width: 95%;
+    width: 90%;
     margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
@@ -512,7 +512,8 @@ export const HomeAchievements = styled.div`
   margin-right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 export const HomeOrangeText = styled.h2`
   color: white;

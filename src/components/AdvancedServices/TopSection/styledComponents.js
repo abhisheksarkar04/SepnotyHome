@@ -32,16 +32,15 @@ export const AdServiceLeftHeading1 = styled.h2`
   display: none;
   @media screen and (max-width: 576px) {
     display: block;
-    width: 90%;
+
     font-size: 20px;
-    margin-left: -160px;
+    margin-left: -125px;
     padding-top: 20px;
   }
 `;
 export const AdServiceLeftHeadingBlue = styled.span`
   color: #4c64b2;
   @media screen and (max-width: 576px) {
-    width: 300px;
   }
 `;
 export const AdServiceLeftDescript = styled.p`
@@ -56,6 +55,7 @@ export const AdServiceLeftDescript = styled.p`
     line-height: 1.5;
     width: 97%;
     margin-left: 0px;
+    letter-spacing: 0px;
   }
 `;
 export const AdServiceRightPart = styled.div`
@@ -77,8 +77,8 @@ export const AdServiceRightImg = styled.img`
   width: 600px;
   height: 650px;
   @media screen and (max-width: 576px) {
-    width: 80%;
-    height: 250px;
+    width: 78%;
+    height: 230px;
     margin-left: -30px;
   }
 `;

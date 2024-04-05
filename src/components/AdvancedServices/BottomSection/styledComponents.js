@@ -10,6 +10,7 @@ export const ServiceCards = styled.div`
     flex-wrap: wrap;
     padding: 0px 0px 0px 0px;
     margin-left: 0px;
+    justify-content: center;
   }
 `;
 
@@ -34,7 +35,7 @@ export const ServiceCardContainer = styled.div`
   @media screen and (max-width: 576px) {
     width: 44%;
     margin: 10px;
-    height: 280px;
+    height: auto;
     background-color: #d6dae7;
     border-radius: 5px;
     padding: 10px 0px;
