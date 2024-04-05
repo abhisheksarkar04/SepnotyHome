@@ -1,10 +1,8 @@
 
 import React, { Component } from 'react';
 import Styled from "styled-components"
+import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from "./allFormValues";
-import FirstStep from "./Website/FirstPage";
-import { Stepper, Step ,StepLabel} from 'react-form-stepper';
 
 
 class PersonalDetails extends Component {
@@ -221,7 +219,7 @@ handleRadioChange = (event) => {
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={formData.numberOfPages === "1,000-5,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="1,000-5,000" checked={formData.numberOfPages === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>

@@ -34,8 +34,10 @@ export const ServiceCardContainer = styled.div`
   }
   @media screen and (max-width: 576px) {
     width: 44%;
-    margin: 10px;
     height: auto;
+
+    margin: 10px 10px 5px 10px;
+
     background-color: #d6dae7;
     border-radius: 5px;
     padding: 10px 0px;
@@ -84,7 +86,7 @@ export const ServiceDescription = styled.p`
     font-weight: 550;
     margin: 0px 5px;
     padding: 0px 2px;
-    flex-grow: 1;
+
     word-spacing: 3px;
   }
 `;

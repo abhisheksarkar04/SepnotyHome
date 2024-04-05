@@ -66,7 +66,7 @@ const coursesData = [
 
 const levelsData = ["Beginner", "Intermediate", "Advanced"];
 
-class Form extends Component {
+class Application extends Component {
   state = {
     activeStep:0,
     step: 1,
@@ -82,12 +82,10 @@ class Form extends Component {
       step3:{
         services:"",
         webisiteLink:"",
-        otherServiceDetails:"",
       },
       step4:{
         UIDesignMockups:"",
     	  chosenCMS:"",
-        cmsDetails:"",
       },
       step5:{
         appFeatures:[],
@@ -100,21 +98,20 @@ class Form extends Component {
       step7:{
         complianceRequirements:[],
     	  externalIntegration: true,
-        integrationDetails:"",
         details:"",
-        otherCompliance:"",
       },
       step8:{
       username:"",
     	email:"",
     	companyName:"",
     	phoneNumber:"",
-    	wayOfCommunication:"Any",
+    	wayOfCommunication:"",
       agreement:{
-        contact: false,
-        requestInfo: false,
+        contact: true,
+        requestInfo: true,
       }
       }
+      
     },
     recivedData:[]
 
@@ -380,6 +377,4 @@ class Form extends Component {
     
   }
 }
-
-
-export default Form;
+export default Application;

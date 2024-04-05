@@ -71,7 +71,7 @@ class Software extends Component {
       formData: {
         step1: {
           typeofDevelopment:"software",
-          typeOfSoftware:"",
+          typeOfSoftware:[],
           tools:"",
         },
         step2:{
@@ -265,14 +265,16 @@ class Software extends Component {
     
 
     render() {
-     const {step} = this.state
+     const {step,formData} = this.state
+
       
       switch(step) {
         case 1: 
           return (
             < FirstForm
               nextStep={this.nextStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step1}
+              updateFormData={this.updateFormData}
             />
           )
         case 2:
@@ -280,14 +282,16 @@ class Software extends Component {
             <CourseDetails
               nextStep={this.nextStep}
               prevStep={this.prevStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step2}
+              updateFormData={this.updateFormData}
             />
           )
         case 3:
           return (
             < YourIndustry nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
+            formData={formData.step3}
+            updateFormData={this.updateFormData}
             
             />
           )
@@ -295,14 +299,16 @@ class Software extends Component {
             return (
               < Summary nextStep={this.nextStep}
               prevStep={this.prevStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step4}
+              updateFormData={this.updateFormData}
              />
             )
         case 5:
               return (
                 <SecondForm1  nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                onDataReceived={this.handleDataReceived}
+                formData={formData.step5}
+                updateFormData={this.updateFormData}
                 />
               )
         case 6:
@@ -310,7 +316,9 @@ class Software extends Component {
                 <FormNo5 
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                onDataReceived={this.handleDataReceived}
+     
+                formData={formData.step6}
+                updateFormData={this.updateFormData}
                 
               />
               )
@@ -319,7 +327,8 @@ class Software extends Component {
             <ThirdForm 
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
+            formData={formData.step7}
+            updateFormData={this.updateFormData}
           />
           )
         case 8:
@@ -327,8 +336,9 @@ class Software extends Component {
             <FourthForm 
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
-  
+            formData={formData.step8}
+            updateFormData={this.updateFormData}
+            onSubmit={this.submitData}
           />
           )
   

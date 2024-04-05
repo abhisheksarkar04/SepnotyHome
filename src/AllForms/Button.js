@@ -1,6 +1,6 @@
 import Styled from 'styled-components';
 import React, { useState } from 'react';
-import ApplicationPage from '../AllForms/Website';
+import ApplicationPage from "./Applicationform";
 import WebsitePage from '../AllForms/Website';
 import SoftwarePage from "../AllForms/Software";
 

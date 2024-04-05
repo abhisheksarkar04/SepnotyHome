@@ -1,31 +1,48 @@
 
 import React, { Component } from 'react';
 import Styled from "styled-components"
-import { Stepper , Step } from 'react-form-stepper';
+import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from './allFormValues';
-
-
-import FourthPage from "./Website/FourthPage";
 
 class Summary extends Component {
   state = {
     error: ''
 
   };
+  validateFormData = (formData) => {
+    const { UIDesignMockups,chosenCMS,cmsDetails } = formData;
+
+    // Check if services are selected
+    if (!UIDesignMockups) {
+      this.setState({ error: "Please select a MockUps" });
+      return false;
+    }
+
+    else if(!chosenCMS){
+      this.setState({error:"please select a CMS"})
+      return false;
+    }
+
+    // Check if the "Others" option is selected and otherServiceDetails is provided
+    if (chosenCMS === "Yes" && !cmsDetails) {
+      this.setState({ error: "Please provide details for the 'Others' option." });
+      return false;
+    }
+
+    return true;
+  };
+
   continue = (e) => {
     e.preventDefault();
-  const { UIDesignMockups, chosenCMS } = this.props.formData;
-
-  if (!UIDesignMockups || !chosenCMS) {
-    this.setState({ error: 'Please answer all questions.' });
-    return;
+    const { formData } = this.props;
+    if (!this.validateFormData(formData)) {
+      return; // Prevent proceeding if form data is not valid
+    }
+    else{
+      this.props.nextStep();
+    }
+    
   }
-
-    // Store the selected data in parent component or wherever required
-    // this.props.storeData(hasMockups, chosenCMS);
-    this.props.nextStep();
-  };
 
   handleMockupsChange = (e) => {
     this.props.updateFormData({
@@ -33,13 +50,34 @@ class Summary extends Component {
     });
 
   };
+  handleCMsDetails = (e) => {
+    this.props.updateFormData({
+      cmsDetails:e.target.value
+    })
+  }
+  
+  
   
   handleCMSChange = (e) => {
-    const { name, value } = e.target;
+    const {chosenCMS,cmsDetails} = this.props.formData
+    const selectedCms = e.target.value;
+    let error = "";
+
+    // Clear error when user selects a service
+    if (selectedCms !== "Yes") {
+      error = "";
+    }
+
     this.props.updateFormData({
-     chosenCMS:e.target.value
+      chosenCMS:selectedCms,
+      cmsDetails: "", // Clear otherServiceDetails when user selects a service
     });
+
+    this.setState({ error });
   };
+
+
+
   back = e => {
 
     e.preventDefault();
@@ -48,7 +86,7 @@ class Summary extends Component {
 
   render() {
     const { error } = this.state;
-    const {UIDesignMockups,chosenCMS} = this.props.formData
+    const {UIDesignMockups,chosenCMS,cmsDetails} = this.props.formData
 
     return (
       <Main className="form">
@@ -112,7 +150,7 @@ No
 <InputContainer>
 <Label>
 <Input type='radio' name="cms" value="Yes" checked={chosenCMS==="Yes"} onChange={this.handleCMSChange} />
-<Input1 type="text" placeholder="Yes (Please Specify)" onChange={this.handleCMSChange} />
+<Input1 type="text" value={cmsDetails} placeholder="Yes (Please Specify)" onChange={this.handleCMsDetails} />
     </Label>
 </InputContainer>
 {error && <ErrorMessage>{error}</ErrorMessage>}

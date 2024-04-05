@@ -289,7 +289,7 @@ export const IntroRightImg = styled.img`
   margin-right: 100px;
   margin-bottom: 100px;
   @media screen and (max-width: 576px) {
-    width: 86%;
+    width: 85%;
     height: 430px;
     margin-left: -50px;
     margin-top: -90px;
@@ -336,11 +336,12 @@ export const Homehd1 = styled.h1`
   @media screen and (max-width: 576px) {
     font-size: 17px;
     letter-spacing: 0px;
+
     width: 90%;
+
     margin: 85px 0px 20px 20px;
     display: block;
     line-height: 2.3rem;
-    padding-right: 20px;
   }
 `;
 
@@ -529,6 +530,7 @@ export const HomeBlackText = styled.p`
     font-size: 14px;
     font-weight: 0;
     margin-top: 10px;
+    text-align: center;
   }
 `;
 

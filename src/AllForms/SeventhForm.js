@@ -6,61 +6,50 @@ import './App.css';
 
 // import SecondPage from "./Forms/SevenPage"
 
-import SevenPage from "./Website/SevenPage";
-import handleFormValues from "./allFormValues";
 
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class ThirdForm extends Component {
   state = {
-    compliance: [],
-    integration: "",
-    integrationDetails: "",
-    additionalDetails: "",
     formErrors: {
-      compliance: "",
-      integration: "",
-      integrationDetails: "",
-      additionalDetails: "",
+      error:""
     },
   };
 
   validateForm = () => {
-    const { compliance, integration, integrationDetails, additionalDetails } =
-      this.state;
+    const { compliance } = this.state;
     const formErrors = {};
-    const {complianceRequirements,details} = this.props.formData
-
-
+    const { complianceRequirements, details } = this.props.formData;
+  
     if (complianceRequirements.length === 0) {
       formErrors.compliance = "Please select at least one compliance requirement";
+    } else if (
+      complianceRequirements.includes("Other") &&
+      !this.props.formData.otherCompliance
+    ) {
+      formErrors.compliance = "Please specify 'Other' compliance requirement";
     }
+  
     if (!details) {
-
       formErrors.additionalDetails = "Please add additional details";
     } else {
       this.props.nextStep();
     }
-
+  
     this.setState({ formErrors });
     return Object.keys(formErrors).length === 0;
   };
-
+  
   handleIntegrationChange = (event) => {
-    const { name, value } = event.target;
-
-
     const {externalIntegration} = this.props.formData
-
     this.props.updateFormData({
-    externalIntegration:!externalIntegration
+      integrationDetails:event.target.value
     })
       
   };
 
   handleCheckboxChange = event => {
-
     const { id, checked } = event.target;
     const complianceRequirements = this.props.formData.complianceRequirements || [];
     this.props.updateFormData({
@@ -71,16 +60,12 @@ class ThirdForm extends Component {
 
   };
 
-  handleIntegrationChange = (event) => {
-    const { name, value } = event.target;
-    this.setState((prevState) => ({
-      [name]: value,
-      formErrors: {
-        ...prevState.formErrors,
-        integration: "",
-        integrationDetails: "",
-      },
-    }));
+  handleOtherComplianceChange = event => {
+    const { value } = event.target;
+    this.props.updateFormData({
+      otherCompliance:event.target.value
+      })
+
   };
 
   back = (e) => {
@@ -90,8 +75,6 @@ class ThirdForm extends Component {
 
   handleAdditionalDetailsChange = (event) => {
     const { name, value } = event.target;
-
-
     this.props.updateFormData({
       details:event.target.value
       })
@@ -100,20 +83,11 @@ class ThirdForm extends Component {
 
   continue = (e) => {
     e.preventDefault();
-    const { compliance, integration, integrationDetails, additionalDetails } =
-      this.state;
-    if (this.validateForm()) {
-      // Store the selected compliance options in state or proceed further
+    const isValid = this.validateForm();
+    if (isValid) {
+      // Proceed to the next step
+      this.props.nextStep();
     }
-    const formData = {
-      field7: {
-        compliance,
-        integration,
-        integrationDetails,
-        additionalDetails,
-      },
-    };
-    this.props.onDataReceived(formData);
   };
 
   render() {
@@ -121,16 +95,14 @@ class ThirdForm extends Component {
       compliance,
       formErrors,
       integration,
-      integrationDetails,
       additionalDetails,
     } = this.state;
 
-    const {complianceRequirements} = this.props.formData
+    const {complianceRequirements,otherCompliance,integrationDetails,details} = this.props.formData
 
     return (
       <Main className="form">
         <form>
-
         <StyledStepper
           activeStep={6}
           styleConfig={{
@@ -198,11 +170,18 @@ class ThirdForm extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Input type="checkbox" id="five" name='compliance' value=""/>
-                        <Input1 type="text" placeholder="Others (Please Specify)"/>
+                        <Input type="checkbox"
+              id="Other"
+              name='compliance'
+              checked={complianceRequirements.includes("Other")}
+              onChange={this.handleCheckboxChange}/>
+                        <Input1  type="text"
+                placeholder="Other Compliance (Please Specify)"
+                value={otherCompliance} // Bind value to state
+                onChange={this.handleOtherComplianceChange}/>
 
                     </CheckBoxCon>
-                    {formErrors.compliance && <Error>{formErrors.compliance}</Error>}
+                    
                 </Form>
 
             </FormContainer>
@@ -213,58 +192,26 @@ class ThirdForm extends Component {
               <Form2>
                 <InputContainer>
                   <Label>
-                    <input
-                      type="radio"
+                    <Input4
+                      type="text"
                       name="integration"
-                      value="No"
-                      checked={integration === "No"}
+                      value={integrationDetails}
                       onChange={this.handleIntegrationChange}
                     />
-                    No
                   </Label>
-                </InputContainer>
-                <InputContainer>
-                  <Label>
-                    <input
-                      type="radio"
-                      name="integration"
-                      value="Yes (Please Specify)"
-                      checked={integration === "Yes (Please Specify)"}
-                      onChange={this.handleIntegrationChange}
-                    />
-                    Yes (Please Specify)
-                    {integration === "Yes (Please Specify)" && (
-                      <Input1
-                        type="text"
-                        name="integrationDetails"
-                        value={integrationDetails}
-                        onChange={this.handleIntegrationChange}
-                        placeholder="Please specify integration details"
-                      />
-                    )}
-                  </Label>
-                  {formErrors.integration && (
-                    <Error>{formErrors.integration}</Error>
-                  )}
-                  {formErrors.integrationDetails && (
-                    <Error>{formErrors.integrationDetails}</Error>
-                  )}
                 </InputContainer>
                 <Heading1>
-                  *Do you need integration with any external or internal
-                  systems?
+                *Here, you can add any details you want to share with us:
                 </Heading1>
               </Form2>
               <Input3
                 type="text"
                 name="additionalDetails"
-                value={additionalDetails}
+                value={details}
                 onChange={this.handleAdditionalDetailsChange}
                 placeholder="Please add here"
               />
-              {formErrors.additionalDetails && (
-                <Error>{formErrors.additionalDetails}</Error>
-              )}
+             <Error>{formErrors.error}</Error>
             </Form1>
           </Mai>
         </form>
@@ -291,6 +238,11 @@ export default ThirdForm;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
+
+const Input4 = Styled.input`
+background:transparent;
+border: 1px solid #8C8C8C;
+`
 
 const Error = Styled.div`
   color: red;

@@ -98,7 +98,7 @@ export const CuateImage = styled.img`
 `;
 
 export const CuateImage11 = styled.img`
-  width: 36%;
+  width: 35%;
   height: 250px;
   margin-left: 0px;
   margin-right: 0px;

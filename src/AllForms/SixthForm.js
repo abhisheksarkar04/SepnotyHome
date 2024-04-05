@@ -5,9 +5,6 @@ import Styled from "styled-components"
 import './App.css';
 
 
-import SixthPage from "./Website/SixthPage";
-import handleFormValues from "./allFormValues";
-
 // import MaterialTable from 'material-table';
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
@@ -15,7 +12,7 @@ class FormNo5 extends Component {
   state = {
 
     current: 'Yes',
-    errors: {}
+    errors: "",
 
   };
 
@@ -32,17 +29,15 @@ class FormNo5 extends Component {
     const {formData} = this.props
 
     const {typeOfMedia,paymentSystem,visitors} = formData
-
     
-    const errors = {};
-
+    const errors = "";
 
     if (typeOfMedia.length === 0) {
       errors.mediaContent = 'Please select at least one media content type.';
     }
 
-    if (!visitors===0) {
-      errors.monthlyVisitors = 'Please select the expected number of monthly visitors.';
+    if (!visitors) {
+      errors = 'Please select the expected number of monthly visitors.';
 
     }
 
@@ -209,7 +204,7 @@ class FormNo5 extends Component {
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={visitors === "1,000-5,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="1,000-5,000" checked={visitors === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>
@@ -229,52 +224,6 @@ class FormNo5 extends Component {
               </Form>
             </FormContainer>
           </Mai>
-
-          {/* <div className='select'>
-            <select
-              name='select'
-              onChange={addLevel}
-              className='select__item'
-              value={level}
-            >
-              <option value='null'>Choose course level</option>
-              {levelOptions}
-            </select>
-          </div> */}
-
-          {/* <div className='table'> */}
-
-          {/* 
-            <MuiThemeProvider theme={theme}>
-              <MaterialTable
-                title='Choose courses'
-                columns={columns}
-                data={coursesOptions}
-                onSelectionChange={addCourse}
-                options={{
-                  search: true,
-                  selection: true,
-                  paging: false,
-                  toolbar: true,
-                  showTextRowsSelected: false,
-                  searchFieldStyle: {
-                    position: 'absolute',
-                    top: '-20px',
-                    right: '-7px',
-                    width: '200px',
-                    backgroundColor: '#fff',
-                    border: '1px solid grey',
-                    padding: '3px 5px',
-                    borderRadius: '3px',
-                  },
-                  headerStyle: {
-                    display: 'none',
-                  },
-                }}
-              />
-            </MuiThemeProvider> */}
-
-          {/* </div> */}
         </form>
         <Button className="buttons">
           <button

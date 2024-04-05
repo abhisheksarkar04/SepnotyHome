@@ -231,8 +231,9 @@ export const ServiceItemImg = styled.img`
     height: 270px;
     width: 370px;
     margin:20px;
-    margin-top: 700%;
+    margin-top: 700px;
     margin-inline: -250px;
+    position: absolute;
     
     }
 
@@ -275,9 +276,7 @@ export const SmallPattern = styled.div`
     width: 50px;
     margin:15px;
     border-radius: 3px;
-    
-   
-    
+
     }
 
 
