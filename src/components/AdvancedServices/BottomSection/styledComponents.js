@@ -136,9 +136,9 @@ export const PopUpCardContainer = styled.div`
   color: white;
   @media screen and (max-width: 576px) {
     height: auto;
-    width: 80%;
+    width: 85%;
     top: 15%;
-    left: 10%;
+    left: 8%;
     transform: translate(0, 0);
     padding: 10px;
   }

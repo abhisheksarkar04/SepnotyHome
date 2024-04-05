@@ -7,28 +7,14 @@ import {
   Rectangle1,
   Rectangle2,
   Rectangle3,
-  // Button,
   Span,
   DigitalContainer,
   ListHeading,
-  // Small,
-  // Small1,
-  // Small2,
-  // Small3,
-  // ServiceItemDesc,
-  ImageCon,
   ServiceItemImg,
-  // ServiceItemButton,
-  // ServiceItemDetails,
   ServiceItemCon,
-  // ConatctCon,
-  // ContactItem,
-  // Container,
   PatternCon,
   SmallPattern,
-
-  // ContactItem,
-  // Container,
+  ServiceItemImg1,
 } from "./Styled";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
@@ -63,15 +49,13 @@ const Software = () => {
           <Rectangle1 src={rectangle1} alt="not-found" />
         </ContentRecomContainer>
         <ServiceItemCon>
-          <div>
+          <HeadImgCon>
             <PatternCon>
               <SmallPattern></SmallPattern>
               <ListHeading>Our Approach to Software Development</ListHeading>
-              <ImageCon>
-                <ServiceItemImg src={GroupImg} alt="dm" />
-              </ImageCon>
             </PatternCon>
-          </div>
+            <ServiceItemImg src={GroupImg} alt="dm" />
+          </HeadImgCon>
         </ServiceItemCon>
         <OrderContainer>
           <List>
@@ -147,6 +131,7 @@ const Software = () => {
             projects with high risks.
           </List>
         </OrderContainer>
+        <ServiceItemImg1 src={GroupImg} alt="dm" />
       </DigitalContainer>
       <FooterSection />
     </>
@@ -156,12 +141,15 @@ const Software = () => {
 export default Software;
 
 const OrderContainer = styled.ol`
-  margin-left: 85px;
+  margin-left: 7%;
   gap: 16px;
   margin-bottom: 80px;
+  padding: 0;
 
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    margin-left: 8%;
+    gap: 0px;
+    margin-bottom: 20px;
   }
 `;
 const List = styled.li`
@@ -171,10 +159,14 @@ const List = styled.li`
   color: white;
 
   @media screen and (max-width: 576px) {
-    font-size: 16px;
-    margin: -130px;
-    margin-inline: -85px;
-    margin-bottom: 140px;
-    width: 350px;
+    font-size: 14px;
+    width: 90%;
   }
+`;
+
+const HeadImgCon = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
 `;
