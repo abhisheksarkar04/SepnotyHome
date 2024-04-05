@@ -13,30 +13,16 @@ import {
   Span,
   DigitalContainer,
   ListHeading,
-  // Small,
-  // Small1,
-  // Small2,
-  // Small3,
-  // ServiceItemDesc,
-  // ImageCon,
-  // ServiceItemImg,
-  // ServiceItemButton,
-  // ServiceItemDetails,
-  // ServiceItemCon,
-  // ConatctCon,
-  // ContactItem,
-  // Container,
+  QueryContainer,
   PatternCon,
   SmallPattern,
-
-  // ContactItem,
-  // Container,
 } from "./Styled";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
 import Model from "../ContactPrice/index";
-
+import Meeting from "../../ContactUs/Meeting";
+import ContactForm from "../../ContactUs/ContactForm";
 // import GroupImg from "../images/Group.svg"
 
 // import ContactForm from "../../ContactUs/ContactForm";
@@ -46,6 +32,7 @@ import { useState } from "react";
 const PriceModel = () => {
   const [seeContact, setSeeContact] = useState(false);
 
+  const heading = "Have a question to our team about our Partners?";
   const toggleContact = () => {
     setSeeContact(true);
   };
@@ -120,6 +107,10 @@ const PriceModel = () => {
         </Main>
       </DigitalContainer>
       {seeContact && <Model />}
+      <QueryContainer>
+        <Meeting />
+        <ContactForm heading={heading} />
+      </QueryContainer>
       <FooterSection />
     </>
   );
