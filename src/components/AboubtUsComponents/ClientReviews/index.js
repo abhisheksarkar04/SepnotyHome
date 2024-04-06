@@ -180,8 +180,6 @@ const P = Styled.p`
     font-size:10px;
     margin-top: 0px;
     line-height: 1.7;
-   
-
   }
   
   `;
@@ -192,7 +190,7 @@ const Main1 = Styled.div`
   flex-flow : wrap;
   margin-top:20px;
   margin-left: 6.5%;
-  margin-bottom: 32%;
+  margin-bottom: 8%;
   @media screen and (max-width: 576px) {
     margin-left:0px;
     justify-content:space-between;

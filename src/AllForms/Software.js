@@ -72,7 +72,7 @@ class Software extends Component {
         step1: {
           typeofDevelopment:"software",
           typeOfSoftware:[],
-          tools:"",
+          numberofTools:"",
         },
         step2:{
           industryType:[],
@@ -95,18 +95,19 @@ class Software extends Component {
         },
         step7:{
           complianceRequirements:[],
-          externalIntegration: true,
-          details:"",
+        integrationDetails:"",
+        details:"",
+        otherCompliance:"",
         },
         step8:{
         username:"",
         email:"",
         companyName:"",
         phoneNumber:"",
-        wayOfCommunication:"",
+        wayOfCommunication:"Any",
         agreement:{
-          contact: true,
-          requestInfo: true,
+          contact: false,
+          requestInfo: false,
         }
         }
         

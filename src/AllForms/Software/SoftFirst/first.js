@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Stepper } from 'react-form-stepper';
+import { Stepper ,Step} from 'react-form-stepper';
 import Styled from "styled-components"
 class FirstSoftwarePage extends Component {
 
@@ -24,7 +24,7 @@ class FirstSoftwarePage extends Component {
 
   handleRadioChange = (event) => {
     this.props.updateFormData({
-      tools: event.target.value
+      numberofTools: event.target.value
     });
   };
 
@@ -33,7 +33,7 @@ class FirstSoftwarePage extends Component {
 
 
     const { softwareTypes, numberOfPages } = this.state;
-    const {typeOfSoftware,tools} = this.props.formData
+    const {typeOfSoftware,numberofTools} = this.props.formData
   // Call the handleFormValues function from FormUtils.js
     if (typeOfSoftware.length === 0) {
       this.setState({
@@ -44,7 +44,7 @@ class FirstSoftwarePage extends Component {
       });
       return;
     }
-    if (!tools) {
+    if (!numberofTools) {
       this.setState({
         formErrors: {
           ...this.state.formErrors,
@@ -67,7 +67,7 @@ class FirstSoftwarePage extends Component {
 
   continue = e => {
     e.preventDefault();
-    const {typeOfSoftware,tools} = this.props.formData
+    const {typeOfSoftware,numberofTools} = this.props.formData
     // Check for errors
     /* const { softwareTypes, numberOfPages } = this.state;
     const formData = {
@@ -83,7 +83,7 @@ class FirstSoftwarePage extends Component {
     }
 
     // Check number of pages
-    if (!tools) {
+    if (!numberofTools) {
         formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
     }
 
@@ -101,27 +101,32 @@ class FirstSoftwarePage extends Component {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
     const {formData} = this.props
 
-    const {typeOfSoftware,tools} = formData
+    const {typeOfSoftware,numberofTools} = formData
 
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
 
-          <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
-            activeStep={0}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
+        <StyledStepper
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
 
       <Main1>
             <FormContainer>
@@ -177,49 +182,49 @@ class FirstSoftwarePage extends Component {
                     </Heading>
                     <InputContainer>
                   <Label>
-                    <Input type='radio' name="numberOfPages" value="I am not sure" checked={tools === "I am not sure"} onChange={this.handleRadioChange} />
+                    <Input type='radio' name="numberOfPages" value="I am not sure" checked={numberofTools === "I am not sure"} onChange={this.handleRadioChange} />
                     I am not sure
                   </Label>
                 </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="up to 50" checked={tools === "up to 50"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="up to 50" checked={numberofTools === "up to 50"} onChange={this.handleRadioChange}/>
                   up to 50
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="50-100" checked={tools === "50-100"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="50-100" checked={numberofTools === "50-100"} onChange={this.handleRadioChange}/>
                   50-100
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="100-500" checked={tools === "100-500"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="100-500" checked={numberofTools === "100-500"} onChange={this.handleRadioChange}/>
                   100-500
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="500-1,000" checked={tools === "500-1,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="500-1,000" checked={numberofTools === "500-1,000"} onChange={this.handleRadioChange}/>
                   500-1,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="  1,000-5,000" checked={tools === "1,000-5,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="1,000-5,000" checked={numberofTools === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="5,000-10,000" checked={tools === "5,000-10,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="5,000-10,000" checked={numberofTools === "5,000-10,000"} onChange={this.handleRadioChange}/>
                   5,000-10,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="numberOfPages" value="more than 10,000" checked={tools === "more than 10,000"} onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="more than 10,000" checked={numberofTools === "more than 10,000"} onChange={this.handleRadioChange}/>
                   more than 10,000
                   </Label>
               </InputContainer>
@@ -243,6 +248,26 @@ const media = {
 const Span = Styled.p`
 font-size:12px;
 `
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
 
 const Button = Styled.div`
 display:flex;
@@ -270,9 +295,8 @@ align-item:center;
 gap:20px;
 ${media.mobile}{
   width:100%;
-  justify-content:start;
-  align-item:start;
-  gap:2px;
+  justify-content:center;
+  align-item:center;
   margin-left:-30px;
 }
 `
@@ -320,7 +344,7 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 ${media.mobile}{
-  font-size:13px;
+  font-size:11px;
 }
 `
 const Form = Styled.form`

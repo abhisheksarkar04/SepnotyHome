@@ -137,7 +137,7 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-
+width:40%;
 margin: 0px;
 display: flex;
 flex-direction: column;
