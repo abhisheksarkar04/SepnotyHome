@@ -129,6 +129,29 @@ handleRadioChange = (event) => {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+        <Div>
+        <Atyled
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </Atyled>
+        </Div>
+        
 
 
 
@@ -251,6 +274,10 @@ handleRadioChange = (event) => {
 
 export default PersonalDetails;
 
+const Div = Styled.div`
+display:none;
+`
+
 const media = {
   mobile: "@media(max-width: 576px)",
 };
@@ -262,6 +289,13 @@ const StyledStepper = Styled(Stepper)`
   border: none;
  
 `;
+const Atyled = Styled(Stepper)`
+  display:none;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;  
+`
 
 const StyledStep = Styled(Step)`
   text-align: center;

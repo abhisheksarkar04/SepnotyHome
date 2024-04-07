@@ -123,6 +123,29 @@ class ThirdForm extends Component {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+        <Div>
+        <StyledStepper
+          activeStep={6}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+        </Div>
+       
           
 <Mai>
             <FormContainer>
@@ -243,7 +266,9 @@ const Input4 = Styled.input`
 background:transparent;
 border: 1px solid #8C8C8C;
 `
-
+const Div = Styled.div`
+display:none;
+`
 const Error = Styled.div`
   color: red;
   margin-top: 10px;

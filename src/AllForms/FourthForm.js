@@ -112,6 +112,29 @@ class Summary extends Component {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+        <Div>
+        <StyledStepper
+          activeStep={3}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+        </Div>
+       
           <Mai>
             <Form1>
               <Heading>*Do you have UI design mockups?</Heading>
@@ -188,6 +211,10 @@ const ErrorMessage = Styled.div`
   margin-top: 10px;
   font-size:12px;
 `;
+
+const Div = Styled.div`
+display:none;
+`
 
 const Button = Styled.div`
 display:flex;

@@ -194,6 +194,29 @@ class FourthForm extends Component {
             <StyledStep />
             <StyledStep />
           </StyledStepper>
+          <Div>
+          <StyledStepper
+            activeStep={7}
+            styleConfig={{
+              activeBgColor: "#2B459B",
+              activeTextColor: "#fff",
+              inactiveBgColor: "#fff",
+              inactiveTextColor: "#2b7cff",
+              completedBgColor: "#407B24",
+              completedTextColor: "#fff",
+            }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper>
+          </Div>
+         
 
           <M>
           {submitted && <Popup onClose={() => this.setState({ submitted: false })} />}
@@ -305,6 +328,9 @@ class FourthForm extends Component {
 }
 
 export default FourthForm;
+const Div = styled.div`
+display:none;
+`
 const media = {
   mobile: "@media(max-width: 576px)",
 };

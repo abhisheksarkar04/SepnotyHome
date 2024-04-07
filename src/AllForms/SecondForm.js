@@ -68,6 +68,29 @@ class CourseDetails extends Component {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+        <Div>
+        <StyledStepper1
+          activeStep={1}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper1>
+        </Div>
+        
 
           <Mai>
             <FormContainer>
@@ -165,10 +188,22 @@ class CourseDetails extends Component {
 }
 
 export default CourseDetails;
+
+const Div = Styled.div`
+display:none;
+`
 const media = {
   mobile: "@media(max-width: 576px)",
 };
 const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+const StyledStepper1 = Styled(Stepper)`
   display: flex;
   justify-content: space-between;
   background-color: transparent;
