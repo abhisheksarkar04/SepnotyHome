@@ -27,10 +27,8 @@ class FormNo5 extends Component {
 
   validateForm = () => {
     const {formData} = this.props
-
-    const {typeOfMedia,paymentSystem,visitors} = formData
-    
-    const errors = "";
+    const {typeOfMedia, visitors} = formData
+    let errors = ""; // Changed const to let
 
     if (typeOfMedia.length === 0) {
       errors = 'Please select at least one media content type.';
@@ -38,28 +36,25 @@ class FormNo5 extends Component {
 
     if (!visitors) {
       errors = 'Please select the expected number of monthly visitors.';
-
     }
 
     return errors;
-  };
+};
 
-  handleNext = () => {
-    const errors = this.validateForm();
+handleNext = () => {
+  const errors = this.validateForm();
+  const { formData } = this.props;
+  const { typeOfMedia, visitors } = formData;
 
+  if (Object.keys(errors).length === 0) {
+    // No validation errors, proceed to the next step
+    this.props.nextStep();
+  } else {
+    // Validation errors found, update state with errors
+    this.setState({ errors });
+  }
+};
 
-    const {formData} = this.props
-
-    const {typeOfMedia,paymentSystem,visitors} = formData
-    console.log("form:",formData)
-    
-
-    //this.props.onDataReceived(formData);
-
-    
-      // No validation errors, proceed to the next step
-      this.props.nextStep();
-  };
 
   handleRadioChange = (event) => {
 
@@ -240,6 +235,7 @@ class FormNo5 extends Component {
 
                   </Label>
                 </InputContainer>
+                {errors && <Error>{errors}</Error>}
               </Form>
             </FormContainer>
           </Mai>

@@ -127,7 +127,29 @@ class FirstSoftwarePage extends Component {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+<Div>
+<StyledStepper
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
 
+</Div>
       <Main1>
             <FormContainer>
                 <Form>
@@ -242,6 +264,10 @@ class FirstSoftwarePage extends Component {
 }
 
 export default FirstSoftwarePage;
+
+const Div = Styled.div`
+display:none;
+`
 const media = {
   mobile: '@media(max-width: 576px)'
 };
