@@ -13,31 +13,36 @@ import './App.css';
 class ThirdForm extends Component {
   state = {
     formErrors: {
-      error:""
+      compliance: "",
+      integration: "",
+      additionalDetails: ""
     },
   };
 
   validateForm = () => {
-    const { compliance } = this.state;
+    const { formData } = this.props;
     const formErrors = {};
-    const { complianceRequirements, details } = this.props.formData;
-  
+
+    const { complianceRequirements, otherCompliance, integrationDetails, details } = formData;
+
     if (complianceRequirements.length === 0) {
       formErrors.compliance = "Please select at least one compliance requirement";
-    } else if (
-      complianceRequirements.includes("Other") &&
-      !this.props.formData.otherCompliance
-    ) {
+    } else if (complianceRequirements.includes("Other") && !otherCompliance) {
       formErrors.compliance = "Please specify 'Other' compliance requirement";
     }
-  
+
+    if (!integrationDetails) {
+      formErrors.integration = "Please provide integration details";
+    }
+
     if (!details) {
       formErrors.additionalDetails = "Please add additional details";
-    } else {
-      this.props.nextStep();
     }
-  
+
+    // Set the state with form errors
     this.setState({ formErrors });
+
+    // Check if there are any errors
     return Object.keys(formErrors).length === 0;
   };
   
@@ -204,7 +209,7 @@ class ThirdForm extends Component {
                 onChange={this.handleOtherComplianceChange}/>
 
                     </CheckBoxCon>
-                    
+                    <Error>{formErrors.compliance}</Error>
                 </Form>
 
             </FormContainer>
@@ -234,7 +239,10 @@ class ThirdForm extends Component {
                 onChange={this.handleAdditionalDetailsChange}
                 placeholder="Please add here"
               />
-             <Error>{formErrors.error}</Error>
+              {/* Error message for integration */}
+            <Error>{formErrors.integration}</Error>
+            {/* Error message for additional details */}
+            <Error>{formErrors.additionalDetails}</Error>
             </Form1>
           </Mai>
         </form>
