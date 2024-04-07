@@ -118,7 +118,28 @@ class YourIndustry extends Component {
             <StyledStep />
             <StyledStep />
           </StyledStepper>
-
+          <Div>
+          <StyledStepper1
+            activeStep={2}
+            styleConfig={{
+              activeBgColor: "#2B459B",
+              activeTextColor: "#fff",
+              inactiveBgColor: "#fff",
+              inactiveTextColor: "#2b7cff",
+              completedBgColor: "#407B24",
+              completedTextColor: "#fff",
+            }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper1>
+          </Div>
           <Main1>
             <Form1>
               <Fom>
@@ -274,7 +295,9 @@ export default YourIndustry;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
-
+const Div = Styled.div`
+display:none;
+`
 const StyledStepper = Styled(Stepper)`
   display: flex;
   justify-content: space-between;
@@ -283,7 +306,14 @@ const StyledStepper = Styled(Stepper)`
   border: none;
  
 `;
-
+const StyledStepper1 = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
 const StyledStep = Styled(Step)`
   text-align: center;
   border: 1px solid #2b7cff !important;

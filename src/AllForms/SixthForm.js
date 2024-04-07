@@ -56,13 +56,9 @@ class FormNo5 extends Component {
 
     //this.props.onDataReceived(formData);
 
-    if (Object.keys(errors).length === 0) {
+    
       // No validation errors, proceed to the next step
       this.props.nextStep();
-    } else {
-      // Validation errors found, update state with errors
-      this.setState({ errors });
-    }
   };
 
   handleRadioChange = (event) => {
@@ -118,6 +114,29 @@ class FormNo5 extends Component {
           <StyledStep />
           <StyledStep />
         </StyledStepper>
+        <Div>
+        <StyledStepper
+          activeStep={5}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+        </Div>
+       
         <Mai>
         <FormContainer>
                 <Form>
@@ -254,6 +273,9 @@ color:red;
 `;
 const Para1 = Styled.p`
 
+`
+const Div = Styled.div`
+display:none;
 `
 const StyledStepper = Styled(Stepper)`
   display: flex;
