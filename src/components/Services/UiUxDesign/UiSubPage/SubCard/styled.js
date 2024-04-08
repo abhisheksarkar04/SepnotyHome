@@ -18,6 +18,7 @@ z-index:1;
 @media screen and (max-width:576px){
   font-size:16px;
   margin-left:25px;
+  
 }
 `;
 export const SubHeadSpan = styled.span`

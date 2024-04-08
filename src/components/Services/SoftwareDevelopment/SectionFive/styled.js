@@ -13,7 +13,7 @@ export const WorkImg=styled.img`
 width:400px;
 height:300px;
 @media screen and (max-width:576px){
-    width:80vw;
+    width:88vw;
 }
 `;
 export const ReadMore=styled.button`

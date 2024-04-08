@@ -16,7 +16,7 @@ font-size:26px;
 color:white;
 width:30%;
 @media screen and (max-width:576px){
-    width:50%;
+    width:60%;
     font-size:20px;
   }
 `;
@@ -24,11 +24,12 @@ export const WebSectionDescription=styled.p`
 font-size:24px;
 margin-top:20px;
 width:80%;
+line-height:20px;
 color:white;
 text-align:justify;
 @media screen and (max-width:576px){
     font-size:14px;
-    width:90%;
+    width:95%;
 }
 `;
 export const BackgroundShapeOne=styled.span`
@@ -39,6 +40,9 @@ height:250px;
 top:7;
 left:0;
 z-index:0;
+@media screen and (max-width:576px){
+  display:none;
+}
 `;
 export const BackgroundShapeTwo = styled.span`
   position: absolute;
@@ -53,7 +57,6 @@ export const BackgroundShapeTwo = styled.span`
   gap: 0;
   z-index: 0;
   @media screen and (max-width:576px){
-    height:300px;
-    margin-top: -20px;
+    display:none;
   }
 `;

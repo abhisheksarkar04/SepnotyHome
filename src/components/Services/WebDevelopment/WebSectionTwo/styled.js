@@ -10,8 +10,9 @@ justify-content: center;
 margin-top:25px;
 margin-right:10px;
 @media screen and (max-width:576px){
-    width:70%;
-    
+    width:95%;
+    margin-top:15px;
+    margin-right:0px;
   }
 `;
 export const WebTechImg=styled.img`

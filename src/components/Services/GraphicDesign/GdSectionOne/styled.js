@@ -40,7 +40,7 @@ top:7;
 left:0;
 z-index:0;
 @media screen and (max-width:576px){
-    height:220px;
+  display:none;
    }
 `;
 export const BackgroundShapeTwo=styled.span`
@@ -56,7 +56,6 @@ right:0;
 gap:0;
 z-index:0;
 @media screen and (max-width:576px){
-    height:300px;
-    margin-top:-30px;
+    display:none;
    }
 `;
