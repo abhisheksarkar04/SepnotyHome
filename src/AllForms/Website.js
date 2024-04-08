@@ -5,7 +5,7 @@ import CourseDetails from "./SecondForm";
 import Summary from "./FourthForm";
 import YourIndustry from "./ThirdForm";
 import FormNo5 from "./SixthForm";
-import SecondForm from "./FifthForm";
+import SecondForm from "./WebAppFifthForm";
 import ThirdForm from "./SeventhForm";
 import FourthForm from "./EightthForm";
 import { Stepper, Step, StepLevel } from "react-form-stepper";
@@ -78,6 +78,7 @@ class Form extends Component {
       },
       step2:{
         industryType:[],
+        indstryotherDetails:"",
       },
       step3:{
         services:"",
@@ -91,9 +92,11 @@ class Form extends Component {
       },
       step5:{
         appFeatures:[],
+        otherFeatureDetails:"",
       },
       step6:{
         typeOfMedia:[],
+        otherMediaDetails:"",
     	  paymentSystem: true,
     	  visitors:"",
       },

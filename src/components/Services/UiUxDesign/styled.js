@@ -127,6 +127,12 @@ export const StaticToolImgCon = styled.div`
   text-align: center;
   padding: 15px;
   margin-right: 25px;
+  @media screen and (max-width:576px){
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-right: 15px;
+  }
 `;
 export const StaticToolImg = styled.img`
   height: 30px;

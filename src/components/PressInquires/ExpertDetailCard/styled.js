@@ -53,6 +53,9 @@ export const ExpRole=styled.div`
 display:flex;
 flex-direction:column;
 margin-bottom:17px;
+@media screen and (max-width:576px){
+  margin-left:15px;
+}
 `;
 export const ExpName=styled.p`
 font-weight:600;

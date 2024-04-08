@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainConatiner = styled.div`
-   
+   width: 100%;
 `;
 
 export const SmallPattern = styled.div`
@@ -48,7 +48,7 @@ export const Container = styled.div`
   margin-left: 14%;
   @media screen and (max-width: 576px) {
     margin-left: 4%;
-    width: 98%;
+    width: 90%;
     flex-wrap: wrap;
     justify-content: space-around;
 
@@ -58,12 +58,13 @@ export const Container = styled.div`
   `;
 export const Img = styled.img`
    height: 100px;
-   margin-right: 10%;
+   margin-right: 0%;
    
   `;
 export const Details = styled.div`
 @media screen and (max-width: 576px) {
-  margin-left: -10%;
+  margin-right: 0px;
+  width: 50%;
 
 
 }

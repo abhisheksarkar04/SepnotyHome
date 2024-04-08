@@ -10,31 +10,48 @@ class CourseDetails extends Component {
     super(props);
     this.state = {
       error: ''
-
     };
   }
 
   continue = (e) => {
     e.preventDefault();
-
-    const {formData} = this.props
-    const industryType = formData
-    //this.props.onDataReceived(formData);
+  
+    const { formData } = this.props;
+    const { industryType, indstryotherDetails } = formData;
+  
+    // Validation for industry selection
     if (industryType.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
     }
-    this.props.nextStep();
-  };
-
-  handleCheckboxChange = (e) => {
-
-    const { value, checked ,id} = e.target;
-    this.props.updateFormData({
-      industryType:checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType = this.props.formData.industryType.filter(type => type !== id)
-    })
+  
+    // Check if 'Other' checkbox is checked and 'Industry Other Details' is empty
+    if (industryType.includes('10st') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
+      this.setState({ error: 'Please provide other details.' });
+      return;
+    }
+    this.setState({ error: '' });
+  this.props.nextStep();
   }
 
+  handleCheckboxChange = (e) => {
+    const { value, checked ,id} = e.target;
+    this.props.updateFormData({
+      industryType: checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType.filter(type => type !== id)
+    });
+  };
+
+  handleOtherDetailsChange = (e) => {
+    const { value } = e.target;
+    const { industryType } = this.props.formData;
+  
+    // If 'Industry Other Details' is provided, remove the error message
+    if (value.trim() !== '' && industryType.includes('other')) {
+      this.setState({ error: '' });
+    }
+  
+    this.props.updateFormData({ indstryotherDetails: value });
+  };
 
   back = (e) => {
     e.preventDefault();
@@ -43,7 +60,7 @@ class CourseDetails extends Component {
 
   render() {
     const { error } = this.state;
-    const {industryType} = this.props.formData
+    const { industryType, indstryotherDetails} = this.props.formData;
     return (
       <Main className="form">
         <form>
@@ -97,7 +114,7 @@ class CourseDetails extends Component {
 
                 <Form>
                     <Heading>
-                    *What Software features/capabilities do you need?
+                    *What is your industry?
                     </Heading>
                     <CheckBoxCon>
                         <input type="checkbox" id="Health Care" checked={industryType.includes('Health Care')} value="Health Care" onChange={this.handleCheckboxChange}/>
@@ -120,7 +137,7 @@ class CourseDetails extends Component {
                     <CheckBoxCon>
                         <input type="checkbox" id="Financial services banking & Insurance" value="Financial services banking & Insurance" checked={industryType.includes('Financial services banking & Insurance')} onChange={this.handleCheckboxChange}/>
                         <Label htmlFor="Financial services banking & Insurance">
-                        Templates
+                        Financial services , banking & insurance
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
@@ -130,15 +147,27 @@ class CourseDetails extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="Entertainment" value="Entertainment" checked={industryType.includes('Entertainment')} onChange={this.handleCheckboxChange}/>
-                        <Label htmlFor="Entertainment">
-                        Entertainment
+                        <input type="checkbox" id="Telecommunications" value="Telecommunications" checked={industryType.includes('Telecommunications')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Telecommunications">
+                        Telecommunications
                         </Label>
                     </CheckBoxCon>
                 </Form>
             </FormContainer>
             <FormContainer>
                 <Form1>
+                <CheckBoxCon>
+                        <input type="checkbox" id="Public sector" value="Public sector" checked={industryType.includes('Public sector')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Public sector">
+                        Public sector
+                        </Label>
+                    </CheckBoxCon>
+                <CheckBoxCon>
+                        <input type="checkbox" id="Entertainment" value="Entertainment" checked={industryType.includes('Entertainment')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Entertainment">
+                        Entertainment
+                        </Label>
+                    </CheckBoxCon>
                     
                     <CheckBoxCon>
                         <input type="checkbox" id="Education" value="Education" checked={industryType.includes('Education')} onChange={this.handleCheckboxChange}/>
@@ -159,11 +188,10 @@ class CourseDetails extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="10st" onChange={this.handleCheckboxChange}/>
-                        <In type="text" placeholder='others (please specify)'/>
+                        <input type="checkbox" id="other"  checked={industryType.includes('other')} onChange={this.handleCheckboxChange}/>
+                        <In type="text" placeholder='others (please specify)' value={indstryotherDetails} onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
-
-                {error && <ErrorMessage>{error}</ErrorMessage>}
+                    {error && <ErrorMessage>{error}</ErrorMessage>}
               </Form1>
             </FormContainer>
           </Mai>
@@ -173,7 +201,7 @@ class CourseDetails extends Component {
             className="buttons__button buttons__button--back"
             onClick={this.back}
           >
-            Back
+           <span>←</span> Back
           </button>
           <button
             className="buttons__button buttons__button--next"
@@ -303,9 +331,10 @@ justify-content:space-between;
 margin-top:20px;
 `;
 const Label = Styled.label`
-font-size:16px;
+font-size:14px;
 font-family: Roboto;
 font-weight: 500;
+width:100%;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
@@ -320,7 +349,7 @@ ${media.mobile}{
 }
 `;
 const Form1 = Styled.div`
-margin-top:60px;
+margin-top:20px;
 ${media.mobile}{
   width:100%;
 }

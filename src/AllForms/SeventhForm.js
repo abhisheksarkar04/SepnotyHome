@@ -160,7 +160,7 @@ class ThirdForm extends Component {
                     </Heading>
                     <CheckBoxCon>
             <Label htmlFor="No">
-              <input 
+              <Input8
                 type="checkbox" 
                 id="No" 
                 checked={complianceRequirements.includes("No")} 
@@ -171,34 +171,34 @@ class ThirdForm extends Component {
           </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="HIPPA">
-                        <input type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
                         
                         HIPPA
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="PCI DSS">
-                        <input type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
                         
                         PCI DSS
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="GDPR">
-                        <input type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
                         
                         GDPR
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="I need your consultation on compliance">
-                        <input type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
                         
                         I need your consultation on compliance
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Input type="checkbox"
+                        <Input8 type="checkbox"
               id="Other"
               name='compliance'
               checked={complianceRequirements.includes("Other")}
@@ -270,9 +270,16 @@ const media = {
   mobile: "@media(max-width: 576px)",
 };
 
+const Input8 = Styled.input`
+margin-right:10px;
+`
+
 const Input4 = Styled.input`
 background:transparent;
 border: 1px solid #8C8C8C;
+${media.mobile}{
+  width:100px;
+}
 `
 const Div = Styled.div`
 display:none;
@@ -322,7 +329,8 @@ line-height: 20px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
-${media.mobile}{font-size:15px;}
+${media.mobile}{font-size:14px;
+line-height:10px;}
 
 `
 const StyledStepper = Styled(Stepper)`
@@ -368,14 +376,13 @@ justify-content:space-between;
 margin-top:13px;
 `;
 const Label = Styled.label`
-font-size:16px;
+font-size:14px;
 font-family: Roboto;
-font-size:15px;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
+margin-right:10px;
 text-align: left;
-margin-left:10px;
 ${media.mobile}{font-size:13px;}
 
 `
@@ -401,7 +408,7 @@ color: black;
 padding: 10px;
 border-radius:4px;
 ${media.mobile}{
-  width:120px;
+  width:100px;
 }
 
 `;
@@ -420,9 +427,9 @@ gap:-20px;
 border-radius:10px;
 padding:20px;
 height:350px;
-width:600px;
+width:90%;
 ${media.mobile}{
-  width:250px;
+  width:52%;
 }
 `;
 const Form2 = Styled.div`
@@ -432,8 +439,6 @@ const Input3 = Styled.input`
 background: #C1CAE7;
 border: 1px solid #8C8C8C;
 
-width:250px;
-
 width:90%;
 
 height:70px;
@@ -441,6 +446,6 @@ border-radius:4px;
 color: black;
 padding: 8px;
 text-align: left;
-${media.mobile}{width:200px;}
+${media.mobile}{width:40%;}
 `
 

@@ -261,6 +261,9 @@ font-weight:700;
 margin-bottom:20px;
 font-family:Roboto;
 margin-bottom:30px;
+${media.mobile}{
+  font-size:14px;
+}
 `;
 const Form2 = Styled.div`
 ${media.mobile}{

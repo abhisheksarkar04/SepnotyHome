@@ -16,8 +16,10 @@ export const ChooseCardCon = styled.div`
   @media screen and (max-width:576px){
     width:80%;
     justify-content:center;
-    height:300px;
+    height:auto;
     padding:15px;
+    padding-top:20px;
+    padding-bottom:20px;
   }
 `;
 

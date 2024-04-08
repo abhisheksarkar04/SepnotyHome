@@ -40,6 +40,7 @@ import {
   ViewsContainer,
   ViewButton,
   IconList,
+  ViewButton2,
   Icon,
   MessageContainer,
   PersonContainer,
@@ -112,7 +113,6 @@ const topicList = [
 
 const Collaboration = () => {
   return (
-    <>
       <Container>
         <Header>
         Resource Center &gt; <Span>Collaboration and Community Features</Span>
@@ -273,7 +273,7 @@ const Collaboration = () => {
                 </div>
               </MessageList>
             </ChatHistory>
-            <ViewButton>See History</ViewButton>
+            <ViewButton2>See History</ViewButton2>
           </MessageContainer>
         </div>
         <div>
@@ -353,9 +353,9 @@ const Collaboration = () => {
             <ConnectButton>connect with us</ConnectButton>
           </CommunityCon>
         </div>
+        <FooterSection />
+
       </Container>
-      <FooterSection />
-    </>
   );
 };
 

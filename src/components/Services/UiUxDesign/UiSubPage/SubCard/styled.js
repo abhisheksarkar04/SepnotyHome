@@ -35,12 +35,13 @@ export const SubHeadSpan = styled.span`
   }
 `;
 export const SubPageImg=styled.img`
-width:30vw;
-height:40vh;
+width:300px;
+height:300px;
 margin-left:40px;
 @media screen and (max-width:576px){
   font-size:16px;
-  
+  width:200px;
+height:200px;
   margin:0px;
   margin-left:25px;
 }

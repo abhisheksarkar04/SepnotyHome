@@ -12,6 +12,9 @@ margin-right:4%;
 export const WorkImg=styled.img`
 width:400px;
 height:300px;
+@media screen and (max-width:576px){
+    width:80vw;
+}
 `;
 export const ReadMore=styled.button`
 background:none;
@@ -22,4 +25,7 @@ width:auto;
 border-radius:7px;
 padding:5px;
 margin-top:4px;
+@media screen and (max-width:576px){
+    font-size:14px;
+}
 `;

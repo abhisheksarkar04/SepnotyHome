@@ -414,6 +414,9 @@ margin-right:10px;
 `;
 const InputContainer = Styled.div`
 margin-top:20px;
+${media.mobile}{
+  margin-top:15px;
+}
 `;
 const Label = Styled.label`
 font-size:16px;
@@ -434,7 +437,6 @@ border: 1px solid gray;
 font-size:15px;
 color: #263238;
 font-weight:500;
-margin-left:10px;
 
 ${media.mobile}{
   font-size:11px;
