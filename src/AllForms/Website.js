@@ -75,6 +75,7 @@ class Form extends Component {
         typeofDevelopment:"website",
         typeOfWebsite: [],
         numberOfPages: '',
+        otherTypeOfWebsite:"",
       },
       step2:{
         industryType:[],
