@@ -10,7 +10,9 @@ export const ArticleConatiner = styled.div`
   height: auto;
   margin: 20px;
   @media screen and (max-width: 576px) {
-    width: 42%; 
+    width: 40vw; 
+    margin: 10px;
+    margin-right:5px;
   }
 `;
 
@@ -83,6 +85,6 @@ export const Arrow = styled.h2`
   font-weight: 900;
   margin-bottom: 10px; /* Adjusted margin */
   @media screen and (max-width: 576px) {
-    margin-left: 90%; 
+    margin-left: 85%; 
   }
 `;

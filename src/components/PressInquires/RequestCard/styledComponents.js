@@ -13,10 +13,11 @@ border-radius:10px;
 margin:15px;
 
 @media screen and (max-width:576px){
-    width:43%;
+    width:37vw;
     justify-content: space-between;
-height:700px
+    height:auto;
     margin:3px;
+    margin-bottom:7px;
     padding:7px;
 }
 `;
