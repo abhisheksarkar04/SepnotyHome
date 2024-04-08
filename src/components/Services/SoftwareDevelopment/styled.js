@@ -41,7 +41,7 @@ export const SectionThreeDescription = styled.p`
   word-spacing: 3px;
   margin-left: 6%;
   @media screen and (max-width:576px){
-    width:90%;
+    width:85%;
     margin-left: 3%;
     font-size:14px;
   }
