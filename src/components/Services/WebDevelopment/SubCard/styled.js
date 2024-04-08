@@ -72,12 +72,15 @@ padding:25px;
   width:60%;
   margin-top:40px;
   align-self:center;
-  padding:25px 30px 25px 30px;
+  padding:10px;
 }
 `;
 export const SubCardText=styled.p`
   font-size:16px;
   color:black;
   margin: 0 0 0 0;
-  
+  @media screen and (max-width:576px){
+    font-size:14px;
+    text-align:justify;
+  }
 `;

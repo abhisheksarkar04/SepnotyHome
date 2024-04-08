@@ -11,6 +11,7 @@ margin-top:25px;
 margin-right:10px;
 @media screen and (max-width:576px){
     width:70%;
+    
   }
 `;
 export const WebTechImg=styled.img`
@@ -19,6 +20,10 @@ height: 70px;
 align-self:center;
 padding-top:20px;
 margin-bottom: 10px;
+@media screen and (max-width:576px){
+  padding-top:10px;
+  margin-bottom: 5px;
+}
 `;
 export const WebTechAbout=styled.p`
 color:black;
@@ -26,6 +31,10 @@ text-align:left;
 font-size:17px;
 font-weight: 520;
 padding:20px;
+@media screen and (max-width:576px){
+  font-size:14px;
+  padding:10px;
+}
 `;
 export const WebTechButton=styled.button`
 margin-bottom:0px;

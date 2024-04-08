@@ -41,7 +41,8 @@ height:300px;
 margin-bottom:10px;
 margin-left:47px;
 @media screen and (max-width:576px){
-  
+  width:200px;
+height:200px;
   margin-left:5%;
 }
 `;
