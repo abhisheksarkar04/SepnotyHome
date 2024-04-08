@@ -88,7 +88,7 @@ const ContentRecommendation = () => {
                 Search here What you are looking for
               </SearchHeading>
               <SearchHolder>
-                <Input type="Search" placeholder="Search" />"
+                <Input type="text" placeholder="Search" />
                 <SearchIcon src={searchIcon} />
               </SearchHolder>
             </SearchSuggestionContainer>

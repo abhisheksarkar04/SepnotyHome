@@ -56,6 +56,10 @@ export const RedText = styled.p`
   font-weight: 600;
   line-height: px;
   margin-top: 8px;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+  
+  }
 `;
 
 
@@ -144,7 +148,7 @@ export const ListHeading = styled.h1`
   margin-left: 2.6%;
   @media screen and (max-width: 576px) {
     width: 90%;
-    font-size: 16px;
+    font-size: 5.1vw;
     margin-left: 6%;
   
   }
@@ -261,11 +265,16 @@ export const Small = styled.img`
   width: 60px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    height: 60px;
-    width: 45px;
+    height: 6vh;
+    width: 11vw;
   
   }
 `;
+
+// height: 6vh;
+//     width: 11vw;
+//     font-size: 5.3vw;
+//     width: 90%;
 
 export const ContentContainer = styled.div`
   margin: 5em 2em 3em 5em;
@@ -280,8 +289,8 @@ export const Small1 = styled.img`
   height: 55px;
   width: 60px;
   @media screen and (max-width: 576px) {
-    height: 60px;
-    width: 40px;
+    height: 6vh;
+    width: 11vw;
   
   }
  

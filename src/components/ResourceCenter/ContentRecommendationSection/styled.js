@@ -87,8 +87,9 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left:  2.3%;
   @media screen and (max-width: 576px) {
-    margin-left:  7.9%;
-    font-size: 18px;
+    margin-left:  7.0%;
+    font-size: 4.0vw;
+    width: 100%;
   }
 `;
 
@@ -116,19 +117,28 @@ export const SearchHolder = styled.div`
   background-color: transparent;
   padding: 5px;
   border-radius: 10px;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 export const Input = styled.input`
   background-color: transparent;
-  outline: none;
-  border: 0px;
+  outline: ;
+  border: none;
   width: 320px;
   color: #263238;
-
+   height: 22px;
   &::placeholder {
     color: #263238;
     font-size: 14px;
     font-weight: 500;
     padding: 5px;
+    
+  }
+  @media screen and (max-width: 576px) {
+    width: 90%;
+  
   }
 `;
 
@@ -199,6 +209,11 @@ export const Small = styled.img`
 
   height: 55px;
   width: 60px;
+  @media screen and (max-width: 576px) {
+    height: 6vh;
+    width: 11vw;
+  }
+
 `;
 
 export const ContentContainer = styled.div`
@@ -214,4 +229,14 @@ export const Small1 = styled.img`
   height: 55px;
   width: 60px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 6vh;
+    width: 11vw;
+  }
 `;
+
+
+// height: 6vh;
+//     width: 11vw;
+//     font-size: 5.3vw;
+//     width: 90%;

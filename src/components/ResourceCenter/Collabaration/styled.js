@@ -110,13 +110,17 @@ export const ListHeading = styled.h1`
   padding-left: 9%;
   letter-spacing: 0.5px;
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 4vw;
     padding-left: 14%;
 
   }
 
 `;
 
+// height: 6vh;
+//     width: 11vw;
+//     font-size: 5.3vw;
+//     width: 90%;
 export const Small = styled.img`
   position: absolute;
   height: 55px;
@@ -124,8 +128,8 @@ export const Small = styled.img`
   z-index: 0;
   margin-left: 7%;
   @media screen and (max-width: 576px) {
-    height: 40px;
-  width: 48px;
+    height: 6vh;
+    width: 11vw;
 
   }
 `;
@@ -137,8 +141,9 @@ export const Small1 = styled.img`
   margin-left: 7%;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    height: 43px;
-  width: 60px;
+    height: 6vh;
+    width: 12vw;
+    margin-left: 8%;
 
   }
 `;
@@ -149,8 +154,8 @@ export const Small2 = styled.img`
   width: 60px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    height: 43px;
-  width: 55px;
+    height: 6vh;
+    width: 11vw;
 
   }
 `;
@@ -162,17 +167,15 @@ export const LabelCont = styled.div`
   height: 60px;
   font-size: 10px;
   border-radius: 10px;
-  align-items: center
+  align-items: center;
   justify-content: center;
   box-shadow: 0px 1.3px 2px 0px #ffffff;
   @media screen and (max-width: 576px) {
     padding: 10px 10px 10px 10px;
-    margin-left: 15px;
+    margin-left: 10px;
     height: 30px;
-    font-size: 5px;
-    width: 105%;
-   
-
+    font-size: 1vw;
+    width: 100%;
   }
 `;
 
@@ -182,7 +185,7 @@ export const Topics = styled.h1`
   padding-left: 60px;
   @media screen and (max-width: 576px) {
     padding-left: 0px;
-   
+   font-size: 2vw;
 
   }
 `;
@@ -193,7 +196,6 @@ export const DataLabels = styled.h1`
   padding-left: 30px;
   @media screen and (max-width: 576px) {
     
-    padding-left: 60px;
 
   }
 `;
@@ -202,6 +204,12 @@ export const DataCon = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: auto;
+  @media screen and (max-width: 576px) {
+    
+    justify-content: space-evenly;
+
+  }
+  
 `;
 
 export const ViewsContainer = styled.div`
@@ -230,7 +238,7 @@ export const ViewButton = styled.button`
    width: 100px;
    padding: 8px 10px 10px 10px;
    margin-top: 30px;
-
+   margin-left: 20%;
   }
 `;
 export const ViewButton2 = styled.button`
@@ -319,8 +327,8 @@ export const Icon = styled.img`
   width: 20px;
   margin: 0 0 10px 0px;
   @media screen and (max-width: 576px) {
-    height: 20px;
-    width: 20px;
+    height: 4vh;
+  width: 5vw;
     margin: 0 0 0px -8px;
  }
 `;
@@ -351,6 +359,9 @@ export const PersonContainer = styled.div`
   padding: 3px 10px 8px 20px;
   border-radius: 5px;
   margin-bottom: 10px;
+  @media screen and (max-width: 576px) {
+    height: 10vh;
+  }
 `;
 
 export const Person = styled.img`
@@ -358,7 +369,9 @@ export const Person = styled.img`
   width: 50px;
   margin-right: 50px;
   @media screen and (max-width: 576px) {
-    margin-right: 18px;
+    margin-right: 13px;
+    height: 8vh;
+    width: 10vw;
   }
 `;
 
@@ -367,6 +380,9 @@ export const Name = styled.h1`
   color: #ffffff;
   margin: 0px;
   font-weight: 600;
+  @media screen and (max-width: 576px) {
+    font-size: 3.5vw;
+  }
 `;
 
 export const LastSeen = styled.p`
@@ -374,6 +390,9 @@ export const LastSeen = styled.p`
   color: #ffffff;
   margin: 0px;
   font-weight: 200;
+  @media screen and (max-width: 576px) {
+    font-size: 2vw;
+  }
 `;
 
 export const PersonDetails = styled.div`
@@ -391,7 +410,8 @@ export const Icons = styled.img`
   width: 13px;
   margin-right: 10px;
   @media screen and (max-width: 576px) {
-    
+    height: 3vh;
+  width: 4vw;
   }
 `;
 
@@ -417,6 +437,9 @@ export const FromMessage = styled.p`
   border-radius: 5px;
   padding: 12px 100px 12px 12px;
   margin: 0;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+  }
 `;
 
 export const ToContainer = styled.div`
@@ -442,6 +465,9 @@ export const ToMessage = styled.p`
   border-radius: 5px;
   padding: 12px 30px 12px 12px;
   margin: 0;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+  }
 `;
 
 
@@ -511,6 +537,10 @@ export const MessHeading = styled.h1`
   color: #ffffff;
   margin:15px;
   font-weight: 600;
+  @media screen and (max-width: 576px) {
+    font-size: 6vw;
+
+  }
 `;
 
 export const Search = styled.img`
@@ -519,12 +549,22 @@ export const Search = styled.img`
   border: 1px solid #ffffff;
   border-radius: 50px;
   padding: 2px;
+  @media screen and (max-width: 576px) {
+    height: 3vh;
+    width: 5.4vw;
+
+  }
 `;
 
 export const Write = styled.img`
   height: 18px;
   width: 18px;
   margin-right: 10px;
+  @media screen and (max-width: 576px) {
+    height: 3vh;
+    width: 5.4vw;
+
+  }
 `;
 
 
@@ -570,6 +610,10 @@ export const MailIcon = styled.img`
 export const Msg = styled.p`
   font-size: 14px;
   color: #ffffff;
+  @media screen and (max-width: 576px) {
+    font-size: 3vw;
+
+  }
 `;
 
 export const CommunityHeading = styled.h1`
