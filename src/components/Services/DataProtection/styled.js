@@ -63,7 +63,7 @@ export const ConRecDesc = styled.p`
   width: 70%;
   padding: 0px 30px 30px 0px;
   @media screen and (max-width: 576px) {
-    padding: 10px 10px 20px 0;
+    padding: 10px 0px 20px 0;
     font-size: 14px;
     width: 95%;
   }

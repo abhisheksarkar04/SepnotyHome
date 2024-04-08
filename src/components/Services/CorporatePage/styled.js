@@ -62,7 +62,7 @@ export const ConRecDesc = styled.p`
   width: 70%;
   padding: 20px 30px 30px 0px;
   @media screen and (max-width: 576px) {
-    padding: 10px 10px 20px 0;
+    padding: 10px 0px 20px 0;
     font-size: 14px;
     width: 90%;
   }
@@ -117,7 +117,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 7%;
   @media screen and (max-width: 576px) {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 `;
 
