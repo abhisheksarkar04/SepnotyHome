@@ -5,6 +5,9 @@ background-color: #2B459B;
 padding:30px 50px 30px 6%;
 color:white;
 margin-bottom:40px;
+@media screen and (max-width: 600px) {
+  width: 100%;
+}
 `;
 export const SectionOneHeading=styled.h1`
 width:40%;
@@ -60,6 +63,10 @@ height:250px;
 top:7;
 left:0;
 z-index: ;
+@media screen and (max-width: 576px) {
+  display: none;
+  
+}
 `;
 export const BackgroundShapeTwo=styled.span`
 position:absolute;
@@ -73,4 +80,8 @@ top:-25;
 right:0;
 gap:0;
 z-index:1;
+@media screen and (max-width: 576px) {
+  display: none;
+  
+}
 `;

@@ -111,7 +111,7 @@ export const ListHeading = styled.h1`
   letter-spacing: 0.5px;
   @media screen and (max-width: 576px) {
     font-size: 16px;
-    padding-left: 13%;
+    padding-left: 14%;
 
   }
 
@@ -166,8 +166,11 @@ export const LabelCont = styled.div`
   justify-content: center;
   box-shadow: 0px 1.3px 2px 0px #ffffff;
   @media screen and (max-width: 576px) {
-    padding: 15px 40px 5px 50px;
-    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 15px;
+    height: 30px;
+    font-size: 5px;
+    width: 105%;
    
 
   }
@@ -207,6 +210,7 @@ export const ViewsContainer = styled.div`
   margin: 50px 7% 10px 7%;
   @media screen and (max-width: 576px) {
     margin: 50px 10px 10px 0px;
+    width: 90%;
 
   }
 `;
@@ -221,6 +225,32 @@ export const ViewButton = styled.button`
   border-radius: 20px;
   margin-bottom: 60px;
   align-self: center;
+  @media screen and (max-width: 576px) {
+   height: 30px;
+   width: 100px;
+   padding: 8px 10px 10px 10px;
+   margin-top: 30px;
+
+  }
+`;
+export const ViewButton2 = styled.button`
+  background-color: #254989;
+  font-size: 12px;
+  color: #ffffff;
+  border: 0px;
+  outline: none;
+  padding: 10px 40px 10px 40px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  align-self: center;
+  @media screen and (max-width: 576px) {
+   height: 30px;
+   width: 100px;
+   padding: 8px 10px 10px 10px;
+   margin-top: -10px;
+   margin-left: 15%;
+
+  }
 `;
 
 export const DailyContents = styled.div`
@@ -263,8 +293,8 @@ export const MessageList = styled.div`
   border-radius: 7px;
   @media screen and (max-width: 576px) {
     width: 80%;
-    margin-top: 80px;
-    margin-left: 10%;
+    margin-top: 30px;
+    margin-left: 15%;
  }
 `;
 

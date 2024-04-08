@@ -97,7 +97,9 @@ margin-top: -30px;
 margin-left: -10px;
 margin-right: 0px;
 padding: 0 0px 0 0;
-
+@media screen and (max-width: 600px) {
+  margin-left: 0px;
+}
 
 `;
 export const ServiceSpan=styled.span`
@@ -358,7 +360,8 @@ export const ElementsSection = styled.div`
 export const SearchSection = styled.div`
     margin: 0px 0px 0px 850px;
     @media screen and (max-width: 576px) {
-      margin: 0px 0px 0px 0px;
+      margin: 0px 0px 0px -10px;
+      width: 100%;
     }
 
 

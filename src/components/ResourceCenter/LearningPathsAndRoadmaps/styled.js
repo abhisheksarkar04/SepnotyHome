@@ -55,6 +55,11 @@ export const SmallPattern = styled.div`
   height: 55px;
   width: 60px;
   border-radius: 3px;
+  @media screen and (max-width: 576px) {
+    height: 45px;
+  width: 50px;
+   
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -72,7 +77,7 @@ export const ListHeading = styled.h1`
   margin-left: -29px;
   @media screen and (max-width: 576px) {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     margin-left: -20px;
    
   }
@@ -94,6 +99,9 @@ export const ListItemSection = styled.ol`
     line-height: 1.5;
 
    
+  }
+  @media screen and (max-width: 576px) {
+    font-size:14px;
   }
    
 `;
@@ -137,7 +145,8 @@ export const LearnPara = styled.p`
   margin-bottom: 40px;
   @media screen and (max-width: 576px) {
     margin-left: 14%;
-    font-size:14px;
+    font-size:16px;
+    width:82%;
     margin-bottom: 20px;
   }
 
@@ -156,6 +165,13 @@ export const OrderListSection = styled.ol`
   }
   @media screen and (max-width: 576px) {
     margin-left: 10%;
+    & > li {
+      color:#fff;
+      display: list-item;
+      line-height: 1.9;
+      font-size: 16px;
+      font-weight: 400;
+    }
    
   }
 `;
@@ -172,5 +188,10 @@ export const LearningPathImg1 = styled.img`
 height:240px;
 width: 400px;
 margin: 20px 0 60px 6%;
+@media screen and (max-width: 576px) {
+  height:200px;
+width: 340px;
+margin: 20px 0 60px 14%;
+}
 
 `;
