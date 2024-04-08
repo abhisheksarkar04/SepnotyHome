@@ -21,8 +21,8 @@ export const Container = styled.div`
     width: 100%;
     margin-top: 10px;
     height: 100vh;
-    padding-top: 140px;
-    padding-bottom: 145px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 3%;
   }
 `;
