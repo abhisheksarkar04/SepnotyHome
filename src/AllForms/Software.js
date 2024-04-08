@@ -73,6 +73,7 @@ class Software extends Component {
           typeofDevelopment:"software",
           typeOfSoftware:[],
           numberofTools:"",
+          otherSoftwareDetails:"",
         },
         step2:{
           industryType:[],

@@ -182,8 +182,8 @@ handleNext = (e) => {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Input type="checkbox" id="other" name='mediatype' onChange={this.handleCheckboxChange} checked={typeOfMedia.includes("other")}/>
-                        <Input type="text" htmlfor="five" value={otherMediaDetails} placeholder="Others (Please Specify)" onChange={this.handleOtherDetailsChange}/>
+                        <Input1 type="checkbox" id="other" name='mediatype' onChange={this.handleCheckboxChange} checked={typeOfMedia.includes("other")}/>
+                        <Inpu type="text" htmlfor="five" value={otherMediaDetails} placeholder="Others (Please Specify)" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
                     <Para1>
                     Should your website or App support payments?
@@ -277,12 +277,22 @@ export default FormNo5;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
+const Inpu = Styled.input`
+background:transparent;
+border: 1px solid #8C8C8C;
+${media.mobile}{
+  width:100px;
+}
+`
 const Error = Styled.p`
 font-size:12px;
 color:red;
 `;
 const Para1 = Styled.p`
-
+${media.mobile}{
+  font-size:12px;
+  margin-top:10px;
+}
 `
 const Div = Styled.div`
 display:none;
@@ -343,7 +353,9 @@ line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
 color: #263238;
-${media.mobile}{font-size:15px;}
+${media.mobile}{font-size:13px;
+line-height:18px;
+}
 `;
 
 const FormContainer = Styled.div`
@@ -357,7 +369,7 @@ background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 50%;
+  width: 53%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
@@ -380,10 +392,11 @@ letter-spacing: 0em;
 text-align: left;
 ${media.mobile}{
   margin-top:0px;
+  font-size:11px;
 }
 `;
 const Form = Styled.div`
-${media.mobile}{width:220px;}
+${media.mobile}
 `;
 const Input1 = Styled.input`
 background:transparent;
@@ -430,7 +443,6 @@ margin-top:2px;
 // `
 const Input = Styled.input`
 margin-top:10px;
-
 margin-right:10px;
 background:transparent;
 border: 1px solid #8C8C8C;

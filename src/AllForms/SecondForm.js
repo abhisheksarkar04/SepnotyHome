@@ -46,7 +46,7 @@ class CourseDetails extends Component {
     const { industryType } = this.props.formData;
   
     // If 'Industry Other Details' is provided, remove the error message
-    if (value.trim() !== '' && industryType.includes('10st')) {
+    if (value.trim() !== '' && industryType.includes('other')) {
       this.setState({ error: '' });
     }
   
@@ -188,7 +188,7 @@ class CourseDetails extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <input type="checkbox" id="10st"  checked={industryType.includes('10st')} onChange={this.handleCheckboxChange}/>
+                        <input type="checkbox" id="other"  checked={industryType.includes('other')} onChange={this.handleCheckboxChange}/>
                         <In type="text" placeholder='others (please specify)' value={indstryotherDetails} onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
                     {error && <ErrorMessage>{error}</ErrorMessage>}
@@ -201,7 +201,7 @@ class CourseDetails extends Component {
             className="buttons__button buttons__button--back"
             onClick={this.back}
           >
-            Back
+           <span>←</span> Back
           </button>
           <button
             className="buttons__button buttons__button--next"
@@ -331,9 +331,10 @@ justify-content:space-between;
 margin-top:20px;
 `;
 const Label = Styled.label`
-font-size:16px;
+font-size:14px;
 font-family: Roboto;
 font-weight: 500;
+width:100%;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
@@ -348,7 +349,7 @@ ${media.mobile}{
 }
 `;
 const Form1 = Styled.div`
-margin-top:60px;
+margin-top:20px;
 ${media.mobile}{
   width:100%;
 }

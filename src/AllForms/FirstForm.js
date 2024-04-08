@@ -52,7 +52,7 @@ handleOtherDetailsChange = (e) => {
       return;
     }
 
-    if (typeOfWebsite.includes('6st') && !this.props.formData.otherTypeOfWebsite) {
+    if (typeOfWebsite.includes('other') && !this.props.formData.otherTypeOfWebsite) {
       this.setState({ error: "Please specify the other type of website." });
       return;
     }
@@ -152,7 +152,7 @@ handleOtherDetailsChange = (e) => {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={formData.typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
+                    <Input type="checkbox" id="other" checked={formData.typeOfWebsite.includes('other')} onChange={this.handleCheckboxChange} />
                         <Input1 type="text" id="6st" value={formData.otherTypeOfWebsite} placeholder="others (please specify" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
                 </Form>
@@ -370,10 +370,8 @@ font-size:15px;
 color: #263238;
 font-weight:500;
 height:20px;
-margin-left:10px;
 ${media.mobile}{
   font-size:11px;
-  
   width:110px;
 }
 `
