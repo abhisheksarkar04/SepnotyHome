@@ -21,7 +21,6 @@ const theme = {};
 const ApplyForm = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
-  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleFileSelect = () => {
     fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
@@ -33,14 +32,6 @@ const ApplyForm = () => {
     console.log("Selected file:", file);
   };
 
-  const handlePhoneNumberChange = (event) => {
-    // Check if the entered phone number matches the desired format (10 digits with country code)
-    const enteredPhoneNumber = event.target.value;
-    if (/^\+\d{11}$/.test(enteredPhoneNumber)) {
-      // If the entered phone number matches the format, update the state
-      setPhoneNumber(enteredPhoneNumber);
-    }
-  };
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -55,10 +46,8 @@ const ApplyForm = () => {
             <Title type="text" placeholder="Applicant Name" />
             <Title type="text" placeholder="E-Mail" />
             <Title
-              type="tel" // Change input type to 'tel' for phone number
+              // Change input type to 'tel' for phone number
               placeholder="Phone Number"
-              value={phoneNumber}
-              onChange={handlePhoneNumberChange}
             />
             <ChooseFile>
               <Button onClick={handleFileSelect}>Choose File</Button>
