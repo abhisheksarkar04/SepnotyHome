@@ -294,13 +294,13 @@ const FormContainer = Styled.div`
   flex-direction:column;
   padding:20px;
   height:380px;
-  width:90%;
+  width:100%;
   border: 1px solid #C1CAE7;
   background: #C1CAE7;
   gap:20px;
   border-radius:10px;
   ${media.mobile}{
-    width: 52%;
+    width: 50%;
     border-radius:12px;
     gap:0px;
     margin: 0px -10px 0px 10px;

@@ -234,19 +234,26 @@ flex-direction:row;
 justify-content:center;
 align-item:center;
 gap:20px;
+${media.mobile}{
+  width:100%;
+  gap: 6px;
+  margin: 0px 0px 0px -20px;
+  padding-right: 0px;
+  justify-content:space-between;
+}
 `;
 const Form1 = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:90%;
+width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 52%;
+  width: 50%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;

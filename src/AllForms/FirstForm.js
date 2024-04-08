@@ -338,7 +338,7 @@ ${media.mobile}{
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:5px;
-
+  height:300px;
 }
 `;
 const CheckBoxCon = Styled.div`

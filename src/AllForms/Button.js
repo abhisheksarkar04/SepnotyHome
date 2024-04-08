@@ -18,9 +18,9 @@ function MainPage() {
   return (
     <ButtonCon >
       <div>
-      <  ActiveButton active={currentPage === 'website'}  onClick={() => handleButtonClick('website')}>Website</ActiveButton>
-        <Buttonel active={currentPage === 'application'}   onClick={() => handleButtonClick('application')}>Application</Buttonel>
-        <Butt active={currentPage === 'software'}  onClick={() => handleButtonClick('software')}>Software</Butt>
+      <ActiveButton active={currentPage === 'website' ? "true" : "false"} onClick={() => handleButtonClick('website')}>Website</ActiveButton>
+<Buttonel active={currentPage === 'application' ? "true" : "false"} onClick={() => handleButtonClick('application')}>Application</Buttonel>
+<Butt active={currentPage === 'software' ? "true" : "false"} onClick={() => handleButtonClick('software')}>Software</Butt>
       </div>
       <FormContainer>
         {currentPage === 'application' && <ApplicationPage />}
@@ -36,58 +36,34 @@ const media = {
   mobile: '@media(max-width: 576px)'
 };
 
-const ActiveButton = Styled.button`
-  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-  color: ${(props) => (props.active ? 'white' : 'black')};
-  
+const Button = Styled.button`
+  background-color: ${(props) => (props.active === "true" ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active === "true" ? 'white' : 'black')};
   border: 1px solid #8C8C8C;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-left: -5px;
+  
+  ${media.mobile} {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+`;
+
+const ActiveButton = Styled(Button)`
   border-top-left-radius: 10px;
-  border-bottom-left-radius:10px; /* Apply border-radius to all corners */
-  font-size: 16px; /* Reduced font size for mobile */
-  padding: 10px 20px 10px 20px; 
-  ${media.mobile} {
-    padding: 5px 10px 5px 10px; 
-    font-size:12px;
-  }
-
-  
-  
+  border-bottom-left-radius: 10px;
 `;
 
-const Buttonel = Styled.button`
-  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-  color: ${(props) => (props.active ? 'white' : 'black')};
-  
-  border: 1px solid #8C8C8C;
+const Buttonel = Styled(Button)`
   border-top-right-radius: 10px;
-  border-bottom-right-radius:10px;
-  font-size: 16px; /* Reduced font size for mobile */
-  padding: 10px 20px 10px 20px; 
-  ${media.mobile} {
-    padding: 5px 10px 5px 10px; 
-    font-size:12px;
-  }
-  
-  
+  border-bottom-right-radius: 10px;
 `;
 
-const Butt = Styled.button`
-  background-color: ${(props) => (props.active ? '#2B459B' : '#C1CAE7')};
-  color: ${(props) => (props.active ? 'white' : 'black')};
-
+const Butt = Styled(Button)`
   border-top-right-radius: 10px;
-  border-bottom-right-radius:10px;
-  border: 1px solid #8C8C8C;
-  margin-left:-5px;
-   /* Apply border-radius to all corners */
-  font-size: 16px; /* Reduced font size for mobile */
-  padding: 10px 20px 10px 20px; 
-  ${media.mobile} {
-    font-size:12px;
-    padding: 5px 10px 5px 10px; 
-  }
-  
-  
+  border-bottom-right-radius: 10px;
 `;
 
 const ButtonCon = Styled.div`
