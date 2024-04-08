@@ -63,6 +63,7 @@ justify-content:space-between;
 @media screen and (max-width:576px){
     flex-direction:column;
     padding-left:3%;
+    margin-right:20px;
 }
 `;
 export const RequestCallLeft=styled.div`
@@ -334,7 +335,7 @@ margin:10px 30px 40px 0px;
 margin-left:6%;
 width:57%;
 @media screen and (max-width:576px){
-  width:90vw;
+  width:97%;
   margin-left:3%;
   margin-right:0px;
 }

@@ -75,7 +75,9 @@ export const ArticleTime = styled.h3`
   margin-top: 10px;
   @media screen and (max-width: 576px) {
     font-size: 11px; 
-    margin-left: 63%;
+    margin-left: 14vw;
+    margin-bottom:0px;
+    margin-top:2px;
   }
 `;
 
@@ -86,5 +88,6 @@ export const Arrow = styled.h2`
   margin-bottom: 10px; /* Adjusted margin */
   @media screen and (max-width: 576px) {
     margin-left: 85%; 
+    margin-bottom:0px;
   }
 `;
