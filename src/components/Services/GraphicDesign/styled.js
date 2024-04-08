@@ -38,7 +38,7 @@ margin:60px 0px 20px 0px;
 padding-left:8%;
 @media screen and (max-width:576px){
   font-size:20px;
-  padding-left:7%;
+  padding-left:8%;
 }
 `;
 export const TransparentSpan=styled.span`

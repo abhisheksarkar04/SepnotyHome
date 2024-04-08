@@ -154,28 +154,28 @@ handleNext = (e) => {
                     *What type of media content does your Software have to support?
                     </Heading>
                     <CheckBoxCon>
-                    <Label htmlfor="Images">
+                    <Label htmlFor="Images">
                         <Input1 type="checkbox" name='mediatype' checked={typeOfMedia.includes("Images")} id="Images" value="Images" onChange={this.handleCheckboxChange}/>
 
                         Images
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="Video">
+                    <Label htmlFor="Video">
                         <Input1 type="checkbox" name='mediatype' checked={typeOfMedia.includes("Video")}  id="Video" value="Video" onChange={this.handleCheckboxChange}/>
                        
                         Video
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="Audio">
+                    <Label htmlFor="Audio">
                         <Input1 type="checkbox" id="Audio" name='mediatype' checked={typeOfMedia.includes("Audio")}  value="Audio" onChange={this.handleCheckboxChange}/>
                         
                         Audio
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="Interactive content">
+                    <Label htmlFor="Interactive content">
                         <Input1 type="checkbox" id="Interactive content" name='mediatype' checked={typeOfMedia.includes("Interactive content")} value="Interactive content" onChange={this.handleCheckboxChange}/>
   
                         Interactive content
@@ -183,14 +183,14 @@ handleNext = (e) => {
                     </CheckBoxCon>
                     <CheckBoxCon>
                         <Input1 type="checkbox" id="other" name='mediatype' onChange={this.handleCheckboxChange} checked={typeOfMedia.includes("other")}/>
-                        <Inpu type="text" htmlfor="five" value={otherMediaDetails} placeholder="Others (Please Specify)" onChange={this.handleOtherDetailsChange}/>
+                        <Inpu type="text" htmlFor="five" value={otherMediaDetails} placeholder="Others (Please Specify)" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
                     <Para1>
                     Should your website or App support payments?
                     </Para1>
                     <Main5>
-                        <ActiveButton type="button" active={current === 'Yes'}  onClick={() => this.handleButtonClick('Yes')}>Yes</ActiveButton>
-                        <Buttonel type="button" active={current === 'No'}  onClick={() => this.handleButtonClick('No')}>No</Buttonel>
+                        <ActiveButton type="button" active={current === 'Yes' ? "true" : "false"}  onClick={() => this.handleButtonClick('Yes')}>Yes</ActiveButton>
+                        <Buttonel type="button" active={current === 'No' ? "true": "false"}  onClick={() => this.handleButtonClick('No')}>No</Buttonel>
                     </Main5>
                 </Form>
             </FormContainer>
@@ -325,12 +325,6 @@ display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`;
-const Button1 = Styled.button`
-background-color:blue;
-height:40px;
-width:120px;
-color:white;
 `;
 const Main = Styled.div`
 background-color:#0C111F;
@@ -470,33 +464,29 @@ ${media.mobile}{
 }
 `
 
-const ActiveButton = Styled.button`
-background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
-color: ${(props) => (props.active ? "white" : "black")};
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  font-size: 20px;
-  width:60px;
-  height:25px;
-  ${media.mobile}{width:50px;}
+const Butto = Styled.button`
+  background-color: ${(props) => (props.active === "true" ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active === "true" ? 'white' : 'black')};
+  border: 1px solid #8C8C8C;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-left: -5px;
   
+  ${media.mobile} {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 `;
 
-const Buttonel = Styled.button`
-  font-size: 20px;
-  background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
-color: ${(props) => (props.active ? "white" : "black")};
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+const ActiveButton = Styled(Butto)`
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 0px;
-  width:60px;
-  height:25px;
-  margin-left: -10px;
-  border-right: 1px solid #9e9898;
-  ${media.mobile}{width:50px;}
-    
+`;
+
+const Buttonel = Styled(Butto)`
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 const Mai = Styled.div`

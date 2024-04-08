@@ -129,7 +129,7 @@ class SecondForm extends Component {
                 </CheckBoxCon>
                 <CheckBoxCon>
                   <input type="checkbox" id="Multilingual support" value="Multilingual support" checked={appFeatures.includes('Multilingual support')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Basic features">
+                  <Label htmlFor="Multilingual support">
                     Multilingual support
                   </Label>
                 </CheckBoxCon>
@@ -182,13 +182,13 @@ class SecondForm extends Component {
                 </CheckBoxCon>
                 <CheckBoxCon>
                   <input type="checkbox" id="Web Analytics" value="Web Analytics" checked={appFeatures.includes('Web Analytics')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Analytics">
+                  <Label htmlFor="Web Analytics">
                   Web Analytics
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
                   <input type="checkbox" id="other" checked={appFeatures.includes('other')} onChange={this.handleCheckboxChange} />
-                  <In type="text" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
+                  <In type="text" htmlFor="other" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
                 </CheckBoxCon>
 
                 {error && <ErrorMessage>{error}</ErrorMessage>}

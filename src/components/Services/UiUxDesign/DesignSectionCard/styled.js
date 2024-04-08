@@ -48,7 +48,7 @@ export const ImgCon = styled.div`
   justify-content: flex-end; /* Add this line */
   margin-left: 7.8%;
   @media screen and (max-width:576px){
-    width:45%;
+    width:50vw;
     margin-left:8%;
   }
 `;
@@ -64,4 +64,8 @@ export const WebTechButton = styled.button`
   color: rgba(43, 69, 155, 1);
   margin-top: -20px;
   height: 6vh;
+  @media screen and (max-width:576px){
+    height:4vh;
+    padding:5px;
+  }
 `;

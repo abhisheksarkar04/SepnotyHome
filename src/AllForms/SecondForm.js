@@ -278,7 +278,12 @@ justify-content:center;
 align-item:center;
 gap:20px;
 ${media.mobile}{
-  gap:4px;
+  width:100%;
+  gap: 6px;
+  margin: 0px 0px 0px -20px;
+  padding-right: 0px;
+  justify-content:space-between;
+
 }
 `
 const Heading = Styled.h1`
@@ -299,7 +304,7 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:90%;
+width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
@@ -310,8 +315,8 @@ ${media.mobile}{
   gap:0px;
   margin: 0px -10px 0px 10px;
   line-height: 1;
-  padding:5px;
-  height:380px;;
+  padding:3px;
+  height:300px;
 }
 `
 
@@ -329,16 +334,17 @@ gap:30px;
 align-items:start;
 justify-content:space-between;
 margin-top:20px;
+${media.mobile}{
+  margin-top:10px;
+}
 `;
 const Label = Styled.label`
-font-size:14px;
+font-size:16px;
 font-family: Roboto;
 font-weight: 500;
-width:100%;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
-margin-left:10px;
 ${media.mobile}{
   font-size:11px;
 }
@@ -352,5 +358,6 @@ const Form1 = Styled.div`
 margin-top:20px;
 ${media.mobile}{
   width:100%;
+  margin-top:40%;
 }
 `;

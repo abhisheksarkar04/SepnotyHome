@@ -15,7 +15,7 @@ margin:0px 0px 20px 0px;
 padding-left:3%;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:2%;
+  margin-left:4%;
 }
 `;
 export const HeadingSpan=styled.span`
@@ -41,7 +41,7 @@ margin-top:15px;
 margin-bottom:15px;
 @media screen and (max-width:576px){
   font-size:14px;
-  margin-left:2%;
+  margin-left:4%;
 }
 `;
 export const ImgCon = styled.div`

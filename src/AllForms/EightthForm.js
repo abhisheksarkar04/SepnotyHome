@@ -127,7 +127,7 @@ class FourthForm extends Component {
 
   handleButtonClick = (page) => {
     this.props.updateFormData({
-      wayOfCommunication: this.state.preferredCommunication,
+      wayOfCommunication: page,
     });
     this.setState({
       preferredCommunication: page,
@@ -269,22 +269,22 @@ class FourthForm extends Component {
                 <P8>Preferred way of communication:</P8>
                 <Button1
                   type="button"
-                  active={preferredCommunication === "Any"}
-                  onClick={() => this.handleButtonClick("Any")}
+                  active={preferredCommunication === "Any" ? "true" : "false"}
+                  onClick={() => this.handleButtonClick("Any")? "true" : "false"}
                 >
                   Any
                 </Button1>
                 <Button2
                   type="button"
-                  active={preferredCommunication === "Email"}
-                  onClick={() => this.handleButtonClick("Email")}
+                  active={preferredCommunication === "Email" ?"true" :"false"}
+                  onClick={() => this.handleButtonClick("Email")? "true" : "false"}
                 >
                   Email
                 </Button2>
                 <Button3
                   type="button"
-                  active={preferredCommunication === "Phone"}
-                  onClick={() => this.handleButtonClick("Phone")}
+                  active={preferredCommunication === "Phone" ? "true" : "false"}
+                  onClick={() => this.handleButtonClick("Phone") ? "true" : "false"}
                 >
                   Phone
                 </Button3>
@@ -432,7 +432,7 @@ const Main = styled.div`
   }
 `;
 const Input1 = styled.input`
-  margin-left: -80%;
+  margin-left: -85%;
   color: #c1cae7;
   cursor: pointer;
   ${media.mobile} {
@@ -555,50 +555,37 @@ ${media.mobile}{
   border-radius: 5px;
 }
 `;
-const Button1 = styled.button`
-  background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
-  color: ${(props) => (props.active ? "white" : "black")};
-  width: 60px;
-  border-radius: 5px;
-  font-size: 12px;
-  height: 30px;
-  border: 1px solid #8c8c8c;
-  @media screen and (max-width: 576px) {
-    height: 20px;
-    width: auto;
-    font-size: 10px;
-    padding-right: 5px;
-  }
-`;
-const Button2 = styled.button`
-  margin-left: 0px;
-  margin-top: 0px;
-  background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
-  color: ${(props) => (props.active ? "white" : "black")};
-  border: 1px solid #8c8c8c;
 
-  width: 80px;
-  height: 30px;
-  @media screen and (max-width: 576px) {
-    height: 20px;
-    width: auto;
-    font-size: 10px;
+const Butt = styled.button`
+  background-color: ${(props) => (props.active === "true" ? '#2B459B' : '#C1CAE7')};
+  color: ${(props) => (props.active === "true" ? 'white' : 'black')};
+  border: 1px solid #8C8C8C;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: -5px;
+  
+  ${media.mobile} {
+    font-size: 12px;
+    padding: 5px 10px;
   }
 `;
-const Button3 = styled.button`
-  background-color: ${(props) => (props.active ? "#2B459B" : "#C1CAE7")};
-  color: ${(props) => (props.active ? "white" : "black")};
-  border: 1px solid #8c8c8c;
-  width: 80px;
+
+const Button1 = styled(Butt)`
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+`;
+
+const Button2 = styled(Butt)`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 30px;
-  @media screen and (max-width: 576px) {
-    height: 20px;
-    width: auto;
-    font-size: 10px;
-  }
 `;
+
+const Button3 = styled(Butt)`
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+`;
+
 const Label = styled.label`
   color: #263238;
   font-weight: 500;

@@ -11,7 +11,7 @@ export const ServiceCardCon = styled.div`
   margin-bottom: 23px;
   position: relative;
   @media screen and (max-width:576px){
-    width:70%;
+    width:85%;
   }
 `;
 export const ServiceImgName = styled.div`

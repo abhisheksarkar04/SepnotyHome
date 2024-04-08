@@ -170,28 +170,28 @@ class ThirdForm extends Component {
             </Label>
           </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="HIPPA">
+                    <Label htmlFor="HIPPA">
                         <Input8 type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
                         
                         HIPPA
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="PCI DSS">
+                    <Label htmlFor="PCI DSS">
                         <Input8 type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
                         
                         PCI DSS
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="GDPR">
+                    <Label htmlFor="GDPR">
                         <Input8 type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
                         
                         GDPR
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Label htmlfor="I need your consultation on compliance">
+                    <Label htmlFor="I need your consultation on compliance">
                         <Input8 type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
                         
                         I need your consultation on compliance
@@ -278,7 +278,7 @@ const Input4 = Styled.input`
 background:transparent;
 border: 1px solid #8C8C8C;
 ${media.mobile}{
-  width:100px;
+  width:80%;
 }
 `
 const Div = Styled.div`
@@ -330,7 +330,7 @@ letter-spacing: 0em;
 text-align: left;
 color: #263238;
 ${media.mobile}{font-size:14px;
-line-height:10px;}
+line-height:15px;}
 
 `
 const StyledStepper = Styled(Stepper)`
@@ -364,7 +364,7 @@ gap:-20px;
 border-radius:10px;
 padding:20px;
 height:350px;
-width:90%;
+width:100%;
 ${media.mobile}{
   width:50%;
 }
@@ -414,7 +414,6 @@ ${media.mobile}{
 `;
 const Input = Styled.input`
 margin-right:10px;
-
 margin-left:10px;
 `
 
@@ -438,14 +437,12 @@ const Form2 = Styled.div`
 const Input3 = Styled.input`
 background: #C1CAE7;
 border: 1px solid #8C8C8C;
-
-width:90%;
-
+width:200px;
 height:70px;
 border-radius:4px;
 color: black;
 padding: 8px;
 text-align: left;
-${media.mobile}{width:40%;}
+${media.mobile}{width:90%;fontsize:10px;}
 `
 

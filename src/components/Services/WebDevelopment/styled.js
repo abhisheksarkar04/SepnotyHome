@@ -46,7 +46,7 @@ font-size:24px;
 margin:60px 0px 20px 0px;
 padding-left:8%;
 @media screen and (max-width:576px){
-  font-size:20px;
+  font-size:18px;
   padding-left:10%;
 }
 `;
@@ -61,6 +61,8 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 @media screen and (max-width:576px){
   margin-left:3%;
+  width:45px;
+  height:6%;
 }
 `;
 export const WebSectionTwoCardsCon=styled.div`
