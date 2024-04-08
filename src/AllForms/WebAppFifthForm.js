@@ -20,12 +20,12 @@ class SecondForm extends Component {
 
     // Validation for feature selection
     if (appFeatures.length === 0) {
-      this.setState({ error: 'Please select at least one feature.' });
+      this.setState({ error: 'Please select at least one feature.'});
       return;
     }
 
     // Check if 'Other' checkbox is checked and 'Other Feature Details' is empty
-    if (appFeatures.includes('10st') && (!formData.otherFeatureDetails || formData.otherFeatureDetails.trim() === '')) {
+    if (appFeatures.includes('other') && (!formData.otherFeatureDetails || formData.otherFeatureDetails.trim() === '')) {
       this.setState({ error: 'Please provide other feature details.' });
       return;
     }
@@ -46,7 +46,7 @@ class SecondForm extends Component {
       : appFeatures.filter(feature => feature !== id);
 
     // Check if 'Other' checkbox is checked
-    if (id === '10st') {
+    if (id === 'other') {
       // If 'Other' checkbox is checked, reset otherFeatureDetails
       const updatedDetails = checked ? '' : otherFeatureDetails;
       this.props.updateFormData({ appFeatures: updatedFeatures, otherFeatureDetails: updatedDetails });
@@ -165,7 +165,7 @@ class SecondForm extends Component {
                 <CheckBoxCon>
                   <input type="checkbox" id="User generated content(post, comments & Feedback)" value="User generated content(post, comments & Feedback)" checked={appFeatures.includes('User generated content(post, comments & Feedback)')} onChange={this.handleCheckboxChange} />
                   <Label htmlFor="User generated content(post, comments & Feedback)">
-                  User generated content(post, comments & Feedback)
+                  User generated content(post <S></S>,comments & Feedback)
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
@@ -187,7 +187,7 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="10st" checked={appFeatures.includes('10st')} onChange={this.handleCheckboxChange} />
+                  <input type="checkbox" id="other" checked={appFeatures.includes('other')} onChange={this.handleCheckboxChange} />
                   <In type="text" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
                 </CheckBoxCon>
 
@@ -220,7 +220,9 @@ export default SecondForm;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
-
+const S = Styled.span`
+margin-left:20px;
+`
 const StyledStepper = Styled(Stepper)`
   display: flex;
   justify-content: space-between;

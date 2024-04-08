@@ -434,7 +434,6 @@ border: 1px solid gray;
 font-size:15px;
 color: #263238;
 font-weight:500;
-margin-left:10px;
 
 ${media.mobile}{
   font-size:11px;

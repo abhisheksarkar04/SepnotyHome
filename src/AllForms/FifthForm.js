@@ -25,7 +25,7 @@ class SecondForm extends Component {
     }
 
     // Check if 'Other' checkbox is checked and 'Other Feature Details' is empty
-    if (appFeatures.includes('10st') && (!formData.otherFeatureDetails || formData.otherFeatureDetails.trim() === '')) {
+    if (appFeatures.includes('other') && (!formData.otherFeatureDetails || formData.otherFeatureDetails.trim() === '')) {
       this.setState({ error: 'Please provide other feature details.' });
       return;
     }
@@ -46,7 +46,7 @@ class SecondForm extends Component {
       : appFeatures.filter(feature => feature !== id);
 
     // Check if 'Other' checkbox is checked
-    if (id === '10st') {
+    if (id === 'other') {
       // If 'Other' checkbox is checked, reset otherFeatureDetails
       const updatedDetails = checked ? '' : otherFeatureDetails;
       this.props.updateFormData({ appFeatures: updatedFeatures, otherFeatureDetails: updatedDetails });
@@ -187,7 +187,7 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="10st" checked={appFeatures.includes('10st')} onChange={this.handleCheckboxChange} />
+                  <input type="checkbox" id="other" checked={appFeatures.includes('other')} onChange={this.handleCheckboxChange} />
                   <In type="text" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
                 </CheckBoxCon>
 

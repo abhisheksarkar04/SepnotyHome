@@ -4,12 +4,7 @@ import Styled from "styled-components"
 class FirstSoftwarePage extends Component {
 
   state = {
-    softwareTypes: [],
-    numberOfPages: '',
-    formErrors: {
-      softwareTypes: '',
-      numberOfPages: ''
-    }
+    error:"",
   };
 
   handleCheckboxChange = (event) => {
@@ -28,80 +23,43 @@ class FirstSoftwarePage extends Component {
     });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleOtherDetailsChange = (e) => {
+    this.props.updateFormData({ otherSoftwareDetails: e.target.value });
+  }
 
-
-    const { softwareTypes, numberOfPages } = this.state;
-    const {typeOfSoftware,numberofTools} = this.props.formData
-  // Call the handleFormValues function from FormUtils.js
-    if (typeOfSoftware.length === 0) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          softwareTypes: 'Please select at least one type of software.'
-        }
-      });
-      return;
-    }
-    if (!numberofTools) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          numberOfPages: 'Please select the number of pages for your website/App.'
-        }
-      });
-      return;
-    }
-   
-    // if(softwareTypes.length === 0 && !numberOfPages){
-        
-    // }
-    // Store the form data or proceed with further actions
   
-    // Proceed to the next step or page
-    this.props.nextStep();
-  };
 
-
-
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
-    const {typeOfSoftware,numberofTools} = this.props.formData
-    // Check for errors
-    /* const { softwareTypes, numberOfPages } = this.state;
-    const formData = {
-      field1: {softwareTypes , numberOfPages},
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData); */
-    const formErrors = {};
-    // console.log(softwareTypes,numberOfPages);
-    // Check software types
+
+    const { typeOfSoftware, numberofTools } = this.props.formData;
+
     if (typeOfSoftware.length === 0) {
-        formErrors.softwareTypes = 'Please select at least one type of software.';
+      this.setState({ error: "Please select at least one type of website." });
+      return;
     }
 
-    // Check number of pages
     if (!numberofTools) {
-        formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
+      this.setState({ error: "Please select the number of pages for your website/App." });
+      return;
     }
 
-    // If there are errors, update the state with the errors
-    if (Object.keys(formErrors).length > 0) {
-        this.setState({ formErrors });
-        return; // Prevent navigation to the next step/page
+    if (typeOfSoftware.includes('other') && !this.props.formData.otherSoftwareDetails) {
+      this.setState({ error: "Please specify the other type of website." });
+      return;
     }
-    
-    // If there are no errors, proceed to the next step
+
+    // If all validations pass, clear the error and proceed
+    this.setState({ error: "" });
     this.props.nextStep();
-}
+  }
 
   render() {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
     const {formData} = this.props
+    const {error}= this.state;
 
-    const {typeOfSoftware,numberofTools} = formData
+    const {typeOfSoftware,numberofTools,otherSoftwareDetails} = formData
 
     return (
       <Main className='form'>
@@ -190,12 +148,11 @@ class FirstSoftwarePage extends Component {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={typeOfSoftware.includes('6st')} onChange={this.handleCheckboxChange} />
-                        <Input1 type="text" id="6st" placeholder="others (please specify"/>
+                    <Input type="checkbox" id="other" checked={typeOfSoftware.includes('other')} onChange={this.handleCheckboxChange} />
+                        <Input1 type="text" id="6st" value= {otherSoftwareDetails} placeholder="others (please specify" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <Span style={{ color: 'red' }}>{formErrors.softwareTypes}</Span>}
             </FormContainer>
             <FormContainer>
                 <Form>
@@ -250,7 +207,7 @@ class FirstSoftwarePage extends Component {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <Span style={{ color: 'red' }}>{formErrors.numberOfPages}</Span>}
+              {error && <Error style={{ color: 'red' }}>{error}</Error>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -264,6 +221,10 @@ class FirstSoftwarePage extends Component {
 }
 
 export default FirstSoftwarePage;
+
+const Error = Styled.p`
+font-size:12px;
+`
 
 const Div = Styled.div`
 display:none;
@@ -387,7 +348,6 @@ font-size:15px;
 color: #263238;
 font-weight:500;
 height:20px;
-margin-left:10px;
 ${media.mobile}{font-size:13px;}
 `
 // const Buttonel = Styled.button`

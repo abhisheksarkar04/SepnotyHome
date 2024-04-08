@@ -372,15 +372,13 @@ justify-content:space-between;
 margin-top:13px;
 `;
 const Label = Styled.label`
-font-size:16px;
+font-size:14px;
 font-family: Roboto;
-font-size:15px;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 margin-right:10px;
 text-align: left;
-margin-left:10px;
 ${media.mobile}{font-size:13px;}
 
 `
