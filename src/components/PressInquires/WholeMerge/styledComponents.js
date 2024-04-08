@@ -290,7 +290,7 @@ export const ImgContainer = styled.div`
   padding:5px;
   margin-top:5%;
   @media screen and (max-width:576px){
-    width:95%;
+    width:90vw;
     margin-left:3%;
   }
 `;
@@ -302,7 +302,7 @@ export const Image = styled.img`
   border-right: 1px solid #abaaaa;
   @media screen and (max-width:576px){
     height:30px;
-    width:80px;
+    width:12vw;
     padding:0px;
   }
 `;
@@ -334,8 +334,9 @@ margin:10px 30px 40px 0px;
 margin-left:6%;
 width:57%;
 @media screen and (max-width:576px){
-  width:97%;
+  width:90vw;
   margin-left:3%;
+  margin-right:0px;
 }
 `;
 export const TrustWorthyText=styled.p`
