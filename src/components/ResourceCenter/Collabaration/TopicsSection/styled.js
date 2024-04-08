@@ -5,8 +5,8 @@ export const TopicContainer = styled.li`
   flex-direction: row;
   padding: 15px 40px 15px 10px;
   @media screen and (max-width: 576px) {
-    font-size: ;
     padding: 20px 0px 0px 0px;
+    margin-left: -20px;
   }
 `;
 export const Profile = styled.img`
@@ -17,6 +17,10 @@ export const Profile = styled.img`
 
 export const AboutCon = styled.div`
     text-align: left;
+    @media screen and (max-width: 576px) {
+
+      width: 80%;
+    }
 `;
 
 export const Topic = styled.h1`
@@ -24,9 +28,9 @@ export const Topic = styled.h1`
   color: #ffffff;
   width: 70%;
   @media screen and (max-width: 576px) {
-    font-size: 60%;
-    padding: ;
-    width: 120%;
+    font-size: 50%;
+    width: 100%;
+    line-height: 12px;
     font-weight: none;
   }
 `;
@@ -45,16 +49,26 @@ export const Data = styled.h1`
   font-size: 12px;
   color: #ffffff;
   margin: 0px;
+  @media screen and (max-width: 576px) {
+    font-size: 8px;
+  }
 `;
 export const DataName = styled.p`
   font-size: 12px;
   color: #ffffff;
   margin: 0px;
+  @media screen and (max-width: 576px) {
+    font-size: 8px;
+  }
 `;
 export const DataContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: auto;
+  @media screen and (max-width: 576px) {
+    margin: 0 10px 0 -50px;
+    width: 60%;
+  }
 `;
 
 export const SingleData = styled.div`

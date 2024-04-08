@@ -19,8 +19,8 @@ font-size:25px;
 margin: 5px 0px 20px 40px;
 @media screen and (max-width: 576px) {
   width: 100%;
-  font-size:16px;
-  margin: 5px 0px 20px 50px;
+  font-size:15.2px;
+  margin: 5px 0px 20px 40px;
  
 }
 `;
@@ -32,6 +32,11 @@ margin-left:10px;
 position:absolute;
 background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
+@media screen and (max-width: 576px) {
+  width:50px;
+height:45px;
+ 
+}
 `;
 export const AppAbout=styled.p`
 font-size:23px;
