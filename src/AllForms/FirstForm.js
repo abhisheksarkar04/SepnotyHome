@@ -57,6 +57,8 @@ handleOtherDetailsChange = (e) => {
       return;
     }
 
+    console.log(this.props.formData)
+
     // If all validations pass, clear the error and proceed
     this.setState({ error: "" });
     this.props.nextStep();

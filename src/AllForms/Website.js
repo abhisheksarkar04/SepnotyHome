@@ -75,6 +75,7 @@ class Form extends Component {
         typeofDevelopment:"website",
         typeOfWebsite: [],
         numberOfPages: '',
+        otherTypeOfWebsite:"",
       },
       step2:{
         industryType:[],
@@ -82,7 +83,7 @@ class Form extends Component {
       },
       step3:{
         services:"",
-        webisiteLink:"",
+        websiteLink:"",
         otherServiceDetails:"",
       },
       step4:{
