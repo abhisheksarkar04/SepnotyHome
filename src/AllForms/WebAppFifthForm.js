@@ -119,7 +119,7 @@ class SecondForm extends Component {
 
               <Form>
                 <Heading>
-                  *What Software features/capabilities do you need?
+                *What website or App features/capabilities do you need?
                 </Heading>
                 <CheckBoxCon>
                   <input type="checkbox" id="Multi domain configuration" checked={appFeatures.includes('Multi domain configuration')} value="Multi domain configuration" onChange={this.handleCheckboxChange} />
@@ -128,9 +128,9 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Basic features" value="Basic features" checked={appFeatures.includes('Basic features')} onChange={this.handleCheckboxChange} />
+                  <input type="checkbox" id="Multilingual support" value="Multilingual support" checked={appFeatures.includes('Multilingual support')} onChange={this.handleCheckboxChange} />
                   <Label htmlFor="Basic features">
-                  Basic features
+                    Multilingual support
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
@@ -140,21 +140,21 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Templates" value="Templates" checked={appFeatures.includes('Templates')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Templates">
-                    Templates
+                  <input type="checkbox" id="Page templates" value="Page templates" checked={appFeatures.includes('Page templates')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Page templates">
+                  Page templates
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Core features" value="Core features" checked={appFeatures.includes('Core features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Core features">
-                    Core features
+                  <input type="checkbox" id="Contact Forms" value="Contact Forms" checked={appFeatures.includes('Contact Forms')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Contact Forms">
+                  Contact Forms
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Customizable features" value="Customizable features" checked={appFeatures.includes('Customizable features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Customizable features">
-                    Customizable features
+                  <input type="checkbox" id="Live Chat / bot" value="Live Chat / bot" checked={appFeatures.includes('Live Chat / bot')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Live Chat / bot">
+                  Live Chat / bot
                   </Label>
                 </CheckBoxCon>
               </Form>
@@ -163,27 +163,27 @@ class SecondForm extends Component {
               <Form1>
 
                 <CheckBoxCon>
-                  <input type="checkbox" id="Collaboration features" value="Collaboration features" checked={appFeatures.includes('Collaboration features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Collaboration features">
-                    Collaboration features
+                  <input type="checkbox" id="User generated content(post, comments & Feedback)" value="User generated content(post, comments & Feedback)" checked={appFeatures.includes('User generated content(post, comments & Feedback)')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="User generated content(post, comments & Feedback)">
+                  User generated content(post, comments & Feedback)
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Integration features" value="Integration features" checked={appFeatures.includes('Integration features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Integration features">
-                    Integration features
+                  <input type="checkbox" id="Mobile compatibility" value="Mobile compatibility" checked={appFeatures.includes('Mobile compatibility')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Mobile compatibility">
+                  Mobile compatibility
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Security features" value="Security features" checked={appFeatures.includes('Security features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Security features">
-                    Security features
+                  <input type="checkbox" id="Social media Sharing functionality" value="Social media Sharing functionality" checked={appFeatures.includes('Social media Sharing functionality')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Social media Sharing functionality">
+                  Social media Sharing functionality
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Analytics" value="Analytics" checked={appFeatures.includes('Analytics')} onChange={this.handleCheckboxChange} />
+                  <input type="checkbox" id="Web Analytics" value="Web Analytics" checked={appFeatures.includes('Web Analytics')} onChange={this.handleCheckboxChange} />
                   <Label htmlFor="Analytics">
-                    Analytics
+                  Web Analytics
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
