@@ -106,7 +106,7 @@ const PriceModel = () => {
           </Main1>
         </Main>
       </DigitalContainer>
-      {seeContact && <Model />}
+     {/*  {seeContact && <Model />} */}
       <QueryContainer>
         <Meeting />
         <ContactForm heading={heading} />

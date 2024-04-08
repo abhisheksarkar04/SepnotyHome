@@ -154,7 +154,8 @@ const Main = styled.div`
 
   @media screen and (max-width: 576px) {
     gap: 0px;
-    margin-left: 14%;
+    margin-left: 12%;
+    margin-bottom: 10px;
   }
 `;
 const Main1 = styled.div`

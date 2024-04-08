@@ -240,6 +240,7 @@ export const PatternCon = styled.div`
   @media screen and (max-width: 576px) {
     font-size: 10px;
     margin-left: 3%;
+    margin-bottom: 15px;
   }
 `;
 
