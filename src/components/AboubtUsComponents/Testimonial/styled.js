@@ -41,7 +41,7 @@ export const ContentRecomContainer = styled.div`
   padding: 15px 0px 5% 6%;
   @media screen and (max-width: 576px) {
     padding: 5px 10px 0px 3%;
-    height: 200px;
+    height: 250px;
   }
 `;
 

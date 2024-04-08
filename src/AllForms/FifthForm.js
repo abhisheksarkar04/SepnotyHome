@@ -325,6 +325,9 @@ const CheckBoxCon = Styled.div`
   align-items:start;
   justify-content:space-between;
   margin-top:20px;
+  ${media.mobile}{
+    margin-top:10px;
+  }
 `;
 
 const Label = Styled.label`

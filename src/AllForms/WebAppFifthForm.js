@@ -288,6 +288,7 @@ const Heading = Styled.h1`
   color: #263238;
   ${media.mobile}{
     font-size:15px;
+    line-height:18px;
   }
 `;
 
@@ -308,7 +309,7 @@ const FormContainer = Styled.div`
     margin: 0px -10px 0px 10px;
     line-height: 1;
     padding:5px;
-    height:380px;
+    height:auto;
   }
 `;
 
@@ -327,6 +328,9 @@ const CheckBoxCon = Styled.div`
   align-items:start;
   justify-content:space-between;
   margin-top:20px;
+  ${media.mobile}{
+    margin-top:10px;
+  }
 `;
 
 const Label = Styled.label`
@@ -339,6 +343,7 @@ const Label = Styled.label`
   margin-left:10px;
   ${media.mobile}{
     font-size:11px;
+    margin-left:0px;
   }
 `;
 
