@@ -299,6 +299,7 @@ ${
   media.mobile
 }{
   font-size:13px;
+  line-height:18px;
 }
 `
 
@@ -322,6 +323,9 @@ const CheckBoxCon = Styled.div`
 margin-top:15px;
 align-items:start;
 justify-content:space-between;
+${media.mobile}{
+  margin-top:10px;
+}
 `
 const Label = Styled.label`
 font-size:16px;
@@ -348,7 +352,7 @@ font-size:15px;
 color: #263238;
 font-weight:500;
 height:20px;
-${media.mobile}{font-size:13px;}
+${media.mobile}{font-size:11px; width:110px;}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;
