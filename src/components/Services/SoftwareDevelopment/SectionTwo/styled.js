@@ -20,7 +20,7 @@ width:23%;
 padding-bottom: 40px;
 @media screen and (max-width:576px){
   padding:10px;
-  width:40%;
+  width:44%;
 }
 `;
 export const ComponentHeading = styled.h1`
@@ -35,7 +35,7 @@ export const ComponentHeading = styled.h1`
     -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff; 
     @media screen and (max-width:576px){
-      font-size:40px;
+      font-size:35px;
     }
 `;
 

@@ -14,12 +14,14 @@ export const ChooseCardCon = styled.div`
   margin-bottom: 35px;
   overflow: hidden; 
   @media screen and (max-width:576px){
-    width:80%;
+    width:100%;
+    margin:0px;
     justify-content:center;
     height:auto;
     padding:15px;
     padding-top:20px;
     padding-bottom:20px;
+    margin-bottom:20px;
   }
 `;
 

@@ -18,7 +18,8 @@ z-index:1;
 padding-top:10px;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:5%;
+  margin-left:8%;
+  margin-top:30px;
 }
 `;
 export const SubHeadSpan = styled.span`
@@ -43,7 +44,8 @@ margin-left:47px;
 @media screen and (max-width:576px){
   width:200px;
 height:200px;
-  margin-left:5%;
+  margin-left:8%;
+  margin-bottom:0px;
 }
 `;
 export const SubPara=styled.p`
@@ -53,7 +55,7 @@ color:white;
 width:80%;
 @media screen and (max-width:576px){
   font-size:14px;
-  margin-left:5%;
+  margin-left:8%;
 }
 `;
 export const BackButton=styled.button`

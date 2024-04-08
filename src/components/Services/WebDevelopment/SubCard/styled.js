@@ -69,7 +69,7 @@ margin-right:25px;
 margin-left:30px;
 padding:25px;
 @media screen and (max-width:576px){
-  width:60%;
+  width:80%;
   margin-top:40px;
   align-self:center;
   padding:10px;
