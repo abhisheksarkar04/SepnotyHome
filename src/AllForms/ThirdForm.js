@@ -80,6 +80,8 @@ class YourIndustry extends Component {
   render() {
     const { error } = this.state;
     const { formData } = this.props;
+
+    const {otherServiceDetails} = formData;
     // const {
     //   firstname,
     //   lastname,
@@ -247,7 +249,7 @@ Migration to a new CMS
     <Input type='radio'  name="industry" value="others" checked={formData.services ==="others"} onChange={this.handleRadioChange}/>
     <Input1  type="text"
                       placeholder="others (please specify)"
-                      value={formData.otherServiceDetails}
+                      value={otherServiceDetails}
                       onChange={this.handleOtherServiceDetailsChange} />
     </Label>
 </InputContainer>
@@ -376,14 +378,13 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:90%;
+width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
-
 ${media.mobile}{
-  width: 53%;
+  width: 50%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
@@ -415,7 +416,7 @@ margin-right:10px;
 const InputContainer = Styled.div`
 margin-top:20px;
 ${media.mobile}{
-  margin-top:15px;
+  margin-top:10px;
 }
 `;
 const Label = Styled.label`
@@ -425,7 +426,6 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
-
 ${media.mobile}{
   font-size:11px;
 }
@@ -437,7 +437,6 @@ border: 1px solid gray;
 font-size:15px;
 color: #263238;
 font-weight:500;
-
 ${media.mobile}{
   font-size:11px;
   width:130px;;

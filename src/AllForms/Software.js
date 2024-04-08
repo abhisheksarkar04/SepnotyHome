@@ -82,10 +82,12 @@ class Software extends Component {
         step3:{
           services:"",
           webisiteLink:"",
+          otherServiceDetails:"",
         },
         step4:{
           UIDesignMockups:"",
           chosenCMS:"",
+          cmsDetails:"",
         },
         step5:{
           appFeatures:[],
@@ -93,14 +95,15 @@ class Software extends Component {
         },
         step6:{
           typeOfMedia:[],
+          otherMediaDetails:"",
           paymentSystem: true,
           visitors:"",
         },
         step7:{
           complianceRequirements:[],
-        integrationDetails:"",
-        details:"",
-        otherCompliance:"",
+          integrationDetails:"",
+          details:"",
+          otherCompliance:"",
         },
         step8:{
         username:"",
@@ -113,8 +116,9 @@ class Software extends Component {
           requestInfo: false,
         }
         }
-        
       },
+      recivedData:[]
+  
     };
   
     nextStep = () => {
@@ -130,14 +134,38 @@ class Software extends Component {
         step: step - 1
       })
     }
-    submitData = (e) => {
+    submitData = async(e) => {
       e.preventDefault();
   
       const { formData } = this.state;
       const formattedData = this.convertToDesiredFormat(formData);
+      const dataToSend = JSON.stringify(formattedData);
+  
+      const response = await fetch(
+        "http://localhost:8800/api/proposal/software/softwareProposal",
+        {
+          method: "POST",
+          body: dataToSend,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        console.log("SUCCESS! your proposal was submitted");
+        window.location.reload()
+      } else {
+        alert('ERROR ${response.status}: There has been a problem with your operation. Please try again later.');
+        alert('ERROR ${response.status}: Something went wrong!');
+      }
+  
+      // Handle the response accordingly
+      
       console.log(formattedData); //Log all form data
-      alert('Data sent');
-    }
+  
+      alert("Data sent");
+    };
 
     updateFormData = (data) => {
       const { step, formData } = this.state;

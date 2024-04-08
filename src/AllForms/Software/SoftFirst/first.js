@@ -116,33 +116,33 @@ class FirstSoftwarePage extends Component {
                     </Heading>
                     <CheckBoxCon>
                     <Input type="checkbox" id="System software" checked={typeOfSoftware.includes('System software')} onChange={this.handleCheckboxChange} />
-                    <Label htmlfor="System software">
+                    <Label htmlFor="System software">
                     System software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Label htmlfor="Utility software">
+                        <Label htmlFor="Utility software">
                         <Input type="checkbox" id="Utility software" checked={typeOfSoftware.includes('Utility software')} onChange={this.handleCheckboxChange} />
                         Utility software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Application software">
+                        <Label htmlFor="Application software">
                         <Input type="checkbox" id="Application software" checked={typeOfSoftware.includes('Application software')} onChange={this.handleCheckboxChange} />
                         Application software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Designing software">
+                        <Label htmlFor="Designing software">
                         <Input type="checkbox" id="Designing software" checked={typeOfSoftware.includes('Designing software')} onChange={this.handleCheckboxChange} />
                         Designing software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Programming software">
+                        <Label htmlFor="Programming software">
                         <Input type="checkbox" id="Programming software" checked={typeOfSoftware.includes('Programming software')} onChange={this.handleCheckboxChange} />
                         Programming software
                         </Label>
@@ -338,7 +338,7 @@ ${media.mobile}{
   font-size:11px;
 }
 `
-const Form = Styled.form`
+const Form = Styled.div`
 ${media.mobile}{
   width:100%;
   border-radius:5px;
