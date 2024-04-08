@@ -9,22 +9,11 @@ class PersonalDetails extends Component {
 constructor(props){
   super(props);
   this.state = {
-    formErrors: {
-      typeOfWebsite: '',
-      numberOfPages: ''
-    },
-    activeStep: 0
+    error:"",
   };
 }
-componentDidMount() {
-  // Initialization tasks after the component is mounted
-  console.log("SecondSoftware component mounted");
-}
 
-componentWillUnmount() {
-  // Cleanup tasks before the component is unmounted
-  console.log("SecondSoftware component unmounted");
-}
+
 handleCheckboxChange = (event) => {
   const { id, checked } = event.target;
   const typeOfWebsite = this.props.formData.typeOfWebsite || [];
@@ -35,75 +24,46 @@ handleCheckboxChange = (event) => {
   });
 };
 
+
 handleRadioChange = (event) => {
   this.props.updateFormData({
     numberOfPages: event.target.value
   });
 };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+handleOtherDetailsChange = (e) => {
+  this.props.updateFormData({ otherTypeOfWebsite: e.target.value });
+}
 
-    const { typeOfWebsite, numberOfPages } = this.state;
 
-    // Call the handleFormValues function from FormUtils.js
 
-    if (typeOfWebsite.length === 0) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          typeOfWebsite: "Please select at least one type of software.",
-        },
-      });
-      return;
-    }
-    if (!numberOfPages) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          numberOfPages:
-            "Please select the number of pages for your website/App.",
-        },
-      });
-      return;
-    }
-
-    // if(softwareTypes.length === 0 && !numberOfPages){
-
-    // }
-    // Store the form data or proceed with further actions
-    console.log("Form data:", this.state);
-    // Proceed to the next step or page
-  };
   continue = (e) => {
     e.preventDefault();
 
     const { typeOfWebsite, numberOfPages } = this.props.formData;
-    const formErrors = {};
-    // Check software types
-    //console.log("Form data:", this.props.formData);
+
     if (typeOfWebsite.length === 0) {
-
-      formErrors.softwareTypes = 'Please select at least one type of software.';
-
+      this.setState({ error: "Please select at least one type of website." });
+      return;
     }
-    // Check number of pages
+
     if (!numberOfPages) {
-
-      formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
-    }
-    // If there are errors, update the state with the errors
-    if (Object.keys(formErrors).length > 0) {
-      this.setState({ formErrors });
-      return; // Prevent navigation to the next step/page
+      this.setState({ error: "Please select the number of pages for your website/App." });
+      return;
     }
 
-    // If there are no errors, proceed to the next step
+    if (typeOfWebsite.includes('6st') && !this.props.formData.otherTypeOfWebsite) {
+      this.setState({ error: "Please specify the other type of website." });
+      return;
+    }
+
+    // If all validations pass, clear the error and proceed
+    this.setState({ error: "" });
     this.props.nextStep();
   }
 
   render() {
-    const { typeOfWebsite, numberOfPages, formErrors ,activeStep} = this.state;
+    const {error}= this.state;
     const {formData} = this.props
 
     return (
@@ -151,17 +111,12 @@ handleRadioChange = (event) => {
           <StyledStep />
         </Atyled>
         </Div>
-        
-
-
-
-        
       <Main1>
             <FormContainer>
             <Form>
                
                     <Heading>
-                         *Choose the type of  you need:
+                    *Choose the type of website/App you need:
                     </Heading>
                     <CheckBoxCon>
                     <Input type="checkbox" id="Corporate Website/App" value="Corporate Website/App" checked={formData.typeOfWebsite.includes('Corporate Website/App')} onChange={this.handleCheckboxChange} />
@@ -198,9 +153,8 @@ handleRadioChange = (event) => {
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Input type="checkbox" id="6st" checked={formData.typeOfWebsite.includes('6st')} onChange={this.handleCheckboxChange} />
-                        <Input1 type="text" id="6st" placeholder="others (please specify"/>
+                        <Input1 type="text" id="6st" value={formData.otherTypeOfWebsite} placeholder="others (please specify" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
-                {formErrors.typeOfWebsite && <Error style={{ color: 'red' }}>{formErrors.typeOfWebsite}</Error>}
                 </Form>
             </FormContainer>
             <FormContainer>
@@ -258,7 +212,7 @@ handleRadioChange = (event) => {
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <Error style={{ color: 'red' }}>{formErrors.numberOfPages}</Error>}
+              {error && <Error style={{ color: 'red' }}>{error}</Error>}
               </Form>
                           </FormContainer>
                       </Main1>
@@ -372,7 +326,7 @@ display:flex;
 flex-direction:column;
 padding:20px;
 height:380px;
-width:90%;
+width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;

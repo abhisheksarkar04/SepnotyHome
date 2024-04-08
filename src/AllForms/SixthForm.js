@@ -12,7 +12,7 @@ class FormNo5 extends Component {
   state = {
 
     current: 'Yes',
-    errors: "",
+    error: "",
 
   };
 
@@ -37,27 +37,41 @@ class FormNo5 extends Component {
     if (!visitors) {
       errors = 'Please select the expected number of monthly visitors.';
     }
+    if (typeOfMedia.includes('other') && !this.props.formData.otherMediaDetails) {
+       errors= "Please specify the other type of media." ;
+      return;
+    }
 
     return errors;
 };
 
-handleNext = () => {
-  const errors = this.validateForm();
-  const { formData } = this.props;
-  const { typeOfMedia, visitors } = formData;
+handleNext = (e) => {
+  e.preventDefault();
 
-  if (Object.keys(errors).length === 0) {
-    // No validation errors, proceed to the next step
-    this.props.nextStep();
-  } else {
-    // Validation errors found, update state with errors
-    this.setState({ errors });
+  const {typeOfMedia, visitors,otherMediaDetails} = this.props.formData
+
+  if (typeOfMedia.length === 0) {
+    this.setState({ error: "Please select at least one type of website." });
+    return;
   }
+
+  if (!visitors) {
+    this.setState({ error: "Please select the number of pages for your website/App." });
+    return;
+  }
+
+  if (typeOfMedia.includes('other') && !otherMediaDetails) {
+    this.setState({ error: "Please specify the other type of media." });
+    return;
+  }
+
+  // If all validations pass, clear the error and proceed
+  this.setState({ error: "" });
+  this.props.nextStep();
 };
 
 
   handleRadioChange = (event) => {
-
     this.props.updateFormData({
       visitors: event.target.value
 
@@ -66,14 +80,15 @@ handleNext = () => {
 
   handleCheckboxChange = (e) => {
     const { value, checked ,id} = e.target;
-    
-
-
     this.props.updateFormData({
       typeOfMedia:checked ? [...this.props.formData.typeOfMedia, id] : this.props.formData.typeOfMedia = this.props.formData.typeOfMedia.filter(type => type !== id)
     })
-
   };
+
+  handleOtherDetailsChange = (e) => {
+    this.props.updateFormData({otherMediaDetails: e.target.value });
+  }
+
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
@@ -81,8 +96,8 @@ handleNext = () => {
 
   render() {
 
-    const { current, mediaContent, paymentSupport, monthlyVisitors, errors } = this.state;
-    const {typeOfMedia,visitors} = this.props.formData
+    const { current, mediaContent, paymentSupport, monthlyVisitors, error } = this.state;
+    const {typeOfMedia,visitors,otherMediaDetails} = this.props.formData
 
 
     return (
@@ -167,10 +182,9 @@ handleNext = () => {
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Input type="checkbox" id="five" name='mediatype' onChange={this.handleCheckboxChange}/>
-                        <Input type="text" htmlfor="five" placeholder="Others (Please Specify)"/>
+                        <Input type="checkbox" id="other" name='mediatype' onChange={this.handleCheckboxChange} checked={typeOfMedia.includes("other")}/>
+                        <Input type="text" htmlfor="five" value={otherMediaDetails} placeholder="Others (Please Specify)" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
-                    {errors.mediaContent && <Error>{errors.mediaContent}</Error>}
                     <Para1>
                     Should your website or App support payments?
                     </Para1>
@@ -235,7 +249,7 @@ handleNext = () => {
 
                   </Label>
                 </InputContainer>
-                {errors && <Error>{errors}</Error>}
+                {error && <Error>{error}</Error>}
               </Form>
             </FormContainer>
           </Mai>

@@ -76,6 +76,7 @@ class Software extends Component {
         },
         step2:{
           industryType:[],
+          indstryotherDetails:"",
         },
         step3:{
           services:"",
@@ -87,6 +88,7 @@ class Software extends Component {
         },
         step5:{
           appFeatures:[],
+          otherFeatureDetails:"",
         },
         step6:{
           typeOfMedia:[],

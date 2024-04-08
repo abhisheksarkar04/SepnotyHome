@@ -160,7 +160,7 @@ class ThirdForm extends Component {
                     </Heading>
                     <CheckBoxCon>
             <Label htmlFor="No">
-              <input 
+              <Input8
                 type="checkbox" 
                 id="No" 
                 checked={complianceRequirements.includes("No")} 
@@ -171,34 +171,34 @@ class ThirdForm extends Component {
           </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="HIPPA">
-                        <input type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="HIPPA" checked={complianceRequirements.includes("HIPPA")}  onChange={this.handleCheckboxChange}/>
                         
                         HIPPA
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="PCI DSS">
-                        <input type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="PCI DSS" name='compliance' checked={complianceRequirements.includes("PCI DSS")} onChange={this.handleCheckboxChange}/>
                         
                         PCI DSS
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="GDPR">
-                        <input type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="GDPR" name='compliance' checked={complianceRequirements.includes("GDPR")} onChange={this.handleCheckboxChange}/>
                         
                         GDPR
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                     <Label htmlfor="I need your consultation on compliance">
-                        <input type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
+                        <Input8 type="checkbox" id="I need your consultation on compliance" name='compliance' checked={complianceRequirements.includes("I need your consultation on compliance")} onChange={this.handleCheckboxChange}/>
                         
                         I need your consultation on compliance
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Input type="checkbox"
+                        <Input8 type="checkbox"
               id="Other"
               name='compliance'
               checked={complianceRequirements.includes("Other")}
@@ -269,6 +269,10 @@ export default ThirdForm;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
+
+const Input8 = Styled.input`
+margin-right:10px;
+`
 
 const Input4 = Styled.input`
 background:transparent;
@@ -374,6 +378,7 @@ font-size:15px;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
+margin-right:10px;
 text-align: left;
 margin-left:10px;
 ${media.mobile}{font-size:13px;}
