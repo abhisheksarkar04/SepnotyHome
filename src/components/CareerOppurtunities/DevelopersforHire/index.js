@@ -1,5 +1,4 @@
 import {
-
   Header,
   Service,
   Span,
@@ -21,10 +20,9 @@ import {
   ListDataContainer,
   ListInnerContainer,
   TableItemsList,
-
+  List,
   // ContactItem,
   // Container,
-
 } from "./styled";
 
 import img1 from "../Images/image1.svg";
@@ -187,7 +185,7 @@ const Developerforhire = () => {
                     </select>
                   </Dropdowncontent>
                 </DropDown>
-                <ul>
+                <List>
                   {JobList.map((listing) => (
                     <ListInnerContainer>
                       <ImageCon src={listing.image} alt="dm" />
@@ -202,14 +200,11 @@ const Developerforhire = () => {
                         </Iph>
                       </ListDataContainer>
                       <Link to="/CareerOppurtunities/ApplyForm">
-                        <ApplyButton >Apply</ApplyButton><br></br>
-                        <br></br>
+                        <ApplyButton>Apply</ApplyButton>
                       </Link>
-                      <br></br>
-                      <br></br>
                     </ListInnerContainer>
                   ))}
-                </ul>
+                </List>
                 {/* <p>button</p> */}
               </TableItemsList>
             </ServiceItemDetails>
@@ -219,7 +214,6 @@ const Developerforhire = () => {
       <FooterSection />
     </>
   );
-
 };
 
 export default Developerforhire;
