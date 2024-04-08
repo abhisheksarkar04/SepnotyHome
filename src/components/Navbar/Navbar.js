@@ -379,7 +379,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={serviceRef}>
-            <ListComponent class="list-item" onClick={toggleService}>
+            <ListComponent className="list-item" onClick={toggleService}>
               {isServiceOpen ? (
                 <>
                   Services
@@ -396,7 +396,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={blogRef}>
-            <ListComponent class="list-item" onClick={toggleBlog}>
+            <ListComponent className="list-item" onClick={toggleBlog}>
               {isBlogOpen ? (
                 <>
                   Blog
@@ -414,7 +414,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={careerRef}>
-            <ListComponent class="list-item" onClick={toggleCareer}>
+            <ListComponent className="list-item" onClick={toggleCareer}>
               {isCareerOpen ? (
                 <>
                   Career Opportunities
@@ -431,7 +431,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={resourceRef}>
-            <ListComponent class="list-item" onClick={toggleResource}>
+            <ListComponent className="list-item" onClick={toggleResource}>
               {isResourceOpen ? (
                 <>
                   Resource Center
@@ -450,7 +450,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={buttonRef}>
-            <ListComponent class="list-item" onClick={toggleContact}>
+            <ListComponent className="list-item" onClick={toggleContact}>
               <button className="contact-button">Contact Us</button>
             </ListComponent>
             {isButtonOpen && (
