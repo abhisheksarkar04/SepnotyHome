@@ -43,7 +43,6 @@ export const ServiceItemDesc = styled.p`
   margin-top: 20px;
   color: #ffffff;
   width: 80%;
-  
   margin-left: 4%;
   line-height: 1.5;
   text-align: ;

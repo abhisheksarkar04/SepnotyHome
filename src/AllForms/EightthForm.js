@@ -76,7 +76,7 @@ class CourseDetails extends Component {
             stepClassName={'stepper__step'}
           />
 
-<M> 
+      <M> 
         <Mai><P1>
         Almost done!
         </P1>

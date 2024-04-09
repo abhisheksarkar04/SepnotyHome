@@ -134,7 +134,6 @@ export const Input = styled.input`
     font-size: 14px;
     font-weight: 500;
     padding: 5px;
-    
   }
   @media screen and (max-width: 576px) {
     width: 90%;

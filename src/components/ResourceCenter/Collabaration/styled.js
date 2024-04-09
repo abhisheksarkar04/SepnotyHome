@@ -117,10 +117,7 @@ export const ListHeading = styled.h1`
 
 `;
 
-// height: 6vh;
-//     width: 11vw;
-//     font-size: 5.3vw;
-//     width: 90%;
+
 export const Small = styled.img`
   position: absolute;
   height: 55px;
