@@ -6,13 +6,18 @@ padding:40px 0px 0px 6%;
 width:100%;
 min-height: 40vh;
 margin-bottom: 30px;
+@media screen and (max-width: 576px) {
+  min-height: 30vh;
+  margin-bottom: 10px;
+   
+  }
 `;
 export const WebSectionOneHeading=styled.h2`
 font-size: 30px;
 color:white;
 
 @media screen and (max-width: 576px) {
-  font-size: 20px;
+  font-size: 5vw;
    
   }
 `;
@@ -24,7 +29,7 @@ color:white;
 text-align: ;
 @media screen and (max-width: 576px) {
     width: 90%;
-    font-size: 16px;
+    font-size: 3.5vw;
    
   }
 `;
@@ -37,6 +42,10 @@ top: -90;
 left:0;
 margin-top: 140px;
 z-index: -1;
+@media screen and (max-width: 576px) {
+  display:none;
+ 
+}
 
 `;
 export const BackgroundShapeTwo=styled.span`
@@ -51,4 +60,8 @@ top:-25;
 right:0;
 gap:0;
 z-index:0;
+@media screen and (max-width: 576px) {
+  display:none;
+ 
+}
 `;

@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const MobSection=styled.div`
 background-color:rgba(12, 17, 31, 1);
 width:100%;
+@media screen and (max-width: 576px) {
+  padding:30px 0px 0px 0;
+
+}
 `;
 
 export const WebPageTitle=styled.h2`
@@ -41,6 +45,10 @@ export const SmallPattern = styled.div`
   height: 70px;
   width: 80px;
   border-radius: 3px;
+  @media screen and (max-width: 576px) {
+    height: 40px;
+    width: 50px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -54,6 +62,10 @@ export const ListHeading = styled.h1`
   color: #89A4FF;
   font-weight: bold;
   margin-left: -25px;
+  @media screen and (max-width: 576px) {
+    font-size: 18px;
+    margin-left: -22px;
+  }
 `;
 export const ServiceItemDesc = styled.p`
   margin-bottom: 50px;
@@ -66,7 +78,7 @@ export const ServiceItemDesc = styled.p`
   @media screen and (max-width: 576px) {
     margin-left: 12%;
     width: 80%;
-    font-size: 14px;
+    font-size: 3vw;
   }
 `;
 

@@ -112,7 +112,8 @@ color:white;
 font-weight: 600;
 padding: 125px 0px 10px 6%;
 @media screen and (max-width: 600px) {
-  font-size: 14px;
+  font-size: 3vw;
+  padding: 105px 0px 10px 6%;
 }
 `;
 export const GdHeading=styled.h1`
@@ -122,7 +123,7 @@ margin: 0px 0px 15px 0px;
 color:white;
 padding: 20px 0px 10px 6%;
 @media screen and (max-width: 600px) {
-  font-size: 16px;
+  font-size: 4vw;
 `;
 
 export const AnalyticsSection = styled.div`
@@ -199,6 +200,7 @@ export const ProBottom = styled.div`
     @media screen and (max-width: 576px) {
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
+      height: 30vh;
     }
 
 `;
@@ -229,6 +231,10 @@ export const GraphImg = styled.img`
     height: 150px;
     margin: 50px 0px 0px 0px;
     width: 100%;
+    @media screen and (max-width: 576px) {
+      margin: 30px 0px 0px 0px;
+      height: 120px;
+    }
 
 
 
@@ -343,7 +349,7 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: auto;
   @media screen and (max-width: 576px) {
-    font-size: 5.3vw;
+    font-size: 5vw;
     width: 90%;
   }
 `;
@@ -355,8 +361,8 @@ export const HeadingSearch = styled.h1`
     font-weight: 400;
     @media screen and (max-width: 576px) {
       margin: 20px 0px 20px 50px;
-      justify-content: ;
       font-weight: bold;
+      font-size: 3vw;
 
     }
     
@@ -394,6 +400,11 @@ export const SearchSectionBtn = styled.button`
     margin: 0px 0px 0px 10px;
     color: #fff;
     border-radius: 3px;
+    @media screen and (max-width: 576px) {
+      width: 25vw;
+      font-size: 2vw;
+      margin: 0px 0 0 0;
+    }
 `;
 
 
@@ -430,6 +441,19 @@ color: white;
     margin-left: 0px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 576px) {
+  width: 20vw;
+  font-size: 2vw;
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 3vw;
+    margin-left: 0px;
+    cursor: pointer;
+}
+}
+
 `;
 
 

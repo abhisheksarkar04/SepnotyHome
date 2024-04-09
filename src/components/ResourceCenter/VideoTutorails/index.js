@@ -1,6 +1,6 @@
 // import searchIcon from "../images/search.svg";
 import DeepLearnCards from "./DeepLearnCards";
-import DeepLearnStructure from "./images/Rectangle 6283.svg";
+import DeepLearnStructure from "./images/Rectangle 6283.png";
 import FooterSection from "../../Footer/FooterSection";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
@@ -214,10 +214,10 @@ const VideoTutorials = () => {
             </HeadingCon>
             <TechnicalArticalsMain>
               <DeepLearnFrame>
-              <ImageContainer2>
-                 <DeepLearnImage2 src={DeepLearnStructure} alt="Deep Learning" />
+              <ImageContainer>
+                 <DeepLearnImage src={DeepLearnStructure} alt="Deep Learning" />
                  <DeepHeading>Deep learning frameworks</DeepHeading>
-                 </ImageContainer2>
+                 </ImageContainer>
                  <Button>Watch More</Button>
               </DeepLearnFrame>
               <ListItems>

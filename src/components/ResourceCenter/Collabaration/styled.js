@@ -10,12 +10,12 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.h1`
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 3vw;
     padding: 10px 20px 20px 6%;
   }
 `;
@@ -37,6 +37,10 @@ export const Resource = styled.h1`
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 3% 0px 3% 6%;
+  @media screen and (max-width: 576px) {
+    height: 25vh;
+    padding: 6% 0px 3% 6%;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -45,7 +49,7 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 4vw;
     margin-bottom: 20px;
   }
 `;
@@ -56,7 +60,7 @@ export const ConRecDesc = styled.p`
   width: 50%;
   padding: 20px 30px 30px 0px;
   @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
     width: 80%;
     padding: 0px 30px 30px 0px;
   }
@@ -619,7 +623,7 @@ export const CommunityHeading = styled.h1`
   font-weight: 500;
   margin-bottom: 20px;
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 4vw;
 
   }
 `;
@@ -629,7 +633,7 @@ export const CommunityDesc = styled.p`
   margin-bottom: 10px;
   @media screen and (max-width: 576px) {
       width: 70%;
-      font-size: 14px;
+      font-size: 3vw;
    
   }
 `;
@@ -639,6 +643,12 @@ export const ConnectButton = styled(Button)`
   align-self: flex-start;
   font-size: 11px;
   font-weight:600;
+  @media screen and (max-width: 576px) {
+    width: 35%;
+    font-size: 2vw;
+    margin-top: -10px;
+ 
+}
 `;
 export const ProfileList = styled.ul`
   list-style-type: none;

@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const MobSection=styled.div`
 background-color:rgba(12, 17, 31, 1);
 width:100%;
+@media screen and (max-width: 576px) {
+  
+  padding:30px 0px 0px 0;
+}
 `;
 export const WebPageTitle=styled.h2`
 font-size:18px;
@@ -10,8 +14,8 @@ font-weight:600;
 color:white;
 padding: 100px 0px 20px 6%;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
-  padding: 60px 0px 20px 6%;
+  font-size: 3vw;
+  padding: 50px 0px 20px 6%;
  
  
 }
@@ -27,7 +31,8 @@ padding-left: 6%;
 margin:10px 0px 15px 0;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size: 16px;
+  font-size: 4vw;
+  margin: 0px 0px 15px 0;
  
 }
 `;
@@ -50,15 +55,15 @@ color: #89A4FF;
 font-weight: bold;
 `;
 
+
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
   height: 55px;
   width: 60px;
   border-radius: 3px;
   @media screen and (max-width: 576px) {
-    height: 45px;
-  width: 50px;
-   
+    height: 40px;
+    width: 45px;
   }
 `;
 
@@ -67,25 +72,26 @@ export const PatternCon = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 6%;
+  padding-left: 6%;
+
+  @media screen and (max-width: 576px) {
+    padding-left: 3%;
+    padding-top: 20px;
+  }
 `;
 export const ListHeading = styled.h1`
   font-size: 25px;
-  color: #2B459B;
-  margin-top: 5px;
+  color: #2b459b;
   font-weight: bold;
   margin-left: -29px;
   @media screen and (max-width: 576px) {
-    width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: -20px;
-   
   }
 `;
 
 
-
-export const ListItemSection = styled.ol`
+export const ListItemssSection = styled.ol`
  
  font-size: 25px; 
  font-weight: 900;
@@ -101,7 +107,7 @@ export const ListItemSection = styled.ol`
    
   }
   @media screen and (max-width: 576px) {
-    font-size:14px;
+    font-size: 4vw;
   }
    
 `;
@@ -130,7 +136,7 @@ export const ListHead = styled.h2`
    font-weight: 100;
    margin-top: 20px;
    @media screen and (max-width: 576px) {
-    font-size:16px;
+    font-size: 4vw;
   }
 `;
 
@@ -145,7 +151,7 @@ export const LearnPara = styled.p`
   margin-bottom: 40px;
   @media screen and (max-width: 576px) {
     margin-left: 14%;
-    font-size:16px;
+    font-size:3vw;
     width:82%;
     margin-bottom: 20px;
   }
@@ -169,7 +175,7 @@ export const OrderListSection = styled.ol`
       color:#fff;
       display: list-item;
       line-height: 1.9;
-      font-size: 16px;
+      font-size: 3vw;
       font-weight: 400;
     }
    
@@ -189,9 +195,8 @@ height:240px;
 width: 400px;
 margin: 20px 0 60px 6%;
 @media screen and (max-width: 576px) {
-  height:200px;
-width: 340px;
-margin: 20px 0 60px 14%;
+width: 80vw;
+margin: 20px 0 60px 6%;
 }
 
 `;
