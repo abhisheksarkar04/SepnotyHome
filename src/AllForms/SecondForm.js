@@ -280,6 +280,10 @@ gap:20px;
 ${media.mobile}{
   width:100%;
   gap: 6px;
+  display:flex;
+flex-direction:row;
+justify-content:center;
+align-item:center;
   margin: 0px 0px 0px -20px;
   padding-right: 0px;
   justify-content:space-between;
@@ -303,20 +307,17 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:100%;
 border: 1px solid #C1CAE7;
+width:100%;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 52%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:3px;
-  height:300px;
 }
 `
 

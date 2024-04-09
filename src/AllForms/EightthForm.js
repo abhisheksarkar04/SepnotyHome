@@ -82,23 +82,20 @@ class FourthForm extends Component {
       companyName: e.target.value,
     });
   };
-
   handleEmailChange = (e) => {
     const email = e.target.value;
-    const emailPattern = /\S+@\S+\.\S+/; // Regular expression pattern for email validation
-
-    if (!emailPattern.test(email)) {
-      this.setState({ error: "Please enter a valid email address." });
-    } else {
-      this.setState({ error: "" });
-      this.props.updateFormData({ email });
-    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email validation regex
+  
+    const isValidEmail = emailPattern.test(email);
+    const errorMessage = isValidEmail ? "" : "Please enter a valid email address.";
+  
+    this.setState({ error: errorMessage });
+    this.props.updateFormData({ email });
   };
 
   handleNumberChange = (e) => {
     const phoneNumber = e.target.value;
     const phonePattern = /^\d{10}$/;
-    // Regular expression pattern for 10-digit phone number
 
     this.props.updateFormData({ phoneNumber });
 
@@ -159,6 +156,7 @@ class FourthForm extends Component {
     // Validation passed, clear error and proceed with form submission
     this.setState({ error: "", submitted: true });
     this.props.onSubmit(e);
+    console.log(this.props.formData)
   };
 
   render() {
@@ -248,7 +246,7 @@ class FourthForm extends Component {
                 <M3>
                   <P4>*Work email</P4>
                   <Input
-                    type="email"
+                  type="email"
                     name="workEmail"
                     value={formData.email}
                     onChange={this.handleEmailChange}
@@ -444,7 +442,6 @@ const M = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-left: 10%;
   width: 100%;
   ${media.mobile} {
     margin-left: 10px;

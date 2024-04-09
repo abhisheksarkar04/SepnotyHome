@@ -154,9 +154,9 @@ handleNext = (e) => {
                     *What type of media content does your Software have to support?
                     </Heading>
                     <CheckBoxCon>
-                    <Label htmlFor="Images">
+                    
                         <Input1 type="checkbox" name='mediatype' checked={typeOfMedia.includes("Images")} id="Images" value="Images" onChange={this.handleCheckboxChange}/>
-
+                        <Label htmlFor="Images">
                         Images
                         </Label>
                     </CheckBoxCon>
@@ -373,16 +373,18 @@ ${media.mobile}{
 
 `;
 const CheckBoxCon = Styled.div`
-margin-top:15px;
+gap:30px;
 align-items:start;
 justify-content:space-between;
+margin-top:13px;
 `;
 const Label = Styled.label`
-font-size:16px;
+font-size:14px;
 font-family: Roboto;
 font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
+margin-right:10px;
 text-align: left;
 ${media.mobile}{
   margin-top:0px;
@@ -393,14 +395,7 @@ const Form = Styled.div`
 ${media.mobile}
 `;
 const Input1 = Styled.input`
-background:transparent;
-border: 1px solid gray;
-font-size:15px;
-color: #263238;
-font-weight:500;
-height:20px;
 margin-right:10px;
-margin-top:0px;
 
 ${media.mobile}{
   font-size:12px;
