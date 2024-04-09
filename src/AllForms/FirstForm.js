@@ -243,6 +243,9 @@ const StyledStepper = Styled(Stepper)`
   background-color: transparent;
   font-size: 9px;
   border: none;
+  ${media.mobile}{
+    font-size:7px;
+  }
  
 `;
 const Atyled = Styled(Stepper)`
@@ -285,7 +288,7 @@ const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
- margin: 0;
+  margin: 0;
   padding: 0px;
 }
 `;
@@ -327,20 +330,16 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 50%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:5px;
-  height:300px;
 }
 `;
 const CheckBoxCon = Styled.div`

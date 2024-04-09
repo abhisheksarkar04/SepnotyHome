@@ -116,7 +116,6 @@ class SecondForm extends Component {
 
           <Mai>
             <FormContainer>
-
               <Form>
                 <Heading>
                   *What Software features/capabilities do you need?

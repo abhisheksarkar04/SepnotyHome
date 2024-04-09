@@ -227,6 +227,7 @@ class ThirdForm extends Component {
                       onChange={this.handleIntegrationChange}
                     />
                   </Label>
+                  <Error>{formErrors.integration}</Error>
                 </InputContainer>
                 <Heading1>
                 *Here, you can add any details you want to share with us:
@@ -239,9 +240,6 @@ class ThirdForm extends Component {
                 onChange={this.handleAdditionalDetailsChange}
                 placeholder="Please add here"
               />
-              {/* Error message for integration */}
-            <Error>{formErrors.integration}</Error>
-            {/* Error message for additional details */}
             <Error>{formErrors.additionalDetails}</Error>
             </Form1>
           </Mai>
