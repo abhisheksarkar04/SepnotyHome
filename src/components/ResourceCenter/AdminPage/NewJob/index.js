@@ -110,38 +110,44 @@ const CreateBlog = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
-      <Container1>
-        <Title type="text" placeholder="Title" />
-        <Title type="text" placeholder="Experience" />
-        <Title type="text" placeholder="Salary Range" />
-        <br></br><br></br>
-        <DropDown>
-          <div>
-            {/* <label htmlFor="dropdown">Select an option:</label> */}
-            <select style={selectStyle} id="dropdown" value={selectedOption} onChange={handleSelectChange}>
-              {options.map((option) => (
-                <option style={optionStyle} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select> 
-          </div> 
-        </DropDown>
-        <ChooseFile>
-          <Button>Choose File</Button>
+        <Container1>
+          <Title type="text" placeholder="Title" />
+          <Title type="text" placeholder="Experience" />
+          <Title type="text" placeholder="Salary Range" />
+          <br></br><br></br>
+          <DropDown>
+            <div>
+              {/* <label htmlFor="dropdown">Select an option:</label> */}
+              <select style={selectStyle} id="dropdown" value={selectedOption} onChange={handleSelectChange}>
+                {options.map((option) => (
+                  <option style={optionStyle} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </DropDown>
+          <ChooseFile>
+            <Button onClick={handleFileSelect}>Choose File</Button>
 
-        </ChooseFile>
-        <Container2>
-          <StyledQuill
-            theme="snow"
-            value={value}
-            onChange={setValue}
-            modules={modules}
-            placeholder="Job Opportunity"
-          />
-        </Container2>
-        <LastButton>Create Job Opportunity</LastButton>
-      </Container1>
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
+          </ChooseFile>
+          <Container2>
+            <StyledQuill
+              theme="snow"
+              value={value}
+              onChange={setValue}
+              modules={modules}
+              placeholder="Job Opportunity"
+            />
+          </Container2>
+          <LastButton>Create Job Opportunity</LastButton>
+        </Container1>
       </Container>
     </ThemeProvider>
   );

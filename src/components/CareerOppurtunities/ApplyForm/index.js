@@ -19,6 +19,13 @@ import React, { useState, useRef } from "react";
 const theme = {};
 
 const ApplyForm = () => {
+
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
+  const buttonStyle = isActive ? 'active' : '';
+
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -45,10 +52,8 @@ const ApplyForm = () => {
           <Container1>
             <Title type="text" placeholder="Applicant Name" />
             <Title type="text" placeholder="E-Mail" />
-            <Title
-              // Change input type to 'tel' for phone number
-              placeholder="Phone Number"
-            />
+            <Title type="tel" pattern="[\+]?[0-9]{2}[\s]?[0-9]{10}" maxLength="13" placeholder="Phone Number" />
+
             <ChooseFile>
               <Button onClick={handleFileSelect}>Choose File</Button>
               <input
@@ -58,7 +63,7 @@ const ApplyForm = () => {
                 onChange={handleFileUpload}
               />
             </ChooseFile>
-            <LastButton type="submit">Send</LastButton>
+            <LastButton type="submit" onClick={handleClick}>Send</LastButton>
           </Container1>
         </Container>
       </ThemeProvider>

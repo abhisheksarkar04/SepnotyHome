@@ -150,7 +150,14 @@ const CreateBlog = () => {
 
           <Summary type="text" placeholder="Enter Description " />
           <ChooseFile>
-            <Button>Choose File</Button>
+            <Button onClick={handleFileSelect}>Choose File</Button>
+
+            <input
+              type="file"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              onChange={handleFileUpload}
+            />
           </ChooseFile>
           <Container2>
             <StyledQuill
