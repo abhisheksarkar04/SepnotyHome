@@ -40,7 +40,8 @@ handleOtherDetailsChange = (e) => {
   continue = (e) => {
     e.preventDefault();
 
-    const { typeOfWebsite, numberOfPages } = this.props.formData;
+    const { typeOfWebsite, numberOfPages ,} = this.props.formData;
+    const {nextStep} = this.props
 
     if (typeOfWebsite.length === 0) {
       this.setState({ error: "Please select at least one type of website." });
@@ -59,20 +60,24 @@ handleOtherDetailsChange = (e) => {
 
     console.log(this.props.formData)
 
+    const {activeStep} = this.props
+
+
+
     // If all validations pass, clear the error and proceed
     this.setState({ error: "" });
-    this.props.nextStep();
+    nextStep();
   }
 
   render() {
     const {error}= this.state;
     const {formData} = this.props
-
+ 
     return (
       <Main className="form">
-        <form onSubmit={this.handleSubmit}>
+        <form >
         <StyledStepper
-          activeStep={0}
+          activeStep={this.props.activeStep}
           styleConfig={{
             activeBgColor: "#2B459B",
             activeTextColor: "#fff",

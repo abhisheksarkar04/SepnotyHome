@@ -101,7 +101,7 @@ class YourIndustry extends Component {
       <Main className="form">
         <form>
           <StyledStepper
-            activeStep={2}
+            activeStep={this.props.activeStep}
             styleConfig={{
               activeBgColor: "#2B459B",
               activeTextColor: "#fff",

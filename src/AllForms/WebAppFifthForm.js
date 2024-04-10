@@ -279,38 +279,58 @@ const Mai = Styled.div`
 `;
 
 const Heading = Styled.h1`
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #263238;
-  ${media.mobile}{
-    font-size:15px;
-    line-height:18px;
-  }
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color: #263238;
+
+${
+  media.mobile
+}{
+  font-size:14px;
+  line-height: 1.5;
+  color:#263238;
+
+}
 `;
 
 const FormContainer = Styled.div`
-  display:flex;
-  flex-direction:column;
-  padding:20px;
-  height:380px;
-  width:90%;
-  border: 1px solid #C1CAE7;
-  background: #C1CAE7;
-  gap:20px;
-  border-radius:10px;
-  ${media.mobile}{
-    width: 52%;
-    border-radius:12px;
-    gap:0px;
-    margin: 0px -10px 0px 10px;
-    line-height: 1;
-    padding:5px;
-    height:auto;
-  }
+display:flex;
+flex-direction:column;
+padding:20px;
+border: 1px solid #C1CAE7;
+background: #C1CAE7;
+height:380px;
+gap:20px;
+border-radius:10px;
+${media.mobile}{
+  border-radius:12px;
+  gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
+}
+`;
+const CheckBoxCon = Styled.div`
+margin-top:15px;
+align-items:start;
+justify-content:space-between;
+`;
+const Label = Styled.label`
+font-size:16px;
+font-family: Roboto;
+font-weight: 500;
+color:#263238;
+letter-spacing: 0em;
+text-align: left;
+margin-left:10px;
+${media.mobile}{
+  font-size:11px;
+  margin-left:4px;
+}
 `;
 
 const In = Styled.input`
@@ -320,30 +340,6 @@ const In = Styled.input`
   ${media.mobile}{
     margin-left:0px;
     width:110px;
-  }
-`;
-
-const CheckBoxCon = Styled.div`
-  gap:30px;
-  align-items:start;
-  justify-content:space-between;
-  margin-top:20px;
-  ${media.mobile}{
-    margin-top:10px;
-  }
-`;
-
-const Label = Styled.label`
-  font-size:16px;
-  font-family: Roboto;
-  font-weight: 500;
-  color:#263238;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-left:10px;
-  ${media.mobile}{
-    font-size:11px;
-    margin-left:0px;
   }
 `;
 
@@ -357,5 +353,6 @@ const Form1 = Styled.div`
   margin-top:60px;
   ${media.mobile}{
     width:100%;
+    margin-top:80p;
   }
 `;
