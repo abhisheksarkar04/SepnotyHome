@@ -86,9 +86,15 @@ handleNext = (e) => {
   };
 
   handleOtherDetailsChange = (e) => {
-    this.props.updateFormData({otherMediaDetails: e.target.value });
-  }
+    const { value } = e.target;
+    const { typeOfMedia } = this.props.formData;
 
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      otherMediaDetails: value,
+      typeOfMedia: value ? [...typeOfMedia, 'other'] : typeOfMedia.filter(feature => feature !== 'other')
+    });
+  }
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
@@ -103,7 +109,6 @@ handleNext = (e) => {
     return (
       <Main className="form">
         <form>
-
         <StyledStepper
           activeStep={5}
           styleConfig={{

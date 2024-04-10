@@ -32,7 +32,15 @@ handleRadioChange = (event) => {
 };
 
 handleOtherDetailsChange = (e) => {
-  this.props.updateFormData({ otherTypeOfWebsite: e.target.value });
+  const { value } = e.target;
+  const { typeOfWebsite } = this.props.formData;
+  const isChecked = typeOfWebsite.includes('other');
+
+  // Update the "other" checkbox state based on whether the input has a value
+  this.props.updateFormData({
+    otherTypeOfWebsite: value,
+    typeOfWebsite: value ? [...typeOfWebsite, 'other'] : typeOfWebsite.filter(type => type !== 'other')
+  });
 }
 
 
@@ -337,6 +345,7 @@ flex-direction:column;
 padding:20px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
+height:380px;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{

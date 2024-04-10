@@ -51,10 +51,20 @@ class Summary extends Component {
 
   };
   handleCMsDetails = (e) => {
-    this.props.updateFormData({
-      cmsDetails:e.target.value
-    })
-  }
+    const { formData } = this.props;
+  
+    // If the user starts typing in the CMS details and the chosenCMS is not already "Yes", set chosenCMS to "Yes"
+    if (!formData.chosenCMS || formData.chosenCMS !== "Yes") {
+      this.props.updateFormData({
+        chosenCMS: "Yes",
+        cmsDetails: e.target.value
+      });
+    } else {
+      this.props.updateFormData({
+        cmsDetails: e.target.value
+      });
+    }
+  };
   
   
   
