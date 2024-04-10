@@ -25,7 +25,7 @@ color: #fff;
 font-size: 16px;
 font-weight: 400;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
+  font-size: 3vw;
  
 }
 `;
@@ -37,6 +37,7 @@ margin:20px 0px 40px 0;
 color:white;
 @media screen and (max-width: 576px) {
   font-size: 4vw;
+  margin:20px 0px 20px 0;
  
 }
 `;
@@ -108,9 +109,9 @@ export const ListItemSection = styled.ul`
    
   }
   @media screen and (max-width: 576px) {
-    width: 100%;
     margin: 0px 0 0 -4%;
     & > li {
+      width: 90%;
       color: #89A4FF;
       line-height: 1.5;
       margin-left: 0px;
@@ -168,7 +169,7 @@ export const OrderListsSection = styled.ul`
     & > li{
       text-align: left;
       font-size: 3vw;
-      margin: -10px 0 0 10px;
+      margin: -10px 0 0 0px;
     }
   }
  

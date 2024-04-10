@@ -11,7 +11,7 @@ font-size: 30px;
 color:white;
 width:60%;
 @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 4.5vw;
     width: 90%;
   }
 

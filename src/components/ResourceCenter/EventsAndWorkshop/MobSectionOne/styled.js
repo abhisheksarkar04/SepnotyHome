@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const WebSectionOneCon=styled.div`
 background-color:rgba(37, 73, 137, 1);
-padding:40px 0px 0px 6%;
+padding:40px 0px 20px 6%;
 width:100%;
-min-height: 40vh;
+min-height: ;
 
 margin-bottom: 30px;
 @media screen and (max-width: 576px) {
-  min-height: 35vh;
+  min-height: ;
  
 }
 
@@ -67,7 +67,7 @@ z-index:0;
 
 export const Button = styled.button`
   background-image: linear-gradient(to right, #ffffff, #fff741);
-  padding: 5px 25px 5px 25px;
+  
   border-radius: 8px;
   color: #234581;
   border: 0px;
@@ -75,6 +75,7 @@ export const Button = styled.button`
   width:180px;
   font-size: 22px;
   cursor: pointer;
+  text-align: center;
   font-weight: 600;
   margin-top: 20px;
   @media screen and (max-width: 576px) {

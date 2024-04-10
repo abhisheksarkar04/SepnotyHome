@@ -30,7 +30,7 @@ export const Resource = styled.h1`
   font-weight: 600;
   padding: 0px 30px 20px 6%;
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 4vw;
   }
 `;
 

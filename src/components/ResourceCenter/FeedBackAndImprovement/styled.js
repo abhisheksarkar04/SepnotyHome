@@ -16,7 +16,7 @@ color:white;
 padding:105px 0px 20px 6%;
 @media screen and (max-width: 576px) {
   padding:50px 0px 20px 6%;
-  font-size: 14px;
+  font-size: 3vw;
 }
 `;
 export const WebSpan=styled.span`
@@ -29,7 +29,7 @@ font-weight:700;
 margin:10px 0px 15px 6%;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size: 16px;
+  font-size: 4vw;
   margin: 0px 0px 15px 6%;
 }
 `;
