@@ -184,7 +184,119 @@ class FourthForm extends Component {
               completedBgColor: "#407B24",
               completedTextColor: "#fff",
             }}
+          >
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+            <StyledStep />
+          </StyledStepper>
+          <Div>
+            <StyledStepper
+              activeStep={7}
+              styleConfig={{
+                activeBgColor: "#2B459B",
+                activeTextColor: "#fff",
+                inactiveBgColor: "#fff",
+                inactiveTextColor: "#2b7cff",
+                completedBgColor: "#407B24",
+                completedTextColor: "#fff",
+              }}
+            >
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+              <StyledStep />
+            </StyledStepper>
+          </Div>
 
+          <M>
+            {submitted && (
+              <Popup onClose={() => this.setState({ submitted: false })} />
+            )}
+            <Mai>
+              <P1>Almost done!</P1>
+              <P2>
+                Please let us know where we should send your estimate. Our
+                experts may need to ask a few extra questions to calculate a
+                precise quote for your case.
+              </P2>
+              <P3>Your contact data</P3>
+              <M2>
+                <M3>
+                  <P4>*Full name</P4>
+                  <Input
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={this.handlenameChange}
+                  />
+                </M3>
+                <M3>
+                  <P4>*Company name</P4>
+                  <Input
+                    type="text"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={this.handlecompanyChange}
+                  />
+                </M3>
+              </M2>
+              <M2>
+                <M3>
+                  <P4>*Work email</P4>
+                  <Input
+                  type="email"
+                    name="workEmail"
+                    value={formData.email}
+                    onChange={this.handleEmailChange}
+                  />
+                </M3>
+                <M3>
+                  <P4>*Phone number</P4>
+                  <Input
+                    type="text"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={this.handleNumberChange}
+                  />
+                </M3>
+              </M2>
+              <br />
+              <M33>
+                <P8>Preferred way of communication:</P8>
+                <Button1
+                  type="button"
+                  active={preferredCommunication === "Any" ? "true" : "false"}
+                  onClick={() => this.handleButtonClick("Any")? "true" : "false"}
+                >
+                  Any
+                </Button1>
+                <Button2
+                  type="button"
+                  active={preferredCommunication === "Email" ?"true" :"false"}
+                  onClick={() => this.handleButtonClick("Email")? "true" : "false"}
+                >
+                  Email
+                </Button2>
+                <Button3
+                  type="button"
+                  active={preferredCommunication === "Phone" ? "true" : "false"}
+                  onClick={() => this.handleButtonClick("Phone") ? "true" : "false"}
+                >
+                  Phone
+                </Button3>
+              </M33>
+              <br />
+              <M3>
+                <Input1
                   type="checkbox"
                   id="agreeToContact"
                   name="contact"
@@ -224,14 +336,14 @@ class FourthForm extends Component {
 
           <Button className="buttons">
             <button
-              className="buttons__button buttons__button--back"
+              className="buttons_button buttons_button--back"
               onClick={this.back}
             >
               Back
             </button>
             <button
               type="submit"
-              className="buttons__button buttons__button--next"
+              className="buttons_button buttons_button--next"
               disabled={isSubmitDisabled}
             >
               Submit
@@ -279,7 +391,7 @@ const StyledStep = styled(Step)`
   }
   & > div {
     color: #0f6bff !important;
-  }
+  }
 `;
 const P8 = styled.p`
   font-size: 15px;

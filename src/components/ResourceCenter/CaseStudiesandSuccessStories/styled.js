@@ -15,7 +15,7 @@ font-weight:600;
 color:white;
 padding:105px 0px 10px 6%;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
+  font-size: 3vw;
   padding:50px 0px 10px 6%;
 }
 `;
@@ -29,7 +29,7 @@ font-weight:700;
 margin: 30px 0px 35px 6%;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size: 16px;
+  font-size: 4vw;
   margin: 10px 0px 35px 6%;
 }
 `;
@@ -147,7 +147,7 @@ export const LearnPara2 = styled.p`
    margin-bottom: 60px;
    @media screen and (max-width: 576px) {
     margin-left: 12%;
-    font-size:14px;
+    font-size:3vw;
    width: 82%;
    margin-top: 20px;
 
