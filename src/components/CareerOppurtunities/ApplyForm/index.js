@@ -18,11 +18,6 @@ const theme = {};
 
 const ApplyForm = () => {
 
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
-  const buttonStyle = isActive ? 'active' : '';
 
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
@@ -53,48 +48,67 @@ const ApplyForm = () => {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Add your form submission logic here
+    // You can access form data using `inputValue` and `selectedFile`
+  };
+
+
   const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+    const file = event.target.files[0];
+    // Check if the selected file is a PDF
+    if (file && file.type === 'application/pdf') {
+      setSelectedFile(file);
+    } else {
+      // Reset the selected file if it's not a PDF
+      setSelectedFile(null);
+      alert('Please select a PDF file.');
+    }
   };
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Container>
-          <List1>
-            <Header>
-              Career Oppurunities &gt; <Span>Apply</Span>
-            </Header>
-          </List1>
-          <Container1>
-            <Title type="text" placeholder="Applicant Name" />
-            <Title type="text" placeholder="E-Mail" />
-            <Title
-              type="tel"
-              id="input"
-              value={inputValue}
-              onChange={handleChange}
-              placeholder="Phone Number"
-              maxLength={10}
-              onKeyDown={handleKeyDown}
-            />
-            <ChooseFile>
-              <Button onClick={handleFileSelect}>Choose File</Button>
-              <input
-                type="file"
-                ref={fileInputRef}
-                style={{ display: "none" }}
-                onChange={handleFileUpload}
-              /><span>
-              {selectedFile && (
-                <p>&nbsp;&nbsp;Selected File: {selectedFile.name}</p>
-              )}</span>
-            </ChooseFile>
+        <form onSubmit={handleSubmit}>
+          <Container>
+            <List1>
+              <Header>
+                Career Oppurunities &gt; <Span>Apply</Span>
+              </Header>
+            </List1>
 
-            <LastButton type="submit" onClick={handleClick}>Send</LastButton>
-          </Container1>
-        </Container>
+            <Container1>
+
+              <Title type="text" placeholder="Applicant Name" />
+              <Title type="text" placeholder="E-Mail" />
+              <Title
+                type="tel"
+                id="input"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                maxLength={10}
+                onKeyDown={handleKeyDown}
+              />
+              <ChooseFile>
+                <Button onClick={handleFileSelect}>Choose File</Button>
+                <input
+                  type="file"
+                  accept=".pdf"
+                  ref={fileInputRef}
+                  style={{ display: "none" }}
+                  onChange={handleFileChange}
+                /><span>
+                  {selectedFile && (
+                    <p>&nbsp;&nbsp;Selected File: {selectedFile.name}</p>
+                  )}</span>
+              </ChooseFile>
+              <LastButton type="submit" >Send</LastButton>
+            </Container1>
+          </Container>
+        </form>
       </ThemeProvider>
       <Mob>
         <FooterSection />
