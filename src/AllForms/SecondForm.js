@@ -26,7 +26,7 @@ class CourseDetails extends Component {
     }
   
     // Check if 'Other' checkbox is checked and 'Industry Other Details' is empty
-    if (industryType.includes('10st') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
+    if (industryType.includes('other') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
       this.setState({ error: 'Please provide other details.' });
       return;
     }
@@ -44,14 +44,14 @@ class CourseDetails extends Component {
   handleOtherDetailsChange = (e) => {
     const { value } = e.target;
     const { industryType } = this.props.formData;
+    const isChecked = industryType.includes('other');
   
-    // If 'Industry Other Details' is provided, remove the error message
-    if (value.trim() !== '' && industryType.includes('other')) {
-      this.setState({ error: '' });
-    }
-  
-    this.props.updateFormData({ indstryotherDetails: value });
-  };
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      indstryotherDetails: value,
+      industryType: value ? [...industryType, 'other'] : industryType.filter(type => type !== 'other')
+    });
+  }
 
   back = (e) => {
     e.preventDefault();
@@ -229,6 +229,9 @@ const StyledStepper = Styled(Stepper)`
   background-color: transparent;
   font-size: 9px;
   border: none;
+  ${media.mobile}{
+    font-size:7px;
+  }
  
 `;
 const StyledStepper1 = Styled(Stepper)`
@@ -308,6 +311,7 @@ flex-direction:column;
 padding:20px;
 border: 1px solid #C1CAE7;
 width:100%;
+height:380px;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;

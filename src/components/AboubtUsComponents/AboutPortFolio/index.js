@@ -250,7 +250,7 @@ margin-left:10px;
   margin-top:0px;
 }
 height:20px;
-margin-top:-20px;
+margin-top:0px;
 `;
 
 const Mobilediv = Styled.div`

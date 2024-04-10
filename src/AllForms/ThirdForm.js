@@ -66,9 +66,19 @@ class YourIndustry extends Component {
   };
 
   handleOtherServiceDetailsChange = (e) => {
-    this.props.updateFormData({
-      otherServiceDetails: e.target.value
-    });
+    const { formData } = this.props;
+  
+    // If the user starts typing in the "other" input field, automatically select the "others" radio button
+    if (!formData.services || formData.services !== "others") {
+      this.props.updateFormData({
+        services: "others",
+        otherServiceDetails: e.target.value
+      });
+    } else {
+      this.props.updateFormData({
+        otherServiceDetails: e.target.value
+      });
+    }
   };
 
   back = (e) => {
