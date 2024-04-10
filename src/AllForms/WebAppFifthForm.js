@@ -303,6 +303,7 @@ flex-direction:column;
 padding:20px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
+height:380px;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
@@ -325,8 +326,10 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+margin-left:10px;
 ${media.mobile}{
   font-size:11px;
+  margin-left:4px;
 }
 `;
 

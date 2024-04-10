@@ -42,7 +42,7 @@ padding: 10px;
 `;
 const Img = styled.img`
   height: 30%;
-  ${media.mobile}{
+  @media screen and (max-width: 576px){
     height:20%;
   }
 `;
@@ -55,8 +55,7 @@ const PopupContent = styled.div`
   text-align: center;
   height: 500px;
   gap: 30px;
-  ${media.mobile
-  }{
+  @media screen and (max-width: 576px){
     height:300px;
     margin-top:10px;
   }

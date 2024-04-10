@@ -66,7 +66,7 @@ class CourseDetails extends Component {
         <form>
 
         <StyledStepper
-          activeStep={1}
+          activeStep={this.props.activeStep}
           styleConfig={{
             activeBgColor: "#2B459B",
             activeTextColor: "#fff",
