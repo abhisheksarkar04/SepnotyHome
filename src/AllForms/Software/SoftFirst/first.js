@@ -22,9 +22,16 @@ class FirstSoftwarePage extends Component {
       numberofTools: event.target.value
     });
   };
-
   handleOtherDetailsChange = (e) => {
-    this.props.updateFormData({ otherSoftwareDetails: e.target.value });
+    const { value } = e.target;
+    const { typeOfSoftware } = this.props.formData;
+    const isChecked = typeOfSoftware.includes('other');
+  
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      otherSoftwareDetails: value,
+      typeOfSoftware: value ? [...typeOfSoftware, 'other'] : typeOfSoftware.filter(type => type !== 'other')
+    });
   }
 
   

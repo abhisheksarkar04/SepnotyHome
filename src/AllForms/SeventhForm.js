@@ -66,13 +66,30 @@ class ThirdForm extends Component {
   };
 
   handleOtherComplianceChange = event => {
+    const { formData } = this.props;
+    const { complianceRequirements } = formData;
     const { value } = event.target;
-    this.props.updateFormData({
-      otherCompliance:event.target.value
-      })
-
+  
+    // If the input field is empty, remove the "Other" option from the complianceRequirements array
+    if (value === "") {
+      this.props.updateFormData({
+        complianceRequirements: complianceRequirements.filter(type => type !== "Other"),
+        otherCompliance: value
+      });
+    } else {
+      // If the input field is not empty, add or keep the "Other" option in the complianceRequirements array
+      if (!complianceRequirements.includes("Other")) {
+        this.props.updateFormData({
+          complianceRequirements: [...complianceRequirements, "Other"],
+          otherCompliance: value
+        });
+      } else {
+        this.props.updateFormData({
+          otherCompliance: value
+        });
+      }
+    }
   };
-
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
@@ -286,6 +303,9 @@ const Error = Styled.div`
   color: red;
   margin-top: 10px;
   font-size:12px;
+  ${media.mobile}{
+    font-size:8px;
+  }
 `;
 const Button = Styled.div`
 display:flex;
