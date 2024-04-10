@@ -283,7 +283,6 @@ export const ChatContainer = styled.div`
   flex-direction: column;
   background-color: #c1cae7;
   width: 35%;
-  height: 460px;
   border-radius: 5px;
   margin-right: 20%;
   padding: 10px;

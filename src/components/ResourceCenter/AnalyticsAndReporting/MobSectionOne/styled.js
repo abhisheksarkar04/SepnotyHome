@@ -49,7 +49,10 @@ font-family: "roboto";
 cursor: pointer;
 z-index: 0;
 @media screen and (max-width: 576px) {
-  height: 30px;
+  height: 4vh;
+  font-size: 2.5vw;
+  font-weight: bold;
+  width: 20vw;
   align-self:center;
   padding-left: 20px;
   padding-right: 20px;

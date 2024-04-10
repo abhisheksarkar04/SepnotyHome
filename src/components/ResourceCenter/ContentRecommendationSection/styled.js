@@ -80,6 +80,13 @@ export const Button = styled.button`
   outline: none;
   font-size: 14px;
   margin-top: 20px;
+  @media screen and (max-width: 576px) {
+    width: 18vw;
+    height: 4vh;
+    font-weight: bold;
+    font-size: 2.0vw;
+   
+  }
 `;
 
 export const ListHeading = styled.h1`
