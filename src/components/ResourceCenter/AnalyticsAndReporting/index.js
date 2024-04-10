@@ -176,15 +176,25 @@ const AnalyticsAndReporting = () => {
                            <ProMainDiv>     
                            <ProTop>
                                  <ProBtn> <VectorImg src={Vector} alt="Vector"/> 15 Days</ProBtn>
-                                 
+                                 <style>
+                                    {`
+                                        .myComponent {
+                                            color: white;
+                                            font-size: 2.2em;
+                                            font-weight: none;
+                                            margin: 10px 0px 0px 90%;
+                                            cursor: pointer;
+                                        }
+                                        @media (max-width: 576px) {
+                                            .myComponent {
+                                                font-size: 1.5em;
+                                                margin: 10px 0px 0px 88%;
+                                            }
+                                        }
+                                    `}
+                                </style>
                                  <IoClose onClick={toggleVisibility1}
-                             style={{
-                               color: 'white', // Change outline color to white
-                               fontSize: '2.2em', // Increase size (adjust as needed)
-                               fontWeight: 'none',
-                               margin: '10px 0px 0px 90%',
-                               cursor: "pointer",
-                             }}
+                           className="myComponent"
                            />
                                  <ProTopHead>
                                    Pro Version

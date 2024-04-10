@@ -59,11 +59,16 @@ export const Container = styled.div`
 export const Img = styled.img`
    height: 100px;
    margin-right: 0%;
+   @media screen and (max-width: 576px) {
+    margin-bottom: 2vw;
+  
+  
+  }
    
   `;
 export const Details = styled.div`
 @media screen and (max-width: 576px) {
-  margin-right: 0px;
+  margin-left: 1vw;
   width: 50%;
 
 
@@ -73,11 +78,21 @@ export const Details = styled.div`
 export const Name = styled.h1`
   color: #2B459B;
   font-size: 18px;
+  @media screen and (max-width: 576px) {
+   
+    font-size: 3.5vw;
+  
+  }
    
   `;
 export const TextDts = styled.p`
     color: #fff;
     margin-top: 5px;
+    @media screen and (max-width: 576px) {
+   
+      font-size: 3vw;
+    
+    }
    
   `;
 export const ApplyButton = styled.button`
@@ -92,6 +107,10 @@ export const ApplyButton = styled.button`
     @media screen and (max-width: 576px) {
       margin-top: 40px;
       margin-left: 16%;
+      align-self: center;
+      height: 5vh;
+      width: 25vw;
+      font-size: 3vw;
     
     
     }

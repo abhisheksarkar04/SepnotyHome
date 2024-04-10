@@ -9,18 +9,27 @@ export const Name = styled.p`
   color: #ffffff;
   margin: 0px;
   font-weight: 600;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+   
+  }
 `;
 
 export const Role = styled.p`
   font-size: 13px;
   color: #ffffff;
   margin: 0px;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+   
+  }
 `;
 export const ProfileCon = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+
 `;
 
 export const Profileimg = styled.img`
@@ -29,6 +38,7 @@ export const Profileimg = styled.img`
   margin-right: 70px;
   @media screen and (max-width: 576px) {
     margin-right: 30px;
+    width: 10vw;
    
   }
 `;

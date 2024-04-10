@@ -6,6 +6,9 @@ import {
   ImgCon,
   InsertImg,
   WebTechButton,
+  PatternCon,
+  SmallPattern,
+  ListHeading,
 } from './styled';
 
 const AppSectionCard = (props) => {
@@ -13,8 +16,10 @@ const AppSectionCard = (props) => {
     const {title,about,img , content}=details;
   return (
     <AppCardCon>
-        <HeadingSpan />
-        <WebSectionTwoHeading>{title}</WebSectionTwoHeading>
+        <PatternCon>
+            <SmallPattern></SmallPattern>
+            <ListHeading>{title}</ListHeading>
+        </PatternCon>
         <AppAbout>{about}</AppAbout>
         <ImgCon>
         <InsertImg src={img}></InsertImg>

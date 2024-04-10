@@ -25,7 +25,7 @@ width: 65%;
 color: #fff;
 text-align: ;
 @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
     width: 85%;
     margin-top: 20px;
   }

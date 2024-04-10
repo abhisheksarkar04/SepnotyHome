@@ -37,17 +37,26 @@ border-radius: 8px;
 `;
 export const DeepLearnImage = styled.img`
   height: 48vh;
+  @media screen and (max-width: 576px) {
+    height: 38vh;
   
+  
+  }
 `;
 export const DeepLearnImage2 = styled.img`
   height: 52vh;
   
 `;
 export const DeepHeading = styled.h2`
-  font-height:20px;
+  font-size:25px;
   text-align:center;
   padding:20px;
   color: #fff;
+  @media screen and (max-width: 576px) {
+    font-size:4vw;
+  
+  
+  }
 `;
 
 export const RedText = styled.p`
@@ -56,6 +65,10 @@ export const RedText = styled.p`
   font-weight: 600;
   line-height: px;
   margin-top: 8px;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+  
+  }
 `;
 
 
@@ -72,7 +85,7 @@ export const Header = styled.h1`
   color: #ffffff;
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
   
     padding: 10px 20px 10px 6%;
   }
@@ -88,7 +101,7 @@ export const Resource = styled.h1`
   font-weight: 600;
   padding: 0px 30px 20px 6%;
   @media screen and (max-width: 576px) {
-    font-size: 16px;
+    font-size: 4vw;
   
   }
 `;
@@ -104,7 +117,7 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 4vw;
     margin-bottom: 10px;
   
   }
@@ -117,7 +130,7 @@ export const ConRecDesc = styled.p`
   padding: 20px 30px 30px 0px;
   @media screen and (max-width: 576px) {
     width: 90%;
-    font-size: 14px;
+    font-size: 3vw;
   
   }
 `;
@@ -135,6 +148,12 @@ export const Button = styled.button`
   font-size: 20px;
   font-weight: 600;
   margin-top: 20px;
+  @media screen and (max-width: 576px) {
+    height:6vh;
+    width:40vw;
+    font-size: 4.1vw;
+  
+  }
 `;
 
 export const ListHeading = styled.h1`
@@ -144,7 +163,7 @@ export const ListHeading = styled.h1`
   margin-left: 2.6%;
   @media screen and (max-width: 576px) {
     width: 90%;
-    font-size: 16px;
+    font-size: 5.1vw;
     margin-left: 6%;
   
   }
@@ -261,11 +280,16 @@ export const Small = styled.img`
   width: 60px;
   z-index: 0;
   @media screen and (max-width: 576px) {
-    height: 60px;
-    width: 45px;
+    height: 6vh;
+    width: 11vw;
   
   }
 `;
+
+// height: 6vh;
+//     width: 11vw;
+//     font-size: 5.3vw;
+//     width: 90%;
 
 export const ContentContainer = styled.div`
   margin: 5em 2em 3em 5em;
@@ -280,8 +304,8 @@ export const Small1 = styled.img`
   height: 55px;
   width: 60px;
   @media screen and (max-width: 576px) {
-    height: 60px;
-    width: 40px;
+    height: 6vh;
+    width: 11vw;
   
   }
  

@@ -17,7 +17,7 @@ import {
     ListItemSection,
     ListHead,
     LearnPara1,
-    OrderListSection,
+    OrderListsSection,
     LearnPara11,
 } from "./styled"
 
@@ -106,7 +106,7 @@ const EventsAndWorkshop = () => {
                            
                       </ListItemSection>
                      
-                      <OrderListSection>
+                      <OrderListsSection>
                            <li>Leadership development workshops</li>
                            <li>Team-building exercises</li>
                            <li>Creative writing workshops</li>
@@ -115,7 +115,7 @@ const EventsAndWorkshop = () => {
                            <li>Cooking or culinary workshops</li>
                            <li>Photography or art workshops</li>
                            <li>Technology or software training sessions</li>
-                       </OrderListSection>
+                       </OrderListsSection>
                        <LearnPara11>Overall, workshops provide valuable opportunities for participants to learn new skills, exchange ideas, gain insights, 
                           and develop practical expertise in a collaborative and interactive setting.</LearnPara11>
                 </div>

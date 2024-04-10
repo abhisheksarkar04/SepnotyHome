@@ -12,6 +12,7 @@ export const CardContainer = styled.div`
   z-index: 0;
   @media screen and (max-width: 576px) {
     margin: 0px 0px 0px -20px;
+    width: 40vw;
   }
 `;
 export const CardContainer1 = styled.div`
@@ -26,7 +27,7 @@ export const CardContainer1 = styled.div`
   z-index: 0;
   @media screen and (max-width: 576px) {
     margin: 0px 0px 0px -6%;
-    width: 160px;
+    width: 35vw;
   }
 `;
 export const CardContainer2 = styled.div`
@@ -41,7 +42,7 @@ export const CardContainer2 = styled.div`
   z-index: 0;
   @media screen and (max-width: 576px) {
     margin: 0px 20px 0px -10%;
-    width: 190px;
+    width: 40vw;
     height: 16vh;
     
   }
@@ -54,7 +55,7 @@ export const Image = styled.img`
   z-index: 1;
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
-      width: 190px;
+      width: 40vw;
       margin: 0px 0px -10px -10%;
   }
 `;
@@ -66,7 +67,7 @@ export const Image33 = styled.img`
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
     margin-left: -10%;
-    width: 190px;
+    width: 40vw;
     height: 325px;
 }
 `;
@@ -77,6 +78,10 @@ export const Title = styled.h1`
   font-size: 12px;
   color: #2B459B;
   margin: 10px 0 0 0 ;
+  @media screen and (max-width: 576px) {
+    font-size: 3vw;
+  
+  }
 `;
 
 
@@ -94,6 +99,11 @@ export const ButtonCon = styled.button`
   margin-top: 20px;
   background-color:#254989;
   color:#fff;
+  @media screen and (max-width: 576px) {
+    font-size: 3vw;
+    width: 60%;
+  
+  }
   
 `;
 
@@ -107,6 +117,7 @@ export const ImageA = styled.img`
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
     margin: 0px 0px -10px -20px;
+    width: 40vw;
   }
 `;
 export const ImageB = styled.img`
@@ -118,6 +129,7 @@ export const ImageB = styled.img`
   margin-bottom: -10px;
   @media screen and (max-width: 576px) {
     margin-top: 0px;
+    width: 35vw;
     margin-left: -6%;
 }
 `;
