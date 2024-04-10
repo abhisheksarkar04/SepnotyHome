@@ -45,7 +45,7 @@ const Location = () => {
     <>
       <DigitalContainer>
         <Header>
-          Company &gt; <Span>Our Partners</Span>
+        About Us &gt; <Span>Company</Span> &gt;  <Span>Our Location</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>

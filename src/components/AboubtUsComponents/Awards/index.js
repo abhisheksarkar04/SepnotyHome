@@ -84,7 +84,7 @@ import {
       <>
         <DigitalContainer>
           <Header>
-          Recognition &gt; <Span>Awards</Span>
+          About Us &gt;<Span> Recognition &gt; </Span><Span>Awards</Span>
           </Header>
           <Service>About Us</Service>
           <ContentRecomContainer>

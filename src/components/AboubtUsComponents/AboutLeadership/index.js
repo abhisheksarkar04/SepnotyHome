@@ -44,7 +44,7 @@ import {
       <>
         <DigitalContainer>
           <Header>
-          Resource centre &gt; <Span>Leadership</Span>
+          About Us &gt; <Span>Company</Span> &gt;  <Span>Leadership</Span>
           </Header>
           <Service>About Us</Service>
           <ContentRecomContainer>
