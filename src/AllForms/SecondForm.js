@@ -284,7 +284,6 @@ ${media.mobile}{
 flex-direction:row;
 justify-content:center;
 align-item:center;
-  margin: 0px 0px 0px -20px;
   padding-right: 0px;
   justify-content:space-between;
 
@@ -326,7 +325,7 @@ background:transparent;
 border: 1px solid gray;
 margin-left:10px;
 ${media.mobile}{
-  margin-left:0px;
+  margin-left:10px;
   width:110px;
 }
 `
@@ -346,6 +345,7 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+margin-left:10px;
 ${media.mobile}{
   font-size:11px;
 }

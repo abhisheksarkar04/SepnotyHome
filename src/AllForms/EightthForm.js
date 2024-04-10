@@ -34,14 +34,17 @@ justify-content:center;
 align-items:center;
 padding: 10px;
 @media screen and (max-width: 576px) {
-  width: 71%;
-  height: 52%;
+  width: 51%;
+  height: 32%;
   left: 10%;
   top: 35%;
   margin: 10px 10px 10px -20px;
 `;
 const Img = styled.img`
   height: 30%;
+  ${media.mobile}{
+    height:20%;
+  }
 `;
 
 const PopupContent = styled.div`
@@ -52,6 +55,11 @@ const PopupContent = styled.div`
   text-align: center;
   height: 500px;
   gap: 30px;
+  ${media.mobile
+  }{
+    height:300px;
+    margin-top:10px;
+  }
 `;
 
 const CloseButton = styled.button`
