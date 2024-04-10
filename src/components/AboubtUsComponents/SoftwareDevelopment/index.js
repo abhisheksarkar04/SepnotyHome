@@ -31,7 +31,7 @@ const Software = () => {
     <>
       <DigitalContainer>
         <Header>
-          Approaches &gt; <Span>Software Development</Span>
+        About Us &gt; <Span> Approach &gt; </Span><Span> Software Development</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>

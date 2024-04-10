@@ -121,7 +121,7 @@ const ClientReviews = () => {
     <>
       <DigitalContainer>
         <Header>
-          Resource centre &gt; <Span>Client Reviews</Span>
+        About Us &gt; <Span>Company</Span> &gt;  <Span>Client Reviews</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>

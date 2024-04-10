@@ -48,7 +48,7 @@ const OurPatner = () => {
     <>
       <DigitalContainer>
         <Header>
-          Partners &gt; <Span>Our Partners</Span>
+        About Us &gt; <Span>Company</Span> &gt; <Span>Our Partners</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>
