@@ -5,11 +5,9 @@ import {
   Title,
   ChooseFile,
   Button,
-  NoFile,
   Header,
   Span,
   LastButton,
-  Event,
   List1,
   Mob,
 } from "./styled";
@@ -30,13 +28,33 @@ const ApplyForm = () => {
   const fileInputRef = useRef(null);
 
   const handleFileSelect = () => {
-    fileInputRef.current.click(); // Trigger file input when "Choose File" button is clicked
+    fileInputRef.current.click();
   };
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
     console.log("Selected file:", file);
+  };
+
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const regex = /^[0-9]+$/;
+    if (regex.test(value) && value.length <= 10) {
+      setInputValue(value);
+    }
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Backspace' && inputValue.length > 0) {
+      setInputValue(inputValue.slice(0, -1));
+    }
+  };
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
   };
 
   return (
@@ -52,8 +70,15 @@ const ApplyForm = () => {
           <Container1>
             <Title type="text" placeholder="Applicant Name" />
             <Title type="text" placeholder="E-Mail" />
-            <Title type="tel" pattern="[\+]?[0-9]{2}[\s]?[0-9]{10}" maxLength="13" placeholder="Phone Number" />
-
+            <Title
+              type="tel"
+              id="input"
+              value={inputValue}
+              onChange={handleChange}
+              placeholder="Phone Number"
+              maxLength={10}
+              onKeyDown={handleKeyDown}
+            />
             <ChooseFile>
               <Button onClick={handleFileSelect}>Choose File</Button>
               <input
@@ -61,8 +86,12 @@ const ApplyForm = () => {
                 ref={fileInputRef}
                 style={{ display: "none" }}
                 onChange={handleFileUpload}
-              />
+              /><span>
+              {selectedFile && (
+                <p>&nbsp;&nbsp;Selected File: {selectedFile.name}</p>
+              )}</span>
             </ChooseFile>
+
             <LastButton type="submit" onClick={handleClick}>Send</LastButton>
           </Container1>
         </Container>
