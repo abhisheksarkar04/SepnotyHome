@@ -12,7 +12,7 @@ margin:0px 0px 20px 0px;
 padding-left:2%;
 @media screen and (max-width:576px){
   font-size:16px;
-  padding-left:4%;
+  padding-left:6%;
 }
 `;
 export const HeadingSpan=styled.span`
@@ -24,6 +24,7 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
 }
 `;
 export const AppAbout=styled.p`
@@ -36,7 +37,7 @@ margin-top:18px;
 margin-bottom:18px;
 @media screen and (max-width:576px){
   font-size:14px;
-  padding-left:4%;
+  padding-left:6%;
 }
 `;
 export const ImgCon = styled.div`
@@ -47,8 +48,8 @@ export const ImgCon = styled.div`
   justify-content: flex-end; /* Add this line */
   padding-left:2%;
   @media screen and (max-width:576px){
-    
-    padding-left:4%;
+    width: 50vw;
+    padding-left:6%;
   }
 `;
 export const InsertImg=styled.img`
@@ -67,4 +68,10 @@ export const WebTechButton = styled.button`
   height:6vh;
    font-size:18px;
    font-weight:500;
+   @media screen and (max-width:576px){
+    height:4vh;
+    font-size:16px;
+    margin-top: -15px; 
+    padding:5px;
+   }
 `;

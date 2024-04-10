@@ -5,12 +5,16 @@ display:flex;
 flex-direction:column;
 margin-right:4%;
 @media screen and (max-width:576px){
-    margin-bottom:20px;
+    margin-bottom:30px;
+    margin-left:5%;
 }
 `;
 export const WorkImg=styled.img`
 width:400px;
 height:300px;
+@media screen and (max-width:576px){
+    width:88vw;
+}
 `;
 export const ReadMore=styled.button`
 background:none;
@@ -21,4 +25,7 @@ width:auto;
 border-radius:7px;
 padding:5px;
 margin-top:4px;
+@media screen and (max-width:576px){
+    font-size:14px;
+}
 `;

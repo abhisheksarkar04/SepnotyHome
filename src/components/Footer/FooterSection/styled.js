@@ -14,7 +14,7 @@ export const Container = styled.div`
   background-color: #0c111f;
   flex-direction: column;
   padding: 40px 40px 5px 40px;
-  z-index: 2;
+
   background-image: url(${layout});
   background-size: cover;
   @media screen and (max-width: 576px) {
@@ -56,9 +56,10 @@ export const SepnotyLogo = styled.img`
 
 export const SepnotyDescription = styled.p`
   font-size: 14px;
-  width: 398px;
+  width: 330px;
   margin-top: 20px;
   color: #fff;
+  margin-right: 20px;
   @media screen and (max-width: 576px) {
     font-size: 14px;
     width: 258px;
@@ -131,7 +132,7 @@ export const NewsDesc = styled.p`
   font-size: 14px;
   color: #969595;
   padding: 10px 0px 10px;
-  width: 316px;
+  width: 350px;
   @media screen and (max-width: 576px) {
     display: none;
   }
@@ -151,7 +152,7 @@ export const InputHolder = styled.input`
     color: #e2dccc;
   }
   @media screen and (max-width: 576px) {
-    width: 180px;
+    width: 220px;
   }
 `;
 
@@ -317,7 +318,7 @@ export const ServiceCon = styled.div`
   }
 `;
 export const ContactCon = styled.div`
-  margin-right: 80px;
+  margin-right: 0px;
   @media screen and (max-width: 576px) {
     order: 0;
     margin-right: 0px;

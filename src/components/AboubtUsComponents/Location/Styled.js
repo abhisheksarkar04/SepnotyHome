@@ -71,6 +71,8 @@ export const ConRecDesc = styled.p`
   ${media.mobile} {
     font-size: 14px;
     width:100%;
+    line-height:20px;
+    margin-top:-10px;
   }
 `;
 

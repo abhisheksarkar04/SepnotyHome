@@ -38,7 +38,7 @@ margin:60px 0px 20px 0px;
 padding-left:8%;
 @media screen and (max-width:576px){
   font-size:20px;
-  padding-left:7%;
+  padding-left:8%;
 }
 `;
 export const TransparentSpan=styled.span`
@@ -51,6 +51,7 @@ margin-left:6%;
 margin-top:-6px;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
   margin-left:3%;
 }
 `;
@@ -98,4 +99,7 @@ background-color: rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

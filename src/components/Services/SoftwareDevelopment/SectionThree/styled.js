@@ -11,7 +11,7 @@ export const ServiceCardCon = styled.div`
   margin-bottom: 23px;
   position: relative;
   @media screen and (max-width:576px){
-    width:70%;
+    width:85%;
   }
 `;
 export const ServiceImgName = styled.div`
@@ -23,7 +23,7 @@ export const ServiceImg = styled.img`
   height: 70px;
 `;
 export const ServiceName = styled.h3`
-  font-weight: 500;
+  
   margin-left: 5%;
   font-weight: 800;
   margin-top: 20px;
@@ -33,6 +33,9 @@ export const ServiceDescription = styled.p`
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 17px;
+  @media screen and (max-width:576px){
+    font-size:14px;
+  }
 `;
 export const Forward = styled.div`
   font-size: 30px; /* Increased font size for larger arrow */

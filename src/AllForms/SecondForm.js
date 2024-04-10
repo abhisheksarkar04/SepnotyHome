@@ -1,342 +1,277 @@
+
 import React, { Component } from 'react';
 import Styled from "styled-components"
-import { Stepper } from 'react-form-stepper';
+import { Stepper ,Step } from 'react-form-stepper';
 import './App.css';
-import handleFormValues from './allFormValues';
 
-import SecondPage from "./Website/SecondPage"
-
-
-
-
-
-
-
-
-
-// import MaterialTable from 'material-table';
-// import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 
 class CourseDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndustries: [],
       error: ''
     };
   }
- 
-    shouldComponentUpdate(nextProps) {
-        if (this.props.addCourse !== nextProps.addCourse || this.props.level !== nextProps.level ) {
-          return true;
-        } else {
-          return false;
-        }
-      }
 
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
-    const { selectedIndustries } = this.state;
-    const formData = {
-      field2: {selectedIndustries}
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData);
-    if (selectedIndustries.length === 0) {
+  
+    const { formData } = this.props;
+    const { industryType, indstryotherDetails } = formData;
+  
+    // Validation for industry selection
+    if (industryType.length === 0) {
       this.setState({ error: 'Please select at least one industry.' });
       return;
     }
-    this.props.nextStep();
-  };
+  
+    // Check if 'Other' checkbox is checked and 'Industry Other Details' is empty
+    if (industryType.includes('10st') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
+      this.setState({ error: 'Please provide other details.' });
+      return;
+    }
+    this.setState({ error: '' });
+  this.props.nextStep();
+  }
 
   handleCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    let selectedIndustries = [...this.state.selectedIndustries];
-    if (checked) {
-      selectedIndustries.push(value);
-    } else {
-      selectedIndustries = selectedIndustries.filter(industry => industry !== value);
-    }
-    this.setState({ selectedIndustries, error: '' });
+    const { value, checked ,id} = e.target;
+    this.props.updateFormData({
+      industryType: checked ? [...this.props.formData.industryType, id] : this.props.formData.industryType.filter(type => type !== id)
+    });
   };
 
-  back = e => {
+  handleOtherDetailsChange = (e) => {
+    const { value } = e.target;
+    const { industryType } = this.props.formData;
+  
+    // If 'Industry Other Details' is provided, remove the error message
+    if (value.trim() !== '' && industryType.includes('other')) {
+      this.setState({ error: '' });
+    }
+  
+    this.props.updateFormData({ indstryotherDetails: value });
+  };
+
+  back = (e) => {
     e.preventDefault();
     this.props.prevStep();
   };
 
-
   render() {
     const { error } = this.state;
-    // const { 
-    //   // // coursesOptions,
-    //   // levelOptions,
-    //   // // addCourse, 
-    //   // addLevel,
-    //   // level,
-    // } = this.props;
-
-    // const theme = createMuiTheme({
-    //   palette: {
-    //     primary: {
-    //       main: '#003487',
-    //     },
-    //     secondary: {
-    //       main: '#003487',
-    //     },
-    //   },
-    //   overrides: {
-    //     MuiPaper: {
-    //       elevation2: {
-    //         boxShadow: 'none',
-    //       },
-    //     },
-    //     MuiInput: {
-    //       underline: {
-    //         '&:before': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:after': {
-    //           borderBottom: 'none'
-    //         },
-    //         '&:hover': {
-    //           '&:not(.Mui-disabled)': {
-    //             '&:before' : {
-    //               borderBottom: 'none'
-    //             }
-    //           }
-    //         }
-    //       }
-    //     },
-    //     MuiTableRow: {
-    //       root: {
-    //         '&:nth-child(even)': {
-    //           backgroundColor: '#ebebeb'
-    //         }
-    //       }
-    //     },
-    //     MuiTypography: {
-    //       h6: {
-    //         fontSize: '1rem',
-    //         color: '#011b64'
-    //       }
-    //     },
-    //     MuiToolbar: {
-    //       root: {
-    //         borderBottom: '1px solid grey',
-    //         backgroundColor: '#fafafa'
-    //       },
-    //       gutters: {
-    //         paddingLeft: '3px'
-    //       }
-    //     }
-    //   },
-    // });
-
-    // const columns = [
-    //   {
-    //     title: 'course',
-    //     field: 'course',
-    //   },
-    //   {
-    //     title: 'category',
-    //     field: 'category'
-    //   }
-    // ];
-
+    const { industryType, indstryotherDetails} = this.props.formData;
     return (
-      <Main className='form'>
+      <Main className="form">
         <form>
 
-          <Stepper
-             steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{ label: '' }, { label: '' }, { label: '' },{ label: '' }]}
-            activeStep={1}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
+        <StyledStepper
+          activeStep={this.props.activeStep}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+        <Div>
+        <StyledStepper1
+          activeStep={1}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper1>
+        </Div>
+        
 
-<Main1>
-            <Form1>
-                <Heading> 
-                *What is your industry?
-                </Heading>
-                <Form2>
-                <InputContainer>
-<Label>
-<Input type='checkbox' name="industry" value="Healthcare" id='' onChange={this.handleCheckboxChange}/>
-Healthcare
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Retail & Wholesale" onChange={this.handleCheckboxChange}/>
-    Retail & Wholesale
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Manufacturing" onChange={this.handleCheckboxChange}/>
-    Manufacturing
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Finanacial" onChange={this.handleCheckboxChange}/>
-    Finanacial
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Transportation & Logistics" onChange={this.handleCheckboxChange}/>
-    Transportation & Logistics
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Telecommunications" onChange={this.handleCheckboxChange}/>
-    Telecommunications
-    </Label>
-</InputContainer>
+          <Mai>
+            <FormContainer>
 
-                </Form2>
-
-                
-            </Form1>
-            <Form1>
-            <Form3>
-                <InputContainer>
-<Label>
-<Input type='checkbox' name="industry" value="Public sector" onChange={this.handleCheckboxChange}/>
-Public sector
-</Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Entertainment" onChange={this.handleCheckboxChange}/>
-    Entertainment
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Education" onChange={this.handleCheckboxChange}/>
-    Education
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Professional services" onChange={this.handleCheckboxChange}/>
-    Professional services
-    </Label>
-</InputContainer>
-<InputContainer>
-<Label>
-    <Input type='checkbox' name="industry" value="Construction" onChange={this.handleCheckboxChange}/>
-    Construction
-    </Label>
-</InputContainer>
-<InputContainer>
-    <Input type='checkbox' name="industry" value="Telecommunications" onChange={this.handleCheckboxChange}/>
-    <Input1 type="text" placeholder="others (please specify)"/>
-</InputContainer>
-
-                </Form3>
-                {error && <ErrorMessage>{error}</ErrorMessage>}
-            </Form1>
-            
-        </Main1>
-
-          {/* <div className='select'>
-            <select
-              name='select'
-              onChange={addLevel}
-              className='select__item'
-              value={level}
-            >
-              <option value='null'>Choose course level</option>
-              {levelOptions}
-            </select>
-          </div> */}
-
-          {/* <div className='table'> */}
-
-
-{/* 
-            <MuiThemeProvider theme={theme}>
-              <MaterialTable
-                title='Choose courses'
-                columns={columns}
-                data={coursesOptions}
-                onSelectionChange={addCourse}
-                options={{
-                  search: true,
-                  selection: true,
-                  paging: false,
-                  toolbar: true,
-                  showTextRowsSelected: false,
-                  searchFieldStyle: {
-                    position: 'absolute',
-                    top: '-20px',
-                    right: '-7px',
-                    width: '200px',
-                    backgroundColor: '#fff',
-                    border: '1px solid grey',
-                    padding: '3px 5px',
-                    borderRadius: '3px',
-                  },
-                  headerStyle: {
-                    display: 'none',
-                  },
-                }}
-              />
-            </MuiThemeProvider> */}
-
-          {/* </div> */}
-
-          
-
+                <Form>
+                    <Heading>
+                    *What is your industry?
+                    </Heading>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Health Care" checked={industryType.includes('Health Care')} value="Health Care" onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Health Care">
+                        Health Care
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Retail & Wholesale" value="Retail & Wholesale" checked={industryType.includes('Retail & Wholesale')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Retail & Wholesale">
+                        Retail & Wholesale
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Manufacturing" value='Manufacturing' checked={industryType.includes('Manufacturing')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Manufacturing">
+                        Manufacturing
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Financial services banking & Insurance" value="Financial services banking & Insurance" checked={industryType.includes('Financial services banking & Insurance')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Financial services banking & Insurance">
+                        Financial services , banking & insurance
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Transportation & Logistics" value="Transportation & Logistics" checked={industryType.includes('Transportation & Logistics')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Transportation & Logistics">
+                        Transportation & Logistics
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Telecommunications" value="Telecommunications" checked={industryType.includes('Telecommunications')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Telecommunications">
+                        Telecommunications
+                        </Label>
+                    </CheckBoxCon>
+                </Form>
+            </FormContainer>
+            <FormContainer>
+                <Form1>
+                <CheckBoxCon>
+                        <input type="checkbox" id="Public sector" value="Public sector" checked={industryType.includes('Public sector')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Public sector">
+                        Public sector
+                        </Label>
+                    </CheckBoxCon>
+                <CheckBoxCon>
+                        <input type="checkbox" id="Entertainment" value="Entertainment" checked={industryType.includes('Entertainment')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Entertainment">
+                        Entertainment
+                        </Label>
+                    </CheckBoxCon>
+                    
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Education" value="Education" checked={industryType.includes('Education')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Education">
+                        Education
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Professional Services" value="Professional Services" checked={industryType.includes('Professional Services')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Professional Services">
+                        Professional Services
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="Constructions" value="Constructions" checked={industryType.includes('Constructions')} onChange={this.handleCheckboxChange}/>
+                        <Label htmlFor="Constructions">
+                        Constructions
+                        </Label>
+                    </CheckBoxCon>
+                    <CheckBoxCon>
+                        <input type="checkbox" id="other"  checked={industryType.includes('other')} onChange={this.handleCheckboxChange}/>
+                        <In type="text" placeholder='others (please specify)' value={indstryotherDetails} onChange={this.handleOtherDetailsChange}/>
+                    </CheckBoxCon>
+                    {error && <ErrorMessage>{error}</ErrorMessage>}
+              </Form1>
+            </FormContainer>
+          </Mai>
         </form>
-        <Button className='buttons'>
-            <button className='buttons__button buttons__button--back' onClick={this.back}>Back</button>
-            <button className='buttons__button buttons__button--next' onClick={this.continue}>Next</button>
-          </Button>
+        <Button style={{ textAlign: "center" }}>
+          <button
+            className="buttons__button buttons__button--back"
+            onClick={this.back}
+          >
+           <span>←</span> Back
+          </button>
+          <button
+            className="buttons__button buttons__button--next"
+            onClick={this.continue}
+          >
+            Next
+          </button>
+        </Button>
       </Main>
-    )
+    );
   }
 }
 
 export default CourseDetails;
-const media = {
-  mobile: '@media(max-width: 576px)'
-};
 
-const ErrorMessage = Styled.div`
-  color: red;
-  margin-top: 10px;
-  font-size:12px;
+const Div = Styled.div`
+display:none;
+`
+const media = {
+  mobile: "@media(max-width: 576px)",
+};
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
 `;
+const StyledStepper1 = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+  text-align: center;
+  border: 1px solid #2b7cff !important;
+  cursor: default !important;
+  span {
+    font-size: 8px; /* Decrease the font size */
+  }
+  & > div {
+    color: #0f6bff !important;
+  }
+`;
+
 const Button = Styled.div`
 display:flex;
 justify-content:end;
 margin-top:90px;
 margin-left:-90px;
-`
+`;
+const ErrorMessage = Styled.div`
+  color: red;
+  margin-top: 10px;
+  font-size:12px;
+`;
 
 const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
 }
-`
-const Main1 = Styled.div`
+`;
+
+const Mai = Styled.div`
 display:flex;
 flex-direction:row;
 justify-content:center;
@@ -344,61 +279,65 @@ align-item:center;
 gap:20px;
 ${media.mobile}{
   width:100%;
-  justify-content:start;
-  align-item:start;
-  gap:2px;
-  margin-left:-30px;
-}
-`
-const Form1 = Styled.div`
-display:flex;
-flex-direction:column;
-border: 1px solid #C1CAE7;
-background: #C1CAE7;
-gap:-10px;
-border-radius:10px;
-padding:20px;
-width:700px;
-height:380px;
-${media.mobile}{
-  width:380px;
-  border-radius:5px;
-  gap:0px;
-}
-`
-const Form3 = Styled.div`
-margin-top:40px;
-${media.mobile}{
-  width:220px;
-  border-radius:5px;
-  gap:0px;
+  gap: 6px;
+  display:flex;
+flex-direction:row;
+justify-content:center;
+align-item:center;
+  padding-right: 0px;
+  justify-content:space-between;
+
 }
 `
 const Heading = Styled.h1`
-color:#263238;
-font-size:18px;
-font-weight:700;
-margin-bottom:20px;
-font:family:Roboto;
-${
-  media.mobile
-}{
-  font-size:13px;
-}
-`
-const Form2 = Styled.div`
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color: #263238;
 ${media.mobile}{
-  width:220px;
-  border-radius:5px;
+  font-size:15px;
+}
+`;
+
+const FormContainer = Styled.div`
+display:flex;
+flex-direction:column;
+padding:20px;
+border: 1px solid #C1CAE7;
+width:100%;
+background: #C1CAE7;
+gap:20px;
+border-radius:10px;
+${media.mobile}{
+  border-radius:12px;
   gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:3px;
 }
 `
-const Input = Styled.input`
-margin-right:10px;
+
+const In = Styled.input`
+background:transparent;
+border: 1px solid gray;
+margin-left:10px;
+${media.mobile}{
+  margin-left:10px;
+  width:110px;
+}
 `
-const InputContainer=Styled.div`
+const CheckBoxCon = Styled.div`
+gap:30px;
+align-items:start;
+justify-content:space-between;
 margin-top:20px;
-`
+${media.mobile}{
+  margin-top:10px;
+}
+`;
 const Label = Styled.label`
 font-size:16px;
 font-family: Roboto;
@@ -406,8 +345,20 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
-`
-const Input1 = Styled.input`
-background:transparent;
-border: 1px solid gray;
-`
+margin-left:10px;
+${media.mobile}{
+  font-size:11px;
+}
+`;
+const Form = Styled.div`
+${media.mobile}{
+  width:100%;
+}
+`;
+const Form1 = Styled.div`
+margin-top:20px;
+${media.mobile}{
+  width:100%;
+  margin-top:40%;
+}
+`;

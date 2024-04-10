@@ -13,10 +13,11 @@ border-radius:10px;
 margin:15px;
 
 @media screen and (max-width:576px){
-    width:43%;
+    width:40vw;
     justify-content: space-between;
-height:700px
+    height:auto;
     margin:3px;
+    margin-bottom:10px;
     padding:7px;
 }
 `;
@@ -35,9 +36,9 @@ export const RequestTitle=styled.h3`
 color:rgba(43, 69, 155, 1);
 margin-bottom:12px;
 align-items:center;
-font-size:20px;
+font-size:18px;
 @media screen and (max-width:576px){
-    font-size:17px;
+    font-size:14px;
 }
 `;
 export const RequestDescription=styled.p`
@@ -48,7 +49,8 @@ margin-bottom:10px;
 align-items:center;
 
 @media screen and (max-width:576px){
-    font-size:14px;
+    font-size:12px;
+    margin-bottom:5px;
 }
 `;
 export const RequestTxt=styled.h3`
@@ -57,8 +59,8 @@ font-size:15px;
 margin-left:61%;
 margin-top:30px;
 @media screen and (max-width:576px){
-    margin-left:15%;
-    font-size:10px;
+    margin-left:10%;
+    font-size:12px;
     margin-right:0px;
 }
 `;

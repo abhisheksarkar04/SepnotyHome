@@ -66,7 +66,7 @@ export const ConRecDesc = styled.p`
   width: 70%;
   padding: 0px 30px 30px 0px;
   @media screen and (max-width: 576px) {
-    padding: 10px 10px 20px 0;
+    padding: 10px 0px 20px 0;
     font-size: 14px;
     width: 90%;
   }
@@ -122,7 +122,7 @@ export const ListHeading = styled.h1`
 export const ServiceItemCon = styled.div`
   margin-top: 5%;
   @media screen and (max-width: 576px) {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 `;
 
@@ -202,7 +202,8 @@ export const CardContainer = styled.div`
   margin: 30px 1px 30px 01px;
 
   @media screen and (max-width: 576px) {
-    width: 290px;
+    width: 94%;
+
     margin: 10px 0px 10px 0px;
   }
 `;
@@ -211,7 +212,6 @@ export const CardHolder = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   flex-flow: wrap;
   @media screen and (max-width: 576px) {
     display: flex;
@@ -276,6 +276,11 @@ export const ToolsCardCon = styled.div`
   @media screen and (max-width: 576px) {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    align-items: center;
+    padding: 0px 0px;
+    height: auto;
+    margin: 0px 20px 0px 10px;
   }
 `;
 
@@ -289,9 +294,9 @@ export const ToolsCard = styled.div`
   padding: 30px 20px 30px 30px;
   margin: 30px 30px 30px 30px;
   @media screen and (max-width: 576px) {
-    width: 290px;
+    width: 93%;
     margin: 10px 0px 10px 0px;
-    height: 270px;
+    height: 250px;
   }
 `;
 

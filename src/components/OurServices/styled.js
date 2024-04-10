@@ -72,7 +72,7 @@ export const Description = styled.p`
   line-height: 1.5em;
   @media screen and (max-width: 576px) {
     font-size: 14px;
-    width: 320px;
+    width: 90%;
     padding-top: 0px;
     line-height: 2;
     margin-left: 0px;
@@ -98,7 +98,7 @@ export const CuateImage = styled.img`
 `;
 
 export const CuateImage11 = styled.img`
-  width: 36%;
+  width: 35%;
   height: 250px;
   margin-left: 0px;
   margin-right: 0px;
@@ -115,7 +115,7 @@ export const HeadImgCon = styled.div`
   align-items: center;
 
   margin: 0px 10px 0px 0px;
-  width: 100%;
+  width: 96%;
 
   @media screen and (min-width: 577px) {
     display: none;
@@ -127,4 +127,43 @@ export const Header = styled.h1`
   margin-top: 50px;
   color: #4c64b2;
   margin-right: 3%;
+`;
+
+export const Nodejs = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-right: 1px solid #abaaaa;
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 13%;
+    padding: 3px 10px 3px 10px;
+    border-right: 1px solid #abaaaa;
+  }
+`;
+
+export const Python = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-right: 1px solid #abaaaa;
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 15%;
+    padding: 0px 10px;
+    border-right: 1px solid #abaaaa;
+  }
+`;
+
+export const Php = styled.img`
+  height: 30px;
+  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-right: 1px solid #abaaaa;
+  @media screen and (max-width: 576px) {
+    height: 15px;
+    width: 15%;
+    padding: 3px 10px;
+    border-right: 1px solid #abaaaa;
+  }
 `;

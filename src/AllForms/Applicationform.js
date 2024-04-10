@@ -66,13 +66,13 @@ const coursesData = [
 
 const levelsData = ["Beginner", "Intermediate", "Advanced"];
 
-class Form extends Component {
+class Application extends Component {
   state = {
     activeStep:0,
     step: 1,
     formData: {
       step1: {
-        typeofDevelopment:"website",
+        typeofDevelopment:"application",
         typeOfWebsite: [],
         numberOfPages: '',
         otherTypeOfWebsite:"",
@@ -124,25 +124,17 @@ class Form extends Component {
   };
 
   nextStep = () => {
-    const { step,activeStep } = this.state;
+    const { step } = this.state;
     this.setState({
       step: step + 1,
     });
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep + 1
-    }));
   };
 
   prevStep = () => {
     const { step } = this.state;
-    const {activeStep} =this.state
     this.setState({
       step: step - 1,
-      
     });
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep - 1
-    }));
   };
 
   submitData = async(e) => {
@@ -150,10 +142,10 @@ class Form extends Component {
 
     const { formData } = this.state;
     const formattedData = this.convertToDesiredFormat(formData);
-    const  dataToSend = JSON.stringify(formattedData);
-    
+    const dataToSend = JSON.stringify(formattedData);
+
     const response = await fetch(
-      "http://localhost:8800/api/proposal/website/websiteProposal",
+      "http://localhost:8800/api/proposal/application/applicationProposal",
       {
         method: "POST",
         body: dataToSend,
@@ -162,6 +154,7 @@ class Form extends Component {
         },
       }
     );
+
     if (response.ok) {
       console.log("SUCCESS! your proposal was submitted");
       window.location.reload()
@@ -169,11 +162,13 @@ class Form extends Component {
       alert('ERROR ${response.status}: There has been a problem with your operation. Please try again later.');
       alert('ERROR ${response.status}: Something went wrong!');
     }
-    // Handle the response accordingly
 
+    // Handle the response accordingly
+    
     console.log(formattedData); //Log all form data
-    alert('Data sent');
+    alert("Data sent");
   }
+
 
   handleDataReceived = (data) => {
     this.setState(prevState => ({
@@ -334,7 +329,6 @@ class Form extends Component {
         return (
           <CourseDetails
             nextStep={this.nextStep}
-            activeStep={activeStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
             formData={formData.step2}
@@ -345,7 +339,6 @@ class Form extends Component {
         return (
 
           < YourIndustry nextStep={this.nextStep}
-          activeStep={activeStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
           formData={formData.step3}// Pass formData as props
@@ -357,9 +350,9 @@ class Form extends Component {
         return (
           <Summary
             nextStep={this.nextStep}
-            activeStep={activeStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
+
             formData={formData.step4} // Pass formData as props
             updateFormData={this.updateFormData}
            />
@@ -408,10 +401,11 @@ class Form extends Component {
 
           
       default: return null
+
+      
+
     }
     
   }
 }
-
-
-export default Form;
+export default Application;

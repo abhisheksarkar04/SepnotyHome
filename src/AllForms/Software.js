@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import FirstForm from './Software/SoftFirst/first';
-import SecondForm from './Software/SoftSecond/Second';
+import CourseDetails from './SecondForm';
 import Summary from './FourthForm';
 import YourIndustry from './ThirdForm';
 import FormNo5 from "./SixthForm";
@@ -68,8 +68,57 @@ const levelsData = ['Beginner', 'Intermediate', 'Advanced'];
 class Software extends Component {
     state = {
       step: 1,
-      recivedData:[],
-      SecondData:"",
+      formData: {
+        step1: {
+          typeofDevelopment:"software",
+          typeOfSoftware:[],
+          numberofTools:"",
+          otherSoftwareDetails:"",
+        },
+        step2:{
+          industryType:[],
+          indstryotherDetails:"",
+        },
+        step3:{
+          services:"",
+          websiteLink:"",
+          otherServiceDetails:"",
+        },
+        step4:{
+          UIDesignMockups:"",
+          chosenCMS:"",
+          cmsDetails:"",
+        },
+        step5:{
+          appFeatures:[],
+          otherFeatureDetails:"",
+        },
+        step6:{
+          typeOfMedia:[],
+          otherMediaDetails:"",
+          paymentSystem: true,
+          visitors:"",
+        },
+        step7:{
+          complianceRequirements:[],
+          integrationDetails:"",
+          details:"",
+          otherCompliance:"",
+        },
+        step8:{
+        username:"",
+        email:"",
+        companyName:"",
+        phoneNumber:"",
+        wayOfCommunication:"Any",
+        agreement:{
+          contact: false,
+          requestInfo: false,
+        }
+        }
+      },
+      recivedData:[]
+  
     };
   
     nextStep = () => {
@@ -85,55 +134,196 @@ class Software extends Component {
         step: step - 1
       })
     }
-    submitData = e => {
+    submitData = async(e) => {
       e.preventDefault();
-      alert('Data sent');
+  
+      const { formData } = this.state;
+      const formattedData = this.convertToDesiredFormat(formData);
+      const dataToSend = JSON.stringify(formattedData);
+  
+      const response = await fetch(
+        "http://localhost:8800/api/proposal/software/softwareProposal",
+        {
+          method: "POST",
+          body: dataToSend,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        console.log("SUCCESS! your proposal was submitted");
+        window.location.reload()
+      } else {
+        alert('ERROR ${response.status}: There has been a problem with your operation. Please try again later.');
+        alert('ERROR ${response.status}: Something went wrong!');
+      }
+  
+      // Handle the response accordingly
+      
+      console.log(formattedData); //Log all form data
+  
+      alert("Data sent");
+    };
+
+    updateFormData = (data) => {
+      const { step, formData } = this.state;
+      // Update the corresponding step data in formData based on the current step
+      switch (step) {
+        case 1:
+          this.setState({
+            formData: {
+              ...formData,
+              step1: {
+                ...formData.step1,
+                ...data // Update both typeOfWebsite and numberOfPages
+              }
+            }
+          });
+          break;
+        case 2:
+          this.setState({
+            formData: {
+              ...formData,
+              step2: {
+                ...formData.step2,
+                ...data
+              }
+            }
+          });
+          break;
+        case 3:
+          this.setState({
+            formData: {
+              ...formData,
+              step3: {
+                ...formData.step3,
+                ...data
+  
+                
+              }
+             
+            }
+            
+          });
+          break;
+          case 4:
+          this.setState({
+            formData: {
+              ...formData,
+              step4: {
+                ...formData.step4,
+                ...data
+              }
+            }
+          });
+          break;
+          case 5:
+          this.setState({
+            formData: {
+              ...formData,
+              step5: {
+                ...formData.step5,
+                ...data
+              }
+            }
+          });
+          break;
+          case 6:
+            this.setState({
+              formData: {
+                ...formData,
+                step6: {
+                  ...formData.step6,
+                  ...data
+                }
+              }
+            });
+            break;
+            case 7:
+              this.setState({
+                formData: {
+                  ...formData,
+                  step7: {
+                    ...formData.step7,
+                    ...data
+                  }
+                }
+              });
+              break;
+              case 8:
+                this.setState({
+                  formData: {
+                    ...formData,
+                    step8: {
+                      ...formData.step8,
+                      ...data
+                    }
+                  }
+                });
+                
+        default:
+          break;
+      }
     }
-    handleDataReceived = (data) => {
-      this.setState(prevState => ({
-        recivedData: [...prevState.recivedData, data]
-      }), () => {
-        const jsonData = this.convertToJSON();
-        console.log(jsonData);
-      });
-    }
-    convertToJSON = () => {
-      const { recivedData } = this.state;
-      const jsonData = {};
-      recivedData.forEach(item => {
-        Object.keys(item).forEach(key => {
-          if (!jsonData.hasOwnProperty(key)) {
-            jsonData[key] = [];
-          }
-          jsonData[key].push(item[key]);
-        });
-      });
-      return jsonData;
-    }
+  
+  
+    convertToDesiredFormat = (formData) => {
+      const {
+        step1,
+        step2,
+        step3,
+        step4,
+        step5,
+        step6,
+        step7,
+        step8,
+      } = formData;
+    
+      const formattedData = {
+        ...step1,
+        ...step2,
+        ...step3,
+        ...step4,
+        ...step5,
+        ...step6,
+        ...step7,
+        ...step8,
+      };
+    
+      return formattedData;
+    };
+    
+
     render() {
-     const {step} = this.state
+     const {step,formData} = this.state
+
       
       switch(step) {
         case 1: 
           return (
             < FirstForm
               nextStep={this.nextStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step1}
+              updateFormData={this.updateFormData}
             />
           )
         case 2:
           return (
-            <SecondForm 
+            <CourseDetails
               nextStep={this.nextStep}
               prevStep={this.prevStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step2}
+              updateFormData={this.updateFormData}
             />
           )
         case 3:
           return (
             < YourIndustry nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
+            formData={formData.step3}
+            updateFormData={this.updateFormData}
             
             />
           )
@@ -141,14 +331,16 @@ class Software extends Component {
             return (
               < Summary nextStep={this.nextStep}
               prevStep={this.prevStep}
-              onDataReceived={this.handleDataReceived}
+              formData={formData.step4}
+              updateFormData={this.updateFormData}
              />
             )
         case 5:
               return (
                 <SecondForm1  nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                onDataReceived={this.handleDataReceived}
+                formData={formData.step5}
+                updateFormData={this.updateFormData}
                 />
               )
         case 6:
@@ -156,7 +348,9 @@ class Software extends Component {
                 <FormNo5 
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                onDataReceived={this.handleDataReceived}
+     
+                formData={formData.step6}
+                updateFormData={this.updateFormData}
                 
               />
               )
@@ -165,7 +359,8 @@ class Software extends Component {
             <ThirdForm 
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
+            formData={formData.step7}
+            updateFormData={this.updateFormData}
           />
           )
         case 8:
@@ -173,8 +368,9 @@ class Software extends Component {
             <FourthForm 
             nextStep={this.nextStep}
             prevStep={this.prevStep}
-            onDataReceived={this.handleDataReceived}
-  
+            formData={formData.step8}
+            updateFormData={this.updateFormData}
+            onSubmit={this.submitData}
           />
           )
   

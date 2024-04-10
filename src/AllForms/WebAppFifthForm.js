@@ -20,7 +20,7 @@ class SecondForm extends Component {
 
     // Validation for feature selection
     if (appFeatures.length === 0) {
-      this.setState({ error: 'Please select at least one feature.' });
+      this.setState({ error: 'Please select at least one feature.'});
       return;
     }
 
@@ -116,9 +116,10 @@ class SecondForm extends Component {
 
           <Mai>
             <FormContainer>
+
               <Form>
                 <Heading>
-                  *What Software features/capabilities do you need?
+                *What website or App features/capabilities do you need?
                 </Heading>
                 <CheckBoxCon>
                   <input type="checkbox" id="Multi domain configuration" checked={appFeatures.includes('Multi domain configuration')} value="Multi domain configuration" onChange={this.handleCheckboxChange} />
@@ -127,9 +128,9 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Basic features" value="Basic features" checked={appFeatures.includes('Basic features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Basic features">
-                  Basic features
+                  <input type="checkbox" id="Multilingual support" value="Multilingual support" checked={appFeatures.includes('Multilingual support')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Multilingual support">
+                    Multilingual support
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
@@ -139,21 +140,21 @@ class SecondForm extends Component {
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Templates" value="Templates" checked={appFeatures.includes('Templates')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Templates">
-                    Templates
+                  <input type="checkbox" id="Page templates" value="Page templates" checked={appFeatures.includes('Page templates')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Page templates">
+                  Page templates
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Core features" value="Core features" checked={appFeatures.includes('Core features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Core features">
-                    Core features
+                  <input type="checkbox" id="Contact Forms" value="Contact Forms" checked={appFeatures.includes('Contact Forms')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Contact Forms">
+                  Contact Forms
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Customizable features" value="Customizable features" checked={appFeatures.includes('Customizable features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Customizable features">
-                    Customizable features
+                  <input type="checkbox" id="Live Chat / bot" value="Live Chat / bot" checked={appFeatures.includes('Live Chat / bot')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Live Chat / bot">
+                  Live Chat / bot
                   </Label>
                 </CheckBoxCon>
               </Form>
@@ -162,32 +163,32 @@ class SecondForm extends Component {
               <Form1>
 
                 <CheckBoxCon>
-                  <input type="checkbox" id="Collaboration features" value="Collaboration features" checked={appFeatures.includes('Collaboration features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Collaboration features">
-                    Collaboration features
+                  <input type="checkbox" id="User generated content(post, comments & Feedback)" value="User generated content(post, comments & Feedback)" checked={appFeatures.includes('User generated content(post, comments & Feedback)')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="User generated content(post, comments & Feedback)">
+                  User generated content(post <S></S>,comments & Feedback)
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Integration features" value="Integration features" checked={appFeatures.includes('Integration features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Integration features">
-                    Integration features
+                  <input type="checkbox" id="Mobile compatibility" value="Mobile compatibility" checked={appFeatures.includes('Mobile compatibility')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Mobile compatibility">
+                  Mobile compatibility
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Security features" value="Security features" checked={appFeatures.includes('Security features')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Security features">
-                    Security features
+                  <input type="checkbox" id="Social media Sharing functionality" value="Social media Sharing functionality" checked={appFeatures.includes('Social media Sharing functionality')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Social media Sharing functionality">
+                  Social media Sharing functionality
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
-                  <input type="checkbox" id="Analytics" value="Analytics" checked={appFeatures.includes('Analytics')} onChange={this.handleCheckboxChange} />
-                  <Label htmlFor="Analytics">
-                    Analytics
+                  <input type="checkbox" id="Web Analytics" value="Web Analytics" checked={appFeatures.includes('Web Analytics')} onChange={this.handleCheckboxChange} />
+                  <Label htmlFor="Web Analytics">
+                  Web Analytics
                   </Label>
                 </CheckBoxCon>
                 <CheckBoxCon>
                   <input type="checkbox" id="other" checked={appFeatures.includes('other')} onChange={this.handleCheckboxChange} />
-                  <In type="text" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
+                  <In type="text" htmlFor="other" value={otherFeatureDetails} placeholder='others (please specify)'  onChange={this.handleOtherDetailsChange}/>
                 </CheckBoxCon>
 
                 {error && <ErrorMessage>{error}</ErrorMessage>}
@@ -219,7 +220,9 @@ export default SecondForm;
 const media = {
   mobile: "@media(max-width: 576px)",
 };
-
+const S = Styled.span`
+margin-left:20px;
+`
 const StyledStepper = Styled(Stepper)`
   display: flex;
   justify-content: space-between;
@@ -276,37 +279,58 @@ const Mai = Styled.div`
 `;
 
 const Heading = Styled.h1`
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #263238;
-  ${media.mobile}{
-    font-size:15px;
-  }
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color: #263238;
+
+${
+  media.mobile
+}{
+  font-size:14px;
+  line-height: 1.5;
+  color:#263238;
+
+}
 `;
 
 const FormContainer = Styled.div`
-  display:flex;
-  flex-direction:column;
-  padding:20px;
-  height:380px;
-  width:100%;
-  border: 1px solid #C1CAE7;
-  background: #C1CAE7;
-  gap:20px;
-  border-radius:10px;
-  ${media.mobile}{
-    width: 50%;
-    border-radius:12px;
-    gap:0px;
-    margin: 0px -10px 0px 10px;
-    line-height: 1;
-    padding:5px;
-    height:380px;
-  }
+display:flex;
+flex-direction:column;
+padding:20px;
+border: 1px solid #C1CAE7;
+background: #C1CAE7;
+height:380px;
+gap:20px;
+border-radius:10px;
+${media.mobile}{
+  border-radius:12px;
+  gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
+}
+`;
+const CheckBoxCon = Styled.div`
+margin-top:15px;
+align-items:start;
+justify-content:space-between;
+`;
+const Label = Styled.label`
+font-size:16px;
+font-family: Roboto;
+font-weight: 500;
+color:#263238;
+letter-spacing: 0em;
+text-align: left;
+margin-left:10px;
+${media.mobile}{
+  font-size:11px;
+  margin-left:4px;
+}
 `;
 
 const In = Styled.input`
@@ -316,29 +340,6 @@ const In = Styled.input`
   ${media.mobile}{
     margin-left:0px;
     width:110px;
-  }
-`;
-
-const CheckBoxCon = Styled.div`
-  gap:30px;
-  align-items:start;
-  justify-content:space-between;
-  margin-top:20px;
-  ${media.mobile}{
-    margin-top:10px;
-  }
-`;
-
-const Label = Styled.label`
-  font-size:16px;
-  font-family: Roboto;
-  font-weight: 500;
-  color:#263238;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-left:10px;
-  ${media.mobile}{
-    font-size:11px;
   }
 `;
 
@@ -352,5 +353,6 @@ const Form1 = Styled.div`
   margin-top:60px;
   ${media.mobile}{
     width:100%;
+    margin-top:80p;
   }
 `;

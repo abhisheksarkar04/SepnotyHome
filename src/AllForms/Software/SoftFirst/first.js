@@ -1,138 +1,113 @@
 import React, { Component } from 'react';
-import { Stepper } from 'react-form-stepper';
+import { Stepper ,Step} from 'react-form-stepper';
 import Styled from "styled-components"
-import handleFormValues from '../../allFormValues';
 class FirstSoftwarePage extends Component {
 
   state = {
-    softwareTypes: [],
-    numberOfPages: '',
-    formErrors: {
-      softwareTypes: '',
-      numberOfPages: ''
-    }
+    error:"",
   };
 
   handleCheckboxChange = (event) => {
     const { id, checked } = event.target;
-    // console.log(id);
-    this.setState(prevState => ({
-      softwareTypes: checked
-        ? [...prevState.softwareTypes, id]
-        : prevState.softwareTypes.filter(type => type !== id),
-      formErrors: {
-        ...prevState.formErrors,
-        softwareTypes: ''
-      }
-    }));
-  };
-
-  handleRadioChange = (event) => {
-    this.setState({
-      numberOfPages: event.target.value,
-      formErrors: {
-        ...this.state.formErrors,
-        numberOfPages: ''
-      }
+    const typeOfSoftware = this.props.formData.typeOfSoftware || [];
+    this.props.updateFormData({
+      typeOfSoftware: checked
+        ? [...typeOfSoftware, id]
+        : typeOfSoftware.filter(type => type !== id)
     });
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-
-    const { softwareTypes, numberOfPages } = this.state;
-
-    const formData = {
-       feild1 : {softwareTypes,numberOfPages}
-    }
-    this.props.onDataReceived(formData);
-  // Call the handleFormValues function from FormUtils.js
-    if (softwareTypes.length === 0) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          softwareTypes: 'Please select at least one type of software.'
-        }
-      });
-      return;
-    }
-    if (!numberOfPages) {
-      this.setState({
-        formErrors: {
-          ...this.state.formErrors,
-          numberOfPages: 'Please select the number of pages for your website/App.'
-        }
-      });
-      return;
-    }
-   
-    // if(softwareTypes.length === 0 && !numberOfPages){
-        
-    // }
-    // Store the form data or proceed with further actions
-    console.log("Form data:", this.state);
-    // Proceed to the next step or page
-    this.props.nextStep();
+  handleRadioChange = (event) => {
+    this.props.updateFormData({
+      numberofTools: event.target.value
+    });
   };
 
+  handleOtherDetailsChange = (e) => {
+    this.props.updateFormData({ otherSoftwareDetails: e.target.value });
+  }
 
+  
 
-  continue = e => {
+  continue = (e) => {
     e.preventDefault();
-    
-    // Check for errors
-    const { softwareTypes, numberOfPages } = this.state;
-    const formData = {
-      field1: {softwareTypes , numberOfPages},
-      // Add more fields as needed
-    };
-    this.props.onDataReceived(formData);
-    const formErrors = {};
-    // console.log(softwareTypes,numberOfPages);
-    // Check software types
-    if (softwareTypes.length === 0) {
-        formErrors.softwareTypes = 'Please select at least one type of software.';
+
+    const { typeOfSoftware, numberofTools } = this.props.formData;
+
+    if (typeOfSoftware.length === 0) {
+      this.setState({ error: "Please select at least one type of website." });
+      return;
     }
 
-    // Check number of pages
-    if (!numberOfPages) {
-        formErrors.numberOfPages = 'Please select the number of pages for your website/App.';
+    if (!numberofTools) {
+      this.setState({ error: "Please select the number of pages for your website/App." });
+      return;
     }
 
-    // If there are errors, update the state with the errors
-    if (Object.keys(formErrors).length > 0) {
-        this.setState({ formErrors });
-        return; // Prevent navigation to the next step/page
+    if (typeOfSoftware.includes('other') && !this.props.formData.otherSoftwareDetails) {
+      this.setState({ error: "Please specify the other type of website." });
+      return;
     }
-    
-    // If there are no errors, proceed to the next step
+
+    // If all validations pass, clear the error and proceed
+    this.setState({ error: "" });
     this.props.nextStep();
-}
+  }
 
   render() {
     const { softwareTypes, numberOfPages, formErrors } = this.state;
+    const {formData} = this.props
+    const {error}= this.state;
+
+    const {typeOfSoftware,numberofTools,otherSoftwareDetails} = formData
 
     return (
       <Main className='form'>
         <form onSubmit={this.handleSubmit}>
 
-          <Stepper
-            steps={[{ label: '' }, { label: '' }, { label: '' },{ label: '' },{label:""},{label:""},{label:""},{label:""}]}
-            activeStep={0}
-            styleConfig={{
-              activeBgColor: '#2B459B',
-              activeTextColor: '#fff',
-              inactiveBgColor: '#fff',
-              inactiveTextColor: '#2b7cff',
-              completedBgColor: '#407B24',
-              completedTextColor: '#fff',
-              size: '1em'
-            }}
-            className={'stepper'}
-            stepClassName={'stepper__step'}
-          />
+        <StyledStepper
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
+<Div>
+<StyledStepper
+          activeStep={0}
+          styleConfig={{
+            activeBgColor: "#2B459B",
+            activeTextColor: "#fff",
+            inactiveBgColor: "#fff",
+            inactiveTextColor: "#2b7cff",
+            completedBgColor: "#407B24",
+            completedTextColor: "#fff",
+          }}
+        >
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+          <StyledStep />
+        </StyledStepper>
 
+</Div>
       <Main1>
             <FormContainer>
                 <Form>
@@ -140,101 +115,99 @@ class FirstSoftwarePage extends Component {
                     *Choose the type of Software you need:
                     </Heading>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="System software" checked={softwareTypes.includes('System software')} onChange={this.handleCheckboxChange} />
-                    <Label htmlfor="System software">
+                    <Input type="checkbox" id="System software" checked={typeOfSoftware.includes('System software')} onChange={this.handleCheckboxChange} />
+                    <Label htmlFor="System software">
                     System software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                        <Label htmlfor="Utility software">
-                        <Input type="checkbox" id="Utility software" checked={softwareTypes.includes('Utility software')} onChange={this.handleCheckboxChange} />
+                        <Label htmlFor="Utility software">
+                        <Input type="checkbox" id="Utility software" checked={typeOfSoftware.includes('Utility software')} onChange={this.handleCheckboxChange} />
                         Utility software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Application software">
-                        <Input type="checkbox" id="Application software" checked={softwareTypes.includes('Application software')} onChange={this.handleCheckboxChange} />
+                        <Label htmlFor="Application software">
+                        <Input type="checkbox" id="Application software" checked={typeOfSoftware.includes('Application software')} onChange={this.handleCheckboxChange} />
                         Application software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Designing software">
-                        <Input type="checkbox" id="Designing software" checked={softwareTypes.includes('Designing software')} onChange={this.handleCheckboxChange} />
+                        <Label htmlFor="Designing software">
+                        <Input type="checkbox" id="Designing software" checked={typeOfSoftware.includes('Designing software')} onChange={this.handleCheckboxChange} />
                         Designing software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
                         
-                        <Label htmlfor="Programming software">
-                        <Input type="checkbox" id="Programming software" checked={softwareTypes.includes('Programming software')} onChange={this.handleCheckboxChange} />
+                        <Label htmlFor="Programming software">
+                        <Input type="checkbox" id="Programming software" checked={typeOfSoftware.includes('Programming software')} onChange={this.handleCheckboxChange} />
                         Programming software
                         </Label>
                     </CheckBoxCon>
                     <CheckBoxCon>
-                    <Input type="checkbox" id="6st" checked={softwareTypes.includes('6st')} onChange={this.handleCheckboxChange} />
-                        <Input1 type="text" id="6st" placeholder="others (please specify"/>
+                    <Input type="checkbox" id="other" checked={typeOfSoftware.includes('other')} onChange={this.handleCheckboxChange} />
+                        <Input1 type="text" id="6st" value= {otherSoftwareDetails} placeholder="others (please specify" onChange={this.handleOtherDetailsChange}/>
                     </CheckBoxCon>
 
                 </Form>
-                {formErrors.softwareTypes && <Span style={{ color: 'red' }}>{formErrors.softwareTypes}</Span>}
             </FormContainer>
             <FormContainer>
                 <Form>
                     <Heading>
-                    *How many pages will your website/App
-                      have?
+                    *How many Tools will your Software have?
                     </Heading>
                     <InputContainer>
-              <Label>
-                  <Input type='radio' name="industry" value="I am not sure" onChange={this.handleRadioChange}/>
-                  I am not sure
+                  <Label>
+                    <Input type='radio' name="numberOfPages" value="I am not sure" checked={numberofTools === "I am not sure"} onChange={this.handleRadioChange} />
+                    I am not sure
                   </Label>
-              </InputContainer>
+                </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  up to 50" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="up to 50" checked={numberofTools === "up to 50"} onChange={this.handleRadioChange}/>
                   up to 50
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value=" 50-100" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="50-100" checked={numberofTools === "50-100"} onChange={this.handleRadioChange}/>
                   50-100
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="100-500" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="100-500" checked={numberofTools === "100-500"} onChange={this.handleRadioChange}/>
                   100-500
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="500-1,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="500-1,000" checked={numberofTools === "500-1,000"} onChange={this.handleRadioChange}/>
                   500-1,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="  1,000-5,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="1,000-5,000" checked={numberofTools === "1,000-5,000"} onChange={this.handleRadioChange}/>
                   1,000-5,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="5,000-10,000" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="5,000-10,000" checked={numberofTools === "5,000-10,000"} onChange={this.handleRadioChange}/>
                   5,000-10,000
                   </Label>
               </InputContainer>
               <InputContainer>
               <Label>
-                  <Input type='radio' name="industry" value="Healthcare" onChange={this.handleRadioChange}/>
+                  <Input type='radio' name="numberOfPages" value="more than 10,000" checked={numberofTools === "more than 10,000"} onChange={this.handleRadioChange}/>
                   more than 10,000
                   </Label>
               </InputContainer>
-              {formErrors.numberOfPages && <Span style={{ color: 'red' }}>{formErrors.numberOfPages}</Span>}
+              {error && <Error style={{ color: 'red' }}>{error}</Error>}
                               </Form>
                           </FormContainer>
                       </Main1>
@@ -248,12 +221,43 @@ class FirstSoftwarePage extends Component {
 }
 
 export default FirstSoftwarePage;
+
+const Error = Styled.p`
+font-size:12px;
+`
+
+const Div = Styled.div`
+display:none;
+`
 const media = {
   mobile: '@media(max-width: 576px)'
 };
 const Span = Styled.p`
 font-size:12px;
 `
+const StyledStepper = Styled(Stepper)`
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  font-size: 9px;
+  border: none;
+ 
+`;
+
+const StyledStep = Styled(Step)`
+text-align: center;
+border: 1px solid #2b7cff !important;
+cursor: default !important;
+span {
+  font-size: 8px; /* Decrease the font size */
+}
+& > div {
+  color: #0f6bff !important;
+  }
+${media.mobile}{
+  text-align:center;
+}
+`;
 
 const Button = Styled.div`
 display:flex;
@@ -271,6 +275,8 @@ const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
+  margin: 0;
+  padding: 0px;
 }
 `
 const Main1 = Styled.div`
@@ -281,9 +287,8 @@ align-item:center;
 gap:20px;
 ${media.mobile}{
   width:100%;
-  justify-content:start;
-  align-item:start;
-  gap:2px;
+  justify-content:center;
+  align-item:center;
   margin-left:-30px;
 }
 `
@@ -299,6 +304,7 @@ ${
   media.mobile
 }{
   font-size:13px;
+  line-height:18px;
 }
 `
 
@@ -306,22 +312,25 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:600px;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width:380px;
-  border-radius:5px;
+  border-radius:12px;
   gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
 }
 `
 const CheckBoxCon = Styled.div`
 margin-top:15px;
 align-items:start;
 justify-content:space-between;
+${media.mobile}{
+  margin-top:10px;
+}
 `
 const Label = Styled.label`
 font-size:16px;
@@ -331,12 +340,12 @@ color:#263238;
 letter-spacing: 0em;
 text-align: left;
 ${media.mobile}{
-  font-size:13px;
+  font-size:11px;
 }
 `
-const Form = Styled.form`
+const Form = Styled.div`
 ${media.mobile}{
-  width:220px;
+  width:100%;
   border-radius:5px;
   gap:0px;
 }
@@ -348,8 +357,7 @@ font-size:15px;
 color: #263238;
 font-weight:500;
 height:20px;
-margin-left:10px;
-${media.mobile}{font-size:13px;}
+${media.mobile}{font-size:11px; width:110px;}
 `
 // const Buttonel = Styled.button`
 //   font-size: 20px;

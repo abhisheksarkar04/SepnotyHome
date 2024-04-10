@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import {
-  
   Table,
   Container,
   SNo,
@@ -9,7 +8,6 @@ import {
   Company,
   Email,
   Phone,
-  
   RowSno,
   RowName,
   RowCompany,
@@ -19,45 +17,44 @@ import {
   TableContainer,
   Button,
   ButtonCon,
-  RowFileUpload
+  RowFileUpload,
 } from "./styled";
 
 const itemsPerPage = 10;
 
 const data = [
   {
-    sNo: 1,
     name: "Shalini",
-    companyName: "Avatar space Technology Private Limited Shalini11",
+    companyName: "Avatar space Technology Private Limited",
     email: "Shalini11@gmail.com",
     phoneNumber: "9526810107",
     message: "",
-    file: ""
+    file: "",
   },
   {
-    sNo: "",
     name: "",
     companyName: "",
     email: "",
     phoneNumber: "",
     message: "",
-    file: ""
+    file: "",
   },
   {
-    sNo: "",
     name: "",
     companyName: "",
     email: "",
     phoneNumber: "",
     message: "",
-    file: ""
+    file: "",
   },
 
   // Add more data rows as needed
 ];
 const ContactUsData = () => {
   const [pageNumber, setPageNumber] = useState(1); // State for current page number
-
+  const generateSerialNumber = (index) => {
+    return (pageNumber - 1) * itemsPerPage + index + 1;
+  };
   // Slice the data array to display items for the current page
   const displayedData = data.slice(
     (pageNumber - 1) * itemsPerPage,
@@ -81,18 +78,15 @@ const ContactUsData = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((row, index) => (
+            {displayedData.map((row, index) => (
               <tr key={index}>
-                <RowSno>{row.sNo}</RowSno>
+                <RowSno>{generateSerialNumber(index)}</RowSno>
                 <RowName>{row.name}</RowName>
                 <RowCompany>{row.companyName}</RowCompany>
                 <RowEmail>{row.email}</RowEmail>
                 <RowPhone>{row.phoneNumber}</RowPhone>
                 <RowMessage>{row.message}</RowMessage>
-                <RowFileUpload>
-                  {row.file}
-                </RowFileUpload>
-               
+                <RowFileUpload>{row.file}</RowFileUpload>
               </tr>
             ))}
           </tbody>

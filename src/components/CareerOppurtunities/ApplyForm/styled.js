@@ -5,64 +5,57 @@ export const GlobalStyle = createGlobalStyle`
  *{ box-sizing: border-box;
   margin: 0px;
   font-family: "Inter";
-  background-color: rgba(12, 17, 31, 1);
+  
  }
 `;
 
 export const Container = styled.div`
- 
-  margin-left:10px;
-  width: 98%;
-  height:550px;
+  width: 100%;
   background-color: rgba(12, 17, 31, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:45px;
-  padding-top:40px;
-
+  padding-top: 40px;
   @media screen and (max-width: 576px) {
-    
-    width:98%;
-    margin-top:1px;
-    margin-bottom:20px;
-    padding-bottom:170px;
-    }
+    width: 100%;
+    margin-top: 10px;
+    height: 100vh;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 3%;
+  }
 `;
 
 export const Container1 = styled.div`
-
-  margin-bottom:40px;
-  width: 85%;
-  height:490px;
+  margin-bottom: 40px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 33px;
   border: 1px solid white;
-  background-color:rgba(12, 17, 31, 1);
+
   padding: 30px;
   font-family: Sans-serif;
   font-size: 13px;
   padding-bottom: 50px;
-
   @media screen and (max-width: 576px) {
-    width:95%;
-    margin:5px;
-    
-    }
-
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
 `;
 export const List1 = styled.div`
   margin-top: 90px;
-  
+
   @media screen and (max-width: 576px) {
-    
-    width:90%;
-    padding-top:50px;
+    width: 90%;
+
     font-size: 13px;
-    }
+    margin-top: 40px;
+  }
 `;
 
 export const Title = styled.input`
@@ -79,14 +72,11 @@ export const Title = styled.input`
   border: none;
 
   @media screen and (max-width: 576px) {
-    width:320px;
-    margin:5px;
-    margin-inline:-15px;
-    height:48px;
-    }
- 
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+  }
 `;
-
 
 export const ChooseFile = styled.div`
   height: 80px;
@@ -99,23 +89,22 @@ export const ChooseFile = styled.div`
   align-items: center;
 
   @media screen and (max-width: 576px) {
-    width:320px;
-    margin:5px;
-    margin-inline:-15px;
-    height:50px;
-    }
+    width: 100%;
+    padding-left: 10px;
+    height: 50px;
+  }
 `;
 export const Header = styled.h1`
-font-size: 15px;
-font-weight: bold;
-color: #ffffff;
-padding-bottom:20px;
-margin-right:950px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-bottom: 20px;
+  margin-right: 950px;
 
-@media screen and (max-width: 576px) {
-  font-size:14px;
-  width:100%;
-  margin:0px;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+
+    margin: 0px;
   }
 `;
 export const Span = styled.span`
@@ -133,13 +122,9 @@ export const Button = styled.button`
   border: 1px solid #000000;
 
   @media screen and (max-width: 576px) {
-    
-    height:40px;
-    width:115px;
-    text-align:justify;
-    font-size:12px;
-    margin-inline:-20px;
-    }
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+  }
 `;
 
 export const NoFile = styled.p`
@@ -150,10 +135,9 @@ export const NoFile = styled.p`
   background-color: transparent;
 
   @media screen and (max-width: 576px) {
-   
-    margin-left:20px;
-    font-size:12px;
-    }
+    margin-left: 20px;
+    font-size: 12px;
+  }
 `;
 
 export const LastButton = styled.button`
@@ -162,14 +146,17 @@ export const LastButton = styled.button`
   color: #ffffff;
   font-weight: bold;
   padding: 10px 0px;
-  background-color: #2b459b;
+  background-color: #0034db;
   font-size: 16px;
 
-
   @media screen and (max-width: 576px) {
-    width:320px;
-    margin:5px;
-    margin-inline:-15px;
-    
-    }
+    width: 95%;
+    font-size: 14px;
+  }
+`;
+
+export const Mob = styled.div`
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
 `;

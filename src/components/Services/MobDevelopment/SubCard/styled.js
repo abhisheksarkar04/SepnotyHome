@@ -31,6 +31,7 @@ export const SubHeadSpan = styled.span`
   @media screen and (max-width:576px){
     width:45px;
     margin-left:0%;
+    height:6%;
   }
 `;
 export const SubPageImg=styled.img`
@@ -38,7 +39,12 @@ width:300px;
 height:300px;
 margin-bottom:10px;
 margin-left:30px;
-
+@media screen and (max-width:576px){
+  width:220px;
+height:220px;
+margin-left:6%;
+margin-bottom:0px;
+}
 `;
 export const SubPara=styled.p`
 font-size:20px;

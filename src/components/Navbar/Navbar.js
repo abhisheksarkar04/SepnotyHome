@@ -183,6 +183,16 @@ const Navbar = () => {
 
   const toggleMobileContact = () => {
     setMobileContactsOpen(!isMobileContactsOpen);
+    setMobileAboutUsOpen(false);
+    setMobileServicesOpen(false);
+    setMobileBlogsOpen(false);
+    setMobileCareerOpen(false);
+    setMobileResourceOpen(false);
+    setMobileAboutItemOpen(false);
+    setApproachOpen(false);
+    setRecognitionOpen(false);
+
+    setOtherItemsOpen(true);
   };
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -192,6 +202,7 @@ const Navbar = () => {
     setMobileBlogsOpen(false);
     setMobileResourceOpen(false);
     setOtherItemsOpen(true);
+    setMobileContactsOpen(false);
   };
 
   const toggleMobileAboutUs = () => {
@@ -203,6 +214,7 @@ const Navbar = () => {
     setMobileAboutItemOpen(!isMobileAboutUsOpen);
     setApproachOpen(false);
     setRecognitionOpen(false);
+    setMobileContactsOpen(false);
     setJoinOpen(false);
     if (!isMobileAboutUsOpen) {
       setOtherItemsOpen(false);
@@ -219,6 +231,7 @@ const Navbar = () => {
     setMobileBlogsOpen(false);
     setMobileCareerOpen(false);
     setMobileResourceOpen(false);
+    setMobileContactsOpen(false);
   };
 
   const toggleMobileBlogs = () => {
@@ -227,6 +240,7 @@ const Navbar = () => {
     setMobileAboutUsOpen(false);
     setMobileCareerOpen(false);
     setMobileResourceOpen(false);
+    setMobileContactsOpen(false);
   };
 
   const toggleMobileCareer = () => {
@@ -235,6 +249,7 @@ const Navbar = () => {
     setMobileServicesOpen(false);
     setMobileAboutUsOpen(false);
     setMobileResourceOpen(false);
+    setMobileContactsOpen(false);
   };
 
   const toggleMobileResouceCenter = () => {
@@ -243,6 +258,7 @@ const Navbar = () => {
     setMobileBlogsOpen(false);
     setMobileServicesOpen(false);
     setMobileAboutUsOpen(false);
+    setMobileContactsOpen(false);
   };
 
   const toggleApproach = () => {
@@ -250,6 +266,7 @@ const Navbar = () => {
     setMobileAboutItemOpen(false);
     setRecognitionOpen(false);
     setJoinOpen(false);
+    setMobileContactsOpen(false);
   };
 
   const toggleRecognition = () => {
@@ -257,6 +274,7 @@ const Navbar = () => {
     setApproachOpen(false);
     setMobileAboutItemOpen(false);
     setJoinOpen(false);
+    setMobileContactsOpen(false);
   };
   const toggleJoin = () => {
     setJoinOpen(!isJoinOpen);
@@ -267,6 +285,7 @@ const Navbar = () => {
   const toggleDeveloper = () => {
     setDeveloperOpen(!isDeveloperOpen);
     setDesignerOpen(false);
+    setMobileContactsOpen(false);
   };
   const toggleDesigner = () => {
     setDesignerOpen(!isDesignerOpen);
@@ -360,7 +379,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={serviceRef}>
-            <ListComponent class="list-item" onClick={toggleService}>
+            <ListComponent className="list-item" onClick={toggleService}>
               {isServiceOpen ? (
                 <>
                   Services
@@ -377,7 +396,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={blogRef}>
-            <ListComponent class="list-item" onClick={toggleBlog}>
+            <ListComponent className="list-item" onClick={toggleBlog}>
               {isBlogOpen ? (
                 <>
                   Blog
@@ -395,7 +414,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={careerRef}>
-            <ListComponent class="list-item" onClick={toggleCareer}>
+            <ListComponent className="list-item" onClick={toggleCareer}>
               {isCareerOpen ? (
                 <>
                   Career Opportunities
@@ -412,7 +431,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={resourceRef}>
-            <ListComponent class="list-item" onClick={toggleResource}>
+            <ListComponent className="list-item" onClick={toggleResource}>
               {isResourceOpen ? (
                 <>
                   Resource Center
@@ -431,7 +450,7 @@ const Navbar = () => {
             )}
           </DropdownContainer>
           <DropdownContainer ref={buttonRef}>
-            <ListComponent class="list-item" onClick={toggleContact}>
+            <ListComponent className="list-item" onClick={toggleContact}>
               <button className="contact-button">Contact Us</button>
             </ListComponent>
             {isButtonOpen && (

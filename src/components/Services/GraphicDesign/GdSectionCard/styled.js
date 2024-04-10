@@ -14,7 +14,7 @@ font-size:26px;
 margin:0px 0px 20px 47px;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:5%;
+  margin-left:8%;
 }
 `;
 export const HeadingSpan=styled.span`
@@ -27,6 +27,7 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
   margin-left:0px;
 }
 `;
@@ -39,7 +40,7 @@ margin-top:15px;
 margin-bottom:15px;
 @media screen and (max-width:576px){
   font-size:14px;
-  margin-left:5%;
+  margin-left:8%;
 }
 `;
 export const ImgCon = styled.div`
@@ -50,8 +51,8 @@ export const ImgCon = styled.div`
   justify-content: flex-end; /* Add this line */
   margin-left:47px;
   @media screen and (max-width:576px){
-  
-    margin-left:5%;
+   width:50vw;
+    margin-left:8%;
   }
 `;
 export const InsertImg=styled.img`
@@ -69,4 +70,8 @@ export const WebTechButton = styled.button`
   margin-top: -20px; 
   height:6vh;
   font-weight:600;
+  @media screen and (max-width:576px){
+    height:4vh;
+    padding:5px;
+  }
 `;

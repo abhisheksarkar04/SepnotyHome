@@ -14,7 +14,7 @@ export const SectionOneHeading = styled.h1`
   margin-bottom: 30px;
   @media screen and (max-width:576px){
     font-size: 20px;
-    width:80%;
+    width:95%;
   }
 `;
 export const SectionOneTitle = styled.p`
@@ -25,7 +25,7 @@ export const SectionOneTitle = styled.p`
   margin-bottom: 10px;
   @media screen and (max-width:576px){
     font-size: 16px;
-    width: 60%;
+    width: 80%;
   }
 `;
 export const SectionOneDescription = styled.p`
@@ -47,6 +47,9 @@ export const BackgroundShapeOne = styled.span`
   top: 7;
   left: 0;
   z-index: 0;
+  @media screen and (max-width:576px){
+    display:none;
+  }
 `;
 export const BackgroundShapeTwo = styled.span`
   position: absolute;
@@ -60,4 +63,9 @@ export const BackgroundShapeTwo = styled.span`
   right: 0;
   gap: 0;
   z-index: 0;
+  @media screen and (max-width:576px){
+    height:320px;
+    margin-top: -50px;
+    display:none;
+  }
 `;

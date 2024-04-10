@@ -22,7 +22,7 @@ height:350px;
 margin-top:30px;
 width:450px;
 @media screen and (max-width:576px){
-    width:300px;
+    width:280px;
     height:200px;
     margin-left:-10px;
   }
@@ -38,7 +38,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
 @media screen and (max-width:576px){
     height: 250px;
-    width: 400px;
+    width: 4000px;
   }
 `;
 export const Stars = Styled.a`

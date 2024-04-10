@@ -137,19 +137,18 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-width: 100%;
+width:40%;
 margin: 0px;
 display: flex;
 flex-direction: column;
 @media screen and (max-width: 576px) {
-  width: 100%;
+  width:100%;
 }
 `;
 export const ServiceItemImg = styled.img`
-  width: 550px;
   margin: 0px;
   @media screen and (max-width: 576px) {
-    width:100%;
+    width:100%
   }
   
 `;

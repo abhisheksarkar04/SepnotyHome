@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 export default function CommentsSection() {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeindex, setActiveindex] = useState(1);
   const [slidesPerView, setSlidesPerView] = useState(3);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function CommentsSection() {
   }, []);
 
   const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex);
+    setActiveindex(swiper.activeIndex);
   };
 
   const comments = [
@@ -84,9 +84,9 @@ export default function CommentsSection() {
         {comments.map((comment, index) => (
           <SwiperSlide key={index}>
             <MainContainer>
-              <CardContainer active={activeIndex === index} activeIndex={index}>
+              <CardContainer active={activeindex === index} activeindex={index}>
                 <Stars>{comment.stars}</Stars>
-                <Para1 active={activeIndex === index}>{comment.para1}</Para1>
+                <Para1 active={activeindex === index}>{comment.para1}</Para1>
                 <Para2>{comment.para2}</Para2>
                 <ProfileCon>
                   <Image src={comment.image} />
@@ -245,4 +245,6 @@ font-size:12px;
 @media screen and (max-width:576px){
     font-size:10px;
 
+
   }`;
+

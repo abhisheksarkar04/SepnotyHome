@@ -21,4 +21,8 @@ font-size:19px;
 color:white;
 margin-left:15px;
 line-height:22px;
+@media screen and (max-width:576px){
+   font-size:14px;
+   margin-left:3%;
+ }
 `;

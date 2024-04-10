@@ -18,7 +18,8 @@ z-index:1;
 padding-top:10px;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:5%;
+  margin-left:8%;
+  margin-top:30px;
 }
 `;
 export const SubHeadSpan = styled.span`
@@ -31,6 +32,7 @@ export const SubHeadSpan = styled.span`
   z-index:0;
   @media screen and (max-width:576px){
     width:45px;
+    height:6%;
     margin-left:0px;
   }
 `;
@@ -40,8 +42,10 @@ height:300px;
 margin-bottom:10px;
 margin-left:47px;
 @media screen and (max-width:576px){
-  
-  margin-left:5%;
+  width:200px;
+height:200px;
+  margin-left:8%;
+  margin-bottom:0px;
 }
 `;
 export const SubPara=styled.p`
@@ -51,7 +55,7 @@ color:white;
 width:80%;
 @media screen and (max-width:576px){
   font-size:14px;
-  margin-left:5%;
+  margin-left:8%;
 }
 `;
 export const BackButton=styled.button`

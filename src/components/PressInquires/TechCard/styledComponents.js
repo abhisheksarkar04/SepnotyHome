@@ -21,6 +21,14 @@ export const TechCardContainer = styled.div`
     right: 10px;
     font-size: 17px;
     color: white;
+   
+  }
+  @media screen and (max-width:576px){
+    width:27vw;
+    margin-right:10px;
+    &::before{
+      right: 5px;
+    }
   }
 `;
 
@@ -34,4 +42,7 @@ export const TechAbout = styled.p`
   font-size: 14px;
   margin-top: 18px;
   align-self:center;
+  @media screen and (max-width:576px){
+    font-size:10px;
+  }
 `;

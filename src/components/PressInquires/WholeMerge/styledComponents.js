@@ -13,13 +13,20 @@ color:white;
 font-size:17px;
 margin:40px 30px 10px 0px;
 margin-left:6%;
-
+@media screen and (max-width:576px){
+  margin-left:3%;
+  font-size:14px;
+}
 `;
 export const InqueryName=styled.h1`
 color:white;
 font-size:30px;
 margin-left:6%;
 margin-bottom:10px;
+@media screen and (max-width:576px){
+  margin-left:3%;
+  font-size:20px;
+}
 `;
 export const HelpJournalTitle=styled.h2`
 font-size:25px;
@@ -28,9 +35,9 @@ margin:45px 0px 30px 0px;
 margin-top:5%;
 padding-left:8%;
 @media screen and (max-width:576px){
-  font-size:20px;
+  font-size:16px;
   margin-top:35px;
-  margin-left:25px;
+  margin-left:0%;
 }
 `;
 export const HelpJournalDescription=styled.p`
@@ -41,9 +48,10 @@ margin:25px 0px 20px 0px;
 width:80%;
 padding-left:8%;
 @media screen and (max-width:576px){
-  font-size:22px;
+  font-size:14px;
 line-height:1.5;
 width:100%;
+margin-left:0%;
 }
 `;
 export const RequestCall=styled.div`
@@ -54,6 +62,8 @@ padding-left:6%;
 justify-content:space-between;
 @media screen and (max-width:576px){
     flex-direction:column;
+    padding-left:3%;
+    margin-right:20px;
 }
 `;
 export const RequestCallLeft=styled.div`
@@ -71,6 +81,10 @@ export const RequestRight=styled.div`
 display:flex;
 flex-direction:column;
 justify-content:Flex-start;
+@media screen and (max-width:576px){
+  justify-content:center;
+  align-items:center;
+}
 
 `;
 export const CalenderImg=styled.img`
@@ -95,6 +109,10 @@ color:rgba(43, 69, 155, 1);
 font-size:18px;
 
 margin:0px 30px 20px 30px;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:3%;
+}
 `;
 export const ExpertText=styled.p`
 font-size:20px;
@@ -102,6 +120,10 @@ color:rgba(255, 255, 255, 1);
 margin:0px 30px 20px 0px;
 margin-left:6%;
 width:80%;
+@media screen and (max-width:576px){
+  font-size:14px;
+  margin-left:3%;
+}
 `;
 export const InquiryMedia=styled.div`
 margin:40px 50px 20px 0px;
@@ -115,7 +137,7 @@ padding-bottom:5px;
   width:95%;
   margin:5px;
   margin-right:10px;
-  margin-left:10px;
+  margin-left:3%;
   padding:5px;
   margin-bottom:20px;
 }
@@ -166,6 +188,10 @@ export const ExpertResearch=styled.p`
  color:rgba(255, 255, 255, 1);
  margin-left:6%;
  font-size:20px;
+ @media screen and (max-width:576px){
+  font-size:14px;
+  margin-left:3%;
+}
 `;
 export const ExpertsInfo=styled.div`
 display:flex;
@@ -190,9 +216,9 @@ cursor:pointer;
 font-weight:400;
 width:11%;
 @media screen and (max-width:576px){
-  width:30%;
+  width:35%;
   margin-left:35%;
-  
+  font-size:14px;
 }
 `;
 export const TrustWorthy=styled.h2`
@@ -200,6 +226,10 @@ font-size:24px;
 font-weight:600;
 margin:30px 40px 20px 40px;
 color:rgba(43, 69, 155, 1);
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:3%;
+}
 `;
 export const TrustTitle=styled.p`
 font-size:20px;
@@ -208,9 +238,10 @@ width:80%;
 margin:30px 0px 30px 0px;
 margin-left:6%;
 @media screen and (max-width:576px){
-  width:100%;
-  magin-left:3%;
+  
+  margin-left:3%;
   margin-right:2px;
+  font-size:14px;
 }
 `;
 export const TrustDescription = styled.ul`
@@ -223,8 +254,9 @@ export const TrustDescription = styled.ul`
   list-style-type: disc; 
   @media screen and (max-width:576px){
     width:95%;
-    margin-left:0%;
+    margin-left:3%;
     margin-right:0px;
+    font-size:14px;
   }
 `;
 
@@ -240,9 +272,9 @@ export const TrustDescriptionItems = styled.li`
   }
   @media screen and (max-width:576px){
     
-    margin-left:0%;
+    margin-left:-20px;
     margin-right:0px;
-    font-size:20px;
+    font-size:14px;
   }
 `;
 
@@ -259,7 +291,7 @@ export const ImgContainer = styled.div`
   padding:5px;
   margin-top:5%;
   @media screen and (max-width:576px){
-    width:95%;
+    width:90vw;
     margin-left:3%;
   }
 `;
@@ -271,7 +303,7 @@ export const Image = styled.img`
   border-right: 1px solid #abaaaa;
   @media screen and (max-width:576px){
     height:30px;
-    width:80px;
+    width:12vw;
     padding:0px;
   }
 `;
@@ -291,6 +323,10 @@ font-weight:700;
 font-size:22px;
 margin:30px 40px 15px 0px;
 margin-left:6%;
+@media screen and (max-width:576px){
+  font-size:16px;
+  margin-left:3%;
+}
 `;
 export const TechTopicsCon=styled.div`
 display:flex;
@@ -299,7 +335,9 @@ margin:10px 30px 40px 0px;
 margin-left:6%;
 width:57%;
 @media screen and (max-width:576px){
-  width:95%;
+  width:97%;
+  margin-left:3%;
+  margin-right:0px;
 }
 `;
 export const TrustWorthyText=styled.p`
@@ -310,8 +348,9 @@ margin-left:6%;
 line-height:1.5;
 width:80%;
 @media screen and (max-width:576px){
-  width:94%;
-  margin-right:3%;
+  
+  margin-left:3%;
+  font-size:14px;
 }
 `;
 
@@ -337,6 +376,9 @@ border-radius:1px;
 margin-left:6%;
 @media screen and (max-width:576px){
   margin-top:20px;
+  width:45px;
+  height:45px;
+  margin-left:3%;
 }
 `;
 export const ContactCon = styled.div`
@@ -345,4 +387,7 @@ export const ContactCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

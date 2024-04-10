@@ -64,7 +64,7 @@ export const ConRecDesc = styled.p`
   padding: 0px 30px 30px 0px;
 
   @media screen and (max-width: 576px) {
-    padding: 10px 10px 20px 0;
+    padding: 0px 10px 20px 0;
     font-size: 14px;
     width: 90%;
   }
@@ -137,13 +137,15 @@ export const ServiceItemDesc = styled.p`
 `;
 
 export const ImageCon = styled.div`
-width: 100%;
+width: 40%;
 margin: 0px;
 display: flex;
-flex-direction: column;
+flex-direction: row;
+gap:20px;
 @media screen and (max-width: 576px) {
   width: 100%;
   gap:20px;
+  flex-direction: column;
 }
 `;
 export const ServiceItemImg = styled.img`

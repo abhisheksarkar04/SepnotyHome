@@ -6,12 +6,21 @@ export const DigitalContainer = styled.div`
   background-color: #0c111f;
   padding-top: 70px;
   padding-bottom: 20px;
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: 10px;
+  }
 `;
 export const Header = styled.h1`
   font-size: 17px;
   font-weight: bold;
   color: #ffffff;
   padding: 30px 20px 30px 5%;
+
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 10px 3%;
+    font-size: 14px;
+  }
 `;
 export const Span = styled.span`
   font-weight: 300;
@@ -23,11 +32,21 @@ export const Service = styled.h1`
   color: #ffffff;
   font-weight: 600;
   padding: 10px 30px 20px 5%;
+
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 10px 3%;
+    font-size: 16px;
+  }
 `;
 
 export const ContentRecomContainer = styled.div`
   background-image: linear-gradient(#1e3c72, #2a5298);
   padding: 10px 0px 4% 5%;
+
+  @media screen and (max-width: 576px) {
+    padding: 5px 10px 0px 3%;
+    height: 200px;
+  }
 `;
 
 export const ConRecHead = styled.h1`
@@ -36,26 +55,42 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   padding-top: 20px;
+
+  @media screen and (max-width: 576px) {
+    padding: 0px 10px 0px 0;
+    font-size: 16px;
+  }
 `;
 
 export const ConRecDesc = styled.p`
   font-size: 25px;
   color: #ffffff;
-  width:80%;
+  width: 80%;
   padding: 20px 30px 30px 0px;
-  margin-left:0px;
-  margin-bottom:40px;
+  margin-left: 0px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 576px) {
+    padding: 10px 10px 20px 0;
+    font-size: 14px;
+    width: 95%;
+  }
 `;
 
 export const Button = styled.button`
-  background-image: linear-gradient(to right, #ffffff, #fff741);
+  background-color: #89a4ff;
   padding: 5px 25px 5px 25px;
-  border-radius: 20px;
-  color: #234581;
+  border-radius: 10px;
   border: 0px;
   outline: none;
-  font-size: 13px;
+  font-size: 16px;
   margin-top: 20px;
+  @media screen and (max-width: 576px) {
+    margin-top: 0px;
+    font-size: 14px;
+    padding: 5px 10px 5 px 10px;
+  }
+  margin-left: 120px;
 `;
 
 export const Rectangle1 = styled.img`
@@ -83,7 +118,7 @@ export const Rectangle3 = styled.img`
   width: 17%;
   top: 38%;
   z-index: 0;
-  background:transparent;
+  background: transparent;
   margun-bottom: 20px;
 `;
 
@@ -92,6 +127,11 @@ export const ListHeading = styled.h1`
   color: #2b459b;
   font-weight: bold;
   margin-left: -30px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    margin-left: -20px;
+  }
 `;
 
 export const ServiceItemCon = styled.div`
@@ -101,7 +141,7 @@ export const ServiceItemDesc = styled.p`
   margin-bottom: 23px;
   font-size: 20px;
   color: #ffffff;
-  margin-left:-30px;
+  margin-left: -30px;
 `;
 
 export const ImageCon = styled.div`
@@ -142,9 +182,14 @@ export const ConatctCon = styled.div`
 
 export const SmallPattern = styled.div`
   background-color: rgba(129, 150, 219, 0.25);
-  height: 50px;
+  height: 55px;
   width: 60px;
   border-radius: 3px;
+
+  @media screen and (max-width: 576px) {
+    height: 45px;
+    width: 50px;
+  }
 `;
 
 export const PatternCon = styled.div`
@@ -153,5 +198,23 @@ export const PatternCon = styled.div`
   align-items: center;
   margin-bottom: 20px;
   margin-left: 100px;
-  margin-top:5em;
+  margin-top: 5em;
+
+  @media screen and (max-width: 576px) {
+    font-size: 10px;
+    margin-left: 3%;
+  }
+`;
+
+export const QueryContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+  margin: 0px;
+  padding: 50px 0px;
+  background-color: rgba(12, 17, 31, 1);
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
 `;

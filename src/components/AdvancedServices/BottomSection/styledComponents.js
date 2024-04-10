@@ -7,9 +7,10 @@ export const ServiceCards = styled.div`
   padding: 0px 60px 0px 60px;
   justify-content: space-around;
   @media screen and (max-width: 576px) {
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    margin-left: 0px;
+    justify-content: center;
   }
 `;
 
@@ -32,12 +33,20 @@ export const ServiceCardContainer = styled.div`
     background-color: #254989; /* Change color on hover */
   }
   @media screen and (max-width: 576px) {
-    flex: 44%;
-    width: 40%;
-    margin: 10px;
-    height: 60vh;
+    width: 44%;
+    height: auto;
+
+    margin: 10px 10px 5px 10px;
+
     background-color: #d6dae7;
     border-radius: 5px;
+    padding: 10px 0px;
+
+    &: hover {
+      p {
+        color: #cbcbcb;
+      }
+    }
   }
 `;
 
@@ -60,7 +69,8 @@ export const ServiceTitle = styled.h2`
     color: #fff;
   }
   @media screen and (max-width: 576px) {
-    font-size: 15px;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
 `;
 export const ServiceDescription = styled.p`
@@ -69,15 +79,21 @@ export const ServiceDescription = styled.p`
   font-weight: bold;
   line-height: 20px;
   @media screen and (max-width: 576px) {
-    font-size: 10%;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    color: #263238;
+    font-weight: 550;
+    margin: 0px 5px;
+    padding: 0px 2px;
+
+    word-spacing: 3px;
   }
 `;
 export const ServiceButton = styled.button`
   padding: 7px 10px 7px 10px;
   color: white;
-  width: 160px;
-  height: 40px;
+
   font-size: 15px;
   align-self: center;
   margin-top: 40px;
@@ -95,10 +111,10 @@ export const ServiceButton = styled.button`
   }
   @media screen and (max-width: 576px) {
     border-radius: 10px;
-    height: 15%;
-    width: 100%;
+    padding: 7px 10px 7px 10px;
     font-size: 12px;
     margin-top: auto;
+    background-color: #2b459b;
   }
 `;
 
@@ -119,10 +135,12 @@ export const PopUpCardContainer = styled.div`
   border: 1px solid white;
   color: white;
   @media screen and (max-width: 576px) {
-    height: 60%;
-    width: 40%;
-    top: 50%;
-    margin-left: -20%;
+    height: auto;
+    width: 85%;
+    top: 15%;
+    left: 8%;
+    transform: translate(0, 0);
+    padding: 10px;
   }
 `;
 export const PopupLftRgt = styled.div`
@@ -150,7 +168,7 @@ export const PopUpTitle = styled.h2`
   font-size: 18px;
   color: white;
   @media screen and (max-width: 576px) {
-    font-size: 80%;
+    font-size: 16px;
   }
 `;
 
@@ -161,7 +179,7 @@ export const PopUpDescription = styled.p`
   line-height: 20px;
   margin-top: 20px;
   @media screen and (max-width: 576px) {
-    font-size: 10px;
+    font-size: 14px;
   }
 `;
 
@@ -181,9 +199,10 @@ export const PopupText = styled.p`
   text-align: justify;
   padding: 20px 35px 20px 35px;
   @media screen and (max-width: 576px) {
-    font-size: 20%;
+    font-size: 14px;
     padding: 10px 5px 0px 5px;
-    line-height: 15px;
+    line-height: 1.5;
+    text-align: left;
   }
 `;
 

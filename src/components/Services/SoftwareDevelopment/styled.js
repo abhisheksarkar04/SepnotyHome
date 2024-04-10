@@ -35,15 +35,16 @@ export const SpanThree = styled.span`
 `;
 export const SectionThreeDescription = styled.p`
   font-size: 23px;
-  line-height: 34px;
+  line-height: 25px;
   width: 60%;
   margin: 40px;
-  word-spacing: 3px;
+
   margin-left: 6%;
   @media screen and (max-width:576px){
     width:90%;
     margin-left: 3%;
     font-size:14px;
+    text-align:justify;
   }
 `;
 export const SectionThree = styled.div`
@@ -73,14 +74,15 @@ export const SectionFourHeading = styled.h2`
 `;
 export const SectionFourDescription = styled.p`
   font-size: 24px;
-  line-height: 34px;
+  line-height: 25px;
   width: 80%;
   margin: 40px;
-  word-spacing: 3px;
+ 
   margin-left: 6%;
   @media screen and (max-width:576px){
     font-size:14px;
-    width: 90%;
+    width: 95%;
+    text-align:justify;
   }
 `;
 export const ChooseSection = styled.div`
@@ -88,9 +90,15 @@ export const ChooseSection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
+  
   align-items: center;
   margin: auto;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+    justify-content:center;
+    align-self:center;
+    margin-left:12%;
+  }
 `;
 
 export const SectionFiveHeading = styled.h2`
@@ -137,4 +145,7 @@ export const ContactCon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width:576px){
+    flex-direction:column;
+  }
 `;

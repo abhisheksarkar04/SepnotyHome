@@ -15,7 +15,7 @@ margin:0px 0px 20px 0px;
 padding-left:3%;
 @media screen and (max-width:576px){
   font-size:16px;
-  margin-left:2%;
+  margin-left:4%;
 }
 `;
 export const HeadingSpan=styled.span`
@@ -28,6 +28,7 @@ background-color:rgba(129, 150, 219, 0.25);
 z-index:0;
 @media screen and (max-width:576px){
   width:45px;
+  height:6%;
   margin-left:0px;
 }
 `;
@@ -40,7 +41,7 @@ margin-top:15px;
 margin-bottom:15px;
 @media screen and (max-width:576px){
   font-size:14px;
-  margin-left:2%;
+  margin-left:4%;
 }
 `;
 export const ImgCon = styled.div`

@@ -1,5 +1,4 @@
 import {
-
   Header,
   Service,
   Span,
@@ -21,10 +20,9 @@ import {
   ListDataContainer,
   ListInnerContainer,
   TableItemsList,
-
+  List,
   // ContactItem,
   // Container,
-
 } from "./styled";
 import img1 from "../Images/image1.svg";
 import img2 from "../Images/image2.svg";
@@ -92,11 +90,16 @@ const JobList = [
 
 const Designersforhire = () => {
   const options = [
-    { value: 'option1', label: 'Table of content' }, <br></br>,
-    { value: 'option2', label: 'UI/UX Desiginer' }, <br></br>,
-    { value: 'option3', label: 'Digital Marketing' }, <br></br>,
-    { value: 'option4', label: 'Graphic Designer' }, <br></br>,
-    { value: 'option5', label: 'video edting' }, <br></br>,
+    { value: "option1", label: "Table of content" },
+    <br></br>,
+    { value: "option2", label: "UI/UX Desiginer" },
+    <br></br>,
+    { value: "option3", label: "Digital Marketing" },
+    <br></br>,
+    { value: "option4", label: "Graphic Designer" },
+    <br></br>,
+    { value: "option5", label: "video edting" },
+    <br></br>,
   ];
   const [selectedOption, setSelectedOption] = useState(options[0].value);
 
@@ -167,7 +170,7 @@ const Designersforhire = () => {
                     </select>
                   </Dropdowncontent>
                 </DropDown>
-                <ul>
+                <List>
                   {JobList.map((listing) => (
                     <ListInnerContainer>
                       <ImageCon src={listing.image} alt="dm" />
@@ -182,14 +185,15 @@ const Designersforhire = () => {
                         </Iph>
                       </ListDataContainer>
                       <Link to="/CareerOppurtunities/ApplyForm">
-                        <ApplyButton >Apply</ApplyButton><br></br>
+                        <ApplyButton>Apply</ApplyButton>
+                        <br></br>
                         <br></br>
                       </Link>
                       <br></br>
                       <br></br>
                     </ListInnerContainer>
                   ))}
-                </ul>
+                </List>
                 {/* <p>button</p> */}
               </TableItemsList>
             </ServiceItemDetails>
@@ -199,7 +203,6 @@ const Designersforhire = () => {
       <FooterSection />
     </>
   );
-
 };
 
 export default Designersforhire;

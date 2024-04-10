@@ -14,9 +14,14 @@ export const ChooseCardCon = styled.div`
   margin-bottom: 35px;
   overflow: hidden; 
   @media screen and (max-width:576px){
-    width:80%;
+    width:100%;
+    margin:0px;
     justify-content:center;
-    height:300px;
+    height:auto;
+    padding:15px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-bottom:20px;
   }
 `;
 
@@ -26,9 +31,15 @@ font-weight:600;
 margin-bottom:15px;
 font-size:18px;
 text-align:justify;
+@media screen and (max-width:576px){
+  font-size:16px;
+}
 `;
 export const ChooseText=styled.p`
 font-size:15px;
 line-height:22px;
 text-align:justify;
+@media screen and (max-width:576px){
+  font-size:14px;
+}
 `;

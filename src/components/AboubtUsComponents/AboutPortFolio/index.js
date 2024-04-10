@@ -34,8 +34,8 @@ import Export1 from "../images/Rectangle 6654.svg";
 import rectangle1 from "../images/Rectangle 1.svg";
 import rectangle2 from "../images/Rectangle2.svg";
 import rectangle3 from "../images/Rectangle3.svg";
-// import ContactForm from "../../ContactUs/ContactForm";
 import FooterSection from "../../Footer/FooterSection";
+// import ContactForm from "../../ContactUs/ContactForm";
 
 const AboutPortfolio = () => {
   const websiteData = [
@@ -152,18 +152,12 @@ const ImageDescCon = Styled.div`
   flex-direction: row;
 `;
 const ExpertContainer = Styled.div`
-
   display:flex;
-
   flex-direction:column; 
   padding-left:6%;
-
   flex-direction:column;
   gap:50px;
- 
   margin-bottom:60px;
-
-
   @media screen and (max-width: 576px) {
     padding-left: 3%;
   }
@@ -211,16 +205,19 @@ const Y = Styled.div`
   flex-direction:row;
   align-items:center;
   @media screen and (max-width: 576px) {
-   display: none;
+
  `;
 
 const Image = Styled.img`
     margin-top:10px;
     height:250px;
-
     margin-right:7%;
     @media screen and (max-width: 576px) {
-      display: none;
+
+      height:110px;
+      margin-bottom:10px;
+      margin-right:10px;
+
  `;
 const Para1 = Styled.p`
  font-size:21px;
@@ -232,8 +229,8 @@ const Para1 = Styled.p`
   font-size:13px;
   width:100%;
   line-height:1.2;
-  margin-top:-10px;
-  font-size:14px;
+  margin-top:10px;
+  padding-right:10px;
 }
 
 
@@ -242,17 +239,15 @@ const Para2 = Styled.p`
 font-size:21px;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size:12px;
   font-size:14px;
 }
-
-
 `;
 const Image1 = Styled.img`
 height:23px;
 margin-left:10px;
 @media screen and (max-width : 576px){
-  height:23px;
+  height:21px;
+  margin-top:0px;
 }
 height:20px;
 margin-top:-20px;
@@ -270,4 +265,7 @@ align-items: center;
 export const MobileCon = Styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (min-width : 577px){
+    display:  none;
+  }
 `;
