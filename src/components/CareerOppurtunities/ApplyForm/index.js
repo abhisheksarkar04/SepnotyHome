@@ -1,3 +1,6 @@
+import React, { useState, useRef } from "react";
+import { ThemeProvider } from "styled-components";
+import styled from "styled-components"
 import {
   GlobalStyle,
   Container,
@@ -12,14 +15,18 @@ import {
   Mob,
 } from "./styled";
 import FooterSection from "../../Footer/FooterSection";
-import { ThemeProvider } from "styled-components";
-import React, { useState, useRef } from "react";
+
 const theme = {};
 
 const ApplyForm = () => {
+  const [applicantName, setApplicantName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedFile, setSelectedFile] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [selectedFileName, setSelectedFileName] = useState("");
 
 
-  const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
 
   const handleFileSelect = () => {
@@ -28,8 +35,82 @@ const ApplyForm = () => {
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    setSelectedFile(file);
-    console.log("Selected file:", file);
+    if (file && file.type === "application/pdf") {
+      setSelectedFile(file);
+      setSelectedFileName(file.name);
+      setErrorMessage(""); // Clear any previous error message
+      console.log("Selected file:", file);
+    } else {
+      setSelectedFile("");
+      setSelectedFileName("");
+      setErrorMessage("Please upload only a PDF file.");
+    }
+  };
+
+  const handleNameChange = (value) => {
+    setApplicantName(value);
+    if (value.trim() !== "") {
+      setErrorMessage(""); // Clear error message when field becomes valid
+    }
+  };
+
+  const handlePhoneChange = (value) => {
+    setPhoneNumber(value);
+    if (validatePhoneNumber(value)) {
+      setErrorMessage(""); // Clear error message when field becomes valid
+    }
+  };
+
+  const handleEmailChange = (value) => {
+    setEmail(value);
+    if (validateEmail(value)) {
+      setErrorMessage(""); // Clear error message when field becomes valid
+    }
+  };
+  
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const validateForm = () => {
+    if (!applicantName.trim()) {
+      setErrorMessage("Please enter your full name");
+      return false;
+    }
+    if (!validateEmail(email)) {
+      setErrorMessage("Please enter a valid email address");
+      return false;
+    }
+    if (!validatePhoneNumber(phoneNumber)) {
+      setErrorMessage("Please enter a valid 10-digit phone number");
+      return false;
+    }
+    if (!selectedFile) {
+      setErrorMessage("Please attach a file");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      const data = new FormData();
+    data.set("username", applicantName);
+    data.set("email", email);
+    data.set("phoneNumber", phoneNumber);
+    data.set("files",selectedFile);
+
+      alert("application sent")
+      console.log("Form Data:", data);
+      // Send formData to server or perform further actions
+    }
   };
 
   const [inputValue, setInputValue] = useState('');
@@ -71,15 +152,32 @@ const ApplyForm = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <form onSubmit={handleSubmit}>
-          <Container>
-            <List1>
-              <Header>
-                Career Oppurunities &gt; <Span>Apply</Span>
-              </Header>
-            </List1>
+        <Container>
+          <List1>
+            <Header>
+              Career Opportunities &gt; <Span>Apply</Span>
+            </Header>
+          </List1>
+          <Container1>
+            <Title
+              type="text"
+              placeholder="Applicant Name"
+              value={applicantName}
+              onChange={(e) => handleNameChange(e.target.value)}
+            />
+            <Title
+              type="tel"
+              placeholder="Phone Number"
+              value={phoneNumber}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+            />
+            <Title
+              type="email"
+              placeholder="E-Mail"
+              value={email}
+              onChange={(e) => handleEmailChange(e.target.value)}
+            />
 
-            <Container1>
 
               <Title type="text" placeholder="Applicant Name" />
               <Title type="text" placeholder="E-Mail" />
@@ -92,23 +190,16 @@ const ApplyForm = () => {
                 maxLength={10}
                 onKeyDown={handleKeyDown}
               />
-              <ChooseFile>
-                <Button onClick={handleFileSelect}>Choose File</Button>
-                <input
-                  type="file"
-                  accept=".pdf"
-                  ref={fileInputRef}
-                  style={{ display: "none" }}
-                  onChange={handleFileChange}
-                /><span>
-                  {selectedFile && (
-                    <p>&nbsp;&nbsp;Selected File: {selectedFile.name}</p>
-                  )}</span>
-              </ChooseFile>
-              <LastButton type="submit" >Send</LastButton>
-            </Container1>
-          </Container>
-        </form>
+
+              {selectedFileName && <P>{selectedFileName}</P>}
+            </ChooseFile>
+            
+            <LastButton type="submit" onClick={handleSubmit}>
+              Send
+            </LastButton>
+            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          </Container1>
+        </Container>
       </ThemeProvider>
       <Mob>
         <FooterSection />
@@ -118,3 +209,7 @@ const ApplyForm = () => {
 };
 
 export default ApplyForm;
+
+const P = styled.p`
+margin-left:30px;
+`
