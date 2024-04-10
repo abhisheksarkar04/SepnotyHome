@@ -333,22 +333,22 @@ class FourthForm extends Component {
               {error && <Error>{error}</Error>}
             </Mai>
           </M>
-
           <Button className="buttons">
             <button
-              className="buttons_button buttons_button--back"
+              className="buttons__button buttons__button--back"
               onClick={this.back}
             >
               Back
             </button>
             <button
               type="submit"
-              className="buttons_button buttons_button--next"
+              className="buttons__button buttons__button--next"
               disabled={isSubmitDisabled}
             >
               Submit
             </button>
           </Button>
+
         </form>
       </Main>
     );

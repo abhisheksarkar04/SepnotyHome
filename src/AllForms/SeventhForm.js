@@ -292,8 +292,10 @@ margin-right:10px;
 const Input4 = Styled.input`
 background:transparent;
 border: 1px solid #8C8C8C;
+outline:none;
 ${media.mobile}{
   width:80%;
+
 }
 `
 const Div = Styled.div`
