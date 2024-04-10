@@ -113,41 +113,7 @@ const ApplyForm = () => {
     }
   };
 
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    const regex = /^[0-9]+$/;
-    if (regex.test(value) && value.length <= 10) {
-      setInputValue(value);
-    }
-  }
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Backspace' && inputValue.length > 0) {
-      setInputValue(inputValue.slice(0, -1));
-    }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add your form submission logic here
-    // You can access form data using `inputValue` and `selectedFile`
-  };
-
-
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    // Check if the selected file is a PDF
-    if (file && file.type === 'application/pdf') {
-      setSelectedFile(file);
-    } else {
-      // Reset the selected file if it's not a PDF
-      setSelectedFile(null);
-      alert('Please select a PDF file.');
-    }
-  };
-
+ 
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -178,17 +144,13 @@ const ApplyForm = () => {
               onChange={(e) => handleEmailChange(e.target.value)}
             />
 
-
-              <Title type="text" placeholder="Applicant Name" />
-              <Title type="text" placeholder="E-Mail" />
-              <Title
-                type="tel"
-                id="input"
-                value={inputValue}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                maxLength={10}
-                onKeyDown={handleKeyDown}
+<ChooseFile>
+              <Button onClick={handleFileSelect}>Choose File</Button>
+              <input
+                type="file"
+                ref={fileInputRef}
+                style={{ display: "none" }}
+                onChange={handleFileUpload}
               />
 
               {selectedFileName && <P>{selectedFileName}</P>}
