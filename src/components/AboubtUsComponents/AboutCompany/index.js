@@ -69,8 +69,8 @@ import {
                 <ServiceItemDesc>
                 Manikumar Pokala, the Founder and Chairman of Sepnoty Technologies Pvt Ltd, brings a wealth of experience and a visionary approach to leadership. With a career spanning several decades in the technology sector, Manikumar has established himself as a leader in driving innovation and business growth. His strategic vision and deep understanding of market dynamics have been instrumental in steering Sepnoty towards success.
 
-As the driving force behind Sepnoty, Manikumar sets the vision for the organization and inspires the team to achieve new heights of excellence. His leadership style is characterized by a focus on innovation, collaboration, and customer-centricity. Under his guidance, Sepnoty has flourished, establishing itself as a trusted name in the technology industry.
-
+As the driving force behind Sepnoty, Manikumar sets the vision for the organization and inspires the team to achieve new heights of excellence. His leadership style is characterized by a focus on innovation, collaboration, and customer-centricity. Under his guidance, Sepnoty has flourished, establishing itself as a trusted name in the technology industry.</ServiceItemDesc>
+<ServiceItemDesc>
 Kavya Mahendran, the Co-Founder and Managing Director of Sepnoty, complements Manikumar's leadership with her dynamic and hands-on approach. With a background in business management and a passion for driving operational excellence, Kavya plays a pivotal role in ensuring the successful execution of Sepnoty's strategic initiatives.
 
 Together, Manikumar and Kavya form a formidable leadership duo, driving Sepnoty Technologies Pvt Ltd forward with vision, passion, and a relentless commitment to excellence. Their combined expertise, strategic acumen, and dedication to innovation are instrumental in guiding the company towards its goals and ensuring its continued success in the ever-evolving technology landscape.
