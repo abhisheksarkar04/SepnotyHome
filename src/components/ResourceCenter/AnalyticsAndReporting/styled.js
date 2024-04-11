@@ -99,6 +99,7 @@ margin-right: 0px;
 padding: 0 0px 0 0;
 @media screen and (max-width: 600px) {
   margin-left: 0px;
+  width: 100%;
 }
 
 `;
@@ -111,7 +112,8 @@ color:white;
 font-weight: 600;
 padding: 125px 0px 10px 6%;
 @media screen and (max-width: 600px) {
-  font-size: 14px;
+  font-size: 3vw;
+  padding: 105px 0px 10px 6%;
 }
 `;
 export const GdHeading=styled.h1`
@@ -121,7 +123,7 @@ margin: 0px 0px 15px 0px;
 color:white;
 padding: 20px 0px 10px 6%;
 @media screen and (max-width: 600px) {
-  font-size: 16px;
+  font-size: 4vw;
 `;
 
 export const AnalyticsSection = styled.div`
@@ -132,8 +134,9 @@ export const AnalyticsSection = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 576px) {
         flex-direction: column;
+        padding: 20px 0px 0px 2%;
       }
 
 `;
@@ -143,9 +146,10 @@ export const ProMainDiv = styled.div`
       width: 50%;
       padding: 30px 0px 0px 40px;
       height: 50%;
-      @media screen and (max-width: 600px) {
-        width: 100%;
+      @media screen and (max-width: 576px) {
+        width: 98%;
         padding: 30px 30px 0px 40px;
+       
         
       }
 
@@ -165,7 +169,7 @@ export const MobSection1=styled.div`
     flex-wrap: wrap;
     flex-direction:row;
     @media screen and (max-width: 576px) {
-      width: ;
+      width: 80%;
       margin: 30px 0 50px 10px;
       justify-content: center;
       align-items: center;
@@ -196,6 +200,7 @@ export const ProBottom = styled.div`
     @media screen and (max-width: 576px) {
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
+      height: 30vh;
     }
 
 `;
@@ -205,6 +210,9 @@ export const ProTopHead = styled.h1`
     font-size: 100%;
     margin: 0px 0px 0px 20px;
     padding: 5px 0 0 10px;
+    @media screen and (max-width: 576px) {
+      font-size: 80%;
+    }
 
 `;
 export const ProTopImg = styled.img`
@@ -212,6 +220,9 @@ export const ProTopImg = styled.img`
     height: 81%;
     margin: 0px -30px -4px 90px;
     width: 60%;
+    @media screen and (max-width: 576px) {
+      margin: 0px -30px -4px 20%;
+    }
 
 
 `;
@@ -220,6 +231,10 @@ export const GraphImg = styled.img`
     height: 150px;
     margin: 50px 0px 0px 0px;
     width: 100%;
+    @media screen and (max-width: 576px) {
+      margin: 30px 0px 0px 0px;
+      height: 120px;
+    }
 
 
 
@@ -248,6 +263,7 @@ cursor: pointer;
   height: 30px;
   width: 22%;
   align-self: ;
+  font-size: 2.3vw;
   margin: 50px 0px 0px 50%;
 }
 `;
@@ -264,7 +280,10 @@ export const BtnLearn = styled.button`
   cursor: pointer;
   @media screen and (max-width: 576px) {
     align-self: center;
-    margin: 20px 0 0 35%;
+    height: 4vh;
+    width: 20vw;
+    font-size: 2.5vw;
+    margin: 20px 0 0 40%;
   }
 
 `;
@@ -276,6 +295,10 @@ export const VectorImg = styled.img`
    
     margin: 3px 3px -3px 10px;
     width: 17%;
+    @media screen and (max-width: 576px) {
+      width: 3vw;
+      margin: 3px 0px -3px 6px;
+    }
 
 
 `;
@@ -304,7 +327,9 @@ export const SmallPattern = styled.div`
   border-radius: 3px;
   margin-left: 20px;
    @media screen and (max-width: 576px) {
-    margin-left: 10px;
+    margin-left: 5%;
+    height: 6vh;
+    width: 11vw;
   }
 `;
 
@@ -324,7 +349,7 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left: auto;
   @media screen and (max-width: 576px) {
-    font-size: 18px;
+    font-size: 5vw;
     width: 90%;
   }
 `;
@@ -336,8 +361,8 @@ export const HeadingSearch = styled.h1`
     font-weight: 400;
     @media screen and (max-width: 576px) {
       margin: 20px 0px 20px 50px;
-      justify-content: ;
       font-weight: bold;
+      font-size: 3vw;
 
     }
     
@@ -360,8 +385,8 @@ export const ElementsSection = styled.div`
 export const SearchSection = styled.div`
     margin: 0px 0px 0px 850px;
     @media screen and (max-width: 576px) {
-      margin: 0px 0px 0px -10px;
-      width: 100%;
+      margin: 0px 0px 0px -20px;
+      width: 98%;
     }
 
 
@@ -375,6 +400,11 @@ export const SearchSectionBtn = styled.button`
     margin: 0px 0px 0px 10px;
     color: #fff;
     border-radius: 3px;
+    @media screen and (max-width: 576px) {
+      width: 25vw;
+      font-size: 2vw;
+      margin: 0px 0 0 0;
+    }
 `;
 
 
@@ -411,6 +441,19 @@ color: white;
     margin-left: 0px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 576px) {
+  width: 20vw;
+  font-size: 2vw;
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 3vw;
+    margin-left: 0px;
+    cursor: pointer;
+}
+}
+
 `;
 
 

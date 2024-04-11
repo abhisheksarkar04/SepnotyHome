@@ -15,7 +15,7 @@ font-size: 30px;
 margin-bottom:30px;
 @media screen and (max-width: 600px) {
   width:90%;
-  font-size: 20px;
+  font-size: 4vw;
 }
 `;
 
@@ -27,7 +27,7 @@ padding-top: 10px;
 padding-bottom: 20px;
 @media screen and (max-width: 600px) {
   width:90%;
-  font-size:14px;
+  font-size:3vw;
 }
 `;
 export const IntroProposalText = styled.button`

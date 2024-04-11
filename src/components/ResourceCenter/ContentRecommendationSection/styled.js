@@ -16,7 +16,8 @@ export const Header = styled.h1`
   color: #ffffff;
   padding: 30px 20px 30px 6%;
   @media screen and (max-width: 600px) {
-    font-size: 14px;
+    font-size: 3vw;
+    padding: 60px 20px 30px 6%;
 }
 `;
 export const Span = styled.span`
@@ -30,7 +31,7 @@ export const Resource = styled.h1`
   font-weight: 600;
   padding: 0px 30px 20px 6%;
   @media screen and (max-width: 600px) {
-    font-size: 16px;
+    font-size: 4vw;
 }
 `;
 
@@ -49,7 +50,7 @@ export const ConRecHead = styled.h1`
   margin-bottom: 30px;
   font-weight: bold;
   @media screen and (max-width: 600px) {
-    font-size: 20px;
+    font-size: 4vw;
     margin-top: 30px;
     margin-bottom: 20px;
   }
@@ -62,7 +63,7 @@ export const ConRecDesc = styled.p`
   padding: 15px 30px 15px 0px;
   @media screen and (max-width: 600px) {
     width: 100%;
-    font-size: 14px;
+    font-size: 3vw;
     padding: 0px 10px 15px 0px;
   }
 `;
@@ -87,8 +88,9 @@ export const ListHeading = styled.h1`
   font-weight: bold;
   margin-left:  2.3%;
   @media screen and (max-width: 576px) {
-    margin-left:  7.9%;
-    font-size: 18px;
+    margin-left:  7.0%;
+    font-size: 4.0vw;
+    width: 100%;
   }
 `;
 
@@ -108,6 +110,9 @@ export const SearchHeading = styled.p`
   color: #ffffff;
   text-align: center;
   margin-bottom: 10px;
+  @media screen and (max-width: 576px) {
+    font-size: 2.8vw;
+  }
 `;
 export const SearchHolder = styled.div`
   dispaly: flex;
@@ -116,19 +121,27 @@ export const SearchHolder = styled.div`
   background-color: transparent;
   padding: 5px;
   border-radius: 10px;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    justify-content: space-between;
+  }
 `;
 export const Input = styled.input`
   background-color: transparent;
-  outline: none;
-  border: 0px;
+  outline: ;
+  border: none;
   width: 320px;
   color: #263238;
-
+   height: 22px;
   &::placeholder {
     color: #263238;
     font-size: 14px;
     font-weight: 500;
     padding: 5px;
+  }
+  @media screen and (max-width: 576px) {
+    width: 90%;
+  
   }
 `;
 
@@ -199,6 +212,11 @@ export const Small = styled.img`
 
   height: 55px;
   width: 60px;
+  @media screen and (max-width: 576px) {
+    height: 6vh;
+    width: 11vw;
+  }
+
 `;
 
 export const ContentContainer = styled.div`
@@ -214,4 +232,14 @@ export const Small1 = styled.img`
   height: 55px;
   width: 60px;
   z-index: 0;
+  @media screen and (max-width: 576px) {
+    height: 6vh;
+    width: 11vw;
+  }
 `;
+
+
+// height: 6vh;
+//     width: 11vw;
+//     font-size: 5.3vw;
+//     width: 90%;

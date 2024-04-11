@@ -16,7 +16,7 @@ import {
     // CapabilityHeading,
     AppDetailsContainer,
     // MainHeading,
-    ListItemSection,
+    ListItemssSection,
     ListHead,
     LearnPara1,
     PatternCon,
@@ -125,7 +125,7 @@ const LearningRoadsMaps = () => {
                   <SmallPattern></SmallPattern>
                   <ListHeading>Roadmaps</ListHeading>
             </PatternCon>
-            <ListItemSection>
+            <ListItemssSection>
                        {data.map((item, index) => (
                           <li key={index}>
                               <ListHead>{item.heading}</ListHead>
@@ -133,7 +133,7 @@ const LearningRoadsMaps = () => {
                           </li>
                        ))}
             <LearnPara1>Remember, the key isn’t to memorize but to understand and apply the concepts in real-world scenarios. By consistently practicing and building projects, you’ll solidify your knowledge and skills in the IT sector.</LearnPara1>
-          </ListItemSection>
+          </ListItemssSection>
           </div>
             
           ) : (

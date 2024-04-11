@@ -15,7 +15,7 @@ font-size:30px;
 color:white;
 width:30%;
 @media screen and (max-width: 576px) {
-  font-size: 20px;
+  font-size: 4.5vw;
 }
 `;
 export const WebSectionDescription=styled.p`
@@ -25,7 +25,7 @@ width: 65%;
 color: #fff;
 text-align: ;
 @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
     width: 85%;
     margin-top: 20px;
   }

@@ -75,6 +75,7 @@ class Application extends Component {
         typeofDevelopment:"application",
         typeOfWebsite: [],
         numberOfPages: '',
+        otherTypeOfWebsite:"",
       },
       step2:{
         industryType:[],
@@ -82,7 +83,7 @@ class Application extends Component {
       },
       step3:{
         services:"",
-        webisiteLink:"",
+        websiteLink:"",
         otherServiceDetails:"",
       },
       step4:{

@@ -75,6 +75,7 @@ class Form extends Component {
         typeofDevelopment:"website",
         typeOfWebsite: [],
         numberOfPages: '',
+        otherTypeOfWebsite:"",
       },
       step2:{
         industryType:[],
@@ -82,7 +83,7 @@ class Form extends Component {
       },
       step3:{
         services:"",
-        webisiteLink:"",
+        websiteLink:"",
         otherServiceDetails:"",
       },
       step4:{
@@ -123,17 +124,25 @@ class Form extends Component {
   };
 
   nextStep = () => {
-    const { step } = this.state;
+    const { step,activeStep } = this.state;
     this.setState({
       step: step + 1,
     });
+    this.setState(prevState => ({
+      activeStep: prevState.activeStep + 1
+    }));
   };
 
   prevStep = () => {
     const { step } = this.state;
+    const {activeStep} =this.state
     this.setState({
       step: step - 1,
+      
     });
+    this.setState(prevState => ({
+      activeStep: prevState.activeStep - 1
+    }));
   };
 
   submitData = async(e) => {
@@ -325,6 +334,7 @@ class Form extends Component {
         return (
           <CourseDetails
             nextStep={this.nextStep}
+            activeStep={activeStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
             formData={formData.step2}
@@ -335,6 +345,7 @@ class Form extends Component {
         return (
 
           < YourIndustry nextStep={this.nextStep}
+          activeStep={activeStep}
           prevStep={this.prevStep}
           onDataReceived={this.handleDataReceived}
           formData={formData.step3}// Pass formData as props
@@ -346,6 +357,7 @@ class Form extends Component {
         return (
           <Summary
             nextStep={this.nextStep}
+            activeStep={activeStep}
             prevStep={this.prevStep}
             onDataReceived={this.handleDataReceived}
             formData={formData.step4} // Pass formData as props

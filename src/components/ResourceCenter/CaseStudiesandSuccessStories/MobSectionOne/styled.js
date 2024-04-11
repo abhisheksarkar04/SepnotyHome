@@ -11,7 +11,7 @@ font-size: 30px;
 color:white;
 width:60%;
 @media screen and (max-width: 576px) {
-    font-size: 20px;
+    font-size: 4.5vw;
     width: 90%;
   }
 
@@ -23,7 +23,7 @@ width:80%;
 color:white;
 line-height: 1.3;
 @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
     width: 90%;
     margin-top: 30px;
   }
@@ -37,6 +37,9 @@ top:7;
 left:0;
 bottom:20;
 z-index:0;
+@media screen and (max-width: 576px) {
+  display:none;
+}
 `;
 export const BackgroundShapeTwo=styled.span`
 position:absolute;
@@ -50,4 +53,7 @@ top:-25;
 right:0;
 gap:0;
 z-index:0;
+@media screen and (max-width: 576px) {
+  display:none;
+}
 `;

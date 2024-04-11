@@ -21,24 +21,34 @@ export const DetailsCon = styled.div`
   padding: 0px 5px 15px 15px;
   @media screen and (max-width: 576px) {
     text-align: left;
+    height: 18vh;
   }
 `;
 export const Title = styled.h1`
   font-size: 12px;
   color: #ea3232;
   margin-bottom: 3px;
+  @media screen and (max-width: 576px) {
+    font-size: 2.5vw;
+  }
 `;
 export const Heading = styled.h1`
   font-size: 14px;
   color: #2b459b;
   font-weight: 700;
   margin-bottom: 3px;
+  @media screen and (max-width: 576px) {
+    font-size: 3vw;
+  }
 `;
 
 export const Description = styled.p`
   font-size: 13px;
   color: #263238;
   line-height: 1.5;
+  @media screen and (max-width: 576px) {
+    font-size: 2vw;
+  }
 `;
 
 export const Arrow = styled.img`

@@ -56,7 +56,14 @@ class SecondForm extends Component {
   }
 
   handleOtherDetailsChange = (e) => {
-    this.props.updateFormData({ otherFeatureDetails: e.target.value });
+    const { value } = e.target;
+    const { appFeatures } = this.props.formData;
+
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      otherFeatureDetails: value,
+      appFeatures: value ? [...appFeatures, 'other'] : appFeatures.filter(feature => feature !== 'other')
+    });
   }
 
   back = (e) => {
@@ -116,7 +123,6 @@ class SecondForm extends Component {
 
           <Mai>
             <FormContainer>
-
               <Form>
                 <Heading>
                   *What Software features/capabilities do you need?

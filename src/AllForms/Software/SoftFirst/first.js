@@ -22,9 +22,16 @@ class FirstSoftwarePage extends Component {
       numberofTools: event.target.value
     });
   };
-
   handleOtherDetailsChange = (e) => {
-    this.props.updateFormData({ otherSoftwareDetails: e.target.value });
+    const { value } = e.target;
+    const { typeOfSoftware } = this.props.formData;
+    const isChecked = typeOfSoftware.includes('other');
+  
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      otherSoftwareDetails: value,
+      typeOfSoftware: value ? [...typeOfSoftware, 'other'] : typeOfSoftware.filter(type => type !== 'other')
+    });
   }
 
   
@@ -245,15 +252,18 @@ const StyledStepper = Styled(Stepper)`
 `;
 
 const StyledStep = Styled(Step)`
-  text-align: center;
-  border: 1px solid #2b7cff !important;
-  cursor: default !important;
-  span {
-    font-size: 8px; /* Decrease the font size */
-  }
-  & > div {
-    color: #0f6bff !important;
+text-align: center;
+border: 1px solid #2b7cff !important;
+cursor: default !important;
+span {
+  font-size: 8px; /* Decrease the font size */
+}
+& > div {
+  color: #0f6bff !important;
   }
+${media.mobile}{
+  text-align:center;
+}
 `;
 
 const Button = Styled.div`
@@ -272,6 +282,8 @@ const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
+  margin: 0;
+  padding: 0px;
 }
 `
 const Main1 = Styled.div`
@@ -307,16 +319,16 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:90%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width:52%;
-  border-radius:5px;
+  border-radius:12px;
   gap:0px;
+  margin: 0px -10px 0px 10px;
+  line-height: 1;
+  padding:5px;
 }
 `
 const CheckBoxCon = Styled.div`

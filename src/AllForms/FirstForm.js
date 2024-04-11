@@ -32,7 +32,15 @@ handleRadioChange = (event) => {
 };
 
 handleOtherDetailsChange = (e) => {
-  this.props.updateFormData({ otherTypeOfWebsite: e.target.value });
+  const { value } = e.target;
+  const { typeOfWebsite } = this.props.formData;
+  const isChecked = typeOfWebsite.includes('other');
+
+  // Update the "other" checkbox state based on whether the input has a value
+  this.props.updateFormData({
+    otherTypeOfWebsite: value,
+    typeOfWebsite: value ? [...typeOfWebsite, 'other'] : typeOfWebsite.filter(type => type !== 'other')
+  });
 }
 
 
@@ -40,7 +48,8 @@ handleOtherDetailsChange = (e) => {
   continue = (e) => {
     e.preventDefault();
 
-    const { typeOfWebsite, numberOfPages } = this.props.formData;
+    const { typeOfWebsite, numberOfPages ,} = this.props.formData;
+    const {nextStep} = this.props
 
     if (typeOfWebsite.length === 0) {
       this.setState({ error: "Please select at least one type of website." });
@@ -57,20 +66,26 @@ handleOtherDetailsChange = (e) => {
       return;
     }
 
+    console.log(this.props.formData)
+
+    const {activeStep} = this.props
+
+
+
     // If all validations pass, clear the error and proceed
     this.setState({ error: "" });
-    this.props.nextStep();
+    nextStep();
   }
 
   render() {
     const {error}= this.state;
     const {formData} = this.props
-
+ 
     return (
       <Main className="form">
-        <form onSubmit={this.handleSubmit}>
+        <form >
         <StyledStepper
-          activeStep={0}
+          activeStep={this.props.activeStep}
           styleConfig={{
             activeBgColor: "#2B459B",
             activeTextColor: "#fff",
@@ -241,6 +256,9 @@ const StyledStepper = Styled(Stepper)`
   background-color: transparent;
   font-size: 9px;
   border: none;
+  ${media.mobile}{
+    font-size:7px;
+  }
  
 `;
 const Atyled = Styled(Stepper)`
@@ -283,7 +301,7 @@ const Main = Styled.div`
 background-color:#0C111F;
 ${media.mobile}{
   width:100%;
- margin: 0;
+  margin: 0;
   padding: 0px;
 }
 `;
@@ -325,20 +343,17 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:100%;
 border: 1px solid #C1CAE7;
 background: #C1CAE7;
+height:380px;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 50%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:5px;
-  height:300px;
 }
 `;
 const CheckBoxCon = Styled.div`

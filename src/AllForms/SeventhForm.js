@@ -66,13 +66,30 @@ class ThirdForm extends Component {
   };
 
   handleOtherComplianceChange = event => {
+    const { formData } = this.props;
+    const { complianceRequirements } = formData;
     const { value } = event.target;
-    this.props.updateFormData({
-      otherCompliance:event.target.value
-      })
-
+  
+    // If the input field is empty, remove the "Other" option from the complianceRequirements array
+    if (value === "") {
+      this.props.updateFormData({
+        complianceRequirements: complianceRequirements.filter(type => type !== "Other"),
+        otherCompliance: value
+      });
+    } else {
+      // If the input field is not empty, add or keep the "Other" option in the complianceRequirements array
+      if (!complianceRequirements.includes("Other")) {
+        this.props.updateFormData({
+          complianceRequirements: [...complianceRequirements, "Other"],
+          otherCompliance: value
+        });
+      } else {
+        this.props.updateFormData({
+          otherCompliance: value
+        });
+      }
+    }
   };
-
   back = (e) => {
     e.preventDefault();
     this.props.prevStep();
@@ -227,6 +244,7 @@ class ThirdForm extends Component {
                       onChange={this.handleIntegrationChange}
                     />
                   </Label>
+                  <Error>{formErrors.integration}</Error>
                 </InputContainer>
                 <Heading1>
                 *Here, you can add any details you want to share with us:
@@ -239,9 +257,6 @@ class ThirdForm extends Component {
                 onChange={this.handleAdditionalDetailsChange}
                 placeholder="Please add here"
               />
-              {/* Error message for integration */}
-            <Error>{formErrors.integration}</Error>
-            {/* Error message for additional details */}
             <Error>{formErrors.additionalDetails}</Error>
             </Form1>
           </Mai>
@@ -277,8 +292,10 @@ margin-right:10px;
 const Input4 = Styled.input`
 background:transparent;
 border: 1px solid #8C8C8C;
+outline:none;
 ${media.mobile}{
   width:80%;
+
 }
 `
 const Div = Styled.div`
@@ -288,6 +305,9 @@ const Error = Styled.div`
   color: red;
   margin-top: 10px;
   font-size:12px;
+  ${media.mobile}{
+    font-size:8px;
+  }
 `;
 const Button = Styled.div`
 display:flex;

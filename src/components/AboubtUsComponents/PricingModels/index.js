@@ -40,7 +40,7 @@ const PriceModel = () => {
     <>
       <DigitalContainer>
         <Header>
-          Approach &gt; <Span>Pricing Models at Sepnoty</Span>
+          About Us &gt; <Span> Approach &gt; </Span><Span>Pricing Models at Sepnoty</Span>
         </Header>
         <Service>About Us</Service>
         <ContentRecomContainer>

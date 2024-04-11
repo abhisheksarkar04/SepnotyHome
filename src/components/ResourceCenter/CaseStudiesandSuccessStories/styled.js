@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const MobSection=styled.div`
 background-color:rgba(12, 17, 31, 1);
 width:100%;
+@media screen and (max-width: 576px) {
+  
+  padding:30px 0px 0px 0;
+}
 `;
 
 export const WebPageTitle=styled.h2`
@@ -11,7 +15,7 @@ font-weight:600;
 color:white;
 padding:105px 0px 10px 6%;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
+  font-size: 3vw;
   padding:50px 0px 10px 6%;
 }
 `;
@@ -25,7 +29,7 @@ font-weight:700;
 margin: 30px 0px 35px 6%;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size: 16px;
+  font-size: 4vw;
   margin: 10px 0px 35px 6%;
 }
 `;
@@ -77,7 +81,7 @@ export const ServiceItemDesc = styled.p`
   line-height: 1.5;
   text-align: ;
   @media screen and (max-width: 576px) {
-    font-size: 14px;
+    font-size: 3vw;
     width: 85%;
     margin-bottom: 60px;
     margin-top: 30px;
@@ -127,7 +131,7 @@ export const LearnPara1 = styled.p`
    @media screen and (max-width: 576px) {
     width: 90%;
     margin-left: 6%;
-    font-size: 14px;
+    font-size: 3vw;
     text-align: left;
     margin-bottom: 0px;
    
@@ -143,7 +147,7 @@ export const LearnPara2 = styled.p`
    margin-bottom: 60px;
    @media screen and (max-width: 576px) {
     margin-left: 12%;
-    font-size:14px;
+    font-size:3vw;
    width: 82%;
    margin-top: 20px;
 
@@ -159,7 +163,7 @@ export const ListHead = styled.h2`
    font-weight: 500;
    @media screen and (max-width: 576px) {
     width: 96%;
-    font-size: 16px;
+    font-size: 3.5vw;
     margin-left: 6%;
     margin-top: 0px;
     text-align: left;
@@ -203,6 +207,8 @@ export const ImgCon = styled.div`
   margin-top:20px;
   @media screen and (max-width: 576px) {
     margin-left: 12%;
+    width: none;
+
     
   
   }
@@ -211,6 +217,12 @@ export const InsertImg=styled.img`
 height: 250px;
 width: 300px;
 margin-bottom: -49px;
+@media screen and (max-width: 576px) {
+  width: 60vw;
+
+  
+
+}
 
 
 `;
@@ -218,6 +230,12 @@ export const InsertImg1 =styled.img`
 height: 250px;
 width: 238px;
 margin-bottom: -49px;
+@media screen and (max-width: 576px) {
+  width: 45vw;
+
+  
+
+}
 
 `;
 export const WebTechButton = styled.button`
@@ -231,6 +249,12 @@ export const WebTechButton = styled.button`
   margin-top: -236px; 
   margin-right: 8px;
   margin-left: -1px;
+  @media screen and (max-width: 576px) {
+    width: 60vw;
+  
+    
+  
+  }
    
 `;
 export const WebTechButton1 = styled.button`
@@ -244,6 +268,12 @@ export const WebTechButton1 = styled.button`
   margin-top: -236px; 
   margin-right: 8px;
   margin-left: -1px;
+  @media screen and (max-width: 576px) {
+    width: 45vw;
+  
+    
+  
+  }
    
 `;
 

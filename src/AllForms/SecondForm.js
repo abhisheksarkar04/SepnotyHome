@@ -26,7 +26,7 @@ class CourseDetails extends Component {
     }
   
     // Check if 'Other' checkbox is checked and 'Industry Other Details' is empty
-    if (industryType.includes('10st') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
+    if (industryType.includes('other') && (!indstryotherDetails || indstryotherDetails.trim() === '')) {
       this.setState({ error: 'Please provide other details.' });
       return;
     }
@@ -44,14 +44,14 @@ class CourseDetails extends Component {
   handleOtherDetailsChange = (e) => {
     const { value } = e.target;
     const { industryType } = this.props.formData;
+    const isChecked = industryType.includes('other');
   
-    // If 'Industry Other Details' is provided, remove the error message
-    if (value.trim() !== '' && industryType.includes('other')) {
-      this.setState({ error: '' });
-    }
-  
-    this.props.updateFormData({ indstryotherDetails: value });
-  };
+    // Update the "other" checkbox state based on whether the input has a value
+    this.props.updateFormData({
+      indstryotherDetails: value,
+      industryType: value ? [...industryType, 'other'] : industryType.filter(type => type !== 'other')
+    });
+  }
 
   back = (e) => {
     e.preventDefault();
@@ -66,7 +66,7 @@ class CourseDetails extends Component {
         <form>
 
         <StyledStepper
-          activeStep={1}
+          activeStep={this.props.activeStep}
           styleConfig={{
             activeBgColor: "#2B459B",
             activeTextColor: "#fff",
@@ -229,6 +229,9 @@ const StyledStepper = Styled(Stepper)`
   background-color: transparent;
   font-size: 9px;
   border: none;
+  ${media.mobile}{
+    font-size:7px;
+  }
  
 `;
 const StyledStepper1 = Styled(Stepper)`
@@ -280,7 +283,10 @@ gap:20px;
 ${media.mobile}{
   width:100%;
   gap: 6px;
-  margin: 0px 0px 0px -20px;
+  display:flex;
+flex-direction:row;
+justify-content:center;
+align-item:center;
   padding-right: 0px;
   justify-content:space-between;
 
@@ -303,20 +309,18 @@ const FormContainer = Styled.div`
 display:flex;
 flex-direction:column;
 padding:20px;
-height:380px;
-width:100%;
 border: 1px solid #C1CAE7;
+width:100%;
+height:380px;
 background: #C1CAE7;
 gap:20px;
 border-radius:10px;
 ${media.mobile}{
-  width: 52%;
   border-radius:12px;
   gap:0px;
   margin: 0px -10px 0px 10px;
   line-height: 1;
   padding:3px;
-  height:300px;
 }
 `
 
@@ -325,7 +329,7 @@ background:transparent;
 border: 1px solid gray;
 margin-left:10px;
 ${media.mobile}{
-  margin-left:0px;
+  margin-left:10px;
   width:110px;
 }
 `
@@ -345,6 +349,7 @@ font-weight: 500;
 color:#263238;
 letter-spacing: 0em;
 text-align: left;
+margin-left:10px;
 ${media.mobile}{
   font-size:11px;
 }

@@ -4,7 +4,8 @@ export const MobSection=styled.div`
 background-color:rgba(12, 17, 31, 1);
 width:100%;
 @media screen and (max-width: 576px) {
- 
+  
+  padding:30px 0px 0px 0;
 }
 `;
 
@@ -14,8 +15,8 @@ font-weight:600;
 color:white;
 padding: 100px 0px 10px 6%;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
-  padding: 60px 0px 10px 6%;
+  font-size: 3vw;
+  padding: 40px 0px 10px 6%;
  
 }
 `;
@@ -24,7 +25,7 @@ color: #fff;
 font-size: 16px;
 font-weight: 400;
 @media screen and (max-width: 576px) {
-  font-size: 14px;
+  font-size: 3vw;
  
 }
 `;
@@ -35,7 +36,8 @@ padding-left: 6%;
 margin:20px 0px 40px 0;
 color:white;
 @media screen and (max-width: 576px) {
-  font-size: 16px;
+  font-size: 4vw;
+  margin:20px 0px 20px 0;
  
 }
 `;
@@ -84,7 +86,7 @@ export const ServiceItemDesc = styled.p`
   @media screen and (max-width: 576px) {
     width: 90%;
     margin-left: 6%;
-    font-size: 14px;
+    font-size: 3vw;
    
   }
 `;
@@ -107,9 +109,9 @@ export const ListItemSection = styled.ul`
    
   }
   @media screen and (max-width: 576px) {
-    width: 100%;
     margin: 0px 0 0 -4%;
     & > li {
+      width: 90%;
       color: #89A4FF;
       line-height: 1.5;
       margin-left: 0px;
@@ -129,7 +131,7 @@ export const LearnPara1 = styled.p`
    @media screen and (max-width: 576px) {
     width: 90%;
     margin-left: 6%;
-    font-size: 14px;
+    font-size: 3vw;
     text-align: left;
     margin-bottom: 0px;
    
@@ -142,7 +144,7 @@ export const ListHead = styled.h2`
    font-weight: 500;
    @media screen and (max-width: 576px) {
     width: 96%;
-    font-size: 16px;
+    font-size: 4vw;
     margin-left: 6%;
     text-align: left;
 
@@ -150,7 +152,7 @@ export const ListHead = styled.h2`
   }
 `;
 
-export const OrderListSection = styled.ul`
+export const OrderListsSection = styled.ul`
   color:#fff;
   list-style-type: disc;
   margin: 0px 0 0 6%;
@@ -166,8 +168,8 @@ export const OrderListSection = styled.ul`
     text-align: left;
     & > li{
       text-align: left;
-      font-size: 14px;
-      margin: -5px 0 0 0;
+      font-size: 3vw;
+      margin: -10px 0 0 0px;
     }
   }
  
@@ -183,7 +185,7 @@ export const LearnPara11 = styled.h2`
    font-weight: 10;
    @media screen and (max-width: 576px) {
     margin-left: 12%;
-    font-size:14px;
+    font-size:3vw;
    width: 80%;
    margin-top:50px;
   }
