@@ -10,29 +10,27 @@ import {
   OurWorkHeading,
   OurWorkList,
   // AdServRightDots
-}
-from "./styledComponents";
+} from "./styledComponents";
 // import rightpattern from "../AdvancedServices/assets/rightpattern.png";
-
 
 const serviceDetails = [
   {
     uniqueNo: 1,
     imageUrl: service1,
     description:
-      "We conduct compatibility testing to ensure your web application works seamlessly with various elements like browsers, operating systems, and hardware.",
+      "Our meticulous testing procedures guarantee that your web applications run smoothly, without any bugs or errors disrupting functionality.",
   },
   {
     uniqueNo: 2,
     imageUrl: service3,
     description:
-      "We meticulously minimize redundancy and development time by optimizing code for reusability.",
+      "With a focus on clean code and intuitive design, we ensure that every interaction with your web application is seamless, intuitive, and enjoyable for users",
   },
   {
     uniqueNo: 3,
     imageUrl: service2,
     description:
-      "We furnish clients with comprehensive project plans, illustrating actionable strategies to transform their vision into tangible outcomes. This ensures clarity regarding project milestones and deliverables",
+      "We optimize code efficiency and adhere to best practices to ensure that your web applications perform at their best, delivering lightning-fast load times and responsive functionality",
   },
 ];
 
@@ -40,7 +38,7 @@ function OurWork() {
   return (
     <OurWorkContainer>
       <OurWorkHeading>
-      We Deliver Clean Code, Error Free, and Secure Web Applications
+        Crafting Flawless Code for Secure and Seamless Web Experiences
       </OurWorkHeading>
       <br />
       <OurWorkList>
@@ -48,9 +46,9 @@ function OurWork() {
           <Service key={eachItem.uniqueNo} details={eachItem} />
         ))}
       </OurWorkList>
-      
-      <br/>
-      <br/>
+
+      <br />
+      <br />
 
       <Content />
       <br />

@@ -56,17 +56,17 @@ const HomeSection = () => {
     <>
       <Home>
         <Homehd1>
-          Empowering The Next Generation of Software And Web-App Development
+          Fueling Future Frontiers: Where Innovation Meets Impact
         </Homehd1>
         <HomeLeftRight>
           <HomeLeft>
             <HomeLefthd1>
-              Empowering The Next Generation of Software And Web-App Development
+              Fueling Future Frontiers: Where Innovation Meets Impact
             </HomeLefthd1>
             <Homep1>
-              Sepnoty, is a Developing agency Specialized in Delivering World
-              class Solutions For Web and Mobile Through Mature And Development
-              Technology.
+              Welcome to Sepnoty Technologies Pvt Ltd - where innovation fuels
+              the future of software and web-app development. Join us on the
+              journey of creativity and transformation
             </Homep1>
 
             <HomeButtonVideo>
@@ -121,9 +121,9 @@ const HomeSection = () => {
                 <HomeVideoText>Watch Our Intro</HomeVideoText>
               </HomePlayVideo>
               <Homep2>
-                Sepnoty, is a Developing agency Specialized in Delivering World
-                class Solutions For Web and Mobile Through Mature And
-                Development Technology.
+                Welcome to Sepnoty Technologies Pvt Ltd - where innovation fuels
+                the future of software and web-app development. Join us on the
+                journey of creativity and transformation
               </Homep2>
             </MobileIntro>
             <IntroExplorePart>

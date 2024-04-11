@@ -12,7 +12,7 @@ import {
   Header,
   Nodejs,
   Python,
-  Php
+  Php,
 } from "./styled";
 
 import django from "./Images/django-logo.svg";
@@ -46,14 +46,17 @@ const Idea = () => (
             <Header>From Idea-To-Development</Header>
             <CuateImage11 src={cuate} alt="Idea" />
           </HeadImgCon>
-          <Heading>From Idea-To-Development</Heading>
+          <Heading>
+            Dreams to Digital: Where Your Vision Becomes Reality
+          </Heading>
           <Description>
-            we are a development agency focused on delivering top-tier solution
-            for web and mobile platforms using both using established and
-            cutting-edge technologies.Our team of experts possesses specialized
-            knowledge and experience in digital marketing,SEO, Software
-            development, and Web design enabling us to consistently deliver high
-            quality works to our clients.
+            At Sepnoty, we specialize in turning dreams into digital realities.
+            Our expert team works tirelessly to bring your vision to life, from
+            concept to code. Whether you have a groundbreaking app idea or a
+            bold digital project in mind, we're here to make it happen. With
+            innovative solutions and unmatched expertise, we transform your
+            dreams into tangible success stories. Let's collaborate and turn
+            your ideas into digital magic today.
           </Description>
         </div>
         <CuateImage src={idea} alt="idea" />

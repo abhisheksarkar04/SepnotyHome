@@ -82,10 +82,11 @@ class FooterSection extends Component {
                 <SepnotyLogo src={sepnotyLogo} alt="sepnoty" />
               </div>
               <SepnotyDescription>
-                We're happy to speak to businesses at any stage of their journey
+                We're here to help, no matter where you are in your business
+                journey
               </SepnotyDescription>
               <SepnotyDescription1>
-                -no query too big or small.
+                No question is too big or small for us
               </SepnotyDescription1>
             </LogoContainer>
             <FollowUsContainer1>
@@ -98,14 +99,13 @@ class FooterSection extends Component {
             </FollowUsContainer1>
             <div>
               <NewsHeading>Our Newsletter</NewsHeading>
-              <NewsDesc>
-                To stay on top of ever-changing world of business, subscribe now
-                to our newsLetters.
-              </NewsDesc>
+              <NewsDesc>Stay Informed: Subscribe to Our Newsletter!</NewsDesc>
               <div>
                 <InputHolder type="text" placeholder="Your email address" />
                 <Button type="button">SIGN UP</Button>
-                <EmailMsg>*we hate spam as much as you do</EmailMsg>
+                <EmailMsg>
+                  * We're serious about privacy: No spam, ever!
+                </EmailMsg>
               </div>
             </div>
             <ServiceContact>
@@ -136,7 +136,7 @@ class FooterSection extends Component {
             <CopywriteContainer>
               <Copyright src={copyright} alt="cr" />
               <CopywriteContent>
-                2024 Sepnoty.All rights received.
+                2024 Sepnoty.All rights reserved.
               </CopywriteContent>
             </CopywriteContainer>
             <SectionContainer>
