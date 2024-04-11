@@ -231,14 +231,13 @@ const ContactForm = (props) => {
           <div>
             <ContactHeading>{heading}</ContactHeading>
             <ContactDescription>
-              Our team is ready to provide client references, estimate your
-              project, or answer any other question related to your IT
-              intiative.
+              Welcome to our support hub! Get answers to your questions and
+              solutions for your projects from our dedicated team.
             </ContactDescription>
             <ContactTextarea
               rows="9"
               cols="75"
-              placeholder="How can we help you?"
+              placeholder="How may we assist you today?"
               id="message"
               value={message}
               onChange={(e) => changeHandler("message", e)}
@@ -311,8 +310,8 @@ const ContactForm = (props) => {
                 />
                 <LabelCon>
                   <Label htmlFor="sepnotyContact">
-                    I agree to have Sepnoty contact me via email, phone,
-                    messengers
+                    I agree to allow Sepnoty to reach out to me through email,
+                    phone, and messaging apps
                   </Label>
                 </LabelCon>
               </LabelDiv>
@@ -326,8 +325,8 @@ const ContactForm = (props) => {
                 />
                 <LabelCon>
                   <Label htmlFor="requestSepnoty">
-                    I agree to have Sepnoty provide my request Information to
-                    Sepnoty affiliated development center
+                    I agree to let Sepnoty share my requested information with
+                    affiliated development centers.
                   </Label>
                 </LabelCon>
               </LabelDiv>

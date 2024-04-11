@@ -34,9 +34,9 @@ export default function CommentsSection() {
       stars: "⭐⭐⭐⭐⭐",
       para1: "Modern look & trending design",
       para2:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      name: "Naqash Shahid",
-      role: "CEO Tech Industry",
+        "Outstanding service! Sepnoty Technologies truly exceeded my expectations.Their attention to detail and commitment to delivering top-notch solutions is commendable.Highly recommend!",
+      name: "Rajesh Sharma",
+      role: "Marketing Manager",
       image:
         "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
     },
@@ -44,9 +44,9 @@ export default function CommentsSection() {
       stars: "⭐⭐⭐⭐⭐",
       para1: "Design Quality & performance",
       para2:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      name: "Bianca",
-      role: "Program Manager",
+        "Sepnoty Innovate R&D provided invaluable insights that helped us innovate and stay ahead in our industry. Their expertise and dedication to pushing boundaries are truly impressive.",
+      name: "Priya Patel",
+      role: "Research Scientist",
       image:
         "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
     },
@@ -54,9 +54,9 @@ export default function CommentsSection() {
       stars: "⭐⭐⭐⭐⭐",
       para1: "Layout and organized layers",
       para2:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      name: "Denny Hilguston",
-      role: "CEO Tech Industry",
+        "Sepnoty Nexus Hub connected us with the right partners and resources to accelerate our growth. Their collaborative approach and network are invaluable assets for any business.",
+      name: "Ankit Gupta",
+      role: " Business Development Executive",
       image:
         "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
     },
@@ -64,9 +64,39 @@ export default function CommentsSection() {
       stars: "⭐⭐⭐⭐⭐",
       para1: "Modern look & trending design",
       para2:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      name: "Naqash Shahid",
-      role: "CEO Tech Industry",
+        "Sepnoty Strategic Solutions & Consultancy offered strategic guidance that transformed ourbusiness. Their tailored strategies and actionable advice have been instrumental in our success",
+      name: "Neha Singh",
+      role: " CEO",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Modern look & trending design",
+      para2:
+        "Sepnoty Collaborative Innovation Center provided a space for collaboration and creativity that led to groundbreaking solutions. It's a hub of innovation and inspiration.",
+      name: "Vivek Kumar",
+      role: "Product Manager",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Modern look & trending design",
+      para2:
+        "Sepnoty Software Development Services delivered high-quality solutions that perfectly metour needs. Their expertise and professionalism are unmatched.",
+      name: "Pooja Patel",
+      role: "Software Engineer",
+      image:
+        "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
+    },
+    {
+      stars: "⭐⭐⭐⭐⭐",
+      para1: "Modern look & trending design",
+      para2:
+        "Sepnoty Web Application Solutions created a seamless and user-friendly website for our business. Their attention to detail and dedication to customer satisfaction are commendable.",
+      name: "Deepak Sharma",
+      role: "UX Designer",
       image:
         "https://res.cloudinary.com/dds29bnj2/image/upload/v1707787670/Ellipse_mwqg4v.svg",
     },
@@ -143,8 +173,7 @@ width:450px;
   margin-left:-20px;
 }
 
-`
-
+`;
 
 /* @media screen and (max-width:576px){
   margin-top: 10px;
@@ -247,4 +276,3 @@ font-size:12px;
 
 
   }`;
-

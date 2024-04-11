@@ -26,18 +26,26 @@ const Top = () => {
 
           <AdServRightDots src={rightpattern} alt="not found" />
           <AdServiceLeftHeading1>
-            Our Advances{" "}
-            <AdServiceLeftHeadingBlue>Services</AdServiceLeftHeadingBlue>
+            Turning Visions into Reality: Unleashing{" "}
+            <AdServiceLeftHeadingBlue>
+              Innovative Solutions Across Industries
+            </AdServiceLeftHeadingBlue>
           </AdServiceLeftHeading1>
         </AdServiceRightPart1>
         <AdServiceLeftHeading>
-          Our Advances{" "}
-          <AdServiceLeftHeadingBlue>Services</AdServiceLeftHeadingBlue>
+          Turning Visions into Reality: Unleashing{" "}
+          <AdServiceLeftHeadingBlue>
+            Innovative Solutions Across Industries
+          </AdServiceLeftHeadingBlue>
         </AdServiceLeftHeading>
         <AdServiceLeftDescript>
-          We support founders on their journey from pre- revenue to
-          multi-million-dollar valuation and beyond All of this is possible
-          through our expertise in the leading technology verticals.
+          Join Sepnoty Technologies Pvt Ltd in our mission to revolutionize
+          industries through innovative solutions. Explore our remote internship
+          in digital marketing, where you'll be empowered to turn ideas into
+          tangible results. Fuel your passion, hone your skills, and be part of
+          our dynamic team. Let's make an impact together. Apply now and
+          kickstart your journey towards a rewarding career in digital
+          marketing!
         </AdServiceLeftDescript>
       </AdSeviceLeftText>
       <AdServiceRightPart>

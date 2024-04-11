@@ -127,6 +127,7 @@ export const OurWorkPara = styled.p`
   color: #b7b6bd;
   line-height: 40px;
   margin-top: 30px;
+  width: 50%;
   @media screen and (max-width: 576px) {
     font-size: 13px;
   }

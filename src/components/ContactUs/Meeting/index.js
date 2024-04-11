@@ -5,14 +5,12 @@ import meeting from "../Images/remote-meeting.svg";
 const Meeting = () => {
   return (
     <BottomCon>
-      <BottomHeading>
-        The Brightest Minds in Digital At Your Service
-      </BottomHeading>
+      <BottomHeading>Book a Meeting with Our Experts!</BottomHeading>
       <BottomDesc>
         Partnering across start-ups to SMBs to corporate businesses,we deliver
         innovation that is measurable, mature, and meaningful.
       </BottomDesc>
-      <Button>Schedule Meeting</Button>
+      <Button>Instant Contact</Button>
       <Image src={meeting} alt="meeting" />
     </BottomCon>
   );
