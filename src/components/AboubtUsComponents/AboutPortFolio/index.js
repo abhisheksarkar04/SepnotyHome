@@ -41,9 +41,9 @@ const AboutPortfolio = () => {
   const websiteData = [
     {
       imgSrc: Export1,
-      heading: "Website development can be a fascinating & rewarding endeavor.",
+      heading: "Creativity: Educational Apps",
       para1:
-        "Throughout the development process, it is = essential to consider factors like user experience, search engine optimization (SEO), accessibility, and security to create a successful and effective website.",
+        "Inspire creativity in learning with our interactive educational apps, offering engaging content and personalized learning paths for students of all ages.Problem Solving: Healthcare Solutions",
     },
     {
       imgSrc: Export1,

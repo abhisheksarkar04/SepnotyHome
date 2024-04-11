@@ -98,20 +98,34 @@ const ApplyForm = () => {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
       const data = new FormData();
     data.set("username", applicantName);
     data.set("email", email);
     data.set("phoneNumber", phoneNumber);
-    data.set("files",selectedFile);
+    data.set("resumeFile",selectedFile);
 
-      alert("application sent")
-      console.log("Form Data:", data);
-      // Send formData to server or perform further actions
+    const response = await fetch(
+      "http://localhost:8800/api/candidate/candidateResume",
+      {
+        method: "POST",
+        body: data,
+        headers: {
+          "Access-Control-Allow-Headers": "*",
+        },
+      }
+    );
+    if(response.ok){
+      alert("application sent");
+      console.log(response);
+    }else{
+      alert('There is an error. Please try after sometime')
     }
-  };
+      // Send formData to server or perform further actions
+    }
+  };
 
  
   return (

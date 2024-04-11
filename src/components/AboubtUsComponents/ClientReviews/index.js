@@ -47,7 +47,75 @@ const ClientReviews = () => {
       image: GroupImg,
       subImage: Image,
       company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
+        "Client Review by Emily Johnson Senior Marketing Manager, TechTrend Innovations",
+      description:
+        "Sepnoty's expertise in UI/UX design elevated our product to new heights. Their team's attention to detail and creative solutions exceeded our expectations.",
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by David Rodriguez CEO, GlobalTech Solutions ",
+        
+      description:
+      "We entrusted Sepnoty with the development of our e-commerce platform, and they delivered beyond our wildest dreams. Their professionalism and commitment to quality are unmatched."
+      ,
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by Samantha Lee CTO, InnovateX Technologies ",
+        
+      
+      description:
+      "Sepnoty's cybersecurity solutions provided us with peace of mind. Their proactive approach and robust security measures protected our data and infrastructure effectively."
+
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by Jessica Wong  Founder, HomeSmart Innovations ",
+       
+      description:
+        "Sepnoty's smart home technology brought our vision to life. Their innovative solutions and IoT-enabled devices have transformed our homes into intelligent living spaces.",
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by Michael ChenFounder, TravelEase Adventures",
+      description:
+      "Working with Sepnoty on our travel booking platform was a game-changer. Their expertise in problem-solving and attention to user experience resulted in a seamless booking process for our customers."
+      ,
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by Laura Smith  HR Director, ConnectTech Inc.",
+       
+        
+      description:
+      "Sepnoty's HR solutions helped streamline our hiring process and improve employee engagement. Their platform made it easy to manage talent effectively and foster a positive work culture."
+
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by James ThompsonCFO, FinancePro Group",
+      description:
+      "Sepnoty's financial services solutions revolutionized our operations. Their innovative tools and analytics capabilities enabled us to make data-driven decisions and stay ahead in the finance industry."
+
+
+    },
+    {
+      image: GroupImg,
+      subImage: Image,
+      company:
+        "Client Review by Sarah Patel Director of Operations, HealthFirst Clinic",
       description:
         "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
     },
@@ -55,65 +123,11 @@ const ClientReviews = () => {
       image: GroupImg,
       subImage: Image,
       company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
+     " Client Review by Daniel Kim CTO, MediaMasters Productions",
+      
       description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
-    },
-    {
-      image: GroupImg,
-      subImage: Image,
-      company:
-        "Stinger Technologies, a global provider of Business Processes outsourcing services",
-      description:
-        "Sepnoty demonstrated adaptability and responsiveness. Throughout the whole corporate analytics solution installation process, ",
+      "Sepnoty's AI solutions enhanced our production processes and optimized our workflows. Their team's expertise in artificial intelligence helped us deliver high-quality content efficiently."
+
     },
     // Add more objects as needed
   ];
