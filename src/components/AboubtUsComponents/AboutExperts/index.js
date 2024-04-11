@@ -68,11 +68,7 @@ import {
   
               <ServiceItemDetails>
                 <ServiceItemDesc>
-                Experts can be a great source of insightful information, thought leadership, and expert opinions to your audience. Here's how you can set it up effectively. Identify experts in your industry or niche who have valuable insights and expertise to share. This could include industry leaders, influencers, practitioners, or consultants. Provide clear editorial guidelines and themes for the content submissions to ensure consistency and relevance. Specify the preferred length, tone, style, and topics that align with your website's objectives and audience interests. Solicit feedback from your audience and the experts themselves to continuously improve the column's content, format, and overall experience. Monitor metrics such as page views, engagement rates, and audience feedback to gauge the effectiveness of the column and make adjustments as needed. By implementing these techniques can help you write an interesting and educational Experts Column. 
-                </ServiceItemDesc>
-                <ServiceItemDesc>
-                You are free to look through the list of our consultants below and get in touch with a suitable one if you require tech- or industry-
-related information for your article or would want to speak with one of our professionals. Alternatively, get in touch with our team and they'll assist you in getting in touch with the right specialist. 
+                At Sepnoty Technologies Pvt Ltd, our team of experts encompasses a wide array of fields, each contributing their unique skills and expertise to our collective success. From UI/UX designers crafting intuitive interfaces to MERN stack developers building robust web applications, and cybersecurity experts ensuring data security, our team covers all aspects of technology. HR professionals foster a positive work environment, while Flutter developers create cross-platform mobile apps, and AWS specialists architect scalable cloud solutions. Graphic designers bring creativity to life, AI experts pioneer intelligent solutions, and generative designers innovate with cutting-edge techniques. Cloud integration experts seamlessly blend cloud solutions into existing infrastructure. Together, our experts collaborate seamlessly to deliver transformative solutions, driving innovation and excellence in the technology landscape.
                 </ServiceItemDesc>
                 <ImageCon>
                   <ServiceItemImg src={Export} alt="dm" />

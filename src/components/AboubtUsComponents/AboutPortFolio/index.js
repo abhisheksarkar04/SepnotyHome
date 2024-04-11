@@ -41,37 +41,51 @@ const AboutPortfolio = () => {
   const websiteData = [
     {
       imgSrc: Export1,
-      heading: "Website development can be a fascinating & rewarding endeavor.",
+      heading: "Creativity: Educational Apps",
       para1:
-        "Throughout the development process, it is = essential to consider factors like user experience, search engine optimization (SEO), accessibility, and security to create a successful and effective website.",
+        "Inspire creativity in learning with our interactive educational apps, offering engaging content and personalized learning paths for students of all ages.Problem Solving: Healthcare Solutions",
     },
     {
       imgSrc: Export1,
       heading:
-        "Technical consulting involves providing expert advice & guidance on various technical aspects of a business, project, or initiative.",
+        "Problem Solving: Healthcare Solutions",
       para1:
-        "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders.",
+        "Address healthcare challenges effectively with our innovative solutions, including patient management systems and AI-powered diagnostics, enhancing patient care and operational efficiency.",
     },
     {
       imgSrc: Export1,
       heading:
-        "Redesigning the User Interface (UI) & User Experience (UX) of a website or application can significantly improve its usability, aesthetics, and overall effectiveness.",
+        "Continuous Learning: Financial Services",
       para1:
-        "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders.",
+        "Stay updated with evolving financial trends using our cutting-edge solutions, from mobile banking apps to AI-driven financial analytics platforms, enabling continuous learning and adaptation in the finance industry.",
     },
     {
       imgSrc: Export1,
       heading:
-        "Developing & migrating a (CMS) Content Management System involves several necessary steps for ensuring a very smooth transition and optimal functionality. ",
+        "Job Opportunities: E-commerce Platform",
       para1:
-        "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders.",
+        "Unlock abundant job opportunities with our feature-rich e-commerce platform, equipped with secure payment gateways and personalized shopping experiences, connecting consumers and businesses worldwide.        ",
     },
     {
       imgSrc: Export1,
       heading:
-        "Technical SEO refers to the procedure of optimizing a website's technical aspects to improve its search engine visibility and ranking. ",
+        "Remote Work: Enterprise Resource Planning (ERP)",
       para1:
-        "Technical consulting requires a deep understanding of technologies and, strong analytical skills, effective communication, & the ability of translation of complex technical concepts into actionable recommendations for the non-technical stakeholders.",
+        "Seamlessly transition to remote work with our comprehensive ERP solutions, offering modules for finance, HR, and supply chain management, empowering teams to collaborate efficiently from anywhere.        ",
+    },
+    {
+      imgSrc: Export1,
+      heading:
+        "Problem Solving: Travel and Tourism.",
+      para1:
+        "Overcome travel obstacles effortlessly with our dynamic booking engines and itinerary management tools, delivering seamless travel experiences for adventurers worldwide.        ",
+    },
+    {
+      imgSrc: Export1,
+      heading:
+        "Creativity: Smart Home Technology.",
+      para1:
+        "Infuse creativity into home living with our smart home solutions, featuring IoT-enabled devices and energy management platforms, transforming living spaces for ultimate comfort and convenience. ",
     },
     // Add more objects as needed
   ];

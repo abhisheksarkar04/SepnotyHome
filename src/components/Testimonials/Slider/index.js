@@ -162,9 +162,10 @@ const MainContainer = Styled.div`
 display: flex;
 flex-direction:column;
 padding: 10px;
-height:350px;
+height:450px;
 margin-top:30px;
 width:450px;
+
 
 @media screen and (max-width: 576px) {
   width:170px; /* Adjust width for mobile view */
@@ -188,9 +189,12 @@ const CardContainer = Styled.div`
 background: #121415;
 border-radius:15px;
 padding: 20px;
+display:flex;
+flex-direction:column;
 border:0px;
-height: 400px;
+height: 450px;
 width:400px;
+justify-content:space-between;
 box-shadow: 0px 4px 4px 0px #00000040;
 margin-bottom:10px;
 @media screen and (max-width:576px){
@@ -239,13 +243,10 @@ display: flex;
 flex-direction:row;
 gap:20px;
 margin-top:20px;
-
 @media screen and (max-width:576px){
     gap:10px;
     margin-top:10px;
 }
-
-
 `;
 
 const Image = Styled.img`
@@ -258,7 +259,7 @@ const Image = Styled.img`
 const Details = Styled.div`
 display: flex;
 flex-direction:column;
-
+justify-content:end;
 `;
 const Name = Styled.a`
 color:#2B459B;
