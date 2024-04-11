@@ -11,15 +11,14 @@ function Content() {
   return (
     <OurWorkTextContainer>
       <OurWorkOur>
-        <OurWorkOurText>Our</OurWorkOurText> Recent{" "}
-        <OurWorkText>work</OurWorkText>
+        <OurWorkOurText>Showcasing</OurWorkOurText>Our Latest{" "}
+        <OurWorkText>Achievements</OurWorkText>
       </OurWorkOur>
       <OurWorkPara>
-        We connect the best of design thinking, an agile way of
-        <br />
-        working, and lean agency principles to create our
-        <br />
-        growth-driven methodology.
+      Come along and discover our latest successes, each one a testament to our dedication and
+creativity. Step into our showcase and experience firsthand the innovation and excellence
+that define us.
+
       </OurWorkPara>
     </OurWorkTextContainer>
   );

@@ -20,7 +20,7 @@ import {
 import close from "./images/close.svg";
 import program from "./images/Programming-image.svg";
 const CardItem = ({ cardsList }) => {
-  const { title, description, id } = cardsList;
+  const { title, description, id, popupDesc,head } = cardsList;
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const togglePopup = () => {
@@ -47,22 +47,12 @@ const CardItem = ({ cardsList }) => {
             <Header>
               <PopupTitle>{title}</PopupTitle>
               <PopupHeading>
-                Designing web interfaces that stimulate growth and enhance user
-                engagement
+               {head}
               </PopupHeading>
             </Header>
           </PopupContent>
           <PopupDesc>
-            During the project discovery phase, business analysts conduct intial
-            research to undertand the projects purpose and identify the needs of
-            target audience. This phase helps in selecting the appropriate
-            technology stack, defining project deliverables, and estimate the
-            required timelines and resources. The goal is to gather essential
-            information that will guide the project's direction and ensure
-            alignment with the client's objectives and user requirements. This
-            thourough analysis lays the groundwork for a successful project
-            execution by providing a clear understanding of the project scope,
-            objectives and constraints.
+           {popupDesc}
           </PopupDesc>
         </PopupContainer>
       )}

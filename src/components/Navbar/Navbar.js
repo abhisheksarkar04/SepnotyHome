@@ -364,7 +364,7 @@ const Navbar = () => {
             <ListComponent onClick={toggleAboutUs}>
               {isAboutUsOpen ? (
                 <>
-                  AboutUs
+                  About Us
                   <DownArrow src={downarrow} alt="dd" />
                 </>
               ) : (

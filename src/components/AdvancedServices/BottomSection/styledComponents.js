@@ -125,11 +125,11 @@ export const PopUpCardContainer = styled.div`
   transform: translate(-50%, -50%);
   background-color: #254989;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   z-index: 2;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: auto;
   display: flex;
   flex-direction: column;
   border: 1px solid white;
@@ -150,8 +150,8 @@ export const PopupLftRgt = styled.div`
   margin-bottom: 5px;
 `;
 export const PopUpImg = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   align-self: center;
   padding: 5px;
 `;
@@ -197,7 +197,7 @@ export const PopupText = styled.p`
   line-height: 20px;
 
   text-align: justify;
-  padding: 20px 35px 20px 35px;
+  padding: 10px 25px 10px 25px;
   @media screen and (max-width: 576px) {
     font-size: 14px;
     padding: 10px 5px 0px 5px;

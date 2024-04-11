@@ -46,17 +46,17 @@ const ServiceSection = (props) => {
           <ServiceItemContainer>
             <Link to="/Services/Software-Development">
               <ServiceItem onClick={handleLinkClick}>
-                Software development
+                Software Development
               </ServiceItem>
             </Link>
             <Link to="/Services/Web-Development">
               <ServiceItem onClick={handleLinkClick}>
-                Web development
+                Web Development
               </ServiceItem>
             </Link>
             <Link to="/Services/Mobile-App-Development">
               <ServiceItem onClick={handleLinkClick}>
-                Mobile App development
+                Mobile App Development
               </ServiceItem>
             </Link>
             <Link to="/services/uiux-design">
@@ -77,7 +77,7 @@ const ServiceSection = (props) => {
             </Link>
             <Link to="/Services/Cloud-services-integration">
               <ServiceItem onClick={handleLinkClick}>
-                Cloud services integration
+                Cloud Services Integration
               </ServiceItem>
             </Link>
             <Link to="/Services/Cyber-Security-Provision">
@@ -87,7 +87,7 @@ const ServiceSection = (props) => {
             </Link>
             <Link to="/Services/AI-Technology-services-integration">
               <ServiceItem onClick={handleLinkClick}>
-                AI Technology services integration
+                AI Technology Services Integration
               </ServiceItem>
             </Link>
           </ServiceItemContainer>

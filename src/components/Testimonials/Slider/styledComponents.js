@@ -30,7 +30,7 @@ width:450px;
 export const CardContainer = Styled.div`
 background: #121415;
 border-radius:15px;
-padding: 20px;
+padding: 10px;
 border:0px;
 height: 400px;
 width:400px;

@@ -32,7 +32,7 @@ export const Description = styled.p`
   font-family: "inter", sans-serif;
   font-size: 20px;
   color: #b7b6bd;
-  width: 600px;
+  width: 50%;
   font-weight: bold;
   @media screen and (max-width: 576px) {
     font-size: 14px;

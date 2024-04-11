@@ -65,6 +65,7 @@ export const Desc = Styled.p`
   margin-top:50px
   font-weight: 500;
   margin-top:100px;
+  width: 70%;
   @media screen and (max-width:576px){
     font-size: 15px;
     font-family: "roboto";
