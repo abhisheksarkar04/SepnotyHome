@@ -105,7 +105,7 @@ const ApplyForm = () => {
                     <p>&nbsp;&nbsp;Selected File: {selectedFile.name}</p>
                   )}</span>
               </ChooseFile>
-              <LastButton type="submit" >Send</LastButton>
+              <LastButton type="submit">Send</LastButton>
             </Container1>
           </Container>
         </form>

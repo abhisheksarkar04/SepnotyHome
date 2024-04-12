@@ -148,6 +148,7 @@ export const LastButton = styled.button`
   padding: 10px 0px;
   background-color: #0034db;
   font-size: 16px;
+  cursor: pointer;
 
   @media screen and (max-width: 576px) {
     width: 95%;
